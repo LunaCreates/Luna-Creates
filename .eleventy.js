@@ -1,7 +1,6 @@
 const fs = require('fs');
 const htmlMin = require('./src/utils/minify-html.js');
 const eachUpTo = require('./src/utils/filters/each-up-to');
-const fadeInDelay = require('./src/utils/filters/fade-in-delay');
 const formatDate = require('./src/utils/filters/format-date');
 const swStyles = require('./src/utils/filters/sw-styles');
 
@@ -9,7 +8,6 @@ module.exports = config => {
   const prod = process.env.NODE_ENV === 'prod';
 
   config.addFilter('eachUpTo', eachUpTo);
-  config.addFilter('fadeInDelay', fadeInDelay);
   config.addFilter('formatDate', formatDate);
   config.addFilter('swStyles', swStyles);
 
@@ -29,7 +27,7 @@ module.exports = config => {
       ready: function (err, bs) {
         const content_404 = fs.readFileSync('dist/404.html');
 
-        bs.addMiddleware("*", (req, res) => {
+        bs.addMiddleware('*', (req, res) => {
           res.write(content_404);
           res.end();
         });
