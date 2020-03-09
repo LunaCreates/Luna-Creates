@@ -1,0 +1,10 @@
+// Keyframes..........Simple mixins for keyframe animations.
+
+@mixin fadeIn {
+  animation: fadein 2s;
+}
+
+@mixin pulse {
+  animation: cd-pulse 1s infinite;
+  animation-delay: 0.5s;
+}

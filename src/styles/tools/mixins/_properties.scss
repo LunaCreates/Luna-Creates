@@ -1,0 +1,14 @@
+@use "sass:meta";
+// Properties.........Convert map to CSS properties.
+
+@mixin map-to-props($map){
+  @if meta.type-of($map) == map {
+    @each $prop, $value in $map {
+      @if meta.type-of($value) != map {
+        #{meta.inspect($prop)}: #{meta.inspect($value)};
+      } @else {
+        @include map-to-props($value);
+      }
+    }
+  }
+}

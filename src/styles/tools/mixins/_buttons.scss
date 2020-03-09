@@ -1,0 +1,65 @@
+@use "sass:map";
+@use "../../settings/variables" as _variables;
+@use "properties" as _properties;
+
+// Buttons............Mixin to add button styles.
+
+// button styles map configuration
+$buttons: (
+  primary: (
+    default: (
+      background-color: _variables.$core-color-primary,
+      color: _variables.$core-color-foreground,
+      border-width: _variables.$core-border-width,
+      border-style: _variables.$core-border-style,
+      border-color: _variables.$core-color-primary
+    ),
+    hover: (
+      background-color: var(--color-foreground),
+      color: var(--color-background),
+      border-color: var(--color-foreground)
+    )
+  ),
+  secondary: (
+    default: (
+      background-color: transparent,
+      color: var(--color-foreground),
+      border-width: 2px,
+      border-style: _variables.$core-border-style,
+      border-color: var(--color-foreground)
+    ),
+    hover: (
+      background-color: var(--color-foreground),
+      color: var(--color-background)
+    )
+  ),
+  disabled: (
+    default: (
+      background-color: _variables.$core-color-neutral,
+      color: _variables.$core-color-secondary,
+      border-width: 2px,
+      border-style: _variables.$core-border-style,
+      border-color: _variables.$core-color-neutral,
+      pointer-events: none
+    ),
+  ),
+);
+
+@mixin button($style) {
+  $props: map.get($buttons, $style);
+  $default: map.get($props, default);
+  $hover: map.get($props, hover);
+
+  @if $props == null {
+    @warn 'button style \"#{$style}\" not found';
+  } @else {
+    @include _properties.map-to-props($default);
+
+    @if map.has-key($props, hover) {
+      &:hover,
+      &:active {
+        @include _properties.map-to-props($hover);
+      }
+    }
+  }
+}

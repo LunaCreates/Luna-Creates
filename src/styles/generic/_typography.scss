@@ -1,0 +1,17 @@
+@use "../settings/variables" as _variables;
+
+// Typography.........The sites typography faces.
+
+// Work Sans
+@font-face {
+  font-family: 'Work Sans';
+  src: url('../fonts/work-sans.woff2') format('woff2-variations');
+  font-display: swap;
+}
+
+// Libre Franklin
+@font-face {
+  font-family: 'Libre Franklin';
+  src: url('../fonts/libre-franklin.woff2') format('woff2-variations');
+  font-display: swap;
+}

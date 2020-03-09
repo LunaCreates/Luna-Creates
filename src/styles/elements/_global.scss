@@ -1,0 +1,132 @@
+@use "../settings/variables" as _variables;
+@use "../tools/mixins/responsive" as _responsive;
+@use "../tools/mixins/transitions" as _transitions;
+@use "../tools/mixins/typography" as _typography;
+
+// Global.............The sites core styles.
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+:root {
+  --color-primary: #{_variables.$core-color-primary};
+  --color-secondary: #{_variables.$core-color-secondary};
+  --color-background: #{_variables.$core-color-background};
+  --color-foreground: #{_variables.$core-color-foreground};
+  --color-neutral: #{_variables.$core-color-neutral};
+  --color-body: #{_variables.$core-color-body};
+}
+
+html {
+  font-size: _variables.$core-font-size;
+}
+
+body {
+  @include _typography.text(bodyCopy);
+  color: var(--color-body);
+  background-color: var(--color-background);
+  margin: 0;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+body ::-moz-selection {
+  background: var(--color-foreground);
+  color: var(--color-background);
+}
+
+body ::selection {
+  background: var(--color-foreground);
+  color: var(--color-background);
+}
+
+p {
+  @include _typography.text(bodyCopy);
+}
+
+a {
+  font-family: _variables.$core-font-family;
+  font-weight: _variables.$core-tertiary-font-weight;
+  text-decoration: none;
+
+  @include _responsive.min(l) {
+    font-family: _variables.$core-variable-font-family;
+    font-weight: _variables.$core-font-weight;
+    font-variation-settings: 'wght' _variables.$core-tertiary-font-weight;
+  }
+
+  @media (hover) {
+    @include _transitions.transition-03(all);
+    cursor: pointer;
+  }
+}
+
+strong {
+  font-weight: _variables.$core-font-weight;
+  font-variation-settings: 'wght' _variables.$core-tertiary-font-weight;
+}
+
+ul,
+ol,
+dl {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+dd {
+  margin-left: 0;
+}
+
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  vertical-align: middle;
+}
+
+img:not([src]) {
+  visibility: hidden;
+}
+
+blockquote {
+  margin: 0;
+}
+
+legend {
+  display: none;
+}
+
+input {
+  border-radius: 0;
+  appearance: none;
+}
+
+textarea {
+  border-radius: 0;
+  appearance: none;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  appearance: none;
+
+  @media (hover) {
+    @include _transitions.transition-03(all);
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
