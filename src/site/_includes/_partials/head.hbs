@@ -10,12 +10,14 @@
         {{/if}}
 
         <!-- PAGE TITLE -->
-        <title>Luna Creates</title>
+        <title>{{title}} &mdash; Luna Creates</title>
+
+        <!-- RESOURCE HINTS -->
+        {{!-- <link rel="preconnect" href="https://cdn.shopify.com/"> --}}
 
         <!-- PRELOAD FILES -->
         {{> _partials/preload-styles }}
-        {{!-- <link rel="preload" href="/fonts/avenir-next-variable.woff2" as="font" type="font/woff2" crossorigin>
-        <link rel="preload" href="/fonts/selawik-variable.woff2" as="font" type="font/woff2" media="(min-width: 62em)" crossorigin> --}}
+        <link rel="preload" href="/fonts/avenir-next-variable.woff2" as="font" type="font/woff2" crossorigin>
 
         <!-- STYLESHEET -->
         {{> _partials/styles }}
