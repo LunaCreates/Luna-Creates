@@ -1,7 +1,7 @@
-@use "../settings/variables" as _variables;
-@use "../tools/mixins/responsive" as _responsive;
-@use "../tools/mixins/transitions" as _transitions;
-@use "../tools/mixins/typography" as _typography;
+@use '../settings/variables' as _variables;
+@use '../tools/mixins/responsive' as _responsive;
+@use '../tools/mixins/transitions' as _transitions;
+@use '../tools/mixins/typography' as _typography;
 
 // Global.............The sites core styles.
 
@@ -43,20 +43,10 @@ body ::selection {
   color: var(--color-background);
 }
 
-p {
-  @include _typography.text(bodyCopy);
-}
-
 a {
   font-family: _variables.$core-font-family;
-  font-weight: _variables.$core-tertiary-font-weight;
+  font-variation-settings: 'wght' _variables.$core-tertiary-font-weight;
   text-decoration: none;
-
-  @include _responsive.min(l) {
-    font-family: _variables.$core-variable-font-family;
-    font-weight: _variables.$core-font-weight;
-    font-variation-settings: 'wght' _variables.$core-tertiary-font-weight;
-  }
 
   @media (hover) {
     @include _transitions.transition-03(all);
@@ -118,8 +108,10 @@ textarea {
 button {
   margin: 0;
   padding: 0;
+  background-color: transparent;
   border: none;
   border-radius: 0;
+  font-size: inherit;
   appearance: none;
 
   @media (hover) {

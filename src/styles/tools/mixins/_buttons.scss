@@ -1,6 +1,6 @@
-@use "sass:map";
-@use "../../settings/variables" as _variables;
-@use "properties" as _properties;
+@use 'sass:map';
+@use '../../settings/variables' as _variables;
+@use 'properties' as _properties;
 
 // Buttons............Mixin to add button styles.
 
@@ -8,15 +8,15 @@
 $buttons: (
   primary: (
     default: (
-      background-color: _variables.$core-color-primary,
-      color: _variables.$core-color-foreground,
+      background-color: var(--color-secondary),
+      color: var(--color-foreground),
       border-width: _variables.$core-border-width,
       border-style: _variables.$core-border-style,
-      border-color: _variables.$core-color-primary
+      border-color: _variables.$core-color-secondary
     ),
     hover: (
       background-color: var(--color-foreground),
-      color: var(--color-background),
+      color: var(--color-secondary),
       border-color: var(--color-foreground)
     )
   ),
@@ -54,6 +54,11 @@ $buttons: (
     @warn 'button style \"#{$style}\" not found';
   } @else {
     @include _properties.map-to-props($default);
+    padding: (_variables.$core-grid / 1.5) (_variables.$core-grid * 4);
+    border-radius: 4px;
+    font-variation-settings: 'wght' _variables.$core-font-weight;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 
     @if map.has-key($props, hover) {
       &:hover,

@@ -1,0 +1,22 @@
+@use '../settings/variables' as _variables;
+@use '../tools/mixins/responsive' as _responsive;
+
+.logo {
+  align-self: center;
+}
+
+.logo__icon {
+  image {
+    width: calc(100% - 10px);
+    transform: translateX(calc(-50% + 5px));
+  }
+
+  text {
+    fill: _variables.$core-color-primary;
+    font-size: 0.8em;
+    font-variation-settings: 'wght' 550;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transform: translateX(-50%);
+  }
+}

@@ -1,4 +1,4 @@
-@use "sass:map";
+@use 'sass:map';
 // Responsive.........Responsive media queries configuration.
 
 // Breakpoints map configuration
@@ -44,7 +44,8 @@ $breakpoints: (
 }
 
 @mixin container {
-  &__container {
+  &__container,
+  &--container {
     position: relative;
     padding-right: 15px;
     padding-left: 15px;

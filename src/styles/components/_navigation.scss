@@ -1,0 +1,6 @@
+@use '../settings/variables' as _variables;
+@use '../tools/mixins/responsive' as _responsive;
+
+.nav {
+  @include _responsive.container;
+}
