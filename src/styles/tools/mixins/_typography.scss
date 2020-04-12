@@ -1,8 +1,8 @@
-@use "../../settings/variables" as _variables;
-@use "properties" as _properties;
-@use "responsive" as _responsive;
+@use '../../settings/variables' as _variables;
+@use 'properties' as _properties;
+@use 'responsive' as _responsive;
 
-@use "sass:map";
+@use 'sass:map';
 
 // Typography.........Mixin to add typography.
 
@@ -10,68 +10,68 @@
 $headings: (
   sun: (
     default: (
-      font-family: _variables.$core-secondary-variable-font-family,
+      font-family: _variables.$core-font-family,
       font-size: calc(3em + 0.5vw),
       font-weight: normal,
       font-variation-settings: 'wght' _variables.$core-tertiary-font-weight,
       line-height: 1.1,
       margin-top: 0,
-      margin-bottom: (_variables.$core-margin * 1.75)
+      margin-bottom: (_variables.$core-grid * 1.75)
     )
   ),
   jupiter: (
     default: (
-      font-family: _variables.$core-secondary-variable-font-family,
+      font-family: _variables.$core-font-family,
       font-size: calc(2.3em + 0.5vw),
       font-weight: normal,
       font-variation-settings: 'wght' _variables.$core-tertiary-font-weight,
       line-height: _variables.$core-secondary-line-height,
       margin-top: 0,
-      margin-bottom: (_variables.$core-margin * 1.75)
+      margin-bottom: (_variables.$core-grid * 1.75)
     )
   ),
   saturn: (
     default: (
-      font-family: _variables.$core-secondary-variable-font-family,
+      font-family: _variables.$core-font-family,
       font-size: calc(2em + 0.5vw),
       font-weight: normal,
       font-variation-settings: 'wght' _variables.$core-tertiary-font-weight,
       line-height: _variables.$core-secondary-line-height,
       margin-top: 0,
-      margin-bottom: (_variables.$core-margin * 1.5)
+      margin-bottom: (_variables.$core-grid * 1.5)
     )
   ),
   uranus: (
     default: (
-      font-family: _variables.$core-secondary-variable-font-family,
+      font-family: _variables.$core-font-family,
       font-size: calc(1.7em + 0.5vw),
       font-weight: normal,
       font-variation-settings: 'wght' _variables.$core-tertiary-font-weight,
       line-height: _variables.$core-secondary-line-height,
       margin-top: 0,
-      margin-bottom: (_variables.$core-margin * 1.5)
+      margin-bottom: (_variables.$core-grid * 1.5)
     )
   ),
   mars: (
     default: (
-      font-family: _variables.$core-secondary-variable-font-family,
+      font-family: _variables.$core-font-family,
       font-size: calc(1.3em + 0.5vw),
       font-weight: normal,
-      font-variation-settings: 'wght' _variables.$core-tertiary-font-weight,
+      font-variation-settings: 'wght' _variables.$core-secondary-font-weight,
       line-height: _variables.$core-secondary-line-height,
       margin-top: 0,
-      margin-bottom: _variables.$core-margin
+      margin-bottom: (_variables.$core-grid * 2)
     )
   ),
   venus: (
     default: (
-      font-family: _variables.$core-secondary-variable-font-family,
+      font-family: _variables.$core-font-family,
       font-size: calc(1.1em + 0.5vw),
       font-weight: normal,
       font-variation-settings: 'wght' 650,
       line-height: _variables.$core-secondary-line-height,
       margin-top: 0,
-      margin-bottom: _variables.$core-margin
+      margin-bottom: _variables.$core-grid
     )
   ),
   pluto: (
@@ -81,57 +81,37 @@ $headings: (
       font-variation-settings: 'wght' _variables.$core-font-weight,
       line-height: 1.1,
       margin-top: 0,
-      margin-bottom: (_variables.$core-margin * 2)
-    ),
-    variable-fonts: (
-      font-family: _variables.$core-variable-font-family,
-      font-weight: _variables.$core-tertiary-font-weight,
-      font-variation-settings: 'wght' _variables.$core-secondary-font-weight
+      margin-bottom: (_variables.$core-grid * 2)
     )
   ),
   earth: (
     default: (
       font-family: _variables.$core-font-family,
       font-size: calc(#{_variables.$core-font-size} + 0.15vw),
-      font-weight: _variables.$core-tertiary-font-weight,
+      font-variation-settings: 'wght' 550,
       line-height: _variables.$core-line-height,
       margin-top: 0,
-      margin-bottom: (_variables.$core-margin * 2)
-    ),
-    variable-fonts: (
-      font-family: _variables.$core-variable-font-family,
-      font-weight: _variables.$core-font-weight,
-      font-variation-settings: 'wght' 550
+      margin-bottom: (_variables.$core-grid * 2)
     )
   ),
   moon: (
     default: (
       font-family: _variables.$core-font-family,
-      font-size: calc(0.8em + 0.15vw),
-      font-weight: _variables.$core-tertiary-font-weight,
+      font-size: calc(0.9em + 0.15vw),
+      font-variation-settings: 'wght' _variables.$core-secondary-font-weight,
       line-height: _variables.$core-line-height,
       margin-top: 0,
-      margin-bottom: (_variables.$core-margin / 2)
-    ),
-    variable-fonts: (
-      font-family: _variables.$core-variable-font-family,
-      font-weight: _variables.$core-tertiary-font-weight,
-      font-variation-settings: 'wght' _variables.$core-secondary-font-weight
+      margin-bottom: (_variables.$core-grid / 2)
     )
   ),
   bodyCopy: (
     default: (
       font-family: _variables.$core-font-family,
       font-size: calc(#{_variables.$core-font-size} + 0.1vw),
-      font-weight: _variables.$core-font-weight,
+      font-variation-settings: 'wght' _variables.$core-secondary-font-weight,
       line-height: _variables.$core-line-height,
       margin-top: 0,
-      margin-bottom: (_variables.$core-margin * 2)
-    ),
-    variable-fonts: (
-      font-family: _variables.$core-variable-font-family,
-      font-weight: normal,
-      font-variation-settings: 'wght' _variables.$core-secondary-font-weight
+      margin-bottom: (_variables.$core-grid * 2)
     )
   )
 );
@@ -139,20 +119,10 @@ $headings: (
 @mixin text($style) {
   $props: map.get($headings, $style);
   $default: map.get($props, default);
-  $variable-fonts: map.get($props, variable-fonts);
-  $font-family: map.get($default, font-family);
 
   @if $props == null {
     @warn 'text style \"#{$style}\" not found';
   } @else {
     @include _properties.map-to-props($default);
-
-    @if $font-family == _variables.$core-font-family {
-      @if map.has-key($props, variable-fonts) {
-        @include _responsive.min(l) {
-          @include _properties.map-to-props($variable-fonts);
-        }
-      }
-    }
   }
 }
