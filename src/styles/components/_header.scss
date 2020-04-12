@@ -1,0 +1,53 @@
+@use '../settings/variables' as _variables;
+@use '../tools/mixins/responsive' as _responsive;
+
+.header__container {
+  @include _responsive.container;
+  display: flex;
+  flex-direction: column;
+  padding-top: (_variables.$core-grid / 1.5);
+  padding-bottom: (_variables.$core-grid / 1.5);
+}
+
+.header__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2px 5vw;
+  background-color: _variables.$core-color-secondary;
+}
+
+.header__menu,
+.header__options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__menu {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: _variables.$core-color-primary;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.header__menu-icon {
+  margin-right: _variables.$core-grid;
+}
+
+.header__search,
+.header__cart {
+  width: 40px;
+  height: 40px;
+
+  svg {
+    width: 100%;
+    height: 100%;
+    padding: 10px (_variables.$core-grid / 3);
+  }
+}
+
+.header__search {
+  margin-right: (_variables.$core-grid / 3);
+}
