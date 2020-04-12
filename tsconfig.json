@@ -21,6 +21,7 @@
     "src"
   ],
   "exclude": [
-    "src/utils/**/*.js"
+    "src/utils/**/*.js",
+    "src/site/_data/*.js"
   ]
 }
