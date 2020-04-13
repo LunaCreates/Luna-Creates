@@ -5,7 +5,11 @@
         {{#each featuredProducts as |product|}}
             <div class="featured__product">
                 <picture class="featured__picture">
-                    <img src="{{product.image}}" alt="{{product.imageAlt}}" class="featured__image">
+                    <img data-src="{{product.image}}" alt="{{product.imageAlt}}" class="featured__image lazyload">
+
+                    <noscript>
+                        <img src="{{product.image}}" alt="{{product.imageAlt}}" class="featured__image">
+                    </noscript>
                 </picture>
                 <a class="featured__link" href="{{product.slug}}">{{product.title}}</a>
                 <span class="featured__price">{{product.price}}</span>

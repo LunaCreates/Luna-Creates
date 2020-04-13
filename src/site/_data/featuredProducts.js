@@ -64,7 +64,6 @@ async function featuredProductsData() {
     const currency = item.priceRange.minVariantPrice.currencyCode;
 
     return {
-      id: item.id,
       title: item.title,
       slug: item.onlineStoreUrl,
       imageAlt: item.images.edges[0].node.altText,
