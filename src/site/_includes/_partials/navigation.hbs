@@ -1,3 +1,5 @@
 <nav class="nav" id="nav">
-
+    {{#each navigation as |item|}}
+        <a href="{{item.url}}" class="nav__link">{{item.title}}</a>
+    {{/each}}
 </nav>
