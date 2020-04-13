@@ -17,6 +17,7 @@
   --color-background: #{_variables.$core-color-background};
   --color-foreground: #{_variables.$core-color-foreground};
   --color-neutral: #{_variables.$core-color-neutral};
+  --color-fade: #{_variables.$core-color-fade};
   --color-body: #{_variables.$core-color-body};
 }
 
@@ -44,8 +45,7 @@ body ::selection {
 }
 
 a {
-  font-family: _variables.$core-font-family;
-  font-variation-settings: 'wght' _variables.$core-tertiary-font-weight;
+  font-variation-settings: 'wght' _variables.$core-font-weight;
   text-decoration: none;
 
   @media (hover) {

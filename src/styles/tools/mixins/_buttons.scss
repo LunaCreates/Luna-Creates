@@ -55,8 +55,9 @@ $buttons: (
   } @else {
     @include _properties.map-to-props($default);
     padding: (_variables.$core-grid / 1.5) (_variables.$core-grid * 4);
-    border-radius: 4px;
-    font-variation-settings: 'wght' _variables.$core-font-weight;
+    border-radius: 5px;
+    font-size: 0.9em;
+    font-variation-settings: 'wght' _variables.$core-secondary-font-weight;
     text-transform: uppercase;
     letter-spacing: 1px;
 
