@@ -24,6 +24,21 @@
   margin-bottom: (_variables.$core-grid * 2);
 }
 
+.featured__picture {
+  display: block;
+  position: relative;
+  padding-top: 100%;
+}
+
+.featured__image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  object-fit: cover;
+}
+
 .featured__link {
   display: block;
   margin-top: (_variables.$core-grid / 2);
