@@ -10,8 +10,6 @@ $buttons: (
     default: (
       background-color: var(--color-secondary),
       color: var(--color-foreground),
-      border-width: _variables.$core-border-width,
-      border-style: _variables.$core-border-style,
       border-color: _variables.$core-color-secondary
     ),
     hover: (
@@ -22,11 +20,9 @@ $buttons: (
   ),
   secondary: (
     default: (
-      background-color: transparent,
-      color: var(--color-foreground),
-      border-width: 2px,
-      border-style: _variables.$core-border-style,
-      border-color: var(--color-foreground)
+      background-color: var(--color-primary),
+      color: var(--color-background),
+      border-color: var(--color-primary)
     ),
     hover: (
       background-color: var(--color-foreground),
@@ -37,8 +33,6 @@ $buttons: (
     default: (
       background-color: _variables.$core-color-neutral,
       color: _variables.$core-color-secondary,
-      border-width: 2px,
-      border-style: _variables.$core-border-style,
       border-color: _variables.$core-color-neutral,
       pointer-events: none
     ),
@@ -56,6 +50,8 @@ $buttons: (
     @include _properties.map-to-props($default);
     padding: (_variables.$core-grid / 1.5) (_variables.$core-grid * 4);
     border-radius: 5px;
+    border-width: _variables.$core-border-width;
+    border-style: _variables.$core-border-style;
     font-size: 0.9em;
     font-variation-settings: 'wght' _variables.$core-secondary-font-weight;
     text-transform: uppercase;
