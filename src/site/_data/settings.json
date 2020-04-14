@@ -12,24 +12,21 @@
       "title": "Facebook",
       "title-attr": "Go to Luna Creates Facebook page.",
       "slug": "facebook",
-      "handle": "lunacreatesdesign",
-      "external": true
+      "handle": "lunacreatesdesign"
     },
     {
       "url": "https://twitter.com/luna_creates",
       "title": "Twitter",
       "title-attr": "Go to Luna Creates Twitter profile.",
       "slug": "twitter",
-      "handle": "@luna_creates",
-      "external": true
+      "handle": "@luna_creates"
     },
     {
       "url": "hhttps://www.instagram.com/lunacreatesdesign/",
       "title": "Instagram",
       "title-attr": "Go to Luna Creates Instagram profile.",
       "slug": "instagram",
-      "handle": "lunacreatesdesign",
-      "external": true
+      "handle": "lunacreatesdesign"
     }
   ]
 }

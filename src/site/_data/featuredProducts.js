@@ -22,7 +22,7 @@ async function featuredProductsData() {
               node {
                 id
                 title
-                onlineStoreUrl
+                handle
                 priceRange {
                   minVariantPrice {
                     amount
@@ -65,7 +65,7 @@ async function featuredProductsData() {
 
     return {
       title: item.title,
-      slug: item.onlineStoreUrl,
+      slug: `/products/${item.handle}/`,
       imageAlt: item.images.edges[0].node.altText,
       image: item.images.edges[0].node.transformedSrc,
       price: new Intl.NumberFormat('en-GB', { style: 'currency', currency: currency }).format(price)

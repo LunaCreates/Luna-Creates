@@ -1,0 +1,55 @@
+@use '../settings/variables' as _variables;
+@use '../tools/mixins/buttons' as _buttons;
+@use '../tools/mixins/responsive' as _responsive;
+@use '../tools/mixins/typography' as _typography;
+
+.quotes {
+  @include _responsive.container;
+  position: relative;
+  padding-top: (_variables.$core-grid * 3);
+  padding-bottom: (_variables.$core-grid * 3);
+  background-color: _variables.$core-color-fade;
+  text-align: center;
+
+  @include _responsive.min(m) {
+    padding-top: (_variables.$core-grid * 4);
+    padding-bottom: (_variables.$core-grid * 4);
+  }
+}
+
+.quotes__content {
+  outline: none;
+}
+
+.quotes__slides {
+  @include _responsive.min(m) {
+    display: grid;
+    grid-column-gap: (_variables.$core-grid * 2.5);
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.quotes__icon {
+  width: 24px;
+  height: auto;
+}
+
+.quotes__quote {
+  @include _responsive.min(m) {
+    user-select: initial;
+  }
+}
+
+.quotes__cite {
+  font-style: normal;
+
+  &::before {
+    content: '\2014 \0020';
+  }
+}
+
+.quotes__bullets {
+  @include _responsive.min(m) {
+    display: none;
+  }
+}
