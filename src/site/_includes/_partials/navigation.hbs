@@ -1,5 +1,9 @@
 <nav class="nav" id="nav">
+    <ul class="nav__container">
     {{#each navigation as |item|}}
-        <a href="{{item.url}}" class="nav__link">{{item.title}}</a>
+        <li class="nav__item">
+            <a href="{{item.url}}" class="nav__link">{{item.title}}</a>
+        </li>
     {{/each}}
+    </ul>
 </nav>

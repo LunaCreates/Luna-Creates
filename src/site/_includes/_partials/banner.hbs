@@ -1,3 +1,25 @@
 <div class="banner">
+{{#if home}}
+    <div class="banner__content">
+        <picture class="banner__picture banner__picture--home">
+            <source media="(max-width: 47.9375em)" type="image/webp" data-srcset="https://cdn.shopify.com/s/files/1/1931/6299/files/Grey_banner_600x360.jpg.webp?v=1574005714">
+            <source media="(max-width: 47.9375em)"  data-srcset="https://cdn.shopify.com/s/files/1/1931/6299/files/Grey_banner_600x360.jpg?v=1574005714">
+            <source  type="image/webp" data-srcset="https://cdn.shopify.com/s/files/1/1931/6299/files/Grey_banner_2048x640.jpg.webp?v=1574005714">
+            <img class="banner__image lazyload" data-src="https://cdn.shopify.com/s/files/1/1931/6299/files/Grey_banner_2048x640.jpg?v=1574005714" role="presentation">
 
+            <noscript>
+                <source media="(max-width: 47.9375em)" type="image/webp" srcset="https://cdn.shopify.com/s/files/1/1931/6299/files/Grey_banner_600x360.jpg.webp?v=1574005714">
+                <source media="(max-width: 47.9375em)" srcset="https://cdn.shopify.com/s/files/1/1931/6299/files/Grey_banner_600x360.jpg?v=1574005714">
+                <source type="image/webp" srcset="https://cdn.shopify.com/s/files/1/1931/6299/files/Grey_banner_2048x640.jpg.webp?v=1574005714">
+                <img class="banner__image" src="https://cdn.shopify.com/s/files/1/1931/6299/files/Grey_banner_2048x640.jpg?v=1574005714" role="presentation">
+            </noscript>
+        </picture>
+    </div>
+
+    <div class="banner__container">
+        <h1 class="banner__title">By travel lovers, for travel lovers</h1>
+        <p class="banner__body">We help you immortalise your biggest and best adventures, whether you’re finding new places, welcoming new faces, or
+        starting new chapters with the people you love.</p>
+    </div>
+{{/if}}
 </div>

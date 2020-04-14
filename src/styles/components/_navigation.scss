@@ -3,4 +3,32 @@
 
 .nav {
   @include _responsive.container;
+
+  @include _responsive.max(m) {
+    display: none;
+  }
+
+  @include _responsive.min(m) {
+    background-color: var(--color-secondary);
+  }
+}
+
+.nav__container {
+  @include _responsive.min(m) {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.nav__link {
+  color: var(--color-primary);
+  font-variation-settings: 'wght' _variables.$core-secondary-font-weight;
+
+  @include _responsive.min(m) {
+    display: block;
+    margin-right: (_variables.$core-grid * 2);
+    margin-left: (_variables.$core-grid * 2);
+    padding-top: _variables.$core-grid;
+    padding-bottom: _variables.$core-grid;
+  }
 }
