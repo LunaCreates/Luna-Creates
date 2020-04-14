@@ -16,7 +16,7 @@ function Bundle() {
   const prod = process.env.NODE_ENV === 'prod';
 
   const alias = {
-    cookies: path.resolve(__dirname, 'node_modules/mozilla-doc-cookies/docCookies.js'),
+    '@glidejs/glide': '@glidejs/glide/dist/glide.js',
     Src: path.resolve(__dirname, 'src')
   };
 
