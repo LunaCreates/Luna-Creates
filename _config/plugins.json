@@ -46,6 +46,7 @@
     "zindex": false
   },
   "stylelint": {
+    "configFile": "./_config/stylelint.json",
     "failAfterError": true,
     "syntax": "scss",
     "reportOutputDir": "src/reports/stylelint/",
