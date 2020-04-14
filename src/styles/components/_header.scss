@@ -15,6 +15,10 @@
   align-items: center;
   padding: 2px 5vw;
   background-color: _variables.$core-color-secondary;
+
+  @include _responsive.min(m) {
+    display: none;
+  }
 }
 
 .header__menu,

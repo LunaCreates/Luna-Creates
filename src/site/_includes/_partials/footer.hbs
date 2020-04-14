@@ -12,13 +12,28 @@
             <li class="footer__item footer__item--title">Contact Us</li>
             <li class="footer__item"><a href="mailto:{{settings.email}}" class="footer__link">{{settings.email}}</a></li>
         {{#each settings.social}}
-            <li class="footer__item footer__item--social"><a class="footer__link footer__link--social" href="{{this.url}}" title="{{this.title-attr}}" {{#if this.external}}rel="external" {{/if}}>
+            <li class="footer__item footer__item--social"><a class="footer__link footer__link--social" href="{{this.url}}" title="{{this.title-attr}}" rel="external">
                 <svg class="footer__icon" width="20" height="20" aria-hidden="true">
                     <title>{{this.title}}</title>
                     <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/icons/{{this.slug}}.svg" x="0" y="0" width="100%" height="100%"></image>
                 </svg>
             </a></li>
         {{/each}}
+        </ul>
+
+        <ul class="footer__list">
+            <li class="footer__item footer__item--title">Contact Us</li>
+            <li class="footer__item"><a href="mailto:{{settings.email}}" class="footer__link">{{settings.email}}</a></li>
+            {{#each settings.social}}
+            <li class="footer__item footer__item--social"><a class="footer__link footer__link--social" href="{{this.url}}"
+                    title="{{this.title-attr}}" rel="external">
+                    <svg class="footer__icon" width="20" height="20" aria-hidden="true">
+                        <title>{{this.title}}</title>
+                        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/icons/{{this.slug}}.svg" x="0" y="0"
+                            width="100%" height="100%"></image>
+                    </svg>
+                </a></li>
+            {{/each}}
         </ul>
 
         <div class="footer__bottom">
