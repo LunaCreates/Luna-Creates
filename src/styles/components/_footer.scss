@@ -1,17 +1,13 @@
 @use '../settings/variables' as _variables;
+@use '../tools/mixins/buttons' as _buttons;
 @use '../tools/mixins/responsive' as _responsive;
 @use '../tools/mixins/typography' as _typography;
 
 .footer {
   @include _responsive.container;
-  padding-top: (_variables.$core-grid * 3);
-  padding-bottom: (_variables.$core-grid * 3);
+  padding-top: (_variables.$core-grid * 4);
+  padding-bottom: (_variables.$core-grid * 4);
   background-color: var(--color-fade);
-
-  @include _responsive.min(m) {
-    padding-top: (_variables.$core-grid * 4);
-    padding-bottom: (_variables.$core-grid * 4);
-  }
 }
 
 .footer__container {
@@ -22,8 +18,9 @@
   }
 }
 
-.footer__list {
-  margin-bottom: (_variables.$core-grid * 2);
+.footer__list,
+.footer__form {
+  margin-bottom: (_variables.$core-grid * 3.5);
 
   @include _responsive.min(m) {
     margin-bottom: 0;
@@ -38,11 +35,6 @@
   }
 }
 
-.footer__item--title {
-  @include _typography.text(pluto);
-  text-transform: uppercase;
-}
-
 .footer__item--social {
   display: inline-block;
   margin-right: (_variables.$core-grid / 2);
@@ -51,6 +43,34 @@
 
   &:last-child {
     margin-right: 0;
+  }
+}
+
+.footer__item--title,
+.footer__legend {
+  @include _typography.text(pluto);
+  text-transform: uppercase;
+}
+
+.footer__link {
+  position: relative;
+  color: var(--color-body);
+
+  &:not(.footer__link--social)::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-body);
+    transition: width 0.3s ease-in-out;
+  }
+
+  &:hover::before,
+  &:focus::before,
+  &:active::before {
+    width: 100%;
   }
 }
 
@@ -64,6 +84,22 @@
 .footer__icon {
   width: 100%;
   height: 100%;
+}
+
+.footer__label {
+  @include _typography.text(bodyCopy);
+  display: block;
+}
+
+.footer__input {
+  width: 100%;
+  padding: _variables.$core-grid (_variables.$core-grid * 1.5);
+  font-size: 1em;
+}
+
+.footer__submit {
+  @include _buttons.button(primary);
+  margin-top: (_variables.$core-grid * 1.5);
 }
 
 .footer__bottom {

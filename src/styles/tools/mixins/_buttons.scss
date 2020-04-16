@@ -10,12 +10,11 @@ $buttons: (
     default: (
       background-color: var(--color-secondary),
       color: var(--color-foreground),
-      border-color: _variables.$core-color-secondary
+      border-color: var(--color-secondary)
     ),
     hover: (
-      background-color: var(--color-foreground),
-      color: var(--color-secondary),
-      border-color: var(--color-foreground)
+      background-color: lighten(_variables.$core-color-secondary, 25%),
+      border-color: lighten(_variables.$core-color-secondary, 25%)
     )
   ),
   secondary: (
@@ -48,7 +47,7 @@ $buttons: (
     @warn 'button style \"#{$style}\" not found';
   } @else {
     @include _properties.map-to-props($default);
-    padding: (_variables.$core-grid / 1.5) (_variables.$core-grid * 4);
+    padding: _variables.$core-grid (_variables.$core-grid * 3);
     border-radius: 5px;
     border-width: _variables.$core-border-width;
     border-style: _variables.$core-border-style;
@@ -59,7 +58,8 @@ $buttons: (
 
     @if map.has-key($props, hover) {
       &:hover,
-      &:active {
+      &:active,
+      &:focus {
         @include _properties.map-to-props($hover);
       }
     }

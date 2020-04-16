@@ -14,7 +14,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 2px 5vw;
-  background-color: _variables.$core-color-secondary;
+  background-color: var(--color-secondary);
 
   @include _responsive.min(m) {
     display: none;
@@ -31,9 +31,10 @@
 .header__menu {
   padding-top: 10px;
   padding-bottom: 10px;
-  color: _variables.$core-color-primary;
-  font-weight: 700;
+  color: var(--color-primary);
+  font-variation-settings: 'wght' _variables.$core-secondary-font-weight;
   text-transform: uppercase;
+  line-height: 1;
 }
 
 .header__menu-icon {

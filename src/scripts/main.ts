@@ -1,4 +1,20 @@
-import 'lazysizes';
+// import 'lazysizes';
+
+if ('loading' in HTMLImageElement.prototype) {
+  const images: Array<HTMLImageElement> = Array.from(document.querySelectorAll('img.lazyload'));
+  const sources: Array<HTMLSourceElement> = Array.from(document.querySelectorAll('[data-srcset'));
+
+  images.forEach((img: HTMLImageElement) => {
+    img.srcset = img.dataset.srcset as string;
+    img.classList.remove('lazyload');
+  });
+
+  sources.forEach((source: HTMLSourceElement) => {
+    source.srcset = source.dataset.srcset as string;
+  });
+} else {
+  import('lazysizes')
+}
 
 const html: HTMLElement | null = document.querySelector('html');
 
@@ -42,8 +58,8 @@ function observe(callback: Function, elements: NodeList) {
 // Carousels
 // glide js is imported in them all but webpack splits it out into a seprate bundle then includes it when needed.
 
-function resizeCallback(entries: Array<any>) {
-  entries.forEach(entry => {
+function resizeCallback(entries: any) {
+  entries.forEach((entry: ResizeObserverEntry) => {
     const width = entry.contentRect.width;
 
     if (width < 768) {
@@ -58,3 +74,5 @@ function resizeCallback(entries: Array<any>) {
 
 const resizeObserver = new ResizeObserver(resizeCallback);
 resizeObserver.observe(document.body);
+
+export {};

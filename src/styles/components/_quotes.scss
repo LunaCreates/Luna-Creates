@@ -6,15 +6,10 @@
 .quotes {
   @include _responsive.container;
   position: relative;
-  padding-top: (_variables.$core-grid * 3);
-  padding-bottom: (_variables.$core-grid * 3);
-  background-color: _variables.$core-color-fade;
+  padding-top: (_variables.$core-grid * 4);
+  padding-bottom: (_variables.$core-grid * 4);
+  background-color: var(--color-fade);
   text-align: center;
-
-  @include _responsive.min(m) {
-    padding-top: (_variables.$core-grid * 4);
-    padding-bottom: (_variables.$core-grid * 4);
-  }
 }
 
 .quotes__content {

@@ -5,10 +5,14 @@
         {{#each featuredProducts as |product|}}
             <div class="featured__product">
                 <picture class="featured__picture">
-                    <img data-src="{{product.image}}" alt="{{product.imageAlt}}" class="featured__image lazyload">
+                    <source type="image/webp" data-srcset="{{product.image}}_450x450.jpg.webp 1x, {{product.image}}_900x900.jpg.webp 2x">
+
+                    <img data-srcset="{{product.image}}_450x450.jpg 1x, {{product.image}}_900x900.jpg 2x" alt="{{product.imageAlt}}" class="featured__image lazyload" loading="lazy" width="400" height="400">
 
                     <noscript>
-                        <img src="{{product.image}}" alt="{{product.imageAlt}}" class="featured__image">
+                        <source type="image/webp" srcset="{{product.image}}_450x450.jpg.webp 1x, {{product.image}}_900x900.jpg.webp 2x">
+
+                        <img srcset="{{product.image}}_450x450.jpg 1x, {{product.image}}_900x900.jpg 2x" alt="{{product.imageAlt}}" class="featured__image lazyload" loading="lazy" width="400" height="400">
                     </noscript>
                 </picture>
                 <a class="featured__link" href="{{product.slug}}">{{product.title}}</a>

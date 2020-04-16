@@ -8,19 +8,17 @@
   @include _responsive.container;
   display: flex;
   flex-direction: column;
-  padding-top: (_variables.$core-grid * 3);
-  padding-bottom: (_variables.$core-grid * 3);
+  padding-top: (_variables.$core-grid * 4);
+  padding-bottom: (_variables.$core-grid * 4);
 
   @include _responsive.max(m) {
     text-align: center;
   }
 
-  @include _responsive.min(m) {
+  @include _responsive.min(s) {
     display: grid;
     grid-column-gap: (_variables.$core-grid * 2);
     grid-template-columns: 1fr 1.1fr;
-    padding-top: (_variables.$core-grid * 4);
-    padding-bottom: (_variables.$core-grid * 4);
   }
 }
 
@@ -57,7 +55,17 @@
 
 .feature-block__title {
   @include _typography.text(mars);
+  margin-bottom: (_variables.$core-grid * 2);
   text-transform: uppercase;
+
+  @include _responsive.min(m) {
+    max-width: 450px;
+  }
+}
+
+.feature-block__body {
+  margin-top: 0;
+  margin-bottom: (_variables.$core-grid * 2);
 
   @include _responsive.min(m) {
     max-width: 450px;
@@ -71,13 +79,5 @@
 
   @include _responsive.min(m) {
     align-self: flex-start;
-  }
-}
-
-.feature-block__body {
-  margin-top: 0;
-
-  @include _responsive.min(m) {
-    max-width: 450px;
   }
 }

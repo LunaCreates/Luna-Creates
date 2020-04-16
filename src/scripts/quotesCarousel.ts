@@ -4,8 +4,8 @@ function QuotesCarousel(carousel: HTMLElement) {
   const newCarousel = GlideModule(carousel);
   const track = carousel.querySelector('[data-glide-el]') as HTMLElement;
 
-  function resizeCallback(entries: Array<any>) {
-    entries.forEach(entry => {
+  function resizeCallback(entries: any) {
+    entries.forEach((entry: ResizeObserverEntry) => {
       const width = entry.contentRect.width;
 
       if (newCarousel.slider && width >= 768) {

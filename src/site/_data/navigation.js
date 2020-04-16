@@ -4,10 +4,10 @@ const fetch = require('node-fetch');
 require('dotenv').config();
 
 // Shopify Storefront token
-const token = process.env.STOREFRONT_API;
+const token = process.env.STOREFRONT_API_TOKEN;
 
 async function navigationData() {
-  const data = await fetch('https://lunacreates.co.uk/api/2020-04/graphql.json', {
+  const data = await fetch(process.env.STOREFRONT_API_URL, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',

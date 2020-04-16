@@ -2,6 +2,10 @@
 @use '../tools/mixins/responsive' as _responsive;
 @use '../tools/mixins/typography' as _typography;
 
+.banner {
+  @include _responsive.container;
+}
+
 .banner__picture {
   position: relative;
   display: block;
@@ -28,7 +32,6 @@
 
 .banner__container {
   padding-top: (_variables.$core-grid * 3);
-  padding-bottom: _variables.$core-grid;
   text-align: center;
 
   @include _responsive.min(m) {

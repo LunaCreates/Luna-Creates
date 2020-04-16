@@ -18,6 +18,6 @@
     font-variation-settings: 'wght' 550;
     text-transform: uppercase;
     letter-spacing: 1px;
-    transform: translateX(-50%);
+    transform: translateX(calc(-50% + (0.4em - 1px)));
   }
 }

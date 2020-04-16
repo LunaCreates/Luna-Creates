@@ -4,10 +4,10 @@ const fetch = require('node-fetch');
 require('dotenv').config();
 
 // Shopify Storefront token
-const token = process.env.STOREFRONT_API;
+const token = process.env.STOREFRONT_API_TOKEN;
 
 async function featuredProductsData() {
-  const data = await fetch('https://lunacreates.co.uk/api/2020-04/graphql.json', {
+  const data = await fetch(process.env.STOREFRONT_API_URL, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -33,6 +33,7 @@ async function featuredProductsData() {
                   edges {
                     node {
                       altText
+                      originalSrc
                       transformedSrc(maxWidth: 700, maxHeight: 700, crop: CENTER, preferredContentType: WEBP)
                     }
                   }
@@ -67,7 +68,7 @@ async function featuredProductsData() {
       title: item.title,
       slug: `/products/${item.handle}/`,
       imageAlt: item.images.edges[0].node.altText,
-      image: item.images.edges[0].node.transformedSrc,
+      image: item.images.edges[0].node.originalSrc.split('.jpg')[0],
       price: new Intl.NumberFormat('en-GB', { style: 'currency', currency: currency }).format(price)
     };
   });
