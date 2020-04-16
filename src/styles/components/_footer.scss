@@ -5,9 +5,16 @@
 
 .footer {
   @include _responsive.container;
-  padding-top: (_variables.$core-grid * 4);
-  padding-bottom: (_variables.$core-grid * 4);
+  margin-top: (_variables.$core-grid * 3);
+  padding-top: (_variables.$core-grid * 3);
+  padding-bottom: (_variables.$core-grid * 3);
   background-color: var(--color-fade);
+
+  @include _responsive.min(m) {
+    margin-top: (_variables.$core-grid * 4);
+    padding-top: (_variables.$core-grid * 4);
+    padding-bottom: (_variables.$core-grid * 4);
+  }
 }
 
 .footer__container {

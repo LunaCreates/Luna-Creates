@@ -32,11 +32,12 @@
 
 .banner__container {
   padding-top: (_variables.$core-grid * 3);
+  padding-bottom: (_variables.$core-grid * 3);
   text-align: center;
 
   @include _responsive.min(m) {
     padding-top: (_variables.$core-grid * 4);
-    padding-bottom: (_variables.$core-grid * 1.5);
+    padding-bottom: (_variables.$core-grid * 4);
   }
 }
 

@@ -1,0 +1,81 @@
+@use '../settings/variables' as _variables;
+@use '../tools/mixins/buttons' as _buttons;
+@use '../tools/mixins/responsive' as _responsive;
+@use '../tools/mixins/typography' as _typography;
+
+.instagram-collection {
+  @include _responsive.container;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: (_variables.$core-grid * 3);
+  padding-bottom: (_variables.$core-grid * 3);
+
+  @include _responsive.min(m) {
+    padding-top: (_variables.$core-grid * 4);
+    padding-bottom: (_variables.$core-grid * 4);
+  }
+}
+
+.instagram-collection__title {
+  @include _typography.text(mars);
+  text-align: center;
+  text-transform: uppercase;
+
+  @include _responsive.min(m) {
+    margin-bottom: (_variables.$core-grid * 3);
+  }
+}
+
+.instagram-collection__link {
+  position: relative;
+  color: inherit;
+  font: inherit;
+  font-variation-settings: 'wght' _variables.$core-secondary-font-weight;
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-body);
+    transition: width 0.3s ease-in-out;
+  }
+
+  &:hover::before,
+  &:focus::before,
+  &:active::before {
+    width: 100%;
+  }
+}
+
+.instagram-collection__images {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1.75em;
+  width: 100%;
+}
+
+.instagram-collection__item {
+  position: relative;
+}
+
+.instagram-collection__picture {
+  display: block;
+  position: relative;
+  padding-top: 100%;
+  background-color: var(--color-fade);
+}
+
+.instagram-collection__image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  object-fit: cover;
+}

@@ -8,8 +8,8 @@
   @include _responsive.container;
   display: flex;
   flex-direction: column;
-  padding-top: (_variables.$core-grid * 4);
-  padding-bottom: (_variables.$core-grid * 4);
+  padding-top: (_variables.$core-grid * 3);
+  padding-bottom: (_variables.$core-grid * 3);
 
   @include _responsive.max(m) {
     text-align: center;
@@ -19,6 +19,11 @@
     display: grid;
     grid-column-gap: (_variables.$core-grid * 2);
     grid-template-columns: 1fr 1.1fr;
+  }
+
+  @include _responsive.min(m) {
+    padding-top: (_variables.$core-grid * 4);
+    padding-bottom: (_variables.$core-grid * 4);
   }
 }
 

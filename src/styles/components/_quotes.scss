@@ -6,10 +6,19 @@
 .quotes {
   @include _responsive.container;
   position: relative;
-  padding-top: (_variables.$core-grid * 4);
-  padding-bottom: (_variables.$core-grid * 4);
+  margin-top: (_variables.$core-grid * 3);
+  margin-bottom: (_variables.$core-grid * 3);
+  padding-top: (_variables.$core-grid * 3);
+  padding-bottom: (_variables.$core-grid * 3);
   background-color: var(--color-fade);
   text-align: center;
+
+  @include _responsive.min(m) {
+    margin-top: (_variables.$core-grid * 4);
+    margin-bottom: (_variables.$core-grid * 4);
+    padding-top: (_variables.$core-grid * 4);
+    padding-bottom: (_variables.$core-grid * 4);
+  }
 }
 
 .quotes__content {

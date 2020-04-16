@@ -1,0 +1,21 @@
+<section class="instagram-collection instagram-collection--container">
+    <h2 class="instagram-collection__title">Follow us on Instagram <a href="{{settings.instagramUrl}}" class="instagram-collection__link">@{{settings.instagramName}}</a></h2>
+
+    <div class="instagram-collection__images">
+        {{#each instagramCollection as |item|}}
+            <div class="instagram-collection__item">
+                <picture class="instagram-collection__picture">
+                    <source type="image/webp" data-srcset="{{item.image}}_450x450.jpg.webp 1x, {{item.image}}_900x900.jpg.webp 2x">
+
+                    <img data-srcset="{{item.image}}_450x450.jpg 1x, {{item.image}}_900x900.jpg 2x" alt="{{item.imageAlt}}" class="instagram-collection__image lazyload" loading="lazy" width="400" height="400">
+
+                    <noscript>
+                        <source type="image/webp" srcset="{{item.image}}_450x450.jpg.webp 1x, {{item.image}}_900x900.jpg.webp 2x">
+
+                        <img srcset="{{item.image}}_450x450.jpg 1x, {{item.image}}_900x900.jpg 2x" alt="{{item.imageAlt}}" class="instagram-collection__image lazyload" loading="lazy" width="400" height="400">
+                    </noscript>
+                </picture>
+            </div>
+        {{/each}}
+    </div>
+</section>
