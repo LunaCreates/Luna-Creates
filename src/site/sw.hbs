@@ -1,8 +1,13 @@
-const cacheName = 'alexclapperton:0046';
+---
+title: 'sw'
+permalink: sw.js
+ignore: true
+---
+
+const cacheName = 'lunacreates:0001';
 const cacheFiles = [
   '/',
-  {{cacheStylesheet}},
-  '/offline/'
+  {{cacheStylesheet}}
 ];
 
 self.addEventListener('install', event => {
