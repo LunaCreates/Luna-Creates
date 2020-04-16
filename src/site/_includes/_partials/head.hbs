@@ -10,7 +10,7 @@
         {{/if}}
 
         <!-- PAGE TITLE -->
-        <title>{{title}} &mdash; Luna Creates</title>
+        <title>{{title}} &mdash; {{settings.name}}</title>
 
         <!-- RESOURCE HINTS -->
         <link rel="preconnect" href="https://cdn.shopify.com/">
@@ -27,6 +27,25 @@
 
         <!-- MANIFEST -->
         <link rel="manifest" href="/site.webmanifest">
+
+        <!-- FACEBOOK -->
+        <meta property="og:title" content="{{title}} &mdash; {{settings.name}}" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="{{settings.url}}" />
+        <meta property="og:image" content="{{settings.url}}images/favicons/favicon-512x512.png" />
+        <meta property="og:description" content="tunning range of travel related personalised world map pinboard products for sale. Order online for quick UK delivery.">
+        <meta property="og:locale" content="en_GB">
+        <meta property="article:author" content="{{settings.name}}">
+        <meta property="og:site_name" content="{{settings.name}}">
+
+        <!-- TWITTER -->
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="{{settings.twitterHandle}}">
+        <meta name="twitter:creator" content="{{settings.twitterHandle}}">
+        <meta name="twitter:url" content="{{settings.url}}">
+        <meta name="twitter:title" content="{{title}} &mdash; {{settings.name}}">
+        <meta name="twitter:description" content="tunning range of travel related personalised world map pinboard products for sale. Order online for quick UK delivery.">
+        <meta name="twitter:image" content="{{settings.url}}images/favicons/favicon-512x512.png">
 
         <!-- FAVICONS -->
         <link rel="icon" type="image/png" href="/favicons/favicon-48x48.png" sizes="16x16">
