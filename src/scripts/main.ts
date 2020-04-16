@@ -53,7 +53,12 @@ function observe(callback: Function, elements: NodeList) {
  *
  * ******* */
 
-// import(/* webpackChunkName: "swRegister" */ 'Src/scripts/swRegister').then(initModule).catch(err => console.error(`Error in: swRegister - ${err}`));
+observe((carousel: HTMLElement) => {
+  import(/* webpackChunkName: "quotes-carousel" */ 'Src/scripts/triggerSearch').then(module => initModule(module, carousel))
+    .catch(err => console.error(`Error in: Trigger Search - ${err}`));
+}, document.querySelectorAll('[data-component="header"]'));
+
+import(/* webpackChunkName: "swRegister" */ 'Src/scripts/swRegister').then(initModule).catch(err => console.error(`Error in: swRegister - ${err}`));
 
 // Carousels
 // glide js is imported in them all but webpack splits it out into a seprate bundle then includes it when needed.

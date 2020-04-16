@@ -1,0 +1,80 @@
+@use '../settings/variables' as _variables;
+@use '../tools/mixins/responsive' as _responsive;
+
+.search {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 5vw;
+  padding-left: 5vw;
+  background-color: var(--color-secondary);
+  transform: translateY(-100%);
+  transition: all 0.3s ease-in-out;
+
+  @include _responsive.min(m) {
+    position: static;
+    margin-right: (_variables.$core-grid * 2);
+    padding-right: 0;
+    padding-left: 0;
+    background-color: var(--color-background);
+    transform: translate(-28px, 0);
+    flex: 0 0 0;
+    order: 2;
+    overflow: hidden;
+  }
+}
+
+.search--visible {
+  transform: translateY(0);
+
+  @include _responsive.min(m) {
+    flex: 1;
+    transform: translate(0, 0);
+  }
+}
+
+.search__form {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.search__label {
+  display: block;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+.search__input {
+  width: calc(100% - 40px);
+  padding: (_variables.$core-grid / 1.5) (_variables.$core-grid * 1.5);
+  font-size: 0.9em;
+  order: 2;
+}
+
+.search__submit {
+  margin-right: (_variables.$core-grid / 1.5);
+  order: 1;
+}
+
+.search__submit,
+.search__close {
+  width: 25px;
+  height: 25px;
+
+  svg {
+    pointer-events: none;
+  }
+}
+
+.search__icon {
+  width: 100%;
+  height: 100%;
+}

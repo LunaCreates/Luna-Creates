@@ -1,4 +1,4 @@
-<header class="header">
+<header class="header" data-component="header">
     <a href="#nav" class="skip-link skip-link--hidden">Skip to navigation</a>
     <a href="#main" class="skip-link skip-link--hidden">Skip to main content</a>
     <a href="#footer" class="skip-link skip-link--hidden">Skip to footer</a>
@@ -23,7 +23,7 @@
         </button>
 
         <div class="header__options">
-            <button class="header__search" aria-label="Search">
+            <button class="header__search" aria-label="Search" data-trigger-search>
                 <svg width="16" height="16" aria-hidden="true">
                     <use xlink:href="/icons/sprite.svg#search"></use>
                 </svg>
@@ -34,6 +34,26 @@
                     <use xlink:href="/icons/sprite.svg#cart"></use>
                 </svg>
             </a>
+
+            <div class="search" data-search>
+                <form action="/search" class="search__form" method="GET" role="search">
+                    <label for="search" class="search__label">Search the website</label>
+                    <input type="text" class="search__input" placeholder="Search" id="search">
+                    <button class="search__submit">
+                        <svg class="search__icon" width="16" height="16" aria-hidden="true">
+                            <title>Search the site</title>
+                            <use xlink:href="/icons/sprite.svg#search"></use>
+                        </svg>
+                    </button>
+                </form>
+                <button class="search__close" data-close-search>
+                    <svg class="search__icon" width="16" height="16" aria-hidden="true">
+                        <title>Search the site</title>
+                        <use xlink:href="/icons/sprite.svg#close"></use>
+                    </svg>
+                </button>
+            </div>
+
         </div>
     </div>
 </header>

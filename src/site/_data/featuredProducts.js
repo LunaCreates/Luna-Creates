@@ -34,7 +34,6 @@ async function featuredProductsData() {
                     node {
                       altText
                       originalSrc
-                      transformedSrc(maxWidth: 700, maxHeight: 700, crop: CENTER, preferredContentType: WEBP)
                     }
                   }
                 }

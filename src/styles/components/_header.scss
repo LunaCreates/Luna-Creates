@@ -1,6 +1,10 @@
 @use '../settings/variables' as _variables;
 @use '../tools/mixins/responsive' as _responsive;
 
+.header {
+  position: relative;
+}
+
 .header__container {
   @include _responsive.container;
   display: flex;
@@ -10,14 +14,36 @@
 }
 
 .header__nav {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 2px 5vw;
   background-color: var(--color-secondary);
+  overflow: hidden;
 
   @include _responsive.min(m) {
-    display: none;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: _variables.$core-grid;
+    padding-left: 0;
+    justify-content: center;
+    background-color: transparent;
+  }
+
+  @include _responsive.min(l) {
+    position: absolute;
+    top: 50%;
+    right: 5vw;
+    padding: 0;
+    width: 25%;
+    justify-content: flex-end;
+    transform: translateY(-50%);
+  }
+
+  @include _responsive.min(xl) {
+    right: calc((100vw - 1400px) / 2 + 5vw);
+    width: 20vw;
   }
 }
 
@@ -35,10 +61,25 @@
   font-variation-settings: 'wght' _variables.$core-secondary-font-weight;
   text-transform: uppercase;
   line-height: 1;
+
+  @include _responsive.min(m) {
+    display: none;
+  }
 }
 
 .header__menu-icon {
   margin-right: _variables.$core-grid;
+}
+
+.header__options {
+  @include _responsive.min(m) {
+    justify-content: center;
+  }
+
+  @include _responsive.min(l) {
+    width: 100%;
+    justify-content: flex-end;
+  }
 }
 
 .header__search,
@@ -50,9 +91,36 @@
     width: 100%;
     height: 100%;
     padding: 10px (_variables.$core-grid / 3);
+    pointer-events: none;
+  }
+
+  @include _responsive.min(m) {
+    width: 25px;
+    height: 25px;
+
+    svg {
+      padding: 0;
+    }
   }
 }
 
 .header__search {
-  margin-right: (_variables.$core-grid / 3);
+  @include _responsive.min(m) {
+    transition: width 0.3s ease-in-out;
+    order: 1;
+    overflow: hidden;
+
+    .header--search-open & {
+      width: 0;
+    }
+  }
+}
+
+.header__cart {
+  margin-left: (_variables.$core-grid / 3);
+
+  @include _responsive.min(m) {
+    margin-left: 0;
+    order: 3;
+  }
 }

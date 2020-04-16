@@ -10,4 +10,4 @@ function swRegister() {
   }
 }
 
-export default swRegister();
+export default swRegister;
