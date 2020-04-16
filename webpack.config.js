@@ -1,5 +1,6 @@
 /* eslint-disable max-len */
 /* eslint-disable complexity */
+const glob = require('glob').sync;
 const path = require('path');
 const webpack = require('webpack');
 const ManifestPlugin = require('webpack-assets-manifest');
@@ -7,6 +8,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ImageminWebpWebpackPlugin = require('imagemin-webp-webpack-plugin');
+const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
 const StylelintPlugin = require('stylelint-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 // const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
@@ -53,6 +55,7 @@ function Bundle() {
     }]),
     new ImageminWebpWebpackPlugin(),
     new StylelintPlugin(plugin.stylelint),
+    new SpriteLoaderPlugin({ plainSprite: true }),
     new webpack.LoaderOptionsPlugin({
       debug: true
     })
@@ -66,7 +69,8 @@ function Bundle() {
 
     entry: {
       common: path.resolve(__dirname, 'src/scripts/main.ts'),
-      main: path.resolve(__dirname, 'src/styles/main.scss')
+      main: path.resolve(__dirname, 'src/styles/main.scss'),
+      sprite: glob('./src/icons/*.svg')
     },
 
     output: {
@@ -109,6 +113,7 @@ function Bundle() {
                   require('postcss-sort-media-queries'),
                   require('postcss-minify-selectors'),
                   require('postcss-clean')(plugin.cleancss),
+                  require('autoprefixer'),
                   require('cssnano')(plugin.cssnano)
                 ]
               }
@@ -117,6 +122,15 @@ function Bundle() {
               loader: 'sass-loader'
             }
           ]
+        },
+        {
+          test: /\.svg$/,
+          loader: 'svg-sprite-loader',
+          include: path.resolve(__dirname, 'src/icons'),
+          options: {
+            extract: true,
+            spriteFilename: 'icons/sprite.svg'
+          },
         }
       ]
     },

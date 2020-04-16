@@ -13,7 +13,6 @@ module.exports = config => {
 
   config.addPassthroughCopy({ 'src/favicons': 'favicons' });
   config.addPassthroughCopy({ 'src/fonts': 'fonts' });
-  config.addPassthroughCopy({ 'src/icons': 'icons' });
   config.addPassthroughCopy({ 'src/images': 'images' });
   config.addPassthroughCopy({ 'src/site.webmanifest': 'site.webmanifest' });
   config.addPassthroughCopy({ 'src/browserconfig.xml': 'browserconfig.xml' });
