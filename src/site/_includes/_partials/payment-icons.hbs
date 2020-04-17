@@ -1,0 +1,9 @@
+<ul class="payment-icons">
+    {{#each paymentIcons as |icon|}}
+        <li class="payment-icons__item">
+            <svg class="payment-icons__icon" width="30" height="30" aria-hidden="true">
+                <use xlink:href="/icons/sprite.svg#{{icon}}"></use>
+            </svg>
+        </li>
+    {{/each}}
+</ul>
