@@ -16,7 +16,7 @@ async function navigationData() {
     },
     body: JSON.stringify({
       query: `{
-        collections(first: 10) {
+        collections(first: 10, query: "NOT 'home page' AND NOT 2 AND NOT all AND NOT only") {
           edges {
             node {
               title
@@ -48,6 +48,8 @@ async function navigationData() {
       url: `/${item.handle}/`,
     };
   });
+
+  shopFormatted.unshift({ title: 'Browse all', url: '/collections/all/'});
 
   // return formatted navigation
   return [

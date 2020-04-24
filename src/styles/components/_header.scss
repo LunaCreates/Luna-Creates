@@ -1,126 +1,120 @@
 @use '../settings/variables' as _variables;
+@use '../tools/functions/z-index' as _z-index;
 @use '../tools/mixins/responsive' as _responsive;
 
 .header {
   position: relative;
+
+  &::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    background-color: var(--color-foreground);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    z-index: _z-index.z(alpha);
+  }
+
+  .body--search-open &::before {
+    opacity: 0.5;
+    visibility: visible;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+  }
+
+  @include _responsive.min(m) {
+    &::before {
+      display: none;
+    }
+  }
 }
 
-.header__container {
-  @include _responsive.container;
+.header__top {
+  position: relative;
   display: flex;
   flex-direction: column;
   padding-top: (_variables.$core-grid / 1.5);
   padding-bottom: (_variables.$core-grid / 1.5);
+  background-color: var(--color-background);
+  z-index: _z-index.z(alpha);
+
+  @include _responsive.min(m) {
+    max-width: 1140px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 5vw;
+    padding-left: 5vw;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+  }
 }
 
-.header__nav {
+.header__bottom {
   position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2px 5vw;
+  padding: (_variables.$core-grid / 1.5) 5vw;
   background-color: var(--color-secondary);
-  overflow: hidden;
+  z-index: _z-index.z(alpha);
 
   @include _responsive.min(m) {
     padding-top: 0;
-    padding-right: 0;
-    padding-bottom: _variables.$core-grid;
-    padding-left: 0;
-    justify-content: center;
-    background-color: transparent;
-  }
-
-  @include _responsive.min(l) {
-    position: absolute;
-    top: 50%;
-    right: 5vw;
-    padding: 0;
-    width: 25%;
-    justify-content: flex-end;
-    transform: translateY(-50%);
-  }
-
-  @include _responsive.min(xl) {
-    right: calc((100vw - 1400px) / 2 + 5vw);
-    width: 20vw;
+    padding-bottom: 0;
   }
 }
 
-.header__menu,
 .header__options {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
 
-.header__menu {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  color: var(--color-primary);
-  font-variation-settings: 'wght' _variables.$core-secondary-font-weight;
-  text-transform: uppercase;
-  line-height: 1;
-
-  @include _responsive.min(m) {
-    display: none;
-  }
-}
-
-.header__menu-icon {
-  margin-right: _variables.$core-grid;
-}
-
-.header__options {
-  @include _responsive.min(m) {
-    justify-content: center;
+  @include _responsive.max(m) {
+    .header__top & {
+      display: none;
+    }
   }
 
-  @include _responsive.min(l) {
-    width: 100%;
-    justify-content: flex-end;
+  @include _responsive.min(m) {
+    position: relative;
+
+    .header__top & {
+      justify-content: flex-end;
+    }
+
+    .header__bottom & {
+      display: none;
+    }
   }
 }
 
 .header__search,
 .header__cart {
-  width: 40px;
-  height: 40px;
-
-  svg {
-    width: 100%;
-    height: 100%;
-    padding: 10px (_variables.$core-grid / 3);
-    pointer-events: none;
-  }
+  display: flex;
+  width: 30px;
+  height: 30px;
 
   @include _responsive.min(m) {
-    width: 25px;
-    height: 25px;
-
-    svg {
-      padding: 0;
-    }
+    width: 35px;
+    height: 35px;
   }
 }
 
 .header__search {
-  @include _responsive.min(m) {
-    transition: width 0.3s ease-in-out;
-    order: 1;
-    overflow: hidden;
-
-    .header--search-open & {
-      width: 0;
-    }
-  }
+  margin-right: (_variables.$core-grid / 1.5);
 }
 
-.header__cart {
-  margin-left: (_variables.$core-grid / 3);
-
-  @include _responsive.min(m) {
-    margin-left: 0;
-    order: 3;
-  }
+.header__icon {
+  width: 100%;
+  height: 100%;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  fill: var(--color-primary);
+  pointer-events: none;
 }

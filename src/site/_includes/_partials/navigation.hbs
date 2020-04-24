@@ -1,8 +1,27 @@
-<nav class="nav" id="nav">
-    <ul class="nav__container">
+<nav class="nav" id="nav" data-component="navigation">
+    <button type="button" class="nav__button" aria-live="polite" aria-expanded="false" data-nav-button>
+        <svg class="nav__button-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 48 38" fill="currentColor">
+            <path d="M.2 0h47.5v6.3H.2z" />
+            <path d="M.2 15.8h47.5v6.4H.2z" />
+            <path d="M.2 31.7h47.5V38H.2z" />
+        </svg>
+        Menu
+    </button>
+
+    <ul class="nav__list" data-nav-list>
     {{#each navigation as |item|}}
         <li class="nav__item">
-            <a href="{{item.url}}" class="nav__link">{{item.title}}</a>
+            <a href="{{item.url}}" class="nav__link" data-nav-item="{{item.title}}">{{item.title}}</a>
+
+        {{#if item.collections}}
+            <ul class="nav__sub" data-sub-nav>
+                {{#each item.collections as |collection|}}
+                <li class="nav__item nav__item--sub" data-sub-item>
+                    <a href="{{collection.url}}" class="nav__link nav__link--sub" data-sub-link>{{collection.title}}</a>
+                </li>
+                {{/each}}
+            </ul>
+        {{/if}}
         </li>
     {{/each}}
     </ul>
