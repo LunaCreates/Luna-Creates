@@ -42,7 +42,14 @@ async function paymentIconsData() {
   const icons = cards.concat(digital).filter(card => card !== 'SHOPIFY_PAY');
 
   // return formatted payment icons
-  return icons.map(icon => icon.toLowerCase().replace('_', '-'));
+  const iconsFormatted = icons.map(icon => {
+    return {
+      title: icon.toLowerCase().replace('_', ' '),
+      id: icon.toLowerCase().replace('_', '-')
+    }
+  });
+
+  return iconsFormatted;
 }
 
 // export for 11ty

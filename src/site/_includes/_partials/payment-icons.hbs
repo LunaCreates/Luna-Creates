@@ -1,9 +1,13 @@
-<ul class="payment-icons">
+<div class="payment-icons" aria-labelledby="payment-icons-title">
+    <h3 class="payment-icons__title" id="payment-icons-title">Accepted payment methods</h3>
+
+    <ul class="payment-icons__list">
     {{#each paymentIcons as |icon|}}
-        <li class="payment-icons__item">
+        <li class="payment-icons__item" aria-label="{{icon.title}}">
             <svg class="payment-icons__icon" width="30" height="30" aria-hidden="true">
-                <use xlink:href="/icons/sprite.svg#{{icon}}"></use>
+                <use xlink:href="/icons/sprite.svg#{{icon.id}}"></use>
             </svg>
         </li>
     {{/each}}
-</ul>
+    </ul>
+</div>
