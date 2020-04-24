@@ -1,5 +1,6 @@
 @use '../settings/variables' as _variables;
 @use '../tools/functions/z-index' as _z-index;
+@use '../tools/mixins/responsive' as _responsive;
 @use '../tools/mixins/typography' as _typography;
 
 // Skip links.........The sites skip to links.
@@ -9,8 +10,8 @@
   position: absolute;
   top: 0;
   left: 0;
-  background-color: _variables.$core-color-primary;
-  color: _variables.$core-color-background;
+  background-color: var(--color-primary);
+  color: var(--color-background);
   margin: 0;
   padding-top: _variables.$core-grid;
   padding-right: (_variables.$core-grid/ 2);
@@ -18,10 +19,17 @@
   padding-left: (_variables.$core-grid/ 2);
   text-align: center;
   text-decoration: none;
+
+  @include _responsive.min(m) {
+    padding: 0;
+    background-color: transparent;
+    color: var(--color-body);
+  }
 }
 
 .skip-link--hidden {
   position: absolute;
+  left: 0;
   width: 100%;
   height: auto;
   overflow: hidden;
@@ -32,5 +40,16 @@
     clip: auto;
     overflow: visible;
     z-index: _z-index.z(kilo);
+  }
+
+  @include _responsive.min(m) {
+    top: calc(50% - 23px);
+    left: 5vw;
+    width: auto;
+    transform: translateY(-50%);
+  }
+
+  @media screen and (min-width: 72.25em) {
+    left: calc((100vw - 1140px) / 2 + 5vw);
   }
 }

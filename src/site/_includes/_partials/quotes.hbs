@@ -1,8 +1,10 @@
-<section class="quotes">
+<section class="quotes" aria-describedby="quotes-title">
+    <h2 class="quotes__title" id="quotes-title">Recent reviews</h2>
+
     <div class="quotes__container">
         <div class="quotes__content" data-component="quotes" tabindex="0">
-            <div class="quotes__track glide__track" data-glide-el="track">
-                <div class="quotes__slides glide__slides">
+            <ul class="quotes__track glide__track" data-glide-el="track">
+                <li class="quotes__slides glide__slides">
                     <blockquote class="quotes__quote glide__slide">
                         <svg class="quotes__icon" width="20" height="19" aria-hidden="true">
                             <use xlink:href="/icons/sprite.svg#quote"></use>
@@ -26,17 +28,17 @@
                         <p class="quotes__body">What amazing customer service you have, backed up by a truly great product. I just wanted to say thank you for being such a pleasure to deal with.</p>
                         <cite class="quotes__cite">Cameron</cite>
                     </blockquote>
-                </div>
-            </div>
+                </li>
+            </ul>
 
-            <div class="quotes__bullets glide__bullets" data-glide-el="controls[nav]">
-                <button class="glide__bullet" data-glide-dir="=0">
+            <div class="quotes__bullets glide__bullets" data-glide-el="controls[nav]" aria-hidden="true">
+                <button type="button" class="glide__bullet" data-glide-dir="=0">
                     <span class="glide__bullet-body">Quote 1</span>
                 </button>
-                <button class="glide__bullet" data-glide-dir="=1">
+                <button type="button" class="glide__bullet" data-glide-dir="=1">
                     <span class="glide__bullet-body">Quote 2</span>
                 </button>
-                <button class="glide__bullet" data-glide-dir="=2">
+                <button type="button" class="glide__bullet" data-glide-dir="=2">
                     <span class="glide__bullet-body">Quote 3</span>
                 </button>
             </div>

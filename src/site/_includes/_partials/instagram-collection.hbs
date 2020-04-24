@@ -1,29 +1,29 @@
-<section class="instagram-collection instagram-collection--container">
-    <h2 class="instagram-collection__title">Follow us on Instagram <a href="{{settings.instagramUrl}}" class="instagram-collection__link">@{{settings.instagramName}}</a></h2>
+<section class="instagram-collection instagram-collection--container" aria-describedby="instagram-collection">
+    <h2 class="instagram-collection__title" id="instagram-collection">Follow us on Instagram <a href="{{settings.instagramUrl}}" class="instagram-collection__link">@{{settings.instagramName}}</a></h2>
 
-    <div class="instagram-collection__images">
-        {{#each instagramCollection as |item|}}
-            <div class="instagram-collection__item">
-                <picture class="instagram-collection__picture">
-                    <source media="(max-width: 37.4375em)" type="image/webp" data-srcset="{{item.image}}_150x150.jpg.webp 1x, {{item.image}}_250x250.jpg.webp 2x">
+    <ul class="instagram-collection__images">
+    {{#each instagramCollection as |item|}}
+        <li class="instagram-collection__item">
+            <picture class="instagram-collection__picture">
+                <source media="(max-width: 37.4375em)" type="image/webp" data-srcset="{{item.image}}_150x150.jpg.webp 1x, {{item.image}}_250x250.jpg.webp 2x">
 
-                    <source media="(max-width: 37.4375em)" data-srcset="{{item.image}}_150x150.jpg 1x, {{item.image}}_250x250.jpg 2x">
+                <source media="(max-width: 37.4375em)" data-srcset="{{item.image}}_150x150.jpg 1x, {{item.image}}_250x250.jpg 2x">
 
-                    <source type="image/webp" data-srcset="{{item.image}}_375x375.jpg.webp 1x, {{item.image}}_700x700.jpg.webp 2x">
+                <source type="image/webp" data-srcset="{{item.image}}_375x375.jpg.webp 1x, {{item.image}}_700x700.jpg.webp 2x">
 
-                    <img class="feature-block__image lazyload" data-srcset="{{item.image}}_375x375.jpg 1x, {{item.image}}_700x700.jpg 2x" alt="Wedding Table Plan" loading="lazy" width="200" height="200">
+                <img class="feature-block__image lazyload" data-srcset="{{item.image}}_375x375.jpg 1x, {{item.image}}_700x700.jpg 2x" alt="Wedding Table Plan" loading="lazy" width="200" height="200">
 
-                    <noscript>
-                        <source media="(max-width: 37.4375em)" type="image/webp" srcset="{{item.image}}_150x150.jpg.webp 1x, {{item.image}}_250x250.jpg.webp 2x">
+                <noscript>
+                    <source media="(max-width: 37.4375em)" type="image/webp" srcset="{{item.image}}_150x150.jpg.webp 1x, {{item.image}}_250x250.jpg.webp 2x">
 
-                        <source media="(max-width: 37.4375em)" srcset="{{item.image}}_150x150.jpg 1x, {{item.image}}_250x250.jpg 2x">
+                    <source media="(max-width: 37.4375em)" srcset="{{item.image}}_150x150.jpg 1x, {{item.image}}_250x250.jpg 2x">
 
-                        <source type="image/webp" srcset="{{item.image}}_375x375.jpg.webp 1x, {{item.image}}_700x700.jpg.webp 2x">
+                    <source type="image/webp" srcset="{{item.image}}_375x375.jpg.webp 1x, {{item.image}}_700x700.jpg.webp 2x">
 
-                        <img class="feature-block__image" srcset="{{item.image}}_375x375.jpg 1x, {{item.image}}_700x700.jpg 2x" alt="Wedding Table Plan" loading="lazy" width="200" height="200">
-                    </noscript>
-                </picture>
-            </div>
-        {{/each}}
-    </div>
+                    <img class="feature-block__image" srcset="{{item.image}}_375x375.jpg 1x, {{item.image}}_700x700.jpg 2x" alt="Wedding Table Plan" loading="lazy" width="200" height="200">
+                </noscript>
+            </picture>
+        </li>
+    {{/each}}
+    </ul>
 </section>
