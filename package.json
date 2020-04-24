@@ -23,7 +23,7 @@
     "webpack:prod": "cross-env NODE_ENV=prod webpack"
   },
   "dependencies": {
-    "@11ty/eleventy": "^0.9.0",
+    "@11ty/eleventy": "^0.10.0",
     "@glidejs/glide": "^3.4.1",
     "autoprefixer": "^9.7.6",
     "dotenv": "^8.2.0",
