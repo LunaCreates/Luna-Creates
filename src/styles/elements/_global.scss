@@ -18,6 +18,7 @@
   --color-foreground: #{_variables.$core-color-foreground};
   --color-neutral: #{_variables.$core-color-neutral};
   --color-fade: #{_variables.$core-color-fade};
+  --color-heading: #{_variables.$core-color-heading};
   --color-body: #{_variables.$core-color-body};
   --color-border: #{_variables.$core-color-border};
 }
@@ -43,6 +44,12 @@ body ::-moz-selection {
 body ::selection {
   background: var(--color-foreground);
   color: var(--color-background);
+}
+
+h1,
+h2,
+h3 {
+  color: var(--color-heading);
 }
 
 a {
@@ -111,6 +118,10 @@ button {
   border-radius: 0;
   font-size: inherit;
   appearance: none;
+
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+  }
 
   @media (hover) {
     @include _transitions.transition-03(all);

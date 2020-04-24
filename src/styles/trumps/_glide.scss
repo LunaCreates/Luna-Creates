@@ -21,6 +21,10 @@ $glide-modifier-separator: '--';
   &#{$se}track {
     transition: height 0.3s ease-in-out;
     overflow: hidden;
+
+    @media (prefers-reduced-motion: reduce) {
+      transition: none;
+    }
   }
 
   &#{$se}slides {

@@ -1,23 +1,39 @@
 @use '../settings/variables' as _variables;
+@use '../tools/mixins/responsive' as _responsive;
 
 .logo {
+  display: flex;
   align-self: center;
+
+  @include _responsive.min(m) {
+    grid-column: 2;
+  }
 }
 
 .logo__icon {
-  width: calc(210px + 0.8em);
+  width: 180px;
+  height: auto;
 
   image {
-    width: calc(100% - 10px);
-    transform: translateX(calc(-50% + 5px));
+    width: calc(100% - 20px);
+    transform: translateX(calc(-50% + 10px));
   }
 
   text {
-    fill: _variables.$core-color-primary;
-    font-size: 0.8em;
-    font-variation-settings: 'wght' 550;
+    fill: var(--color-primary);
+    font-size: 80%;
+    font-variation-settings: 'wght' 600;
+    text-anchor: middle;
     text-transform: uppercase;
     letter-spacing: 1px;
-    text-anchor: middle;
+  }
+
+  @include _responsive.min(m) {
+    width: 200px;
+
+    image {
+      width: calc(100% - 10px);
+      transform: translateX(calc(-50% + 5px));
+    }
   }
 }

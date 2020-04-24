@@ -73,6 +73,10 @@
     background-color: var(--color-body);
   }
 
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+  }
+
   @media (hover) {
     &:not(.footer__link--social)::before {
       width: 0;

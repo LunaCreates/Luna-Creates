@@ -55,8 +55,8 @@ $breakpoints: (
       padding-left: 5vw;
     }
 
-    @include min(xl) {
-      max-width: 1400px;
+    @include min(l) {
+      max-width: 1140px;
       margin: 0 auto;
     }
   }

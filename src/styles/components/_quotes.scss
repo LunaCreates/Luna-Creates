@@ -21,6 +21,15 @@
   }
 }
 
+.quotes__title {
+  position: absolute;
+  width: 0;
+  height: 0;
+  line-height: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
 .quotes__content {
   outline: none;
 }

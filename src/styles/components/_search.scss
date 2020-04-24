@@ -1,50 +1,65 @@
 @use '../settings/variables' as _variables;
+@use '../tools/functions/z-index' as _z-index;
 @use '../tools/mixins/responsive' as _responsive;
 
 .search {
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  top: 100%;
+  width: 100%;
+  height: 0;
   padding-right: 5vw;
   padding-left: 5vw;
-  background-color: var(--color-secondary);
-  transform: translateY(-100%);
-  transition: all 0.3s ease-in-out;
+  background-color: var(--color-background);
+  transition: height 0.5s ease-in-out, top 0.5s ease-in-out;
+  overflow: hidden;
+  z-index: _z-index.z(alpha);
+
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+  }
+
+  @include _responsive.max(m) {
+    left: 0;
+  }
 
   @include _responsive.min(m) {
-    position: static;
-    margin-right: (_variables.$core-grid * 2);
+    top: 50%;
+    right: 43px;
+    width: 0;
+    height: auto;
     padding-right: 0;
     padding-left: 0;
-    background-color: var(--color-background);
-    transform: translate(-28px, 0);
-    flex: 0 0 0;
-    order: 2;
-    overflow: hidden;
+    transform: translateY(-50%);
+    opacity: 0;
+    outline: 5px solid var(--color-background);
+    transition-property: width, opacity;
   }
 }
 
-.search--visible {
-  transform: translateY(0);
+.search--open {
+  @include _responsive.max(m) {
+    height: 43px;
+  }
 
   @include _responsive.min(m) {
-    flex: 1;
-    transform: translate(0, 0);
+    width: calc(100% - 80px);
+    opacity: 1;
   }
 }
 
 .search__form {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  flex-grow: 1;
+  padding-top: 5px;
+
+  @include _responsive.min(m) {
+    padding-top: 0;
+  }
 }
 
 .search__label {
+  position: absolute;
   display: block;
   width: 0;
   height: 0;
@@ -54,27 +69,38 @@
 
 .search__input {
   width: calc(100% - 40px);
-  padding: (_variables.$core-grid / 1.5) (_variables.$core-grid * 1.5);
+  padding-top: (_variables.$core-grid / 1.5);
+  padding-right: (_variables.$core-grid / 2);
+  padding-bottom: (_variables.$core-grid / 1.5);
+  padding-left: 0;
+  border-radius: 0;
+  color: inherit;
   font-size: 0.9em;
-  order: 2;
+
+  @include _responsive.max(m) {
+    border: 0;
+  }
+
+  @include _responsive.min(m) {
+    padding-left: (_variables.$core-grid / 2);
+  }
 }
 
 .search__submit {
-  margin-right: (_variables.$core-grid / 1.5);
-  order: 1;
-}
+  display: flex;
+  width: 30px;
+  height: 30px;
 
-.search__submit,
-.search__close {
-  width: 25px;
-  height: 25px;
-
-  svg {
-    pointer-events: none;
+  @include _responsive.min(m) {
+    width: 35px;
+    height: 35px;
   }
 }
 
 .search__icon {
   width: 100%;
   height: 100%;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  pointer-events: none;
 }
