@@ -114,10 +114,18 @@
   }
 
   @media screen and (min-width: 48em) and  (hover: none) and (pointer: coarse) {
-    margin-right: (_variables.$core-grid / 2);
+    margin-right: 1vw;
     margin-bottom: 0;
-    margin-left: (_variables.$core-grid / 2);
+    margin-left: 1vw;
     text-align: center;
+
+    &:first-of-type {
+      margin-left: 0;
+    }
+
+    &:last-of-type {
+      margin-right: 0;
+    }
   }
 }
 
