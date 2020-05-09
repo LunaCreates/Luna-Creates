@@ -24,14 +24,14 @@
     visibility: visible;
   }
 
-  @media (prefers-reduced-motion: reduce) {
-    transition: none;
-  }
-
   @include _responsive.min(m) {
     &::before {
       display: none;
     }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
   }
 }
 

@@ -4,11 +4,28 @@ function Naviagtion(nav: HTMLElement) {
   const resiveObserve = new ResizeObserver(resizeCallback);
   const navButton = nav.querySelector('[data-nav-button]') as HTMLButtonElement;
   const navList = nav.querySelector('[data-nav-list]') as HTMLUListElement;
+  const navShopItem = nav.querySelector('[data-nav-item="Shop"]') as HTMLAnchorElement;
+
+  function toggleSubNav(event: TouchEvent) {
+    const target = event.target as HTMLAnchorElement;
+    const isExpanded: boolean = target.getAttribute('aria-expanded') === 'true';
+
+    event.preventDefault();
+    target.setAttribute('aria-expanded', `${!isExpanded}`);
+  }
 
   function resizeCallback(entries: Array<ResizeObserverEntry>) {
     entries.forEach(entry => {
       const width = entry.contentRect.width;
       const navListHasStyleAttribute = navList.hasAttribute('style');
+
+      if (width >= 768 && 'ontouchstart' in document.documentElement) {
+        navShopItem.setAttribute('aria-expanded', 'false');
+        navShopItem.addEventListener('touchend', toggleSubNav);
+      } else {
+        navShopItem.removeAttribute('aria-expanded');
+        navShopItem.removeEventListener('touchend', toggleSubNav);
+      }
 
       if (width >= 768 && navListHasStyleAttribute) {
         navList.removeAttribute('style');
