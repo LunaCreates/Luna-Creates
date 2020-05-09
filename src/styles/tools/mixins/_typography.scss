@@ -68,7 +68,7 @@ $headings: (
       font-family: _variables.$core-font-family,
       font-size: calc(1.1em + 0.5vw),
       font-weight: normal,
-      font-variation-settings: 'wght' 650,
+      font-variation-settings: 'wght' _variables.$core-secondary-font-weight,
       line-height: _variables.$core-secondary-line-height,
       margin-top: 0,
       margin-bottom: _variables.$core-grid
