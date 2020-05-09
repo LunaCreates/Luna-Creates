@@ -11,15 +11,18 @@
         <ul class="footer__list">
             <li class="footer__item footer__item--title">Contact Us</li>
             <li class="footer__item"><a href="mailto:{{settings.email}}" class="footer__link">{{settings.email}}</a></li>
-        {{#each settings.social}}
-            <li class="footer__item footer__item--social"><a class="footer__link footer__link--social" href="{{this.url}}" title="{{this.title-attr}}" rel="external" aria-label="{{this.title}}">
-                <svg class="footer__icon" width="20" height="20" aria-hidden="true">
-                    <use xlink:href="/icons/sprite.svg#{{this.slug}}"></use>
-                </svg>
-            </a></li>
-        {{/each}}
 
-        {{> _partials/payment-icons }}
+        {% for item in settings.social %}
+            <li class="footer__item footer__item--social">
+                <a class="footer__link footer__link--social" href="{{item.url}}" title="{{item.title-attr}}" rel="external" aria-label="{{this.title}}">
+                    <svg class="footer__icon" width="20" height="20" aria-hidden="true">
+                        <use xlink:href="/icons/sprite.svg#{{item.slug}}"></use>
+                    </svg>
+                </a>
+            </li>
+        {% endfor %}
+
+        {% include "_partials/payment-icons.njk" %}
         </ul>
 
         <form action="/contact#contact_form" class="footer__form" accept-charset="UTF-8">

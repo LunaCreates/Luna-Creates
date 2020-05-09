@@ -9,20 +9,20 @@
     </button>
 
     <ul class="nav__list" data-nav-list>
-    {{#each navigation as |item|}}
+    {% for item in navigation %}
         <li class="nav__item">
             <a href="{{item.url}}" class="nav__link" data-nav-item="{{item.title}}">{{item.title}}</a>
 
-        {{#if item.collections}}
+            {% if item.collections %}
             <ul class="nav__sub" data-sub-nav>
-                {{#each item.collections as |collection|}}
+            {% for collection in item.collections %}
                 <li class="nav__item nav__item--sub" data-sub-item>
                     <a href="{{collection.url}}" class="nav__link nav__link--sub" data-sub-link>{{collection.title}}</a>
                 </li>
-                {{/each}}
+            {% endfor %}
             </ul>
-        {{/if}}
+            {% endif %}
         </li>
-    {{/each}}
+    {% endfor %}
     </ul>
 </nav>

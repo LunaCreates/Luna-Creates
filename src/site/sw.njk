@@ -4,10 +4,10 @@ permalink: sw.js
 ignore: true
 ---
 
-const cacheName = 'lunacreates:0001';
+const cacheName = 'lunacreates:0002';
 const cacheFiles = [
   '/',
-  {{cacheStylesheet}}
+  {% swStyles %}
 ];
 
 self.addEventListener('install', event => {

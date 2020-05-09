@@ -5,9 +5,10 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, minimum-scale=1, user-scalable=yes, initial-scale=1, viewport-fit=cover">
         <meta name="description" content="Stunning range of travel related personalised world map pinboard products for sale. Order online for quick UK delivery.">
-        {{#if nofollow}}
+
+        {% if nofollow %}
         <meta name="robots" content="noindex, nofollow">
-        {{/if}}
+        {% endif %}
 
         <!-- PAGE TITLE -->
         <title>{{title}} &mdash; {{settings.name}}</title>
@@ -16,14 +17,14 @@
         <link rel="preconnect" href="https://cdn.shopify.com/">
 
         <!-- PRELOAD FILES -->
-        {{> _partials/preload-styles }}
+        {% include "_partials/preload-styles.njk" %}
         <link rel="preload" href="/fonts/avenir-next-variable.woff2" as="font" type="font/woff2" crossorigin>
 
         <!-- STYLESHEET -->
-        {{> _partials/styles }}
+        {% include "_partials/styles.njk" %}
 
         <!-- SITEMAP -->
-        {{!-- <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" /> --}}
+        {# <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" /> #}
 
         <!-- MANIFEST -->
         <link rel="manifest" href="/site.webmanifest">
@@ -91,7 +92,16 @@
         <meta name="theme-color" content="#0e0d0d">
 
         <!-- JAVASCRIPT -->
-        {{> _partials/scripts }}
+        {% include "_partials/scripts.njk" %}
+
+        <style>
+            @font-face {
+                font-family: 'Avenir Next';
+                src: url('/fonts/avenir-next-variable.woff2') format('woff2-variations');
+                font-display: swap;
+                font-weight: normal;
+            }
+        </style>
     </head>
 
     <body>

@@ -1,0 +1,118 @@
+---
+pagination:
+    data: products
+    size: 1
+    alias: product
+permalink: "products/{{product.slug}}/"
+changefreq: weekly
+priority: 1
+layout: _layouts/default
+---
+
+<section class="product product--container" aria-describedby="product-title">
+    <div class="product__imagery">
+        <picture class="product__picture" data-component="product-picture">
+            <source media="(max-width: 37.4375em)" type="image/webp" data-srcset="{{product.mainImage}}_350x350.jpg.webp 1x, {{product.mainImage}}_450x450.jpg.webp 2x">
+
+            <source media="(max-width: 37.4375em)" data-srcset="{{product.mainImage}}_300x300.jpg.webp 1x, {{product.mainImage}}_450x450.jpg.webp 2x">
+
+            <source type="image/webp" data-srcset="{{product.mainImage}}_600x600.jpg.webp 1x, {{product.mainImage}}_800x800.jpg.webp 2x">
+
+            <img data-srcset="{{product.mainImage}}_600x600.jpg 1x, {{product.mainImage}}_800x800.jpg 2x" alt="{{product.mainImageAlt}}" class="product__image lazyload" loading="lazy" width="300" height="300">
+
+            <noscript>
+                <source media="(max-width: 37.4375em)" type="image/webp" srcset="{{product.mainImage}}_350x350.jpg.webp 1x, {{product.mainImage}}_450x450.jpg.webp 2x">
+
+                <source media="(max-width: 37.4375em)" srcset="{{product.mainImage}}_300x300.jpg.webp 1x, {{product.mainImage}}_450x450.jpg.webp 2x">
+
+                <source type="image/webp" srcset="{{product.mainImage}}_600x600.jpg.webp 1x, {{product.mainImage}}_800x800.jpg.webp 2x">
+
+                <img srcset="{{product.mainImage}}_600x600.jpg 1x, {{product.mainImage}}_800x800.jpg 2x" alt="{{product.mainImageAlt}}" class="product__image" loading="lazy" width="300" height="300">
+            </noscript>
+        </picture>
+
+        <div class="product__carousel" data-component="product-thumbnails" tabindex="0">
+            <div class="product__track glide__track" data-glide-el="track">
+                <ul class="product__thumbnails glide__slides">
+                {% for thumbnail in product.thumbnails %}
+                    <li class="product__thumbnail glide__slide">
+                        <a href="{{thumbnail.image}}.jpg" class="product__thumbnail-link {% if loop.first %}product__thumbnail-link--active{% endif %}" data-thumbnail-link>
+                            <picture class="product__thumbail-picture">
+                                <source media="(max-width: 37.4375em)" type="image/webp" data-srcset="{{thumbnail.image}}_100x100.jpg.webp 1x, {{thumbnail.image}}_200x200.jpg.webp 2x">
+
+                                <source media="(max-width: 37.4375em)" data-srcset="{{thumbnail.image}}_100x100.jpg 1x, {{thumbnail.image}}_200x200.jpg 2x">
+
+                                <source type="image/webp" data-srcset="{{thumbnail.image}}_300x300.jpg.webp 1x, {{thumbnail.image}}_450x450.jpg.webp 2x">
+
+                                <img class="product__thumbail-image lazyload" data-srcset="{{thumbnail.image}}_300x300.jpg 1x, {{thumbnail.image}}_450x450.jpg 2x" alt="Wedding Table Plan" loading="lazy" width="100" height="100">
+
+                                <noscript>
+                                    <source media="(max-width: 37.4375em)" type="image/webp" srcset="{{thumbnail.image}}_100x100.jpg.webp 1x, {{thumbnail.image}}_200x200.jpg.webp 2x">
+
+                                    <source media="(max-width: 37.4375em)" srcset="{{thumbnail.image}}_100x100.jpg 1x, {{thumbnail.image}}_200x200.jpg 2x">
+
+                                    <source type="image/webp" srcset="{{thumbnail.image}}_300x300.jpg.webp 1x, {{thumbnail.image}}_450x450.jpg.webp 2x">
+
+                                    <img class="product__thumbail-image" srcset="{{thumbnail.image}}_300x300.jpg 1x, {{thumbnail.image}}_450x450.jpg 2x" alt="Wedding Table Plan" loading="lazy" width="100" height="100">
+                                </noscript>
+                            </picture>
+                        </a>
+                    </li>
+                {% endfor %}
+                </ul>
+            </div>
+
+            <div class="glide__arrows" data-glide-el="controls" aria-hidden="true">
+                <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
+                    <svg class="glide__icon" xmlns="http://www.w3.org/2000/svg" width="7" height="19" viewBox="0 0 7 19">
+                        <path fill="#DBDBDB" fill-rule="evenodd" d="M7 0v19L0 9.5z" opacity=".9" />
+                    </svg>
+                </button>
+                <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
+                    <svg class="glide__icon" xmlns="http://www.w3.org/2000/svg" width="7" height="19" viewBox="0 0 7 19">
+                        <path fill="#DBDBDB" fill-rule="evenodd" d="M7 0v19L0 9.5z" opacity=".9" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="product__details">
+        <h1 class="product__title" id="product-title">{{product.title}}</h1>
+        <span class="product__price">{{product.price}}</span>
+
+        <div class="product__form">
+            <label for="map-size" class="product__label">Choose your map size</label>
+            <select name="map size" id="map-size" class="product__select">
+            {% for option in product.options %}
+                <option value="{{option}}">{{option}}</option>
+            {% endfor %}
+            </select>
+
+            <div class="product__personalisation">
+                <h2 class="product__personalisation-title">Personalisation</h2>
+                <p class="product__body">Preview your personalised map key before you buy.</p>
+
+                <label for="map-title" class="product__label">Give your map a title</label>
+                <input type="text" class="product__input" placeholder="E.g. Mark &amp; Emma's world travels" id="map-title">
+
+                <p class="product__label">Key text</p>
+
+                <input type="radio" id="map-key-no" name="key text" value="no" checked>
+                <label for="map-key-no" class="product__label">No</label>
+
+                <input type="radio" id="map-key-yes" name="key text" value="no">
+                <label for="map-key-yes" class="product__label">Yes</label>
+
+
+            </div>
+        </div>
+    </div>
+
+    {% if product.description %}
+    <div class="product__description">
+        <h2 class="product__sub-title">Product Info</h2>
+        {{product.description | safe }}
+    </div>
+    {% endif %}
+</section>

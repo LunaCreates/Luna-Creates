@@ -33,7 +33,7 @@
     "sass": "^1.26.5"
   },
   "devDependencies": {
-    "concurrently": "^5.0.2",
+    "concurrently": "^5.2.0",
     "copy-webpack-plugin": "^5.1.1",
     "cross-env": "^6.0.3",
     "css-loader": "^3.5.3",
@@ -48,8 +48,8 @@
     "sass-loader": "^8.0.0",
     "stylelint-selector-bem-pattern": "^2.1.0",
     "stylelint-webpack-plugin": "^1.2.3",
-    "svg-sprite-loader": "^4.2.5",
-    "terser-webpack-plugin": "^2.3.1",
+    "svg-sprite-loader": "^4.3.0",
+    "terser-webpack-plugin": "^2.3.6",
     "ts-loader": "^6.2.2",
     "typescript": "^3.8.3",
     "webpack": "^4.43.0",

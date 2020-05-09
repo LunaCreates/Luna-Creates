@@ -1,15 +1,11 @@
 const fs = require('fs');
 const htmlMin = require('./src/utils/minify-html.js');
-const eachUpTo = require('./src/utils/filters/each-up-to');
-const formatDate = require('./src/utils/filters/format-date');
 const swStyles = require('./src/utils/filters/sw-styles');
 
 module.exports = config => {
   const prod = process.env.NODE_ENV === 'prod';
 
-  config.addFilter('eachUpTo', eachUpTo);
-  config.addFilter('formatDate', formatDate);
-  config.addFilter('swStyles', swStyles);
+  config.addShortcode('swStyles', swStyles);
 
   config.addPassthroughCopy({ 'src/favicons': 'favicons' });
   config.addPassthroughCopy({ 'src/fonts': 'fonts' });
@@ -35,12 +31,13 @@ module.exports = config => {
   });
 
   return {
+    templateFormats: ['njk', 'html', '11ty.js'],
+    htmlTemplateEngine: 'njk',
+    markdownTemplateEngine: 'njk',
+    dataTemplateEngine: 'njk',
     dir: {
       input: 'src/site',
       output: 'dist'
     },
-    templateFormats: ['hbs', 'md', '11ty.js'],
-    htmlTemplateEngine: 'hbs',
-    markdownTemplateEngine: 'hbs'
   };
 };
