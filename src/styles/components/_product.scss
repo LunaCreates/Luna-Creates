@@ -1,0 +1,142 @@
+@use '../settings/variables' as _variables;
+@use '../tools/mixins/buttons' as _buttons;
+@use '../tools/mixins/responsive' as _responsive;
+@use '../tools/mixins/typography' as _typography;
+
+.product {
+  @include _responsive.container;
+  padding-top: (_variables.$core-grid * 2);
+
+  @include _responsive.min(m) {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    grid-column-gap: (_variables.$core-grid * 3.5);
+    padding-top: (_variables.$core-grid * 3.5);
+  }
+}
+
+.product__imagery {
+  margin-bottom: (_variables.$core-grid * 3);
+
+  @include _responsive.min(m) {
+    min-width: 0;
+    margin-bottom: 0;
+  }
+}
+
+.product__picture,
+.product__thumbail-picture {
+  display: block;
+  position: relative;
+  padding-top: 100%;
+  background-color: var(--color-fade);
+  pointer-events: none;
+}
+
+.product__image,
+.product__thumbail-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product__carousel {
+  position: relative;
+  margin-top: (_variables.$core-grid * 1.5);
+  margin-right: (_variables.$core-grid * 3);
+  margin-left: (_variables.$core-grid * 3);
+  outline: none;
+
+  .glide__arrow {
+    top: 50%;
+    width: 34px;
+    height: 34px;
+  }
+
+  .glide__arrow--left {
+    left: calc(-5vw - 17px);
+
+    @include _responsive.min(m) {
+      left: -34px;
+    }
+  }
+
+  .glide__arrow--right {
+    right: calc(-5vw - 17px);
+
+    @include _responsive.min(m) {
+      right: -34px;
+    }
+  }
+}
+
+.product__thumbnails {
+  display: flex;
+  flex-wrap: nowrap;
+  scroll-snap-type: x mandatory;
+  overflow-x: auto;
+}
+
+.product__thumbnail {
+  width: calc(25% - #{_variables.$core-grid * 2});
+  max-width: 60px;
+  margin-right: _variables.$core-grid;
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+
+  .glide__track & {
+    width: auto;
+    max-width: initial;
+  }
+
+  @include _responsive.min(m) {
+    max-width: 100px;
+    margin-right: (_variables.$core-grid * 1.5);
+  }
+}
+
+.product__thumbnail-link {
+  display: block;
+  border: 2px solid transparent;
+  opacity: 0.65;
+  transition: opacity 0.3s ease-in-out, border-color 0.3s ease-in-out;
+
+  &--active {
+    border-color: var(--color-primary);
+    opacity: 1;
+  }
+
+  @media (hover) {
+    &:hover {
+      border-color: var(--color-primary);
+      opacity: 1;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+  }
+}
+
+.product__title {
+  @include _typography.text(mars);
+  text-transform: uppercase;
+}
+
+.product__description {
+  margin-top: (_variables.$core-grid * 2);
+
+
+  @include _responsive.min(m) {
+    margin-top: (_variables.$core-grid * 3.5);
+  }
+}
+
+.product__sub-title {
+  @include _typography.text(venus);
+  text-transform: uppercase;
+}

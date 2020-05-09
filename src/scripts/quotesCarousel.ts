@@ -1,7 +1,8 @@
 import GlideModule from './modules/glide';
 
 function QuotesCarousel(carousel: HTMLElement) {
-  const newCarousel = GlideModule(carousel);
+  const option = { adjustHeight: true }
+  const newCarousel = GlideModule(carousel, option);
   const track = carousel.querySelector('[data-glide-el]') as HTMLElement;
 
   function resizeCallback(entries: any) {

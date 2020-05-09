@@ -68,6 +68,26 @@ $glide-modifier-separator: '--';
     user-select: none;
   }
 
+  &#{$se}arrow {
+    position: absolute;
+    transform: translateY(-50%);
+
+    &--hidden {
+      display: none;
+    }
+
+    &--right {
+      transform: rotate(180deg) translateY(-50%);
+      transform-origin: top;
+    }
+  }
+
+  &#{$se}icon {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
   &#{$se}bullets {
     margin-top: (_variables.$core-grid * 2);
     -webkit-touch-callout: none;

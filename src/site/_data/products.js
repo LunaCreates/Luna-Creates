@@ -6,7 +6,7 @@ require('dotenv').config();
 // Shopify Storefront token
 const token = process.env.STOREFRONT_API_TOKEN;
 
-async function featuredProductsData() {
+async function allProductsData() {
   const data = await fetch(process.env.STOREFRONT_API_URL, {
     method: 'POST',
     headers: {
@@ -16,24 +16,26 @@ async function featuredProductsData() {
     },
     body: JSON.stringify({
       query: `{
-        collectionByHandle(handle: "home-page") {
-          products(first: 3) {
-            edges {
-              node {
-                title
-                handle
-                priceRange {
-                  minVariantPrice {
-                    amount
-                    currencyCode
-                  }
+        products(first: 50, query: "available_for_sale:true") {
+          edges {
+            node {
+              title
+              handle
+              descriptionHtml
+              options {
+                values
+              }
+              priceRange {
+                minVariantPrice {
+                  amount
+                  currencyCode
                 }
-                images(first: 1) {
-                  edges {
-                    node {
-                      altText
-                      originalSrc
-                    }
+              }
+              images(first: 10) {
+                edges {
+                  node {
+                    altText
+                    originalSrc
                   }
                 }
               }
@@ -55,18 +57,30 @@ async function featuredProductsData() {
   }
 
   // get data from the JSON response
-  const products = response.data.collectionByHandle.products.edges.map(edge => edge.node);
+  const products = response.data.products.edges.map(edge => edge.node);
+
+  // format all product images
+  function formatProductImages(image) {
+    return {
+      image: image.node.originalSrc.split('.jpg')[0],
+      imageAlt: image.node.altText
+    }
+  }
 
   // format products objects
   const productsFormatted = products.map(item => {
+    const images = item.images.edges.map(formatProductImages);
     const price = item.priceRange.minVariantPrice.amount;
     const currency = item.priceRange.minVariantPrice.currencyCode;
 
     return {
       title: item.title,
-      slug: `/products/${item.handle}/`,
-      imageAlt: item.images.edges[0].node.altText,
-      image: item.images.edges[0].node.originalSrc.split('.jpg')[0],
+      slug: item.handle,
+      description: item.descriptionHtml,
+      options: item.options[0].values,
+      mainImageAlt: item.images.edges[0].node.altText,
+      mainImage: item.images.edges[0].node.originalSrc.split('.jpg')[0],
+      thumbnails: images,
       price: new Intl.NumberFormat('en-GB', { style: 'currency', currency: currency }).format(price)
     };
   });
@@ -76,4 +90,4 @@ async function featuredProductsData() {
 }
 
 // export for 11ty
-module.exports = featuredProductsData;
+module.exports = allProductsData;

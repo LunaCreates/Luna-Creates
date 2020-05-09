@@ -68,6 +68,12 @@ import(/* webpackChunkName: "swRegister" */ 'Src/scripts/swRegister').then(initM
 // Carousels
 // glide js is imported in them all but webpack splits it out into a seprate bundle then includes it when needed.
 
+observe((carousel: HTMLElement) => {
+  import(/* webpackChunkName: "product-thumbnails" */ 'Src/scripts/productThumbnails')
+    .then(module => initModule(module, carousel))
+    .catch(err => console.error(`Error in: Product Thumbnails - ${err}`));
+}, document.querySelectorAll('[data-component="product-thumbnails"]'));
+
 function resizeCallback(entries: Array<ResizeObserverEntry>) {
   entries.forEach((entry: ResizeObserverEntry) => {
     const width = entry.contentRect.width;
@@ -86,5 +92,13 @@ function resizeCallback(entries: Array<ResizeObserverEntry>) {
 
 const resizeObserver = new ResizeObserver(resizeCallback);
 resizeObserver.observe(document.body);
+
+// Others
+
+observe((carousel: HTMLElement) => {
+  import(/* webpackChunkName: "product-main-image" */ 'Src/scripts/productMainImage')
+    .then(module => initModule(module, carousel))
+    .catch(err => console.error(`Error in: product Main Image - ${err}`));
+}, document.querySelectorAll('[data-component="product-picture"]'));
 
 export {};

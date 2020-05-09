@@ -1,6 +1,6 @@
 import Glide from '@glidejs/glide';
 
-function GlideSliderModule(element: HTMLElement, options = {}) {
+function GlideSliderModule(element: HTMLElement, options: any = {}) {
   const defaultOptions = {
     animationDuration: 700,
     animationTimingFunc: 'ease',
@@ -31,13 +31,12 @@ function GlideSliderModule(element: HTMLElement, options = {}) {
     if (isStart) {
       hideArrow(previousArrow);
       showArrow(nextArrow);
-      return;
-    }
-
-    if (isEnd) {
+    } else if (isEnd) {
       hideArrow(nextArrow);
       showArrow(previousArrow);
-      return;
+    } else {
+      showArrow(previousArrow);
+      showArrow(nextArrow);
     }
   }
 
@@ -85,7 +84,7 @@ function GlideSliderModule(element: HTMLElement, options = {}) {
     const isSliderType = Glide.isType('slider');
 
     function updateHeight() {
-      Components.Html.track.style.height = `${Components.Html.slides[Glide.index].offsetHeight}px`;
+      Components.Html.track.style.height = `${Components.Html.slides[Glide.index].scrollHeight}px`;
     }
 
     function update() {
@@ -97,11 +96,14 @@ function GlideSliderModule(element: HTMLElement, options = {}) {
         toggleVisibilityOfArrows(isStart, isEnd);
       }
 
-      updateHeight();
+      if (options.adjustHeight) {
+        updateHeight();
+      }
+
     }
 
     if (isSliderType) {
-      Events.on('mount.after', updateHeight);
+      Events.on('mount.after', update);
       Events.on('run', update);
     }
 
