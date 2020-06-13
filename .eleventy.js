@@ -1,6 +1,6 @@
 const fs = require('fs');
 const htmlMin = require('./src/utils/minify-html.js');
-const swStyles = require('./src/utils/filters/sw-styles');
+const swStyles = require('./src/utils/filters/sw-styles.js');
 
 module.exports = config => {
   const prod = process.env.NODE_ENV === 'prod';
