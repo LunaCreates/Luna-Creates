@@ -1,4 +1,4 @@
-import stateManager from "./stateManager";
+import stateManager from './stateManager.ts';
 
 function Form(product: HTMLElement) {
   const form: HTMLFormElement | null = product.querySelector('[data-product-form]');

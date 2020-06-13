@@ -1,9 +1,9 @@
-import checkout from './checkout';
-import form from './form';
-import price from './price';
-import variants from './variants';
-import keyMap from './keyMap';
-import basket from './basket';
+import checkout from './checkout.ts';
+import form from './form.ts';
+import price from './price.ts';
+import variants from './variants.ts';
+import keyMap from './keyMap.ts';
+import basket from './basket.ts';
 
 function Shopify(product: HTMLElement) {
   function init() {

@@ -98,7 +98,7 @@
 .modal__basket-button {
   @include _buttons.button(primary);
 
-  &[disabled="true"] {
+  &[disabled='true'] {
     @include _buttons.button(disabled);
   }
 }

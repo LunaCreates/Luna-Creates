@@ -1,4 +1,4 @@
-import pubSub from '../modules/pubSub';
+import pubSub from '../modules/pubSub.ts';
 
 function KeyMap(product: HTMLElement) {
   const modal: HTMLDialogElement | null = product.querySelector('[data-key-map-modal]');

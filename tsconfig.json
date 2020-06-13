@@ -1,6 +1,11 @@
 {
   "compilerOptions": {
     "target": "es6",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -23,6 +28,7 @@
   ],
   "exclude": [
     "src/utils/**/*.js",
-    "src/site/_data/*.js"
+    "src/site/_data/*.js",
+    "node_modules"
   ]
 }

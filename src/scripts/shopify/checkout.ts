@@ -1,4 +1,4 @@
-import shopify from '../modules/shopify';
+import shopify from '../modules/shopify.ts';
 
 function Checkout(product: HTMLElement) {
   const existingCheckoutId = localStorage.getItem('shopify_checkout_id');

@@ -1,5 +1,5 @@
-import pubSub from '../modules/pubSub';
-import shopify from '../modules/shopify';
+import pubSub from '../modules/pubSub.ts';
+import shopify from '../modules/shopify.ts';
 
 function Basket(product: HTMLElement) {
   const checkoutId = localStorage.getItem('shopify_checkout_id');

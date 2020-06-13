@@ -1,5 +1,4 @@
-import punSub from '../modules/pubSub';
-// import shopify from '../modules/shopify';
+import punSub from '../modules/pubSub.ts';
 
 function StateManager() {
   function variantChanged(variant: HTMLElement) {
