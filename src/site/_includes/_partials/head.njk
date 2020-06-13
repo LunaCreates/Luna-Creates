@@ -11,7 +11,7 @@
         {% endif %}
 
         <!-- PAGE TITLE -->
-        <title>{{title}} &mdash; {{settings.name}}</title>
+        <title>{% if renderData.title or title %}{{ renderData.title or title }}{% endif %} &mdash; {{settings.name}}</title>
 
         <!-- RESOURCE HINTS -->
         <link rel="preconnect" href="https://cdn.shopify.com/">
@@ -98,7 +98,7 @@
             @font-face {
                 font-family: 'Avenir Next';
                 src: url('/fonts/avenir-next-variable.woff2') format('woff2-variations');
-                font-display: swap;
+                font-display: optional;
                 font-weight: normal;
             }
         </style>
