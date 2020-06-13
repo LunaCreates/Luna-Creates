@@ -7,7 +7,7 @@ function ProductThumbnails(carousel: HTMLElement) {
     bound: true,
     breakpoints: {
       768: {
-        gap: 12
+        gap: 10
       }
     }
   };
