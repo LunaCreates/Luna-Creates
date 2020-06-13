@@ -31,9 +31,9 @@ module.exports = config => {
   });
 
   return {
-    templateFormats: ['njk', 'html', '11ty.js'],
+    templateFormats: ['njk', 'html', 'liquid'],
     htmlTemplateEngine: 'njk',
-    markdownTemplateEngine: 'njk',
+    markdownTemplateEngine: 'liquid',
     dataTemplateEngine: 'njk',
     dir: {
       input: 'src/site',

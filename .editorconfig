@@ -13,12 +13,6 @@ charset = utf-8
 indent_size = 4
 indent_style = space
 
-# HBS
-[*.hbs]
-charset = utf-8
-indent_size = 4
-indent_style = space
-
 # Nunjucks
 [*.njk]
 charset = utf-8
