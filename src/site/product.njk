@@ -15,13 +15,13 @@ layout: _layouts/default
     <div class="product__imagery">
         <picture class="product__picture" data-component="product-picture">
             <source media="(max-width: 37.4375em)" type="image/webp" data-srcset="{{product.mainImage}}_350x350.jpg.webp 1x, {{product.mainImage}}_450x450.jpg.webp 2x">
-            <source media="(max-width: 37.4375em)" data-srcset="{{product.mainImage}}_300x300.jpg.webp 1x, {{product.mainImage}}_450x450.jpg.webp 2x">
+            <source media="(max-width: 37.4375em)" data-srcset="{{product.mainImage}}_300x300.jpg 1x, {{product.mainImage}}_450x450.jpg 2x">
             <source type="image/webp" data-srcset="{{product.mainImage}}_600x600.jpg.webp 1x, {{product.mainImage}}_800x800.jpg.webp 2x">
             <img data-srcset="{{product.mainImage}}_600x600.jpg 1x, {{product.mainImage}}_800x800.jpg 2x" alt="{{product.mainImageAlt}}" class="product__image lazyload" loading="lazy" width="300" height="300">
 
             <noscript>
                 <source media="(max-width: 37.4375em)" type="image/webp" srcset="{{product.mainImage}}_350x350.jpg.webp 1x, {{product.mainImage}}_450x450.jpg.webp 2x">
-                <source media="(max-width: 37.4375em)" srcset="{{product.mainImage}}_300x300.jpg.webp 1x, {{product.mainImage}}_450x450.jpg.webp 2x">
+                <source media="(max-width: 37.4375em)" srcset="{{product.mainImage}}_300x300.jpg 1x, {{product.mainImage}}_450x450.jpg 2x">
                 <source type="image/webp" srcset="{{product.mainImage}}_600x600.jpg.webp 1x, {{product.mainImage}}_800x800.jpg.webp 2x">
                 <img srcset="{{product.mainImage}}_600x600.jpg 1x, {{product.mainImage}}_800x800.jpg 2x" alt="{{product.mainImageAlt}}" class="product__image" loading="lazy" width="300" height="300">
             </noscript>
