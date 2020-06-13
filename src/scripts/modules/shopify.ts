@@ -1,3 +1,5 @@
+///  <reference types="@types/shopify-buy"/>
+
 import Client from 'shopify-buy';
 
 const shopify = Client.buildClient({
