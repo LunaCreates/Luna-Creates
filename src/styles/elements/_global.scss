@@ -14,6 +14,7 @@
 :root {
   --color-primary: #{_variables.$core-color-primary};
   --color-secondary: #{_variables.$core-color-secondary};
+  --color-tertiary: #{_variables.$core-color-tertiary};
   --color-background: #{_variables.$core-color-background};
   --color-foreground: #{_variables.$core-color-foreground};
   --color-neutral: #{_variables.$core-color-neutral};
@@ -99,9 +100,11 @@ legend {
   padding: 0;
 }
 
-input {
+input,
+select {
   border: 1px solid var(--color-border);
   border-radius: 4px;
+  background-color: var(--color-background);
   appearance: none;
 }
 

@@ -30,10 +30,10 @@ $buttons: (
   ),
   disabled: (
     default: (
-      background-color: _variables.$core-color-neutral,
-      color: _variables.$core-color-secondary,
-      border-color: _variables.$core-color-neutral,
-      pointer-events: none
+      background-color: var(--color-neutral),
+      color: var(--color-heading),
+      border-color: var(--color-neutral),
+      cursor: not-allowed
     ),
   ),
 );
