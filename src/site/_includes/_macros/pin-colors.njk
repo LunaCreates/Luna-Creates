@@ -1,0 +1,28 @@
+{% macro pinColorsIndex(colorIndex, required, placeholder) %}
+<div class="pin-colors__field">
+    <label for="pin-colors-{{colorIndex}}" class="pin-colors__label">Pin colour {{colorIndex}}</label>
+    <div class="product__select-wrapper">
+        <select name="colors" id="pin-colors-{{colorIndex}}" class="product__select" data-product-pin-colors="{{colorIndex}}" {% if required %}required{% endif %}>
+            <option value="">None</option>
+            <option value="#F8C3D3">Pink</option>
+            <option value="#F8C3D3">Light Blue</option>
+            <option value="#F8C3D3">Green</option>
+            <option value="#F8C3D3">Purple</option>
+            <option value="#F8C3D3">White</option>
+            <option value="#F8C3D3">Yellow</option>
+            <option value="#F8C3D3">Red</option>
+            <option value="#F8C3D3">Blue</option>
+            <option value="#F8C3D3">Orange</option>
+            <option value="#F8C3D3">Black</option>
+        </select>
+        <svg class="product__select-icon" width="24" height="24" aria-hidden="true">
+            <use xlink:href="/icons/sprite.svg#chevron"></use>
+        </svg>
+    </div>
+</div>
+
+<div class="product__field">
+    <label for="map-key-{{colorIndex}}" class="product__label">Key text {{colorIndex}}</label>
+    <input type="text" name="key" class="product__input" id="map-key-{{colorIndex}}" maxlength="35" {% if placeholder %}placeholder="{{placeholder}}"{% endif %}>
+</div>
+{% endmacro %}
