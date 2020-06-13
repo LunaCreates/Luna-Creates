@@ -69,6 +69,12 @@ import(/* webpackChunkName: "swRegister" */ 'Src/scripts/swRegister').then(initM
 // glide js is imported in them all but webpack splits it out into a seprate bundle then includes it when needed.
 
 observe((carousel: HTMLElement) => {
+  import(/* webpackChunkName: "product-main-image" */ 'Src/scripts/productMainImage')
+    .then(module => initModule(module, carousel))
+    .catch(err => console.error(`Error in: Product Main Image - ${err}`));
+}, document.querySelectorAll('[data-component="product-picture"]'));
+
+observe((carousel: HTMLElement) => {
   import(/* webpackChunkName: "product-thumbnails" */ 'Src/scripts/productThumbnails')
     .then(module => initModule(module, carousel))
     .catch(err => console.error(`Error in: Product Thumbnails - ${err}`));
@@ -93,12 +99,16 @@ function resizeCallback(entries: Array<ResizeObserverEntry>) {
 const resizeObserver = new ResizeObserver(resizeCallback);
 resizeObserver.observe(document.body);
 
-// Others
+// Shopify
 
-observe((carousel: HTMLElement) => {
-  import(/* webpackChunkName: "product-main-image" */ 'Src/scripts/productMainImage')
-    .then(module => initModule(module, carousel))
-    .catch(err => console.error(`Error in: product Main Image - ${err}`));
-}, document.querySelectorAll('[data-component="product-picture"]'));
+const pathname = window.location.pathname;
+const isProductPage = pathname.includes('/products/') && !pathname.endsWith('/products/');
+
+if (isProductPage) {
+  const product = document.querySelector('[data-component="product-details"]');
+  import(/* webpackChunkName: "shopify" */ 'Src/scripts/shopify/shopify')
+    .then(module => initModule(module, product))
+    .catch(err => console.error(`Error in: Shopify - ${err}`));
+}
 
 export {};
