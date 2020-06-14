@@ -1,5 +1,5 @@
-import GlideModule from './modules/glide';
-import pubSub from './modules/pubSub';
+import GlideModule from './modules/glide.ts';
+import pubSub from './modules/pubSub.ts';
 
 function ProductThumbnails(carousel: HTMLElement) {
   const options = {

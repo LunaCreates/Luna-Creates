@@ -1,4 +1,4 @@
-import pubSub from './modules/pubSub';
+import pubSub from './modules/pubSub.ts';
 
 function ProductMainImage(picture: HTMLPictureElement) {
   const sources: Array<HTMLSourceElement> = Array.from(picture.querySelectorAll('source'));

@@ -1,4 +1,4 @@
-import GlideModule from './modules/glide';
+import GlideModule from './modules/glide.ts';
 
 function QuotesCarousel(carousel: HTMLElement) {
   const option = { adjustHeight: true }
