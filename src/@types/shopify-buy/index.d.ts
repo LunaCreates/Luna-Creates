@@ -1,9 +1,9 @@
 declare module 'shopify-buy' {
-  export interface Helpers {
+  interface ProductHelpers {
     variantForOptions(product: ShopifyBuy.Product, options: ShopifyBuy.Option): ProductVariant
   }
 
-  export interface ProductResource extends ShopifyBuy.ProductResource {
-    helpers: Helpers
+  interface ProductResource extends ShopifyBuy.ProductResource {
+    helpers: ProductHelpers
   }
 }
