@@ -1,0 +1,40 @@
+---
+pagination:
+    data: categories
+    size: 1
+    alias: category
+renderData:
+  title: "{{category.title}}"
+  heroTitle: "{{category.title}}"
+  heroImage: "{{category.heroImage}}"
+permalink: "collections/{{category.slug}}/"
+changefreq: weekly
+priority: 1
+layout: _layouts/default
+---
+
+{% include "_partials/hero.njk" %}
+
+<main id="main">
+    <ul class="products products--container">
+        {% for product in category.products %}
+        <li class="products__product">
+            <picture class="featured__picture">
+                <source type="image/webp" data-srcset="{{product.mainImage}}_300x300.jpg.webp 1x, {{product.mainImage}}_450x450.jpg.webp 2x">
+
+                <img data-srcset="{{product.mainImage}}_300x300.jpg 1x, {{product.mainImage}}_450x450.jpg 2x" alt="{{product.mainImageAlt}}" class="featured__image lazyload" loading="lazy" width="300" height="300">
+
+                <noscript>
+                    <source type="image/webp" srcset="{{product.mainImage}}_300x300.jpg.webp 1x, {{product.mainImage}}_400x400.jpg.webp 2x">
+
+                    <img srcset="{{product.mainImage}}_300x300.jpg 1x, {{product.mainImage}}_450x450.jpg 2x" alt="{{product.mainImageAlt}}" class="featured__image" loading="lazy" width="300" height="300">
+                </noscript>
+            </picture>
+            <a class="featured__link" href="{{product.slug}}">{{product.title}}</a>
+            <span class="featured__price">{{product.price}}</span>
+        </li>
+        {% endfor %}
+    </ul>
+</main>
+
+

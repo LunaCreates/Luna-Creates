@@ -1,5 +1,5 @@
-import pubSub from '../modules/pubSub.ts';
-import shopify from '../modules/shopify.ts';
+import pubSub from '../modules/pubSub';
+import shopify from '../modules/shopify';
 
 function Basket(product: HTMLElement) {
   const checkoutId = localStorage.getItem('shopify_checkout_id');
@@ -24,9 +24,11 @@ function Basket(product: HTMLElement) {
 
   function updateBasketCount(checkout: ShopifyBuy.Cart) {
     const cart = Array.from(document.querySelectorAll('[data-cart]'));
-    const itemCount = checkout.lineItems.length;
+    const count = checkout.lineItems.reduce((m, item) => m + item.quantity, 0);
 
-    cart.forEach(item => item.setAttribute('data-count', `${itemCount}`));
+    console.log(checkout, 'updateBasketCount');
+
+    cart.forEach(item => item.setAttribute('data-count', `${count}`));
   }
 
   function updateBasket(event: Event) {
@@ -42,13 +44,11 @@ function Basket(product: HTMLElement) {
       }
     ];
 
-    console.log(lineItemsToAdd, 'lineItemsToAdd');
-
     basketButton.setAttribute('disabled', 'true');
     basketButton.textContent = 'Added';
 
     shopify.checkout.addLineItems(checkoutId, lineItemsToAdd)
-      .then(checkout => updateBasketCount(checkout));
+      .then(updateBasketCount);
   }
 
   function init() {

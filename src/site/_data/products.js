@@ -104,7 +104,8 @@ async function allProductsData() {
     return {
       id: item.id,
       title: item.title,
-      slug: item.handle,
+      slug: `/products/${item.handle}`,
+      tags: item.tags,
       description: item.descriptionHtml,
       color: color,
       options: options,

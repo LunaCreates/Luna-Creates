@@ -75,8 +75,14 @@ observe((carousel: HTMLElement) => {
 }, document.querySelectorAll('[data-component="product-picture"]'));
 
 observe((carousel: HTMLElement) => {
-  import(/* webpackChunkName: "product-thumbnails" */ 'Src/scripts/productThumbnails')
+  import(/* webpackChunkName: "product-thumbnails" */ 'Src/scripts/productThumbnailsCarousel')
     .then(module => initModule(module, carousel))
+    .catch(err => console.error(`Error in: Product Thumbnails - ${err}`));
+}, document.querySelectorAll('[data-component="product-thumbnails-carousel"]'));
+
+observe((element: HTMLElement) => {
+  import(/* webpackChunkName: "product-thumbnails" */ 'Src/scripts/productThumbnails')
+    .then(module => initModule(module, element))
     .catch(err => console.error(`Error in: Product Thumbnails - ${err}`));
 }, document.querySelectorAll('[data-component="product-thumbnails"]'));
 

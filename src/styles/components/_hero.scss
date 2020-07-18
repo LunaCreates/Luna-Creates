@@ -1,0 +1,89 @@
+@use '../settings/variables' as _variables;
+@use '../tools/functions/z-index' as _z-index;
+@use '../tools/mixins/responsive' as _responsive;
+@use '../tools/mixins/typography' as _typography;
+
+.hero {
+  @include _responsive.container;
+  position: relative;
+
+  &:not(&--home)::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: _z-index.z(alpha);
+  }
+}
+
+.hero__picture {
+  position: relative;
+  display: block;
+  padding-top: 33.33%;
+  background-color: var(--color-fade);
+
+  .hero--home & {
+    padding-top: 60%;
+
+    @include _responsive.min(m) {
+      padding-top: 31.25%;
+    }
+  }
+}
+
+.hero__image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero__container {
+  text-align: center;
+
+  .hero:not(.hero--home) & {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    z-index: _z-index.z(beta);
+  }
+
+  .hero--home & {
+    padding-top: (_variables.$core-grid * 3);
+    padding-bottom: (_variables.$core-grid * 3);
+    text-align: center;
+
+    @include _responsive.min(m) {
+      padding-top: (_variables.$core-grid * 4);
+      padding-bottom: (_variables.$core-grid * 4);
+    }
+  }
+}
+
+.hero__title {
+  @include _typography.text(mars);
+  text-align: center;
+  text-transform: uppercase;
+
+  .hero:not(.hero--home) & {
+    margin-bottom: 0;
+    color: var(--color-background);
+  }
+
+  @include _responsive.min(m) {
+    margin-bottom: (_variables.$core-grid * 2);
+  }
+}
+
+.hero__body {
+  max-width: 890px;
+  margin: 0 auto;
+}

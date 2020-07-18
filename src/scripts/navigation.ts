@@ -1,4 +1,4 @@
-import pubSub from './modules/pubSub.ts';
+import pubSub from './modules/pubSub';
 
 function Naviagtion(nav: HTMLElement) {
   const resiveObserve = new ResizeObserver(resizeCallback);

@@ -1,18 +1,6 @@
-import GlideModule from './modules/glide.ts';
-import pubSub from './modules/pubSub.ts';
+import pubSub from './modules/pubSub';
 
-function ProductThumbnails(carousel: HTMLElement) {
-  const options = {
-    perView: 4,
-    bound: true,
-    breakpoints: {
-      768: {
-        gap: 10
-      }
-    }
-  };
-  const newCarousel = GlideModule(carousel, options);
-
+function ProductThumbnails(element: HTMLElement) {
   function sendPubSubMessage(element: HTMLAnchorElement) {
     const picture = element.querySelector('picture') as HTMLPictureElement;
 
@@ -20,7 +8,7 @@ function ProductThumbnails(carousel: HTMLElement) {
   }
 
   function setActiveThumbnail(link: HTMLAnchorElement) {
-    const currentActiveLink: HTMLAnchorElement | null = carousel.querySelector('.product__thumbnail-link--active');
+    const currentActiveLink: HTMLAnchorElement | null = element.querySelector('.product__thumbnail-link--active');
 
     if (currentActiveLink === null) return;
 
@@ -39,8 +27,7 @@ function ProductThumbnails(carousel: HTMLElement) {
   }
 
   function init() {
-    newCarousel.init();
-    carousel.addEventListener('click', handleClickEvent);
+    element.addEventListener('click', handleClickEvent);
   }
 
   return {

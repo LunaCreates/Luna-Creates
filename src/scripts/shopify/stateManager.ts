@@ -1,4 +1,4 @@
-import punSub from '../modules/pubSub.ts';
+import punSub from '../modules/pubSub';
 
 function StateManager() {
   function variantChanged(variant: HTMLElement) {

@@ -1,4 +1,4 @@
-import pubSub from './modules/pubSub.ts';
+import pubSub from './modules/pubSub';
 
 function TriggerSearch(element: HTMLElement) {
   const triggerSearch = element.querySelector('[data-trigger-search]') as HTMLButtonElement;

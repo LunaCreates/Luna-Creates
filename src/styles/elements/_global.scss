@@ -101,16 +101,17 @@ legend {
 }
 
 input,
+textarea,
 select {
   border: 1px solid var(--color-border);
   border-radius: 4px;
   background-color: var(--color-background);
+  font-family: inherit;
   appearance: none;
 }
 
 textarea {
-  border-radius: 0;
-  appearance: none;
+  min-height: 100px;
 }
 
 button {

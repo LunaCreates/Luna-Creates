@@ -1,5 +1,5 @@
-import pubSub from '../modules/pubSub.ts';
-import shopify from '../modules/shopify.ts';
+import pubSub from '../modules/pubSub';
+import shopify from '../modules/shopify';
 
 function Price(element: HTMLElement) {
   function updatePrice(product: ShopifyBuy.Product, options: any) {

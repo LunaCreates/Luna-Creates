@@ -5,13 +5,13 @@ pagination:
     alias: product
 renderData:
   title: "{{product.title}}"
-permalink: "products/{{product.slug}}/"
+permalink: "/{{product.slug}}/"
 changefreq: weekly
 priority: 1
 layout: _layouts/default
 ---
 
-<section class="product product--container" aria-describedby="product-title" data-component="product-details" data-product-id="{{product.id}}" data-product-color="{{product.color}}">
+<main class="product product--container" aria-describedby="product-title" data-component="product-details" data-product-id="{{product.id}}" data-product-color="{{product.color}}">
     <div class="product__imagery">
         <picture class="product__picture" data-component="product-picture">
             <source media="(max-width: 37.4375em)" type="image/webp" data-srcset="{{product.mainImage}}_350x350.jpg.webp 1x, {{product.mainImage}}_450x450.jpg.webp 2x">
@@ -41,7 +41,43 @@ layout: _layouts/default
         <h1 class="product__title" id="product-title">{{product.title}}</h1>
         <span class="product__price" aria-live="polite" data-product-price>{{product.price}}</span>
 
-        {% include "_partials/product-form.njk" %}
+        {% for tag in product.tags %}
+            {% if tag === 'Map Only' %}
+                {% include "_partials/personalised-form.njk" %}
+            {% endif %}
+
+            {% if tag === 'Wedding Table Plan' %}
+                {% include "_partials/wedding-table-form.njk" %}
+            {% endif %}
+
+            {% if tag === 'Wedding Table Name' %}
+                {% include "_partials/wedding-table-name-form.njk" %}
+            {% endif %}
+
+            {% if tag === 'Wedding Welcome' %}
+                {% include "_partials/wedding-welcome-form.njk" %}
+            {% endif %}
+
+            {% if tag === 'Wedding Gift' %}
+                {% include "_partials/wedding-gift-form.njk" %}
+            {% endif %}
+
+            {% if tag === 'Babymap' %}
+                {% include "_partials/baby-map-form.njk" %}
+            {% endif %}
+
+            {% if tag === 'Newhome' %}
+                {% include "_partials/new-home-form.njk" %}
+            {% endif %}
+
+            {% if tag === 'Pins' %}
+                {% include "_partials/pins-form.njk" %}
+            {% endif %}
+
+            {% if tag === 'Frame only' %}
+                {% include "_partials/frame-only-form.njk" %}
+            {% endif %}
+        {% endfor %}
     </div>
 
     {% if product.description %}
@@ -52,5 +88,5 @@ layout: _layouts/default
     {% endif %}
 
     {% include "_partials/modal.njk" %}
-</section>
+</main>
 

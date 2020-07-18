@@ -1,6 +1,6 @@
-import shopify from '../modules/shopify.ts';
+import shopify from '../modules/shopify';
 
-function Checkout(product: HTMLElement) {
+function Checkout() {
   const existingCheckoutId = localStorage.getItem('shopify_checkout_id');
 
   function createCheckout() {
@@ -9,10 +9,9 @@ function Checkout(product: HTMLElement) {
     });
   }
 
-  function updateCartCount(count: number) {
+  function updateCartCount(checkout: ShopifyBuy.Cart) {
+    const count = checkout.lineItems.reduce((m, item) => m + item.quantity, 0);
     const cart = Array.from(document.querySelectorAll('[data-cart]'));
-
-    console.log(cart, 'updateCartCount');
 
     cart.forEach(item => item.setAttribute('data-count', `${count}`));
   }
@@ -21,12 +20,8 @@ function Checkout(product: HTMLElement) {
     const checkoutId  = existingCheckoutId as string;
 
     shopify.checkout.fetch(checkoutId).then(checkout => {
-      const items = checkout.lineItems;
-
-      console.log(checkout, 'fetchExistingCheckout');
-
-      if (items.length > 0) {
-        updateCartCount(items.length);
+      if (checkout.lineItems.length > 0) {
+        updateCartCount(checkout);
       }
     });
   }

@@ -9,7 +9,7 @@
     </button>
 
     <ul class="nav__list" data-nav-list>
-    {% for item in navigation %}
+    {% for item in settings.navigation %}
         <li class="nav__item">
             <a href="{{item.url}}" class="nav__link" data-nav-item="{{item.title}}">{{item.title}}</a>
 

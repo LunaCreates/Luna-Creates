@@ -46,7 +46,6 @@
 
 .product__carousel {
   position: relative;
-  margin-top: (_variables.$core-grid * 1.5);
   margin-right: (_variables.$core-grid * 2);
   margin-left: (_variables.$core-grid * 2);
   outline: none;
@@ -77,6 +76,7 @@
 .product__thumbnails {
   display: flex;
   flex-wrap: nowrap;
+  margin-top: (_variables.$core-grid * 1.5);
   scroll-snap-type: x mandatory;
   overflow-x: auto;
 }
@@ -169,7 +169,8 @@
 }
 
 .product__select,
-.product__input {
+.product__input,
+.product__textarea {
   display: block;
   width: 100%;
   color: var(--color-heading);
@@ -192,8 +193,13 @@
   pointer-events: none;
 }
 
-.product__input {
+.product__input,
+.product__textarea {
   padding: (_variables.$core-grid / 1.2) _variables.$core-grid;
+}
+
+.product__input--quantity {
+  width: 100px;
 }
 
 .product__radios {
@@ -229,6 +235,14 @@
 
   &:checked::before {
     visibility: visible;
+  }
+}
+
+.product__basket-button {
+  @include _buttons.button(primary);
+
+  &[disabled='true'] {
+    @include _buttons.button(disabled);
   }
 }
 

@@ -1,6 +1,8 @@
-import stateManager from './stateManager.ts';
+import shopify from '../modules/shopify';
+import stateManager from './stateManager';
 
 function Form(product: HTMLElement) {
+  const checkoutId = localStorage.getItem('shopify_checkout_id');
   const form: HTMLFormElement | null = product.querySelector('[data-product-form]');
 
   function fetchData(keyMapData: Object) {
@@ -48,11 +50,52 @@ function Form(product: HTMLElement) {
     stateManager.showKeyMapModal();
   }
 
+  function buildAttributesData(formData: FormData) {
+    const array = [];
+
+    formData.delete('quantity');
+
+    for (var pair of formData.entries()) {
+      array.push({ key: pair[0], value: pair[1] });
+    }
+
+    return array;
+  }
+
+  function updateBasketCount(checkout: ShopifyBuy.Cart) {
+    const cart = Array.from(document.querySelectorAll('[data-cart]'));
+    const count = checkout.lineItems.reduce((m, item) => m + item.quantity, 0);
+
+    console.log(checkout, 'updateBasketCount');
+
+    cart.forEach(item => item.setAttribute('data-count', `${count}`));
+  }
+
+  function buildFormData(formData: FormData) {
+    const id = form?.getAttribute('data-variant-id');
+    const quantity = formData.get('quantity') as string;
+    const attributes = buildAttributesData(formData);
+    const lineItemsToAdd: any = [
+      {
+        variantId: id,
+        quantity: parseFloat(quantity),
+        customAttributes: attributes
+      }
+    ];
+
+    if (checkoutId === null) return;
+
+    shopify.checkout.addLineItems(checkoutId, lineItemsToAdd)
+      .then(updateBasketCount);
+  }
+
   function handleSubmitEvent(event: Event) {
     const formData = new FormData(form as HTMLFormElement);
+    const isPersonalisedMap = formData.getAll('colors').length > 0;
+
     event.preventDefault();
 
-    buildKeyMapData(formData);
+    isPersonalisedMap ? buildKeyMapData(formData) : buildFormData(formData);
   }
 
   function togglePinColors(input: HTMLInputElement) {

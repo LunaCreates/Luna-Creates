@@ -7,6 +7,42 @@
   "instagramName": "lunacreatesdesign",
   "instagramUrl": "https://www.instagram.com/lunacreatesdesign/",
   "githubRepo": "https://github.com/Pushedskydiver/lunacreates.co.uk",
+  "navigation": [
+    {
+      "title": "Shop",
+      "url": "/products/",
+      "collections": [
+        {
+          "title": "Browse all",
+          "url": "/products/"
+        },
+        {
+          "title": "Personalised world map pinboards",
+          "url": "/collections/maps/"
+        },
+        {
+          "title": "New baby gifts",
+          "url": "/collections/baby_map/"
+        },
+        {
+          "title": "Wedding travel theme products",
+          "url": "/collections/wedding/"
+        }
+      ]
+    },
+    {
+      "title": "About us",
+      "url": "/about-us/"
+    },
+    {
+      "title": "Contact us",
+      "url": "/contact-us/"
+    },
+    {
+      "title": "Delivery",
+      "url": "/delivery/"
+    }
+  ],
   "social": [
     {
       "url": "https://www.facebook.com/lunacreatesdesign",

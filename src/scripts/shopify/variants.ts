@@ -1,5 +1,4 @@
-// import pubSub from '../modules/pubSub';
-import stateManager from './stateManager.ts';
+import stateManager from './stateManager';
 
 function Varaints(product: HTMLElement) {
   function variantChanged(event: Event) {

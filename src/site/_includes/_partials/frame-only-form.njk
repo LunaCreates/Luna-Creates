@@ -1,0 +1,10 @@
+{% set variant = product.options[0] %}
+
+<form class="product__form" data-product-form data-variant-id="{{variant.id}}">
+    <div class="product__field">
+        <label for="quantity" class="product__label">Quantity</label>
+        <input type="number" id="quantity" name="quantity" value="1" min="1" class="product__input product__input--quantity" pattern="[0-9]*">
+    </div>
+
+    <button type="submit" class="product__basket-button" aria-live="polite">Add to basket</button>
+</form>
