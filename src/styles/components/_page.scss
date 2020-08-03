@@ -24,6 +24,10 @@
   p {
     margin: revert;
   }
+
+  img {
+    max-width: 750px;
+  }
 }
 
 .page__title,
@@ -39,7 +43,6 @@
 
 .page h2 {
   @include _typography.text(xl);
-
   margin-bottom: _variables.$core-grid;
 
   @include _responsive.min(m) {
