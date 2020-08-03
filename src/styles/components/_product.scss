@@ -304,6 +304,7 @@
 
 .product__sub-title {
   @include _typography.text(md);
+  margin-bottom: (_variables.$core-grid * 1.5);
   font-variation-settings: 'wght' _variables.$core-font-weight;
   text-transform: uppercase;
 }
