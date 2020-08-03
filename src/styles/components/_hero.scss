@@ -29,8 +29,12 @@
     padding-top: 60%;
 
     @include _responsive.min(m) {
-      padding-top: 31.25%;
+      padding-top: 27%;
     }
+  }
+
+  @include _responsive.min(m) {
+    padding-top: 27%;
   }
 }
 

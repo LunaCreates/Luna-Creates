@@ -62,7 +62,7 @@
   align-items: center;
   padding: (_variables.$core-grid / 1.5) 5vw;
   background-color: var(--color-secondary);
-  z-index: _z-index.z(alpha);
+  z-index: _z-index.z(charlie);
 
   @include _responsive.min(m) {
     padding-top: 0;

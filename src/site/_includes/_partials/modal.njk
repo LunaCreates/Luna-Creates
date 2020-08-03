@@ -7,7 +7,7 @@
 
         {% set variant = product.options[0] %}
 
-        <button type="button" class="modal__basket-button" aria-live="polite" data-variant-id="{{variant.id}}" data-variant-options='{"key":"{{variant.name}}","value":"{{variant.value}}"}' data-add-to-basket>Add map to basket</button>
+        <a href="/cart/" class="modal__basket-button" data-variant-id="{{variant.id}}" data-variant-options='{"key":"{{variant.name}}","value":"{{variant.value}}"}' data-add-to-basket>Add map to basket</a>
 
         <button class="modal__close-button" aria-label="Close dialog" data-close-modal>
             <svg height="24" width="24" aria-hidden="true" class="modal__close-icon">

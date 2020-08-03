@@ -6,6 +6,10 @@ type ImageTypes = {
   altText: string
 }
 
+interface Checkout extends ShopifyBuy.Cart {
+  webUrl: string
+}
+
 function Cart(form: HTMLFormElement) {
   const checkoutId = localStorage.getItem('shopify_checkout_id');
 
@@ -20,7 +24,7 @@ function Cart(form: HTMLFormElement) {
     `
   }
 
-  function renderCartItem(item: ShopifyBuy.LineItem, index: number) {
+  function renderCartItem(item: any, index: number) {
     const options = item.customAttributes[0].attrs;
     const price = parseInt(item.variant.priceV2.amount, 10);
     const total = price * item.quantity;
@@ -54,7 +58,7 @@ function Cart(form: HTMLFormElement) {
     return html;
   }
 
-  function updateCartItems(checkout: ShopifyBuy.Cart) {
+  function updateCartItems(checkout: Checkout) {
     form.innerHTML = `
       <div class="cart__inner">
           <table class="cart__table">
@@ -116,6 +120,8 @@ function Cart(form: HTMLFormElement) {
     const items = variants.map((v, i) => formatLineItems(v, i, quantities));
 
     event.preventDefault();
+
+    if (checkoutId === null) return;
 
     shopify.checkout.updateLineItems(checkoutId, items)
       .then(() => window.location.pathname = '/cart/');

@@ -45,6 +45,7 @@
   position: relative;
   padding-top: 100%;
   background-color: var(--color-fade);
+  overflow: hidden;
 }
 
 .featured__image {
@@ -55,6 +56,17 @@
   left: 0;
   height: 100%;
   object-fit: cover;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+
+  @media (hover) {
+    transition: transform 0.5s ease-in-out;
+
+    .featured__product:hover &,
+    .products__product:hover & {
+      transform: scale(1.1);
+    }
+  }
 }
 
 .featured__link {
@@ -64,6 +76,7 @@
   font-size: 0.9em;
   font-variation-settings: 'wght' _variables.$core-secondary-font-weight;
   color: var(--color-body);
+  letter-spacing: 1px;
   line-height: 1.3;
 
   &::before {

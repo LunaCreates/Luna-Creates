@@ -56,8 +56,7 @@
     }
 
     &:hover::before,
-    &:focus::before,
-    &:active::before {
+    &:focus::before {
       width: 100%;
     }
   }
@@ -76,6 +75,7 @@
 
 .instagram-collection__item {
   position: relative;
+  overflow: hidden;
 }
 
 .instagram-collection__picture {
@@ -93,4 +93,23 @@
   left: 0;
   height: 100%;
   object-fit: cover;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+
+  @media (hover) {
+    transition: transform 0.5s ease-in-out;
+
+    .instagram-collection__item:hover & {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.instagram-collection__item-link {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
 }

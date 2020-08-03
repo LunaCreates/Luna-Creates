@@ -22,17 +22,8 @@ function Basket(product: HTMLElement) {
     basketButton.setAttribute('data-variant-options', customAttributes);
   }
 
-  function updateBasketCount(checkout: ShopifyBuy.Cart) {
-    const cart = Array.from(document.querySelectorAll('[data-cart]'));
-    const count = checkout.lineItems.reduce((m, item) => m + item.quantity, 0);
-
-    console.log(checkout, 'updateBasketCount');
-
-    cart.forEach(item => item.setAttribute('data-count', `${count}`));
-  }
-
   function updateBasket(event: Event) {
-    if (!(event.target instanceof HTMLButtonElement) || !checkoutId || !basketButton) return;
+    if (!(event.target instanceof HTMLAnchorElement) || !checkoutId || !basketButton) return;
 
     const id = event.target.getAttribute('data-variant-id');
     const attributes = event.target.getAttribute('data-variant-options');
@@ -44,11 +35,10 @@ function Basket(product: HTMLElement) {
       }
     ];
 
-    basketButton.setAttribute('disabled', 'true');
-    basketButton.textContent = 'Added';
+    event.preventDefault();
 
     shopify.checkout.addLineItems(checkoutId, lineItemsToAdd)
-      .then(updateBasketCount);
+      .then(() => window.location.pathname = '/cart/');
   }
 
   function init() {

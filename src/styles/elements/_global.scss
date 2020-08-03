@@ -53,6 +53,10 @@ h3 {
   color: var(--color-heading);
 }
 
+h1 {
+  letter-spacing: 2px;
+}
+
 a {
   font-variation-settings: 'wght' _variables.$core-font-weight;
   text-decoration: none;
@@ -94,6 +98,10 @@ img {
 
 blockquote {
   margin: 0;
+}
+
+table {
+  border-collapse: collapse;
 }
 
 legend {

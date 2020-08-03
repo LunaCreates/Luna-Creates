@@ -65,6 +65,12 @@ observe((element: HTMLElement) => {
 
 import(/* webpackChunkName: "swRegister" */ 'Src/scripts/swRegister').then(initModule).catch(err => console.error(`Error in: swRegister - ${err}`));
 
+observe((element: HTMLTableElement) => {
+  import(/* webpackChunkName: "cart" */ 'Src/scripts/cart')
+    .then(module => initModule(module, element))
+    .catch(err => console.error(`Error in: Cart - ${err}`));
+}, document.querySelectorAll('[data-component="cart"]'));
+
 // Carousels
 // glide js is imported in them all but webpack splits it out into a seprate bundle then includes it when needed.
 

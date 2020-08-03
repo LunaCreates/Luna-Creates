@@ -8,14 +8,13 @@ function KeyMap(product: HTMLElement) {
     const basketButton: HTMLButtonElement = modal?.querySelector('[data-add-to-basket]') as HTMLButtonElement;
 
     modal?.removeAttribute('hidden');
-    basketButton.textContent = 'Add key map to basket';
-    basketButton.removeAttribute('disabled');
     basketButton.focus();
   }
 
   function renderKeyMapImage(keyMap: string) {
     const keyMapImage = `<img src="${keyMap}" class="modal__key-map-image" alt="Preview image of personalised key map">`;
 
+    keyMapContainer?.classList.add('modal__key-map--active');
     keyMapContainer?.insertAdjacentHTML('afterbegin', keyMapImage);
   }
 
@@ -23,6 +22,7 @@ function KeyMap(product: HTMLElement) {
     if (!keyMapContainer) return;
 
     modal?.setAttribute('hidden', '');
+    keyMapContainer?.classList.remove('modal__key-map--active');
     keyMapContainer.innerHTML = '';
   }
 

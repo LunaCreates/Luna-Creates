@@ -16,11 +16,20 @@ function Form(product: HTMLElement) {
     })
   }
 
+  function storePreviewImages(keyMapImage: string) {
+    const localImages = localStorage.getItem('mapPreviews');
+    const images: Array<string> = localImages === null ? [] : JSON.parse(localImages);
+
+    images.push(keyMapImage);
+    localStorage.setItem('mapPreviews', JSON.stringify(images));
+  }
+
   async function renderKeyMap(keyMapData: Object) {
     const data = await fetchData(keyMapData);
     const response = await data.blob();
     const keyMapImage = URL.createObjectURL(response);
 
+    storePreviewImages(keyMapImage);
     stateManager.keyMapCreated(keyMapImage);
   }
 
@@ -62,15 +71,6 @@ function Form(product: HTMLElement) {
     return array;
   }
 
-  function updateBasketCount(checkout: ShopifyBuy.Cart) {
-    const cart = Array.from(document.querySelectorAll('[data-cart]'));
-    const count = checkout.lineItems.reduce((m, item) => m + item.quantity, 0);
-
-    console.log(checkout, 'updateBasketCount');
-
-    cart.forEach(item => item.setAttribute('data-count', `${count}`));
-  }
-
   function buildFormData(formData: FormData) {
     const id = form?.getAttribute('data-variant-id');
     const quantity = formData.get('quantity') as string;
@@ -86,7 +86,7 @@ function Form(product: HTMLElement) {
     if (checkoutId === null) return;
 
     shopify.checkout.addLineItems(checkoutId, lineItemsToAdd)
-      .then(updateBasketCount);
+      .then(() => window.location.pathname = '/cart/');
   }
 
   function handleSubmitEvent(event: Event) {
