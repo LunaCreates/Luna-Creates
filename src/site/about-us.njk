@@ -9,6 +9,8 @@ layout: _layouts/default
     <div class="page page--container">
         <h1 class="page__title">{{about.title}}</h1>
 
-        {{about.body | safe}}
+        <div class="page__rte">
+            {{about.body | safe}}
+        </div>
     </div>
 </main>

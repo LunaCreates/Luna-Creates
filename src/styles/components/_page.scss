@@ -13,15 +13,42 @@
   }
 }
 
-.page__title {
+.page__rte {
+  ol,
+  ul {
+    list-style: revert;
+    margin: revert;
+    padding: revert;
+  }
+
+  p {
+    margin: revert;
+  }
+}
+
+.page__title,
+.page h1 {
   @include _typography.text(xl);
   margin-bottom: (_variables.$core-grid * 2);
   font-variation-settings: 'wght' _variables.$core-secondary-font-weight;
-  text-align: center;
 
   @include _responsive.min(m) {
     margin-bottom: (_variables.$core-grid * 3);
   }
+}
+
+.page h2 {
+  @include _typography.text(xl);
+
+  margin-bottom: _variables.$core-grid;
+
+  @include _responsive.min(m) {
+    margin-bottom: (_variables.$core-grid * 1.5);
+  }
+}
+
+.page__title {
+  text-align: center;
 }
 
 .page p:last-child {
