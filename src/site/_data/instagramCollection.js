@@ -1,5 +1,5 @@
 // required packages
-const fetch = require('node-fetch');
+const Cache = require('@11ty/eleventy-cache-assets');
 
 require('dotenv').config();
 
@@ -7,41 +7,42 @@ require('dotenv').config();
 const token = process.env.STOREFRONT_API_TOKEN;
 
 async function instagramCollectionData() {
-  const data = await fetch(process.env.STOREFRONT_API_URL, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      Accept: 'application/json',
-      'X-Shopify-Storefront-Access-Token': `${token}`
-    },
-    body: JSON.stringify({
-      query: `{
-        productByHandle(handle: "instagram-images") {
-          images(first: 6) {
-            edges {
-              node {
-                altText
-                originalSrc
+  const data = await Cache(`${process.env.STOREFRONT_API_URL}?instagram`, {
+    duration: '1d',
+    type: 'json',
+    fetchOptions: {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: 'application/json',
+        'X-Shopify-Storefront-Access-Token': `${token}`
+      },
+      body: JSON.stringify({
+        query: `{
+          productByHandle(handle: "instagram-images") {
+            images(first: 6) {
+              edges {
+                node {
+                  altText
+                  originalSrc
+                }
               }
             }
           }
-        }
-      }`
-    })
+        }`
+      })
+    }
   });
 
-  // store the JSON response when promise resolves
-  const response = await data.json();
-
   // handle errors
-  if (response.errors) {
-    const errors = response.errors;
+  if (data.errors) {
+    const errors = data.errors;
     errors.map(error => console.log(error.message));
     throw new Error('Aborting: Shopify Storefront errors');
   }
 
   // get data from the JSON response
-  const images = response.data.productByHandle.images.edges.map(edge => edge.node);
+  const images = data.data.productByHandle.images.edges.map(edge => edge.node);
 
   // format images objects
   const imagesFormatted = images.map(image => {

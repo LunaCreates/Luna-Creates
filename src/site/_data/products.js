@@ -1,5 +1,5 @@
 // required packages
-const fetch = require('node-fetch');
+const Cache = require('@11ty/eleventy-cache-assets');
 
 require('dotenv').config();
 
@@ -7,70 +7,71 @@ require('dotenv').config();
 const token = process.env.STOREFRONT_API_TOKEN;
 
 async function allProductsData() {
-  const data = await fetch(process.env.STOREFRONT_API_URL, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      'Accept': 'application/json',
-      'X-Shopify-Storefront-Access-Token': `${token}`
-    },
-    body: JSON.stringify({
-      query: `{
-        products(first: 50, query: "available_for_sale:true") {
-          edges {
-            node {
-              id
-              title
-              handle
-              descriptionHtml
-              tags
-              priceRange {
-                minVariantPrice {
-                  amount
-                  currencyCode
+  const data = await Cache(`${process.env.STOREFRONT_API_URL}?products`, {
+    duration: '1d',
+    type: 'json',
+    fetchOptions: {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json',
+        'X-Shopify-Storefront-Access-Token': `${token}`
+      },
+      body: JSON.stringify({
+        query: `{
+          products(first: 50, query: "available_for_sale:true") {
+            edges {
+              node {
+                id
+                title
+                handle
+                descriptionHtml
+                tags
+                priceRange {
+                  minVariantPrice {
+                    amount
+                    currencyCode
+                  }
                 }
-              }
-              variants(first: 50) {
-                edges {
-                  node {
-                    id
-                    selectedOptions {
-                      name,
-                      value
-                    }
-                    priceV2 {
-                      amount
+                variants(first: 50) {
+                  edges {
+                    node {
+                      id
+                      selectedOptions {
+                        name,
+                        value
+                      }
+                      priceV2 {
+                        amount
+                      }
                     }
                   }
                 }
-              }
-              images(first: 10) {
-                edges {
-                  node {
-                    altText
-                    originalSrc
+                images(first: 10) {
+                  edges {
+                    node {
+                      altText
+                      originalSrc
+                    }
                   }
                 }
               }
             }
           }
-        }
-      }`
-    })
+        }`
+      })
+    }
   });
 
-  // store the JSON response when promise resolves
-  const response = await data.json();
-
   // handle errors
-  if (response.errors) {
-    const errors = response.errors;
+  if (data.errors) {
+    const errors = data.errors;
     errors.map(error => console.log(error.message));
     throw new Error('Aborting: Shopify Storefront errors');
   }
 
   // get data from the JSON response
-  const products = response.data.products.edges.map(edge => edge.node);
+  const products = data.data.products.edges.map(edge => edge.node);
 
   function getColorFromTags(tags) {
     return tags.filter(tag => tag.toLowerCase().match(/black|white|grey/));

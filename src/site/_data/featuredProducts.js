@@ -1,5 +1,5 @@
 // required packages
-const fetch = require('node-fetch');
+const Cache = require('@11ty/eleventy-cache-assets');
 
 require('dotenv').config();
 
@@ -7,55 +7,56 @@ require('dotenv').config();
 const token = process.env.STOREFRONT_API_TOKEN;
 
 async function featuredProductsData() {
-  const data = await fetch(process.env.STOREFRONT_API_URL, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      Accept: 'application/json',
-      'X-Shopify-Storefront-Access-Token': `${token}`
-    },
-    body: JSON.stringify({
-      query: `{
-        collectionByHandle(handle: "home-page") {
-          products(first: 3) {
-            edges {
-              node {
-                title
-                handle
-                priceRange {
-                  minVariantPrice {
-                    amount
-                    currencyCode
+  const data = await Cache(`${process.env.STOREFRONT_API_URL}?featured`, {
+    duration: '1d',
+    type: 'json',
+    fetchOptions: {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: 'application/json',
+        'X-Shopify-Storefront-Access-Token': `${token}`
+      },
+      body: JSON.stringify({
+        query: `{
+          collectionByHandle(handle: "home-page") {
+            products(first: 3) {
+              edges {
+                node {
+                  title
+                  handle
+                  priceRange {
+                    minVariantPrice {
+                      amount
+                      currencyCode
+                    }
                   }
-                }
-                images(first: 1) {
-                  edges {
-                    node {
-                      altText
-                      originalSrc
+                  images(first: 1) {
+                    edges {
+                      node {
+                        altText
+                        originalSrc
+                      }
                     }
                   }
                 }
               }
             }
           }
-        }
-      }`
-    })
+        }`
+      })
+    }
   });
 
-  // store the JSON response when promise resolves
-  const response = await data.json();
-
   // handle errors
-  if (response.errors) {
-    const errors = response.errors;
+  if (data.errors) {
+    const errors = data.errors;
     errors.map(error => console.log(error.message));
     throw new Error('Aborting: Shopify Storefront errors');
   }
 
   // get data from the JSON response
-  const products = response.data.collectionByHandle.products.edges.map(edge => edge.node);
+  const products = data.data.collectionByHandle.products.edges.map(edge => edge.node);
 
   // format products objects
   const productsFormatted = products.map(item => {
