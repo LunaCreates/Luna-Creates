@@ -6,7 +6,7 @@
 // Skip links.........The sites skip to links.
 
 .skip-link {
-  @include _typography.text(earth);
+  @include _typography.text(xs);
   position: absolute;
   top: 0;
   left: 0;

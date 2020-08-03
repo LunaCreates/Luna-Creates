@@ -1,0 +1,58 @@
+@use '../settings/variables' as _variables;
+@use '../tools/functions/z-index' as _z-index;
+@use '../tools/mixins/buttons' as _buttons;
+@use '../tools/mixins/responsive' as _responsive;
+@use '../tools/mixins/typography' as _typography;
+
+.page {
+  @include _responsive.container;
+  padding-top: (_variables.$core-grid * 3);
+
+  @include _responsive.min(m) {
+    padding-top: (_variables.$core-grid * 4);
+  }
+}
+
+.page__title {
+  @include _typography.text(xl);
+  margin-bottom: (_variables.$core-grid * 2);
+  font-variation-settings: 'wght' _variables.$core-secondary-font-weight;
+  text-align: center;
+
+  @include _responsive.min(m) {
+    margin-bottom: (_variables.$core-grid * 3);
+  }
+}
+
+.page p:last-child {
+  margin-bottom: 0;
+}
+
+.page a {
+  position: relative;
+  color: var(--color-foreground);
+  font-variation-settings: 'wght' _variables.$core-secondary-font-weight;
+
+  @media (hover) {
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: var(--color-foreground);
+      transition: width 0.3s ease-in-out;
+    }
+
+    &:hover::before,
+    &:focus::before,
+    &:active::before {
+      width: 100%;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+  }
+}

@@ -53,8 +53,15 @@
   }
 }
 
+.quotes__body {
+  margin-top: (_variables.$core-grid * 1.25);
+  margin-bottom: (_variables.$core-grid * 1.25);
+}
+
 .quotes__cite {
+  @include _typography.text(xs);
   font-style: normal;
+  font-variation-settings: 'wght' _variables.$core-secondary-font-weight;
 
   &::before {
     content: '\2014 \0020';

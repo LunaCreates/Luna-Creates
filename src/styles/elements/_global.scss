@@ -29,7 +29,7 @@ html {
 }
 
 body {
-  @include _typography.text(bodyCopy);
+  @include _typography.text(sm);
   color: var(--color-body);
   background-color: var(--color-background);
   margin: 0;
@@ -55,6 +55,10 @@ h3 {
 
 h1 {
   letter-spacing: 2px;
+}
+
+p {
+  font-variation-settings: 'wght' _variables.$core-font-weight;
 }
 
 a {

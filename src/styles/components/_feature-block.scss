@@ -59,7 +59,7 @@
 }
 
 .feature-block__title {
-  @include _typography.text(mars);
+  @include _typography.text(md);
   margin-bottom: (_variables.$core-grid * 2);
   text-transform: uppercase;
 

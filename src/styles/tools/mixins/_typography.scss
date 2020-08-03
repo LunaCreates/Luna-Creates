@@ -1,3 +1,4 @@
+@use '../functions/pxToRem' as _pxToRem;
 @use '../../settings/variables' as _variables;
 @use 'properties' as _properties;
 @use 'responsive' as _responsive;
@@ -8,121 +9,42 @@
 
 // Font styles map configuration
 $headings: (
-  sun: (
-    default: (
-      font-family: _variables.$core-font-family,
-      font-size: calc(3em + 0.5vw),
-      font-weight: normal,
-      font-variation-settings: 'wght' _variables.$core-tertiary-font-weight,
-      line-height: 1.1,
-      margin-top: 0,
-      margin-bottom: (_variables.$core-grid * 1.75)
-    )
+  xl: (
+    font-family: _variables.$core-font-family,
+    font-size: unquote('max(#{_pxToRem.rem(30)}, min(2.578vw, #{_pxToRem.rem(33)}))'),
+    line-height: unquote('max(#{_pxToRem.rem(48)}, min(4.375vw, #{_pxToRem.rem(56)}))')
   ),
-  jupiter: (
-    default: (
-      font-family: _variables.$core-font-family,
-      font-size: calc(2.3em + 0.5vw),
-      font-weight: normal,
-      font-variation-settings: 'wght' _variables.$core-tertiary-font-weight,
-      line-height: _variables.$core-secondary-line-height,
-      margin-top: 0,
-      margin-bottom: (_variables.$core-grid * 1.75)
-    )
+  lg: (
+    font-family: _variables.$core-font-family,
+    font-size: unquote('max(#{_pxToRem.rem(25)}, min(2.344vw, #{_pxToRem.rem(30)}))'),
+    line-height: unquote('max(#{_pxToRem.rem(36)}, min(3.750vw, #{_pxToRem.rem(48)}))')
   ),
-  saturn: (
-    default: (
-      font-family: _variables.$core-font-family,
-      font-size: calc(2em + 0.5vw),
-      font-weight: normal,
-      font-variation-settings: 'wght' _variables.$core-tertiary-font-weight,
-      line-height: _variables.$core-secondary-line-height,
-      margin-top: 0,
-      margin-bottom: (_variables.$core-grid * 1.5)
-    )
+  md: (
+    font-family: _variables.$core-font-family,
+    font-size: unquote('max(#{_pxToRem.rem(20)}, min(1.953vw, #{_pxToRem.rem(25)}))'),
+    line-height: unquote('max(#{_pxToRem.rem(29)}, min(2.813vw, #{_pxToRem.rem(36)}))')
   ),
-  uranus: (
-    default: (
-      font-family: _variables.$core-font-family,
-      font-size: calc(1.7em + 0.5vw),
-      font-weight: normal,
-      font-variation-settings: 'wght' _variables.$core-secondary-font-weight,
-      line-height: _variables.$core-secondary-line-height,
-      margin-top: 0,
-      margin-bottom: (_variables.$core-grid * 1.5)
-    )
+  sm: (
+    font-family: _variables.$core-font-family,
+    font-size: unquote('max(#{_pxToRem.rem(16)}, min(1.563vw, #{_pxToRem.rem(20)}))'),
+    line-height: unquote('max(#{_pxToRem.rem(25)}, min(2.266vw, #{_pxToRem.rem(29)}))')
   ),
-  mars: (
-    default: (
-      font-family: _variables.$core-font-family,
-      font-size: calc(1.3em + 0.5vw),
-      font-weight: normal,
-      font-variation-settings: 'wght' _variables.$core-secondary-font-weight,
-      line-height: _variables.$core-secondary-line-height,
-      margin-top: 0,
-      margin-bottom: (_variables.$core-grid * 1.5)
-    )
-  ),
-  venus: (
-    default: (
-      font-family: _variables.$core-font-family,
-      font-size: calc(1.1em + 0.5vw),
-      font-weight: normal,
-      font-variation-settings: 'wght' _variables.$core-secondary-font-weight,
-      line-height: _variables.$core-secondary-line-height,
-      margin-top: 0,
-      margin-bottom: _variables.$core-grid
-    )
-  ),
-  pluto: (
-    default: (
-      font-family: _variables.$core-font-family,
-      font-size: calc(1em + 0.25vw),
-      font-variation-settings: 'wght' _variables.$core-font-weight,
-      line-height: 1.1,
-      margin-top: 0,
-      margin-bottom: (_variables.$core-grid * 1.5)
-    )
-  ),
-  earth: (
-    default: (
-      font-family: _variables.$core-font-family,
-      font-size: calc(#{_variables.$core-font-size} + 0.15vw),
-      font-variation-settings: 'wght' 550,
-      line-height: _variables.$core-line-height,
-      margin-top: 0,
-      margin-bottom: (_variables.$core-grid * 1.5)
-    )
-  ),
-  moon: (
-    default: (
-      font-family: _variables.$core-font-family,
-      font-size: calc(0.9em + 0.15vw),
-      font-variation-settings: 'wght' _variables.$core-secondary-font-weight,
-      line-height: _variables.$core-line-height,
-      margin-top: 0,
-      margin-bottom: (_variables.$core-grid / 2)
-    )
-  ),
-  bodyCopy: (
-    default: (
-      font-family: _variables.$core-font-family,
-      font-size: calc(#{_variables.$core-font-size} + 0.1vw),
-      font-variation-settings: 'wght' _variables.$core-font-weight,
-      line-height: _variables.$core-line-height,
-      margin-top: 0,
-      margin-bottom: (_variables.$core-grid * 2)
-    )
+  xs: (
+    font-family: _variables.$core-font-family,
+    font-size: unquote('max(#{_pxToRem.rem(14)}, min(1.250vw, #{_pxToRem.rem(16)}))'),
+    line-height: unquote('max(#{_pxToRem.rem(23)}, min(2.109vw, #{_pxToRem.rem(27)}))')
   )
 );
 
 @mixin text($style) {
   $props: map.get($headings, $style);
-  $default: map.get($props, default);
 
   @if $props == null {
     @warn 'text style \"#{$style}\" not found';
   } @else {
-    @include _properties.map-to-props($default);
+    @include _properties.map-to-props($props);
+    font-weight: 400;
+    margin-top: 0;
+    margin-bottom: 0;
   }
 }

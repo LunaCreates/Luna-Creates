@@ -19,7 +19,8 @@
 }
 
 .instagram-collection__title {
-  @include _typography.text(mars);
+  @include _typography.text(md);
+  margin-bottom: (_variables.$core-grid * 1.5);
   text-align: center;
   text-transform: uppercase;
 

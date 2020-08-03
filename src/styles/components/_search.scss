@@ -1,6 +1,7 @@
 @use '../settings/variables' as _variables;
 @use '../tools/functions/z-index' as _z-index;
 @use '../tools/mixins/responsive' as _responsive;
+@use '../tools/mixins/typography' as _typography;
 
 .search {
   position: absolute;
@@ -20,6 +21,9 @@
 
   @include _responsive.max(m) {
     left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   @include _responsive.min(m) {
@@ -51,11 +55,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 5px;
-
-  @include _responsive.min(m) {
-    padding-top: 0;
-  }
 }
 
 .search__label {
@@ -75,7 +74,7 @@
   padding-left: 0;
   border-radius: 0;
   color: inherit;
-  font-size: 0.9em;
+  font-family: inherit;
 
   @include _responsive.max(m) {
     border: 0;

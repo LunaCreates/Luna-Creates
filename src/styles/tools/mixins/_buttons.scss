@@ -1,6 +1,7 @@
-@use 'sass:map';
+@use '../mixins/typography' as _typography;
 @use '../../settings/variables' as _variables;
 @use 'properties' as _properties;
+@use 'sass:map';
 
 // Buttons............Mixin to add button styles.
 
@@ -47,11 +48,11 @@ $buttons: (
     @warn 'button style \"#{$style}\" not found';
   } @else {
     @include _properties.map-to-props($default);
+    @include _typography.text(xs);
     padding: _variables.$core-grid (_variables.$core-grid * 3);
     border-radius: 5px;
     border-width: _variables.$core-border-width;
     border-style: _variables.$core-border-style;
-    font-size: 0.9em;
     font-variation-settings: 'wght' _variables.$core-secondary-font-weight;
     text-transform: uppercase;
     letter-spacing: 1px;

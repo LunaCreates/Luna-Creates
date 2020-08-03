@@ -5,7 +5,6 @@ $spacing: _variables.$core-grid;
 $background: _variables.$core-color-background;
 
 .notification {
-  @include _typography.text(moon);
   padding: $spacing ($spacing * 2);
   background-color: _variables.$core-color-primary;
   color: $background;

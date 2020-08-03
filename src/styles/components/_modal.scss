@@ -42,13 +42,16 @@
 }
 
 .modal__title {
-  @include _typography.text(pluto);
+  @include _typography.text(md);
+  margin-bottom: (_variables.$core-grid * 1.5);
+  font-variation-settings: 'wght' _variables.$core-secondary-font-weight;
   color: var(--color-tertiary);
   text-transform: uppercase;
 }
 
 .modal__body {
-  @include _typography.text(bodyCopy);
+  @include _typography.text(xs);
+  margin-bottom: (_variables.$core-grid * 2);
   color: var(--color-body);
 }
 
@@ -99,6 +102,7 @@
 
 .modal__basket-button {
   @include _buttons.button(primary);
+  display: inline-block;
 
   &[disabled='true'] {
     @include _buttons.button(disabled);
@@ -107,7 +111,7 @@
 
 .modal__close-button {
   position: absolute;
-  top: (_variables.$core-grid * 1.5);
+  top: (_variables.$core-grid * 2);
   right: _variables.$core-grid;
   width: 40px;
   height: 40px;

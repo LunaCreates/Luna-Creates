@@ -21,8 +21,9 @@
 }
 
 .cart__title {
-  @include _typography.text(uranus);
+  @include _typography.text(xl);
   margin-bottom: (_variables.$core-grid * 4);
+  font-variation-settings: 'wght' _variables.$core-secondary-font-weight;
 
   @include _responsive.min(m) {
     margin-bottom: (_variables.$core-grid * 8);
@@ -35,7 +36,7 @@
 
 .cart__table-head th,
 .cart__table-title {
-  @include _typography.text(moon);
+  @include _typography.text(xs);
   margin-bottom: 0;
 }
 
@@ -47,7 +48,7 @@
   }
 
   td {
-    @include _typography.text(moon);
+    @include _typography.text(xs);
     position: relative;
     margin-bottom: 0;
     padding-right: (_variables.$core-grid * 1.8);
@@ -136,10 +137,12 @@
 }
 
 .cart__table-options {
+  @include _typography.text(xs);
   @include _skeleton.skeleton;
   display: block;
   margin-top: (_variables.$core-grid / 2);
   font-style: italic;
+  font-variation-settings: 'wght' _variables.$core-secondary-font-weight;
 }
 
 .cart__table-options--skeleton {
@@ -189,13 +192,15 @@
 }
 
 .cart__buttons {
+  display: flex;
+  justify-content: flex-end;
   margin-top: (_variables.$core-grid * 2);
   margin-bottom: (_variables.$core-grid * 2);
-  text-align: right;
 }
 
 .cart__update {
   @include _buttons.button(secondary);
+  margin-right: (_variables.$core-grid * 2);
 }
 
 .cart__checkout {
@@ -203,7 +208,7 @@
 }
 
 .cart__note {
-  margin-bottom: 0;
+  @include _typography.text(xs);
 }
 
 .cart__td {

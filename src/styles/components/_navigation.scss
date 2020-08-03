@@ -1,5 +1,6 @@
 @use '../settings/variables' as _variables;
 @use '../tools/mixins/responsive' as _responsive;
+@use '../tools/mixins/typography' as _typography;
 
 .nav {
   @include _responsive.min(m) {
@@ -10,6 +11,7 @@
 }
 
 .nav__button {
+  @include _typography.text(sm);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -150,6 +152,7 @@
 }
 
 .nav__link {
+  @include _typography.text(sm);
   display: block;
   padding-top: (_variables.$core-grid / 2);
   padding-bottom: (_variables.$core-grid / 2);
@@ -162,7 +165,7 @@
     margin-left: (_variables.$core-grid * 3);
     padding-top: _variables.$core-grid;
     padding-bottom: _variables.$core-grid;
-    font-size: 0.85em;
+    font-size: 0.9em;
   }
 }
 

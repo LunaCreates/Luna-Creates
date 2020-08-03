@@ -55,7 +55,9 @@
 
 .footer__item--title,
 .footer__legend {
-  @include _typography.text(pluto);
+  @include _typography.text(md);
+  margin-bottom: (_variables.$core-grid * 1.5);
+  font-variation-settings: 'wght' _variables.$core-secondary-font-weight;
   text-transform: uppercase;
 }
 
@@ -100,8 +102,9 @@
 }
 
 .footer__label {
-  @include _typography.text(bodyCopy);
+  @include _typography.text(sm);
   display: block;
+  margin-bottom: (_variables.$core-grid * 2);
 }
 
 .footer__input {
@@ -152,6 +155,7 @@
 }
 
 .footer__copyright {
+  @include _typography.text(xs);
   position: relative;
   background-color: var(--color-fade);
 

@@ -1,0 +1,7 @@
+@use '../../settings/variables' as _variables;
+
+@function rem($size) {
+  $remSize: ($size / 16);
+
+  @return #{$remSize}rem;
+}
