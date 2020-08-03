@@ -25,16 +25,18 @@ function Cart(form: HTMLFormElement) {
   }
 
   function renderCartItem(item: any, index: number) {
-    const options = item.customAttributes[0].attrs;
+    const attrs = item.customAttributes[0];
+    const options = attrs ? item.customAttributes[0].attrs : '';
     const price = parseInt(item.variant.priceV2.amount, 10);
     const total = price * item.quantity;
+
     const html = `
       <tr>
         <th class="cart__table-product">
           ${buildImage(item.variant.image)}
           <div class="cart__table-content">
             <span class="cart__table-title">${item.title}</span>
-            <small class="cart__table-options">${options.key.value}: ${options.value.value}</small>
+            ${options !== '' ? `<small class="cart__table-options">${options.key.value}: ${options.value.value}</small>` : ''}
           </div>
         </th>
         <td>&pound;${price.toFixed(2)}</td>
@@ -58,7 +60,7 @@ function Cart(form: HTMLFormElement) {
     return html;
   }
 
-  function updateCartItems(checkout: Checkout) {
+  function renderTableData(checkout: Checkout) {
     form.innerHTML = `
       <div class="cart__inner">
           <table class="cart__table">
@@ -85,6 +87,23 @@ function Cart(form: HTMLFormElement) {
           <a href="${checkout.webUrl}" class="cart__checkout">Checkout</a>
       </div>
     `;
+  }
+
+  function renderNoItemsData() {
+    form.outerHTML = `
+      <div class="cart__no-items">
+        <p class="cart__body">Your cart is currently empty.</p>
+        <a class="cart__button" href="/">Continue shopping</a>
+      </div>
+    `
+  }
+
+  function updateCartItems(checkout: Checkout) {
+    if (checkout.lineItems.length > 0) {
+      renderTableData(checkout);
+    } else {
+      renderNoItemsData();
+    }
   }
 
   function removeProductItem(target: HTMLButtonElement) {
@@ -131,7 +150,6 @@ function Cart(form: HTMLFormElement) {
   function init() {
     if (checkoutId === null) return;
 
-    checkout().init();
     shopify.checkout.fetch(checkoutId).then(updateCartItems);
     form.addEventListener('click', handleClickEvent);
     form.addEventListener('submit', handleSubmitEvent);

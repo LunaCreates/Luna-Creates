@@ -219,3 +219,16 @@
 .cart__td > * {
   opacity: 0;
 }
+
+.cart__no-items {
+  margin-bottom: (_variables.$core-grid * 2);
+
+  @include _responsive.min(m) {
+    margin-bottom: (_variables.$core-grid * 5);
+  }
+}
+
+.cart__button {
+  @include _buttons.button(primary);
+  display: inline-block;
+}

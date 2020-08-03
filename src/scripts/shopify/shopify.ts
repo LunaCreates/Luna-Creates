@@ -1,4 +1,3 @@
-import checkout from './checkout';
 import form from './form';
 import price from './price';
 import variants from './variants';
@@ -7,7 +6,6 @@ import basket from './basket';
 
 function Shopify(product: HTMLElement) {
   function init() {
-    checkout().init();
     form(product).init();
     price(product).init();
     basket(product).init();

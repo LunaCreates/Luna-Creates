@@ -1,3 +1,5 @@
+import checkout from './shopify/checkout';
+
 if ('loading' in HTMLImageElement.prototype) {
   const images: Array<HTMLImageElement> = Array.from(document.querySelectorAll('img.lazyload'));
   const sources: Array<HTMLSourceElement> = Array.from(document.querySelectorAll('[data-srcset'));
@@ -50,6 +52,8 @@ function observe(callback: Function, elements: NodeList) {
  *  Critical - All pages need them as fast as possible
  *
  * ******* */
+
+checkout().init();
 
 observe((element: HTMLElement) => {
   import(/* webpackChunkName: "quotes-carousel" */ 'Src/scripts/triggerSearch')
