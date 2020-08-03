@@ -58,7 +58,13 @@ h1 {
 }
 
 p {
+  margin-top: 0;
+  color: var(--color-body);
   font-variation-settings: 'wght' _variables.$core-font-weight;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 a {

@@ -51,7 +51,7 @@
   outline: none;
 
   .glide__arrow {
-    top: 50%;
+    top: calc(50% + 9px);
     width: 34px;
     height: 34px;
   }
