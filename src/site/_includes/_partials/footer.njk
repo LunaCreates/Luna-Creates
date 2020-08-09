@@ -25,11 +25,11 @@
         {% include "_partials/payment-icons.njk" %}
         </ul>
 
-        <form action="/contact#contact_form" class="footer__form" accept-charset="UTF-8">
+        <form action="/.netlify/functions/newsletter/" class="footer__form" accept-charset="UTF-8" method="post" id="contact_form">
             <legend class="footer__legend">Let's Be Friends</legend>
 
             <label class="footer__label" for="footer-newsletter">Be the first to know about all our latest offers</label>
-            <input type="text" placeholder="Email address" class="footer__input" id="footer-newsletter">
+            <input type="email" placeholder="Email address" class="footer__input" id="footer-newsletter" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required>
             <button type="submit" class="footer__submit">Sign Up</button>
         </form>
 
