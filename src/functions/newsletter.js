@@ -17,10 +17,26 @@ exports.handler = (event, context, callback) => {
   console.log(context, 'context');
   console.log(data, 'data');
 
+  const payload = {
+    query: `mutation {
+      customerCreate(input: { email: ${data.email} }) {
+        customer {
+          id
+        }
+      }
+    }`
+  }
+
+  const response = await fetch(url, {
+    method: 'POST',
+    headers,
+    body: JSON.stringify(payload)
+  });
+
   return {
     statusCode: 200,
     body: JSON.stringify({
-      message: data
+      message: response
     })
   };
 }

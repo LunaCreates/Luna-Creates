@@ -11,7 +11,7 @@ function Newsletter(form: HTMLFormElement) {
       body: JSON.stringify(data)
     });
 
-    console.log(response, 'handleSubmit');
+    console.log(response.json(), 'handleSubmit');
   }
 
   function init() {
