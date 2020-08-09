@@ -1,5 +1,4 @@
-function FormValidation() {
-  const form: HTMLFormElement | any = document.querySelector('[data-form]');
+function FormValidation(form: HTMLFormElement) {
   const inputs: NodeListOf<HTMLInputElement> = document.querySelectorAll('[data-input]');
   const textarea: HTMLTextAreaElement | any = document.querySelector('[data-textarea]');
   const submitButton: HTMLButtonElement | any = document.querySelector('[data-submit-button]');
@@ -100,6 +99,8 @@ function FormValidation() {
   }
 
   function init() {
+    console.log(form, 'dfjdfjdsi');
+
     if (form !== null) {
       inputs.forEach(input => input.addEventListener('change', validateInput));
       textarea.addEventListener('change', validateTextarea);

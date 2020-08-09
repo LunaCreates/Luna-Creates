@@ -64,7 +64,9 @@ $buttons: (
       }
 
       @media (hover) {
-        @include _properties.map-to-props($hover);
+        &:hover {
+          @include _properties.map-to-props($hover);
+        }
       }
     }
   }

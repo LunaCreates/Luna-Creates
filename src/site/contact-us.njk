@@ -13,10 +13,9 @@ layout: _layouts/default
             {{contact.body | safe}}
         </div>
 
-        <form class="form" name="contact" method="post" action="/#contact" data-component="contact-form" netlify-honeypot="bot-field" netlify>
+        <form class="form" name="contact" method="post" action="/contact-us/#contact" data-component="contact-form" netlify-honeypot="bot-field" netlify>
             <fieldset class="form__fieldset">
                 <legend class="form__legend">Enter your name, email, optional phone number and your message.</legend>
-
 
                 <div class="form__inner">
                     <div class="form__field form__field--hidden">
@@ -38,8 +37,7 @@ layout: _layouts/default
 
                     <div class="form__field">
                         <label class="form__label" id="phoneLabel" for="phone">Phone Number (optional)</label>
-                        <input class="form__input" id="email" type="tel" name="phone" aria-labelledby="phoneLabel" aria-describedby="phoneDescribe" pattern="[0-9\-]*" data-input>
-                        <small class="form__validation-message" id="phoneDescribe" data-validation>Please enter a valid phone number</small>
+                        <input class="form__input" id="phone" type="tel" name="phone" aria-labelledby="phoneLabel" aria-describedby="phoneDescribe" pattern="[0-9\-]*">
                     </div>
 
                     <div class="form__field">
