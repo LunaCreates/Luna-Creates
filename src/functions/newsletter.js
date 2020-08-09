@@ -12,20 +12,17 @@ const headers = {
 
 exports.handler = (event, context, callback) => {
   const data = JSON.parse(event.body);
-
-  console.log(event, 'event');
-  console.log(context, 'context');
-  console.log(data, 'data');
-
   const payload = {
     query: `mutation {
-      customerCreate(input: { email: ${data.email} }) {
+      customerCreate(input: { email: ${data.email} acceptsMarketing: true }) {
         customer {
           id
+          email
+          acceptsMarketing
         }
       }
     }`
-  }
+  };
 
   const response = await fetch(url, {
     method: 'POST',
