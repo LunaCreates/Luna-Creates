@@ -58,9 +58,12 @@ $buttons: (
     letter-spacing: 1px;
 
     @if map.has-key($props, hover) {
-      &:hover,
       &:active,
       &:focus {
+        @include _properties.map-to-props($hover);
+      }
+
+      @media (hover) {
         @include _properties.map-to-props($hover);
       }
     }
