@@ -23,6 +23,6 @@
 
 <div class="product__field">
     <label for="map-key-{{colorIndex}}" class="product__label">Key text {{colorIndex}}</label>
-    <input type="text" name="key" class="product__input" id="map-key-{{colorIndex}}" maxlength="35" {% if placeholder %}placeholder="{{placeholder}}"{% endif %}>
+    <input type="text" name="key" class="product__input" id="map-key-{{colorIndex}}" maxlength="35" {% if placeholder %}placeholder="{{placeholder}}"{% endif %} {% if required %}required{% endif %}>
 </div>
 {% endmacro %}

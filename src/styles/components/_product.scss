@@ -273,6 +273,7 @@
 }
 
 .product__body {
+  margin-top: (_variables.$core-grid * 1.5);
   margin-bottom: (_variables.$core-grid * 2);
 }
 
