@@ -1,17 +1,27 @@
 function Newsletter(form: HTMLFormElement) {
+  function setStatusMessage(response: Response) {
+    const errorMessage: HTMLElement | any = form.querySelector('[data-form-error]');
+    const successMessage: HTMLElement | any = form.querySelector('[data-form-success]');
+
+    if (response.status === 200) {
+      successMessage.style.display = 'block';
+    } else {
+      errorMessage.style.display = 'block';
+    }
+  }
+
   async function handleSubmit(event: Event) {
     const target = event.target as HTMLFormElement;
     const data = { email: target.email.value };
 
     event.preventDefault();
 
-    const response = await fetch(form.action, {
+    await fetch(form.action, {
       method: 'POST',
       headers: { 'Content-type': 'application/json' },
       body: JSON.stringify(data)
-    });
-
-    console.log(response.json(), 'handleSubmit');
+    })
+      .then(setStatusMessage);
   }
 
   function init() {
