@@ -132,7 +132,7 @@
 }
 
 .form__message {
-  @include _typography.text(bodyCopy);
+  @include _typography.text(sm);
   display: none;
   margin-top: (_variables.$core-grid * 2);
   margin-bottom: 0;

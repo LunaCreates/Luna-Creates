@@ -75,11 +75,23 @@ observe((element: HTMLTableElement) => {
     .catch(err => console.error(`Error in: Cart - ${err}`));
 }, document.querySelectorAll('[data-component="cart"]'));
 
+/** *****
+ *
+ *  Forms
+ *
+ * ******* */
+
 observe((element: HTMLFormElement) => {
   import(/* webpackChunkName: "form-validation" */ 'Src/scripts/formValidation')
     .then(module => initModule(module, element))
     .catch(err => console.error(`Error in: Form Validation - ${err}`));
 }, document.querySelectorAll('[data-component="contact-form"]'));
+
+observe((element: HTMLFormElement) => {
+  import(/* webpackChunkName: "form-validation" */ 'Src/scripts/newsletter')
+    .then(module => initModule(module, element))
+    .catch(err => console.error(`Error in: Newsletter - ${err}`));
+}, document.querySelectorAll('[data-component="newsletter"]'));
 
 // Carousels
 // glide js is imported in them all but webpack splits it out into a seprate bundle then includes it when needed.

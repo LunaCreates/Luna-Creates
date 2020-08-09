@@ -11,6 +11,16 @@ const headers = {
 }
 
 exports.handler = (event, context, callback) => {
+  const data = JSON.parse(event.body);
+
   console.log(event, 'event');
   console.log(context, 'context');
+  console.log(data, 'data');
+
+  return {
+    statusCode: 200,
+    body: JSON.stringify({
+      message: data
+    })
+  };
 }

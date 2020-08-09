@@ -99,8 +99,6 @@ function FormValidation(form: HTMLFormElement) {
   }
 
   function init() {
-    console.log(form, 'dfjdfjdsi');
-
     if (form !== null) {
       inputs.forEach(input => input.addEventListener('change', validateInput));
       textarea.addEventListener('change', validateTextarea);
