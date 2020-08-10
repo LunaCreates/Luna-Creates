@@ -77,6 +77,18 @@ observe((element: HTMLTableElement) => {
 
 /** *****
  *
+ *  Image Zoom
+ *
+ * ******* */
+
+observe((element: HTMLElement) => {
+  import(/* webpackChunkName: "image-zoom" */ 'Src/scripts/imageZoom')
+    .then(module => initModule(module, element))
+    .catch(err => console.error(`Error in: Image Zoom - ${err}`));
+}, document.querySelectorAll('[data-component="product-image-zoom"]'));
+
+/** *****
+ *
  *  Forms
  *
  * ******* */
@@ -88,7 +100,7 @@ observe((element: HTMLFormElement) => {
 }, document.querySelectorAll('[data-component="contact-form"]'));
 
 observe((element: HTMLFormElement) => {
-  import(/* webpackChunkName: "form-validation" */ 'Src/scripts/newsletter')
+  import(/* webpackChunkName: "newsletter" */ 'Src/scripts/newsletter')
     .then(module => initModule(module, element))
     .catch(err => console.error(`Error in: Newsletter - ${err}`));
 }, document.querySelectorAll('[data-component="newsletter"]'));

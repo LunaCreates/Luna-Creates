@@ -13,19 +13,23 @@ layout: _layouts/default
 
 <main class="product product--container" aria-describedby="product-title" data-component="product-details" data-product-id="{{product.id}}" data-product-color="{{product.color}}">
     <div class="product__imagery">
-        <picture class="product__picture" data-component="product-picture">
-            <source media="(max-width: 37.4375em)" type="image/webp" data-srcset="{{product.mainImage}}_350x350.jpg.webp 1x, {{product.mainImage}}_450x450.jpg.webp 2x">
-            <source media="(max-width: 37.4375em)" data-srcset="{{product.mainImage}}_300x300.jpg 1x, {{product.mainImage}}_450x450.jpg 2x">
-            <source type="image/webp" data-srcset="{{product.mainImage}}_600x600.jpg.webp 1x, {{product.mainImage}}_800x800.jpg.webp 2x">
-            <img data-srcset="{{product.mainImage}}_600x600.jpg 1x, {{product.mainImage}}_800x800.jpg 2x" alt="{{product.mainImageAlt}}" class="product__image lazyload" loading="lazy" width="300" height="300">
+        <div class="product__image-wrapper" data-component="product-image-zoom">
+            <picture class="product__picture" data-component="product-picture">
+                <source media="(max-width: 37.4375em)" type="image/webp" data-srcset="{{product.mainImage}}_350x350.jpg.webp 1x, {{product.mainImage}}_450x450.jpg.webp 2x">
+                <source media="(max-width: 37.4375em)" data-srcset="{{product.mainImage}}_300x300.jpg 1x, {{product.mainImage}}_450x450.jpg 2x">
+                <source type="image/webp" data-srcset="{{product.mainImage}}_600x600.jpg.webp 1x, {{product.mainImage}}_800x800.jpg.webp 2x">
+                <img data-srcset="{{product.mainImage}}_600x600.jpg 1x, {{product.mainImage}}_800x800.jpg 2x" alt="{{product.mainImageAlt}}" class="product__image lazyload" loading="lazy" width="300" height="300" data-product-image>
 
-            <noscript>
-                <source media="(max-width: 37.4375em)" type="image/webp" srcset="{{product.mainImage}}_350x350.jpg.webp 1x, {{product.mainImage}}_450x450.jpg.webp 2x">
-                <source media="(max-width: 37.4375em)" srcset="{{product.mainImage}}_300x300.jpg 1x, {{product.mainImage}}_450x450.jpg 2x">
-                <source type="image/webp" srcset="{{product.mainImage}}_600x600.jpg.webp 1x, {{product.mainImage}}_800x800.jpg.webp 2x">
-                <img srcset="{{product.mainImage}}_600x600.jpg 1x, {{product.mainImage}}_800x800.jpg 2x" alt="{{product.mainImageAlt}}" class="product__image" loading="lazy" width="300" height="300">
-            </noscript>
-        </picture>
+                <noscript>
+                    <source media="(max-width: 37.4375em)" type="image/webp" srcset="{{product.mainImage}}_350x350.jpg.webp 1x, {{product.mainImage}}_450x450.jpg.webp 2x">
+                    <source media="(max-width: 37.4375em)" srcset="{{product.mainImage}}_300x300.jpg 1x, {{product.mainImage}}_450x450.jpg 2x">
+                    <source type="image/webp" srcset="{{product.mainImage}}_600x600.jpg.webp 1x, {{product.mainImage}}_800x800.jpg.webp 2x">
+                    <img srcset="{{product.mainImage}}_600x600.jpg 1x, {{product.mainImage}}_800x800.jpg 2x" alt="{{product.mainImageAlt}}" class="product__image" loading="lazy" width="300" height="300">
+                </noscript>
+            </picture>
+
+            <div class="product__image-zoom" aria-hidden="true" style="background-image: url({{product.mainImage}}.jpg);" data-image-zoom></div>
+        </div>
 
         {% include "_partials/product-thumbnails.njk" %}
 
