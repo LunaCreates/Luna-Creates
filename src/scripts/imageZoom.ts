@@ -1,44 +1,77 @@
 import pubSub from './modules/pubSub';
 
 function ImageZoom(element: HTMLElement) {
-  const original: HTMLElement | null = element.querySelector('[data-product-image]');
-  const magnified: HTMLElement | null = element.querySelector('[data-image-zoom]');
+  const original = element.querySelector('[data-product-image]') as HTMLElement;
+  const magnified = element.querySelector('[data-image-zoom]') as HTMLElement;
+  let isActive = false;
 
-  function setPerc(direction: number, measurement: number) {
-    let percentage = (direction / measurement) * 100;
+  function setImageZoomSize() {
+    const originalWidth = original.getBoundingClientRect().width * 3;
+    const originalHeight = original.getBoundingClientRect().height * 3;
 
-    if (direction >= 0.01 * measurement) {
-      percentage += 0.15 * percentage;
-    }
+    magnified.style.width = `${originalWidth}px`;
+    magnified.style.height = `${originalHeight}px`;
+  }
 
-    return percentage;
+  function drawMask(x: number, y: number) {
+    const image = original.getBoundingClientRect();
+    const imageZoom = magnified.getBoundingClientRect();
+    const propX = x / image.width * imageZoom.width * (1 - 1 / 3) - image.x;
+    const propY = y / image.height * imageZoom.height * (1 - 1 / 3) - image.y;
+    const maskX = x * 3;
+    const maskY = y * 3;
+    const clip = `circle(150px at ${maskX}px ${maskY}px)`;
+
+    magnified.style.left = `${-propX}px`;
+    magnified.style.top = `${-propY}px`;
+    magnified.style.opacity = '1';
+    magnified.style.clipPath = clip;
   }
 
   function handleMouseMove(event: MouseEvent) {
-    const x = event.offsetX;
-    const y = event.offsetY;
-    const width = original ? original.clientWidth : 0;
-    const height = original ? original.clientHeight : 0;
+    const top = original.getBoundingClientRect().top;
+    const left = original.getBoundingClientRect().left;
+    const x = event.clientX - left;
+    const y = event.clientY - top;
 
-    if (!magnified) return;
+    if (!isActive) return;
 
-    magnified.style.backgroundPositionX = `${setPerc(x, width) - 9}%`;
-    magnified.style.backgroundPositionY = `${setPerc(y, height) - 9}%`;
-    magnified.style.left = `${x - 50}px`;
-    magnified.style.top = `${y - 50}px`;
+    drawMask(x, y);
+  }
+
+  function handleMouseDown(event: MouseEvent) {
+    const top = original.getBoundingClientRect().top;
+    const left = original.getBoundingClientRect().left;
+    const x = event.clientX - left;
+    const y = event.clientY - top;
+
+    isActive = true;
+    drawMask(x, y);
+  }
+
+  function handleMouseUp(event: MouseEvent) {
+    isActive = false;
+    magnified.style.opacity = '0';
+  }
+
+  function addEventListeners() {
+    element.addEventListener('mousemove', handleMouseMove);
+    element.addEventListener('mousedown', handleMouseDown);
+    element.addEventListener('mouseup', handleMouseUp);
   }
 
   function changeImageZoomSrc(picture: HTMLPictureElement) {
-    const image = picture.querySelector('img')?.srcset.split('300x300');
+    const image = picture.querySelector('img')?.srcset.split('_300x300');
 
     if (!image || !magnified) return;
 
-    magnified.style.backgroundImage = `url(${image[0]}1200x1200.jpg)`;
+    magnified.style.backgroundImage = `url(${image[0]}.jpg)`;
   }
 
   function init() {
     if (element !== null) {
-      element.addEventListener('mousemove', handleMouseMove, false);
+      setImageZoomSize();
+      addEventListeners();
       pubSub.subscribe('main/product/image/changed', changeImageZoomSrc);
     }
   }
