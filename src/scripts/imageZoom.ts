@@ -6,11 +6,19 @@ function ImageZoom(element: HTMLElement) {
   let isActive = false;
 
   function setImageZoomSize() {
-    const originalWidth = original.getBoundingClientRect().width * 3;
-    const originalHeight = original.getBoundingClientRect().height * 3;
+    const width = original.getBoundingClientRect().width * 3;
+    const height = original.getBoundingClientRect().height * 3;
 
-    magnified.style.width = `${originalWidth}px`;
-    magnified.style.height = `${originalHeight}px`;
+    magnified.style.width = `${width}px`;
+    magnified.style.height = `${height}px`;
+  }
+
+  function resizeCallback(entries: Array<ResizeObserverEntry>) {
+    entries.forEach((entry: ResizeObserverEntry) => {
+      if (entry.contentRect) {
+        setImageZoomSize();
+      }
+    });
   }
 
   function drawMask(x: number, y: number) {
@@ -29,10 +37,16 @@ function ImageZoom(element: HTMLElement) {
   }
 
   function handleMouseMove(event: MouseEvent) {
+    const bg = magnified.getAttribute('data-bg');
     const top = original.getBoundingClientRect().top;
     const left = original.getBoundingClientRect().left;
     const x = event.clientX - left;
     const y = event.clientY - top;
+
+    if (magnified.hasAttribute('data-bg')) {
+      magnified.style.backgroundImage = `url(${bg})`;
+      magnified.removeAttribute('data-bg');
+    }
 
     if (!isActive) return;
 
@@ -69,9 +83,12 @@ function ImageZoom(element: HTMLElement) {
   }
 
   function init() {
+    const resizeObserver = new ResizeObserver(resizeCallback);
+
     if (element !== null) {
       setImageZoomSize();
       addEventListeners();
+      resizeObserver.observe(original);
       pubSub.subscribe('main/product/image/changed', changeImageZoomSrc);
     }
   }
