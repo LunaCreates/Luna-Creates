@@ -1,0 +1,14 @@
+---
+permalink: search.json
+eleventyExcludeFromCollections: true
+---
+
+[
+{% for product in products %}
+    {
+        "title": "{{ product.title or product.renderData.title }}",
+        "url": "{{ product.slug }}",
+        "image": "{{ product.mainImage }}"
+    }{% if not loop.last %},{% endif %}
+{% endfor %}
+]

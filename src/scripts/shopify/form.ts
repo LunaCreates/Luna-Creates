@@ -45,8 +45,11 @@ function Form(product: HTMLElement) {
     const size = formdata.get('size')?.toString().split(' (')[0].toLowerCase();
     const title = formdata.get('title');
     const colors = formdata.getAll('colors').filter(color => color !== 'none');
+    const showKeyText = formdata.get('show key text');
     const keys = formdata.getAll('key');
     const labels = colors.map((color, index) => buildLabelsData(color, keys, index));
+
+    console.log(showKeyText, 'buildKeyMapData');
 
     const keyMapData = {
       type,
@@ -100,13 +103,16 @@ function Form(product: HTMLElement) {
 
   function togglePinColors(input: HTMLInputElement) {
     const pinColors: HTMLElement | null = product.querySelector('[data-pin-colors]');
+    const keyTextInput = pinColors?.querySelector('[id="map-key-1"]') as HTMLInputElement;
 
     if (pinColors && input.value === 'yes') {
+      keyTextInput.required = true;
       pinColors.classList.add('pin-colors--key-text');
       return;
     }
 
     if (pinColors && input.value === 'no') {
+      keyTextInput.required = false;
       pinColors.classList.remove('pin-colors--key-text');
       return;
     }

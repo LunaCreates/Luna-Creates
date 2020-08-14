@@ -75,6 +75,12 @@ observe((element: HTMLTableElement) => {
     .catch(err => console.error(`Error in: Cart - ${err}`));
 }, document.querySelectorAll('[data-component="cart"]'));
 
+observe((element: HTMLInputElement) => {
+  import(/* webpackChunkName: "search" */ 'Src/scripts/search')
+    .then(module => initModule(module, element))
+    .catch(err => console.error(`Error in: Search - ${err}`));
+}, document.querySelectorAll('[data-search-input]'));
+
 /** *****
  *
  *  Image Zoom
