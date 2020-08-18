@@ -28,7 +28,7 @@
     letter-spacing: 1px;
   }
 
-  @include _responsive.min(m) {
+  @include _responsive.min(l) {
     width: 200px;
 
     image {

@@ -20,7 +20,7 @@
 
         <!-- PRELOAD FILES -->
         {% include "_partials/preload-styles.njk" %}
-        <link rel="preload" href="/fonts/avenir-next-variable.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="/fonts/avenir-next-variable.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 
         <!-- STYLESHEET -->
         {% include "_partials/styles.njk" %}
@@ -95,15 +95,6 @@
 
         <!-- JAVASCRIPT -->
         {% include "_partials/scripts.njk" %}
-
-        <style>
-            @font-face {
-                font-family: 'Avenir Next';
-                src: url('/fonts/avenir-next-variable.woff2') format('woff2-variations');
-                font-display: optional;
-                font-weight: normal;
-            }
-        </style>
     </head>
 
     <body>

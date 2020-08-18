@@ -42,7 +42,7 @@
   padding-top: (_variables.$core-grid / 1.5);
   padding-bottom: (_variables.$core-grid / 1.5);
   background-color: var(--color-background);
-  z-index: _z-index.z(alpha);
+  z-index: _z-index.z(lima);
 
   @include _responsive.min(m) {
     max-width: 1140px;
