@@ -20,15 +20,10 @@
             </button>
 
             <div class="search" data-search-form>
-                <form action="/search" class="search__form" role="search">
-                    <label class="search__label" for="search-top">Search</label>
-                    <input class="search__input" id="search-top" placeholder="Search" data-search-input>
-                    <button type="submit" class="search__submit" aria-label="Go">
-                        <svg height="16" width="16" aria-hidden="true" class="search__icon">
-                            <use xlink:href="/icons/sprite.svg#search"></use>
-                        </svg>
-                    </button>
-                </form>
+                <label class="search__label" for="search-top">Search</label>
+                <input type="search" class="search__input" id="search-top" placeholder="Search" autocomplete="off" data-search-input>
+                <ul class="search__results" data-search-results></ul>
+                <span class="search__results-status" data-search-results-status aria-live="polite" role="status">0 results found</span>
             </div>
 
             <a href="/cart/" class="header__cart" aria-label="View cart" data-cart>
@@ -50,15 +45,10 @@
             </button>
 
             <div class="search" data-search-form>
-                <form action="/search" class="search__form" role="search">
-                    <label class="search__label" for="search-bottom">Search the website</label>
-                    <input class="search__input" id="search-bottom" placeholder="Search" data-search-input>
-                    <button type="submit" class="search__submit" aria-label="Search">
-                        <svg height="16" width="16" aria-hidden="true" class="search__icon">
-                            <use xlink:href="/icons/sprite.svg#search"></use>
-                        </svg>
-                    </button>
-                </form>
+                <label class="search__label" for="search-bottom">Search the website</label>
+                <input type="search" class="search__input" id="search-bottom" placeholder="Search" autocomplete="off" data-search-input>
+                <ul class="search__results" data-search-results></ul>
+                <span class="search__results-status" data-search-results-status aria-live="polite" role="status">0 results found</span>
             </div>
 
             <a href="/cart/" class="header__cart" aria-label="View cart" data-cart>

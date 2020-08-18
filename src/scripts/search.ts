@@ -12,41 +12,66 @@ interface SearchResultTypes {
 }
 
 function Search(input: HTMLInputElement) {
+  const results: Element | null = input.nextElementSibling;
+  const status = results?.nextElementSibling;
+
   function renderResult(hit: SearchResultTypes) {
     const image = hit.image;
 
-    return `
-      <li>
-        <picture class="results__picture">
-          <source  type="image/webp" data-srcset="${image}_150x150.jpg.webp 1x, ${image}_300x300.jpg.webp 2x">
+    if (!results) return;
 
-          <img class="results__image lazyload" data-srcset="${image}_150x150.jpg 1x, ${image}_300x300.jpg 2x" role="presentation" width="100" height="100" loading="lazy">
-        </picture>
-        <a href="${hit.url}" class="results__link">${hit.title}</a>
+    results.innerHTML += `
+      <li class="search__result">
+        <div class="search__result-container">
+          <picture class="search__result-picture">
+            <source  type="image/webp" srcset="${image}_150x150.jpg.webp 1x, ${image}_300x300.jpg.webp 2x">
+
+            <img class="search__result-image" srcset="${image}_150x150.jpg 1x, ${image}_300x300.jpg 2x" role="presentation" width="100" height="100" loading="lazy">
+          </picture>
+        </div>
+        <a href="${hit.url}" class="search__result-link" tabindex="0" data-search-result-link>${hit.title}</a>
       </li>
     `
   }
 
   function handleSearchResults(hits: SearchResultTypes[]) {
-    if (hits.length > 0) {
-      const html = `<ul class="results">${hits.map(renderResult).join('')}</ul>`;
+    if (status?.hasAttribute('data-search-results-status')) {
+      status.textContent = `${hits.length} results found`;
+    }
 
-      console.log(hits, 'kfdjfgidfhu');
+    if (hits.length > 0 && results?.hasAttribute('data-search-results')) {
+      results.innerHTML = '';
+      hits.forEach(renderResult);
+    }
 
-
-      input.insertAdjacentHTML('afterend', html);
+    if (hits.length === 0 && results?.hasAttribute('data-search-results')) {
+      results.innerHTML = `<li class="search__result">No results found</li>`
     }
   }
 
-  function handleChangeEvent(event: Event) {
+  function handleSearch(event: Event) {
     const target = event.target as HTMLInputElement;
     const value = target.value;
 
     index.search(value, params).then(({ hits }) => handleSearchResults(hits));
   }
 
+  function removeResults(event: FocusEvent) {
+    const relatedTarget = event.relatedTarget as HTMLElement;
+
+    console.log(relatedTarget);
+
+    if (relatedTarget && relatedTarget.hasAttribute('data-search-result-link')) return;
+
+    if (results?.hasAttribute('data-search-results')) {
+      results.innerHTML = '';
+    }
+  }
+
   function init() {
-    input.addEventListener('input', handleChangeEvent);
+    input.addEventListener('input', handleSearch);
+    input.addEventListener('focus', handleSearch);
+    input.addEventListener('blur', removeResults);
   }
 
   return {

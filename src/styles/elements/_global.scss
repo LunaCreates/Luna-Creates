@@ -5,6 +5,13 @@
 
 // Global.............The sites core styles.
 
+@font-face {
+  font-family: 'Avenir Next';
+  src: url('/fonts/avenir-next-variable.woff2') format('woff2-variations');
+  font-display: optional;
+  font-weight: normal;
+}
+
 *,
 *:before,
 *:after {

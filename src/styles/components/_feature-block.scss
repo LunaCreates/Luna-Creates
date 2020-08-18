@@ -62,6 +62,7 @@
   @include _typography.text(md);
   margin-bottom: (_variables.$core-grid * 2);
   text-transform: uppercase;
+  letter-spacing: 2px;
 
   @include _responsive.min(m) {
     max-width: 450px;
