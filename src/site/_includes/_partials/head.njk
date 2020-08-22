@@ -33,24 +33,60 @@
         <!-- MANIFEST -->
         <link rel="manifest" href="/site.webmanifest">
 
+        <link rel="alternate" href="{{settings.url}}" hreflang="en-gb">
+        <link rel="canonical" href="{{page.url}}">
+
+        <script type="application/ld+json">{
+            "@context": "http://schema.org",
+        {% if tags and 'product' in tags %}
+            "@type": "Product",
+            "name": "{{ renderData.title or title }}",
+            "image": "{{ product.mainImage }}_800x800.jpg",
+            "description": "{{ product.descriptionSchema }}",
+            "offers": {
+                "@type": "Offer",
+                "url": "{{ product.slug }}",
+                "priceCurrency": "GBP",
+                "price": "{{ product.priceSchema }}",
+                "availability": "https://schema.org/InStock"
+            }
+        {% else %}
+            "@type": "Store",
+            "name": "{{ settings.name }}",
+            "url": "{{ settings.url }}",
+            "image": "{{ settings.url }}images/favicons/favicon-512x512.png",
+            "foundingDate": "2012",
+            "sameAs": [
+                "{{ settings.url }}",
+            {% for item in settings.social %}
+                {% if loop.last %}
+                    "{{ item.url }}"
+                {% else %}
+                    "{{ item.url }}",
+                {% endif %}
+            {% endfor %}
+            ]
+        {% endif %}
+        }</script>
+
         <!-- FACEBOOK -->
-        <meta property="og:title" content="{{title}} &mdash; {{settings.name}}" />
+        <meta property="og:title" content="{{ renderData.title or title }} &mdash; {{ settings.name }}" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="{{settings.url}}" />
-        <meta property="og:image" content="{{settings.url}}images/favicons/favicon-512x512.png" />
+        <meta property="og:url" content="{{ settings.url }}" />
+        <meta property="og:image" content="{{ settings.url }}images/favicons/favicon-512x512.png" />
         <meta property="og:description" content="Stunning range of travel related personalised world map pinboard products for sale. Order online for quick UK delivery.">
         <meta property="og:locale" content="en_GB">
-        <meta property="article:author" content="{{settings.name}}">
-        <meta property="og:site_name" content="{{settings.name}}">
+        <meta property="article:author" content="{{ settings.name }}">
+        <meta property="og:site_name" content="{{ settings.name }}">
 
         <!-- TWITTER -->
         <meta name="twitter:card" content="summary">
-        <meta name="twitter:site" content="{{settings.twitterHandle}}">
-        <meta name="twitter:creator" content="{{settings.twitterHandle}}">
+        <meta name="twitter:site" content="{{ settings.twitterHandle }}">
+        <meta name="twitter:creator" content="{{ settings.twitterHandle }}">
         <meta name="twitter:url" content="{{settings.url}}">
-        <meta name="twitter:title" content="{{title}} &mdash; {{settings.name}}">
+        <meta name="twitter:title" content="{{ renderData.title or title }} &mdash; {{ settings.name }}">
         <meta name="twitter:description" content="Stunning range of travel related personalised world map pinboard products for sale. Order online for quick UK delivery.">
-        <meta name="twitter:image" content="{{settings.url}}images/favicons/favicon-512x512.png">
+        <meta name="twitter:image" content="{{ settings.url }}images/favicons/favicon-512x512.png">
 
         <!-- FAVICONS -->
         <link rel="icon" type="image/png" href="/favicons/favicon-48x48.png" sizes="16x16">

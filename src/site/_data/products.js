@@ -8,7 +8,7 @@ const token = process.env.STOREFRONT_API_TOKEN;
 
 async function allProductsData() {
   const data = await Cache(`${process.env.STOREFRONT_API_URL}?products`, {
-    duration: '1d',
+    duration: '1s',
     type: 'json',
     fetchOptions: {
       method: 'POST',
@@ -25,6 +25,7 @@ async function allProductsData() {
                 id
                 title
                 handle
+                description
                 descriptionHtml
                 tags
                 priceRange {
@@ -108,12 +109,14 @@ async function allProductsData() {
       slug: `/products/${item.handle}`,
       tags: item.tags,
       description: item.descriptionHtml,
+      descriptionSchema: item.description,
       color: color,
       options: options,
       mainImageAlt: item.images.edges[0].node.altText,
       mainImage: item.images.edges[0].node.originalSrc.split('.jpg')[0],
       thumbnails: images,
-      price: new Intl.NumberFormat('en-GB', { style: 'currency', currency: currency }).format(price)
+      price: new Intl.NumberFormat('en-GB', { style: 'currency', currency: currency }).format(price),
+      priceSchema: parseFloat(price).toFixed(2)
     };
   });
 
