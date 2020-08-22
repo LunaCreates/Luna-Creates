@@ -13,6 +13,10 @@
     padding-top: (_variables.$core-grid * 4);
     padding-bottom: (_variables.$core-grid * 4);
   }
+
+  @supports (padding-bottom: env(safe-area-inset-bottom)) {
+    padding-bottom: env(safe-area-inset-bottom, 20px);
+  }
 }
 
 .footer__container {
