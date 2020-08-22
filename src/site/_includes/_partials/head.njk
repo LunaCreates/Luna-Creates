@@ -17,6 +17,8 @@
 
         <!-- RESOURCE HINTS -->
         <link rel="preconnect" href="https://cdn.shopify.com/">
+        <link rel="preconnect" href="https://www.googletagmanager.com/">
+        <link rel="preconnect" href="https://www.facebook.com/">
 
         <!-- PRELOAD FILES -->
         {% include "_partials/preload-styles.njk" %}
@@ -95,6 +97,17 @@
 
         <!-- JAVASCRIPT -->
         {% include "_partials/scripts.njk" %}
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script defer src="https://www.googletagmanager.com/gtag/js?id=UA-117442723-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-117442723-1');
+        </script>
+
     </head>
 
     <body>
