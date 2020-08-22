@@ -13,10 +13,12 @@
 .cart {
   @include _responsive.container;
   padding-top: (_variables.$core-grid * 3);
+  padding-bottom: (_variables.$core-grid * 3);
   text-align: center;
 
   @include _responsive.min(m) {
     padding-top: (_variables.$core-grid * 5);
+    padding-bottom: (_variables.$core-grid * 5);
   }
 }
 
@@ -85,7 +87,7 @@
 .cart__table-product {
   display: flex;
   align-items: center;
-  min-width: 300px;
+  min-width: 250px;
   padding-top: (_variables.$core-grid * 1.5);
   padding-bottom: (_variables.$core-grid * 1.5);
 
@@ -195,6 +197,7 @@
 
 .cart__buttons {
   display: flex;
+  flex-wrap: wrap;
   justify-content: flex-end;
   margin-top: (_variables.$core-grid * 2);
   margin-bottom: (_variables.$core-grid * 2);
@@ -202,11 +205,11 @@
 
 .cart__update {
   @include _buttons.button(secondary);
-  margin-right: (_variables.$core-grid * 2);
 }
 
 .cart__checkout {
   @include _buttons.button(primary);
+  margin-left: (_variables.$core-grid * 2);
 }
 
 .cart__note {

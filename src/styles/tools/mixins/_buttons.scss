@@ -1,5 +1,6 @@
-@use '../mixins/typography' as _typography;
 @use '../../settings/variables' as _variables;
+@use './responsive' as _responsive;
+@use './typography' as _typography;
 @use 'properties' as _properties;
 @use 'sass:map';
 
@@ -49,13 +50,18 @@ $buttons: (
   } @else {
     @include _properties.map-to-props($default);
     @include _typography.text(xs);
-    padding: _variables.$core-grid (_variables.$core-grid * 3);
+    padding: _variables.$core-grid (_variables.$core-grid * 2);
     border-radius: 5px;
     border-width: _variables.$core-border-width;
     border-style: _variables.$core-border-style;
     font-variation-settings: 'wght' _variables.$core-secondary-font-weight;
     text-transform: uppercase;
     letter-spacing: 1px;
+
+    @include _responsive.min(m) {
+      padding-right: (_variables.$core-grid * 3);
+      padding-left: (_variables.$core-grid * 3);
+    }
 
     @if map.has-key($props, hover) {
       &:active,

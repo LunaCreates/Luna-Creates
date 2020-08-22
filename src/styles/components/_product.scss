@@ -284,7 +284,7 @@
   position: relative;
   padding-bottom: (_variables.$core-grid * 1.5);
   color: var(--color-tertiary);
-  font-variation-settings: 'wght' _variables.$core-tertiary-font-weight;
+  font-variation-settings: 'wght' _variables.$core-secondary-font-weight;
   text-transform: uppercase;
 
   &::after {
