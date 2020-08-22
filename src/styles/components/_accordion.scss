@@ -14,9 +14,9 @@
   background-color: var(--color-background);
   border-top: 2px solid var(--color-neutral);
 
-	&:last-child {
-		border-bottom: 2px solid var(--color-neutral);
-	}
+  &:last-child {
+    border-bottom: 2px solid var(--color-neutral);
+  }
 }
 
 .accordion__title {
@@ -48,7 +48,7 @@
   outline: 4px solid transparent;
 
   &:focus {
-		outline-color: var(--color-primary);
+    outline-color: var(--color-primary);
   }
 
   @include _responsive.min(l) {
@@ -65,7 +65,7 @@
   transition: transform 0.3s ease-in-out;
   pointer-events: none;
 
-  .accordion__button[aria-expanded="true"] & {
+  .accordion__button[aria-expanded='true'] & {
     transform: rotate(180deg);
   }
 
