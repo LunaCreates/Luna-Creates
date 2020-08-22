@@ -48,40 +48,28 @@ layout: _layouts/default
         {% for tag in product.tags %}
             {% if tag === 'Map Only' %}
                 {% include "_partials/personalised-form.njk" %}
-            {% endif %}
-
-            {% if tag === 'Wedding Table Plan' %}
+            {% elseif tag === 'Wedding Table Plan' %}
                 {% include "_partials/wedding-table-form.njk" %}
-            {% endif %}
-
-            {% if tag === 'Wedding Table Name' %}
+            {% elseif tag === 'Wedding Table Name' %}
                 {% include "_partials/wedding-table-name-form.njk" %}
-            {% endif %}
-
-            {% if tag === 'Wedding Welcome' %}
+            {% elseif tag === 'Wedding Welcome' %}
                 {% include "_partials/wedding-welcome-form.njk" %}
-            {% endif %}
-
-            {% if tag === 'Wedding Gift' %}
+            {% elseif tag === 'Wedding Gift' %}
                 {% include "_partials/wedding-gift-form.njk" %}
-            {% endif %}
-
-            {% if tag === 'Babymap' %}
+            {% elseif tag === 'Babymap' %}
                 {% include "_partials/baby-map-form.njk" %}
-            {% endif %}
-
-            {% if tag === 'Newhome' %}
+            {% elseif tag === 'Newhome' %}
                 {% include "_partials/new-home-form.njk" %}
-            {% endif %}
-
-            {% if tag === 'Pins' %}
+            {% elseif tag === 'Pins' %}
                 {% include "_partials/pins-form.njk" %}
-            {% endif %}
-
-            {% if tag === 'Frame only' %}
+            {% else %}
                 {% include "_partials/frame-only-form.njk" %}
             {% endif %}
         {% endfor %}
+
+        {% if not product.tags | length %}
+            {% include "_partials/frame-only-form.njk" %}
+        {% endif %}
     </div>
 
     {% if product.description %}
