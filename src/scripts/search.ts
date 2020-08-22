@@ -59,9 +59,7 @@ function Search(input: HTMLInputElement) {
   function removeResults(event: FocusEvent) {
     const relatedTarget = event.relatedTarget as HTMLElement;
 
-    console.log(relatedTarget);
-
-    if (relatedTarget && relatedTarget.hasAttribute('data-search-result-link')) return;
+    if (relatedTarget && relatedTarget.hasAttribute('data-search-result-link') || relatedTarget && relatedTarget.hasAttribute('data-search-results')) return;
 
     if (results?.hasAttribute('data-search-results')) {
       results.innerHTML = '';
