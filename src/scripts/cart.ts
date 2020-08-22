@@ -93,7 +93,7 @@ function Cart(form: HTMLFormElement) {
     form.outerHTML = `
       <div class="cart__no-items">
         <p class="cart__body">Your cart is currently empty.</p>
-        <a class="cart__button" href="/">Continue shopping</a>
+        <a class="cart__button" href="/products/">Continue shopping</a>
       </div>
     `
   }
