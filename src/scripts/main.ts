@@ -81,6 +81,12 @@ observe((element: HTMLInputElement) => {
     .catch(err => console.error(`Error in: Search - ${err}`));
 }, document.querySelectorAll('[data-search-input]'));
 
+observe((element: HTMLElement) => {
+  import(/* webpackChunkName: "faqs-accordion" */ 'Src/scripts/faqsAccordion')
+    .then(module => initModule(module, element))
+    .catch(err => console.error(`Error in: FAQs Accordion - ${err}`));
+}, document.querySelectorAll('[data-component="faqs"]'));
+
 /** *****
  *
  *  Image Zoom

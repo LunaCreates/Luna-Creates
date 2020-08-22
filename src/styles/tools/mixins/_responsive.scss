@@ -1,3 +1,4 @@
+@use '../../settings/variables' as _variables;
 @use 'sass:map';
 // Responsive.........Responsive media queries configuration.
 
@@ -56,8 +57,9 @@ $breakpoints: (
     }
 
     @include min(l) {
-      max-width: 1140px;
-      margin: 0 auto;
+      max-width: _variables.$core-grid-width;
+      margin-right: auto;
+      margin-left: auto;
     }
   }
 }

@@ -22,17 +22,17 @@ $headings: (
   md: (
     font-family: _variables.$core-font-family,
     font-size: unquote('max(#{_pxToRem.rem(20)}, min(1.953vw, #{_pxToRem.rem(25)}))'),
-    line-height: unquote('max(#{_pxToRem.rem(29)}, min(2.813vw, #{_pxToRem.rem(36)}))')
+    line-height: unquote('max(#{_pxToRem.rem(30)}, min(2.813vw, #{_pxToRem.rem(36)}))')
   ),
   sm: (
     font-family: _variables.$core-font-family,
     font-size: unquote('max(#{_pxToRem.rem(16)}, min(1.563vw, #{_pxToRem.rem(20)}))'),
-    line-height: unquote('max(#{_pxToRem.rem(25)}, min(2.266vw, #{_pxToRem.rem(29)}))')
+    line-height: unquote('max(#{_pxToRem.rem(25)}, min(2.266vw, #{_pxToRem.rem(30)}))')
   ),
   xs: (
     font-family: _variables.$core-font-family,
     font-size: unquote('max(#{_pxToRem.rem(14)}, min(1.250vw, #{_pxToRem.rem(16)}))'),
-    line-height: unquote('max(#{_pxToRem.rem(23)}, min(2.109vw, #{_pxToRem.rem(27)}))')
+    line-height: unquote('max(#{_pxToRem.rem(23)}, min(2.109vw, #{_pxToRem.rem(28)}))')
   )
 );
 

@@ -1,0 +1,101 @@
+@use '../settings/variables' as _variables;
+@use '../tools/mixins/responsive' as _responsive;
+@use '../tools/mixins/typography' as _typography;
+
+.accordion {
+  margin-bottom: (_variables.$core-grid * 3);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.accordion__item {
+  background-color: var(--color-background);
+  border-top: 2px solid var(--color-neutral);
+
+	&:last-child {
+		border-bottom: 2px solid var(--color-neutral);
+	}
+}
+
+.accordion__title {
+  @include _typography.text(sm);
+  margin-top: (_variables.$core-grid / 1.5);
+  margin-bottom: (_variables.$core-grid / 1.5);
+  color: var(--color-primary);
+  font-variation-settings: 'wght' _variables.$core-secondary-font-weight;
+
+  @include _responsive.min(l) {
+    margin-top: _variables.$core-grid;
+    margin-bottom: _variables.$core-grid;
+  }
+}
+
+.accordion__button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding-top: (_variables.$core-grid / 1.5);
+  padding-bottom: (_variables.$core-grid / 1.5);
+  font-family: inherit;
+  font-size: inherit;
+  font-variation-settings: inherit;
+  color: inherit;
+  text-align: left;
+  transition: none;
+  outline: 4px solid transparent;
+
+  &:focus {
+		outline-color: var(--color-primary);
+  }
+
+  @include _responsive.min(l) {
+    padding-top: _variables.$core-grid;
+    padding-bottom: _variables.$core-grid;
+  }
+}
+
+.accordion__icon {
+  width: 28px;
+  height: 100%;
+  flex: 0 0 28px;
+  margin-left: (_variables.$core-grid * 1.5);
+  transition: transform 0.3s ease-in-out;
+  pointer-events: none;
+
+  .accordion__button[aria-expanded="true"] & {
+    transform: rotate(180deg);
+  }
+
+  path {
+    fill: currentColor;
+  }
+
+  @include _responsive.min(l) {
+    width: 32px;
+    flex-basis: 32px;
+    margin-left: (_variables.$core-grid * 2);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+  }
+}
+
+.accordion__panel {
+  margin-top: (_variables.$core-grid * 1.25);
+  margin-bottom: (_variables.$core-grid * 1.25);
+}
+
+.accordion__body {
+  @include _typography.text(sm);
+  max-width: 80ch;
+}
+
+.accordion__link {
+  color: var(--color-foreground);
+  font-variation-settings: 'wght' _variables.$core-secondary-font-weight;
+  text-decoration: underline;
+}
