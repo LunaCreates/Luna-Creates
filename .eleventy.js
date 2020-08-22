@@ -1,10 +1,12 @@
 const fs = require('fs');
+const formatDate = require('./src/utils/filters/format-date');
 const htmlMin = require('./src/utils/minify-html.js');
 const swStyles = require('./src/utils/filters/sw-styles.js');
 
 module.exports = config => {
   const prod = process.env.NODE_ENV === 'prod';
 
+  config.addFilter('formatDate', formatDate);
   config.addShortcode('swStyles', swStyles);
 
   config.addPassthroughCopy({ 'src/favicons': 'favicons' });

@@ -3,12 +3,14 @@ pagination:
     data: products
     size: 1
     alias: product
+    addAllPagesToCollections: true
 renderData:
   title: "{{product.title}}"
 permalink: "/{{product.slug}}/"
-changefreq: daily
-priority: 1
 layout: _layouts/default
+sitemap:
+  changefreq: daily
+  priority: 1
 ---
 
 <main class="product product--container" aria-describedby="product-title" data-component="product-details" data-product-id="{{product.id}}" data-product-color="{{product.color}}" id="main">
