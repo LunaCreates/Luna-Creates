@@ -1,5 +1,3 @@
-import checkout from './shopify/checkout';
-
 if ('loading' in HTMLImageElement.prototype) {
   const images: Array<HTMLImageElement> = Array.from(document.querySelectorAll('img.lazyload'));
   const sources: Array<HTMLSourceElement> = Array.from(document.querySelectorAll('[data-srcset'));
@@ -13,7 +11,7 @@ if ('loading' in HTMLImageElement.prototype) {
     source.srcset = source.dataset.srcset as string;
   });
 } else {
-  import('lazysizes')
+  import('lazysizes');
 }
 
 const html: HTMLElement | null = document.querySelector('html');
@@ -53,9 +51,11 @@ function observe(callback: Function, elements: NodeList) {
  *
  * ******* */
 
-checkout().init();
-
 observe((element: HTMLElement) => {
+  import(/* webpackChunkName: "quotes-carousel" */ 'Src/scripts/shopify/checkout')
+    .then(module => initModule(module, element))
+    .catch(err => console.error(`Error in: Checkout - ${err}`));
+
   import(/* webpackChunkName: "quotes-carousel" */ 'Src/scripts/triggerSearch')
     .then(module => initModule(module, element))
     .catch(err => console.error(`Error in: Trigger Search - ${err}`));
