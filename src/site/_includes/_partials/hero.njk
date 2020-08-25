@@ -4,21 +4,23 @@
 <section class="hero {% if home %}hero--home{% endif %}" aria-labelledby="hero-title">
     <div class="hero__content">
         <picture class="hero__picture hero__picture--home">
-            <source media="(max-width: 47.9375em)" type="image/webp" data-srcset="{{image}}_400x240_crop_top.jpg.webp 1x, {{image}}_800x480_crop_top.jpg.webp 2x">
+            <source media="(max-width: 37.4375em)" type="image/webp" data-srcset="{{image}}_300x180_crop_top.jpg.webp 1x, {{image}}_600x360_crop_top.jpg.webp 2x">
+            <source media="(max-width: 37.4375em)"  data-srcset="{{image}}_300x180_crop_top.jpg 1x, {{image}}_600x360_crop_top.jpg 2x">
 
-            <source media="(max-width: 47.9375em)"  data-srcset="{{image}}_400x240_crop_top.jpg 1x, {{image}}_800x480_crop_top.jpg 2x">
+            <source media="(min-width: 38em) and (max-width: 47.9375em)" type="image/webp" data-srcset="{{image}}_400x240_crop_top.jpg.webp 1x, {{image}}_800x480_crop_top.jpg.webp 2x">
+            <source media="(min-width: 38em) and (max-width: 47.9375em)"  data-srcset="{{image}}_400x240_crop_top.jpg 1x, {{image}}_800x480_crop_top.jpg 2x">
 
             <source  type="image/webp" data-srcset="{{image}}_1500x469_crop_top.jpg.webp 1x, {{image}}_2048x640_crop_top.jpg.webp?v=1574005714 2x">
-
             <img class="hero__image lazyload" data-srcset="{{image}}_1500x469_crop_top.jpg 1x, {{image}}_2048x640_crop_top.jpg 2x" role="presentation" width="400" height="240" loading="lazy">
 
             <noscript>
-                <source media="(max-width: 47.9375em)" type="image/webp" srcset="{{image}}_400x240_crop_top.jpg.webp 1x, {{image}}_800x480_crop_top.jpg.webp 2x">
+                <source media="(max-width: 37.4375em)" type="image/webp" srcset="{{image}}_300x180_crop_top.jpg.webp 1x, {{image}}_600x360_crop_top.jpg.webp 2x">
+                <source media="(max-width: 37.4375em)"  srcset="{{image}}_300x180_crop_top.jpg 1x, {{image}}_600x360_crop_top.jpg 2x">
 
-                <source media="(max-width: 47.9375em)" srcset="{{image}}_400x240_crop_top.jpg 1x, {{image}}_800x480_crop_top.jpg 2x">
+                <source media="(min-width: 38em) and (max-width: 47.9375em)" type="image/webp" srcset="{{image}}_400x240_crop_top.jpg.webp 1x, {{image}}_800x480_crop_top.jpg.webp 2x">
+                <source media="(min-width: 38em) and (max-width: 47.9375em)"  srcset="{{image}}_400x240_crop_top.jpg 1x, {{image}}_800x480_crop_top.jpg 2x">
 
                 <source type="image/webp" srcset="{{image}}_1500x469_crop_top.jpg.webp 1x, {{image}}_2048x640_crop_top.jpg.webp 2x">
-
                 <img class="hero__image" srcset="{{image}}_1500x469_crop_top.jpg 1x, {{image}}_2048x640_crop_top.jpg 2x" role="presentation" width="400" height="240" loading="lazy">
             </noscript>
         </picture>
