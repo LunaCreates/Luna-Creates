@@ -56,7 +56,7 @@ observe((element: HTMLElement) => {
     .then(module => initModule(module, element))
     .catch(err => console.error(`Error in: Checkout - ${err}`));
 
-  import(/* webpackChunkName: "quotes-carousel" */ 'Src/scripts/triggerSearch')
+  import(/* webpackChunkName: "trigger-search" */ 'Src/scripts/triggerSearch')
     .then(module => initModule(module, element))
     .catch(err => console.error(`Error in: Trigger Search - ${err}`));
 }, document.querySelectorAll('[data-component="search"]'));
@@ -127,7 +127,7 @@ observe((carousel: HTMLElement) => {
 }, document.querySelectorAll('[data-component="product-picture"]'));
 
 observe((carousel: HTMLElement) => {
-  import(/* webpackChunkName: "product-thumbnails" */ 'Src/scripts/productThumbnailsCarousel')
+  import(/* webpackChunkName: "product-thumbnails-carousel" */ 'Src/scripts/productThumbnailsCarousel')
     .then(module => initModule(module, carousel))
     .catch(err => console.error(`Error in: Product Thumbnails - ${err}`));
 }, document.querySelectorAll('[data-component="product-thumbnails-carousel"]'));
