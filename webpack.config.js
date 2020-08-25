@@ -11,6 +11,7 @@ const ImageminWebpWebpackPlugin = require('imagemin-webp-webpack-plugin');
 const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
 const StylelintPlugin = require('stylelint-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
+const Critters = require('critters-webpack-plugin');
 // const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 function Bundle() {
@@ -27,19 +28,13 @@ function Bundle() {
       output: path.join(__dirname, 'src', 'cache-manifest.json')
     }),
     new MiniCssExtractPlugin({
-      filename: 'css/main.css?cb=[contenthash]'
+      filename: 'css/main.css'
     }),
     new HtmlWebpackPlugin({
       inject: false,
       filename: path.resolve(__dirname, 'src', 'site', '_includes', '_partials', 'scripts.njk'),
       template: path.resolve(__dirname, '_templates', 'scripts.njk'),
       chunks: ['common']
-    }),
-    new HtmlWebpackPlugin({
-      inject: false,
-      filename: path.resolve(__dirname, 'src', 'site', '_includes', '_partials', 'preload-styles.njk'),
-      template: path.resolve(__dirname, '_templates', 'preload-styles.njk'),
-      chunks: ['main']
     }),
     new HtmlWebpackPlugin({
       inject: false,
@@ -58,6 +53,10 @@ function Bundle() {
     new SpriteLoaderPlugin({ plainSprite: true }),
     new webpack.LoaderOptionsPlugin({
       debug: true
+    }),
+    new Critters({
+      pruneSource: false,
+      inlineFonts: true
     })
     // new BundleAnalyzerPlugin()
   ];
