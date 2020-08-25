@@ -28,7 +28,14 @@ async function renderKeyMap(keyMapData: Object) {
   stateManager.keyMapCreated(keyMapImage);
 }
 
-function buildLabelsData(color: FormDataEntryValue, keys: Array<FormDataEntryValue>, index: number) {
+function buildLabelsData(color: FormDataEntryValue, keys: Array<FormDataEntryValue>, showKeyText: string, index: number) {
+  if (showKeyText === 'no') {
+    return {
+      color,
+      title: ' '
+    }
+  }
+
   return {
     color,
     title: keys.length > 0 ? keys[index] : ' '
@@ -40,9 +47,9 @@ function buildKeyMapData(product: HTMLElement, formdata: FormData) {
   const size = formdata.get('size')?.toString().split(' (')[0].toLowerCase();
   const title = formdata.get('title');
   const colors = formdata.getAll('colors').filter(color => color !== 'none');
-  const showKeyText = formdata.get('show key text');
+  const showKeyText = formdata.get('show key text') as string;
   const keys = formdata.getAll('key');
-  const labels = colors.map((color, index) => buildLabelsData(color, keys, index));
+  const labels = colors.map((color, index) => buildLabelsData(color, keys, showKeyText, index));
 
   console.log(showKeyText, 'buildKeyMapData');
 
