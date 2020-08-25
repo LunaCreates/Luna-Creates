@@ -1,8 +1,4 @@
-import algoliasearch from 'algoliasearch/lite';
-
-const client = algoliasearch('9R4CE6G9A3', '6e7ae6646b1c8ffe5fa627f46c476d99');
-const index = client.initIndex('docsearch__luna');
-const params = { attributesToRetrieve: ['title', 'url', 'image'] };
+import { SearchClient } from 'algoliasearch/lite';
 
 interface SearchResultTypes {
   objectID: string,
@@ -49,11 +45,20 @@ function Search(input: HTMLInputElement) {
     }
   }
 
+  function searchItem(module: any, value: string) {
+    const search: Function = module.default;
+    const client: SearchClient = search('9R4CE6G9A3', '6e7ae6646b1c8ffe5fa627f46c476d99');
+    const index = client.initIndex('docsearch__luna');
+    const params = { attributesToRetrieve: ['title', 'url', 'image'] };
+
+    index.search(value, params).then(({ hits }) => handleSearchResults(hits));
+  }
+
   function handleSearch(event: Event) {
     const target = event.target as HTMLInputElement;
     const value = target.value;
 
-    index.search(value, params).then(({ hits }) => handleSearchResults(hits));
+    import('algoliasearch/lite').then(module => searchItem(module, value));
   }
 
   function handleFocus(event: FocusEvent) {
@@ -61,7 +66,7 @@ function Search(input: HTMLInputElement) {
     const value = target.value;
 
     if (value !== '') {
-      index.search(value, params).then(({ hits }) => handleSearchResults(hits));
+      import('algoliasearch/lite').then(module => searchItem(module, value));
     }
   }
 

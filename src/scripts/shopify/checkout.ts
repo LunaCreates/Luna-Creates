@@ -26,16 +26,12 @@ function Checkout() {
     });
   }
 
-  function checkForCheckout() {
+  function init() {
     if (!existingCheckoutId) {
       createCheckout();
     } else {
       fetchExistingCheckout();
     }
-  }
-
-  function init() {
-    checkForCheckout();
   }
 
   return {

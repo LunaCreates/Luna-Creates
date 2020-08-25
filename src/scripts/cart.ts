@@ -1,5 +1,4 @@
 import shopify from './modules/shopify';
-import checkout from './shopify/checkout';
 
 type ImageTypes = {
   src: string,

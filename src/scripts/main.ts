@@ -52,7 +52,7 @@ function observe(callback: Function, elements: NodeList) {
  * ******* */
 
 observe((element: HTMLElement) => {
-  import(/* webpackChunkName: "quotes-carousel" */ 'Src/scripts/shopify/checkout')
+  import(/* webpackChunkName: "checkout" */ 'Src/scripts/shopify/checkout')
     .then(module => initModule(module, element))
     .catch(err => console.error(`Error in: Checkout - ${err}`));
 
