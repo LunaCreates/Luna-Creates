@@ -55,8 +55,9 @@ function Bundle() {
       debug: true
     }),
     new Critters({
+      inlineFonts: true,
+      preload: 'swap',
       pruneSource: false,
-      inlineFonts: true
     })
     // new BundleAnalyzerPlugin()
   ];

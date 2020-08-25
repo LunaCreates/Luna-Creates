@@ -16,9 +16,10 @@
         <title>{% if renderData.title or title %}{{ renderData.title or title }}{% endif %} &mdash; {{settings.name}}</title>
 
         <!-- RESOURCE HINTS -->
-        <link rel="preconnect" href="https://cdn.shopify.com/">
-        <link rel="preconnect" href="https://www.googletagmanager.com/">
-        <link rel="preconnect" href="https://www.facebook.com/">
+        <link rel="preconnect" href="https://cdn.shopify.com">
+        <link rel="preconnect" href="https://www.googletagmanager.com">
+        <link rel="preconnect" href="https://www.google-analytics.com">
+        <link rel="preconnect" href="https://www.facebook.com">
 
         <!-- PRELOAD FILES -->
         <link rel="preload" href="/fonts/avenir-next-variable.woff2" as="font" type="font/woff2" crossorigin="anonymous">
@@ -142,17 +143,6 @@
 
         <!-- JAVASCRIPT -->
         {% include "_partials/scripts.njk" %}
-
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script defer src="https://www.googletagmanager.com/gtag/js?id=UA-117442723-1"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-
-            gtag('config', 'UA-117442723-1');
-        </script>
-
     </head>
 
     <body>
