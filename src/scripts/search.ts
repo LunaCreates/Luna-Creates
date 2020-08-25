@@ -56,6 +56,15 @@ function Search(input: HTMLInputElement) {
     index.search(value, params).then(({ hits }) => handleSearchResults(hits));
   }
 
+  function handleFocus(event: FocusEvent) {
+    const target = event.target as HTMLInputElement;
+    const value = target.value;
+
+    if (value !== '') {
+      index.search(value, params).then(({ hits }) => handleSearchResults(hits));
+    }
+  }
+
   function removeResults(event: FocusEvent) {
     const relatedTarget = event.relatedTarget as HTMLElement;
 
@@ -68,7 +77,7 @@ function Search(input: HTMLInputElement) {
 
   function init() {
     input.addEventListener('input', handleSearch);
-    input.addEventListener('focus', handleSearch);
+    input.addEventListener('focus', handleFocus);
     input.addEventListener('blur', removeResults);
   }
 

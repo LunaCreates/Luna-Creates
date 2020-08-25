@@ -102,8 +102,10 @@
 
 .featured__price {
   @include _typography.text(xs);
+  font-variation-settings: 'wght' _variables.$core-secondary-font-weight;
 }
 
 .featured__cta {
   @include _buttons.button(primary);
+  font-variation-settings: 'wght' _variables.$core-secondary-font-weight;
 }
