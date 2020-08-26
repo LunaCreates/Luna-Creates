@@ -1,5 +1,13 @@
 {% import "_macros/pin-colors.njk" as pinMapColors %}
 
+{% if 'Kids' in product.tags %}
+    {% set titleHolder = 'Jack\'s Adventure' %}
+    {% set pinHolder = 'Jack\'s Travels' %}
+{% else %}
+    {% set titleHolder = 'Mark & Emma\'s world travels' %}
+    {% set pinHolder = 'Alex\'s Travels' %}
+{% endif %}
+
 <form class="product__form" data-product-form>
     <div class="product__field">
         <label for="map-size" class="product__label">Choose your map size</label>
@@ -21,7 +29,7 @@
 
         <div class="product__field">
             <label for="map-title" class="product__label">Give your map a title</label>
-            <input type="text" name="title" class="product__input" minlength="3" maxlength="36" placeholder="E.g. Mark &amp; Emma's world travels" id="map-title" data-product-map-title required>
+            <input type="text" name="title" class="product__input" minlength="3" maxlength="36" placeholder="{{titleHolder}}" id="map-title" data-product-map-title required>
         </div>
 
         <p class="product__label">Key text</p>
@@ -41,7 +49,7 @@
         <p class="product__label">Select your pin colours</p>
 
         <div class="pin-colors pin-colors--key-text" data-pin-colors>
-            {{pinMapColors.pinColors('1', true, 'Alex\'s travels')}}
+            {{pinMapColors.pinColors('1', true, pinHolder )}}
             {{pinMapColors.pinColors('2')}}
             {{pinMapColors.pinColors('3')}}
             {{pinMapColors.pinColors('4')}}
