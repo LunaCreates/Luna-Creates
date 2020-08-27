@@ -7,14 +7,14 @@
   @include _responsive.container;
   position: relative;
 
-  &:not(&--home)::before {
+  &::before {
     content: '';
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.25);
+    background-color: rgba(0, 0, 0, 0.15);
     z-index: _z-index.z(alpha);
   }
 }
@@ -24,14 +24,6 @@
   display: block;
   padding-top: 33.33%;
   background-color: var(--color-fade);
-
-  .hero--home & {
-    padding-top: 60%;
-
-    @include _responsive.min(m) {
-      padding-top: 27%;
-    }
-  }
 
   @include _responsive.min(m) {
     padding-top: 25%;
@@ -87,11 +79,4 @@
   @include _responsive.min(m) {
     margin-bottom: (_variables.$core-grid * 2);
   }
-}
-
-.hero__body {
-  @include _typography.text(sm);
-  max-width: 890px;
-  margin-right: auto;
-  margin-left: auto;
 }

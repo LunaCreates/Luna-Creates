@@ -24,7 +24,7 @@
   font-variation-settings: 'wght' _variables.$core-secondary-font-weight;
   text-align: center;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
 
   @include _responsive.min(m) {
     margin-bottom: (_variables.$core-grid * 3);
@@ -40,6 +40,10 @@
 
   @include _responsive.min(m) {
     margin-bottom: (_variables.$core-grid * 3);
+  }
+
+  @include _responsive.min(l) {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
@@ -96,7 +100,6 @@
 
   @include _responsive.min(m) {
     margin-top: _variables.$core-grid;
-    font-size: 1em;
   }
 }
 

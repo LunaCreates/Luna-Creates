@@ -23,7 +23,7 @@
   margin-bottom: (_variables.$core-grid * 1.5);
   text-align: center;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
 
   @include _responsive.min(m) {
     margin-bottom: (_variables.$core-grid * 3);

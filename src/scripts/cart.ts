@@ -59,6 +59,23 @@ function Cart(form: HTMLFormElement) {
     return html;
   }
 
+  function renderImage(image: string) {
+    return `<img src="${image}" class="cart__preview-image" role="presentation" />`
+  }
+
+  function renderKeyMapImages() {
+    const images = JSON.parse(localStorage.getItem('mapPreviews') as string);
+
+    console.log(images, 'jgigfij');
+
+    if (images && images.length > 0) {
+      return `
+        <p class="cart__preview-title">Map preview:</p>
+        ${images.map(renderImage).join('')}
+      `;
+    }
+  }
+
   function renderTableData(checkout: Checkout) {
     form.innerHTML = `
       <div class="cart__inner">
@@ -78,12 +95,19 @@ function Cart(form: HTMLFormElement) {
           </table>
       </div>
 
-      <p class="cart__subtotal"><strong>Subtotal:</strong> &pound;${checkout.subtotalPrice}</p>
-      <p class="cart__shipping">Shipping &amp; taxes calculated at checkout</p>
+      <div class="cart__footer">
+        <div class="cart__preview-images">
+          ${renderKeyMapImages()}
+        </div>
+        <div class="cart__content">
+          <p class="cart__subtotal"><strong>Subtotal:</strong> &pound;${checkout.subtotalPrice}</p>
+          <p class="cart__shipping">Shipping &amp; taxes calculated at checkout</p>
 
-      <div class="cart__buttons">
-          <button type="submit" class="cart__update">Update</button>
-          <a href="${checkout.webUrl}" class="cart__checkout">Checkout</a>
+          <div class="cart__buttons">
+              <button type="submit" class="cart__update">Update</button>
+              <a href="${checkout.webUrl}" class="cart__checkout">Checkout</a>
+          </div>
+        </div>
       </div>
     `;
   }

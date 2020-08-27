@@ -1,9 +1,9 @@
 {% set image = renderData.heroImage or heroImage %}
 {% set title = renderData.heroTitle or heroTitle  %}
 
-<section class="hero {% if home %}hero--home{% endif %}" aria-labelledby="hero-title">
+<section class="hero" aria-labelledby="hero-title">
     <div class="hero__content">
-        <picture class="hero__picture hero__picture--home">
+        <picture class="hero__picture">
             <source media="(max-width: 37.4375em)" type="image/webp" data-srcset="{{image}}_300x180_crop_top.jpg.webp 1x, {{image}}_600x360_crop_top.jpg.webp 2x">
             <source media="(max-width: 37.4375em)"  data-srcset="{{image}}_300x180_crop_top.jpg 1x, {{image}}_600x360_crop_top.jpg 2x">
 
@@ -27,10 +27,10 @@
     </div>
 
     <div class="hero__container">
-        <h1 class="hero__title" id="hero-title">{{title}}</h1>
-
         {% if home %}
-        <p class="hero__body">We help you immortalise your biggest and best adventures, whether you’re finding new places or starting new chapters with the people you love.</p>
+            <p class="hero__title" id="hero-title">{{title}}</p>
+        {% else %}
+            <h1 class="hero__title" id="hero-title">{{title}}</h1>
         {% endif %}
     </div>
 </section>

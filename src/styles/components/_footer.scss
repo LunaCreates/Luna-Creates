@@ -61,6 +61,7 @@
   margin-bottom: (_variables.$core-grid * 1.5);
   font-variation-settings: 'wght' _variables.$core-secondary-font-weight;
   text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 .footer__link {

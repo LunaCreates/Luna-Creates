@@ -61,8 +61,9 @@
 .feature-block__title {
   @include _typography.text(md);
   margin-bottom: (_variables.$core-grid * 2);
+  font-variation-settings: 'wght' _variables.$core-secondary-font-weight;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
 
   @include _responsive.min(m) {
     max-width: 450px;

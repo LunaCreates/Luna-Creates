@@ -11,21 +11,16 @@ function fetchData(keyMapData: Object) {
   })
 }
 
-function storePreviewImages(keyMapImage: string) {
-  const localImages = localStorage.getItem('mapPreviews');
-  const images: Array<string> = localImages === null ? [] : JSON.parse(localImages);
-
-  images.push(keyMapImage);
-  localStorage.setItem('mapPreviews', JSON.stringify(images));
-}
-
 async function renderKeyMap(keyMapData: Object) {
   const data = await fetchData(keyMapData);
   const response = await data.blob();
-  const keyMapImage = URL.createObjectURL(response);
+  const reader = new FileReader();
 
-  storePreviewImages(keyMapImage);
-  stateManager.keyMapCreated(keyMapImage);
+  reader.readAsDataURL(response);
+  reader.onloadend = () => {
+    const keyMapImage = reader.result as string;
+    stateManager.keyMapCreated(keyMapImage);
+  }
 }
 
 function buildLabelsData(color: FormDataEntryValue, keys: Array<FormDataEntryValue>, showKeyText: string, index: number) {
@@ -50,8 +45,6 @@ function buildKeyMapData(product: HTMLElement, formdata: FormData) {
   const showKeyText = formdata.get('show key text') as string;
   const keys = formdata.getAll('key');
   const labels = colors.map((color, index) => buildLabelsData(color, keys, showKeyText, index));
-
-  console.log(showKeyText, 'buildKeyMapData');
 
   const keyMapData = {
     type,

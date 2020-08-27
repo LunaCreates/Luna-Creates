@@ -5,6 +5,18 @@ function Basket(product: HTMLElement) {
   const checkoutId = localStorage.getItem('shopify_checkout_id');
   const basketButton = product.querySelector('[data-add-to-basket]');
 
+  function storePreviewImages() {
+    const image: HTMLImageElement | null = product.querySelector('[data-key-map] img');
+
+    if (image === null) return;
+
+    const localImages = localStorage.getItem('mapPreviews');
+    const images: Array<string> = localImages === null ? [] : JSON.parse(localImages);
+
+    images.push(image.src);
+    localStorage.setItem('mapPreviews', JSON.stringify(images));
+  }
+
   function setAttributes(varaint: HTMLOptionElement) {
     const key = varaint.getAttribute('data-name');
     const value = varaint.getAttribute('value');
@@ -36,6 +48,8 @@ function Basket(product: HTMLElement) {
     ];
 
     event.preventDefault();
+
+    storePreviewImages();
 
     shopify.checkout.addLineItems(checkoutId, lineItemsToAdd)
       .then(() => window.location.pathname = '/cart/');

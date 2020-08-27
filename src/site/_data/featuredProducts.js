@@ -20,7 +20,7 @@ async function featuredProductsData() {
       body: JSON.stringify({
         query: `{
           collectionByHandle(handle: "home-page") {
-            products(first: 3) {
+            products(first: 4) {
               edges {
                 node {
                   title
