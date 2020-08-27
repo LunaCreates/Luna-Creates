@@ -214,6 +214,8 @@
 }
 
 .cart__shipping {
+  @include _typography.text(xs);
+  font-variation-settings: 'wght' _variables.$core-font-weight;
   font-style: italic;
   text-align: right;
 }
