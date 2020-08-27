@@ -209,7 +209,7 @@
 }
 
 .cart__subtotal {
-  margin-bottom: (_variables.$core-grid * 1.5);
+  margin-bottom: (_variables.$core-grid / 1.5);
   text-align: right;
 }
 
