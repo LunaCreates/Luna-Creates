@@ -33,6 +33,7 @@
 }
 
 .cart__inner {
+  margin-bottom: (_variables.$core-grid * 3);
   overflow-x: auto;
 }
 
@@ -185,7 +186,6 @@
 }
 
 .cart__footer {
-  margin-top: (_variables.$core-grid * 3);
   margin-bottom: (_variables.$core-grid * 2);
 
   @include _responsive.min(m) {
