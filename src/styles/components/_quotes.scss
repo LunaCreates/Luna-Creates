@@ -14,10 +14,15 @@
   text-align: center;
 
   @include _responsive.min(m) {
-    margin-top: (_variables.$core-grid * 4);
-    margin-bottom: (_variables.$core-grid * 4);
+    margin-top: (_variables.$core-grid * 5);
+    margin-bottom: (_variables.$core-grid * 5);
     padding-top: (_variables.$core-grid * 4);
     padding-bottom: (_variables.$core-grid * 4);
+  }
+
+  @include _responsive.min(l) {
+    margin-top: (_variables.$core-grid * 7);
+    margin-bottom: (_variables.$core-grid * 7);
   }
 }
 

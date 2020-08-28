@@ -6,12 +6,17 @@
 
 .page {
   @include _responsive.container;
-  padding-top: (_variables.$core-grid * 3);
-  padding-bottom: (_variables.$core-grid * 3);
+  margin-top: (_variables.$core-grid * 3);
+  margin-bottom: (_variables.$core-grid * 3);
 
   @include _responsive.min(m) {
-    padding-top: (_variables.$core-grid * 4);
-    padding-bottom: (_variables.$core-grid * 4);
+    margin-top: (_variables.$core-grid * 5);
+    margin-bottom: (_variables.$core-grid * 5);
+  }
+
+  @include _responsive.min(l) {
+    margin-top: (_variables.$core-grid * 7);
+    margin-bottom: (_variables.$core-grid * 7);
   }
 }
 
