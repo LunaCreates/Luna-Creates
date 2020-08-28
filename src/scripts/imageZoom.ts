@@ -36,12 +36,8 @@ function ImageZoom(element: HTMLElement) {
     magnified.style.clipPath = clip;
   }
 
-  function handleMouseMove(event: MouseEvent) {
+  function setZoom(x: number, y: number) {
     const bg = magnified.getAttribute('data-bg');
-    const top = original.getBoundingClientRect().top;
-    const left = original.getBoundingClientRect().left;
-    const x = event.clientX - left;
-    const y = event.clientY - top;
 
     if (magnified.hasAttribute('data-bg')) {
       magnified.style.backgroundImage = `url(${bg})`;
@@ -53,25 +49,70 @@ function ImageZoom(element: HTMLElement) {
     drawMask(x, y);
   }
 
-  function handleMouseDown(event: MouseEvent) {
+  function handleMove(posX: number, posY: number) {
     const top = original.getBoundingClientRect().top;
     const left = original.getBoundingClientRect().left;
-    const x = event.clientX - left;
-    const y = event.clientY - top;
+    const x = (posX - left) - window.pageXOffset;
+    const y = (posY - top) - window.pageYOffset;
+
+    setZoom(x, y);
+  }
+
+  function handleStart(posX: number, posY: number) {
+    const top = original.getBoundingClientRect().top;
+    const left = original.getBoundingClientRect().left;
+    const x = (posX - left) - window.pageXOffset;
+    const y = (posY - top) - window.pageYOffset;
 
     isActive = true;
     drawMask(x, y);
   }
 
-  function handleMouseUp(event: MouseEvent) {
+  function handleMoveEnd() {
     isActive = false;
     magnified.style.opacity = '0';
   }
 
+  function handleMouseMove(event: MouseEvent) {
+    const posX = event.pageX;
+    const posY = event.pageY;
+
+    event.preventDefault();
+
+    handleMove(posX, posY);
+  }
+
+  function handleMouseStart(event: MouseEvent) {
+    const posX = event.pageX;
+    const posY = event.pageY;
+
+    handleStart(posX, posY);
+  }
+
+  function handleTouchMove(event: TouchEvent) {
+    const posX = event.changedTouches[0].pageX;
+    const posY = event.changedTouches[0].pageY;
+
+    event.preventDefault();
+
+    handleMove(posX, posY);
+  }
+
+  function handleTouchStart(event: TouchEvent) {
+    const posX = event.changedTouches[0].pageX;
+    const posY = event.changedTouches[0].pageY;
+
+    handleStart(posX, posY);
+  }
+
   function addEventListeners() {
     element.addEventListener('mousemove', handleMouseMove);
-    element.addEventListener('mousedown', handleMouseDown);
-    element.addEventListener('mouseup', handleMouseUp);
+    element.addEventListener('mousedown', handleMouseStart);
+    element.addEventListener('mouseup', handleMoveEnd);
+
+    element.addEventListener('touchmove', handleTouchMove);
+    element.addEventListener('touchstart', handleTouchStart);
+    element.addEventListener('touchend', handleMoveEnd);
   }
 
   function changeImageZoomSrc(picture: HTMLPictureElement) {

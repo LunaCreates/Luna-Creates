@@ -5,6 +5,13 @@
 
 .returns {
   @include _responsive.container;
+  margin-top: (_variables.$core-grid * 2);
+  margin-bottom: (_variables.$core-grid * 2);
+
+  @include _responsive.min(m) {
+    margin-top: (_variables.$core-grid * 4);
+    margin-bottom: (_variables.$core-grid * 4);
+  }
 }
 
 .returns__rule {

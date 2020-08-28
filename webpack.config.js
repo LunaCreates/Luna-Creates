@@ -56,7 +56,7 @@ function Bundle() {
     }),
     new Critters({
       inlineFonts: true,
-      preload: 'swap',
+      preload: 'js',
       pruneSource: false,
     })
     // new BundleAnalyzerPlugin()
