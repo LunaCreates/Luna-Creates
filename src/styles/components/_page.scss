@@ -24,8 +24,18 @@
   ol,
   ul {
     list-style: revert;
-    margin: revert;
+    margin-top: (_variables.$core-grid * 2);
+    margin-bottom: (_variables.$core-grid * 2);
     padding: revert;
+  }
+
+  ol li,
+  ul li {
+    margin-bottom: (_variables.$core-grid * 2);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   p {
