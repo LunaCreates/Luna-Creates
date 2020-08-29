@@ -44,8 +44,8 @@
         <!-- MANIFEST -->
         <link rel="manifest" href="/site.webmanifest">
 
-        <link rel="alternate" href="{{settings.url}}" hreflang="en-gb">
-        <link rel="canonical" href="{{page.url}}">
+        <link rel="alternate" href="{{settings.url}}/" hreflang="en-gb">
+        <link rel="canonical" href="{{settings.url}}{{page.url}}">
 
         <script type="application/ld+json">{
             "@context": "http://schema.org",
@@ -66,7 +66,7 @@
             "name": "{{ settings.name }}",
             "url": "{{ settings.url }}",
             "image": "{{ settings.url }}images/favicons/favicon-512x512.png",
-            "foundingDate": "2012",
+            "foundingDate": "2017",
             "sameAs": [
                 "{{ settings.url }}",
             {% for item in settings.social %}
