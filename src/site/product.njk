@@ -84,6 +84,10 @@ sitemap:
             {% if tag === 'Frame only' %}
                 {% include "_partials/frame-only-form.njk" %}
             {% endif %}
+
+            {% if tag === 'Gift cards' %}
+                {% include "_partials/gift-card-form.njk" %}
+            {% endif %}
         {% endfor %}
 
         {% if not product.tags | length %}
