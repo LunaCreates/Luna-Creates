@@ -9,4 +9,4 @@
 [[plugins]]
   package = "netlify-plugin-algolia-export"
     [plugins.inputs]
-      exclude = ['/404.html', '/privacy-policy/indx.hmtl', '/delivery/index.html', '/contact-us/index.html', '/returns/index.hmtl', '/faqs/index.html']
+      exclude = ['''^\/(?!products\/(?!index.html)).*''']
