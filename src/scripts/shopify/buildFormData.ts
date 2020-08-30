@@ -1,4 +1,3 @@
-
 import shopify from '../modules/shopify';
 
 const checkoutId = localStorage.getItem('shopify_checkout_id');
