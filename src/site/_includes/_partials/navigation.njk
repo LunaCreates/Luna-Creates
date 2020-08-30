@@ -1,17 +1,23 @@
 <nav class="nav" id="nav" data-component="navigation">
-    <button type="button" class="nav__button" aria-live="polite" aria-expanded="false" data-nav-button>
+    <button type="button" class="nav__button" aria-live="polite" aria-expanded="false" aria-label="Menu" data-nav-button>
         <svg class="nav__button-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 48 38" fill="currentColor">
             <path d="M.2 0h47.5v6.3H.2z" />
             <path d="M.2 15.8h47.5v6.4H.2z" />
             <path d="M.2 31.7h47.5V38H.2z" />
         </svg>
-        Menu
     </button>
 
     <ul class="nav__list" data-nav-list>
     {% for item in settings.navigation %}
         <li class="nav__item">
-            <a href="{{item.url}}" class="nav__link" data-nav-item="{{item.title}}">{{item.title}}</a>
+            <a href="{{item.url}}" class="nav__link" data-nav-item="{{item.title}}">
+                {{item.title}}
+                {% if item.collections %}
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" class="nav__link-icon">
+                        <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/>
+                    </svg>
+                {% endif %}
+            </a>
 
             {% if item.collections %}
             <ul class="nav__sub" data-sub-nav>

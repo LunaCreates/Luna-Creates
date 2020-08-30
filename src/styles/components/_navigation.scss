@@ -41,7 +41,6 @@
 }
 
 .nav__button-icon {
-  margin-right: (_variables.$core-grid / 2);
   pointer-events: none;
 
   path:first-child {
@@ -87,11 +86,10 @@
     width: 100%;
     padding-right: 5vw;
     padding-left: 5vw;
-    border-top: 1px solid var(--color-background);
-    background-color: var(--color-secondary);
-    overflow: hidden;
-    transform: translateY(-150%);
-    transition: transform 0.5s ease-in-out;
+    border-bottom: 1px solid var(--color-primary);
+    background-color: var(--color-background);
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out;
     z-index: _z-index.z(alpha);
 
     &--open {
@@ -103,6 +101,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
   }
 }
 
@@ -139,33 +141,33 @@
 
 .nav__sub {
   padding-left: _variables.$core-grid;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.3s ease-in-out;
 
   @include _responsive.min(m) {
     position: absolute;
     top: 100%;
     left: 0;
+    display: block;
     min-width: 380px;
     padding: (_variables.$core-grid * 2) (_variables.$core-grid * 2.5);
     background-color: var(--color-background);
     border: 1px solid var(--color-secondary);
-    opacity: 0;
-    visibility: hidden;
 
-    .nav__link--focus + & {
+    .no-js &,
+    .nav__link[aria-expanded='true'] + & {
       opacity: 1;
       visibility: visible;
     }
   }
 
   @media (hover) {
-    .nav__item:hover & {
-      opacity: 1;
-      visibility: visible;
-    }
-  }
+    height: auto;
+    opacity: 0;
+    visibility: hidden;
 
-  @media screen and (min-width: 48em) and (hover: none) and (pointer: coarse) {
-    .nav__link[aria-expanded='true'] + & {
+    .nav__item:hover & {
       opacity: 1;
       visibility: visible;
     }
@@ -174,7 +176,8 @@
 
 .nav__link {
   @include _typography.text(sm);
-  display: block;
+  display: flex;
+  align-items: center;
   padding-top: (_variables.$core-grid / 2);
   padding-bottom: (_variables.$core-grid / 2);
   color: var(--color-primary);
@@ -187,6 +190,26 @@
     padding-top: _variables.$core-grid;
     padding-bottom: _variables.$core-grid;
     font-size: 0.8em;
+  }
+}
+
+.nav__link-icon {
+  flex: 0 0 24px;
+  margin-left: _variables.$core-grid;
+  fill: currentColor;
+  pointer-events: none;
+  transition: transform 0.3s ease-in-out;;
+
+  .nav__link[aria-expanded='true'] & {
+    transform: rotate(180deg);
+  }
+
+  @include _responsive.min(m) {
+    display: none;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
   }
 }
 

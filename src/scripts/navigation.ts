@@ -9,9 +9,16 @@ function Naviagtion(nav: HTMLElement) {
   function toggleSubNav(event: TouchEvent) {
     const target = event.target as HTMLAnchorElement;
     const isExpanded: boolean = target.getAttribute('aria-expanded') === 'true';
+    const navSub = nav.querySelector('[data-sub-nav]') as HTMLUListElement;
+    const navListHeight = navList.scrollHeight;
+    const navSubHeight = navSub.scrollHeight;
+    const position = isExpanded ? navListHeight - navSubHeight : navListHeight + navSubHeight;
 
     event.preventDefault();
+
+    navSub.style.height = `${isExpanded ? '0' : navSubHeight}px`;
     target.setAttribute('aria-expanded', `${!isExpanded}`);
+    pubSub.publish('nav/visibility/changed', position + 1);
   }
 
   function resizeCallback(entries: Array<ResizeObserverEntry>) {
@@ -19,7 +26,7 @@ function Naviagtion(nav: HTMLElement) {
       const width = entry.contentRect.width;
       const navListHasOpenClass = navList.classList.contains('nav__list--open');
 
-      if (width >= 768 && 'ontouchstart' in document.documentElement) {
+      if ('ontouchstart' in document.documentElement) {
         navShopItem.setAttribute('aria-expanded', 'false');
         navShopItem.addEventListener('touchend', toggleSubNav);
       } else {
@@ -45,7 +52,7 @@ function Naviagtion(nav: HTMLElement) {
   function openNav(button: HTMLButtonElement) {
     button.setAttribute('aria-expanded', 'true');
     navList.classList.add('nav__list--open');
-    pubSub.publish('nav/visibility/changed', navList.scrollHeight);
+    pubSub.publish('nav/visibility/changed', navList.scrollHeight + 1);
   }
 
   function handleClickEvent(event: Event) {
