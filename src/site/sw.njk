@@ -4,10 +4,13 @@ permalink: sw.js
 eleventyExcludeFromCollections: true
 ---
 
-const cacheName = 'lunacreates:0002';
+const cacheName = 'lunacreates:0003';
 const cacheFiles = [
-  '/',
-  {% swStyles %}
+    '/',
+    {% swStyles %},
+{% for product in products %}
+    '{{product.slug}}/'{% if not loop.last %},{% endif %}
+{% endfor %}
 ];
 
 self.addEventListener('install', event => {
