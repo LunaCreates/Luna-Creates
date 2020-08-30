@@ -1,0 +1,91 @@
+@use '../settings/variables' as _variables;
+@use '../tools/functions/z-index' as _z-index;
+@use '../tools/mixins/responsive' as _responsive;
+@use '../tools/mixins/typography' as _typography;
+
+.expression {
+  @include _responsive.container;
+  position: relative;
+  margin-top: (_variables.$core-grid * 3);
+  margin-bottom: (_variables.$core-grid * 3);
+
+  @include _responsive.min(m) {
+    margin-top: (_variables.$core-grid * 5);
+    margin-bottom: (_variables.$core-grid * 5);
+  }
+
+  @include _responsive.min(l) {
+    margin-top: (_variables.$core-grid * 7);
+    margin-bottom: (_variables.$core-grid * 7);
+  }
+}
+
+.expression__picture {
+  position: relative;
+  display: block;
+  padding-top: 66.67%;
+
+  @include _responsive.min(s) {
+    padding-top: 50%;
+  }
+}
+
+.expression__image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.expression__container {
+  background-color: var(--color-border);
+
+  @include _responsive.min(l) {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: transparent;
+    transform: translateX(-50%);
+  }
+}
+
+.expression__content {
+  position: relative;
+  top: -(_variables.$core-grid * 2);
+  padding: (_variables.$core-grid * 2);
+  background-color: var(--color-background);
+  text-align: center;
+
+  @include _responsive.min(l) {
+    top: 0;
+    max-width: 350px;
+    padding: (_variables.$core-grid * 2.5);
+  }
+}
+
+.expression__title {
+  @include _typography.text(lg);
+  margin-bottom: _variables.$core-grid;
+  color: var(--color-foreground);
+  font-variation-settings: 'wght' _variables.$core-tertiary-font-weight;
+}
+
+.expression__body {
+  @include _typography.text(xs);
+  margin-bottom: (_variables.$core-grid * 1.5);
+  color: var(--color-foreground);
+  font-variation-settings: 'wght' _variables.$core-font-weight;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
