@@ -24,7 +24,7 @@
 }
 
 .featured__title {
-  @include _typography.text(lg);
+  @include _typography.text(md);
   margin-bottom: (_variables.$core-grid * 1.75);
   font-variation-settings: 'wght' _variables.$core-secondary-font-weight;
   text-align: center;

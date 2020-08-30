@@ -16,7 +16,7 @@ $headings: (
   ),
   lg: (
     font-family: _variables.$core-font-family,
-    font-size: unquote('max(#{_pxToRem.rem(25)}, min(2.344vw, #{_pxToRem.rem(30)}))'),
+    font-size: unquote('max(#{_pxToRem.rem(20)}, min(2.344vw, #{_pxToRem.rem(30)}))'),
     line-height: unquote('max(#{_pxToRem.rem(36)}, min(3.750vw, #{_pxToRem.rem(48)}))')
   ),
   md: (
