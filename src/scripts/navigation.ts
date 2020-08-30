@@ -17,7 +17,7 @@ function Naviagtion(nav: HTMLElement) {
   function resizeCallback(entries: Array<ResizeObserverEntry>) {
     entries.forEach(entry => {
       const width = entry.contentRect.width;
-      const navListHasStyleAttribute = navList.hasAttribute('style');
+      const navListHasOpenClass = navList.classList.contains('nav__list--open');
 
       if (width >= 768 && 'ontouchstart' in document.documentElement) {
         navShopItem.setAttribute('aria-expanded', 'false');
@@ -27,8 +27,8 @@ function Naviagtion(nav: HTMLElement) {
         navShopItem.removeEventListener('touchend', toggleSubNav);
       }
 
-      if (width >= 768 && navListHasStyleAttribute) {
-        navList.removeAttribute('style');
+      if (width >= 768 && navListHasOpenClass) {
+        navList.classList.remove('nav__list--open');
         resiveObserve.unobserve(document.body);
       } else {
         resiveObserve.observe(document.body);
@@ -38,13 +38,13 @@ function Naviagtion(nav: HTMLElement) {
 
   function closeNav(button: HTMLButtonElement) {
     button.setAttribute('aria-expanded', 'false');
-    navList.style.height = '0px';
+    navList.classList.remove('nav__list--open');
     pubSub.publish('nav/visibility/changed', 0);
   }
 
   function openNav(button: HTMLButtonElement) {
     button.setAttribute('aria-expanded', 'true');
-    navList.style.height = `${navList.scrollHeight}px`;
+    navList.classList.add('nav__list--open');
     pubSub.publish('nav/visibility/changed', navList.scrollHeight);
   }
 

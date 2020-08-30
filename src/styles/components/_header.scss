@@ -79,6 +79,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: _z-index.z(beta);
 
   @include _responsive.max(m) {
     .header__top & {
