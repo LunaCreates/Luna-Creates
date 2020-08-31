@@ -22,16 +22,16 @@ function Basket(product: HTMLElement) {
     localStorage.setItem('mapPreviews', JSON.stringify(images));
   }
 
-  function setAttributes(varaint: HTMLOptionElement) {
-    const key = varaint.getAttribute('data-name');
-    const value = varaint.getAttribute('value');
+  function setAttributes(variant: HTMLOptionElement) {
+    const key = variant.getAttribute('data-name');
+    const value = variant.getAttribute('value');
 
     return { key, value };
   }
 
-  function updateBasketButton(varaint: HTMLOptionElement) {
-    const variantId = varaint.getAttribute('data-id');
-    const customAttributes = JSON.stringify(setAttributes(varaint));
+  function updateBasketButton(variant: HTMLOptionElement) {
+    const variantId = variant.getAttribute('data-id');
+    const customAttributes = JSON.stringify(setAttributes(variant));
 
     if (!basketButton || !variantId) return;
 

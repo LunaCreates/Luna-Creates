@@ -1,18 +1,23 @@
 import stateManager from './stateManager';
 
-function Varaints(product: HTMLElement) {
+function variants(product: HTMLElement) {
   function variantChanged(event: Event) {
     const target = event.target as HTMLSelectElement;
     const selected = target.selectedIndex;
     const variant = target[selected];
+    const form = product.querySelector('[data-product-form]') as HTMLFormElement;
+    const variantId = variant.getAttribute('data-id') as string;
 
     stateManager.variantChanged(variant);
+    form?.setAttribute('data-variant-id', variantId);
   }
 
   function init() {
-    const varinats = product.querySelector('[data-product-variants]');
+    const variants = product.querySelector('[data-product-variants]');
 
-    varinats?.addEventListener('change', variantChanged);
+    console.log(product, 'ghfh');
+
+    variants?.addEventListener('change', variantChanged);
   }
 
   return {
@@ -20,4 +25,4 @@ function Varaints(product: HTMLElement) {
   }
 }
 
-export default Varaints;
+export default variants;

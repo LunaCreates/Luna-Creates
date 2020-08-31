@@ -31,6 +31,9 @@ function Cart(form: HTMLFormElement) {
     const total = price * item.quantity;
     const keyMapId = item.variant.attrs.id.value;
 
+    console.log(item, 'renderCartItem');
+
+
     const html = `
       <tr>
         <th class="cart__table-product">
@@ -68,7 +71,7 @@ function Cart(form: HTMLFormElement) {
   function renderKeyMapImages() {
     const images = JSON.parse(localStorage.getItem('mapPreviews') as string);
 
-    if (images.length > 0) {
+    if (images && images.length > 0) {
       return `
         <p class="cart__preview-title">Map preview:</p>
         ${images.map(renderImage).join('')}
@@ -131,17 +134,26 @@ function Cart(form: HTMLFormElement) {
     }
   }
 
+  function removeKeyMapImage(keyMapId: string) {
+    const images = JSON.parse(localStorage.getItem('mapPreviews') as string);
+
+    if (images && images.length > 0) {
+      const newImages = images.filter((image: KeyMapProps) => image.id !== keyMapId);
+
+      localStorage.setItem('mapPreviews', JSON.stringify(newImages));
+    }
+  }
+
   function removeProductItem(target: HTMLButtonElement) {
     const productToRemove: Array<string> = [];
     const productId = target.getAttribute('data-product-id') as string;
     const keyMapId = target.getAttribute('data-key-map-id') as string;
-    const images = JSON.parse(localStorage.getItem('mapPreviews') as string);
-    const newImages = images.filter((image: KeyMapProps) => image.id !== keyMapId);
 
     if (checkoutId === null) return;
 
     productToRemove.push(productId);
-    localStorage.setItem('mapPreviews', JSON.stringify(newImages));
+
+    removeKeyMapImage(keyMapId);
     shopify.checkout.removeLineItems(checkoutId, productToRemove)
       .then(() => window.location.pathname = '/cart/');
   }

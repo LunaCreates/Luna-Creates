@@ -9,10 +9,10 @@ function Price(element: HTMLElement) {
     price.textContent = `£${selectedVariant.price}`;
   }
 
-  function variantChanged(varaint: HTMLOptionElement) {
+  function variantChanged(variant: HTMLOptionElement) {
     const productId = element.getAttribute('data-product-id') as string;
-    const variantName = varaint.getAttribute('data-name') as string;
-    const variantValue: string | null = varaint.textContent;
+    const variantName = variant.getAttribute('data-name') as string;
+    const variantValue: string | null = variant.textContent;
     const options = { [variantName]: variantValue };
 
     shopify.product.fetch(productId)
