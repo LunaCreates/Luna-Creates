@@ -151,9 +151,12 @@
     left: 0;
     display: block;
     min-width: 380px;
+    height: auto;
     padding: (_variables.$core-grid * 2) (_variables.$core-grid * 2.5);
     background-color: var(--color-background);
     border: 1px solid var(--color-secondary);
+    opacity: 0;
+    visibility: hidden;
 
     .no-js &,
     .nav__link[aria-expanded='true'] + & {
@@ -163,10 +166,6 @@
   }
 
   @media (hover) {
-    height: auto;
-    opacity: 0;
-    visibility: hidden;
-
     .nav__item:hover & {
       opacity: 1;
       visibility: visible;
