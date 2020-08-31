@@ -198,7 +198,7 @@
 .product__select,
 .product__input,
 .product__textarea {
-  @include _typography.text(xs);
+  @include _typography.text(sm);
   display: block;
   width: 100%;
   color: var(--color-heading);
