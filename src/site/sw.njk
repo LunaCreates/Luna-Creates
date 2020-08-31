@@ -4,10 +4,8 @@ permalink: sw.js
 eleventyExcludeFromCollections: true
 ---
 
-const cacheName = 'lunacreates:0003';
-const cacheFiles = [
-    '/',
-    {% swStyles %},
+const cacheName = 'lunacreates:0004'; const cacheFiles = [ '/',
+{% swStyles %},
 {% for product in products %}
     '{{product.slug}}/'{% if not loop.last %},{% endif %}
 {% endfor %}
