@@ -2,18 +2,21 @@ const fs = require('fs');
 const formatDate = require('./src/utils/filters/format-date');
 const htmlMin = require('./src/utils/minify-html.js');
 const swStyles = require('./src/utils/filters/sw-styles.js');
+const swScripts = require('./src/utils/filters/sw-scripts.js');
 
 module.exports = config => {
   const prod = process.env.NODE_ENV === 'prod';
 
   config.addFilter('formatDate', formatDate);
   config.addShortcode('swStyles', swStyles);
+  config.addShortcode('swScripts', swScripts);
 
   config.addPassthroughCopy({ 'src/favicons': 'favicons' });
   config.addPassthroughCopy({ 'src/fonts': 'fonts' });
   config.addPassthroughCopy({ 'src/images': 'images' });
   config.addPassthroughCopy({ 'src/site.webmanifest': 'site.webmanifest' });
   config.addPassthroughCopy({ 'src/browserconfig.xml': 'browserconfig.xml' });
+  config.addPassthroughCopy({ 'src/_redirects': '_redirects' });
 
   if (prod) {
     config.addTransform('htmlmin', htmlMin);

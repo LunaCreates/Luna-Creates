@@ -1,0 +1,8 @@
+/collections/all                  /products/                301
+/pages/about-us                   /about-us/                301
+/pages/contact-us                 /contact-us/              301
+/pages/terms-conditions           /returns/                 301
+/pages/privacy-policy             /privacy-policy/          301
+/collections/maps/products/*      /products/:splat          301
+/collections/all/products/*       /products/:splat          301
+/collections/all/products/        /products/                301

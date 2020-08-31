@@ -8,7 +8,7 @@ const token = process.env.STOREFRONT_API_TOKEN;
 
 async function privacyData() {
   const data = await Cache(`${process.env.STOREFRONT_API_URL}?privacy`, {
-    duration: '1s',
+    duration: '1d',
     type: 'json',
     fetchOptions: {
       method: 'POST',

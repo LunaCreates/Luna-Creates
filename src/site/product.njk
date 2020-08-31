@@ -5,13 +5,14 @@ pagination:
     alias: product
     addAllPagesToCollections: true
 renderData:
-  title: "{{product.title}}"
+    title: "{{product.title}}"
+    description: "{{product.metaDescription}}"
 permalink: "/{{product.slug}}/"
 layout: _layouts/default
 tags: product
 sitemap:
-  changefreq: daily
-  priority: 1
+    changefreq: daily
+    priority: 1
 ---
 
 <main class="product product--container" aria-describedby="product-title" data-component="product-details" data-product-id="{{product.id}}" data-product-color="{{product.color}}" id="main">

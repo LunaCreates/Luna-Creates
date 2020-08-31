@@ -28,7 +28,7 @@ function Bundle() {
       output: path.join(__dirname, 'src', 'cache-manifest.json')
     }),
     new MiniCssExtractPlugin({
-      filename: 'css/main.css'
+      filename: 'css/main.css?cb=[chunkhash]'
     }),
     new HtmlWebpackPlugin({
       inject: false,

@@ -56,6 +56,14 @@ async function allProductsData() {
                     }
                   }
                 }
+                metafields(first: 1, namespace: "global") {
+                  edges {
+                    node {
+                      key
+                      value
+                    }
+                  }
+                }
               }
             }
           }
@@ -96,6 +104,14 @@ async function allProductsData() {
     }
   }
 
+  function formatMetaDescription(edge) {
+    if (edge.length > 0) {
+      return edge[0].node.value;
+    }
+
+    return '';
+  }
+
   // format products objects
   const productsFormatted = products.map(item => {
     const color = getColorFromTags(item.tags);
@@ -103,6 +119,7 @@ async function allProductsData() {
     const images = item.images.edges.map(formatProductImages);
     const price = item.priceRange.minVariantPrice.amount;
     const currency = item.priceRange.minVariantPrice.currencyCode;
+    const metaDescription = formatMetaDescription(item.metafields.edges);
 
     return {
       id: item.id,
@@ -117,7 +134,8 @@ async function allProductsData() {
       mainImage: item.images.edges[0].node.originalSrc.split('.jpg')[0],
       thumbnails: images,
       price: new Intl.NumberFormat('en-GB', { style: 'currency', currency: currency }).format(price),
-      priceSchema: parseFloat(price).toFixed(2)
+      priceSchema: parseFloat(price).toFixed(2),
+      metaDescription
     };
   });
 

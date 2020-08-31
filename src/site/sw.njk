@@ -4,10 +4,20 @@ permalink: sw.js
 eleventyExcludeFromCollections: true
 ---
 
-const cacheName = 'lunacreates:0005'; const cacheFiles = [ '/',
-{% swStyles %},
+const cacheName = 'lunacreates:0008';
+const cacheFiles = [
+  '/',
+  '/cart/',
+  '/faqs/',
+  '/contact-us/',
+  '/about-us/',
+  '/images/logo.svg',
+  '/fonts/avenir-next-variable.woff2',
+  '/icons/sprite.svg',
+  {% swStyles %},
+  {% swScripts %},
 {% for product in products %}
-    '{{product.slug}}/'{% if not loop.last %},{% endif %}
+  '{{product.slug}}/'{% if not loop.last %},{% endif %}
 {% endfor %}
 ];
 
