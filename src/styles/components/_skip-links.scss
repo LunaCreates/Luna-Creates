@@ -48,8 +48,4 @@
     width: auto;
     transform: translateY(-50%);
   }
-
-  @media screen and (min-width: 72.25em) {
-    left: calc((100vw - 1140px) / 2 + 5vw);
-  }
 }

@@ -310,6 +310,11 @@
 .product__description {
   margin-top: (_variables.$core-grid * 2);
 
+  a {
+    color: var(--color-foreground);
+    text-decoration: underline;
+  }
+
   @include _responsive.min(m) {
     margin-top: (_variables.$core-grid * 3.5);
   }
