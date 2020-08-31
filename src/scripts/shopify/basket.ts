@@ -1,19 +1,24 @@
 import pubSub from '../modules/pubSub';
 import shopify from '../modules/shopify';
 
+export type KeyMapProps = {
+  id: string,
+  image: string
+}
+
 function Basket(product: HTMLElement) {
   const checkoutId = localStorage.getItem('shopify_checkout_id');
   const basketButton = product.querySelector('[data-add-to-basket]');
 
-  function storePreviewImages() {
+  function storePreviewImages(id: string | null) {
     const image: HTMLImageElement | null = product.querySelector('[data-key-map] img');
 
-    if (image === null) return;
+    if (image === null || id === null) return;
 
     const localImages = localStorage.getItem('mapPreviews');
-    const images: Array<string> = localImages === null ? [] : JSON.parse(localImages);
+    const images: KeyMapProps[] = localImages === null ? [] : JSON.parse(localImages);
 
-    images.push(image.src);
+    images.push({ id, image: image.src });
     localStorage.setItem('mapPreviews', JSON.stringify(images));
   }
 
@@ -37,7 +42,7 @@ function Basket(product: HTMLElement) {
   function updateBasket(event: Event) {
     if (!(event.target instanceof HTMLAnchorElement) || !checkoutId || !basketButton) return;
 
-    const id = event.target.getAttribute('data-variant-id');
+    const id: string | null = event.target.getAttribute('data-variant-id');
     const attributes = event.target.getAttribute('data-variant-options');
     const lineItemsToAdd: any = [
       {
@@ -49,7 +54,7 @@ function Basket(product: HTMLElement) {
 
     event.preventDefault();
 
-    storePreviewImages();
+    storePreviewImages(id);
 
     shopify.checkout.addLineItems(checkoutId, lineItemsToAdd)
       .then(() => window.location.pathname = '/cart/');

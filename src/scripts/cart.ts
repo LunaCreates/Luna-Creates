@@ -1,4 +1,5 @@
 import shopify from './modules/shopify';
+import { KeyMapProps } from './shopify/basket'
 
 type ImageTypes = {
   src: string,
@@ -28,6 +29,7 @@ function Cart(form: HTMLFormElement) {
     const options = attrs ? item.customAttributes[0].attrs : '';
     const price = parseInt(item.variant.priceV2.amount, 10);
     const total = price * item.quantity;
+    const keyMapId = item.variant.attrs.id.value;
 
     const html = `
       <tr>
@@ -47,7 +49,7 @@ function Cart(form: HTMLFormElement) {
         </td>
         <td>&pound;${total.toFixed(2)}</td>
         <td>
-          <button class="cart__remove" type="button" aria-label="Remove item" data-product-id="${item.id}">
+          <button class="cart__remove" type="button" aria-label="Remove item" data-product-id="${item.id}" data-key-map-id="${keyMapId}">
             <svg class="cart__icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
               <path d="M4 10v20c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V10H4zm6 18H8V14h2v14zm4 0h-2V14h2v14zm4 0h-2V14h2v14zm4 0h-2V14h2v14zM26.5 4H20V1.5c0-.825-.675-1.5-1.5-1.5h-7c-.825 0-1.5.675-1.5 1.5V4H3.5C2.675 4 2 4.675 2 5.5V8h26V5.5c0-.825-.675-1.5-1.5-1.5zM18 4h-6V2.025h6V4z"/>
             </svg>
@@ -59,21 +61,21 @@ function Cart(form: HTMLFormElement) {
     return html;
   }
 
-  function renderImage(image: string) {
-    return `<img src="${image}" class="cart__preview-image" role="presentation" />`
+  function renderImage(image: KeyMapProps) {
+    return `<img src="${image.image}" class="cart__preview-image" role="presentation" data-image-id="${image.id}" />`
   }
 
   function renderKeyMapImages() {
     const images = JSON.parse(localStorage.getItem('mapPreviews') as string);
 
-    console.log(images, 'jgigfij');
-
-    if (images && images.length > 0) {
+    if (images.length > 0) {
       return `
         <p class="cart__preview-title">Map preview:</p>
         ${images.map(renderImage).join('')}
       `;
     }
+
+    return ''
   }
 
   function renderTableData(checkout: Checkout) {
@@ -132,11 +134,14 @@ function Cart(form: HTMLFormElement) {
   function removeProductItem(target: HTMLButtonElement) {
     const productToRemove: Array<string> = [];
     const productId = target.getAttribute('data-product-id') as string;
-
-    productToRemove.push(productId);
+    const keyMapId = target.getAttribute('data-key-map-id') as string;
+    const images = JSON.parse(localStorage.getItem('mapPreviews') as string);
+    const newImages = images.filter((image: KeyMapProps) => image.id !== keyMapId);
 
     if (checkoutId === null) return;
 
+    productToRemove.push(productId);
+    localStorage.setItem('mapPreviews', JSON.stringify(newImages));
     shopify.checkout.removeLineItems(checkoutId, productToRemove)
       .then(() => window.location.pathname = '/cart/');
   }
@@ -163,7 +168,7 @@ function Cart(form: HTMLFormElement) {
 
     event.preventDefault();
 
-    if (checkoutId === null) return;
+    if (checkoutId === null) return renderNoItemsData();
 
     shopify.checkout.updateLineItems(checkoutId, items)
       .then(() => window.location.pathname = '/cart/');
