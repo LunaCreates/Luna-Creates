@@ -20,8 +20,6 @@ exports.handler = async (event, context, callback) => {
     const data = items.map(item => item.properties.map(buildData));
     const result = JSON.stringify({ line_items: [{ properties: data[0] }] });
 
-    console.log(result, 'data');
-
     await fetch('https://api.pinmaps.co.uk/generate', {
       method: 'POST',
       headers: { 'Content-type': 'application/json' },
