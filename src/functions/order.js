@@ -18,7 +18,7 @@ exports.handler = async (event, context, callback) => {
 
   if (isMap) {
     const data = items.map(item => item.properties.map(buildData));
-    const result = JSON.stringify({ line_items: [{ properties: data }] });
+    const result = JSON.stringify({ line_items: [{ properties: data[0] }] });
 
     console.log(result, 'data');
 
