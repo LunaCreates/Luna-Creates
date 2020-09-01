@@ -13,13 +13,14 @@ exports.handler = async (event, context, callback) => {
 
   if (isMap) {
     const data = items.map(item => item.properties.map(item => JSON.parse(item.value)));
+    const result = JSON.stringify({ line_items: [{ properties: data }] });
 
-    console.log(JSON.stringify({ line_items: data }), 'data');
+    console.log(result, 'data');
 
     await fetch('https://api.pinmaps.co.uk/generate', {
       method: 'POST',
       headers: { 'Content-type': 'application/json' },
-      body: JSON.stringify({ line_items: data })
+      body: result
     })
     .catch(error => console.error(error))
   }
