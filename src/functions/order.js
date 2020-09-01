@@ -14,7 +14,7 @@ exports.handler = async (event, context, callback) => {
   if (isMap) {
     const data = items.map(item => item.properties.map(item => JSON.parse(item.value)));
 
-    console.log(data, 'data');
+    console.log(JSON.stringify({ line_items: data }), 'data');
 
     await fetch('https://api.pinmaps.co.uk/generate', {
       method: 'POST',
