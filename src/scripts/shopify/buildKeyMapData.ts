@@ -23,6 +23,24 @@ async function renderKeyMap(keyMapData: Object) {
   }
 }
 
+function buildPropertyData(product: HTMLElement, keyMapData: any) {
+  const basketButton = product.querySelector('[data-add-to-basket]');
+  const labels = { ...keyMapData.labels };
+  const propertyData = {
+    title: keyMapData.title,
+    frameSize: keyMapData.frameSize,
+    labels,
+    type: keyMapData.type
+  }
+
+  if (basketButton === null) return;
+
+  const value = JSON.stringify(propertyData)
+  const customAttributes = JSON.stringify({ key: 'map', value });
+
+  basketButton.setAttribute('data-variant-options', customAttributes);
+}
+
 function buildLabelsData(color: FormDataEntryValue, keys: Array<FormDataEntryValue>, showKeyText: string, index: number) {
   if (showKeyText === 'no') {
     return {
@@ -44,16 +62,20 @@ function buildKeyMapData(product: HTMLElement, formdata: FormData) {
   const colors = formdata.getAll('colors').filter(color => color !== 'none');
   const showKeyText = formdata.get('show key text') as string;
   const keys = formdata.getAll('key');
-  const labels = colors.map((color, index) => buildLabelsData(color, keys, showKeyText, index));
+  const labels = colors
+    .map((color, index) => buildLabelsData(color, keys, showKeyText, index))
+    .filter(label => label.color !== '');
+
 
   const keyMapData = {
-    type,
     title,
     frameSize: size === 'x-large' ? 'extraLarge' : size,
-    labels
+    labels,
+    type
   }
 
   renderKeyMap(keyMapData);
+  buildPropertyData(product, keyMapData);
   stateManager.showKeyMapModal();
 }
 
