@@ -1,5 +1,7 @@
+const fetch = require('node-fetch');
+
 function containsMap(item) {
-  return item.name === 'map'
+  return item.name === 'map';
 }
 
 exports.handler = async (event, context, callback) => {
@@ -14,7 +16,7 @@ exports.handler = async (event, context, callback) => {
 
     console.log(data, 'data');
 
-    fetch('https://api.pinmaps.co.uk/generate', {
+    await fetch('https://api.pinmaps.co.uk/generate', {
       method: 'POST',
       headers: { 'Content-type': 'application/json' },
       body: JSON.stringify({ line_items: data })
