@@ -1,5 +1,6 @@
 @use '../settings/variables' as _variables;
 @use '../tools/functions/z-index' as _z-index;
+@use '../tools/mixins/picture' as _picture;
 @use '../tools/mixins/responsive' as _responsive;
 @use '../tools/mixins/typography' as _typography;
 
@@ -20,10 +21,8 @@
 }
 
 .hero__picture {
-  position: relative;
-  display: block;
+  @include _picture.picture;
   padding-top: 65%;
-  background-color: var(--color-fade);
 
   @include _responsive.min(m) {
     padding-top: 25%;
@@ -31,38 +30,17 @@
 }
 
 .hero__image {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  height: 100%;
-  object-fit: cover;
   object-position: right;
 }
 
 .hero__container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  z-index: _z-index.z(beta);
   text-align: center;
-
-  .hero:not(.hero--home) & {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    transform: translate(-50%, -50%);
-    z-index: _z-index.z(beta);
-  }
-
-  .hero--home & {
-    padding-top: (_variables.$core-grid * 3);
-    padding-bottom: (_variables.$core-grid * 3);
-    text-align: center;
-
-    @include _responsive.min(m) {
-      padding-top: (_variables.$core-grid * 4);
-      padding-bottom: (_variables.$core-grid * 4);
-    }
-  }
 }
 
 .hero__title {

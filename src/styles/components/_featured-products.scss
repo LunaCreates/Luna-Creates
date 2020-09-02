@@ -1,5 +1,6 @@
 @use '../settings/variables' as _variables;
 @use '../tools/mixins/buttons' as _buttons;
+@use '../tools/mixins/picture' as _picture;
 @use '../tools/mixins/responsive' as _responsive;
 @use '../tools/mixins/typography' as _typography;
 
@@ -57,21 +58,12 @@
 }
 
 .featured__picture {
-  display: block;
-  position: relative;
+  @include _picture.picture;
   padding-top: 100%;
-  background-color: var(--color-fade);
   overflow: hidden;
 }
 
 .featured__image {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  height: 100%;
-  object-fit: cover;
   backface-visibility: hidden;
   transform: translateZ(0);
 

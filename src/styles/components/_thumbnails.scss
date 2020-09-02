@@ -1,0 +1,58 @@
+@use '../settings/variables' as _variables;
+@use '../tools/mixins/picture' as _picture;
+@use '../tools/mixins/responsive' as _responsive;
+
+.thumbnails {
+  display: flex;
+  flex-wrap: nowrap;
+  margin-top: (_variables.$core-grid * 1.5);
+  scroll-snap-type: x mandatory;
+  overflow-x: auto;
+}
+
+.thumbnails__thumbnail {
+  width: calc(25% - #{_variables.$core-grid * 2});
+  max-width: 60px;
+  margin-right: _variables.$core-grid;
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+
+  .glide__track & {
+    width: auto;
+    max-width: initial;
+  }
+
+  @include _responsive.min(m) {
+    max-width: 100px;
+    margin-right: (_variables.$core-grid * 1.5);
+  }
+}
+
+.thumbnails__link {
+  display: block;
+  border: 2px solid transparent;
+  opacity: 0.65;
+  transition: opacity 0.3s ease-in-out, border-color 0.3s ease-in-out;
+
+  @media (hover) {
+    &:hover {
+      border-color: var(--color-primary);
+      opacity: 1;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+  }
+}
+
+.thumbnails__link--active {
+  border-color: var(--color-primary);
+  opacity: 1;
+}
+
+.thumbnails__picture {
+  @include _picture.picture;
+  padding-top: 100%;
+  pointer-events: none;
+}

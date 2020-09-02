@@ -1,5 +1,6 @@
 @use '../settings/variables' as _variables;
 @use '../tools/mixins/buttons' as _buttons;
+@use '../tools/mixins/picture' as _picture;
 @use '../tools/mixins/responsive' as _responsive;
 @use '../tools/mixins/skeleton' as _skeleton;
 @use '../tools/mixins/typography' as _typography;
@@ -100,8 +101,7 @@
 
 .cart__picture {
   @include _skeleton.skeleton;
-  position: relative;
-  display: block;
+  @include _picture.picture;
   width: 70px;
   height: 70px;
   margin-right: _variables.$core-grid;
@@ -110,18 +110,9 @@
   @include _responsive.min(m) {
     width: 100px;
     height: 100px;
+    flex-basis: 100px;
     margin-right: (_variables.$core-grid * 2);
-    flex: 0 0 100px;
   }
-}
-
-.cart__image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 
 .cart__table-title--skeleton,
