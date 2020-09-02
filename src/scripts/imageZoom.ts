@@ -104,6 +104,8 @@ function ImageZoom(element: HTMLElement) {
     const posX = event.changedTouches[0].pageX;
     const posY = event.changedTouches[0].pageY;
 
+    magnified.style.display = 'block';
+
     handleStart(posX, posY);
   }
 
