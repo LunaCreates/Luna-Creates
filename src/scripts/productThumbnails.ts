@@ -8,12 +8,12 @@ function ProductThumbnails(element: HTMLElement) {
   }
 
   function setActiveThumbnail(link: HTMLAnchorElement) {
-    const currentActiveLink: HTMLAnchorElement | null = element.querySelector('.product__thumbnail-link--active');
+    const currentActiveLink: HTMLAnchorElement | null = element.querySelector('.thumbnails__link--active');
 
     if (currentActiveLink === null) return;
 
-    currentActiveLink.classList.remove('product__thumbnail-link--active');
-    link.classList.add('product__thumbnail-link--active');
+    currentActiveLink.classList.remove('thumbnails__link--active');
+    link.classList.add('thumbnails__link--active');
   }
 
   function handleClickEvent(event: Event) {
