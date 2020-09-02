@@ -86,6 +86,8 @@ function ImageZoom(element: HTMLElement) {
     const posX = event.pageX;
     const posY = event.pageY;
 
+    magnified.style.display = 'block';
+
     handleStart(posX, posY);
   }
 
