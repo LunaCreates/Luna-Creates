@@ -48,7 +48,7 @@
 <ul class="thumbnails__thumbnails" data-component="product-thumbnails">
     {% for thumbnail in product.thumbnails %}
         <li class="thumbnails__thumbnail">
-            <a href="{{thumbnail.image}}.jpg" class="thumbnails__link {% if loop.first %}thumbnails__link--active{% endif %}" data-thumbnail-link>Thumbnail item {{loop.index}}</a>
+            <a href="{{thumbnail.image}}.jpg" class="thumbnails__link {% if loop.first %}thumbnails__link--active{% endif %}" data-thumbnail-link>Thumbnail item {{loop.index + 1}}</a>
             <picture class="thumbnails__picture">
                 <source media="(max-width: 37.4375em)" type="image/webp" data-srcset="{{thumbnail.image}}_75x75.jpg.webp 1x, {{thumbnail.image}}_100x100.jpg.webp 2x" data-main-image="{{thumbnail.image}}_100x100.jpg.webp 1x, {{thumbnail.image}}_200x200.jpg.webp 2x">
 
