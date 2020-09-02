@@ -118,7 +118,7 @@ function ImageZoom(element: HTMLElement) {
   }
 
   function changeImageZoomSrc(picture: HTMLPictureElement) {
-    const image = picture.querySelector('img')?.srcset.split('_300x300');
+    const image = picture.querySelector('img')?.srcset.split('_75x75');
 
     if (!image || !magnified) return;
 
