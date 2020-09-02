@@ -2,7 +2,7 @@ import pubSub from './modules/pubSub';
 
 function ProductThumbnails(element: HTMLElement) {
   function sendPubSubMessage(element: HTMLAnchorElement) {
-    const picture = element.querySelector('picture') as HTMLPictureElement;
+    const picture = element.nextElementSibling as HTMLPictureElement;
 
     pubSub.publish('main/product/image/changed', picture);
   }

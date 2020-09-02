@@ -15,8 +15,6 @@ function variants(product: HTMLElement) {
   function init() {
     const variants = product.querySelector('[data-product-variants]');
 
-    console.log(product, 'ghfh');
-
     variants?.addEventListener('change', variantChanged);
   }
 

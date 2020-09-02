@@ -27,8 +27,11 @@ function ProductMainImage(picture: HTMLPictureElement) {
   }
 
   function changeMainProductImage(element: HTMLPictureElement) {
-    const elementImage: HTMLImageElement | null = element.querySelector('img');
+
+    const elementImage: HTMLImageElement | null = element.querySelector('[data-component="product-thumbnails"] img');
     const imagePath: string | null | undefined = elementImage?.getAttribute('data-srcset');
+
+    console.log(elementImage, 'element');
 
     if (image && imagePath) {
       sources.forEach(source => changeSource(source, imagePath));

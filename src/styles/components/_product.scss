@@ -37,13 +37,9 @@
 }
 
 .product__picture {
-  display: block;
-  background-color: var(--color-fade);
+  @include _picture.picture;
+  padding-top: 100%;
   pointer-events: none;
-}
-
-.product__image {
-  height: 100%;
 }
 
 .product__image-zoom {
