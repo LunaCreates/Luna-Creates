@@ -7,14 +7,13 @@
                 <a href="{{thumbnail.image}}.jpg" class="thumbnails__link {% if loop.first %}thumbnails__link--active{% endif %}" data-thumbnail-link>Thumbnail item {{loop.index}}</a>
 
                 <picture class="thumbnails__picture">
-                    <source media="(max-width: 37.4375em)" type="image/webp" data-srcset="{{thumbnail.image}}_75x75.jpg.webp 1x, {{thumbnail.image}}_100x100.jpg.webp 2x">
+                    <source media="(max-width: 37.4375em)" type="image/webp" data-srcset="{{thumbnail.image}}_75x75.jpg.webp 1x, {{thumbnail.image}}_100x100.jpg.webp 2x" data-main-image="{{thumbnail.image}}_100x100.jpg.webp 1x, {{thumbnail.image}}_200x200.jpg.webp 2x">
 
-                    <source media="(max-width: 37.4375em)" data-srcset="{{thumbnail.image}}_75x75.jpg 1x, {{thumbnail.image}}_100x100.jpg 2x">
+                    <source media="(max-width: 37.4375em)" data-srcset="{{thumbnail.image}}_75x75.jpg 1x, {{thumbnail.image}}_100x100.jpg 2x" data-main-image="{{thumbnail.image}}_100x100.jpg 1x, {{thumbnail.image}}_200x200.jpg 2x">
 
-                    <source type="image/webp" data-srcset="{{thumbnail.image}}_75x75.jpg.webp 1x, {{thumbnail.image}}_150x150.jpg.webp 2x">
+                    <source type="image/webp" data-srcset="{{thumbnail.image}}_75x75.jpg.webp 1x, {{thumbnail.image}}_150x150.jpg.webp 2x" data-main-image="{{thumbnail.image}}_300x300.jpg.webp 1x, {{thumbnail.image}}_450x450.jpg.webp 2x">
 
-                    <img class="thumbnails__image lazyload" data-srcset="{{thumbnail.image}}_75x75.jpg 1x, {{thumbnail.image}}_150x150.jpg 2x" alt="Wedding Table Plan" loading="lazy" width="100" height="100">
-
+                    <img class="thumbnails__image lazyload" data-srcset="{{thumbnail.image}}_75x75.jpg 1x, {{thumbnail.image}}_150x150.jpg 2x" data-main-image="{{thumbnail.image}}_300x300.jpg 1x, {{thumbnail.image}}_450x450.jpg 2x" alt="Wedding Table Plan" loading="lazy" width="100" height="100">
 
                     <noscript>
                         <source media="(max-width: 37.4375em)" type="image/webp" srcset="{{thumbnail.image}}_75x75.jpg.webp 1x, {{thumbnail.image}}_100x100.jpg.webp 2x">
@@ -51,13 +50,13 @@
         <li class="thumbnails__thumbnail">
             <a href="{{thumbnail.image}}.jpg" class="thumbnails__link {% if loop.first %}thumbnails__link--active{% endif %}" data-thumbnail-link>Thumbnail item {{loop.index}}</a>
             <picture class="thumbnails__picture">
-                <source media="(max-width: 37.4375em)" type="image/webp" data-srcset="{{thumbnail.image}}_75x75.jpg.webp 1x, {{thumbnail.image}}_100x100.jpg.webp 2x">
+                <source media="(max-width: 37.4375em)" type="image/webp" data-srcset="{{thumbnail.image}}_75x75.jpg.webp 1x, {{thumbnail.image}}_100x100.jpg.webp 2x" data-main-image="{{thumbnail.image}}_100x100.jpg.webp 1x, {{thumbnail.image}}_200x200.jpg.webp 2x">
 
-                <source media="(max-width: 37.4375em)" data-srcset="{{thumbnail.image}}_75x75.jpg 1x, {{thumbnail.image}}_100x100.jpg 2x">
+                <source media="(max-width: 37.4375em)" data-srcset="{{thumbnail.image}}_75x75.jpg 1x, {{thumbnail.image}}_100x100.jpg 2x" data-main-image="{{thumbnail.image}}_100x100.jpg 1x, {{thumbnail.image}}_200x200.jpg 2x">
 
-                <source type="image/webp" data-srcset="{{thumbnail.image}}_75x75.jpg.webp 1x, {{thumbnail.image}}_150x150.jpg.webp 2x">
+                <source type="image/webp" data-srcset="{{thumbnail.image}}_75x75.jpg.webp 1x, {{thumbnail.image}}_150x150.jpg.webp 2x" data-main-image="{{thumbnail.image}}_300x300.jpg.webp 1x, {{thumbnail.image}}_450x450.jpg.webp 2x">
 
-                <img class="thumbnails__image lazyload" data-srcset="{{thumbnail.image}}_75x75.jpg 1x, {{thumbnail.image}}_150x150.jpg 2x" alt="Wedding Table Plan" loading="lazy" width="100" height="100">
+                <img class="thumbnails__image lazyload" data-srcset="{{thumbnail.image}}_75x75.jpg 1x, {{thumbnail.image}}_150x150.jpg 2x" data-main-image="{{thumbnail.image}}_300x300.jpg 1x, {{thumbnail.image}}_450x450.jpg 2x" alt="Wedding Table Plan" loading="lazy" width="100" height="100">
 
                 <noscript>
                     <source media="(max-width: 37.4375em)" type="image/webp" srcset="{{thumbnail.image}}_75x75.jpg.webp 1x, {{thumbnail.image}}_100x100.jpg.webp 2x">

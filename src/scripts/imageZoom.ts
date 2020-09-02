@@ -113,8 +113,8 @@ function ImageZoom(element: HTMLElement) {
     element.addEventListener('mouseup', handleMoveEnd, { passive: true });
 
     element.addEventListener('touchmove', handleTouchMove);
-    element.addEventListener('touchstart', handleTouchStart);
-    element.addEventListener('touchend', handleMoveEnd);
+    element.addEventListener('touchstart', handleTouchStart, { passive: true });
+    element.addEventListener('touchend', handleMoveEnd, { passive: true });
   }
 
   function changeImageZoomSrc(picture: HTMLPictureElement) {
