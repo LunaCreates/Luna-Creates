@@ -107,8 +107,8 @@ function ImageZoom(element: HTMLElement) {
 
   function addEventListeners() {
     element.addEventListener('mousemove', handleMouseMove);
-    element.addEventListener('mousedown', handleMouseStart);
-    element.addEventListener('mouseup', handleMoveEnd);
+    element.addEventListener('mousedown', handleMouseStart, { passive: true });
+    element.addEventListener('mouseup', handleMoveEnd, { passive: true });
 
     element.addEventListener('touchmove', handleTouchMove);
     element.addEventListener('touchstart', handleTouchStart);
