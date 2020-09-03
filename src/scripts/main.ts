@@ -97,7 +97,7 @@ observe((element: HTMLElement) => {
   import(/* webpackChunkName: "image-zoom" */ 'Src/scripts/imageZoom')
     .then(module => initModule(module, element))
     .catch(err => console.error(`Error in: Image Zoom - ${err}`));
-}, document.querySelectorAll('[data-component="product-image-zoom"]'));
+}, document.querySelectorAll('[data-component="product-details"]'));
 
 /** *****
  *
