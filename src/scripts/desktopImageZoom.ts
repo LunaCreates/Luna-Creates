@@ -1,9 +1,9 @@
 import pubSub from './modules/pubSub';
 
-function DesktopImageZoom(modal: HTMLElement) {
-  const picture: HTMLElement | null = modal.querySelector('[data-product-picture]');
-  const original = modal.querySelector('[data-product-image]') as HTMLElement;
-  const magnified = modal.querySelector('[data-image-zoom]') as HTMLElement;
+function ImageZoom(element: HTMLElement) {
+  const picture: HTMLElement | null = element.querySelector('[data-product-picture]');
+  const original = element.querySelector('[data-product-image]') as HTMLElement;
+  const magnified = element.querySelector('[data-image-zoom]') as HTMLElement;
   let isActive = false;
 
   function setImageZoomSize() {
@@ -125,4 +125,4 @@ function DesktopImageZoom(modal: HTMLElement) {
   }
 }
 
-export default DesktopImageZoom;
+export default ImageZoom;
