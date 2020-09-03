@@ -4,11 +4,15 @@ function KeyMap(product: HTMLElement) {
   const modal: HTMLDialogElement | null = product.querySelector('[data-key-map-modal]');
   const keyMapContainer: HTMLElement | null = product.querySelector('[data-key-map]');
 
-  function showKeyMapModal() {
-    const basketButton: HTMLButtonElement = modal?.querySelector('[data-add-to-basket]') as HTMLButtonElement;
+  function showKeyMapModal(module: any, currentTarget: HTMLButtonElement) {
+    const keyMapModal = module.default;
 
-    modal?.removeAttribute('hidden');
-    basketButton.focus();
+    keyMapModal(modal).openModal(currentTarget);
+  }
+
+  function handleKeyMapModal(target: HTMLButtonElement) {
+    import('../modules/modal')
+      .then(module => showKeyMapModal(module, target));
   }
 
   function renderKeyMapImage(keyMap: string) {
@@ -18,34 +22,18 @@ function KeyMap(product: HTMLElement) {
     keyMapContainer?.insertAdjacentHTML('afterbegin', keyMapImage);
   }
 
-  function closeModal() {
-    if (!keyMapContainer) return;
+  function resetKeyMapContainer() {
+    if (!keyMapContainer) return
 
-    modal?.setAttribute('hidden', '');
-    keyMapContainer?.classList.remove('modal__key-map--active');
+    keyMapContainer.classList.remove('modal__key-map--active');
     keyMapContainer.innerHTML = '';
-  }
-
-  function handleClickEvent(event: Event) {
-    if (!(event.target instanceof HTMLButtonElement)) return;
-
-    if (event.target.hasAttribute('data-close-modal')) {
-      closeModal();
-    }
-  }
-
-  function handleKeyUpEvent(event: KeyboardEvent) {
-    if (event.key === 'Escape') {
-      closeModal();
-    }
   }
 
   function init() {
     if (modal && keyMapContainer) {
-      pubSub.subscribe('show/key/map/modal', showKeyMapModal);
+      pubSub.subscribe('show/key/map/modal', handleKeyMapModal);
       pubSub.subscribe('key/map/created', renderKeyMapImage);
-      modal.addEventListener('click', handleClickEvent);
-      modal.addEventListener('keyup', handleKeyUpEvent);
+      pubSub.subscribe('modal/closed', resetKeyMapContainer);
     }
   }
 

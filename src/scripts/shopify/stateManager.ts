@@ -5,8 +5,8 @@ function StateManager() {
     punSub.publish('variant/changed', variant);
   }
 
-  function showKeyMapModal() {
-    punSub.publish('show/key/map/modal', true);
+  function showKeyMapModal(target: HTMLButtonElement) {
+    punSub.publish('show/key/map/modal', target);
   }
 
   function keyMapCreated(keyMapImage: string) {

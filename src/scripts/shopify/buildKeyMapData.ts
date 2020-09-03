@@ -55,7 +55,7 @@ function buildLabelsData(color: FormDataEntryValue, keys: Array<FormDataEntryVal
   }
 }
 
-function buildKeyMapData(product: HTMLElement, formdata: FormData) {
+function buildKeyMapData(product: HTMLElement, formdata: FormData, target: HTMLButtonElement | null) {
   const type = product.getAttribute('data-product-color');
   const size = formdata.get('size')?.toString().split(' (')[0].toLowerCase();
   const title = formdata.get('title');
@@ -76,7 +76,7 @@ function buildKeyMapData(product: HTMLElement, formdata: FormData) {
 
   renderKeyMap(keyMapData);
   buildPropertyData(product, keyMapData);
-  stateManager.showKeyMapModal();
+  stateManager.showKeyMapModal(target as HTMLButtonElement);
 }
 
 export default buildKeyMapData;

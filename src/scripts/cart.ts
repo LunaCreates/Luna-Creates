@@ -40,7 +40,6 @@ function Cart(form: HTMLFormElement) {
           ${buildImage(item.variant.image)}
           <div class="cart__table-content">
             <span class="cart__table-title">${item.title}</span>
-            ${options !== '' ? `<small class="cart__table-options">${options.key.value}: ${options.value.value}</small>` : ''}
           </div>
         </th>
         <td>&pound;${price.toFixed(2)}</td>
