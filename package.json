@@ -6,7 +6,7 @@
   "author": {
     "name": "Alex Clapperton",
     "email": "hi@alexclapperton.co.uk",
-    "url": "https://lunacreates.co.uk/"
+    "url": "https://www.alexclapperton.co.uk/"
   },
   "license": "ISC",
   "repository": {
@@ -34,6 +34,7 @@
     "html-minifier": "^4.0.0",
     "lazysizes": "^5.2.2",
     "node-fetch": "^2.6.0",
+    "pinch-zoom-js": "^2.3.4",
     "sass": "^1.26.10",
     "shopify-buy": "^2.11.0"
   },
