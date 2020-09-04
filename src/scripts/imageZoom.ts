@@ -12,29 +12,34 @@ function ImageZoom(product: HTMLElement) {
     imageZoomModal(modal).openModal(button);
   }
 
+  function runTouchImageZoom(module: any) {
+    const touchImageZoom = module.default;
+    const picture = modal?.querySelector('[data-product-picture]') as HTMLElement;
+    const pictureParent = picture.parentNode as HTMLElement;
+
+    if (pictureParent.classList.contains('pinch-zoom-container')) return;
+
+    const instance = new touchImageZoom(picture);
+
+    return instance;
+  }
+
   function runDesktopImageZoom(module: any) {
     const desktopImageZoom = module.default;
 
     desktopImageZoom(modal).init();
   }
 
-  function handleResizeEntry(entry: ResizeObserverEntry) {
+  function handleImageZoom() {
     const isTouchDevice = 'ontouchstart' in document.documentElement;
+    const zoom = modal?.querySelector('[data-modal-zoom]') as HTMLElement;
 
     if (isTouchDevice) {
-      console.log('Touch device');
+      zoom.style.paddingTop = '0';
+      import('pinch-zoom-js').then(runTouchImageZoom);
     } else {
       import('./desktopImageZoom').then(runDesktopImageZoom);
     }
-  }
-
-  function resizeCallback(entries: Array<ResizeObserverEntry>) {
-    entries.forEach(handleResizeEntry);
-  }
-
-  function handleImageZoom() {
-    const resiveObserve = new ResizeObserver(resizeCallback);
-    resiveObserve.observe(document.body);
   }
 
   function handleClick() {
