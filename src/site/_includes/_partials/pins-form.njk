@@ -1,20 +1,13 @@
 {% set variant = product.options[0] %}
 
-<form class="product__form" data-product-form data-variant-id="{{variant.id}}">
+<form class="product__form" data-product-form="data-product-form" data-variant-id="{{variant.id}}">
     <div class="product__field">
         <label for="pin-colour" class="product__label">Pins</label>
         <div class="product__select-wrapper">
-            <select name="pins" id="pin-colour" class="product__select" required>
-                <option value="Pink" selected="selected">Pink</option>
-                <option value="Light Blue">Light Blue</option>
-                <option value="Green">Green</option>
-                <option value="Purple">Purple</option>
-                <option value="White">White</option>
-                <option value="Yellow">Yellow</option>
-                <option value="Red">Red</option>
-                <option value="Blue">Blue</option>
-                <option value="Orange">Orange</option>
-                <option value="Black">Black</option>
+            <select name="pins" id="pin-colour" class="product__select" required="required" data-product-variants="data-product-variants">
+                {% for option in product.options %}
+                    <option value="{{option.value}}" data-name="{{option.name}}" data-id="{{option.id}}">{{option.value}}</option>
+                {% endfor %}
             </select>
             <svg class="product__select-icon" width="24" height="24" aria-hidden="true">
                 <use xlink:href="/icons/sprite.svg#chevron"></use>
