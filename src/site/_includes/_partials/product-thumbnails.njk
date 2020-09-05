@@ -45,7 +45,7 @@
 </div>
 
 {% else %}
-<ul class="thumbnails__thumbnails" data-component="product-thumbnails">
+<ul class="thumbnails" data-component="product-thumbnails">
     {% for thumbnail in product.thumbnails %}
         <li class="thumbnails__thumbnail">
             <a href="{{thumbnail.image}}.jpg" class="thumbnails__link {% if loop.first %}thumbnails__link--active{% endif %}" data-thumbnail-link>Thumbnail item {{loop.index + 1}}</a>
