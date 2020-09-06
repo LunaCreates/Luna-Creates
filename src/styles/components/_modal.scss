@@ -16,7 +16,7 @@
   justify-content: flex-end;
   align-items: center;
   background-color: rgba(_variables.$core-color-foreground, 0.7);
-  z-index: _z-index.z(kilo);
+  z-index: _z-index.z(lima);
 
   &[hidden] {
     display: none;
