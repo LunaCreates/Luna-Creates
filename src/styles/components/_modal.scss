@@ -82,6 +82,12 @@
   }
 }
 
+.modal__image {
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .modal__image-zoom {
   position: fixed;
   top: 0;
