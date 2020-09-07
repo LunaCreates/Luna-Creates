@@ -1,6 +1,7 @@
 import pubSub from './modules/pubSub';
 
 function ImageZoom(product: HTMLElement) {
+  const isTouchDevice = 'ontouchstart' in document.documentElement;
   const button: HTMLButtonElement | null = product.querySelector('[data-image-zoom]');
   const modal: HTMLElement | null = product.querySelector('[data-modal="image-zoom"]');
 
@@ -31,7 +32,6 @@ function ImageZoom(product: HTMLElement) {
   }
 
   function handleImageZoom() {
-    const isTouchDevice = 'ontouchstart' in document.documentElement;
     const zoom = modal?.querySelector('[data-modal-zoom]') as HTMLElement;
 
     if (isTouchDevice) {
@@ -52,11 +52,11 @@ function ImageZoom(product: HTMLElement) {
 
   function changeImageZoomSrc(picture: HTMLPictureElement) {
     const imagePath = picture.querySelector('img')?.srcset.split('_75x75')[0] as string;
-    const image = modal?.querySelector('[data-product-image]') as HTMLImageElement;
+    const image = modal?.querySelector('[data-product-image]') as HTMLElement;
 
     if (image === null && imagePath === undefined) return;
 
-    image.srcset = `${imagePath}.jpg`;
+    image.style.backgroundImage = `url('${imagePath}.jpg')`;
   }
 
   function init() {
