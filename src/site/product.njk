@@ -6,7 +6,7 @@ pagination:
     addAllPagesToCollections: true
 renderData:
     title: "{{product.title}}"
-    description: "{{product.metaDescription}}"
+    description: "{{product.metaDescription | safe}}"
 permalink: "/{{product.slug}}/"
 layout: _layouts/product
 tags: product
@@ -26,4 +26,3 @@ sitemap:
 
     <p>Please do get in touch if you have any queries - very happy to help where possible!</p>
 </section>
-
