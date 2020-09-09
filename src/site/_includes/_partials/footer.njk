@@ -14,7 +14,7 @@
 
         {% for item in settings.social %}
             <li class="footer__item footer__item--social">
-                <a class="footer__link footer__link--social" href="{{item.url}}" title="{{item.title-attr}}" rel="external" aria-label="{{this.title}}">
+                <a class="footer__link footer__link--social" href="{{item.url}}" title="{{item.titleAttr}}" rel="external" aria-label="{{item.title}}">
                     <svg class="footer__icon" width="20" height="20" aria-hidden="true">
                         <use xlink:href="/icons/sprite.svg#{{item.slug}}"></use>
                     </svg>

@@ -1,44 +1,45 @@
-{% if product.thumbnails|length > 4 %}
-<div class="product__carousel" data-component="product-thumbnails-carousel" tabindex="0">
-    <div class="product__track glide__track" data-glide-el="track">
-        <ul class="thumbnails glide__slides" data-component="product-thumbnails">
-        {% for thumbnail in product.thumbnails %}
-            <li class="thumbnails__thumbnail glide__slide">
-                <a href="{{thumbnail.image}}.jpg" class="thumbnails__link {% if loop.first %}thumbnails__link--active{% endif %}" data-thumbnail-link>Thumbnail item {{loop.index}}</a>
+{% if product.thumbnails | length > 4 %}
+    <div class="product__carousel" data-component="product-thumbnails-carousel" tabindex="0">
+        <div class="product__track glide__track" data-glide-el="track">
+            <ul class="thumbnails glide__slides" data-component="product-thumbnails">
+                {% for thumbnail in product.thumbnails %}
+                    <li class="thumbnails__thumbnail glide__slide">
+                        <a href="{{thumbnail.image}}.jpg" class="thumbnails__link {% if loop.first %}thumbnails__link--active{% endif %}" data-thumbnail-link="data-thumbnail-link">Thumbnail item
+                            {{loop.index}}</a>
 
-                <picture class="thumbnails__picture">
-                    <source media="(max-width: 37.4375em)" type="image/webp" data-srcset="{{thumbnail.image}}_75x75.jpg.webp 1x, {{thumbnail.image}}_100x100.jpg.webp 2x" data-main-image="{{thumbnail.image}}_100x100.jpg.webp 1x, {{thumbnail.image}}_200x200.jpg.webp 2x">
+                        <picture class="thumbnails__picture">
+                            <source media="(max-width: 37.4375em)" type="image/webp" data-srcset="{{thumbnail.image}}_75x75.jpg.webp 1x, {{thumbnail.image}}_100x100.jpg.webp 2x" data-main-image="{{thumbnail.image}}_100x100.jpg.webp 1x, {{thumbnail.image}}_200x200.jpg.webp 2x">
 
-                    <source media="(max-width: 37.4375em)" data-srcset="{{thumbnail.image}}_75x75.jpg 1x, {{thumbnail.image}}_100x100.jpg 2x" data-main-image="{{thumbnail.image}}_100x100.jpg 1x, {{thumbnail.image}}_200x200.jpg 2x">
+                            <source media="(max-width: 37.4375em)" data-srcset="{{thumbnail.image}}_75x75.jpg 1x, {{thumbnail.image}}_100x100.jpg 2x" data-main-image="{{thumbnail.image}}_100x100.jpg 1x, {{thumbnail.image}}_200x200.jpg 2x">
 
-                    <source type="image/webp" data-srcset="{{thumbnail.image}}_75x75.jpg.webp 1x, {{thumbnail.image}}_150x150.jpg.webp 2x" data-main-image="{{thumbnail.image}}_300x300.jpg.webp 1x, {{thumbnail.image}}_450x450.jpg.webp 2x">
+                            <source type="image/webp" data-srcset="{{thumbnail.image}}_75x75.jpg.webp 1x, {{thumbnail.image}}_150x150.jpg.webp 2x" data-main-image="{{thumbnail.image}}_300x300.jpg.webp 1x, {{thumbnail.image}}_450x450.jpg.webp 2x">
 
-                    <img class="thumbnails__image lazyload" data-srcset="{{thumbnail.image}}_75x75.jpg 1x, {{thumbnail.image}}_150x150.jpg 2x" data-main-image="{{thumbnail.image}}_300x300.jpg 1x, {{thumbnail.image}}_450x450.jpg 2x" alt="Wedding Table Plan" loading="lazy" width="100" height="100">
+                            <img class="thumbnails__image lazyload" data-srcset="{{thumbnail.image}}_75x75.jpg 1x, {{thumbnail.image}}_150x150.jpg 2x" data-main-image="{{thumbnail.image}}_300x300.jpg 1x, {{thumbnail.image}}_450x450.jpg 2x" alt="Wedding Table Plan" loading="lazy" width="100" height="100">
 
-                    <noscript>
-                        <source media="(max-width: 37.4375em)" type="image/webp" srcset="{{thumbnail.image}}_75x75.jpg.webp 1x, {{thumbnail.image}}_100x100.jpg.webp 2x">
+                            <noscript>
+                                <source media="(max-width: 37.4375em)" type="image/webp" srcset="{{thumbnail.image}}_75x75.jpg.webp 1x, {{thumbnail.image}}_100x100.jpg.webp 2x">
 
-                        <source media="(max-width: 37.4375em)" srcset="{{thumbnail.image}}_75x75.jpg 1x, {{thumbnail.image}}_100x100.jpg 2x">
+                                <source media="(max-width: 37.4375em)" srcset="{{thumbnail.image}}_75x75.jpg 1x, {{thumbnail.image}}_100x100.jpg 2x">
 
-                        <source type="image/webp" srcset="{{thumbnail.image}}_75x75.jpg.webp 1x, {{thumbnail.image}}_150x150.jpg.webp 2x">
+                                <source type="image/webp" srcset="{{thumbnail.image}}_75x75.jpg.webp 1x, {{thumbnail.image}}_150x150.jpg.webp 2x">
 
-                        <img class="thumbnails__image" srcset="{{thumbnail.image}}_75x75.jpg 1x, {{thumbnail.image}}_150x150.jpg 2x" alt="Wedding Table Plan" loading="lazy" width="100" height="100">
-                    </noscript>
-                </picture>
-            </li>
-        {% endfor %}
-        </ul>
-    </div>
+                                <img class="thumbnails__image" srcset="{{thumbnail.image}}_75x75.jpg 1x, {{thumbnail.image}}_150x150.jpg 2x" alt="Wedding Table Plan" loading="lazy" width="100" height="100">
+                            </noscript>
+                        </picture>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
 
-    <div class="glide__arrows" data-glide-el="controls" aria-hidden="true">
-        <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
-            <svg class="glide__icon" xmlns="http://www.w3.org/2000/svg" width="7" height="19" viewBox="0 0 7 19">
-                <path fill="#DBDBDB" fill-rule="evenodd" d="M7 0v19L0 9.5z" opacity=".9" />
+        <div class="glide__arrows" data-glide-el="controls">
+            <button class="glide__arrow glide__arrow--left" data-glide-dir="<" aria-label="previous">
+            <svg class="glide__icon" xmlns="http://www.w3.org/2000/svg" width="7" height="19" viewbox="0 0 7 19">
+                <path fill="#DBDBDB" fill-rule="evenodd" d="M7 0v19L0 9.5z" opacity=".9"/>
             </svg>
         </button>
-        <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
-            <svg class="glide__icon" xmlns="http://www.w3.org/2000/svg" width="7" height="19" viewBox="0 0 7 19">
-                <path fill="#DBDBDB" fill-rule="evenodd" d="M7 0v19L0 9.5z" opacity=".9" />
+        <button class="glide__arrow glide__arrow--right" data-glide-dir=">" aria-label="next">
+            <svg class="glide__icon" xmlns="http://www.w3.org/2000/svg" width="7" height="19" viewbox="0 0 7 19">
+                <path fill="#DBDBDB" fill-rule="evenodd" d="M7 0v19L0 9.5z" opacity=".9"/>
             </svg>
         </button>
     </div>
@@ -48,7 +49,8 @@
 <ul class="thumbnails" data-component="product-thumbnails">
     {% for thumbnail in product.thumbnails %}
         <li class="thumbnails__thumbnail">
-            <a href="{{thumbnail.image}}.jpg" class="thumbnails__link {% if loop.first %}thumbnails__link--active{% endif %}" data-thumbnail-link>Thumbnail item {{loop.index + 1}}</a>
+            <a href="{{thumbnail.image}}.jpg" class="thumbnails__link {% if loop.first %}thumbnails__link--active{% endif %}" data-thumbnail-link="data-thumbnail-link">Thumbnail item
+                {{loop.index + 1}}</a>
             <picture class="thumbnails__picture">
                 <source media="(max-width: 37.4375em)" type="image/webp" data-srcset="{{thumbnail.image}}_75x75.jpg.webp 1x, {{thumbnail.image}}_100x100.jpg.webp 2x" data-main-image="{{thumbnail.image}}_100x100.jpg.webp 1x, {{thumbnail.image}}_200x200.jpg.webp 2x">
 
@@ -72,4 +74,3 @@
     {% endfor %}
 </ul>
 {% endif %}
-

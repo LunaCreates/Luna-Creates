@@ -50,11 +50,11 @@
 .page__title,
 .page h1 {
   @include _typography.text(xl);
-  margin-bottom: (_variables.$core-grid * 2);
+  margin-bottom: (_variables.$core-grid * 3);
   font-variation-settings: 'wght' _variables.$core-secondary-font-weight;
 
   @include _responsive.min(m) {
-    margin-bottom: (_variables.$core-grid * 3);
+    margin-bottom: (_variables.$core-grid * 6);
   }
 }
 

@@ -6,7 +6,7 @@
   "author": {
     "name": "Alex Clapperton",
     "email": "hi@alexclapperton.co.uk",
-    "url": "https://lunacreates.co.uk/"
+    "url": "https://www.alexclapperton.co.uk/"
   },
   "license": "ISC",
   "repository": {
@@ -26,7 +26,7 @@
     "@11ty/eleventy": "^0.11.0",
     "@11ty/eleventy-cache-assets": "^2.0.3",
     "@glidejs/glide": "^3.4.1",
-    "@types/node": "^13.13.15",
+    "@types/node": "^13.13.16",
     "@types/shopify-buy": "^1.11.1",
     "algoliasearch": "^4.4.0",
     "autoprefixer": "^9.8.6",
@@ -34,6 +34,7 @@
     "html-minifier": "^4.0.0",
     "lazysizes": "^5.2.2",
     "node-fetch": "^2.6.0",
+    "pinch-zoom-js": "^2.3.4",
     "sass": "^1.26.10",
     "shopify-buy": "^2.11.0"
   },

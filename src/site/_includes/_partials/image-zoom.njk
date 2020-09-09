@@ -1,0 +1,19 @@
+<div class="modal" role="dialog" aria-labelledby="dialog-title-zoom" data-modal="image-zoom" hidden="hidden">
+    <div class="modal__inner">
+        <h2 class="modal__title" id="dialog-title-zoom">Image zoom</h2>
+
+        <div class="modal__zoom" data-modal-zoom="data-modal-zoom">
+            <div class="modal__picture" data-product-picture="data-product-picture">
+                <div class="modal__image" style="background-image: url('{{product.mainImage}}.jpg')" data-product-image="data-product-image"></div>
+            </div>
+        </div>
+
+        <div class="modal__image-zoom" data-bg="{{product.mainImage}}.jpg" data-image-zoom="data-image-zoom"></div>
+
+        <button class="modal__close-button" aria-label="Close dialog" data-close-modal="data-close-modal">
+            <svg height="24" width="24" aria-hidden="true" class="modal__close-icon">
+                <use xlink:href="/icons/sprite.svg#close"></use>
+            </svg>
+        </button>
+    </div>
+</div>

@@ -4,10 +4,16 @@ function containsMap(item) {
   return item.name === 'map';
 }
 
-function buildData(item) {
+function buildPropertyData(item) {
   return {
     name: 'map',
     value: JSON.parse(item.value)
+  }
+}
+
+function buildApiData(item) {
+  return {
+    properties: item.properties.map(buildPropertyData)
   }
 }
 
@@ -17,13 +23,12 @@ exports.handler = async (event, context, callback) => {
   const isMap = items.some(item => item.properties.some(containsMap));
 
   if (isMap) {
-    const data = items.map(item => item.properties.map(buildData));
-    const result = JSON.stringify({ line_items: [{ properties: data[0] }] });
+    const data = JSON.stringify({ line_items: items.map(buildApiData) });
 
     await fetch('https://api.pinmaps.co.uk/generate', {
       method: 'POST',
       headers: { 'Content-type': 'application/json' },
-      body: result
+      body: data
     })
     .catch(error => console.error(error))
   }

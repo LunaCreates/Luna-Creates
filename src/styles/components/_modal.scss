@@ -1,6 +1,7 @@
 @use '../settings/variables' as _variables;
 @use '../tools/functions/z-index' as _z-index;
 @use '../tools/mixins/buttons' as _buttons;
+@use '../tools/mixins/picture' as _picture;
 @use '../tools/mixins/responsive' as _responsive;
 @use '../tools/mixins/typography' as _typography;
 
@@ -15,7 +16,7 @@
   justify-content: flex-end;
   align-items: center;
   background-color: rgba(_variables.$core-color-foreground, 0.7);
-  z-index: _z-index.z(kilo);
+  z-index: _z-index.z(lima);
 
   &[hidden] {
     display: none;
@@ -54,6 +55,51 @@
   @include _typography.text(xs);
   margin-bottom: (_variables.$core-grid * 2);
   color: var(--color-body);
+}
+
+.modal__zoom,
+.pinch-zoom-container {
+  position: relative;
+  padding-top: 100%;
+
+  @include _responsive.min(m) {
+    width: 50vh;
+    max-width: 500px;
+  }
+}
+
+.modal__picture {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  @media (hover) {
+    &:hover {
+      cursor: zoom-in;
+    }
+  }
+}
+
+.modal__image {
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.modal__image-zoom {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  z-index: _z-index.z(lima);
 }
 
 .modal__key-map {

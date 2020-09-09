@@ -15,7 +15,4 @@ yarn-debug.log*
 yarn-error.log*
 
 # templates
-src/site/_includes/_partials/preload-styles.hbs
-src/site/_includes/_partials/scripts.hbs
-src/site/_includes/_partials/styles.hbs
 cache-manifest.json

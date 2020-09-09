@@ -1,13 +1,13 @@
 import pubSub from '../modules/pubSub';
 
 function KeyMap(product: HTMLElement) {
-  const modal: HTMLDialogElement | null = product.querySelector('[data-key-map-modal]');
+  const modal: HTMLDialogElement | null = product.querySelector('[data-modal="key-map"]');
   const keyMapContainer: HTMLElement | null = product.querySelector('[data-key-map]');
 
-  function showKeyMapModal(module: any, currentTarget: HTMLButtonElement) {
+  function showKeyMapModal(module: any, target: HTMLButtonElement) {
     const keyMapModal = module.default;
 
-    keyMapModal(modal).openModal(currentTarget);
+    keyMapModal(modal).openModal(target);
   }
 
   function handleKeyMapModal(target: HTMLButtonElement) {
