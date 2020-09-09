@@ -56,7 +56,7 @@ async function allProductsData() {
                     }
                   }
                 }
-                metafields(first: 1, namespace: "global") {
+                metafields(first: 2, namespace: "global") {
                   edges {
                     node {
                       key
@@ -104,12 +104,14 @@ async function allProductsData() {
     }
   }
 
-  function formatMetaDescription(edge) {
-    if (edge.length > 0) {
-      return edge[0].node.value;
-    }
+  function formatMetaDescription(edges) {
+    const isTitle = edges[0];
+    const isDescription = edges[1];
 
-    return '';
+    return {
+      title: isTitle ? edges[0].node.value : '',
+      description: isDescription ? edges[1].node.value : ''
+    }
   }
 
   // format products objects

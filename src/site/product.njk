@@ -5,8 +5,8 @@ pagination:
     alias: product
     addAllPagesToCollections: true
 renderData:
-    title: "{{product.title}}"
-    description: "{{product.metaDescription | safe}}"
+    title: "{{product.metaDescription.title | safe}}"
+    description: "{{product.metaDescription.description | safe}}"
 permalink: "/{{product.slug}}/"
 layout: _layouts/product
 tags: product
