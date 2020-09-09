@@ -73,8 +73,7 @@
   content: 'Pinch to zoom';
   display: block;
   width: 100%;
-  padding-top: (_variables.$core-grid / 2);
-  padding-bottom: (_variables.$core-grid / 2);
+  margin-top: (_variables.$core-grid * 1.5);
   text-align: center;
 
   @media (hover) {
