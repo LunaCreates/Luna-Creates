@@ -23,13 +23,13 @@ exports.handler = async (event, context, callback) => {
   const isMap = items.some(item => item.properties.some(containsMap));
 
   if (isMap) {
-    const data = JSON.stringify({ line_items: items.map(buildApiData) });
+    const body = JSON.stringify({ line_items: items.map(buildApiData) });
 
     await fetch('https://api.pinmaps.co.uk/generate', {
       method: 'POST',
       headers: { 'Content-type': 'application/json' },
-      body: data
+      body
     })
-    .catch(error => console.error(error))
+      .catch(error => console.error(error))
   }
 }
