@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en-GB">
     <head>
-        <!-- META TAGS  -->
+        <!-- META TAGS -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, minimum-scale=1, user-scalable=yes, initial-scale=1, viewport-fit=cover">
         <meta name="description" content="{% if renderData.description or description %}{{ renderData.description or description }}{% endif %}">
@@ -9,11 +9,16 @@
         <meta name="google-site-verification" content="uni8DaQpXBiVFYl464P1tK1N9ZlmgwbAIfHc7dOI_KM">
 
         {% if nofollow %}
-        <meta name="robots" content="noindex, nofollow">
+            <meta name="robots" content="noindex, nofollow">
         {% endif %}
 
         <!-- PAGE TITLE -->
-        <title>{% if renderData.title or title %}{{ renderData.title or title }}{% endif %} &mdash; {{settings.name}}</title>
+        <title>
+            {% if renderData.title or title %}{{ renderData.title or title }}
+            {% endif %}
+            &mdash;
+            {{settings.name}}
+        </title>
 
         <!-- RESOURCE HINTS -->
         <link rel="preconnect" href="https://cdn.shopify.com">
@@ -28,26 +33,26 @@
         {% if renderData.heroImage or heroImage %}
             {% set image = renderData.heroImage or heroImage %}
 
-            <link rel="preload" as="image" type="image/webp" href="{{image}}.jpg.webp" imagesrcset="{{image}}_300x180_crop_top.jpg.webp 1x, {{image}}_600x360_crop_top.jpg.webp 2x" media="(max-width: 37.4375em)" />
+            <link rel="preload" as="image" type="image/webp" href="{{image}}.jpg.webp" imagesrcset="{{image}}_300x180_crop_top.jpg.webp 1x, {{image}}_600x360_crop_top.jpg.webp 2x" media="(max-width: 37.4375em)"/>
 
-            <link rel="preload" as="image" type="image/webp" href="{{image}}.jpg.webp" imagesrcset="{{image}}_400x240_crop_top.jpg.webp 1x, {{image}}_800x480_crop_top.jpg.webp 2x" media="(min-width: 37.5em) and (max-width: 47.9375em)" />
+            <link rel="preload" as="image" type="image/webp" href="{{image}}.jpg.webp" imagesrcset="{{image}}_400x240_crop_top.jpg.webp 1x, {{image}}_800x480_crop_top.jpg.webp 2x" media="(min-width: 37.5em) and (max-width: 47.9375em)"/>
 
-            <link rel="preload" as="image" type="image/webp" href="{{image}}.jpg.webp" imagesrcset="{{image}}_1500x500_crop_top.jpg.webp 1x, {{image}}_2048x640_crop_top.jpg.webp 2x" media="(min-width: 48em)" />
+            <link rel="preload" as="image" type="image/webp" href="{{image}}.jpg.webp" imagesrcset="{{image}}_1500x500_crop_top.jpg.webp 1x, {{image}}_2048x640_crop_top.jpg.webp 2x" media="(min-width: 48em)"/>
         {% endif %}
 
         {% if tags and 'product' in tags %}
             {% set image = product.mainImage %}
 
-            <link rel="preload" as="image" type="image/webp" href="{{image}}.jpg.webp" imagesrcset="{{image}}_350x350.jpg.webp 1x, {{image}}_450x450.jpg.webp 2x" media="(max-width: 37.4375em)" />
+            <link rel="preload" as="image" type="image/webp" href="{{image}}.jpg.webp" imagesrcset="{{image}}_350x350.jpg.webp 1x, {{image}}_450x450.jpg.webp 2x" media="(max-width: 37.4375em)"/>
 
-            <link rel="preload" as="image" type="image/webp" href="{{image}}.jpg.webp" imagesrcset="{{image}}_600x600.jpg.webp 1x, {{image}}_800x800.jpg.webp 2x" media="(min-width: 38em)" />
+            <link rel="preload" as="image" type="image/webp" href="{{image}}.jpg.webp" imagesrcset="{{image}}_600x600.jpg.webp 1x, {{image}}_800x800.jpg.webp 2x" media="(min-width: 38em)"/>
         {% endif %}
 
         <!-- STYLESHEET -->
         {% include "_partials/styles.njk" %}
 
         <!-- SITEMAP -->
-        <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
+        <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml"/>
 
         <!-- MANIFEST -->
         <link rel="manifest" href="/site.webmanifest">
@@ -55,44 +60,43 @@
         <link rel="alternate" href="{{settings.url}}/" hreflang="en-gb">
         <link rel="canonical" href="{{settings.url}}{{page.url}}">
 
-        <script type="application/ld+json">{
-            "@context": "http://schema.org",
-        {% if tags and 'product' in tags %}
-            "@type": "Product",
-            "name": "{{ renderData.title or title }}",
-            "image": "{{ product.mainImage }}_800x800.jpg",
-            "description": "{{ product.descriptionSchema }}",
-            "offers": {
-                "@type": "Offer",
-                "url": "{{ product.slug }}",
-                "priceCurrency": "GBP",
-                "price": "{{ product.priceSchema }}",
-                "availability": "https://schema.org/InStock"
-            }
-        {% else %}
-            "@type": "Store",
-            "name": "{{ settings.name }}",
-            "url": "{{ settings.url }}/",
-            "image": "{{ settings.url }}/images/favicons/favicon-512x512.png",
-            "foundingDate": "2017",
-            "sameAs": [
-                "{{ settings.url }}/",
-            {% for item in settings.social %}
-                {% if loop.last %}
-                    "{{ item.url }}"
+        <script type="application/ld+json">
+            {
+                "@context": "http://schema.org",
+                {% if tags and 'product' in tags %}
+                    "@type": "Product",
+                    "name": "{{ renderData.title or title }}",
+                    "image": "{{ product.mainImage }}_800x800.jpg",
+                    "description": "{{ renderData.description or product.descriptionSchema }}",
+                    "offers": {
+                        "@type": "Offer",
+                        "url": "{{ product.slug }}",
+                        "priceCurrency": "GBP",
+                        "price": "{{ product.priceSchema }}",
+                        "availability": "https://schema.org/InStock"
+                    }
                 {% else %}
-                    "{{ item.url }}",
+                    "@type": "Store",
+                    "name": "{{ settings.name }}",
+                    "url": "{{ settings.url }}/",
+                    "image": "{{ settings.url }}/images/favicons/favicon-512x512.png",
+                    "foundingDate": "2017",
+                    "sameAs": ["{{ settings.url }}/",{% for item in settings.social %}
+                            {% if loop.last %}
+                                "{{ item.url }}"
+                            {% else %}
+                                "{{ item.url }}",
+                            {% endif %}
+                        {% endfor %}]
                 {% endif %}
-            {% endfor %}
-            ]
-        {% endif %}
-        }</script>
+            }
+        </script>
 
         <!-- FACEBOOK -->
-        <meta property="og:title" content="{{ renderData.title or title }} &mdash; {{ settings.name }}" />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="{{ settings.url }}/" />
-        <meta property="og:image" content="{{ settings.url }}/images/favicons/favicon-512x512.png" />
+        <meta property="og:title" content="{{ renderData.title or title }} &mdash; {{ settings.name }}"/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:url" content="{{ settings.url }}/"/>
+        <meta property="og:image" content="{{ settings.url }}/images/favicons/favicon-512x512.png"/>
         <meta property="og:description" content="Stunning range of travel related personalised world map pinboard products for sale. Order online for quick UK delivery.">
         <meta property="og:locale" content="en_GB">
         <meta property="article:author" content="{{ settings.name }}">
@@ -158,7 +162,7 @@
         <!-- JAVASCRIPT ALERT -->
         <noscript>
             <div>
-              <p>You currently have JavaScript in your browser turned off, so some features of this site may not work fully.</p>
-              <p>Find out <a href="http://enable-javascript.com" rel="external" target="_blank">how to turn JavaScript on</a>.</p>
+                <p>You currently have JavaScript in your browser turned off, so some features of this site may not work fully.</p>
+                <p>Find out <a href="http://enable-javascript.com" rel="external" target="_blank">how to turn JavaScript on</a>.</p>
             </div>
         </noscript>
