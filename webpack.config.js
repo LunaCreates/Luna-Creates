@@ -53,12 +53,11 @@ function Bundle() {
     new SpriteLoaderPlugin({ plainSprite: true }),
     new webpack.LoaderOptionsPlugin({
       debug: true
-    }),
-    new Critters({
-      inlineFonts: true,
-      preload: 'js',
-      pruneSource: false,
     })
+    // new Critters({
+    //   inlineFonts: true,
+    //   pruneSource: false,
+    // })
     // new BundleAnalyzerPlugin()
   ];
 
