@@ -19,13 +19,9 @@
   flex: 0 0 auto;
   scroll-snap-align: start;
 
-  .js .glide__track & {
-    width: auto;
-    max-width: initial;
-  }
-
   @include _responsive.min(m) {
-    max-width: 100px;
+    min-width: 100px;
+    max-width: none;
     margin-right: (_variables.$core-grid * 1.5);
   }
 }
