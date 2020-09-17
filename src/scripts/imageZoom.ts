@@ -51,12 +51,18 @@ function ImageZoom(product: HTMLElement) {
   }
 
   function changeImageZoomSrc(picture: HTMLPictureElement) {
-    const imagePath = picture.querySelector('img')?.srcset.split('_75x75')[0] as string;
+    const regex = /([a-zA-Z0-9\.:\/\-_]+?)(_\d{1,4}x\d{1,4})(\.png|\.jpg)/;
+    const path = picture.querySelector('img')?.srcset.split(', ')[0] as string;
     const image = modal?.querySelector('[data-product-image]') as HTMLElement;
+    const match = path.match(regex) as RegExpMatchArray;
+    const newPath = `${match[1]}${match[3]}`;
 
-    if (image === null && imagePath === undefined) return;
+    console.log(match, 'match');
 
-    image.style.backgroundImage = `url('${imagePath}.jpg')`;
+
+    if (image === null && newPath === null) return;
+
+    image.style.backgroundImage = `url('${newPath}')`;
   }
 
   function init() {

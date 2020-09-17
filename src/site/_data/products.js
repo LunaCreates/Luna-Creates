@@ -99,8 +99,9 @@ async function allProductsData() {
   // format all product images
   function formatProductImages(image) {
     return {
-      image: image.node.originalSrc.split('.jpg')[0],
-      imageAlt: image.node.altText
+      image: image.node.originalSrc.split(/(.jpg|.png)/)[0],
+      imageAlt: image.node.altText,
+      type: image.node.originalSrc.match(/(.jpg|.png)/)[0]
     }
   }
 

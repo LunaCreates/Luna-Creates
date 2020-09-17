@@ -1,7 +1,7 @@
 import pubSub from './modules/pubSub';
 
 function DesktopImageZoom(modal: HTMLElement) {
-  const picture: HTMLElement | null = modal.querySelector('[data-product-picture]');
+  const picture: HTMLElement | null = modal.querySelector('[data-product-image]');
   const original = modal.querySelector('[data-product-image]') as HTMLElement;
   const magnified = modal.querySelector('[data-image-zoom]') as HTMLElement;
   let isActive = false;
@@ -38,10 +38,10 @@ function DesktopImageZoom(modal: HTMLElement) {
   }
 
   function setZoom(x: number, y: number) {
-    const bg = magnified.getAttribute('data-bg');
+    const bg = magnified.getAttribute('data-bg') as string;
 
     if (magnified.hasAttribute('data-bg')) {
-      magnified.style.backgroundImage = `url(${bg})`;
+      magnified.style.backgroundImage = bg;
       magnified.removeAttribute('data-bg');
     }
 
@@ -100,12 +100,15 @@ function DesktopImageZoom(modal: HTMLElement) {
     picture.addEventListener('mouseup', handleMoveEnd, { passive: true });
   }
 
-  function changeImageZoomSrc(picture: HTMLPictureElement) {
-    const image = picture.querySelector('img')?.srcset.split('_75x75');
+  function changeImageZoomSrc(picture: HTMLElement) {
+    const image = picture.style.backgroundImage;
 
-    if (!image || !magnified) return;
+    console.log(image, 'gjidffijhifjhg');
 
-    magnified.style.backgroundImage = `url(${image[0]}.jpg)`;
+    console.log(!image || !magnified, 'magnified.style.backgroundImage');
+
+    magnified.style.backgroundImage = image;
+    magnified.setAttribute('data-bg', image);
   }
 
   function init() {
