@@ -57,9 +57,6 @@ function ImageZoom(product: HTMLElement) {
     const match = path.match(regex) as RegExpMatchArray;
     const newPath = `${match[1]}${match[3]}`;
 
-    console.log(match, 'match');
-
-
     if (image === null && newPath === null) return;
 
     image.style.backgroundImage = `url('${newPath}')`;

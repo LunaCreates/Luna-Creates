@@ -103,10 +103,6 @@ function DesktopImageZoom(modal: HTMLElement) {
   function changeImageZoomSrc(picture: HTMLElement) {
     const image = picture.style.backgroundImage;
 
-    console.log(image, 'gjidffijhifjhg');
-
-    console.log(!image || !magnified, 'magnified.style.backgroundImage');
-
     magnified.style.backgroundImage = image;
     magnified.setAttribute('data-bg', image);
   }
