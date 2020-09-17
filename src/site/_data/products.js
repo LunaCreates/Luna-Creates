@@ -48,7 +48,7 @@ async function allProductsData() {
                     }
                   }
                 }
-                images(first: 10) {
+                images(first: 25) {
                   edges {
                     node {
                       altText
