@@ -6,9 +6,9 @@ pagination:
     addAllPagesToCollections: true
 renderData:
   title: "{{category.title}}"
+  description: "{{category.metaDescription | safe}}"
   heroTitle: "{{category.title}}"
   heroImage: "{{category.heroImage}}"
-description: 'Stunning Range Of Travel Related Personalised World Map Pinboard Products For Sale. Order Online For Quick UK Delivery.'
 permalink: "collections/{{category.slug}}/"
 layout: _layouts/default
 sitemap:
@@ -21,23 +21,21 @@ sitemap:
 <main id="main">
     <ul class="products products--container">
         {% for product in category.products %}
-        <li class="products__product">
-            <picture class="featured__picture">
-                <source type="image/webp" data-srcset="{{product.mainImage}}_300x300.jpg.webp 1x, {{product.mainImage}}_350x350.jpg.webp 2x">
+            <li class="products__product">
+                <picture class="featured__picture">
+                    <source type="image/webp" data-srcset="{{product.mainImage}}_300x300.jpg.webp 1x, {{product.mainImage}}_350x350.jpg.webp 2x">
 
-                <img data-srcset="{{product.mainImage}}_300x300.jpg 1x, {{product.mainImage}}_350x350.jpg 2x" alt="{{product.mainImageAlt}}" class="featured__image lazyload" loading="lazy" width="300" height="300">
+                    <img data-srcset="{{product.mainImage}}_300x300.jpg 1x, {{product.mainImage}}_350x350.jpg 2x" alt="{{product.mainImageAlt}}" class="featured__image lazyload" loading="lazy" width="300" height="300">
 
-                <noscript>
-                    <source type="image/webp" srcset="{{product.mainImage}}_300x300.jpg.webp 1x, {{product.mainImage}}_350x350.jpg.webp 2x">
+                    <noscript>
+                        <source type="image/webp" srcset="{{product.mainImage}}_300x300.jpg.webp 1x, {{product.mainImage}}_350x350.jpg.webp 2x">
 
-                    <img srcset="{{product.mainImage}}_300x300.jpg 1x, {{product.mainImage}}_350x350.jpg 2x" alt="{{product.mainImageAlt}}" class="featured__image" loading="lazy" width="300" height="300">
-                </noscript>
-            </picture>
-            <a class="featured__link" href="{{product.slug}}">{{product.title}}</a>
-            <span class="featured__price">{{product.price}}</span>
-        </li>
+                        <img srcset="{{product.mainImage}}_300x300.jpg 1x, {{product.mainImage}}_350x350.jpg 2x" alt="{{product.mainImageAlt}}" class="featured__image" loading="lazy" width="300" height="300">
+                    </noscript>
+                </picture>
+                <a class="featured__link" href="{{product.slug}}">{{product.title}}</a>
+                <span class="featured__price">{{product.price}}</span>
+            </li>
         {% endfor %}
     </ul>
 </main>
-
-

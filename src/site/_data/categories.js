@@ -80,15 +80,33 @@ async function allCollectionsData() {
     }
   }
 
+  function formatMetaDescription(collection) {
+    switch (collection.handle) {
+      case 'all':
+        return 'View our stunning Range Of Travel Related Personalised World Map Pinboard Products For Sale. Order today for UK & International delivery.';
+        break;
+      case 'maps':
+        return 'Shop from our range of Personalised World Map Pinboard Products For Sale. Order Online For Quick UK and International Delivery.';
+        break;
+      case 'wedding':
+        return 'Check out our stunning range of Personalised Travel Themed Wedding Selections by Luna Creates. Order Online For Quick UK and International Delivery.';
+        break;
+      default:
+        return 'Stunning Range Of Travel Related Personalised World Map Pinboard Products For Sale. Order Online For Quick UK Delivery.';
+    }
+  }
+
   // format collections objects
   const collectionsFormatted = collections.map(item => {
     const products = item.products.edges.map(formatProducts);
+    const metaDescription = formatMetaDescription(item);
 
     return {
       title: item.title,
       slug: item.handle,
       heroImage: item.image.originalSrc.split('.jpg')[0],
-      products: products
+      products: products,
+      metaDescription
     };
   });
 

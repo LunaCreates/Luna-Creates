@@ -14,8 +14,7 @@
 
         <!-- PAGE TITLE -->
         <title>
-            {% if renderData.title or title %}{{ renderData.title or title }}
-            {% endif %}
+            {{ renderData.title or title }}
             &mdash;
             {{settings.name}}
         </title>
@@ -163,6 +162,7 @@
         <noscript>
             <div>
                 <p>You currently have JavaScript in your browser turned off, so some features of this site may not work fully.</p>
-                <p>Find out <a href="http://enable-javascript.com" rel="external" target="_blank">how to turn JavaScript on</a>.</p>
+                <p>Find out
+                    <a href="http://enable-javascript.com" rel="external" target="_blank">how to turn JavaScript on</a>.</p>
             </div>
         </noscript>

@@ -28,9 +28,9 @@
 
     <div class="hero__container">
         {% if home %}
-            <p class="hero__title" id="hero-title">{{title}}</p>
+            <p class="hero__title" id="hero-title">{{title | safe}}</p>
         {% else %}
-            <h1 class="hero__title" id="hero-title">{{title}}</h1>
+            <h1 class="hero__title" id="hero-title">{{title | safe}}</h1>
         {% endif %}
     </div>
 </section>
