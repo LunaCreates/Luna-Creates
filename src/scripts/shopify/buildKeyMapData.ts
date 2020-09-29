@@ -35,7 +35,7 @@ function buildPropertyData(product: HTMLElement, keyMapData: any) {
   const propertyData = [
     { key: 'Title', value: keyMapData.title },
     { key: 'Size', value: keyMapData.frameSize },
-    { key: 'Pins', value: JSON.stringify(pins) },
+    { key: 'Pins', value: pins },
     { key: 'Type', value: keyMapData.type }
   ]
 

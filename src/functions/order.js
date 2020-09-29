@@ -1,32 +1,52 @@
 const fetch = require('node-fetch');
 
 function containsMap(item) {
-  return item.name === 'map';
+  return item.name === 'Type';
 }
 
+
 function buildData(item) {
-  return {
-    name: 'map',
-    value: JSON.parse(item.value)
-  }
+  return item.properties.reduce((obj, item) => (obj[item.name.toLowerCase()] = item.value, obj), {});
+}
+
+function formatLabels(item) {
+  const property = item.split(' - ');
+
+  return { color: property[0], title: property[1] };
+}
+
+function formatData(item) {
+  item.lables = item.labels.split(', ').map(formatLabels);;
+  item.frameSize = item.size;
+
+  delete item.pins;
+  delete item.size;
+
+  return item;
+}
+
+function formatResultData(item) {
+  return { properties: [{ name: 'map', value: { ...item } }] };
 }
 
 exports.handler = async (event, context, callback) => {
   const data = JSON.parse(event.body);
   const items = data.line_items;
-  // const isMap = items.some(item => item.properties.some(containsMap));
+  const isMap = items.some(item => item.properties.some(containsMap));
 
   console.log(JSON.stringify(items, 'items'));
 
-  // if (isMap) {
-  //   const data = items.map(item => item.properties.map(buildData));
-  //   const result = JSON.stringify({ line_items: [{ properties: data[0] }] });
+  if (isMap) {
+    const mapData = items.map(buildData);
+    const formattedMapData = mapData.map(formatData);
+    const result = formattedMapData.map(formatResultData);
+    const body = { line_items: result }
 
-  //   await fetch('https://api.pinmaps.co.uk/generate', {
-  //     method: 'POST',
-  //     headers: { 'Content-type': 'application/json' },
-  //     body: result
-  //   })
-  //     .catch(error => console.error(error))
-  // }
+    await fetch('https://api.pinmaps.co.uk/generate', {
+      method: 'POST',
+      headers: { 'Content-type': 'application/json' },
+      body: JSON.stringify(body)
+    })
+      .catch(error => console.error(error))
+  }
 }
