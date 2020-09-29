@@ -24,14 +24,20 @@ function Cart(form: HTMLFormElement) {
     `
   }
 
+  function renderOptions(option: any) {
+    const key = option.attrs.key.value;
+    const value = option.attrs.value.value;
+
+    return `<small class="cart__table-options"><strong>${key}</strong>: ${value}</small>`
+  }
+
   function renderCartItem(item: any, index: number) {
-    const attrs = item.customAttributes[0];
-    const options = attrs ? item.customAttributes[0].attrs : '';
+    const options = item.customAttributes;
     const price = parseInt(item.variant.priceV2.amount, 10);
     const total = price * item.quantity;
     const keyMapId = item.variant.attrs.id.value;
 
-    console.log(item, 'renderCartItem');
+    console.log(options, 'renderCartItem');
 
 
     const html = `
@@ -40,7 +46,7 @@ function Cart(form: HTMLFormElement) {
           ${buildImage(item.variant.image)}
           <div class="cart__table-content">
             <span class="cart__table-title">${item.title}</span>
-            ${options !== '' ? `<small class="cart__table-options">${options.key.value}: ${options.value.value}</small>` : ''}
+            ${options.map(renderOptions).join('')}
           </div>
         </th>
         <td>&pound;${price.toFixed(2)}</td>

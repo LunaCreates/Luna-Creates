@@ -40,6 +40,8 @@ function Basket(product: HTMLElement) {
   }
 
   function updateBasket(event: Event) {
+    event.preventDefault();
+
     if (!(event.target instanceof HTMLAnchorElement) || !checkoutId || !basketButton) return;
 
     const id: string | null = event.target.getAttribute('data-variant-id');
@@ -48,15 +50,12 @@ function Basket(product: HTMLElement) {
       {
         variantId: id,
         quantity: 1,
-        customAttributes: [JSON.parse(attributes as string)]
+        customAttributes: JSON.parse(attributes as string)
       }
     ];
 
-    event.preventDefault();
-
-    storePreviewImages(id);
-
     shopify.checkout.addLineItems(checkoutId, lineItemsToAdd)
+      .then(() => storePreviewImages(id))
       .then(() => window.location.pathname = '/cart/');
   }
 

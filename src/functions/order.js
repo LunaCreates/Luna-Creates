@@ -16,15 +16,17 @@ exports.handler = async (event, context, callback) => {
   const items = data.line_items;
   const isMap = items.some(item => item.properties.some(containsMap));
 
-  if (isMap) {
-    const data = items.map(item => item.properties.map(buildData));
-    const result = JSON.stringify({ line_items: [{ properties: data[0] }] });
+  console.log(JSON.stringify(item.properties, 'item.properties'));
 
-    await fetch('https://api.pinmaps.co.uk/generate', {
-      method: 'POST',
-      headers: { 'Content-type': 'application/json' },
-      body: result
-    })
-      .catch(error => console.error(error))
-  }
+  // if (isMap) {
+  //   const data = items.map(item => item.properties.map(buildData));
+  //   const result = JSON.stringify({ line_items: [{ properties: data[0] }] });
+
+  //   await fetch('https://api.pinmaps.co.uk/generate', {
+  //     method: 'POST',
+  //     headers: { 'Content-type': 'application/json' },
+  //     body: result
+  //   })
+  //     .catch(error => console.error(error))
+  // }
 }
