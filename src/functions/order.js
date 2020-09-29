@@ -34,8 +34,6 @@ exports.handler = async (event, context, callback) => {
   const items = data.line_items;
   const isMap = items.some(item => item.properties.some(containsMap));
 
-  console.log(JSON.stringify(items, 'items'));
-
   if (isMap) {
     const mapData = items.map(buildData);
     const formattedMapData = mapData.map(formatData);
