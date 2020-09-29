@@ -38,7 +38,9 @@ exports.handler = async (event, context, callback) => {
     const mapData = items.map(buildData);
     const formattedMapData = mapData.map(formatData);
     const result = formattedMapData.map(formatResultData);
-    const body = { line_items: result }
+    const body = { line_items: result };
+
+    console.log(JSON.stringify(body), 'body');
 
     await fetch('https://api.pinmaps.co.uk/generate', {
       method: 'POST',
