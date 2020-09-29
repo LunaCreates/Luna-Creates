@@ -14,9 +14,9 @@ function buildData(item) {
 exports.handler = async (event, context, callback) => {
   const data = JSON.parse(event.body);
   const items = data.line_items;
-  const isMap = items.some(item => item.properties.some(containsMap));
+  // const isMap = items.some(item => item.properties.some(containsMap));
 
-  console.log(JSON.stringify(item.properties, 'item.properties'));
+  console.log(JSON.stringify(items, 'items'));
 
   // if (isMap) {
   //   const data = items.map(item => item.properties.map(buildData));
