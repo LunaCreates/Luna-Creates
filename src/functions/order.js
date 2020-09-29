@@ -16,7 +16,9 @@ function formatLabels(item) {
 }
 
 function formatData(item) {
-  item.lables = item.pins.split(', ').map(formatLabels);;
+  const labels = item.pins.split(', ').map(formatLabels);
+
+  item.lables = { ...labels };
   item.frameSize = item.size;
 
   delete item.pins;
