@@ -37,9 +37,6 @@ function Cart(form: HTMLFormElement) {
     const total = price * item.quantity;
     const keyMapId = item.variant.attrs.id.value;
 
-    console.log(options, 'renderCartItem');
-
-
     const html = `
       <tr>
         <th class="cart__table-product">
