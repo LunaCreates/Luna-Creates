@@ -4,7 +4,6 @@ function containsMap(item) {
   return item.name === 'Type';
 }
 
-
 function buildData(item) {
   return item.properties.reduce((obj, item) => (obj[item.name.toLowerCase()] = item.value, obj), {});
 }
@@ -18,7 +17,7 @@ function formatLabels(item) {
 function formatData(item) {
   const labels = item.pins.split(', ').map(formatLabels);
 
-  item.lables = { ...labels };
+  item.labels = { ...labels };
   item.frameSize = item.size;
 
   delete item.pins;
@@ -41,8 +40,6 @@ exports.handler = async (event, context, callback) => {
     const formattedMapData = mapData.map(formatData);
     const result = formattedMapData.map(formatResultData);
     const body = { line_items: result };
-
-    console.log(JSON.stringify(body), 'body');
 
     await fetch('https://api.pinmaps.co.uk/generate', {
       method: 'POST',
