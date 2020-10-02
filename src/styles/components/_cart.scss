@@ -136,7 +136,6 @@
   @include _typography.text(xs);
   @include _skeleton.skeleton;
   display: block;
-  margin-top: (_variables.$core-grid / 2);
   font-style: italic;
   font-variation-settings: 'wght' _variables.$core-secondary-font-weight;
 }

@@ -23,20 +23,25 @@ async function renderKeyMap(keyMapData: Object) {
   }
 }
 
+function formatPins(pin: any) {
+  const title = pin.title ? ` - ${pin.title}` : '';
+
+  return `${pin.color}${title}`;
+}
+
 function buildPropertyData(product: HTMLElement, keyMapData: any) {
   const basketButton = product.querySelector('[data-add-to-basket]');
-  const labels = { ...keyMapData.labels };
-  const propertyData = {
-    title: keyMapData.title,
-    frameSize: keyMapData.frameSize,
-    labels,
-    type: keyMapData.type
-  }
+  const pins = keyMapData.labels.map(formatPins).join(', ');
+  const propertyData = [
+    { key: 'Title', value: keyMapData.title },
+    { key: 'Size', value: keyMapData.frameSize },
+    { key: 'Pins', value: pins },
+    { key: 'Type', value: keyMapData.type }
+  ]
 
   if (basketButton === null) return;
 
-  const value = JSON.stringify(propertyData)
-  const customAttributes = JSON.stringify({ key: 'map', value });
+  const customAttributes = JSON.stringify(propertyData);
 
   basketButton.setAttribute('data-variant-options', customAttributes);
 }
@@ -59,13 +64,12 @@ function buildKeyMapData(product: HTMLElement, formdata: FormData, target: HTMLB
   const type = product.getAttribute('data-product-color');
   const size = formdata.get('size')?.toString().split(' (')[0].toLowerCase();
   const title = formdata.get('title');
-  const colors = formdata.getAll('colors').filter(color => color !== 'none');
+  const colors = formdata.getAll('colors').filter(color => color !== '');
   const showKeyText = formdata.get('show key text') as string;
   const keys = formdata.getAll('key');
   const labels = colors
     .map((color, index) => buildLabelsData(color, keys, showKeyText, index))
     .filter(label => label.color !== '');
-
 
   const keyMapData = {
     title,
