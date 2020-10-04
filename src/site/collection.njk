@@ -5,7 +5,7 @@ pagination:
     alias: category
     addAllPagesToCollections: true
 renderData:
-  title: "{{category.title}}"
+  title: "{{category.title | safe}}"
   description: "{{category.metaDescription | safe}}"
   heroTitle: "{{category.title}}"
   heroImage: "{{category.heroImage}}"

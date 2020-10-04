@@ -15,8 +15,7 @@
         <!-- PAGE TITLE -->
         <title>
             {{ renderData.title or title }}
-            &mdash;
-            {{settings.name}}
+            {% if home %} &mdash; {{settings.name}}{% endif %}
         </title>
 
         <!-- RESOURCE HINTS -->
