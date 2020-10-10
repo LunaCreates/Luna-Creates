@@ -19,11 +19,13 @@ function Checkout() {
   function fetchExistingCheckout() {
     const checkoutId  = existingCheckoutId as string;
 
-    shopify.checkout.fetch(checkoutId).then(checkout => {
-      if (checkout.lineItems.length > 0) {
-        updateCartCount(checkout);
-      }
-    });
+    shopify.checkout.fetch(checkoutId)
+      .then(checkout => {
+        if (checkout.lineItems.length > 0) {
+          updateCartCount(checkout);
+        }
+      })
+      .catch(createCheckout);
   }
 
   function init() {
