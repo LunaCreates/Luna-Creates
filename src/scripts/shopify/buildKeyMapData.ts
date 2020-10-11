@@ -23,10 +23,35 @@ async function renderKeyMap(keyMapData: Object) {
   }
 }
 
+function formatColor(color: string) {
+  switch (color) {
+    case '#F8C3D3':
+      return 'Pink';
+    case '#84B6F9':
+      return 'Light Blue';
+    case '#538B65':
+      return 'Green';
+    case '#9D89E6':
+      return 'Purple';
+    case '#FFFFFF':
+      return 'White';
+    case '#EDD771':
+      return 'Yellow';
+    case '#DE3947':
+      return 'Red';
+    case '#475A88':
+      return 'Blue';
+    case '#ED8733':
+      return 'Orange';
+    default:
+      return 'Black';
+  }
+}
+
 function formatPins(pin: any) {
   const title = pin.title ? ` - ${pin.title}` : '';
 
-  return `${pin.color}${title}`;
+  return `${formatColor(pin.color)}${title}`;
 }
 
 function buildPropertyData(product: HTMLElement, keyMapData: any) {
