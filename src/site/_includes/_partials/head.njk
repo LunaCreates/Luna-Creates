@@ -17,6 +17,7 @@
 
         <!-- RESOURCE HINTS -->
         <link rel="preconnect" href="https://cdn.shopify.com">
+        <link rel="preconnect" href="https://polyfill.io">
         <link rel="preconnect" href="https://www.googletagmanager.com">
         <link rel="preconnect" href="https://www.google-analytics.com">
         <link rel="preconnect" href="https://www.facebook.com">
@@ -24,6 +25,7 @@
         <!-- PRELOAD FILES -->
         <link rel="preload" href="/fonts/avenir-next-variable.woff2" as="font" type="font/woff2" crossorigin="anonymous">
         <link href="https://www.googletagmanager.com/gtag/js?id=UA-117442723-1" rel="preload" as="script">
+        <link href="https://polyfill.io/v3/polyfill.min.js?features=ResizeObserver" rel="preload" as="script">
 
         {% if renderData.heroImage or heroImage %}
             {% set image = renderData.heroImage or heroImage %}
@@ -151,6 +153,8 @@
 
         <!-- JAVASCRIPT -->
         {% include "_partials/scripts.njk" %}
+
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=ResizeObserver"></script>
     </head>
 
     <body>
@@ -158,7 +162,6 @@
         <noscript>
             <div>
                 <p>You currently have JavaScript in your browser turned off, so some features of this site may not work fully.</p>
-                <p>Find out
-                    <a href="http://enable-javascript.com" rel="external" target="_blank">how to turn JavaScript on</a>.</p>
+                <p>Find out <a href="http://enable-javascript.com" rel="external" target="_blank">how to turn JavaScript on</a>.</p>
             </div>
         </noscript>
