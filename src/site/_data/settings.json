@@ -45,6 +45,10 @@
     {
       "title": "Delivery",
       "url": "/delivery/"
+    },
+    {
+      "title": "FAQ",
+      "url": "/faqs/"
     }
   ],
   "social": [

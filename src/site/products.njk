@@ -12,6 +12,12 @@ sitemap:
 {% include "_partials/hero.njk" %}
 
 <main id="main">
+    {% if products.description %}
+        <div class="hero__body products--container">
+            {{products.description | safe}}
+        </div>
+    {% endif %}
+
     <ul class="products products--container">
         {% for product in products %}
             <li class="products__product">

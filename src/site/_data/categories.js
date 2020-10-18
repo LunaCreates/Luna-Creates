@@ -23,6 +23,7 @@ async function allCollectionsData() {
             edges {
               node {
                 title
+                descriptionHtml
                 handle
                 image {
                   originalSrc
@@ -103,6 +104,7 @@ async function allCollectionsData() {
 
     return {
       title: item.title,
+      description: item.descriptionHtml,
       slug: item.handle,
       heroImage: item.image.originalSrc.split('.jpg')[0],
       products: products,
