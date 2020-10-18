@@ -19,9 +19,11 @@ sitemap:
 {% include "_partials/hero.njk" %}
 
 <main id="main">
-    <div class="hero__body products--container">
-        <p>Pin your adventures on a personalised Travel World Map and discover new places to explore. These extremely engaging and unique personalised designs make the ideal gift for any occasion.</p>
-    </div>
+    {% if category.description %}
+        <div class="hero__body products--container">
+            {{category.description | safe}}
+        </div>
+    {% endif %}
 
     <ul class="products products--container">
         {% for product in category.products %}

@@ -87,9 +87,16 @@ async function allProductsData() {
     return arr.filter(tag => tag.match(/black|white|grey|kids/));
   }
 
+  function formatVariants(variants) {
+    const result = Object.assign({}, ...variants.map(variant => ({ [variant.name]: variant.value })));
+
+    return JSON.stringify(result);
+  }
+
   function formatOptions(option) {
     return {
       id: option.node.id,
+      variants: formatVariants(option.node.selectedOptions),
       name: option.node.selectedOptions[0].name,
       value: option.node.selectedOptions[0].value,
       price: option.node.priceV2.amount
