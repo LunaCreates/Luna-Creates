@@ -11,7 +11,7 @@
   top: 0;
   left: 0;
   background-color: var(--color-primary);
-  color: var(--color-background);
+  color: var(--color-primary);
   margin: 0;
   padding-top: _variables.$core-grid;
   padding-right: (_variables.$core-grid/ 2);
@@ -23,7 +23,7 @@
   @include _responsive.min(m) {
     padding: 0;
     background-color: transparent;
-    color: var(--color-body);
+    color: var(--color-primary);
   }
 }
 
