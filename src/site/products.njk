@@ -12,11 +12,9 @@ sitemap:
 {% include "_partials/hero.njk" %}
 
 <main id="main">
-    {% if products.description %}
-        <div class="hero__body products--container">
-            {{products.description | safe}}
-        </div>
-    {% endif %}
+    <div class="hero__body products--container">
+        <p>View our range of personalised travel themed products, beautifully hand-drawn and made using high quality materials to last a lifetime and help you record your own special adventures.</p>
+    </div>
 
     <ul class="products products--container">
         {% for product in products %}
