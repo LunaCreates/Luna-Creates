@@ -1,4 +1,6 @@
-<form class="product__form" data-product-form>
+{% set variant = product.options[0] %}
+
+<form class="product__form" data-product-form data-variant-id="{{variant.id}}">
     <div class="product__field">
         <label for="frame-size" class="product__label">Choose your map size</label>
         <div class="product__select-wrapper">
