@@ -11,9 +11,7 @@ function Price(element: HTMLElement) {
 
   function variantChanged(variant: HTMLOptionElement) {
     const productId = element.getAttribute('data-product-id') as string;
-    const variantName = variant.getAttribute('data-name') as string;
-    const variantValue: string | null = variant.textContent;
-    const options = { [variantName]: variantValue };
+    const options = JSON.parse(variant.getAttribute('data-variants') as string);
 
     shopify.product.fetch(productId)
       .then(product => updatePrice(product, options));
