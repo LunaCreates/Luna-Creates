@@ -22,8 +22,8 @@
 .footer__container {
   @include _responsive.min(m) {
     display: grid;
-    grid-gap: 1.75em;
-    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1.5em;
+    grid-template-columns: repeat(3, 1fr) 1.1fr;
   }
 }
 
@@ -55,7 +55,7 @@
   }
 }
 
-.footer__item--title,
+.footer__item--title h3,
 .footer__legend {
   @include _typography.text(md);
   margin-bottom: (_variables.$core-grid * 1.5);
@@ -65,25 +65,23 @@
 }
 
 .footer__link {
+  @include _typography.text(sm);
   position: relative;
   color: var(--color-body);
 
   @media (hover) {
-    &:not(.footer__link--social)::before {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 0;
-      height: 2px;
-      background-color: var(--color-body);
-      transition: width 0.3s ease-in-out;
+    &:not(.footer__link--social) {
+      display: inline;
+      background-image: linear-gradient(var(--color-body), var(--color-body));
+      background-size: 0 2px;
+      background-position: 0 100%;
+      background-repeat: no-repeat;
     }
 
-    &:hover::before,
-    &:focus::before,
-    &:active::before {
-      width: 100%;
+    &:hover,
+    &:focus,
+    &:active {
+      background-size: 100% 2px;
     }
   }
 
@@ -111,9 +109,9 @@
 }
 
 .footer__input {
+  @include _typography.text(sm);
   width: 100%;
   padding: _variables.$core-grid (_variables.$core-grid * 1.5);
-  font-size: 1em;
 }
 
 .footer__submit {
