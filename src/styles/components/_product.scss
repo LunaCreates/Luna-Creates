@@ -12,6 +12,12 @@
   @include _responsive.min(m) {
     display: flow-root;
     padding-top: (_variables.$core-grid * 3.5);
+
+    &::after {
+      content: '';
+      display: table;
+      clear: both;
+    }
   }
 }
 
