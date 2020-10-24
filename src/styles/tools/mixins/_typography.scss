@@ -33,6 +33,11 @@ $headings: (
     font-family: _variables.$core-font-family,
     font-size: unquote('max(#{_pxToRem.rem(14)}, min(1.250vw, #{_pxToRem.rem(16)}))'),
     line-height: unquote('max(#{_pxToRem.rem(23)}, min(2.109vw, #{_pxToRem.rem(28)}))')
+  ),
+  base: (
+    font-family: _variables.$core-font-family,
+    font-size: _pxToRem.rem(16),
+    line-height: _pxToRem.rem(28)
   )
 );
 
