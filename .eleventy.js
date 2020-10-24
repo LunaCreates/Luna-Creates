@@ -3,6 +3,7 @@ const formatDate = require('./src/utils/filters/format-date');
 const htmlMin = require('./src/utils/minify-html.js');
 const swStyles = require('./src/utils/filters/sw-styles.js');
 const swScripts = require('./src/utils/filters/sw-scripts.js');
+const swBuildNumber = require('./src/utils/filters/sw-build-number.js');
 
 module.exports = config => {
   const prod = process.env.NODE_ENV === 'prod';
@@ -10,6 +11,7 @@ module.exports = config => {
   config.addFilter('formatDate', formatDate);
   config.addShortcode('swStyles', swStyles);
   config.addShortcode('swScripts', swScripts);
+  config.addShortcode('swBuildNumber', swBuildNumber);
 
   config.addPassthroughCopy({ 'src/favicons': 'favicons' });
   config.addPassthroughCopy({ 'src/fonts': 'fonts' });
