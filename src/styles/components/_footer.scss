@@ -57,7 +57,7 @@
 
 .footer__item--title h3,
 .footer__legend {
-  @include _typography.text(md);
+  @include _typography.text(sm);
   margin-bottom: (_variables.$core-grid * 1.5);
   font-variation-settings: 'wght' _variables.$core-secondary-font-weight;
   text-transform: uppercase;
@@ -65,7 +65,7 @@
 }
 
 .footer__link {
-  @include _typography.text(sm);
+  @include _typography.text(base);
   position: relative;
   color: var(--color-body);
 
@@ -103,13 +103,13 @@
 }
 
 .footer__label {
-  @include _typography.text(sm);
+  @include _typography.text(base);
   display: block;
   margin-bottom: (_variables.$core-grid * 2);
 }
 
 .footer__input {
-  @include _typography.text(sm);
+  @include _typography.text(base);
   width: 100%;
   padding: _variables.$core-grid (_variables.$core-grid * 1.5);
 }
