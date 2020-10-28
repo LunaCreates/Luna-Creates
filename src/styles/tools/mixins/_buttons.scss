@@ -64,11 +64,6 @@ $buttons: (
     }
 
     @if map.has-key($props, hover) {
-      &:active,
-      &:focus {
-        @include _properties.map-to-props($hover);
-      }
-
       @media (hover) {
         &:hover {
           @include _properties.map-to-props($hover);
