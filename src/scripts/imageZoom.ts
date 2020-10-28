@@ -37,9 +37,14 @@ function ImageZoom(product: HTMLElement) {
     if (isTouchDevice) {
       zoom.style.paddingTop = '0';
       import('pinch-zoom-js').then(runTouchImageZoom);
-      (<any>window).ga('send', 'event', 'Experiment', 'Product Page Description', 'Control');
+
+      (<any>window).gtag('event', 'experiments', {
+        'event_category': 'product_description',
+        'event_label': 'control'
+      });
     } else {
-      import('./desktopImageZoom').then(runDesktopImageZoom);
+      import('.desktop
+      ImageZoom').then(runDesktopImageZoom);
     }
   }
 
