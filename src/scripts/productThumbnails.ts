@@ -28,6 +28,7 @@ function ProductThumbnails(element: HTMLElement) {
 
   function init() {
     element.addEventListener('click', handleClickEvent);
+    (<any>window).ga('send', 'event', 'Experiment', 'Product Page Description', 'Control');
   }
 
   return {
