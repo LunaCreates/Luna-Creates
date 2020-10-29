@@ -17,6 +17,9 @@ $buttons: (
     hover: (
       background-color: lighten(_variables.$core-color-secondary, 25%),
       border-color: lighten(_variables.$core-color-secondary, 25%)
+    ),
+    focus: (
+      outline-color: var(--color-tertiary)
     )
   ),
   secondary: (
@@ -28,6 +31,9 @@ $buttons: (
     hover: (
       background-color: var(--color-foreground),
       color: var(--color-background)
+    ),
+    focus: (
+      outline-color: var(--color-secondary)
     )
   ),
   disabled: (
@@ -44,6 +50,7 @@ $buttons: (
   $props: map.get($buttons, $style);
   $default: map.get($props, default);
   $hover: map.get($props, hover);
+  $focus: map.get($props, focus);
 
   @if $props == null {
     @warn 'button style \"#{$style}\" not found';
@@ -64,10 +71,22 @@ $buttons: (
     }
 
     @if map.has-key($props, hover) {
+      &:active {
+        @include _properties.map-to-props($hover);
+      }
+
       @media (hover) {
         &:hover {
           @include _properties.map-to-props($hover);
         }
+      }
+    }
+
+    @if map.has-key($props, focus) {
+      &:focus {
+        outline-width: 3px;
+        outline-style: solid;
+        @include _properties.map-to-props($focus);
       }
     }
   }
