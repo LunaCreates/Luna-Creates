@@ -37,10 +37,6 @@ function ImageZoom(product: HTMLElement) {
     if (isTouchDevice) {
       zoom.style.paddingTop = '0';
       import('pinch-zoom-js').then(runTouchImageZoom);
-      (<any>window).gtag('event', 'product_description', {
-        'event_category': 'experiments',
-        'event_label': 'control'
-      });
     } else {
       import('./desktopImageZoom').then(runDesktopImageZoom);
     }
@@ -71,6 +67,13 @@ function ImageZoom(product: HTMLElement) {
 
     button.addEventListener('click', handleClick);
     pubSub.subscribe('main/product/image/changed', changeImageZoomSrc);
+
+    if (isTouchDevice && window.outerWidth < 768) {
+      (<any>window).gtag('event', 'product_description', {
+        'event_category': 'experiments',
+        'event_label': 'control'
+      });
+    }
   }
 
   return {
