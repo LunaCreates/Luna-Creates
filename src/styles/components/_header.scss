@@ -44,10 +44,6 @@
   background-color: var(--color-background);
   z-index: _z-index.z(lima);
 
-  @supports (padding-top: env(safe-area-inset-top)) {
-    padding-top: env(safe-area-inset-top, 20px);
-  }
-
   @include _responsive.min(m) {
     max-width: 1140px;
     margin-right: auto;
