@@ -1,0 +1,16 @@
+{% extends "_layouts/default.njk" %}
+
+{% set heroImage = renderData.heroImage or heroImage %}
+{% set heroTitle = renderData.heroTitle or heroTitle %}
+
+{% block content %}
+    <main id="main">
+        <article>
+            {% include "_partials/components/hero.njk" %}
+
+            <div class="post">
+                {{content | safe}}
+            </div>
+        </article>
+    </main>
+{% endblock %}
