@@ -45,5 +45,3 @@ fields:
   default: []
   label: Tags
   description: A list of tags to link blog posts together
-pages:
-- content/blog/test-blog.md
