@@ -1,7 +1,23 @@
 {% include "_partials/head.njk" %}
-{% include "_partials/notification.njk" %}
-{% include "_partials/header.njk" %}
+{% include "_partials/components/notification.njk" %}
+{% include "_partials/components/header.njk" %}
 
-{{ content | safe }}
+{% block content %}
+{% endblock content %}
 
-{% include "_partials/footer.njk" %}
+{% include "_partials/components/footer.njk" %}
+
+{% block foot %}
+{% endblock %}
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script defer src="https://www.googletagmanager.com/gtag/js?id=UA-117442723-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-117442723-1');
+</script>
+
+<img src="https://www.facebook.com/tr?id=738956073219143&amp;ev=PageView" height="1" width="1" style="position: absolute; bottom: 0; left: 0" role="presentation" aria-hidden="true" />
