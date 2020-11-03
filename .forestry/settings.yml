@@ -9,7 +9,7 @@ sections:
   label: Blog
   create: all
   match: "**/*"
-  new_doc_ext: ".md"
+  new_doc_ext: md
   templates:
   - blog-post
 upload_dir: uploads
@@ -19,11 +19,6 @@ use_front_matter_path: false
 file_template: ":filename:"
 build:
   preview_env:
-  - ADMIN_API_TOKEN=a00bcfc6013a845ecafa6fdef7a01a10
-  - ADMIN_API_URL=https://luna-creates.myshopify.com/admin/api/2020-07/graphql.json
-  - ALGOLIA_ADMIN_KEY=664d793951d21ccabc2881307681fc70
-  - ALGOLIA_APPLICATION_ID=9R4CE6G9A3
-  - ALGOLIA_INDEX=docsearch__luna
   - STOREFRONT_API_TOKEN=cfec3febd330e764f5ecf98c6b9a5a44
   - STOREFRONT_API_URL=https://luna-creates.myshopify.com/api/2020-07/graphql.json
   preview_output_directory: dist
