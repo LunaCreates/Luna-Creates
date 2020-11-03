@@ -38,13 +38,10 @@ module.exports = config => {
   });
 
   return {
-    templateFormats: ['njk', 'html', 'liquid'],
-    htmlTemplateEngine: 'njk',
-    markdownTemplateEngine: 'liquid',
-    dataTemplateEngine: 'njk',
     dir: {
       input: 'src/site',
       output: 'dist'
     },
+    passthroughFileCopy: true
   };
 };
