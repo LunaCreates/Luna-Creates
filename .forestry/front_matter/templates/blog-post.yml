@@ -1,4 +1,47 @@
 ---
 label: Blog Post
 hide_body: false
-fields: []
+fields:
+- name: title
+  type: text
+  config:
+    required: true
+  label: Title
+  description: Title of the blog post
+- name: banner_image
+  type: file
+  config:
+    maxSize: 2
+  label: Banner Image
+  description: Will appear in the banner, behind the title
+- name: publish_date
+  type: datetime
+  label: Publish Date
+  description: Date the blog post was published, will be shown on the website
+  config:
+    required: false
+    date_format: DD/MM/YYYY
+    time_format: 
+    display_utc: false
+    export_format: DD/MM/YYYY
+- name: content
+  type: textarea
+  default: ''
+  config:
+    required: true
+    wysiwyg: true
+    schema:
+      format: html-blocks
+  label: Content
+  description: The content of the blog post
+- name: tags
+  type: tag_list
+  default: []
+  label: Tags
+  description: A list of tags to link blog posts together
+- name: thumbnail
+  type: file
+  config:
+    maxSize: 1
+  label: Thumbnail
+  description: Image to be shown on each post in the blog landing page
