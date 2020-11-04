@@ -62,6 +62,12 @@
   }
 }
 
+.hero__title-highlight {
+  padding: (_variables.$core-grid / 3) (_variables.$core-grid / 2);
+  background-color: var(--color-foreground);
+  box-decoration-break: clone;
+}
+
 .hero__body {
   @include _typography.text(sm);
   max-width: 890px;
