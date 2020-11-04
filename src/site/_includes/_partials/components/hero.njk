@@ -32,9 +32,13 @@
 
     <div class="hero__container">
         {% if home %}
-            <p class="hero__title" id="hero-title">{{title | safe}}</p>
+            <p class="hero__title" id="hero-title">
+                <span class="hero__title-highlight">{{title | safe}}</span>
+            </p>
         {% else %}
-            <h1 class="hero__title" id="hero-title">{{title | safe}}</h1>
+            <h1 class="hero__title" id="hero-title">
+                <span class="hero__title-highlight">{{title | safe}}</span>
+            </h1>
         {% endif %}
     </div>
 {% if post %}

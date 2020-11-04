@@ -157,6 +157,10 @@
   display: block;
   width: 100%;
   color: var(--color-heading);
+
+  &::placeholder {
+    font-style: italic;
+  }
 }
 
 .product__select {
