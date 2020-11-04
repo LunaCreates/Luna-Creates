@@ -33,7 +33,7 @@ module.exports = config => {
 
   // Custom collections
   config.addCollection('postFeed', collection => {
-    return [...collection.getFilteredByGlob('./src/posts/*.md').filter(livePosts)]
+    return [...collection.getFilteredByGlob('./src/site/posts/*.md').filter(livePosts)]
       .reverse()
       .slice(0, settings.maxPostsPerPage);
   });
