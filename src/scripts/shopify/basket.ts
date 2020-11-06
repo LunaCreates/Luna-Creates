@@ -7,7 +7,6 @@ export type KeyMapProps = {
 }
 
 function Basket(product: HTMLElement) {
-  const checkoutId = localStorage.getItem('shopify_checkout_id');
   const basketButton = product.querySelector('[data-add-to-basket]');
 
   function storePreviewImages(id: string | null) {
@@ -40,6 +39,8 @@ function Basket(product: HTMLElement) {
   }
 
   function updateBasket(event: Event) {
+    const checkoutId = localStorage.getItem('shopify_checkout_id');
+
     event.preventDefault();
 
     if (!(event.target instanceof HTMLAnchorElement) || !checkoutId || !basketButton) return;
