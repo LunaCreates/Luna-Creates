@@ -204,7 +204,7 @@
   }
 
   @include _responsive.min(m) {
-    display: none;
+    margin-left: (_variables.$core-grid / 2);
   }
 
   @media (prefers-reduced-motion: reduce) {

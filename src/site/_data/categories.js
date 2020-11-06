@@ -38,6 +38,10 @@ async function allCollectionsData() {
                           amount
                           currencyCode
                         }
+                        maxVariantPrice {
+                          amount
+                          currencyCode
+                        }
                       }
                       images(first: 10) {
                         edges {
@@ -69,7 +73,8 @@ async function allCollectionsData() {
   const collections = data.data.collections.edges.map(edge => edge.node);
 
   function formatProducts(product) {
-    const price = product.node.priceRange.minVariantPrice.amount;
+    const minPrice = product.node.priceRange.minVariantPrice.amount;
+    const maxPrice = product.node.priceRange.maxVariantPrice.amount;
     const currency = product.node.priceRange.minVariantPrice.currencyCode;
 
     return {
@@ -77,7 +82,8 @@ async function allCollectionsData() {
       slug: `/products/${product.node.handle}/`,
       mainImageAlt: product.node.images.edges[0].node.altText,
       mainImage: product.node.images.edges[0].node.originalSrc.split('.jpg')[0],
-      price: new Intl.NumberFormat('en-GB', { style: 'currency', currency: currency }).format(price)
+      minPrice: new Intl.NumberFormat('en-GB', { style: 'currency', currency: currency }).format(minPrice),
+      maxPrice: new Intl.NumberFormat('en-GB', { style: 'currency', currency: currency }).format(maxPrice),
     }
   }
 

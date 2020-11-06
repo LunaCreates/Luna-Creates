@@ -2,7 +2,7 @@
 @use '../tools/mixins/responsive' as _responsive;
 
 .logo {
-  display: flex;
+  display: block;
   align-self: center;
 
   @include _responsive.min(m) {
@@ -11,6 +11,7 @@
 }
 
 .logo__icon {
+  display: block;
   width: 180px;
   height: auto;
 
