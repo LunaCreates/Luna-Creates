@@ -1,20 +1,22 @@
-import shopify from './modules/shopify';
+// import shopify from './modules/shopify';
 import { KeyMapProps } from './shopify/basket'
 
 type ImageTypes = {
-  src: string,
+  originalSrc: string,
   altText: string
 }
 
-interface Checkout extends ShopifyBuy.Cart {
-  webUrl: string
+const headers = {
+  'Access-Control-Allow-Origin': '*',
+  'Access-Control-Allow-Headers': 'Content-Type',
+  'Content-Type': 'application/json'
 }
 
 function Cart(form: HTMLFormElement) {
-  const checkoutId = localStorage.getItem('shopify_checkout_id');
+  const cart = localStorage.getItem('cart');
 
   function buildImage(image: ImageTypes) {
-    const imageSrc = image.src.split('.jpg')[0];
+    const imageSrc = image.originalSrc.split('.jpg')[0];
     const imageAlt = image.altText;
 
     return `
@@ -24,26 +26,27 @@ function Cart(form: HTMLFormElement) {
     `
   }
 
-  function renderOptions(option: any) {
-    const key = option.attrs.key.value;
-    const value = option.attrs.value.value;
+  function renderAttributes(attribute: any) {
+    const key = attribute.key;
+    const value = attribute.value;
 
     return `<small class="cart__table-options"><strong>${key}</strong>: ${value}</small>`
   }
 
   function renderCartItem(item: any, index: number) {
-    const options = item.customAttributes;
-    const price = parseInt(item.variant.priceV2.amount, 10);
-    const total = price * item.quantity;
-    const keyMapId = item.variant.attrs.id.value;
+    const attributes = item.node.customAttributes;
+    const price = parseInt(item.node.variant.priceV2.amount, 10);
+    const total = price * item.node.quantity;
+    const keyMapId = item.node.variant.id;
+    const productId = item.node.id;
 
     const html = `
       <tr>
         <th class="cart__table-product">
-          ${buildImage(item.variant.image)}
+          ${buildImage(item.node.variant.image)}
           <div class="cart__table-content">
-            <span class="cart__table-title">${item.title}</span>
-            ${options.map(renderOptions).join('')}
+            <span class="cart__table-title">${item.node.title}</span>
+            ${attributes.map(renderAttributes).join('')}
           </div>
         </th>
         <td>&pound;${price.toFixed(2)}</td>
@@ -51,11 +54,11 @@ function Cart(form: HTMLFormElement) {
           <input type="text" id="variant-${index}" name="variant" value="${item.id}" class="cart__variant">
 
           <label class="cart__label" for="quantity-${index}">Quantity</label>
-          <input type="number" id="quantity-${index}" name="quantity" value="${item.quantity}" min="1" class="cart__quantity" pattern="[0-9]*">
+          <input type="number" id="quantity-${index}" name="quantity" value="${item.node.quantity}" min="1" class="cart__quantity" pattern="[0-9]*">
         </td>
         <td>&pound;${total.toFixed(2)}</td>
         <td>
-          <button class="cart__remove" type="button" aria-label="Remove item" data-product-id="${item.id}" data-key-map-id="${keyMapId}">
+          <button class="cart__remove" type="button" aria-label="Remove item" data-product-id="${productId}" data-key-map-id="${keyMapId}">
             <svg class="cart__icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
               <path d="M4 10v20c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V10H4zm6 18H8V14h2v14zm4 0h-2V14h2v14zm4 0h-2V14h2v14zm4 0h-2V14h2v14zM26.5 4H20V1.5c0-.825-.675-1.5-1.5-1.5h-7c-.825 0-1.5.675-1.5 1.5V4H3.5C2.675 4 2 4.675 2 5.5V8h26V5.5c0-.825-.675-1.5-1.5-1.5zM18 4h-6V2.025h6V4z"/>
             </svg>
@@ -84,7 +87,7 @@ function Cart(form: HTMLFormElement) {
     return ''
   }
 
-  function renderTableData(checkout: Checkout) {
+  function renderTableData(lineItems: any) {
     form.innerHTML = `
       <div class="cart__inner">
           <table class="cart__table">
@@ -98,7 +101,7 @@ function Cart(form: HTMLFormElement) {
               </thead>
 
               <tbody class="cart__table-body">
-                ${checkout.lineItems.map(renderCartItem).join('')}
+                ${lineItems.map(renderCartItem).join('')}
               </tbody>
           </table>
       </div>
@@ -108,12 +111,12 @@ function Cart(form: HTMLFormElement) {
           ${renderKeyMapImages()}
         </div>
         <div class="cart__content">
-          <p class="cart__subtotal"><strong>Subtotal:</strong> &pound;${checkout.subtotalPrice}</p>
+          <p class="cart__subtotal"><strong>Subtotal:</strong> &pound;SUBTOTAL</p>
           <p class="cart__shipping">Shipping &amp; taxes calculated at checkout</p>
 
           <div class="cart__buttons">
               <button type="submit" class="cart__update">Update</button>
-              <a href="${checkout.webUrl}" class="cart__checkout">Checkout</a>
+              <button class="cart__checkout" data-checkout>Checkout</a>
           </div>
         </div>
       </div>
@@ -129,12 +132,24 @@ function Cart(form: HTMLFormElement) {
     `
   }
 
-  function updateCartItems(checkout: Checkout) {
-    if (checkout.lineItems.length > 0) {
-      renderTableData(checkout);
-    } else {
-      renderNoItemsData();
-    }
+  function updateCartItems(data: any) {
+    const lineItems = data.lineItems.edges;
+
+    localStorage.setItem('shopify', JSON.stringify(data));
+    (lineItems.length > 0) ? renderTableData(lineItems) : renderNoItemsData();
+  }
+
+  function updateLocalCart(data: any) {
+    const lineItems = data.lineItems.edges;
+    const lineItemsToAdd = lineItems.map((item: any) => {
+      const customAttributes = item.node.customAttributes;
+      const variantId = item.node.variant.id;
+      const quantity = item.node.quantity;
+
+      return { customAttributes, variantId, quantity }
+    })
+
+    localStorage.setItem('cart', JSON.stringify(lineItemsToAdd));
   }
 
   function removeKeyMapImage(keyMapId: string) {
@@ -147,18 +162,29 @@ function Cart(form: HTMLFormElement) {
     }
   }
 
-  function removeProductItem(target: HTMLButtonElement) {
-    const productToRemove: Array<string> = [];
-    const productId = target.getAttribute('data-product-id') as string;
+  async function fetchShopifyData(productId: string) {
+    const checkoutData = JSON.parse(localStorage.getItem('shopify') as string);
+    const checkoutId = checkoutData.id;
+    const lineItems = checkoutData.lineItems.edges;
+    const body = { checkoutId, lineItems, productId };
+    const checkout = await fetch('/.netlify/functions/checkout-delete', {
+      method: 'POST',
+      headers,
+      body: JSON.stringify(body)
+    });
+
+    const response = await checkout.json();
+    return response.data.checkoutLineItemsReplace.checkout;
+  }
+
+  async function removeProductItem(target: HTMLButtonElement) {
     const keyMapId = target.getAttribute('data-key-map-id') as string;
+    const productId = target.getAttribute('data-product-id') as string;
+    const data = await fetchShopifyData(productId);
 
-    if (checkoutId === null) return;
-
-    productToRemove.push(productId);
-
-    removeKeyMapImage(keyMapId);
-    shopify.checkout.removeLineItems(checkoutId, productToRemove)
-      .then(() => window.location.pathname = '/cart/');
+    updateCartItems(data);
+    updateLocalCart(data);
+    // removeKeyMapImage(keyMapId);
   }
 
   function handleClickEvent(event: Event) {
@@ -182,18 +208,19 @@ function Cart(form: HTMLFormElement) {
     const items = variants.map((v, i) => formatLineItems(v, i, quantities));
 
     event.preventDefault();
-
-    if (checkoutId === null) return renderNoItemsData();
-
-    shopify.checkout.updateLineItems(checkoutId, items)
-      .then(() => window.location.pathname = '/cart/');
   }
 
+  async function init() {
+    const checkout = await fetch('/.netlify/functions/checkout-create', {
+      method: 'POST',
+      headers,
+      body: cart
+    });
+    const response = await checkout.json();
+    const checkoutData = response.data.checkoutCreate.checkout;
 
-  function init() {
-    if (checkoutId === null) return;
+    updateCartItems(checkoutData);
 
-    shopify.checkout.fetch(checkoutId).then(updateCartItems);
     form.addEventListener('click', handleClickEvent);
     form.addEventListener('submit', handleSubmitEvent);
   }
