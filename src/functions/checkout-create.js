@@ -44,6 +44,9 @@ exports.handler = async function (event, context, callback) {
                 }
               }
             }
+            subtotalPriceV2 {
+              amount
+            }
           }
           checkoutUserErrors {
             field

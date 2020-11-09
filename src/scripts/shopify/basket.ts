@@ -1,6 +1,6 @@
 import pubSub from '../modules/pubSub';
 
-export type KeyMapProps = {
+export interface KeyMapProps {
   id: string,
   image: string
 }
@@ -24,12 +24,8 @@ function Basket(product: HTMLElement) {
     const basket = JSON.parse(localStorage.getItem('cart') as string) || [];
 
     basket.push(lineItemsToAdd);
-
-    // console.log(lineItemsToAdd, 'lineItemsToAdd');
-    // console.log(basket, 'basket');
-
     localStorage.setItem('cart', JSON.stringify(basket));
-    window.location.href = '/cart/';
+    window.location.pathname = '/cart/';
   }
 
   function setAttributes(variant: HTMLOptionElement) {

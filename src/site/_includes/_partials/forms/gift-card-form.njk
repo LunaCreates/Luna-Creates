@@ -6,7 +6,7 @@
         <div class="product__select-wrapper">
             <select name="size" id="map-size" class="product__select" data-product-variants="data-product-variants">
                 {% for option in product.options %}
-                    <option value="{{option.value}}" data-name="{{option.name}}" data-id="{{option.id}}">{{option.value}}</option>
+                    <option value="{{option.value}}" data-name="{{option.name}}" data-id="{{option.id}}" data-price="{{option.price}}">{{option.value}}</option>
                 {% endfor %}
             </select>
             <svg class="product__select-icon" width="24" height="24" aria-hidden="true">

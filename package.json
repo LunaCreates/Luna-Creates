@@ -27,7 +27,6 @@
     "@11ty/eleventy-cache-assets": "^2.0.3",
     "@glidejs/glide": "^3.4.1",
     "@types/node": "^13.13.30",
-    "@types/shopify-buy": "^1.11.1",
     "algoliasearch": "^4.6.0",
     "autoprefixer": "^9.8.6",
     "chroma-js": "^2.1.0",
@@ -36,8 +35,7 @@
     "lazysizes": "^5.2.2",
     "node-fetch": "^2.6.1",
     "pinch-zoom-js": "^2.3.4",
-    "sass": "^1.29.0",
-    "shopify-buy": "^2.11.0"
+    "sass": "^1.29.0"
   },
   "devDependencies": {
     "concurrently": "^5.3.0",

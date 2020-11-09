@@ -1,10 +1,4 @@
-// import shopify from './modules/shopify';
 import { KeyMapProps } from './shopify/basket'
-
-type ImageTypes = {
-  originalSrc: string,
-  altText: string
-}
 
 const headers = {
   'Access-Control-Allow-Origin': '*',
@@ -13,9 +7,21 @@ const headers = {
 }
 
 function Cart(form: HTMLFormElement) {
-  const cart = localStorage.getItem('cart');
+  const cart = JSON.parse(localStorage.getItem('cart') as string) as ShopifyStorefront.CheckoutCreate[];
 
-  function buildImage(image: ImageTypes) {
+  async function fetchShopifyData(body: ShopifyStorefront.CheckoutCreate[]) {
+    const checkout = await fetch('/.netlify/functions/checkout-create', {
+      method: 'POST',
+      headers,
+      body: JSON.stringify(body)
+    });
+
+    const response = await checkout.json();
+
+    return response.data.checkoutCreate.checkout;
+  }
+
+  function buildImage(image: ShopifyStorefront.ImageTypes) {
     const imageSrc = image.originalSrc.split('.jpg')[0];
     const imageAlt = image.altText;
 
@@ -37,8 +43,7 @@ function Cart(form: HTMLFormElement) {
     const attributes = item.node.customAttributes;
     const price = parseInt(item.node.variant.priceV2.amount, 10);
     const total = price * item.node.quantity;
-    const keyMapId = item.node.variant.id;
-    const productId = item.node.id;
+    const variantId = item.node.variant.id;
 
     const html = `
       <tr>
@@ -51,14 +56,14 @@ function Cart(form: HTMLFormElement) {
         </th>
         <td>&pound;${price.toFixed(2)}</td>
         <td>
-          <input type="text" id="variant-${index}" name="variant" value="${item.id}" class="cart__variant">
+          <input type="text" id="variant-${index}" name="variant" value="${variantId}" class="cart__variant">
 
           <label class="cart__label" for="quantity-${index}">Quantity</label>
           <input type="number" id="quantity-${index}" name="quantity" value="${item.node.quantity}" min="1" class="cart__quantity" pattern="[0-9]*">
         </td>
         <td>&pound;${total.toFixed(2)}</td>
         <td>
-          <button class="cart__remove" type="button" aria-label="Remove item" data-product-id="${productId}" data-key-map-id="${keyMapId}">
+          <button class="cart__remove" type="button" aria-label="Remove item" data-variant-id="${variantId}">
             <svg class="cart__icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
               <path d="M4 10v20c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V10H4zm6 18H8V14h2v14zm4 0h-2V14h2v14zm4 0h-2V14h2v14zm4 0h-2V14h2v14zM26.5 4H20V1.5c0-.825-.675-1.5-1.5-1.5h-7c-.825 0-1.5.675-1.5 1.5V4H3.5C2.675 4 2 4.675 2 5.5V8h26V5.5c0-.825-.675-1.5-1.5-1.5zM18 4h-6V2.025h6V4z"/>
             </svg>
@@ -87,7 +92,11 @@ function Cart(form: HTMLFormElement) {
     return ''
   }
 
-  function renderTableData(lineItems: any) {
+  function renderTableData(data: any) {
+    const lineItems = data.lineItems.edges;
+    const subtotal = parseInt(data.subtotalPriceV2.amount, 10);
+    const checkoutUrl = data.webUrl;
+
     form.innerHTML = `
       <div class="cart__inner">
           <table class="cart__table">
@@ -111,12 +120,12 @@ function Cart(form: HTMLFormElement) {
           ${renderKeyMapImages()}
         </div>
         <div class="cart__content">
-          <p class="cart__subtotal"><strong>Subtotal:</strong> &pound;SUBTOTAL</p>
+          <p class="cart__subtotal"><strong>Subtotal:</strong> &pound;${subtotal.toFixed(2)}</p>
           <p class="cart__shipping">Shipping &amp; taxes calculated at checkout</p>
 
           <div class="cart__buttons">
               <button type="submit" class="cart__update">Update</button>
-              <button class="cart__checkout" data-checkout>Checkout</a>
+              <a href="${checkoutUrl}" class="cart__checkout">Checkout</a>
           </div>
         </div>
       </div>
@@ -132,95 +141,63 @@ function Cart(form: HTMLFormElement) {
     `
   }
 
-  function updateCartItems(data: any) {
-    const lineItems = data.lineItems.edges;
+  async function updateCartItems(data: ShopifyStorefront.CheckoutCreate[]) {
+    const checkoutData = await fetchShopifyData(data);
+    const lineItems = checkoutData.lineItems.edges;
 
-    localStorage.setItem('shopify', JSON.stringify(data));
-    (lineItems.length > 0) ? renderTableData(lineItems) : renderNoItemsData();
+    lineItems.length > 0 ? renderTableData(checkoutData) : renderNoItemsData();
   }
 
-  function updateLocalCart(data: any) {
-    const lineItems = data.lineItems.edges;
-    const lineItemsToAdd = lineItems.map((item: any) => {
-      const customAttributes = item.node.customAttributes;
-      const variantId = item.node.variant.id;
-      const quantity = item.node.quantity;
-
-      return { customAttributes, variantId, quantity }
-    })
-
-    localStorage.setItem('cart', JSON.stringify(lineItemsToAdd));
-  }
-
-  function removeKeyMapImage(keyMapId: string) {
+  function removeKeyMapImage(variantId: string) {
     const images = JSON.parse(localStorage.getItem('mapPreviews') as string);
 
     if (images && images.length > 0) {
-      const newImages = images.filter((image: KeyMapProps) => image.id !== keyMapId);
+      const newImages = images.filter((image: KeyMapProps) => image.id !== variantId);
 
       localStorage.setItem('mapPreviews', JSON.stringify(newImages));
     }
   }
 
-  async function fetchShopifyData(productId: string) {
-    const checkoutData = JSON.parse(localStorage.getItem('shopify') as string);
-    const checkoutId = checkoutData.id;
-    const lineItems = checkoutData.lineItems.edges;
-    const body = { checkoutId, lineItems, productId };
-    const checkout = await fetch('/.netlify/functions/checkout-delete', {
-      method: 'POST',
-      headers,
-      body: JSON.stringify(body)
-    });
-
-    const response = await checkout.json();
-    return response.data.checkoutLineItemsReplace.checkout;
-  }
-
   async function removeProductItem(target: HTMLButtonElement) {
-    const keyMapId = target.getAttribute('data-key-map-id') as string;
-    const productId = target.getAttribute('data-product-id') as string;
-    const data = await fetchShopifyData(productId);
+    const variantId = target.getAttribute('data-variant-id') as string;
+    const checkoutData = cart.filter((item) => item.variantId !== variantId);
 
-    updateCartItems(data);
-    updateLocalCart(data);
-    // removeKeyMapImage(keyMapId);
+    localStorage.setItem('cart', JSON.stringify(checkoutData));
+    removeKeyMapImage(variantId);
+    updateCartItems(checkoutData);
   }
 
   function handleClickEvent(event: Event) {
     const target = event.target as HTMLElement;
 
-    if (target.hasAttribute('data-product-id')) {
+    if (target.hasAttribute('data-variant-id')) {
       removeProductItem(target as HTMLButtonElement);
     }
   }
 
-  function formatLineItems(variant: FormDataEntryValue, index: number, quantities: Array<FormDataEntryValue>) {
-    const quantity = quantities[index] as string;
+  function formatLineItems(variants: FormDataEntryValue[], quantities: FormDataEntryValue[]) {
+    return variants.map((v, i) => {
+      const q = parseFloat(quantities[i].toString());
 
-    return { id: variant, quantity: parseFloat(quantity) };
+      return { variantId: v, quantity: q };
+    })
   }
 
   function handleSubmitEvent(event: Event) {
     const formData = new FormData(event.target as HTMLFormElement);
     const variants = formData.getAll('variant');
     const quantities = formData.getAll('quantity');
-    const items = variants.map((v, i) => formatLineItems(v, i, quantities));
+    const items = formatLineItems(variants, quantities).reverse();
+    const checkoutData = cart.map((item, i) => Object.assign({}, item, items[i]));
 
     event.preventDefault();
-  }
-
-  async function init() {
-    const checkout = await fetch('/.netlify/functions/checkout-create', {
-      method: 'POST',
-      headers,
-      body: cart
-    });
-    const response = await checkout.json();
-    const checkoutData = response.data.checkoutCreate.checkout;
 
     updateCartItems(checkoutData);
+    localStorage.setItem('cart', JSON.stringify(checkoutData));
+  }
 
+  function init() {
+    updateCartItems(cart);
     form.addEventListener('click', handleClickEvent);
     form.addEventListener('submit', handleSubmitEvent);
   }
