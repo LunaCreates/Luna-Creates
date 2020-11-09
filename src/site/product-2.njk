@@ -1,0 +1,28 @@
+---
+pagination:
+    data: products
+    size: 1
+    alias: product
+    addAllPagesToCollections: true
+renderData:
+    title: "{{product.metaDescription.title | safe}}"
+    description: "{{product.metaDescription.description | safe}}"
+permalink: "/products-2/{{product.slug}}/"
+layout: _layouts/product-2
+tags: product
+sitemap:
+    changefreq: daily
+    priority: 1
+---
+
+{% include "_partials/components/quotes.njk" %}
+
+<section class="returns returns--container">
+    <hr class="returns__rule">
+
+    <h3 class="returns__title">Returns &amp; refunds</h3>
+
+    <p>Please note: as our goods are personalised, bespoke and made-to-order to your specific requirements they are non-refundable, unless faulty.</p>
+
+    <p>Please do get in touch if you have any queries - very happy to help where possible!</p>
+</section>

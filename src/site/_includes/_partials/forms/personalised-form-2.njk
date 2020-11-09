@@ -1,0 +1,152 @@
+{% import "_macros/pin-colors.njk" as pinMapColors %}
+
+{% if 'Kids' in product.tags %}
+    {% set titleHolder = 'E.g. Jack\'s Adventures' %}
+    {% set pinHolder = 'E.g. Jack\'s Travels' %}
+{% else %}
+    {% set titleHolder = 'E.g. Mark & Emma\'s world travels' %}
+    {% set pinHolder = 'E.g. Alex\'s Travels' %}
+{% endif %}
+
+<form class="product__form" data-product-form>
+    <div class="product__field">
+        <p class="product__label">1. Choose your map size</p>
+        <div class="product__select-wrapper">
+            {# <select name="size" id="map-size" class="product__select" data-product-variants>
+            {% for option in product.options %}
+                <option value="{{option.value}}" data-name="{{option.name}}" data-id="{{option.id}}" data-price="{{option.price}}">{{option.value}}</option>
+            {% endfor %}
+            </select>
+            <svg class="product__select-icon" width="24" height="24" aria-hidden="true">
+                <use xlink:href="/icons/sprite.svg#chevron"></use>
+            </svg> #}
+
+            {% for option in product.options %}
+              {% if 'No Frame' in option.value %}
+                {% set sizeDims = option.value | replace(r/-No Frame:£[0-9]+/, '') %}
+                {% set size = sizeDims | replace(r/ (.+)/, '') %}
+                {% set dims = sizeDims | replace(r/[A-Za-z-]+ /, '') | replace('(', '') | replace(')', '') %}
+                {% set height = dims | replace(r/ x [0-9]+mm/, '') %}
+                {% set width = dims | replace(r/[0-9]+ x /, '') | replace('mm', '') %}
+                {% set hypo = (height ** 2 + width ** 2) ** 0.5 // 25.4 | string %}
+                {% set hypo = hypo + '"' %}
+                {% if size === "Small" %}
+                    {% set checked = "checked" %}
+                {% else %}
+                    {% set checked = "" %}
+                {% endif %}
+                <label class="product__select-radio" for="{{size | lower}}">
+                    <input {{checked}} type="radio" name="size" id="{{size | lower}}" style="display: none;" />
+                    <div style="height: {{height // 10}}px; width: {{width // 10}}px"><small>{{hypo}}</small></div>
+                    <p>{{size}}
+                    <small>{{dims}}</small>
+                    </p>
+                    <small>&pound;{{option.price // 1}}</small>
+                </label>
+              {% endif %}
+            {% endfor %}
+        </div>
+        <style>
+            .product__select-wrapper {
+                align-items: flex-end;
+                display: flex;
+                justify-content: space-around;
+            }
+
+            .product__select-wrapper label {
+                cursor: pointer;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .product__select-wrapper label input + div {
+                align-items: center;
+                border: 1px solid var(--color-primary);
+                border-radius: 2px;
+                box-sizing: border-box;
+                display: flex;
+                justify-content: center;
+                margin: auto;
+                margin-bottom: 5px;
+                position: relative;
+            }
+
+            .product__select-wrapper label input + div::before,
+            .product__select-wrapper label input + div::after {
+                background-image: url("/icons/sprite.svg#chevron");
+                background-size: contain;
+                content: "";
+                display: block;
+                height: 10px;
+                width: 10px;
+                position: absolute;
+            }
+
+            .product__select-wrapper label input + div::before {
+                left: 0;
+                bottom: 0;
+            }
+
+            .product__select-wrapper label input + div::after {
+                right: 0;
+                top: 0;
+            }
+            .product__select-wrapper label input:checked + div {
+                border: 2px solid var(--color-success);
+                background-color: #70c0414a;
+            }
+
+            .product__select-wrapper label p {
+                margin-bottom: 3px;
+            }
+
+            .product__select-wrapper label small {
+                display: block;
+            }
+
+            .product__select-wrapper label > small {
+                border-top: 1px solid var(--color-border);
+                padding-top: 3px;
+            }
+        </style>
+    </div>
+
+    <div class="product__personalisation">
+        <h2 class="product__personalisation-title">Personalisation</h2>
+        <p class="product__body">Preview your personalised map key before you buy.</p>
+
+        <div class="product__field">
+            <label for="map-title" class="product__label">Give your map a title</label>
+            <input type="text" name="title" class="product__input" minlength="3" maxlength="36" placeholder="{{titleHolder}}" id="map-title" data-product-map-title required>
+        </div>
+
+        <p class="product__label">Key text</p>
+
+        <div class="product__radios">
+            <label class="product__radio" for="map-key-no">
+                <input class="product__radio-input" type="radio" id="map-key-no" name="show key text" value="no" data-map-key>
+                No
+            </label>
+
+            <label class="product__radio" for="map-key-yes">
+                <input class="product__radio-input" type="radio" id="map-key-yes" name="show key text" value="yes" checked data-map-key>
+                Yes
+            </label>
+        </div>
+
+        <p class="product__label">Select your pin colours</p>
+
+        <div class="pin-colors pin-colors--key-text" data-pin-colors>
+            {{pinMapColors.pinColors('1', true, pinHolder )}}
+            {{pinMapColors.pinColors('2')}}
+            {{pinMapColors.pinColors('3')}}
+            {{pinMapColors.pinColors('4')}}
+            {{pinMapColors.pinColors('5')}}
+            {{pinMapColors.pinColors('6')}}
+        </div>
+
+        <button type="submit" class="product__button" data-product-submit>Preview &amp; Add To Basket</button>
+    </div>
+</form>
