@@ -52,9 +52,9 @@ function observe(callback: Function, elements: NodeList) {
  * ******* */
 
 observe((element: HTMLElement) => {
-  // import(/* webpackChunkName: "checkout" */ 'Src/scripts/shopify/checkout')
-  //   .then(module => initModule(module, element))
-  //   .catch(err => console.error(`Error in: Checkout - ${err}`));
+  import(/* webpackChunkName: "cartQuantity" */ 'Src/scripts/shopify/cartQuantity')
+    .then(module => initModule(module, element))
+    .catch(err => console.error(`Error in: Cart Quantity - ${err}`));
 
   import(/* webpackChunkName: "trigger-search" */ 'Src/scripts/triggerSearch')
     .then(module => initModule(module, element))

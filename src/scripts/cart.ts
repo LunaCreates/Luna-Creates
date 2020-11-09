@@ -1,3 +1,4 @@
+import pubSub from './modules/pubSub';
 import { KeyMapProps } from './shopify/basket'
 
 const headers = {
@@ -162,9 +163,10 @@ function Cart(form: HTMLFormElement) {
     const variantId = target.getAttribute('data-variant-id') as string;
     const checkoutData = cart.filter((item) => item.variantId !== variantId);
 
-    localStorage.setItem('cart', JSON.stringify(checkoutData));
     removeKeyMapImage(variantId);
     updateCartItems(checkoutData);
+    localStorage.setItem('cart', JSON.stringify(checkoutData));
+    pubSub.publish('cart/changed', null);
   }
 
   function handleClickEvent(event: Event) {
@@ -194,6 +196,7 @@ function Cart(form: HTMLFormElement) {
 
     updateCartItems(checkoutData);
     localStorage.setItem('cart', JSON.stringify(checkoutData));
+    pubSub.publish('cart/changed', null);
   }
 
   function init() {
