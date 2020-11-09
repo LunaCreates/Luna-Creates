@@ -66,6 +66,7 @@ function DesktopImageZoom(modal: HTMLElement) {
     const y = (posY - top) - window.pageYOffset;
 
     isActive = true;
+    magnified.style.display = 'block';
     drawMask(x, y);
   }
 
@@ -83,21 +84,22 @@ function DesktopImageZoom(modal: HTMLElement) {
     handleMove(posX, posY);
   }
 
-  function handleMouseStart(event: MouseEvent) {
+  function handleMouseClick(event: MouseEvent) {
     const posX = event.pageX;
     const posY = event.pageY;
 
-    magnified.style.display = 'block';
-
-    handleStart(posX, posY);
+    if (isActive) {
+      handleMoveEnd();
+    } else {
+      handleStart(posX, posY);
+    }
   }
 
   function addEventListeners() {
     if (picture === null) return;
 
     picture.addEventListener('mousemove', handleMouseMove);
-    picture.addEventListener('mousedown', handleMouseStart, { passive: true });
-    picture.addEventListener('mouseup', handleMoveEnd, { passive: true });
+    picture.addEventListener('click', handleMouseClick, { passive: true });
   }
 
   function changeImageZoomSrc(picture: HTMLElement) {
