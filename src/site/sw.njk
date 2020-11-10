@@ -16,7 +16,7 @@ const cacheFiles = [
   {% swStyles %},
   {% swScripts %},
 {% for product in products %}
-  '{{product.slug}}/'{% if not loop.last %},{% endif %}
+  '/{{product.slug}}/'{% if not loop.last %},{% endif %}
 {% endfor %}
 ];
 
