@@ -67,13 +67,6 @@ function ImageZoom(product: HTMLElement) {
 
     button.addEventListener('click', handleClick);
     pubSub.subscribe('main/product/image/changed', changeImageZoomSrc);
-
-    if (isTouchDevice && window.outerWidth < 768) {
-      (<any>window).gtag('event', 'product_description', {
-        'event_category': 'experiments',
-        'event_label': 'control'
-      });
-    }
   }
 
   return {

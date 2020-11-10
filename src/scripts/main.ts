@@ -164,9 +164,18 @@ const isProductPage = pathname.includes('/products/') && !pathname.endsWith('/pr
 
 if (isProductPage) {
   const product = document.querySelector('[data-component="product-details"]');
+  const isTouchDevice = 'ontouchstart' in document.documentElement;
+
   import(/* webpackChunkName: "shopify" */ 'Src/scripts/shopify/shopify')
     .then(module => initModule(module, product))
     .catch(err => console.error(`Error in: Shopify - ${err}`));
+
+  if (isTouchDevice && window.outerWidth < 768) {
+    (<any>window).gtag('event', 'product_description', {
+      'event_category': 'experiments',
+      'event_label': 'control'
+    });
+  }
 }
 
 export {};
