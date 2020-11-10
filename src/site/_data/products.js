@@ -134,7 +134,7 @@ async function allProductsData() {
     return {
       id: item.id,
       title: item.title,
-      slug: `/products/${item.handle}`,
+      slug: item.handle,
       tags: item.tags,
       description: item.descriptionHtml,
       descriptionSchema: item.description,

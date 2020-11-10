@@ -1,0 +1,16 @@
+{% extends "_layouts/default.njk" %}
+
+{% set heroImage = renderData.heroImage or heroImage %}
+{% set heroTitle = renderData.heroTitle or heroTitle %}
+
+{% block content %}
+    {% include "_partials/components/hero.njk" %}
+
+    <main id="main">
+        <div class="hero__body products--container">
+            <p>View our range of personalised travel themed products, beautifully hand-drawn and made using high quality materials to last a lifetime and help you record your own special adventures.</p>
+        </div>
+
+        {{content}}
+    </main>
+{% endblock %}

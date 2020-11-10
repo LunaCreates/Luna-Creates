@@ -7,7 +7,7 @@ pagination:
 renderData:
     title: "{{product.metaDescription.title | safe}}"
     description: "{{product.metaDescription.description | safe}}"
-permalink: "/{{product.slug}}/"
+permalink: "/products/{{product.slug}}/"
 layout: _layouts/product
 tags: product
 sitemap:
@@ -15,7 +15,7 @@ sitemap:
     priority: 1
 ---
 
-{% include "_partials/quotes.njk" %}
+{% include "_partials/components/quotes.njk" %}
 
 <section class="returns returns--container">
     <hr class="returns__rule">

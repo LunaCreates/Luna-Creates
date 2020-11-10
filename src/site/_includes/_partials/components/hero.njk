@@ -1,7 +1,11 @@
-{% set image = renderData.heroImage or heroImage %}
-{% set title = renderData.heroTitle or heroTitle %}
+{% set image = heroImage %}
+{% set title = heroTitle %}
 
-<section class="hero" aria-labelledby="hero-title">
+{% if post %}
+    <header class="hero" aria-labelledby="hero-title">
+{% else %}
+    <section class="hero" aria-labelledby="hero-title">
+{% endif %}
     <div class="hero__content">
         <picture class="hero__picture">
             <source media="(max-width: 37.4375em)" type="image/webp" data-srcset="{{image}}_300x180_crop_top.jpg.webp 1x, {{image}}_600x360_crop_top.jpg.webp 2x">
@@ -37,7 +41,11 @@
             </h1>
         {% endif %}
     </div>
-</section>
+{% if post %}
+    </header>
+{% else %}
+    </section>
+{% endif %}
 
 {% if home %}
     <p class="hero__body hero--container">We help you to immortalise your travel adventures, whether you’re finding new places to explore or reflecting on past adventures.</p>

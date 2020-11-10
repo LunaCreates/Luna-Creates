@@ -7,6 +7,7 @@
   "instagramName": "lunacreatesdesign",
   "instagramUrl": "https://www.instagram.com/lunacreatesdesign/",
   "githubRepo": "https://github.com/Pushedskydiver/lunacreates.co.uk",
+  "maxPostsPerPage": 9,
   "navigation": [
     {
       "title": "Shop",

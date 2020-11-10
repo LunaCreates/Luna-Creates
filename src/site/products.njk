@@ -3,36 +3,28 @@ title: Products
 description: 'View our stunning Range Of Travel Related Personalised World Map Pinboard Products For Sale. Order today for UK & International delivery.'
 heroTitle: 'Personalised Travel Themed Products'
 heroImage: 'https://cdn.shopify.com/s/files/1/1931/6299/collections/stil-TVllFyGaLEA-unsplash'
-layout: _layouts/default
+layout: _layouts/products
 sitemap:
   changefreq: daily
   priority: 1
 ---
 
-{% include "_partials/hero.njk" %}
+<ul class="products products--container">
+    {% for product in products %}
+        <li class="products__product">
+            <picture class="featured__picture">
+                <source type="image/webp" data-srcset="{{product.mainImage}}_300x300.jpg.webp 1x, {{product.mainImage}}_350x350.jpg.webp 2x">
 
-<main id="main">
-    <div class="hero__body products--container">
-        <p>View our range of personalised travel themed products, beautifully hand-drawn and made using high quality materials to last a lifetime and help you record your own special adventures.</p>
-    </div>
+                <img data-srcset="{{product.mainImage}}_300x300.jpg 1x, {{product.mainImage}}_350x350.jpg 2x" alt="{{product.mainImageAlt}}" class="featured__image lazyload" loading="lazy" width="300" height="300">
 
-    <ul class="products products--container">
-        {% for product in products %}
-            <li class="products__product">
-                <picture class="featured__picture">
-                    <source type="image/webp" data-srcset="{{product.mainImage}}_300x300.jpg.webp 1x, {{product.mainImage}}_350x350.jpg.webp 2x">
+                <noscript>
+                    <source type="image/webp" srcset="{{product.mainImage}}_300x300.jpg.webp 1x, {{product.mainImage}}_350x350.jpg.webp 2x">
 
-                    <img data-srcset="{{product.mainImage}}_300x300.jpg 1x, {{product.mainImage}}_350x350.jpg 2x" alt="{{product.mainImageAlt}}" class="featured__image lazyload" loading="lazy" width="300" height="300">
-
-                    <noscript>
-                        <source type="image/webp" srcset="{{product.mainImage}}_300x300.jpg.webp 1x, {{product.mainImage}}_350x350.jpg.webp 2x">
-
-                        <img srcset="{{product.mainImage}}_300x300.jpg 1x, {{product.mainImage}}_350x350.jpg 2x" alt="{{product.mainImageAlt}}" class="featured__image" loading="lazy" width="300" height="300">
-                    </noscript>
-                </picture>
-                <a class="featured__link" href="{{product.slug}}">{{product.title}}</a>
-                <span class="featured__price">{{product.price}}</span>
-            </li>
-        {% endfor %}
-    </ul>
-</main>
+                    <img srcset="{{product.mainImage}}_300x300.jpg 1x, {{product.mainImage}}_350x350.jpg 2x" alt="{{product.mainImageAlt}}" class="featured__image" loading="lazy" width="300" height="300">
+                </noscript>
+            </picture>
+            <a class="featured__link" href="{{product.slug}}">{{product.title}}</a>
+            <span class="featured__price">{{product.price}}</span>
+        </li>
+    {% endfor %}
+</ul>
