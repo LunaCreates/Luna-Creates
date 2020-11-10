@@ -44,6 +44,10 @@
   margin-bottom: 0;
 }
 
+.cart__table-head th:last-child {
+  opacity: 0;
+}
+
 .cart__table {
   min-width: 600px;
 

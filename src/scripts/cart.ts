@@ -1,5 +1,15 @@
 import pubSub from './modules/pubSub';
-import { KeyMapProps } from './shopify/basket'
+import { KeyMapProps } from './shopify/basket';
+
+export interface KeyMapImages {
+  id: string,
+  image: string
+}
+
+export interface CartBody {
+  keyMapImages: KeyMapImages,
+  checkoutData: ShopifyStorefront.CheckoutData
+}
 
 const headers = {
   'Access-Control-Allow-Origin': '*',
@@ -22,7 +32,7 @@ function Cart(form: HTMLFormElement) {
     return response.data.checkoutCreate.checkout;
   }
 
-  async function fetchCartHtml(body: any) {
+  async function fetchCartHtml(body: CartBody) {
     const checkout = await fetch('/.netlify/functions/cart', {
       method: 'POST',
       headers,
@@ -35,12 +45,11 @@ function Cart(form: HTMLFormElement) {
   }
 
   async function updateCartItems(data: ShopifyStorefront.CheckoutCreate[]) {
-    const checkoutData = await fetchShopifyData(data);
-    const keyMapImages = JSON.parse(localStorage.getItem('mapPreviews') as string);
+    const keyMapImages: KeyMapImages = JSON.parse(localStorage.getItem('mapPreviews') as string);
+    const checkoutData: ShopifyStorefront.CheckoutData = await fetchShopifyData(data);
     const body = { keyMapImages, checkoutData };
-    const cartHtml = await fetchCartHtml(body);
 
-    form.innerHTML = cartHtml;
+    form.innerHTML = await fetchCartHtml(body);
   }
 
   function removeKeyMapImage(variantId: string) {

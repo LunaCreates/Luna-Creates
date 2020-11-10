@@ -65,7 +65,7 @@ function renderImage(image) {
 function renderKeyMapImages(keyMapImages) {
   if (keyMapImages && keyMapImages.length > 0) {
     return `
-      <p class="cart__preview-title">Map preview:</p>
+      <p class="cart__preview-title" aria-hidden="true">Map preview:</p>
       ${keyMapImages.map(renderImage).join('')}
     `;
   }
@@ -88,6 +88,7 @@ function renderTableData(data) {
                     <th>Price</th>
                     <th>Quantity</th>
                     <th>Total</th>
+                    <th>Option</th>
                 </tr>
             </thead>
 
@@ -106,7 +107,7 @@ function renderTableData(data) {
         <p class="cart__shipping">Shipping &amp; taxes calculated at checkout</p>
 
         <div class="cart__buttons">
-            <button type="submit" class="cart__update">Update</button>
+            <button type="submit" class="cart__update">Update Cart</button>
             <a href="${checkoutUrl}" class="cart__checkout">Checkout</a>
         </div>
       </div>
