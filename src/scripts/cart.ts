@@ -21,7 +21,7 @@ function Cart(form: HTMLFormElement) {
   const cart = JSON.parse(localStorage.getItem('cart') as string) as ShopifyStorefront.CheckoutCreate[];
 
   async function fetchShopifyData(body: ShopifyStorefront.CheckoutCreate[]) {
-    const checkout = await fetch('/.netlify/functions/checkout-create', {
+    const checkout = await fetch('/create', {
       method: 'POST',
       headers,
       body: JSON.stringify(body)
@@ -33,7 +33,7 @@ function Cart(form: HTMLFormElement) {
   }
 
   async function fetchCartHtml(body: CartBody) {
-    const checkout = await fetch('/.netlify/functions/cart', {
+    const checkout = await fetch('/items', {
       method: 'POST',
       headers,
       body: JSON.stringify(body)
@@ -62,7 +62,7 @@ function Cart(form: HTMLFormElement) {
     }
   }
 
-  async function removeProductItem(target: HTMLButtonElement) {
+  function removeProductItem(target: HTMLButtonElement) {
     const variantId = target.getAttribute('data-variant-id') as string;
     const checkoutData = cart.filter((item) => item.variantId !== variantId);
 
