@@ -17,8 +17,31 @@ const headers = {
   'Content-Type': 'application/json'
 }
 
-function Cart(form: HTMLFormElement) {
+function Cart(element: HTMLElement) {
+  const form = element.querySelector('[data-form]');
   const cart = JSON.parse(localStorage.getItem('cart') as string) as ShopifyStorefront.CheckoutCreate[];
+
+  function addLoader() {
+    const html = `
+      <div class="loader" data-cart-loader>
+        <img src="/images/loader.svg" aria-hidden="true" class="loader__image">
+        <span class="loader__text">Loading</span>
+      </div>
+    `;
+
+    element.insertAdjacentHTML('beforeend', html);
+  }
+
+  function removeLoader() {
+    const loader = element.querySelector('[data-cart-loader]');
+
+    if (loader === null) return;
+
+    const delayRemove = setTimeout(() => {
+      loader.remove();
+      clearTimeout(delayRemove);
+    }, 1500);
+  }
 
   async function fetchShopifyData(body: ShopifyStorefront.CheckoutCreate[]) {
     const checkout = await fetch('/create', {
@@ -49,7 +72,11 @@ function Cart(form: HTMLFormElement) {
     const checkoutData: ShopifyStorefront.CheckoutData = await fetchShopifyData(data);
     const body = { keyMapImages, checkoutData };
 
+    if (form === null) return;
+
+    addLoader();
     form.innerHTML = await fetchCartHtml(body);
+    // removeLoader();
   }
 
   function removeKeyMapImage(variantId: string) {
@@ -104,6 +131,9 @@ function Cart(form: HTMLFormElement) {
 
   function init() {
     updateCartItems(cart);
+
+    if (form === null) return;
+
     form.addEventListener('click', handleClickEvent);
     form.addEventListener('submit', handleSubmitEvent);
   }

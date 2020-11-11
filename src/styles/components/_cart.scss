@@ -13,6 +13,7 @@
 
 .cart {
   @include _responsive.container;
+  position: relative;
   padding-top: (_variables.$core-grid * 3);
   padding-bottom: (_variables.$core-grid * 3);
   text-align: center;
@@ -230,6 +231,14 @@
 .cart__checkout {
   @include _buttons.button(primary);
   margin-left: (_variables.$core-grid * 2);
+}
+
+.cart__status {
+  display: block;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  overflow: hidden;
 }
 
 .cart__note {
