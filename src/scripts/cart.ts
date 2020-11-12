@@ -70,9 +70,8 @@ function Cart(element: HTMLElement) {
     const checkoutData = cart.filter((item) => item.variantId !== variantId);
 
     removeKeyMapImage(variantId);
-    updateCartItems(checkoutData);
     localStorage.setItem('cart', JSON.stringify(checkoutData));
-    pubSub.publish('cart/changed', null);
+    window.location.pathname = '/cart/';
   }
 
   function handleClickEvent(event: Event) {
@@ -100,9 +99,8 @@ function Cart(element: HTMLElement) {
 
     event.preventDefault();
 
-    updateCartItems(checkoutData);
     localStorage.setItem('cart', JSON.stringify(checkoutData));
-    pubSub.publish('cart/changed', null);
+    window.location.pathname = '/cart/';
   }
 
   function init() {
