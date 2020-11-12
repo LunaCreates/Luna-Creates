@@ -36,6 +36,12 @@ function Bundle() {
     }),
     new HtmlWebpackPlugin({
       inject: false,
+      filename: path.resolve(__dirname, 'src', 'site', '_includes', '_partials', 'preload-styles.njk'),
+      template: path.resolve(__dirname, '_templates', 'preload-styles.njk'),
+      chunks: ['main']
+    }),
+    new HtmlWebpackPlugin({
+      inject: false,
       filename: path.resolve(__dirname, 'src', 'site', '_includes', '_partials', 'styles.njk'),
       template: path.resolve(__dirname, '_templates', 'styles.njk')
     }),

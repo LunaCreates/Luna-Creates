@@ -1,5 +1,5 @@
-{% set image = heroImage %}
-{% set title = heroTitle %}
+{% set image = heroImage or renderData.heroImage %}
+{% set title = heroTitle or renderData.heroTitle %}
 
 {% if post %}
     <header class="hero" aria-labelledby="hero-title">
