@@ -11,8 +11,6 @@ const ImageminWebpWebpackPlugin = require('imagemin-webp-webpack-plugin');
 const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
 const StylelintPlugin = require('stylelint-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
-const Critters = require('critters-webpack-plugin');
-// const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 function Bundle() {
   const plugin = require('./_config/plugins.json');
@@ -35,6 +33,12 @@ function Bundle() {
       filename: path.resolve(__dirname, 'src', 'site', '_includes', '_partials', 'scripts.njk'),
       template: path.resolve(__dirname, '_templates', 'scripts.njk'),
       chunks: ['common']
+    }),
+    new HtmlWebpackPlugin({
+      inject: false,
+      filename: path.resolve(__dirname, 'src', 'site', '_includes', '_partials', 'preload-styles.njk'),
+      template: path.resolve(__dirname, '_templates', 'preload-styles.njk'),
+      chunks: ['main']
     }),
     new HtmlWebpackPlugin({
       inject: false,

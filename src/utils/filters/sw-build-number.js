@@ -1,19 +1,17 @@
-let number = 0;
+let number;
 
-function increment(n) {
-  n++;
+function getRandNumber() {
+  const x = Math.floor((Math.random() * 10) + 1);
 
-  return n;
+  if (x === number) {
+    return getRandNumber();
+  }
+
+  return x;
 }
 
 module.exports = () => {
-  const prod = process.env.NODE_ENV === 'prod';
+  number = getRandNumber();
 
-  if (prod) {
-    number = increment(number);
-
-    return `'lunacreates:${number}'`;
-  }
-
-  return `'lunacreates:${Math.round(Math.random() * 10)}'`;
+  return `'lunacreates:${number}'`;
 }

@@ -52,9 +52,9 @@ function observe(callback: Function, elements: NodeList) {
  * ******* */
 
 observe((element: HTMLElement) => {
-  import(/* webpackChunkName: "checkout" */ 'Src/scripts/shopify/checkout')
+  import(/* webpackChunkName: "cartQuantity" */ 'Src/scripts/shopify/cartQuantity')
     .then(module => initModule(module, element))
-    .catch(err => console.error(`Error in: Checkout - ${err}`));
+    .catch(err => console.error(`Error in: Cart Quantity - ${err}`));
 
   import(/* webpackChunkName: "trigger-search" */ 'Src/scripts/triggerSearch')
     .then(module => initModule(module, element))
@@ -164,9 +164,18 @@ const isProductPage = pathname.includes('/products/') && !pathname.endsWith('/pr
 
 if (isProductPage) {
   const product = document.querySelector('[data-component="product-details"]');
+  const isTouchDevice = 'ontouchstart' in document.documentElement;
+
   import(/* webpackChunkName: "shopify" */ 'Src/scripts/shopify/shopify')
     .then(module => initModule(module, product))
     .catch(err => console.error(`Error in: Shopify - ${err}`));
+
+  if (isTouchDevice && window.outerWidth < 768) {
+    (<any>window).gtag('event', 'product_description', {
+      'event_category': 'experiments',
+      'event_label': 'control'
+    });
+  }
 }
 
 export {};

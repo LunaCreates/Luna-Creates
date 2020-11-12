@@ -1,20 +1,16 @@
 import pubSub from '../modules/pubSub';
-import shopify from '../modules/shopify';
 
 function Price(element: HTMLElement) {
-  function updatePrice(product: ShopifyBuy.Product, options: any) {
+  function updatePrice(variantPrice: number) {
     const price = element.querySelector('[data-product-price]') as HTMLElement;
-    const selectedVariant = shopify.product.helpers.variantForOptions(product, options);
 
-    price.textContent = `£${selectedVariant.price}`;
+    price.textContent = `£${variantPrice.toFixed(2)}`;
   }
 
   function variantChanged(variant: HTMLOptionElement) {
-    const productId = element.getAttribute('data-product-id') as string;
-    const options = JSON.parse(variant.getAttribute('data-variants') as string);
+    const variantPrice = parseFloat(variant.getAttribute('data-price') as string);
 
-    shopify.product.fetch(productId)
-      .then(product => updatePrice(product, options));
+    updatePrice(variantPrice);
   }
 
   function init() {

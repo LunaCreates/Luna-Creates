@@ -17,10 +17,7 @@ async function renderKeyMap(keyMapData: Object) {
   const reader = new FileReader();
 
   reader.readAsDataURL(response);
-  reader.onloadend = () => {
-    const keyMapImage = reader.result as string;
-    stateManager.keyMapCreated(keyMapImage);
-  }
+  reader.onloadend = () => stateManager.keyMapCreated(reader.result as string);
 }
 
 function formatColor(color: string) {

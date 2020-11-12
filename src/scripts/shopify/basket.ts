@@ -1,7 +1,6 @@
 import pubSub from '../modules/pubSub';
-import shopify from '../modules/shopify';
 
-export type KeyMapProps = {
+export interface KeyMapProps {
   id: string,
   image: string
 }
@@ -19,6 +18,14 @@ function Basket(product: HTMLElement) {
 
     images.push({ id, image: image.src });
     localStorage.setItem('mapPreviews', JSON.stringify(images));
+  }
+
+  function storeBasketItem(lineItemsToAdd: any) {
+    const basket = JSON.parse(localStorage.getItem('cart') as string) || [];
+
+    basket.push(lineItemsToAdd);
+    localStorage.setItem('cart', JSON.stringify(basket));
+    window.location.pathname = '/cart/';
   }
 
   function setAttributes(variant: HTMLOptionElement) {
@@ -39,25 +46,20 @@ function Basket(product: HTMLElement) {
   }
 
   function updateBasket(event: Event) {
-    const checkoutId = localStorage.getItem('shopify_checkout_id');
+    if (!(event.target instanceof HTMLAnchorElement) || !basketButton) return;
 
     event.preventDefault();
 
-    if (!(event.target instanceof HTMLAnchorElement) || !checkoutId || !basketButton) return;
-
     const id: string | null = event.target.getAttribute('data-variant-id');
     const attributes = event.target.getAttribute('data-variant-options');
-    const lineItemsToAdd: any = [
-      {
-        variantId: id,
-        quantity: 1,
-        customAttributes: JSON.parse(attributes as string)
-      }
-    ];
+    const lineItemsToAdd: any = {
+      variantId: id,
+      quantity: 1,
+      customAttributes: JSON.parse(attributes as string)
+    };
 
-    shopify.checkout.addLineItems(checkoutId, lineItemsToAdd)
-      .then(() => storePreviewImages(id))
-      .then(() => window.location.pathname = '/cart/');
+    storePreviewImages(id);
+    storeBasketItem(lineItemsToAdd);
   }
 
   function init() {

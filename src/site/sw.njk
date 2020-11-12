@@ -7,7 +7,6 @@ eleventyExcludeFromCollections: true
 const cacheName = {% swBuildNumber %};
 const cacheFiles = [
   '/',
-  '/cart/',
   '/faqs/',
   '/contact-us/',
   '/about-us/',
@@ -17,7 +16,7 @@ const cacheFiles = [
   {% swStyles %},
   {% swScripts %},
 {% for product in products %}
-  '{{product.slug}}/'{% if not loop.last %},{% endif %}
+  '/products/{{product.slug}}/'{% if not loop.last %},{% endif %}
 {% endfor %}
 ];
 

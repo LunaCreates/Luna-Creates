@@ -1,7 +1,3 @@
-import shopify from '../modules/shopify';
-
-const checkoutId = localStorage.getItem('shopify_checkout_id');
-
 function buildAttributesData(formData: FormData) {
   const array = [];
 
@@ -14,23 +10,26 @@ function buildAttributesData(formData: FormData) {
   return array;
 }
 
+function storeBasketItem(lineItemsToAdd: any) {
+  const basket = JSON.parse(localStorage.getItem('cart') as string) || [];
+
+  basket.push(lineItemsToAdd);
+  localStorage.setItem('cart', JSON.stringify(basket));
+  window.location.pathname = '/cart/';
+}
+
 function buildFormData(product: HTMLElement, formData: FormData) {
   const form: HTMLFormElement | null = product.querySelector('[data-product-form]');
   const id = form?.getAttribute('data-variant-id');
   const quantity = formData.get('quantity') as string;
   const attributes = buildAttributesData(formData);
-  const lineItemsToAdd: any = [
-    {
-      variantId: id,
-      quantity: parseFloat(quantity),
-      customAttributes: attributes
-    }
-  ];
+  const lineItemsToAdd: any = {
+    variantId: id,
+    quantity: parseFloat(quantity),
+    customAttributes: attributes
+  };
 
-  if (checkoutId === null) return;
-
-  shopify.checkout.addLineItems(checkoutId, lineItemsToAdd)
-    .then(() => window.location.pathname = '/cart/');
+  storeBasketItem(lineItemsToAdd);
 }
 
 export default buildFormData;

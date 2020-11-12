@@ -17,3 +17,8 @@
 /products/new-baby-mouse-with-balloon-map-print   /products/                301
 /collections/all/world-map                        /collections/maps/        301
 /products/new-baby-small-mouse-with-balloon-map-print /products/            301
+
+
+/create                    /.netlify/functions/checkout-create              200
+/items                     /.netlify/functions/cart                         200
+/newsletter                /.netlify/functions/newsletter                   200
