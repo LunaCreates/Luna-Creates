@@ -16,3 +16,4 @@ yarn-error.log*
 
 # templates
 cache-manifest.json
+.prettierignore
