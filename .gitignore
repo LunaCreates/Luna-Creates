@@ -17,3 +17,6 @@ yarn-error.log*
 # templates
 cache-manifest.json
 .prettierignore
+src/site/_includes/_partials/preload-styles.njk
+src/site/_includes/_partials/scripts.njk
+src/site/_includes/_partials/styles.njk

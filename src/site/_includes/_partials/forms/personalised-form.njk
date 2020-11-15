@@ -76,14 +76,18 @@
 
   <div class="product__personalisation">
     <h2 class="product__personalisation-title">Personalisation</h2>
-    <p class="product__body">Preview your personalised map key before you buy.</p>
-
     <div class="product__field">
-      <label for="map-title" class="product__label">Give your map a title</label>
+      <label for="map-title" class="product__label">
+        Map title
+        <small>Displayed beneath your map</small>
+      </label>
       <input type="text" name="title" class="product__input" minlength="3" maxlength="36" placeholder="{{titleHolder}}" id="map-title" data-product-map-title="data-product-map-title" required="required">
     </div>
 
-    <p class="product__label">Key text</p>
+    <p class="product__label">
+      Pin labels
+      <small>Displayed for each pin colour</small>
+    </p>
 
     <div class="product__radios">
       <label class="product__radio" for="map-key-no">
@@ -97,7 +101,10 @@
       </label>
     </div>
 
-    <p class="product__label">Select your pin colours</p>
+    <p class="product__label">
+      Add free pins
+      <small>30 of each colour included</small>
+    </p>
 
     <div class="pin-colors pin-colors--key-text" data-pin-colors="data-pin-colors">
       {{pinMapColors.pinColors("1", true, pinHolder )}}
@@ -112,6 +119,7 @@
   </div>
 </form>
     <style>
+      /* Size and Frames Pickers */
       .product__select-wrapper {
         align-items: flex-end;
         display: flex;
@@ -225,5 +233,15 @@
 
       .product__select-wrapper.frames label div div.white {
         border-color: white;
+      }
+
+      /* Personalisation */
+      .product__personalisation-title {
+        margin-bottom: 1em;
+      }
+
+      .product__label small {
+        display: block;
+        color: var(--color-body);
       }
     </style>
