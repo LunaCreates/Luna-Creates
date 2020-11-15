@@ -11,16 +11,7 @@
 <form class="product__form" data-product-form="data-product-form">
   <div class="product__field">
     <p class="product__label">1. Choose your map size:</p>
-    <div class="product__select-wrapper">
-      {# <select name="size" id="map-size" class="product__select" data-product-variants="data-product-variants">
-        {% for option in product.options %}
-          <option value="{{option.value}}" data-name="{{option.name}}" data-id="{{option.id}}" data-price="{{option.price}}">{{option.value}}</option>
-        {% endfor %}
-      </select>
-      <svg class="product__select-icon" width="24" height="24" aria-hidden="true">
-        <use xlink:href="/icons/sprite.svg#chevron"></use>
-      </svg> #}
-
+    <div class="product__select-wrapper sizes">
       {% for option in product.options %}
         {% if "No Frame" in option.value %}
           {% set sizeDims = option.value | replace(r/ -No Frame:£[0-9]+/, "") %}
@@ -37,12 +28,19 @@
           <label class="product__select-radio" for="{{size | lower}}">
             <input {{checked}} type="radio" name="size" id="{{size | lower}}" style="display: none;"/>
             <div style="height: {{height // 10}}px; width: {{width // 10}}px">
+              <svg width="24" height="24" aria-hidden="true">
+                <use xlink:href="/icons/sprite.svg#chevron"></use>
+              </svg>
               <small>{{hypo}}</small>
+              <svg width="24" height="24" aria-hidden="true">
+                <use xlink:href="/icons/sprite.svg#chevron"></use>
+              </svg>
             </div>
             <p>{{size}}
               <small>{{dims}}</small>
             </p>
             <small>&pound;{{option.price // 1}}</small>
+            <small class="selected">Selected</small>
           </label>
         {% endif %}
       {% endfor %}
@@ -51,6 +49,29 @@
 
   <div class="product__field">
     <p class="product__label">2. Choose your frame:</p>
+    <div class="product__select-wrapper frames">
+      <label class="product__select-radio" for="frameless">
+        <input checked type="radio" name="frame" id="frameless" style="display: none;"/>
+        <div></div>
+        <p>Frameless</p>
+        <small>+&pound;0</small>
+        <small class="selected">Selected</small>
+      </label>
+      <label class="product__select-radio" for="black">
+        <input type="radio" name="frame" id="black" style="display: none;"/>
+        <div><div class="black"></div></div>
+        <p>Black</p>
+        <small>+&pound;35</small>
+        <small class="selected">Selected</small>
+      </label>
+      <label class="product__select-radio" for="white">
+        <input type="radio" name="frame" id="white" style="display: none;"/>
+        <div><div class="white"></div></div>
+        <p>White</p>
+        <small>+&pound;35</small>
+        <small class="selected">Selected</small>
+      </label>
+    </div>
   </div>
 
   <div class="product__personalisation">
@@ -94,15 +115,18 @@
       .product__select-wrapper {
         align-items: flex-end;
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
       }
 
       .product__select-wrapper label {
+        align-items: center;
         cursor: pointer;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        position: relative;
         text-align: center;
+        -webkit-tap-highlight-color: rgba(0,0,0,0);
+        -webkit-tap-highlight-color: transparent;
       }
 
       .product__select-wrapper label input + div {
@@ -111,34 +135,59 @@
         border-radius: 2px;
         box-sizing: border-box;
         display: flex;
+        flex-direction: row;
+        font-size: 17px;
         justify-content: center;
         margin: auto auto 5px;
         position: relative;
       }
 
-      .product__select-wrapper label input + div::after,
-      .product__select-wrapper label input + div::before {
-        background-image: url("/icons/sprite.svg#chevron");
-        background-size: contain;
-        content: "";
-        display: block;
-        height: 10px;
-        width: 10px;
+      :root {
+        --arrow-distance: -3px;
+      }
+
+      .product__select-wrapper label input + div svg {
         position: absolute;
+        fill: currentColor;
+        height: 1em;
+        width: 1em;
       }
 
-      .product__select-wrapper label input + div::before {
-        left: 0;
-        bottom: 0;
+      .product__select-wrapper label input + div svg:nth-of-type(1) {
+        bottom: var(--arrow-distance);
+        left: var(--arrow-distance);
+        transform: rotate(135deg);
       }
 
-      .product__select-wrapper label input + div::after {
-        right: 0;
-        top: 0;
+      .product__select-wrapper label input + div svg:nth-of-type(2) {
+        top: var(--arrow-distance);
+        transform: rotate(-45deg);
+        right: var(--arrow-distance);
       }
+
+      .product__select-wrapper label .selected {
+        background-color: var(--color-body);
+        border: 0;
+        border-radius: 2px;
+        box-shadow: 0 0 3px rgba(0,0,0,0.15);
+        color: white;
+        font-size: 12px;
+        font-weight: bold;
+        line-height: 1.75;
+        padding: 0 4px;
+
+        /* Default hidden */
+        opacity: 0;
+      }
+
       .product__select-wrapper label input:checked + div {
         border: 2px solid var(--color-success);
         background-color: #70c0414a;
+      }
+
+      .product__select-wrapper label input:checked ~ .selected {
+        background-color: var(--color-success);
+        opacity: 0.85;
       }
 
       .product__select-wrapper label p {
@@ -152,5 +201,29 @@
       .product__select-wrapper label > small {
         border-top: 1px solid var(--color-border);
         padding-top: 3px;
+      }
+
+      .product__select-wrapper.frames label > div {
+        background: var(--color-neutral);
+        border-color: var(--color-border);
+        height: 16vw;
+        max-height: 80px;
+        width: 24vw;
+        max-width: 120px;
+      }
+
+      .product__select-wrapper.frames label div div {
+        border: 5px solid transparent;
+        border-radius: 2px;
+        height: 100%;
+        width: 100%;
+      }
+
+      .product__select-wrapper.frames label div div.black {
+        border-color: black;
+      }
+
+      .product__select-wrapper.frames label div div.white {
+        border-color: white;
       }
     </style>
