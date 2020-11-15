@@ -3,6 +3,10 @@
     <a href="#main" class="skip-link skip-link--hidden">Skip to main content</a>
     <a href="#footer" class="skip-link skip-link--hidden">Skip to footer</a>
 
+    {% if cart %}
+        <a href="#cart" class="skip-link skip-link--hidden">Skip to cart</a>
+    {% endif %}
+
     <div class="header__top">
         <a href="/" class="logo" data-logo>
             <svg class="logo__icon" width="210" height="90" viewBox="0 0 210 90" aria-describedby="logo">

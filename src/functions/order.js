@@ -36,7 +36,7 @@ function formatColor(color) {
 function formatLabels(item) {
   const property = item.split(' - ');
   const color = formatColor(property[0]);
-  const title = property[1];
+  const title = property.length > 1 ? property[1] : '';
 
   return { color, title };
 }
