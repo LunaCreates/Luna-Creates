@@ -1,7 +1,11 @@
+---
+post: true
+---
+
 {% extends "_layouts/default.njk" %}
 
 {% set heroImage = renderData.heroImage or heroImage %}
-{% set heroTitle = renderData.heroTitle or heroTitle %}
+{% set heroTitle = title %}
 
 {% block content %}
     <main id="main">
@@ -9,7 +13,7 @@
             {% include "_partials/components/hero.njk" %}
 
             <div class="post">
-                {{content | safe}}
+                {{ content | safe }}
             </div>
         </article>
     </main>
