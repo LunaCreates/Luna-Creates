@@ -4,17 +4,18 @@ description: 'Blog description'
 heroTitle: 'Our Blog'
 heroImage: 'https://cdn.shopify.com/s/files/1/1931/6299/files/homepage'
 layout: _layouts/blog
-eleventyExcludeFromCollections: true
 ---
 
 {% set postListItems = collections.postFeed %}
 
 <ol class="instagram-collection__images" reversed>
-    {% for item in postListItems %}
-        <li class="instagram-collection__item">
+{% for item in postListItems %}
+    <li class="instagram-collection__item">
+        <article>
             <h2>
-                <a href="{{ item.url }}" rel="bookmark">{{ item.data.title }}</a>
+                <a href="{{ item.url }}">{{ item.data.title }}</a>
             </h2>
-        </li>
-    {% endfor %}
+        </article>
+    </li>
+{% endfor %}
 </ol>
