@@ -24,7 +24,7 @@ fields:
     time_format: 
     display_utc: false
     export_format: DD/MM/YYYY
-- name: content
+- name: body
   type: textarea
   default: ''
   config:
@@ -32,7 +32,7 @@ fields:
     wysiwyg: true
     schema:
       format: html-blocks
-  label: Content
+  label: Body
   description: The content of the blog post
 - name: thumbnail
   type: file
