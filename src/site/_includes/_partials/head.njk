@@ -29,7 +29,7 @@
         {% include "_partials/preload-styles.njk" %}
         <link rel="preload" href="/fonts/avenir-next-variable.woff2" as="font" type="font/woff2" crossorigin="anonymous">
         <link href="https://www.googletagmanager.com/gtag/js?id=UA-117442723-1" rel="preload" as="script">
-        <link href="https://polyfill.io/v3/polyfill.min.js?features=ResizeObserver%2CIntersectionObserver" rel="preload" as="script">
+        <link href="https://polyfill.io/v3/polyfill.min.js?features=ResizeObserver%2CIntersectionObserver%2CString.prototype.includes" rel="preload" as="script">
 
         {% if renderData.heroImage or heroImage %}
             {% set image = renderData.heroImage or heroImage %}
@@ -158,7 +158,7 @@
         <!-- JAVASCRIPT -->
         {% include "_partials/scripts.njk" %}
 
-        <script src="https://polyfill.io/v3/polyfill.min.js?features=ResizeObserver%2CIntersectionObserver"></script>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=ResizeObserver%2CIntersectionObserver%2CString.prototype.includes"></script>
 
         <!-- Hotjar Tracking Code for https://lunacreates.co.uk/ -->
         <script>
