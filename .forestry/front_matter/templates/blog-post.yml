@@ -24,16 +24,6 @@ fields:
     time_format: 
     display_utc: false
     export_format: DD/MM/YYYY
-- name: body
-  type: textarea
-  default: ''
-  config:
-    required: true
-    wysiwyg: true
-    schema:
-      format: html-blocks
-  label: Body
-  description: The content of the blog post
 - name: thumbnail
   type: file
   config:
