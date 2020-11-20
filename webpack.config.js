@@ -58,10 +58,6 @@ function Bundle() {
     new webpack.LoaderOptionsPlugin({
       debug: true
     })
-    // new Critters({
-    //   inlineFonts: true,
-    //   pruneSource: false,
-    // })
     // new BundleAnalyzerPlugin()
   ];
 
