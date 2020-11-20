@@ -2,12 +2,12 @@
 {% set title = heroTitle or renderData.heroTitle %}
 
 {% if post %}
-    <header class="hero" aria-labelledby="hero-title">
+    <header class="hero pos-r" aria-labelledby="hero-title">
 {% else %}
-    <section class="hero" aria-labelledby="hero-title">
+    <section class="hero pos-r" aria-labelledby="hero-title">
 {% endif %}
     <div class="hero__content">
-        <picture class="hero__picture">
+        <picture class="ratio-3-2">
             <source media="(max-width: 37.4375em)" type="image/webp" data-srcset="{{image}}_300x180_crop_top.jpg.webp 1x, {{image}}_600x360_crop_top.jpg.webp 2x">
             <source media="(max-width: 37.4375em)" data-srcset="{{image}}_300x180_crop_top.jpg 1x, {{image}}_600x360_crop_top.jpg 2x">
 
@@ -15,7 +15,7 @@
             <source media="(min-width: 38em) and (max-width: 47.9375em)" data-srcset="{{image}}_400x240_crop_top.jpg 1x, {{image}}_800x480_crop_top.jpg 2x">
 
             <source type="image/webp" data-srcset="{{image}}_1500x500_crop_top.jpg.webp 1x, {{image}}_2048x640_crop_top.jpg.webp 2x">
-            <img class="hero__image lazyload" data-srcset="{{image}}_1500x500_crop_top.jpg 1x, {{image}}_2048x640_crop_top.jpg 2x" role="presentation" width="400" height="240" loading="lazy">
+            <img class="lazyload op-right" data-srcset="{{image}}_1500x500_crop_top.jpg 1x, {{image}}_2048x640_crop_top.jpg 2x" role="presentation" width="400" height="240" loading="lazy">
 
             <noscript>
                 <source media="(max-width: 37.4375em)" type="image/webp" srcset="{{image}}_300x180_crop_top.jpg.webp 1x, {{image}}_600x360_crop_top.jpg.webp 2x">
@@ -25,19 +25,19 @@
                 <source media="(min-width: 38em) and (max-width: 47.9375em)" srcset="{{image}}_400x240_crop_top.jpg 1x, {{image}}_800x480_crop_top.jpg 2x">
 
                 <source type="image/webp" srcset="{{image}}_1500x500_crop_top.jpg.webp 1x, {{image}}_2048x640_crop_top.jpg.webp 2x">
-                <img class="hero__image" srcset="{{image}}_1500x500_crop_top.jpg 1x, {{image}}_2048x640_crop_top.jpg 2x" role="presentation" width="400" height="240" loading="lazy">
+                <img class="op-right" srcset="{{image}}_1500x500_crop_top.jpg 1x, {{image}}_2048x640_crop_top.jpg 2x" role="presentation" width="400" height="240" loading="lazy">
             </noscript>
         </picture>
     </div>
 
-    <div class="hero__container">
+    <div class="hero__container container pos-a w-full ta-c zi-20">
         {% if home %}
-            <p class="hero__title" id="hero-title">
-                <span class="hero__title-highlight">{{title | safe}}</span>
+            <p class="hero__title mx-auto mb-0 text-background fs-lg lh-lg fvs-rg ta-center tt-uc" id="hero-title">
+                <span class="hero__title-highlight bgc-foreground">{{title | safe}}</span>
             </p>
         {% else %}
-            <h1 class="hero__title" id="hero-title">
-                <span class="hero__title-highlight">{{title | safe}}</span>
+            <h1 class="hero__title mx-auto mb-0 text-background fs-lg lh-lg fvs-rg ta-center tt-uc" id="hero-title">
+                <span class="hero__title-highlight bgc-foreground">{{title | safe}}</span>
             </h1>
         {% endif %}
     </div>
@@ -48,5 +48,5 @@
 {% endif %}
 
 {% if home %}
-    <p class="hero__body hero--container">We help you to immortalise your travel adventures, whether you’re finding new places to explore or reflecting on past adventures.</p>
+    <p class="hero__body container my-32 mx-auto fs-sm lh-sm fvs-rg ta-center">We help you to immortalise your travel adventures, whether you’re finding new places to explore or reflecting on past adventures.</p>
 {% endif %}

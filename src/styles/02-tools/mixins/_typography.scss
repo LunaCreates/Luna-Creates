@@ -1,0 +1,54 @@
+@use '../functions/pxToRem' as _pxToRem;
+@use '../../01-settings/variables' as _v;
+@use 'properties' as _properties;
+@use 'responsive' as _responsive;
+@use 'sass:map';
+
+// Typography.........Mixin to add typography.
+
+// Font styles map configuration
+$headings: (
+  xl: (
+    font-family: _v.$core-font-family,
+    font-size: unquote('max(#{_pxToRem.rem(30)}, min(2.578vw, #{_pxToRem.rem(33)}))'),
+    line-height: unquote('max(#{_pxToRem.rem(48)}, min(4.375vw, #{_pxToRem.rem(56)}))')
+  ),
+  lg: (
+    font-family: _v.$core-font-family,
+    font-size: unquote('max(#{_pxToRem.rem(20)}, min(2.344vw, #{_pxToRem.rem(30)}))'),
+    line-height: unquote('max(#{_pxToRem.rem(36)}, min(3.750vw, #{_pxToRem.rem(48)}))')
+  ),
+  md: (
+    font-family: _v.$core-font-family,
+    font-size: unquote('max(#{_pxToRem.rem(20)}, min(1.953vw, #{_pxToRem.rem(25)}))'),
+    line-height: unquote('max(#{_pxToRem.rem(30)}, min(2.813vw, #{_pxToRem.rem(36)}))')
+  ),
+  sm: (
+    font-family: _v.$core-font-family,
+    font-size: unquote('max(#{_pxToRem.rem(16)}, min(1.563vw, #{_pxToRem.rem(20)}))'),
+    line-height: unquote('max(#{_pxToRem.rem(25)}, min(2.266vw, #{_pxToRem.rem(30)}))')
+  ),
+  xs: (
+    font-family: _v.$core-font-family,
+    font-size: unquote('max(#{_pxToRem.rem(14)}, min(1.250vw, #{_pxToRem.rem(16)}))'),
+    line-height: unquote('max(#{_pxToRem.rem(23)}, min(2.109vw, #{_pxToRem.rem(28)}))')
+  ),
+  base: (
+    font-family: _v.$core-font-family,
+    font-size: _pxToRem.rem(16),
+    line-height: _pxToRem.rem(28)
+  )
+);
+
+@mixin text($style) {
+  $props: map.get($headings, $style);
+
+  @if $props == null {
+    @warn 'text style \"#{$style}\" not found';
+  } @else {
+    @include _properties.map-to-props($props);
+    font-weight: 400;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}

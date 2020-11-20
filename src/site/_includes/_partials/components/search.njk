@@ -1,0 +1,12 @@
+<button type="button" class="header__search mr-8" aria-expanded="false" aria-label="Open search" data-trigger-search>
+    <svg height="16" width="16" aria-hidden="true" class="header__icon pe-none" fill="var(--color-primary)">
+        <use xlink:href="/icons/sprite.svg#search"></use>
+    </svg>
+</button>
+
+<div class="search pos-a w-full px-16 bgc-background zi-10" data-search-form>
+    <label class="search__label" for="search-bottom">Search the website</label>
+    <input type="search" class="search__input w-full my-0 py-16 px-0 fs-sm lh-sm fvs-rg" id="search-bottom" placeholder="Search" autocomplete="off" data-search-input>
+    <ul class="search__results" data-search-results></ul>
+    <span class="search__results-status" data-search-results-status aria-live="polite" role="status">0 results found</span>
+</div>

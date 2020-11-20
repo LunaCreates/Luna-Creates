@@ -1,17 +1,17 @@
-<section class="instagram-collection instagram-collection--container" aria-describedby="instagram-collection">
-    <h2 class="instagram-collection__title" id="instagram-collection">Follow us on Instagram <a href="{{settings.instagramUrl}}" class="instagram-collection__link">@{{settings.instagramName}}</a></h2>
+<section class="container my-32" aria-describedby="instagram-collection">
+    <h2 class="fs-md lh-md fvs-rg text-heading ls-3 mt-0 mb-24 ta-center tt-uc" id="instagram-collection">Follow us on Instagram <a href="{{settings.instagramUrl}}" class="instagram-collection__link pos-r dp-ib fvs-md">@{{settings.instagramName}}</a></h2>
 
-    <ul class="instagram-collection__images">
+    <ul class="dp-g gtc-3 gg-16 w-full">
     {% for item in instagramCollection %}
-        <li class="instagram-collection__item">
-            <picture class="instagram-collection__picture">
+        <li class="pos-r ov-hidden">
+            <picture class="pos-r db-b bgc-fade ratio-1-1">
                 <source media="(max-width: 37.4375em)" type="image/webp" data-srcset="{{item.image}}_150x150.jpg.webp 1x, {{item.image}}_250x250.jpg.webp 2x">
 
                 <source media="(max-width: 37.4375em)" data-srcset="{{item.image}}_150x150.jpg 1x, {{item.image}}_250x250.jpg 2x">
 
                 <source type="image/webp" data-srcset="{{item.image}}_350x350.jpg.webp 1x, {{item.image}}_400x400.jpg.webp 2x">
 
-                <img class="instagram-collection__image lazyload" data-srcset="{{item.image}}_350x350.jpg 1x, {{item.image}}_400x400.jpg 2x" alt="Wedding Table Plan" loading="lazy" width="200" height="200">
+                <img class="lazyload" data-srcset="{{item.image}}_350x350.jpg 1x, {{item.image}}_400x400.jpg 2x" alt="Wedding Table Plan" loading="lazy" width="200" height="200">
 
                 <noscript>
                     <source media="(max-width: 37.4375em)" type="image/webp" srcset="{{item.image}}_150x150.jpg.webp 1x, {{item.image}}_250x250.jpg.webp 2x">
@@ -20,10 +20,10 @@
 
                     <source type="image/webp" srcset="{{item.image}}_350x350.jpg.webp 1x, {{item.image}}_400x400.jpg.webp 2x">
 
-                    <img class="instagram-collection__image" srcset="{{item.image}}_350x350.jpg 1x, {{item.image}}_400x400.jpg 2x" alt="Wedding Table Plan" loading="lazy" width="200" height="200">
+                    <img srcset="{{item.image}}_350x350.jpg 1x, {{item.image}}_400x400.jpg 2x" alt="Wedding Table Plan" loading="lazy" width="200" height="200">
                 </noscript>
             </picture>
-            <a class="instagram-collection__item-link" href="https://www.instagram.com/lunacreatesdesign/">View more images on our Instagram</a>
+            <a class="pos-a top-0 right-0 bottom-0 left-0 op-0" href="https://www.instagram.com/lunacreatesdesign/">View more images on our Instagram</a>
         </li>
     {% endfor %}
     </ul>

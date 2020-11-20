@@ -1,0 +1,105 @@
+@use '../01-settings/variables' as _variables;
+@use '../02-tools/functions/z-index' as _z-index;
+@use '../02-tools/mixins/buttons' as _buttons;
+@use '../02-tools/mixins/responsive' as _responsive;
+@use '../02-tools/mixins/typography' as _typography;
+
+.page {
+  @include _responsive.container;
+  margin-top: (_variables.$core-grid * 3);
+  margin-bottom: (_variables.$core-grid * 3);
+
+  @include _responsive.min(m) {
+    margin-top: (_variables.$core-grid * 5);
+    margin-bottom: (_variables.$core-grid * 5);
+  }
+
+  @include _responsive.min(l) {
+    margin-top: (_variables.$core-grid * 7);
+    margin-bottom: (_variables.$core-grid * 7);
+  }
+}
+
+.page__rte {
+  ol,
+  ul {
+    list-style: revert;
+    margin-top: (_variables.$core-grid * 2);
+    margin-bottom: (_variables.$core-grid * 2);
+    padding: revert;
+  }
+
+  ol li,
+  ul li {
+    margin-bottom: (_variables.$core-grid * 2);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  p {
+    margin: revert;
+  }
+
+  img {
+    max-width: 750px;
+  }
+}
+
+.page__title,
+.page h1 {
+  @include _typography.text(xl);
+  margin-bottom: (_variables.$core-grid * 3);
+  font-variation-settings: 'wght' _variables.$core-secondary-font-weight;
+
+  @include _responsive.min(m) {
+    margin-bottom: (_variables.$core-grid * 6);
+  }
+}
+
+.page h2 {
+  @include _typography.text(xl);
+  margin-bottom: _variables.$core-grid;
+
+  @include _responsive.min(m) {
+    margin-bottom: (_variables.$core-grid * 1.5);
+  }
+}
+
+.page__title {
+  text-align: center;
+}
+
+.page p:last-child {
+  margin-bottom: 0;
+}
+
+.page a {
+  position: relative;
+  color: var(--color-foreground);
+  font-variation-settings: 'wght' _variables.$core-secondary-font-weight;
+
+  @media (hover) {
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: var(--color-foreground);
+      transition: width 0.3s ease-in-out;
+    }
+
+    &:hover::before,
+    &:focus::before,
+    &:active::before {
+      width: 100%;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+  }
+}

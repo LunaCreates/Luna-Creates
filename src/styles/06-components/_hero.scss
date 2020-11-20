@@ -1,0 +1,41 @@
+@use '../01-settings/variables' as _v;
+@use '../01-settings/typography' as _ty;
+@use '../02-tools/functions/z-index' as _zi;
+@use '../02-tools/mixins/picture' as _pic;
+@use '../02-tools/mixins/responsive' as _r;
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.25);
+  z-index: _zi.z(alpha);
+}
+
+.hero__image {
+  object-position: right;
+}
+
+.hero__container {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hero__title {
+  @include _r.max(md) {
+    max-width: 200px;
+  }
+}
+
+.hero__title-highlight {
+  padding: (_v.$core-grid / 3) (_v.$core-grid / 2);
+  box-decoration-break: clone;
+}
+
+.hero__body {
+  max-width: 890px;
+}

@@ -1,0 +1,11 @@
+@use '../01-settings/variables' as _v;
+@use '../02-tools/mixins/responsive' as _r;
+
+.expression__content {
+  top: -(_v.$core-grid * 2);
+
+  @include _r.min(lg) {
+    top: 0;
+    max-width: 350px;
+  }
+}

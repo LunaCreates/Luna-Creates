@@ -1,0 +1,43 @@
+@use '../01-settings/variables' as _variables;
+@use '../02-tools/mixins/buttons' as _buttons;
+@use '../02-tools/mixins/responsive' as _responsive;
+@use '../02-tools/mixins/typography' as _typography;
+
+.returns {
+  @include _responsive.container;
+  margin-top: (_variables.$core-grid * 3);
+  margin-bottom: (_variables.$core-grid * 3);
+
+  @include _responsive.min(m) {
+    margin-top: (_variables.$core-grid * 5);
+    margin-bottom: (_variables.$core-grid * 5);
+  }
+
+  @include _responsive.min(l) {
+    margin-top: (_variables.$core-grid * 7);
+    margin-bottom: (_variables.$core-grid * 7);
+  }
+}
+
+.returns__rule {
+  margin-top: (_variables.$core-grid * 3);
+  margin-bottom: (_variables.$core-grid * 3);
+
+  @include _responsive.min(m) {
+    margin-top: (_variables.$core-grid * 4);
+    margin-bottom: (_variables.$core-grid * 4);
+  }
+}
+
+.returns__title {
+  @include _typography.text(md);
+  margin-bottom: (_variables.$core-grid * 2);
+  font-variation-settings: 'wght' _variables.$core-font-weight;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+
+  @include _responsive.min(m) {
+    margin-bottom: (_variables.$core-grid * 3);
+  }
+}

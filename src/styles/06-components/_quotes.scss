@@ -1,0 +1,18 @@
+@use '../02-tools/mixins/responsive' as _responsive;
+
+.quotes__icon {
+  width: 24px;
+  height: auto;
+}
+
+.quotes__quote {
+  @include _responsive.min(m) {
+    user-select: initial;
+  }
+}
+
+.quotes__cite {
+  &::before {
+    content: '\2014 \0020';
+  }
+}

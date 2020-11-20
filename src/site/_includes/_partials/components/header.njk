@@ -1,62 +1,51 @@
-<header class="header" data-component="header">
-    <a href="#nav" class="skip-link skip-link--hidden">Skip to navigation</a>
-    <a href="#main" class="skip-link skip-link--hidden">Skip to main content</a>
-    <a href="#footer" class="skip-link skip-link--hidden">Skip to footer</a>
+<header class="header pos-r" data-component="header">
+    <a href="#nav" class="dp-n">Skip to navigation</a>
+    <a href="#main" class="dp-n">Skip to main content</a>
+    <a href="#footer" class="dp-n">Skip to footer</a>
 
     {% if cart %}
-        <a href="#cart" class="skip-link skip-link--hidden">Skip to cart</a>
+        <a href="#cart" class="dp-n">Skip to cart</a>
     {% endif %}
 
-    <div class="header__top">
-        <a href="/" class="logo" data-logo>
-            <svg class="logo__icon" width="210" height="90" viewBox="0 0 210 90" aria-describedby="logo">
+    <div class="pos-r dp-f fd-c py-8 bgc-background zi-120">
+        <a href="/" class="dp-b as-c" data-logo>
+            <svg class="logo dp-b" width="210" height="90" viewBox="0 0 210 90" aria-describedby="logo">
                 <title id="logo">Luna Creates</title>
                 <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/images/logo.svg" x="50%" y="0" width="100%" height="66.1"></image>
                 <text x="50%" y="95%">Personalised map prints</text>
             </svg>
         </a>
 
-        <div class="header__options" data-component="search">
-            <button type="button" class="header__search" aria-expanded="false" aria-label="Open search" data-trigger-search>
-                <svg height="16" width="16" aria-hidden="true" class="header__icon">
+        <div class="dp-n md:dp-b" data-component="search">
+            <button type="button" class="" aria-expanded="false" aria-label="Open search" data-trigger-search>
+                <svg height="16" width="16" aria-hidden="true" class="">
                     <use xlink:href="/icons/sprite.svg#search"></use>
                 </svg>
             </button>
 
             <div class="search" data-search-form>
-                <label class="search__label" for="search-top">Search</label>
-                <input type="search" class="search__input" id="search-top" placeholder="Search" autocomplete="off" data-search-input>
-                <ul class="search__results" data-search-results></ul>
-                <span class="search__results-status" data-search-results-status aria-live="polite" role="status">0 results found</span>
+                <label class="" for="search-top">Search</label>
+                <input type="search" class="" id="search-top" placeholder="Search" autocomplete="off" data-search-input>
+                <ul class="" data-search-results></ul>
+                <span class="" data-search-results-status aria-live="polite" role="status">0 results found</span>
             </div>
 
-            <a href="/cart/" class="header__cart" aria-label="View cart" data-cart>
-                <svg height="16" width="16" aria-hidden="true" class="header__icon">
+            <a href="/cart/" class="" aria-label="View cart" data-cart>
+                <svg height="16" width="16" aria-hidden="true" class="">
                     <use xlink:href="/icons/sprite.svg#cart"></use>
                 </svg>
             </a>
         </div>
     </div>
 
-    <div class="header__bottom">
+    <div class="dp-f jc-between ai-c pos-r py-8 px-16 bgc-secondary zi-30">
         {% include "_partials/navigation.njk" %}
 
-        <div class="header__options" data-component="search">
-            <button type="button" class="header__search" aria-expanded="false" aria-label="Open search" data-trigger-search>
-                <svg height="16" width="16" aria-hidden="true" class="header__icon">
-                    <use xlink:href="/icons/sprite.svg#search"></use>
-                </svg>
-            </button>
-
-            <div class="search" data-search-form>
-                <label class="search__label" for="search-bottom">Search the website</label>
-                <input type="search" class="search__input" id="search-bottom" placeholder="Search" autocomplete="off" data-search-input>
-                <ul class="search__results" data-search-results></ul>
-                <span class="search__results-status" data-search-results-status aria-live="polite" role="status">0 results found</span>
-            </div>
+        <div class="dp-f jc-between ai-c zi-20" data-component="search">
+            {% include "_partials/components/search.njk" %}
 
             <a href="/cart/" class="header__cart" aria-label="View cart" data-cart>
-                <svg height="16" width="16" aria-hidden="true" class="header__icon">
+                <svg height="16" width="16" aria-hidden="true" class="header__icon" fill="var(--color-primary)">
                     <use xlink:href="/icons/sprite.svg#cart"></use>
                 </svg>
             </a>

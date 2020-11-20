@@ -1,0 +1,23 @@
+@use '../01-settings/breakpoints' as _b;
+@use '../01-settings/sr' as _sr;
+@use '../02-tools/mixins/responsive' as _r;
+
+// Loop over each breakpoint
+@each $breakpoint in map-keys(_b.$breakpoints) {
+  // Generate media query if needed
+  @include _r.min($breakpoint) {
+    $infix: _b.breakpoint-infix($breakpoint, _b.$breakpoints);
+
+    .#{$infix}sr-only {
+      @each $key, $value in _sr.$sr-only {
+        #{$key}: $value;
+      }
+    }
+
+    .#{$infix}not-sr-only {
+      @each $key, $value in _sr.$not-sr-only {
+        #{$key}: $value;
+      }
+    }
+  }
+}

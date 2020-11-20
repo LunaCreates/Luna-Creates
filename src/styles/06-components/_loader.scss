@@ -1,0 +1,27 @@
+@use '../01-settings/variables' as _variables;
+@use '../02-tools/mixins/typography' as _typography;
+
+.loader {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+.loader__image {
+  width: 150px;
+  height: auto;
+}
+
+.loader__text {
+  @include _typography.text(sm);
+  margin-top: (_variables.$core-grid * 2);
+  color: var(--color-primary);
+  font-variation-settings: 'wght' _variables.$core-tertiary-font-weight;
+}

@@ -1,8 +1,8 @@
 {
   "ignoreFiles": [
     "../src/styles/main.scss",
-    "../src/styles/generic/*.scss",
-    "../src/styles/trumps/*.scss"
+    "../src/styles/03-generic/*.scss",
+    "../src/styles/08-trumps/*.scss"
   ],
   "plugins": "stylelint-selector-bem-pattern",
   "rules": {
@@ -36,7 +36,6 @@
     "no-invalid-double-slash-comments": true,
     "no-missing-end-of-source-newline": true,
     "number-leading-zero": "always",
-    "number-no-trailing-zeros": true,
     "plugin/selector-bem-pattern": {
       "componentName": "(([a-z0-9]+(?!-$)-?)+)",
       "componentSelectors": {

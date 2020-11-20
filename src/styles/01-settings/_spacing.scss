@@ -1,0 +1,27 @@
+@use '../02-tools/functions/pxToRem' as _pxToRem;
+@use 'sass:map';
+
+$spacers: (
+  0: 0,
+  8: _pxToRem.rem(8),
+  16: _pxToRem.rem(16),
+  24: _pxToRem.rem(24),
+  32: _pxToRem.rem(32),
+  40: _pxToRem.rem(40),
+  48: _pxToRem.rem(48),
+  56: _pxToRem.rem(56),
+  64: _pxToRem.rem(64),
+  auto: auto,
+);
+
+@function negativify-map($map) {
+  $result: ();
+  @each $key, $value in $map {
+    @if $key != 0 {
+      $result: map-merge($result, ($key: (-$value)));
+    }
+  }
+  @return $result;
+}
+
+$negative-spacers: negativify-map($spacers) !default;

@@ -1,29 +1,29 @@
-<section class="featured featured--container" aria-describedby="featured-title">
+<section class="container dp-f fd-c ai-c my-32" aria-describedby="featured-title">
     {% if home %}
-        <h1 class="featured__title" id="featured-title">Our world map pinboard collection</h1>
+        <h1 class="fs-md lh-md mt-0 mb-24 fvs-md ta-center ls-3 tt-uc text-heading" id="featured-title">Our world map pinboard collection</h1>
     {% else %}
-        <h2 class="featured__title" id="featured-title">Our world map pinboard collection</h2>
+        <h2 class="s-md lh-md mt-0 mb-24 fvs-md ta-center ls-3 tt-uc text-heading" id="featured-title">Our world map pinboard collection</h2>
     {% endif %}
 
-    <div class="featured__products">
+    <div class="dp-g gtc-2 gg-24 mb-24">
     {% for product in featuredProducts %}
         <div class="featured__product">
-            <picture class="featured__picture">
+            <picture class="ratio-1-1">
                 <source type="image/webp" data-srcset="{{product.image}}_300x300.jpg.webp 1x, {{product.image}}_375x375.jpg.webp 2x">
 
-                <img data-srcset="{{product.image}}_300x300.jpg 1x, {{product.image}}_375x375.jpg 2x" alt="{{product.imageAlt}}" class="featured__image lazyload" loading="lazy" width="300" height="300">
+                <img data-srcset="{{product.image}}_300x300.jpg 1x, {{product.image}}_375x375.jpg 2x" alt="{{product.imageAlt}}" class="lazyload" loading="lazy" width="300" height="300">
 
                 <noscript>
                     <source type="image/webp" srcset="{{product.image}}_300x300.jpg.webp 1x, {{product.image}}_375x375.jpg.webp 2x">
 
-                    <img srcset="{{product.image}}_300x300.jpg 1x, {{product.image}}_375x375.jpg 2x" alt="{{product.imageAlt}}" class="featured__image" loading="lazy" width="300" height="300">
+                    <img srcset="{{product.image}}_300x300.jpg 1x, {{product.image}}_375x375.jpg 2x" alt="{{product.imageAlt}}" loading="lazy" width="300" height="300">
                 </noscript>
             </picture>
-            <a class="featured__link" href="{{product.slug}}">{{product.title}}</a>
-            <span class="featured__price">{{product.minPrice}} - {{product.maxPrice}}</span>
+            <a class="fs-xs lh-xs fvs-md dp-b my-8 text-body ls-1" href="{{product.slug}}">{{product.title}}</a>
+            <span class="fs-xs lh-xs fvs-md text-body">{{product.minPrice}} - {{product.maxPrice}}</span>
         </div>
     {% endfor %}
     </div>
 
-    <a href="/products/" class="featured__cta">View all</a>
+    <a href="/products/" class="py-16 px-24 fs-xs fvs-md lh-xs ls-1 tt-uc bgc-secondary text-foreground br-5 as-c focus:oc-primary hover:bgc-fade">View all</a>
 </section>
