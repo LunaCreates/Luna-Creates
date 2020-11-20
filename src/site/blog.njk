@@ -8,14 +8,16 @@ layout: _layouts/blog
 
 {% set postListItems = collections.postFeed %}
 
-<ol class="instagram-collection__images" reversed>
-{% for item in postListItems %}
-    <li class="instagram-collection__item">
-        <article>
-            <h2>
-                <a href="{{ item.url }}">{{ item.data.title }}</a>
-            </h2>
-        </article>
-    </li>
-{% endfor %}
-</ol>
+<div class="page page--container">
+    <ol class="instagram-collection__images" reversed>
+    {% for item in postListItems %}
+        <li class="instagram-collection__item">
+            <article>
+                <h2>
+                    <a href="{{ item.url }}">{{ item.data.title }}</a>
+                </h2>
+            </article>
+        </li>
+    {% endfor %}
+    </ol>
+</div>
