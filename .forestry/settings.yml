@@ -14,8 +14,8 @@ sections:
   - blog-post
 upload_dir: https://res.cloudinary.com/dwgql9lwg/image/upload
 public_path: https://res.cloudinary.com/dwgql9lwg/image/upload
-front_matter_path: ''
-use_front_matter_path: 
+front_matter_path: https://res.cloudinary.com/dwgql9lwg/image/upload
+use_front_matter_path: true
 file_template: ":filename:"
 build:
   preview_env:
