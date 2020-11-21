@@ -53,7 +53,9 @@ content: <p>Welcome to our first blog post! In this strangest of years, we’ve 
   of examples.</p><p class="MsoNormal">For other questions we do have an FAQ page
   but please let us know if there is anything you’d like to know; and keep an eye
   out for our next post. Thanks for reading!</p>
-publish_date: 16/11/2020
+publish_date: 21/11/2020
+thumbnail: https://lunacreates.co.uk/images/blog/gina-map.jpg
+banner_image: https://lunacreates.co.uk/images/blog/grey-map-banner-1.jpg
 
 ---
 Welcome to our first blog post! In this strangest of years, we’ve spent a lot of time thinking about how the world is changing and what the new normal will look like, as I’m sure everybody has. We both have a passion for travel as well as of course a passion for our little business; and thinking about what the future may hold for both of those things is something we’ve discussed so much over the last few months. We thought that setting up a blog section on our site would be a good way of sharing those thoughts, as well as giving us a chance to pass on some of the questions and stories we receive from our lovely customers.
