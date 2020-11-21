@@ -13,7 +13,7 @@ sections:
   templates:
   - blog-post
 upload_dir: src/images/blog
-public_path: https://lunacreates.co.uk/images/blog
+public_path: https://959b1267-1148-48d7-a42d-261bfd4df012.netlify.app/.netlify/large-media
 front_matter_path: ''
 use_front_matter_path: 
 file_template: ":filename:"
