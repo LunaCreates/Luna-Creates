@@ -12,7 +12,7 @@ sections:
   new_doc_ext: md
   templates:
   - blog-post
-upload_dir: ''
+upload_dir: src/images/blog
 public_path: https://lunacreates.co.uk/images/blog
 front_matter_path: ''
 use_front_matter_path: 
