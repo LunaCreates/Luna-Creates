@@ -12,10 +12,10 @@ sections:
   new_doc_ext: md
   templates:
   - blog-post
-upload_dir: ''
+upload_dir: https://lunacreates.co.uk/.netlify/large-media/images/blog
 public_path: https://lunacreates.co.uk/images/blog
 front_matter_path: "/images/blog"
-use_front_matter_path: true
+use_front_matter_path: false
 file_template: ":filename:"
 build:
   preview_env:
