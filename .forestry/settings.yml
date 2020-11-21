@@ -12,8 +12,8 @@ sections:
   new_doc_ext: md
   templates:
   - blog-post
-upload_dir: ''
-public_path: https://res.cloudinary.com/dwgql9lwg/image/upload
+upload_dir: src/images/blog
+public_path: https://lunacreates.co.uk/images/blog
 front_matter_path: ''
 use_front_matter_path: true
 file_template: ":filename:"
