@@ -13,7 +13,8 @@ fields:
   config:
     maxSize: 2
   label: Banner Image
-  description: Will appear in the banner, behind the title
+  description: Must have an aspect ratio of 4:1. Will appear in the banner, behind
+    the title
 - name: publish_date
   type: datetime
   label: Publish Date
@@ -29,7 +30,8 @@ fields:
   config:
     maxSize: 1
   label: Thumbnail
-  description: Image to be shown on each post in the blog landing page
+  description: Must have an aspect ratio of 1:1. Image to be shown on each post in
+    the blog landing page
 - name: tags
   type: tag_list
   default: []

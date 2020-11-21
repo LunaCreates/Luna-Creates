@@ -16,3 +16,6 @@ yarn-error.log*
 
 # templates
 cache-manifest.json
+
+# Local Netlify folder
+.netlify
