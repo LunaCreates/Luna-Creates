@@ -14,7 +14,7 @@ sections:
   - blog-post
 upload_dir: ''
 public_path: https://lunacreates.co.uk/images/blog
-front_matter_path: ''
+front_matter_path: "/images/blog"
 use_front_matter_path: true
 file_template: ":filename:"
 build:
