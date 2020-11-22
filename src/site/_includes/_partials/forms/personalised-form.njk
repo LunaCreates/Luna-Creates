@@ -26,7 +26,7 @@
             {% set checked = "checked" %}
           {% endif %}
           <label class="product__select-radio" for="{{size | lower}}">
-            <input {{checked}} type="radio" name="size" id="{{size | lower}}" style="display: none;"/>
+            <input data-price="{{option.price // 1}}"  data-summary="{{size}}" {{checked}} type="radio" name="size" id="{{size | lower}}" style="display: none;"/>
             <div style="height: {{height // 10}}px; width: {{width // 10}}px">
               <svg width="24" height="24" aria-hidden="true">
                 <use xlink:href="/icons/sprite.svg#chevron"></use>
@@ -51,21 +51,21 @@
     <p class="product__label">2. Choose your frame:</p>
     <div class="product__select-wrapper frames">
       <label class="product__select-radio" for="frameless">
-        <input checked type="radio" name="frame" id="frameless" style="display: none;"/>
-        <div></div>
+        <input data-price="0" data-summary="Frameless" checked type="radio" name="frame" id="frameless" style="display: none;"/>
+        <div><div></div></div>
         <p>Frameless</p>
         <small>+&pound;0</small>
         <small class="selected">Selected</small>
       </label>
       <label class="product__select-radio" for="black">
-        <input type="radio" name="frame" id="black" style="display: none;"/>
+        <input data-price="35" data-summary="Black Frame" type="radio" name="frame" id="black" style="display: none;"/>
         <div><div class="black"></div></div>
         <p>Black</p>
         <small>+&pound;35</small>
         <small class="selected">Selected</small>
       </label>
       <label class="product__select-radio" for="white">
-        <input type="radio" name="frame" id="white" style="display: none;"/>
+        <input data-price="35" data-summary="White Frame" type="radio" name="frame" id="white" style="display: none;"/>
         <div><div class="white"></div></div>
         <p>White</p>
         <small>+&pound;35</small>
@@ -85,40 +85,289 @@
     </div>
 
     <p class="product__label">
-      Pin labels
-      <small>Displayed for each pin colour</small>
-    </p>
-
-    <div class="product__radios">
-      <label class="product__radio" for="map-key-no">
-        <input class="product__radio-input" type="radio" id="map-key-no" name="show key text" value="no" data-map-key="data-map-key">
-        No
-      </label>
-
-      <label class="product__radio" for="map-key-yes">
-        <input class="product__radio-input" type="radio" id="map-key-yes" name="show key text" value="yes" checked="checked" data-map-key="data-map-key">
-        Yes
-      </label>
-    </div>
-
-    <p class="product__label">
-      Add free pins
+      Choose your free pins
       <small>30 of each colour included</small>
     </p>
+    
+    <div class="pin-colors-new">
+      <div class="pins">
+        <!-- pin colour picker -->
+        <input data-summary="30" type="checkbox" name="pin-color" id="pin-colors-1" class="pin pink" value="#F8C3D3" />
+        <input data-summary="30" type="checkbox" name="pin-color" id="pin-colors-2" class="pin light-blue" value="#84B6F9" />
+        <input data-summary="30" type="checkbox" name="pin-color" id="pin-colors-3" class="pin green" value="#538B65" />
+        <input data-summary="30" type="checkbox" name="pin-color" id="pin-colors-4" class="pin purple" value="#9D89E6" />
+        <input data-summary="30" type="checkbox" name="pin-color" id="pin-colors-5" class="pin white" value="#FFFFFF" />
+        <input data-summary="30" type="checkbox" name="pin-color" id="pin-colors-6" class="pin yellow" value="#EDD771" />
+        <input data-summary="30" type="checkbox" name="pin-color" id="pin-colors-7" class="pin red" value="#DE3947" />
+        <input data-summary="30" type="checkbox" name="pin-color" id="pin-colors-8" class="pin blue" value="#475A88" />
+        <input data-summary="30" type="checkbox" name="pin-color" id="pin-colors-9" class="pin orange" value="#ED8733" />
+        <input data-summary="30" type="checkbox" name="pin-color" id="pin-colors-10" class="pin black" value="#000000" />
 
-    <div class="pin-colors pin-colors--key-text" data-pin-colors="data-pin-colors">
-      {{pinMapColors.pinColors("1", true, pinHolder )}}
-      {{pinMapColors.pinColors("2")}}
-      {{pinMapColors.pinColors("3")}}
-      {{pinMapColors.pinColors("4")}}
-      {{pinMapColors.pinColors("5")}}
-      {{pinMapColors.pinColors("6")}}
+        <div class="selected-pins">
+          <p class="product__label">
+            Chosen pins
+            <small>30 of each colour included</small>
+          </p>
+          <span class="labels">Labels:</span>
+          <input class="product__radio-input labels" type="radio" id="map-key-no" name="show key text" value="no" data-map-key="data-map-key">
+          <label class="product__radio labels" for="map-key-no">
+            off
+          </label>
+
+          <input class="product__radio-input labels" type="radio" id="map-key-yes" name="show key text" value="yes" checked="checked" data-map-key="data-map-key">
+          <label class="product__radio labels" for="map-key-yes">
+            on
+          </label>
+
+          <div class="pin-row pink">
+            <span class="pin pink">Pink</span>
+            <input type="text" name="key" id="map-key-1" placeholder="Pink pins label" class="product__input" />
+            <p>30 x pink pins</p>
+          </div>
+          <div class="pin-row light-blue">
+            <span class="pin light-blue">Light Blue</span>
+            <input type="text" name="key" id="map-key-2" placeholder="Light blue pins label" class="product__input" />
+            <p>30 x light blue pins</p>
+          </div>
+          <div class="pin-row green">
+            <span class="pin green">Green</span>
+            <input type="text" name="key" id="map-key-3" placeholder="Green pins label" class="product__input" />
+            <p>30 x green pins</p>
+          </div>
+          <div class="pin-row purple">
+            <span class="pin purple">Purple</span>
+            <input type="text" name="key" id="map-key-4" placeholder="Purple pins label" class="product__input" />
+            <p>30 x purple pins</p>
+          </div>
+          <div class="pin-row white">
+            <span class="pin white">White</span>
+            <input type="text" name="key" id="map-key-5" placeholder="White pins label" class="product__input" />
+            <p>30 x white pins</p>
+          </div>
+          <div class="pin-row yellow">
+            <span class="pin yellow">Yellow</span>
+            <input type="text" name="key" id="map-key-6" placeholder="Yellow pins label" class="product__input" />
+            <p>30 x yellow pins</p>
+          </div>
+          <div class="pin-row red">
+            <span class="pin red">Red</span>
+            <input type="text" name="key" id="map-key-7" placeholder="Red pins label" class="product__input" />
+            <p>30 x red pins</p>
+          </div>
+          <div class="pin-row blue">
+            <span class="pin blue">Blue</span>
+            <input type="text" name="key" id="map-key-8" placeholder="Blue pins label" class="product__input" />
+            <p>30 x blue pins</p>
+          </div>
+          <div class="pin-row orange">
+            <span class="pin orange">Orange</span>
+            <input type="text" name="key" id="map-key-9" placeholder="Orange pins label" class="product__input" />
+            <p>30 x orange pins</p>
+          </div>
+          <div class="pin-row black">
+            <span class="pin black">Black</span>
+            <input type="text" name="key" id="map-key-10" placeholder="Black pins label" class="product__input" />
+            <p>30 x black pins</p>
+          </div>
+        </div>
+      </div>
     </div>
-
-    <button type="submit" class="product__button" data-product-submit="data-product-submit">Preview &amp; Add To Basket</button>
+    
+    <div class="button-container">
+      <button type="submit" class="product__button" data-product-submit="data-product-submit">Preview &amp; Add To Basket</button>
+    </div>
   </div>
 </form>
     <style>
+      /* Button */
+      .button-container {
+        margin-top: 2em;
+      }
+
+      .button-container button {
+        margin: 0 auto;
+      }
+
+      /* Pins */
+      .pin-colors-new {
+        margin: 1em 0;
+      }
+
+      .pin-colors-new .selected-pins {
+        margin-top: 1em;
+      }
+
+      .pin-colors-new .selected-pins > p {
+        margin-bottom: 0;
+      }
+
+      .pin-colors-new .selected-pins > .product__label {
+        display: block;
+      }
+
+      .pin-colors-new .selected-pins .labels {
+        display: inline-block;
+        font-size: 95%;
+        vertical-align: middle;
+      }
+
+      .pin-colors-new .selected-pins span.labels {
+        margin-right: 1em;
+      }
+
+      .pin-colors-new .selected-pins .product__radio.labels {
+        margin-right: 0;
+      }
+
+      .pin-colors-new .selected-pins .product__radio-input {
+        outline: transparent;
+        position: relative;
+        margin-right: 0;
+      }
+
+      .pin-colors-new .selected-pins .product__radio-input#map-key-yes {
+        margin-left: 1em;
+      }
+      
+      .pin-colors-new .selected-pins .product__radio-input:before {
+        left: 50%;
+        margin-top: -5px;
+        margin-left: -5px;
+        position: absolute;
+        top: 50%;
+      }
+
+      .pin-colors-new .selected-pins .product__radio-input#map-key-yes:checked ~ .pin-row p {
+        display: none;
+      }
+
+      .pin-colors-new .selected-pins .product__radio-input#map-key-no:checked ~ .pin-row input {
+        display: none;
+      }
+
+      .pin-colors-new .selected-pins .pin-row {
+        display: none;
+      }
+
+      .pin-colors-new input.pin.pink:checked ~ .selected-pins .pin-row.pink,
+      .pin-colors-new input.pin.light-blue:checked ~ .selected-pins .pin-row.light-blue,
+      .pin-colors-new input.pin.green:checked ~ .selected-pins .pin-row.green,
+      .pin-colors-new input.pin.purple:checked ~ .selected-pins .pin-row.purple,
+      .pin-colors-new input.pin.white:checked ~ .selected-pins .pin-row.white,
+      .pin-colors-new input.pin.yellow:checked ~ .selected-pins .pin-row.yellow,
+      .pin-colors-new input.pin.red:checked ~ .selected-pins .pin-row.red,
+      .pin-colors-new input.pin.blue:checked ~ .selected-pins .pin-row.blue,
+      .pin-colors-new input.pin.orange:checked ~ .selected-pins .pin-row.orange,
+      .pin-colors-new input.pin.black:checked ~ .selected-pins .pin-row.black {
+        display: flex;
+      }
+
+      .pin-colors-new .pins .pin {
+        -webkit-tap-highlight-color: transparent;
+        border-radius: 50%;
+        border-width: 7px;
+        border-style: solid;
+        cursor: pointer;
+        display: inline-block;
+        height: 2.5rem;
+        margin-right: 0.5em;
+        margin-bottom: 0.5em;
+        outline: none;
+        position: relative;
+        text-indent: -1000px;
+        width: 2.5rem;
+      }
+
+      .pin-colors-new .pins > .pins {
+        box-shadow: 0 0 10px rgba(0,0,0,0.05) inset;
+      }
+
+      .pin-colors-new input.pin:checked {
+        box-shadow: none;
+      }
+
+      .pin-colors-new .pin-row {
+        align-items: center;
+        display: flex;
+        justify-content: space-around;
+        margin: 0.5rem auto;
+      }
+
+      .pin-colors-new .pin-row .pin {
+        margin: 0;
+      }
+
+      .pin-colors-new .pin-row label {
+        font-size: 2em;
+      }
+
+      .pin-colors-new .pin-row p,
+      .pin-colors-new .pin-row .product__input {
+        display: inline-block;
+        width: auto;
+        flex-grow: 3;
+        margin-left: 0.5rem;
+      }
+
+      .pin-colors-new .pin-row p {
+        font-style: italic;
+        padding: 11px 13px;
+      }
+
+      .pin-colors-new .pins .pin.pink {
+        border-color: #F8C3D3;
+        background-color: #F8C3D3;
+      }
+
+      .pin-colors-new .pins .pin.light-blue {
+        border-color: #84B6F9;
+        background-color: #84B6F9;
+      }
+
+      .pin-colors-new .pins .pin.green {
+        border-color: #538B65;
+        background-color: #538B65;
+      }
+
+      .pin-colors-new .pins .pin.purple {
+        border-color: #9D89E6;
+        background-color: #9D89E6;
+      }
+
+      .pin-colors-new .pins .pin.white {
+        border-color: #FFFFFF;
+        background-color: #FFFFFF;
+      }
+
+      .pin-colors-new .pins .pin.yellow {
+        border-color: #EDD771;
+        background-color: #EDD771;
+      }
+
+      .pin-colors-new .pins .pin.red {
+        border-color: #DE3947;
+        background-color: #DE3947;
+      }
+
+      .pin-colors-new .pins .pin.blue {
+        border-color: #475A88;
+        background-color: #475A88;
+      }
+
+      .pin-colors-new .pins .pin.orange {
+        border-color: #ED8733;
+        background-color: #ED8733;
+      }
+
+      .pin-colors-new .pins .pin.black {
+        border-color: #000000;
+        background-color: #000000;
+      }
+
+      .pin-colors-new .pins > .pin:not(:checked) {
+        background: none;
+      }      
+
       /* Size and Frames Pickers */
       .product__select-wrapper {
         align-items: flex-end;
@@ -135,6 +384,10 @@
         text-align: center;
         -webkit-tap-highlight-color: rgba(0,0,0,0);
         -webkit-tap-highlight-color: transparent;
+      }
+
+      .product__select-wrapper.frames label {
+        flex-basis: 28%;
       }
 
       .product__select-wrapper label input + div {
@@ -177,11 +430,12 @@
         background-color: var(--color-body);
         border: 0;
         border-radius: 2px;
-        box-shadow: 0 0 3px rgba(0,0,0,0.15);
-        color: white;
+        box-shadow: 0 0 10px rgba(0,0,0,0.075);
+        color: var(--color-body);
         font-size: 12px;
-        font-weight: bold;
+        font-weight: normal;
         line-height: 1.75;
+        letter-spacing: 0.075em;
         padding: 0 4px;
 
         /* Default hidden */
@@ -189,12 +443,11 @@
       }
 
       .product__select-wrapper label input:checked + div {
-        border: 2px solid var(--color-success);
-        background-color: #70c0414a;
+        background-color: var(--color-secondary);
       }
 
       .product__select-wrapper label input:checked ~ .selected {
-        background-color: var(--color-success);
+        background-color: var(--color-secondary);
         opacity: 0.85;
       }
 
@@ -204,6 +457,7 @@
 
       .product__select-wrapper label small {
         display: block;
+        font-size: 70%;
       }
 
       .product__select-wrapper label > small {
@@ -214,16 +468,13 @@
       .product__select-wrapper.frames label > div {
         background: var(--color-neutral);
         border-color: var(--color-border);
-        height: 16vw;
-        max-height: 80px;
-        width: 24vw;
-        max-width: 120px;
+        width: 100%;
       }
 
       .product__select-wrapper.frames label div div {
         border: 5px solid transparent;
         border-radius: 2px;
-        height: 100%;
+        padding-top: 50%;
         width: 100%;
       }
 
@@ -244,4 +495,60 @@
         display: block;
         color: var(--color-body);
       }
+
+      /* Sticky product price */
+      span.product__price {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+        background: white;
+        padding: 10px 0;
+        display: block;
+        border-bottom: 1px solid rgba(0,0,0,0.1);      
+      }
+
+      span.product__price small {
+        float: right;
+        font-size: 0.7em;
+      }
     </style>
+
+    <script>
+      (function() {
+        /* Live price */
+        let live_price = document.querySelector("[data-product-price]");
+        let prices = document.querySelectorAll("[data-price]");
+        
+        const updateTotalPrice = sum_prices => {
+          let prices_array = Array.from(sum_prices);
+          live_price.textContent = `£${prices_array.reduce((price, sum_price) => { return price + Number(sum_price.dataset.price) }, 0).toFixed(2)}`;
+        };
+
+        prices.forEach(price => {
+          price.addEventListener("change", () => {
+            updateTotalPrice(document.querySelectorAll("[data-price]:checked"));
+          });
+        });
+
+        /* Summary */
+        /*let live_summary = document.querySelectorAll("[data-summary]");
+
+        const updateSummary = summaries => {
+          let live_summary_container = live_price.querySelector("small");
+          let summary_array = Array.from(summaries);
+          live_summary_container.textContent = `${summary_array.reduce((conc_summary, summary) => {
+            return conc_summary + summary.dataset.summary + ", ";
+          }, "")}`;
+        };
+
+        live_summary.forEach(summary => {
+          summary.addEventListener("change", () => {
+            updateSummary(document.querySelectorAll("[data-summary]:checked"));
+          });
+        });
+
+        live_price.insertAdjacentHTML("beforeend", "<small></small>");
+
+        updateSummary(document.querySelectorAll("[data-summary]:checked"));*/
+      })(document);
+    </script>
