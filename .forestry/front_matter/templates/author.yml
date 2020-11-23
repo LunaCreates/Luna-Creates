@@ -14,3 +14,13 @@ fields:
     maxSize: 2
   label: Avatar
   description: Profile image of the author. Must have a ratio of 1:1
+- name: description
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Description
+  description: Information about the author
