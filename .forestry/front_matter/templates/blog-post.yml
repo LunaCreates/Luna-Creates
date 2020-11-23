@@ -8,6 +8,13 @@ fields:
     required: true
   label: Title
   description: Title of the blog post
+- name: description
+  type: text
+  config:
+    required: true
+    max: 158
+  label: Description
+  description: The meta description of the blog post
 - name: banner_image
   type: file
   config:
