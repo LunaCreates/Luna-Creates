@@ -6,6 +6,20 @@
     @include _ty.text(sm);
   }
 
+  h2 {
+    @include _ty.text(lg);
+    margin-bottom: (_v.$core-grid / 1.25);
+    color: var(--color-foreground);
+    font-variation-settings: 'wght' _v.$core-tertiary-font-weight;
+  }
+
+  h3 {
+    @include _ty.text(md);
+    margin-bottom: (_v.$core-grid / 1.25);
+    color: var(--color-foreground);
+    font-variation-settings: 'wght' _v.$core-tertiary-font-weight;
+  }
+
   ol,
   ul {
     list-style: revert;
@@ -24,7 +38,7 @@
   }
 
   p {
-    margin: revert;
+    margin-bottom: (_v.$core-grid * 2);
 
     &:last-child {
       margin-bottom: 0;

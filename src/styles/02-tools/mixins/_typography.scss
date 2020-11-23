@@ -26,7 +26,7 @@ $headings: (
   sm: (
     font-family: _v.$core-font-family,
     font-size: unquote('max(#{_pxToRem.rem(16)}, min(1.563vw, #{_pxToRem.rem(20)}))'),
-    line-height: unquote('max(#{_pxToRem.rem(25)}, min(2.266vw, #{_pxToRem.rem(30)}))')
+    line-height: unquote('max(#{_pxToRem.rem(25)}, min(2.266vw, #{_pxToRem.rem(32)}))')
   ),
   xs: (
     font-family: _v.$core-font-family,

@@ -109,8 +109,8 @@ function renderTableData(data) {
         <p class="fs-xs lh-xs fvs-rg my-0 ta-right fst-italic text-body">Shipping &amp; taxes calculated at checkout</p>
 
         <div class="dp-f flex-wrap jc-end mt-24">
-            <button type="submit" class="bgc-primary text-background fs-xs lh-xs fvs-md py-16 px-24 borr-5 tt-uc ls-1">Update Cart</button>
-            <a href="${checkoutUrl}" class="bgc-secondary text-foreground fs-xs lh-xs fvs-md py-16 px-24 borr-5 tt-uc ls-1 ml-24">Checkout</a>
+            <button type="submit" class="bgc-primary text-background fs-xs lh-xs fvs-md py-16 px-24 borr-5 tt-uc ls-1 ol-3-solid-transparent focus:olc-secondary hover:bgc-foreground">Update Cart</button>
+            <a href="${checkoutUrl}" class="bgc-secondary text-foreground fs-xs lh-xs fvs-md py-16 px-24 borr-5 tt-uc ls-1 ml-24 ol-3-solid-transparent focus:olc-primary hover:bgc-secondary">Checkout</a>
         </div>
       </div>
     </div>
@@ -119,9 +119,9 @@ function renderTableData(data) {
 
 function renderNoItemsData() {
   return `
-    <div class="cart__no-items">
-      <p class="cart__body">Your cart is currently empty.</p>
-      <a class="cart__button" href="/products/">Continue shopping</a>
+    <div class="mb-24 md:mb-72">
+      <p class="fs-sm lh-sm fvs-rg mb-24">Your cart is currently empty.</p>
+      <a class="bgc-secondary text-foreground fs-xs lh-xs fvs-md py-16 px-24 borr-5 tt-uc ls-1 dp-ib as-c ol-3-solid-transparent focus:olc-primary hover:bgc-secondary md:px-32" href="/products/">Continue shopping</a>
     </div>
   `;
 }

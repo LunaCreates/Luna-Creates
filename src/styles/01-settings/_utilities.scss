@@ -132,6 +132,14 @@ $utilities: map-merge(
         600: 600px
       )
     ),
+    'max-width': (
+      responsive: true,
+      property: max-width,
+      class: maxw,
+      values: (
+        post: 45rem
+      )
+    ),
     'height': (
       responsive: true,
       property: height,
@@ -820,6 +828,23 @@ $utilities: map-merge(
       property: overflow-y,
       class: ovy,
       values: hidden auto
+    ),
+    'transition-property': (
+      responsive: true,
+      property: transition,
+      class: transition,
+      values: (
+        transform: transform cubic-bezier(0.4, 0, 0.2, 1) 150ms
+      )
+    ),
+    'transform-scale': (
+      responsive: true,
+      hover: true,
+      property: transform,
+      class: scale,
+      values: (
+        110: scale(1.1)
+      )
     )
   ),
   $utilities

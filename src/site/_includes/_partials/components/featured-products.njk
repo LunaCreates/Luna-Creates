@@ -13,17 +13,17 @@
 
                 <img data-srcset="{{product.image}}_300x300.jpg 1x, {{product.image}}_375x375.jpg 2x" alt="{{product.imageAlt}}" class="lazyload" loading="lazy" width="300" height="300">
 
-                <noscript>
+                <noscript class="focus:olc-secondary hover:bgc-foreground">
                     <source type="image/webp" srcset="{{product.image}}_300x300.jpg.webp 1x, {{product.image}}_375x375.jpg.webp 2x">
 
                     <img srcset="{{product.image}}_300x300.jpg 1x, {{product.image}}_375x375.jpg 2x" alt="{{product.imageAlt}}" loading="lazy" width="300" height="300">
                 </noscript>
             </picture>
-            <a class="fs-sm lh-sm fvs-md dp-b my-8 text-body ls-1 md:mt-16" href="{{product.slug}}">{{product.title}}</a>
-            <span class="fs-sm lh-sm fvs-md text-body">{{product.minPrice}} - {{product.maxPrice}}</span>
+            <a class="fs-xs lh-xs fvs-md dp-b my-8 text-body ls-1 md:mt-16" href="{{product.slug}}">{{product.title}}</a>
+            <span class="fs-xs lh-xs fvs-md text-body">{{product.minPrice}} - {{product.maxPrice}}</span>
         </div>
     {% endfor %}
     </div>
 
-    <a href="/products/" class="py-16 px-24 fs-xs fvs-md lh-xs ls-1 tt-uc bgc-secondary text-foreground borr-5 as-c focus:olc-primary hover:bgc-fade md:px-32">View all</a>
+    <a href="/products/" class="py-16 px-24 fs-xs fvs-md lh-xs ls-1 tt-uc bgc-secondary text-foreground borr-5 as-c ol-3-solid-transparent focus:olc-primary hover:bgc-secondary md:px-32">View all</a>
 </section>

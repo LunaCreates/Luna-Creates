@@ -30,12 +30,12 @@ sitemap:
                     <img srcset="{{product.mainImage}}_300x300.jpg 1x, {{product.mainImage}}_350x350.jpg 2x" alt="{{product.mainImageAlt}}" loading="lazy" width="300" height="300">
                 </noscript>
             </picture>
-            <a class="fs-sm lh-sm fvs-md dp-b my-8 ls-1 text-body" href="{{product.slug}}">{{product.title}}</a>
+            <a class="fs-xs lh-xs fvs-md dp-b my-8 ls-1 text-body" href="{{product.slug}}">{{product.title}}</a>
 
             {% if product.minPrice === product.maxPrice %}
-                <span class="fs-sm lh-sm fvs-md text-body">{{product.minPrice}}</span>
+                <span class="fs-xs lh-xs fvs-md text-body">{{product.minPrice}}</span>
             {% else %}
-                <span class="fs-sm lh-sm fvs-md text-body">{{product.minPrice}} - {{product.maxPrice}}</span>
+                <span class="fs-xs lh-xs fvs-md text-body">{{product.minPrice}} - {{product.maxPrice}}</span>
             {% endif %}
         </li>
     {% endfor %}

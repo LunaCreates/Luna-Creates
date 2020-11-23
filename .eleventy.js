@@ -1,5 +1,6 @@
 const fs = require('fs');
 const formatDate = require('./src/utils/filters/format-date');
+const readableDate = require('./src/utils/filters/readable-date');
 const htmlMin = require('./src/utils/minify-html.js');
 const swStyles = require('./src/utils/filters/sw-styles.js');
 const swScripts = require('./src/utils/filters/sw-scripts.js');
@@ -13,6 +14,7 @@ module.exports = config => {
 
   // Filters
   config.addFilter('formatDate', formatDate);
+  config.addFilter('readableDate', readableDate);
 
   // Shortcodes
   config.addShortcode('swStyles', swStyles);
@@ -20,6 +22,7 @@ module.exports = config => {
   config.addShortcode('swBuildNumber', swBuildNumber);
 
   // Passthrough copy
+  config.addPassthroughCopy({ 'src/cms': 'cms' });
   config.addPassthroughCopy({ 'src/favicons': 'favicons' });
   config.addPassthroughCopy({ 'src/fonts': 'fonts' });
   config.addPassthroughCopy({ 'src/images': 'images' });

@@ -7,27 +7,53 @@
     <section class="hero pos-r" aria-labelledby="hero-title">
 {% endif %}
     <div class="hero__content">
+    {% if post %}
+        {% set imageWebP = image.split(r/(jpg|png)/g)[0] + 'webp' %}
+
         <picture class="ratio-3-2 md:ratio-4-1">
-            <source media="(max-width: 37.4375em)" type="image/webp" data-srcset="{{image}}_300x180_crop_top.jpg.webp 1x, {{image}}_600x360_crop_top.jpg.webp 2x">
-            <source media="(max-width: 37.4375em)" data-srcset="{{image}}_300x180_crop_top.jpg 1x, {{image}}_600x360_crop_top.jpg 2x">
+            <source media="(max-width: 37.4375em)" type="image/webp" data-srcset="{{imageWebP}}?nf_resize=fit&w=300&h=180 1x, {{imageWebP}}?nf_resize=fit&w=600&h=360 2x">
+            <source media="(max-width: 37.4375em)" data-srcset="{{image}}?nf_resize=fit&w=300&h=180 1x, {{image}}?nf_resize=fit&w=600&h=360 2x">
 
-            <source media="(min-width: 38em) and (max-width: 47.9375em)" type="image/webp" data-srcset="{{image}}_400x240_crop_top.jpg.webp 1x, {{image}}_800x480_crop_top.jpg.webp 2x">
-            <source media="(min-width: 38em) and (max-width: 47.9375em)" data-srcset="{{image}}_400x240_crop_top.jpg 1x, {{image}}_800x480_crop_top.jpg 2x">
+            <source media="(min-width: 38em) and (max-width: 47.9375em)" type="image/webp" data-srcset="{{imageWebP}}?nf_resize=fit&w=400&h=240 1x, {{imageWebP}}?nf_resize=fit&w=800&h=480 2x">
+            <source media="(min-width: 38em) and (max-width: 47.9375em)" data-srcset="{{image}}?nf_resize=fit&w=400&h=240 1x, {{image}}?nf_resize=fit&w=800&h=480 2x">
 
-            <source type="image/webp" data-srcset="{{image}}_1500x500_crop_top.jpg.webp 1x, {{image}}_2048x640_crop_top.jpg.webp 2x">
-            <img class="lazyload op-right" data-srcset="{{image}}_1500x500_crop_top.jpg 1x, {{image}}_2048x640_crop_top.jpg 2x" role="presentation" width="400" height="240" loading="lazy">
+            <source type="image/webp" data-srcset="{{imageWebP}}?nf_resize=fit&w=1500&h=500 1x, {{imageWebP}}?nf_resize=fit&w=2048&h=640 2x">
+            <img class="lazyload op-right" data-srcset="{{image}}?nf_resize=fit&w=1500&h=500 1x, {{image}}?nf_resize=fit&w=2048&h=640 2x" role="presentation" width="400" height="240" loading="lazy">
 
             <noscript>
-                <source media="(max-width: 37.4375em)" type="image/webp" srcset="{{image}}_300x180_crop_top.jpg.webp 1x, {{image}}_600x360_crop_top.jpg.webp 2x">
-                <source media="(max-width: 37.4375em)" srcset="{{image}}_300x180_crop_top.jpg 1x, {{image}}_600x360_crop_top.jpg 2x">
+                <source media="(max-width: 37.4375em)" type="image/webp" srcset="{{imageWebP}}?nf_resize=fit&w=300&h=180 1x, {{imageWebP}}?nf_resize=fit&w=600&h=360 2x">
+                <source media="(max-width: 37.4375em)" srcset="{{image}}?nf_resize=fit&w=300&h=180 1x, {{image}}?nf_resize=fit&w=600&h=360 2x">
 
-                <source media="(min-width: 38em) and (max-width: 47.9375em)" type="image/webp" srcset="{{image}}_400x240_crop_top.jpg.webp 1x, {{image}}_800x480_crop_top.jpg.webp 2x">
-                <source media="(min-width: 38em) and (max-width: 47.9375em)" srcset="{{image}}_400x240_crop_top.jpg 1x, {{image}}_800x480_crop_top.jpg 2x">
+                <source media="(min-width: 38em) and (max-width: 47.9375em)" type="image/webp" srcset="{{imageWebP}}?nf_resize=fit&w=400&h=240 1x, {{imageWebP}}?nf_resize=fit&w=800&h=480 2x">
+                <source media="(min-width: 38em) and (max-width: 47.9375em)" srcset="{{image}}?nf_resize=fit&w=400&h=240 1x, {{image}}?nf_resize=fit&w=800&h=480 2x">
 
-                <source type="image/webp" srcset="{{image}}_1500x500_crop_top.jpg.webp 1x, {{image}}_2048x640_crop_top.jpg.webp 2x">
-                <img class="op-right" srcset="{{image}}_1500x500_crop_top.jpg 1x, {{image}}_2048x640_crop_top.jpg 2x" role="presentation" width="400" height="240" loading="lazy">
+                <source type="image/webp" srcset="{{imageWebP}}?nf_resize=fit&w=1500&h=500 1x, {{imageWebP}}?nf_resize=fit&w=2048&h=640 2x">
+                <img class="op-right" srcset="{{image}}?nf_resize=fit&w=1500&h=500 1x, {{image}}?nf_resize=fit&w=2048&h=640 2x" role="presentation" width="400" height="240" loading="lazy">
             </noscript>
         </picture>
+    {% else %}
+            <picture class="ratio-3-2 md:ratio-4-1">
+                <source media="(max-width: 37.4375em)" type="image/webp" data-srcset="{{image}}_300x180_crop_top.jpg.webp 1x, {{image}}_600x360_crop_top.jpg.webp 2x">
+                <source media="(max-width: 37.4375em)" data-srcset="{{image}}_300x180_crop_top.jpg 1x, {{image}}_600x360_crop_top.jpg 2x">
+
+                <source media="(min-width: 38em) and (max-width: 47.9375em)" type="image/webp" data-srcset="{{image}}_400x240_crop_top.jpg.webp 1x, {{image}}_800x480_crop_top.jpg.webp 2x">
+                <source media="(min-width: 38em) and (max-width: 47.9375em)" data-srcset="{{image}}_400x240_crop_top.jpg 1x, {{image}}_800x480_crop_top.jpg 2x">
+
+                <source type="image/webp" data-srcset="{{image}}_1500x500_crop_top.jpg.webp 1x, {{image}}_2048x640_crop_top.jpg.webp 2x">
+                <img class="lazyload op-right" data-srcset="{{image}}_1500x500_crop_top.jpg 1x, {{image}}_2048x640_crop_top.jpg 2x" role="presentation" width="400" height="240" loading="lazy">
+
+                <noscript>
+                    <source media="(max-width: 37.4375em)" type="image/webp" srcset="{{image}}_300x180_crop_top.jpg.webp 1x, {{image}}_600x360_crop_top.jpg.webp 2x">
+                    <source media="(max-width: 37.4375em)" srcset="{{image}}_300x180_crop_top.jpg 1x, {{image}}_600x360_crop_top.jpg 2x">
+
+                    <source media="(min-width: 38em) and (max-width: 47.9375em)" type="image/webp" srcset="{{image}}_400x240_crop_top.jpg.webp 1x, {{image}}_800x480_crop_top.jpg.webp 2x">
+                    <source media="(min-width: 38em) and (max-width: 47.9375em)" srcset="{{image}}_400x240_crop_top.jpg 1x, {{image}}_800x480_crop_top.jpg 2x">
+
+                    <source type="image/webp" srcset="{{image}}_1500x500_crop_top.jpg.webp 1x, {{image}}_2048x640_crop_top.jpg.webp 2x">
+                    <img class="op-right" srcset="{{image}}_1500x500_crop_top.jpg 1x, {{image}}_2048x640_crop_top.jpg 2x" role="presentation" width="400" height="240" loading="lazy">
+                </noscript>
+            </picture>
+    {% endif %}
     </div>
 
     <div class="hero__container container pos-a w-full px-16 ta-c zi-20">

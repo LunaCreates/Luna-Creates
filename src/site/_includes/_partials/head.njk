@@ -76,13 +76,38 @@
                         "price": "{{ product.priceSchema }}",
                         "availability": "https://schema.org/InStock"
                     }
+                {% elif post %}
+                    "@type": "BlogPosting",
+                    "mainEntityOfPage": {
+                        "@type": "WebPage",
+                        "@id": "{{settings.url}}{{page.url}}"
+                    },
+                    "headline": "{{title}}",
+                    "description": "{{description}}",
+                    "image": "{{thumbnail}}",
+                    "author": {
+                        "@type": "Person",
+                        "name": "{{settings.name}}"
+                    },
+                    "publisher": {
+                        "@type": "Organization",
+                        "name": "{{settings.name}}",
+                        "logo": {
+                        "@type": "ImageObject",
+                        "url": "{{settings.url}}favicons/favicon-256x256.png",
+                        "width": 256,
+                        "height": 256
+                        }
+                    },
+                    "datePublished": "{{publish_date | formatDate}}",
+                    "dateModified": "{{date | formatDate}}"
                 {% else %}
                     "@type": "Store",
                     "name": "{{ settings.name }}",
                     "url": "{{ settings.url }}/",
                     "image": "{{ settings.url }}/images/favicons/favicon-512x512.png",
                     "foundingDate": "2017",
-                    "sameAs": ["{{ settings.url }}/",{% for item in settings.social %}
+                    "sameAs": ["{{ settings.url }}",{% for item in settings.social %}
                             {% if loop.last %}
                                 "{{ item.url }}"
                             {% else %}

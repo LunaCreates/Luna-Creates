@@ -1,3 +1,5 @@
+@use 'sass:meta';
+
 @mixin generate-utility($utility, $infix) {
   $values: map-get($utility, values);
 
@@ -44,7 +46,11 @@
       @media (hover) {
         .hover\:#{$infix + $property-class + $property-class-modifier}:hover {
           @each $property in $properties {
-            #{$property}: lighten($value, 25%);
+            @if type-of($value) == 'color' {
+              #{$property}: lighten($value, 25%);
+            } @else {
+              #{$property}: $value;
+            }
           }
         }
       }
