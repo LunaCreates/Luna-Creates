@@ -6,7 +6,7 @@ tags:
 - simple-post
 - blog
 publish_date: 2021-11-23 08:00:00 +0000
-thumbnail: https://lunacreates.co.uk/images/blog/gina-map.jpg
+thumbnail: images/blog/gina-map.jpg
 banner_image: images/blog/black-map.jpg
 description: This is a description
 author: src/site/authors/Gina Manns.md

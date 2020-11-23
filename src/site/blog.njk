@@ -13,7 +13,7 @@ eleventyExcludeFromCollections: true
 {% for item in postListItems %}
     {% set title = item.data.title %}
     {% set date = item.data.publish_date or item.date.date %}
-    {% set thumbnail = item.data.thumbnail %}
+    {% set thumbnail = '/' + item.data.thumbnail %}
     {% set thumbnailWebP = thumbnail.split(r/(jpg|png)/g)[0] + 'webp' %}
 
     <li>
