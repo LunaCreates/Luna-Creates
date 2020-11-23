@@ -1,4 +1,16 @@
 ---
 label: Author
 hide_body: true
-fields: []
+fields:
+- name: name
+  type: text
+  config:
+    required: true
+  label: Name
+  description: Name of the author
+- name: avatar
+  type: file
+  config:
+    maxSize: 2
+  label: Avatar
+  description: Profile image of the author. Must have a ratio of 1:1
