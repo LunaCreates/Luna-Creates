@@ -15,13 +15,6 @@ fields:
     max: 158
   label: Description
   description: The meta description of the blog post
-- name: banner_image
-  type: file
-  config:
-    maxSize: 2
-  label: Banner Image
-  description: Must have an aspect ratio of 4:1. Will appear in the banner, behind
-    the title
 - name: publish_date
   type: datetime
   label: Publish Date
@@ -31,7 +24,14 @@ fields:
     date_format: DD/MM/YYYY
     time_format: 
     display_utc: false
-    export_format: DD/MM/YYYY
+    export_format: YYYY-MM-DDThh:mm:ssZ
+- name: banner_image
+  type: file
+  config:
+    maxSize: 2
+  label: Banner Image
+  description: Must have an aspect ratio of 4:1. Will appear in the banner, behind
+    the title
 - name: thumbnail
   type: file
   config:
@@ -39,19 +39,6 @@ fields:
   label: Thumbnail
   description: Must have an aspect ratio of 1:1. Image to be shown on each post in
     the blog landing page
-- name: author
-  type: select
-  default: []
-  config:
-    required: false
-    options: []
-    source:
-      type: pages
-      section: authors
-      file: 
-      path: 
-  label: Author
-  description: The author that wrote the blog post
 - name: tags
   type: tag_list
   default: []
