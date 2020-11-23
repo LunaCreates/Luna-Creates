@@ -25,5 +25,17 @@ fields:
       format: markdown
   label: Description
   description: Information about the author
+- name: foo
+  type: field_group
+  config: {}
+  fields:
+  - name: bar
+    type: text
+    config:
+      required: false
+    label: bar
+    description: bar
+  label: foo
+  description: foo
 pages:
 - src/site/authors/Gina Manns.md
