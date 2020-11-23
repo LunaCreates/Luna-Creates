@@ -14,7 +14,7 @@ author: src/site/authors/Gina Manns.md
 ---
 In this strangest of years, we’ve spent a lot of time thinking about how the world is changing and what the new normal will look like, as I’m sure everybody has. We both have a passion for travel as well as of course a passion for our little business; and thinking about what the future may hold for both of those things is something we’ve discussed so much over the last few months. We thought that setting up a blog section on our site would be a good way of sharing those thoughts, as well as giving us a chance to pass on some of the questions and stories we receive from our lovely customers.
 
-For this first one we’ve listed some of the queries we have received that we thought would be useful for anyone that is interested in our creations. As always, we love to hear from you either directly by email ([hello@lunacreates.co.uk](mailto:hello@lunacreates.co.uk "Email")) or via our Instagram page @lunacreatedesign – in particular we’d love to get feedback on this blog and what you’d like us to feature next time.
+For this first one we’ve listed some of the queries we have received that we thought would be useful for anyone that is interested in our creations. As always, we love to hear from you either directly by email ([hello@lunacreates.co.uk](mailto:hello@lunacreates.co.uk "Email")) or via our Instagram page @lunacreatesdesign – in particular we’d love to get feedback on this blog and what you’d like us to feature next time.
 
 ## Can the map be ordered as a gift?
 
