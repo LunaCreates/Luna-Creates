@@ -39,6 +39,19 @@ fields:
   label: Thumbnail
   description: Must have an aspect ratio of 1:1. Image to be shown on each post in
     the blog landing page
+- name: author
+  type: select
+  default: []
+  config:
+    required: false
+    options: []
+    source:
+      type: pages
+      section: authors
+      file: 
+      path: 
+  label: Author
+  description: The author that wrote the blog post
 - name: tags
   type: tag_list
   default: []
