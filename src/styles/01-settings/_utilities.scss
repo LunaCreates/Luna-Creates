@@ -774,6 +774,12 @@ $utilities: map-merge(
       class: zi,
       values: _z.$z-index
     ),
+    'negative-z-index': (
+      responsive: true,
+      property: z-index,
+      class: -zi,
+      values: _z.$negative-z-index
+    ),
     'pointer-events': (
       responsive: true,
       property: pointer-events,

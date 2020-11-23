@@ -17,14 +17,14 @@ eleventyExcludeFromCollections: true
     {% set thumbnailWebP = thumbnail.split(r/(jpg|png)/g)[0] + 'webp' %}
 
     <li>
-        <article class="dp-f fd-c">
+        <article class="picture-scale pos-r dp-f fd-c">
             <h2 class="fs-sm lh-sm my-8 order-2 md:mt-16">
-                <a class="fs-sm lh-sm fvs-md text-body" href="{{item.url}}">{{title}}</a>
+                <a class="psuedo-link fs-sm lh-sm fvs-md text-body" href="{{item.url}}">{{title}}</a>
             </h2>
 
             <time class="fs-xs lh-xs fvs-sb text-body order-3" datetime="{{date}}">{{date | readableDate }}</time>
 
-            <picture class="ratio-1-1 order-1">
+            <picture class="ratio-1-1 order-1 ov-hidden -zi-10">
                 <source type="image/webp" data-srcset="{{thumbnailWebP}}?nf_resize=fit&w=300&h=300 1x, {{thumbnailWebP}}?nf_resize=fit&w=350&h=350 2x">
 
                 <img data-srcset="{{thumbnail}}?nf_resize=fit&w=300&h=300 1x, {{thumbnail}}?nf_resize=fit&w=350&h=350 2x" alt="" class="lazyload" loading="lazy" width="300" height="300">

@@ -12,3 +12,15 @@ $z-index: (
   110: 110,
   120: 120
 );
+
+@function negativify-map($map) {
+  $result: ();
+  @each $key, $value in $map {
+    @if $key != 0 {
+      $result: map-merge($result, ($key: (-$value)));
+    }
+  }
+  @return $result;
+}
+
+$negative-z-index: negativify-map($z-index) !default;
