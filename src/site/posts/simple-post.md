@@ -55,7 +55,7 @@ content: <p>Welcome to our first blog post! In this strangest of years, we’ve 
   out for our next post. Thanks for reading!</p>
 publish_date: 21/11/2020
 thumbnail: https://lunacreates.co.uk/images/blog/gina-map.jpg
-banner_image: https://lunacreates.co.uk/images/blog/grey-map-banner-1.jpg
+banner_image: images/blog/black-map.jpg
 description: This is a description
 
 ---
