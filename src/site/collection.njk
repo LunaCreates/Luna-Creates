@@ -16,10 +16,10 @@ sitemap:
   priority: 1
 ---
 
- <ul class="container dp-g gtc-2 gg-24 my-32 px-16 md:gtc-3 md:gg-32 md:my-56 lg:my-80">
+<ul class="container dp-g gtc-2 gg-24 my-32 px-16 md:gtc-3 md:gg-32 md:my-56 lg:my-80">
     {% for product in category.products %}
-        <li class="pos-r ov-hidden">
-            <picture class="ratio-1-1">
+        <li class="picture-scale pos-r ov-hidden">
+            <picture class="ratio-1-1 ov-hidden mb-8 md:mb-16">
                 <source type="image/webp" data-srcset="{{product.mainImage}}_300x300.jpg.webp 1x, {{product.mainImage}}_350x350.jpg.webp 2x">
 
                 <img data-srcset="{{product.mainImage}}_300x300.jpg 1x, {{product.mainImage}}_350x350.jpg 2x" alt="{{product.mainImageAlt}}" class="lazyload" loading="lazy" width="300" height="300">
@@ -30,12 +30,12 @@ sitemap:
                     <img srcset="{{product.mainImage}}_300x300.jpg 1x, {{product.mainImage}}_350x350.jpg 2x" alt="{{product.mainImageAlt}}" loading="lazy" width="300" height="300">
                 </noscript>
             </picture>
-            <a class="fs-xs lh-xs fvs-md dp-b my-8 ls-1 text-body" href="{{product.slug}}">{{product.title}}</a>
+            <a class="psuedo-link fs-xs lh-xs fvs-md dp-b text-body ls-1" href="{{product.slug}}">{{product.title}}</a>
 
             {% if product.minPrice === product.maxPrice %}
-                <span class="fs-xs lh-xs fvs-md text-body">{{product.minPrice}}</span>
+                <span class="fs-xs lh-xs fvs-md text-body dp-b my-t">{{product.minPrice}}</span>
             {% else %}
-                <span class="fs-xs lh-xs fvs-md text-body">{{product.minPrice}} - {{product.maxPrice}}</span>
+                <span class="fs-xs lh-xs fvs-md text-body dp-b my-t">{{product.minPrice}} - {{product.maxPrice}}</span>
             {% endif %}
         </li>
     {% endfor %}

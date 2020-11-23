@@ -7,8 +7,8 @@
 
     <div class="dp-g gtc-2 gg-24 mb-24 md:mb-32 lg:gtc-4 lg:gg-32 lg:mb-40">
     {% for product in featuredProducts %}
-        <div class="pos-r">
-            <picture class="ratio-1-1">
+        <div class="picture-scale pos-r">
+            <picture class="ratio-1-1 pos-r ov-hidden mb-8 md:mb-16">
                 <source type="image/webp" data-srcset="{{product.image}}_300x300.jpg.webp 1x, {{product.image}}_375x375.jpg.webp 2x">
 
                 <img data-srcset="{{product.image}}_300x300.jpg 1x, {{product.image}}_375x375.jpg 2x" alt="{{product.imageAlt}}" class="lazyload" loading="lazy" width="300" height="300">
@@ -19,8 +19,9 @@
                     <img srcset="{{product.image}}_300x300.jpg 1x, {{product.image}}_375x375.jpg 2x" alt="{{product.imageAlt}}" loading="lazy" width="300" height="300">
                 </noscript>
             </picture>
-            <a class="fs-xs lh-xs fvs-md dp-b my-8 text-body ls-1 md:mt-16" href="{{product.slug}}">{{product.title}}</a>
-            <span class="fs-xs lh-xs fvs-md text-body">{{product.minPrice}} - {{product.maxPrice}}</span>
+            <a class="psuedo-link fs-xs lh-xs fvs-md dp-b text-body ls-1" href="{{product.slug}}">{{product.title}}</a>
+
+            <span class="fs-xs lh-xs fvs-md text-body dp-b my-t">{{product.minPrice}} - {{product.maxPrice}}</span>
         </div>
     {% endfor %}
     </div>
