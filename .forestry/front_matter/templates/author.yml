@@ -1,0 +1,28 @@
+---
+label: Author
+hide_body: true
+fields:
+- name: name
+  type: text
+  config:
+    required: true
+  label: Name
+  description: Name of the author
+- name: avatar
+  type: file
+  config:
+    maxSize: 2
+  label: Avatar
+  description: Profile image of the author. Must have a ratio of 1:1
+- name: description
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Description
+  description: Information about the author
+pages:
+- src/site/authors/Gina Manns.md

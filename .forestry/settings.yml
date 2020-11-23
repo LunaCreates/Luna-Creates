@@ -1,17 +1,29 @@
 ---
 new_page_extension: md
 auto_deploy: false
-admin_path: ''
+admin_path: src/cms
 webhook_url: 
 sections:
+- type: heading
+  label: Posts
 - type: directory
   path: src/site/posts
-  label: Blog
+  label: Blog Posts
   create: documents
   match: "**/*.md"
   new_doc_ext: md
   templates:
   - blog-post
+- type: heading
+  label: Authors
+- type: directory
+  path: src/site/authors
+  label: Authors
+  create: documents
+  match: "**/*.md"
+  new_doc_ext: md
+  templates:
+  - author
 upload_dir: src/images/blog
 public_path: images/blog
 front_matter_path: https://lunacreates.co.uk/images/blog
