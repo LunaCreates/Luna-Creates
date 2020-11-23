@@ -1,36 +1,14 @@
-@use '../01-settings/variables' as _variables;
-@use '../02-tools/mixins/buttons' as _buttons;
-@use '../02-tools/mixins/responsive' as _responsive;
-@use '../02-tools/mixins/typography' as _typography;
-
 .pin-colors {
-  display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: _variables.$core-grid;
-  margin-bottom: (_variables.$core-grid * 2.5);
 }
 
 .pin-colors:not(.pin-colors--key-text) {
-  & .pin-colors__field:nth-child(n + 6),
-  & > .product__field {
+  & .pin-colors__color:nth-child(n + 6),
+  & > .pin-colors__text {
     display: none;
   }
 }
 
-
 .pin-colors--key-text {
   grid-template-columns: 1fr 2fr;
-}
-
-.pin-colors__field {
-  position: relative;
-}
-
-.pin-colors__label {
-  position: absolute;
-  left: 0;
-  width: 0;
-  height: 0;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
 }

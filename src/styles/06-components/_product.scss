@@ -1,17 +1,12 @@
-@use '../01-settings/variables' as _variables;
-@use '../02-tools/mixins/buttons' as _buttons;
-@use '../02-tools/mixins/picture' as _picture;
-@use '../02-tools/mixins/responsive' as _responsive;
-@use '../02-tools/mixins/typography' as _typography;
-@use '../02-tools/functions/z-index' as _z-index;
+@use '../01-settings/variables' as _v;
+@use '../02-tools/mixins/buttons' as _btn;
+@use '../02-tools/mixins/responsive' as _r;
+@use '../02-tools/mixins/typography' as _ty;
 
 .product {
-  @include _responsive.container;
-  padding-top: (_variables.$core-grid * 2);
-
-  @include _responsive.min(m) {
+  @include _r.min(md) {
     display: flow-root;
-    padding-top: (_variables.$core-grid * 3.5);
+    padding-top: (_v.$core-grid * 3.5);
 
     &::after {
       content: '';
@@ -22,54 +17,23 @@
 }
 
 .product__imagery {
-  margin-bottom: (_variables.$core-grid * 3);
-
-  @include _responsive.min(m) {
+  @include _r.min(md) {
     width: calc(55% - 21px);
-    margin-bottom: 0;
     float: left;
   }
 }
 
-.product__image-wrapper {
-  position: relative;
-  min-height: 330px;
-
-  @media (hover) {
-    &:hover {
-      cursor: zoom-in;
-    }
-  }
-}
-
-.product__picture {
-  @include _picture.picture;
-  padding-top: 100%;
-  pointer-events: none;
-}
-
 .product__zoom {
-  @include _buttons.button(primary);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-
-  .no-ja & {
+  .no-js & {
     display: none;
   }
 }
 
 .product__zoom-icon {
   flex: 0 0 24px;
-  margin-left: (_variables.$core-grid / 1.5);
-  pointer-events: none;
 }
 
 .product__carousel {
-  position: relative;
-  margin-right: (_variables.$core-grid * 2);
-  margin-left: (_variables.$core-grid * 2);
   outline: none;
 
   .glide__arrow {
@@ -81,7 +45,7 @@
   .glide__arrow--left {
     left: calc(-5vw - 17px);
 
-    @include _responsive.min(m) {
+    @include _r.min(md) {
       left: -34px;
     }
   }
@@ -89,89 +53,28 @@
   .glide__arrow--right {
     right: calc(-5vw - 17px);
 
-    @include _responsive.min(m) {
+    @include _r.min(md) {
       right: -34px;
     }
   }
 }
 
 .product__details {
-  @include _responsive.min(m) {
+  @include _r.min(md) {
     width: calc(45% - 21px);
     float: right;
   }
 }
 
-.product__title {
-  @include _typography.text(lg);
-  margin-bottom: (_variables.$core-grid * 1.5);
-  text-transform: uppercase;
-  letter-spacing: 3px;
-}
-
-.product__price {
-  @include _typography.text(md);
-  font-variation-settings: 'wght' _variables.$core-secondary-font-weight;
-}
-
-.product__form {
-  margin-top: (_variables.$core-grid * 1.5);
-}
-
-.product__field {
-  position: relative;
-  margin-bottom: (_variables.$core-grid * 2.5);
-
-  &:last-child,
-  .pin-colors & {
-    margin-bottom: 0;
-  }
-}
-
-.product__label {
-  @include _typography.text(sm);
-  display: inline-block;
-  margin-top: 0;
-  margin-bottom: (_variables.$core-grid / 2);
-  color: var(--color-tertiary);
-  font-variation-settings: 'wght' _variables.$core-secondary-font-weight;
-
-  .pin-colors & {
-    position: absolute;
-    left: 0;
-    width: 0;
-    height: 0;
-    overflow: hidden;
-    clip: rect(0 0 0 0);
-  }
-}
-
-.product__select-wrapper {
-  position: relative;
-}
-
 .product__select,
 .product__input,
 .product__textarea {
-  @include _typography.text(sm);
-  display: block;
-  width: 100%;
-  color: var(--color-heading);
-
   &::placeholder {
     font-style: italic;
   }
 }
 
-.product__select {
-  padding-top: (_variables.$core-grid / 1.2) _variables.$core-grid;
-  padding-right: (_variables.$core-grid + 24);
-  padding-bottom: (_variables.$core-grid / 1.2);
-  padding-left: _variables.$core-grid;
-}
-
 .product__select-icon {
-  position: absolute;
   top: 50%;
   right: 8px;
   fill: currentColor;
@@ -179,35 +82,10 @@
   pointer-events: none;
 }
 
-.product__input,
-.product__textarea {
-  padding: (_variables.$core-grid / 1.2) _variables.$core-grid;
-}
-
-.product__input--quantity {
-  width: 100px;
-}
-
-.product__radios {
-  margin-bottom: (_variables.$core-grid * 2.5);
-}
-
-.product__radio {
-  display: inline-flex;
-  align-items: center;
-  margin-right: _variables.$core-grid;
-}
-
 .product__radio-input {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  margin-right: (_variables.$core-grid / 2);
 
   &::before {
     content: '';
@@ -225,67 +103,41 @@
 }
 
 .product__basket-button {
-  @include _buttons.button(primary);
-
   &[disabled='true'] {
-    @include _buttons.button(disabled);
+    @include _btn.button(disabled);
   }
 }
 
-.product__personalisation {
-  padding: (_variables.$core-grid * 1.8) (_variables.$core-grid * 2);
-  border-radius: 4px;
-  background-color: var(--color-neutral);
-}
-
 .product__personalisation-title {
-  @include _typography.text(md);
-  position: relative;
-  padding-bottom: (_variables.$core-grid * 1.5);
-  color: var(--color-tertiary);
-  font-variation-settings: 'wght' _variables.$core-secondary-font-weight;
-  text-transform: uppercase;
-
   &::after {
     content: '';
     position: absolute;
     bottom: 0;
-    left: -(_variables.$core-grid * 2);
-    width: calc(100% + #{_variables.$core-grid * 4});
+    left: -(_v.$core-grid * 2);
+    width: calc(100% + #{_v.$core-grid * 4});
     height: 1px;
     background-color: var(--color-border);
   }
 }
 
-.product__body {
-  margin-top: (_variables.$core-grid * 1.5);
-  margin-bottom: (_variables.$core-grid * 2);
-}
-
-.product__button {
-  @include _buttons.button(primary);
-}
-
 .product__description {
-  margin-top: (_variables.$core-grid * 2);
-  margin-bottom: (_variables.$core-grid * 2);
+  p {
+    @include _ty.text(sm);
+    margin-bottom: (_v.$core-grid * 1.5);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
 
   a {
+    @include _ty.text(sm);
     color: var(--color-foreground);
     text-decoration: underline;
   }
 
-  @include _responsive.min(m) {
+  @include _r.min(md) {
     width: calc(55% - 21px);
-    margin-top: (_variables.$core-grid * 3.5);
-    margin-bottom: (_variables.$core-grid * 3.5);
     float: left;
   }
-}
-
-.product__sub-title {
-  @include _typography.text(md);
-  margin-bottom: (_variables.$core-grid * 1.5);
-  font-variation-settings: 'wght' _variables.$core-secondary-font-weight;
-  text-transform: uppercase;
 }

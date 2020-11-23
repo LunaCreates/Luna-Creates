@@ -7,7 +7,7 @@
     <section class="hero pos-r" aria-labelledby="hero-title">
 {% endif %}
     <div class="hero__content">
-        <picture class="ratio-3-2">
+        <picture class="ratio-3-2 md:ratio-4-1">
             <source media="(max-width: 37.4375em)" type="image/webp" data-srcset="{{image}}_300x180_crop_top.jpg.webp 1x, {{image}}_600x360_crop_top.jpg.webp 2x">
             <source media="(max-width: 37.4375em)" data-srcset="{{image}}_300x180_crop_top.jpg 1x, {{image}}_600x360_crop_top.jpg 2x">
 
@@ -30,7 +30,7 @@
         </picture>
     </div>
 
-    <div class="hero__container container pos-a w-full ta-c zi-20">
+    <div class="hero__container container pos-a w-full px-16 ta-c zi-20">
         {% if home %}
             <p class="hero__title mx-auto mb-0 text-background fs-lg lh-lg fvs-rg ta-center tt-uc" id="hero-title">
                 <span class="hero__title-highlight bgc-foreground">{{title | safe}}</span>
@@ -48,5 +48,5 @@
 {% endif %}
 
 {% if home %}
-    <p class="hero__body container my-32 mx-auto fs-sm lh-sm fvs-rg ta-center">We help you to immortalise your travel adventures, whether you’re finding new places to explore or reflecting on past adventures.</p>
+    <p class="hero__body container my-32 px-16 mx-auto fs-sm lh-sm fvs-rg ta-center md:my-56 lg:my-80">We help you to immortalise your travel adventures, whether you’re finding new places to explore or reflecting on past adventures.</p>
 {% endif %}

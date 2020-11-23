@@ -58,7 +58,10 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+small,
+span,
+strong {
   font-weight: _ty.$font-weight-normal;
 }
 
@@ -144,6 +147,7 @@ button {
   background-color: transparent;
   border: none;
   border-radius: 0;
+  font-family: 'Avenir Next';
   font-size: inherit;
   outline-width: 3px;
   appearance: none;

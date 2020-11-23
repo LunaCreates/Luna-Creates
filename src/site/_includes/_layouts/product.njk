@@ -1,23 +1,23 @@
 {% extends "_layouts/default.njk" %}
 
 {% block content %}
-    <main class="product product--container" aria-describedby="product-title" data-component="product-details" data-product-id="{{product.id}}" data-product-color="{{product.color}}" id="main">
-        <div class="product__imagery">
-            <picture class="product__picture" data-component="product-picture">
+    <main class="product container pt-24 px-16" aria-describedby="product-title" data-component="product-details" data-product-id="{{product.id}}" data-product-color="{{product.color}}" id="main">
+        <div class="product__imagery mb-32 md:mb-0">
+            <picture class="ratio-1-1 pe-none" data-component="product-picture">
                 <source media="(max-width: 37.4375em)" type="image/webp" data-srcset="{{product.mainImage}}_350x350.jpg.webp 1x, {{product.mainImage}}_450x450.jpg.webp 2x">
                 <source media="(max-width: 37.4375em)" data-srcset="{{product.mainImage}}_300x300.jpg 1x, {{product.mainImage}}_450x450.jpg 2x">
                 <source type="image/webp" data-srcset="{{product.mainImage}}_600x600.jpg.webp 1x, {{product.mainImage}}_800x800.jpg.webp 2x">
-                <img data-srcset="{{product.mainImage}}_600x600.jpg 1x, {{product.mainImage}}_800x800.jpg 2x" alt="{{product.mainImageAlt}}" class="product__image lazyload" loading="lazy" width="300" height="300" data-product-image>
+                <img data-srcset="{{product.mainImage}}_600x600.jpg 1x, {{product.mainImage}}_800x800.jpg 2x" alt="{{product.mainImageAlt}}" class="lazyload" loading="lazy" width="300" height="300" data-product-image>
 
                 <noscript>
                     <source media="(max-width: 37.4375em)" type="image/webp" srcset="{{product.mainImage}}_350x350.jpg.webp 1x, {{product.mainImage}}_450x450.jpg.webp 2x">
                     <source media="(max-width: 37.4375em)" srcset="{{product.mainImage}}_300x300.jpg 1x, {{product.mainImage}}_450x450.jpg 2x">
                     <source type="image/webp" srcset="{{product.mainImage}}_600x600.jpg.webp 1x, {{product.mainImage}}_800x800.jpg.webp 2x">
-                    <img srcset="{{product.mainImage}}_600x600.jpg 1x, {{product.mainImage}}_800x800.jpg 2x" alt="{{product.mainImageAlt}}" class="product__image" loading="lazy" width="300" height="300">
+                    <img srcset="{{product.mainImage}}_600x600.jpg 1x, {{product.mainImage}}_800x800.jpg 2x" alt="{{product.mainImageAlt}}" loading="lazy" width="300" height="300">
                 </noscript>
             </picture>
 
-            <button type="button" class="product__zoom" data-image-zoom>
+            <button type="button" class="bgc-secondary text-foreground fs-xs lh-xs fvs-md py-16 px-24 borr-5 ls-1 dp-f jc-center ai-c w-full tt-uc focus:olc-primary" data-image-zoom>
                 Open image zoom
                 <svg class="product__zoom-icon" width="24" height="24" aria-hidden="true">
                     <use xlink:href="/icons/sprite.svg#zoom"></use>
@@ -28,8 +28,8 @@
         </div>
 
         <div class="product__details">
-            <h1 class="product__title" id="product-title">{{product.title}}</h1>
-            <span class="product__price" aria-live="polite" data-product-price>{{product.price}}</span>
+            <h1 class="fs-lg lh-lg fvs-rg ls-3 tt-uc mt-0 text-heading" id="product-title">{{product.title}}</h1>
+            <span class="fs-md lh-md fvs-rg text-body" aria-live="polite" data-product-price>{{product.minPrice}}</span>
 
             {% for tag in product.tags %}
                 {% if tag === 'Map Only' %}
@@ -63,8 +63,8 @@
         </div>
 
         {% if product.description %}
-        <div class="product__description">
-            <h2 class="product__sub-title">Product Information</h2>
+        <div class="product__description mt-40 mb-24">
+            <h2 class="fs-md lh-md fvs-md mt-0 mb-16 tt-uc text-heading">Product Information</h2>
             {{ product.description | safe }}
         </div>
         {% endif %}
@@ -72,5 +72,7 @@
         {% include "_partials/components/image-zoom.njk" %}
         {% include "_partials/components/modal.njk" %}
     </main>
+
+    {{content | safe}}
 {% endblock %}
 

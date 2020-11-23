@@ -1,79 +1,14 @@
-@use '../01-settings/variables' as _variables;
-@use '../02-tools/mixins/buttons' as _buttons;
-@use '../02-tools/mixins/flexbox' as _flexbox;
-@use '../02-tools/mixins/responsive' as _responsive;
-@use '../02-tools/mixins/transitions' as _transitions;
-@use '../02-tools/mixins/typography' as _typography;
+@use '../01-settings/variables' as _v;
+@use '../02-tools/mixins/transitions' as _tr;
 
 @use 'sass:color';
 
-.form {
-  margin-top: (_variables.$core-grid * 3);
-}
-
-.form__legend {
-  height: 0;
-  opacity: 0;
-  visibility: hidden;
-}
-
-.form__fieldset {
-  margin: 0;
-  padding: 0;
-  border: none;
-}
-
-.form__inner {
-  @include _responsive.min(m) {
-    @include _flexbox.flex(wrap, row, space-between, null);
-  }
-}
-
-.form__field {
-  position: relative;
-  margin-bottom: (_variables.$core-grid * 2);
-
-  @include _responsive.min(m) {
-    flex-basis: 100%;
-
-    &:nth-of-type(2),
-    &:nth-of-type(3) {
-      flex-basis: 48%;
-    }
-  }
-}
-
-.form__field--hidden {
-  display: none;
-}
-
-.form__item {
-  margin-bottom: (_variables.$core-grid * 1.5);
-}
-
-.form__label {
-  display: block;
-  color: var( --color-foreground);
-  font-family: _variables.$core-font-family;
-  font-weight: _variables.$core-font-weight;
-  margin-bottom: (_variables.$core-grid / 2);
-}
-
 .form__input,
 .form__textarea {
-  @include _transitions.transition-03(border-color);
-  @include _typography.text(sm);
-  width: 100%;
-  margin-bottom: 0;
-  padding-top: (_variables.$core-grid / 1.5);
-  padding-right: _variables.$core-grid;
-  padding-bottom: (_variables.$core-grid / 1.5);
-  padding-left: _variables.$core-grid;
+  @include _tr.transition-03(border-color);
   border-width: 1px;
-  border-style: _variables.$core-border-style;
+  border-style: _v.$core-border-style;
   border-color: var(--color-heading);
-  color: var(--color-body);
-  outline: none;
 
   &:focus,
   &:active {
@@ -106,25 +41,11 @@
   }
 }
 
-.form__button {
-  @include _buttons.button(primary);
-}
-
 .form__validation-message {
-  @include _transitions.transition-03(opacity);
-  display: block;
-  position: absolute;
+  @include _tr.transition-03(opacity);
   top: 3px;
   right: 0;
-  color: var(--color-danger);
-  font-family: _variables.$core-font-family;
   opacity: 0;
-
-  @include _responsive.min(l) {
-    font-family: _variables.$core-font-family;
-    font-weight: _variables.$core-font-weight;
-    font-variation-settings: 'wght' _variables.$core-secondary-font-weight;
-  }
 
   &--visible {
     opacity: 1;
@@ -132,21 +53,13 @@
 }
 
 .form__message {
-  @include _typography.text(sm);
-  display: none;
-  margin-top: (_variables.$core-grid * 2);
-  margin-bottom: 0;
-  padding-top: (_variables.$core-grid / 2);
-  padding-right: _variables.$core-grid;
-  padding-bottom: (_variables.$core-grid / 2);
-  padding-left: _variables.$core-grid;
-  color: var(--color-primary);
-
   &--error {
-    background-color: rgba(var(--color-danger), 0.7);
+    display: block;
+    background-color: rgba(_v.$core-color-danger, 0.7);
   }
 
   &--success {
-    background-color: rgba(_variables.$core-color-success, 0.7);
+    display: block;
+    background-color: rgba(_v.$core-color-success, 0.7);
   }
 }

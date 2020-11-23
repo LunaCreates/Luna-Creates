@@ -13,6 +13,7 @@ $color-error: #de0000;
 
 // Used for generating CSS utility classes
 $colors: (
+  'transparent': transparent,
   'primary': $color-primary,
   'secondary': $color-secondary,
   'tertiary': $color-tertiary,

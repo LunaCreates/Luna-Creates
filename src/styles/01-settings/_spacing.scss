@@ -11,7 +11,11 @@ $spacers: (
   48: _pxToRem.rem(48),
   56: _pxToRem.rem(56),
   64: _pxToRem.rem(64),
-  auto: auto,
+  72: _pxToRem.rem(72),
+  80: _pxToRem.rem(80),
+  88: _pxToRem.rem(88),
+  5vw: 5vw,
+  auto: auto
 );
 
 @function negativify-map($map) {

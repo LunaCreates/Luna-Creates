@@ -1,0 +1,15 @@
+@use './colors' as _c;
+
+@function borderProps($style: solid) {
+  $items: (1, 2, 3, 4, 5);
+  $result: ();
+
+  @each $number in $items {
+    @each $key, $value in _c.$colors {
+      $newKey: $number + '-' + $style + '-' + $key;
+      $result: map-merge($result, ($newKey: #{$number}px solid $value));
+    }
+  }
+
+  @return $result;
+}

@@ -4,15 +4,13 @@
 
 .container {
   position: relative;
-  padding-right: map.get(_s.$spacers, 16);
-  padding-left: map.get(_s.$spacers, 16);
 
   @include _r.min(xs) {
     padding-right: 5vw;
     padding-left: 5vw;
   }
 
-  @include _r.min(lg) {
+  @include _r.min(md) {
     max-width: 1140px;
     margin-right: auto;
     margin-left: auto;

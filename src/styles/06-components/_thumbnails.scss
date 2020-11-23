@@ -1,33 +1,24 @@
-@use '../01-settings/variables' as _variables;
-@use '../02-tools/functions/z-index' as _z-index;
-@use '../02-tools/mixins/picture' as _picture;
-@use '../02-tools/mixins/responsive' as _responsive;
+@use '../01-settings/variables' as _v;
+@use '../02-tools/mixins/responsive' as _r;
 
 .thumbnails {
-  display: flex;
-  flex-wrap: nowrap;
-  margin-top: (_variables.$core-grid * 1.5);
   scroll-snap-type: x mandatory;
   overflow-x: auto;
 }
 
 .thumbnails__thumbnail {
-  position: relative;
-  width: calc(25% - #{_variables.$core-grid * 2});
+  width: calc(25% - #{_v.$core-grid * 2});
   max-width: 60px;
-  margin-right: _variables.$core-grid;
   flex: 0 0 auto;
   scroll-snap-align: start;
 
-  @include _responsive.min(m) {
+  @include _r.min(md) {
     min-width: 100px;
     max-width: none;
-    margin-right: (_variables.$core-grid * 1.5);
   }
 }
 
 .thumbnails__link {
-  position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
@@ -36,7 +27,6 @@
   transition: opacity 0.3s ease-in-out, border-color 0.3s ease-in-out;
   font-size: 0;
   line-height: 0;
-  z-index: _z-index.z(alpha);
 
   @media (hover) {
     &:hover {
@@ -56,11 +46,8 @@
 }
 
 .thumbnails__picture {
-  @include _picture.picture;
-  padding-top: 100%;
   opacity: 0.65;
   transition: opacity 0.3s ease-in-out;
-  pointer-events: none;
 
   .thumbnails__link--active + & {
     opacity: 1;

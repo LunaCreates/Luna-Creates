@@ -48,6 +48,10 @@
       "url": "/delivery/"
     },
     {
+      "title": "Blog",
+      "url": "/blog/"
+    },
+    {
       "title": "FAQ",
       "url": "/faqs/"
     }

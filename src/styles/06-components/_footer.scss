@@ -9,6 +9,32 @@
   }
 }
 
+.footer__item--email {
+  word-break: break-all;
+}
+
+.footer__link {
+  @media (hover) {
+    &:not(.footer__link--social) {
+      display: inline;
+      background-image: linear-gradient(var(--color-body), var(--color-body));
+      background-size: 0 2px;
+      background-position: 0 100%;
+      background-repeat: no-repeat;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-size: 100% 2px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+  }
+}
+
 .footer__link--social {
   width: 40px;
   height: 40px;

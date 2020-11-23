@@ -20,6 +20,10 @@
     opacity: 0.5;
     visibility: visible;
   }
+
+  @include _r.min(md) {
+    display: none;
+  }
 }
 
 .header__search,
@@ -54,7 +58,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: (_v.$core-grid / 1.2);
     background-color: var(--color-primary);
     border: 1px solid var(--color-secondary);
     border-radius: 50%;

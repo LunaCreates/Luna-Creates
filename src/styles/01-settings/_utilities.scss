@@ -1,3 +1,4 @@
+@use './border' as _bor;
 @use './colors' as _c;
 @use './spacing' as _s;
 @use './typography' as _t;
@@ -25,8 +26,14 @@ $utilities: map-merge(
     'outline-color': (
       focus: true,
       property: outline-color,
-      class: oc,
+      class: olc,
       values: _c.$colors
+    ),
+    'outline': (
+      responsive: true,
+      property: outline,
+      class: ol,
+      values: _bor.borderProps()
     ),
     'display': (
       responsive: true,
@@ -97,7 +104,9 @@ $utilities: map-merge(
         '3\\/6': 50%,
         '4\\/6': 66.666667%,
         '5\\/6': 83.333333%,
+        '60px': 60px,
         '180px': 180px,
+        '250px': 250px,
         // '1\\/12': 8.333333%,
         // '2\\/12': 16.666667%,
         // '3\\/12': 25%,
@@ -114,11 +123,23 @@ $utilities: map-merge(
         'auto': auto
       )
     ),
+    'min-width': (
+      responsive: true,
+      property: min-width,
+      class: minw,
+      values: (
+        250: 250px,
+        600: 600px
+      )
+    ),
     'height': (
       responsive: true,
       property: height,
       class: h,
-      values: auto
+      values: (
+        auto: auto,
+        'full': 100%
+      )
     ),
     'grid-template-columns': (
       responsive: true,
@@ -169,7 +190,7 @@ $utilities: map-merge(
         10: span 10 / span 10,
         11: span 11 / span 11,
         12: span 12 / span 12,
-        full: 1 / -1
+        full: #{1 / -1}
       )
     ),
     'grid-column-start': (
@@ -221,7 +242,7 @@ $utilities: map-merge(
         4: span 4 / span 4,
         5: span 5 / span 5,
         6: span 6 / span 6,
-        full: 1 / -1
+        full: #{1 / -1}
       )
     ),
     'grid-row-start': (
@@ -288,6 +309,7 @@ $utilities: map-merge(
       values: _c.$colors,
     ),
     'font-size': (
+      responsive: true,
       property: font-size,
       class: fs,
       values: (
@@ -319,6 +341,7 @@ $utilities: map-merge(
       )
     ),
     'line-height': (
+      responsive: true,
       property: line-height,
       class: lh,
       values: (
@@ -328,7 +351,7 @@ $utilities: map-merge(
         base: _t.$line-height-base,
         md: clamp(_t.$line-height-md, 2.813vw, _t.$line-height-lg),
         lg: clamp(_t.$line-height-lg, 3.750vw, _t.$line-height-xl),
-        xl: clamp(_t.$line-height-xl, 4.375vw, _t.$line-height-xxl),
+        xl: clamp(_t.$line-height-xl, 4.375vw, _t.$line-height-xxl)
       )
     ),
     'letter-spacing': (
@@ -344,14 +367,51 @@ $utilities: map-merge(
     'border-radius': (
       responsive: true,
       property: border-radius,
-      class: br,
+      class: borr,
       values: (
+        0: 0,
         1: 1px,
         2: 2px,
         3: 3px,
         4: 4px,
         5: 5px,
       )
+    ),
+    'border-color': (
+      responsive: true,
+      property: border-color,
+      class: borc,
+      values: _c.$colors
+    ),
+    'border': (
+      responsive: true,
+      property: border,
+      class: bor,
+      values: _bor.borderProps()
+    ),
+    'border-top': (
+      responsive: true,
+      property: border-top,
+      class: bort,
+      values: _bor.borderProps()
+    ),
+    'border-right': (
+      responsive: true,
+      property: border-right,
+      class: borrt,
+      values: _bor.borderProps()
+    ),
+    'border-bottom': (
+      responsive: true,
+      property: border-bottom,
+      class: borb,
+      values: _bor.borderProps()
+    ),
+    'border-left': (
+      responsive: true,
+      property: border-left,
+      class: borl,
+      values: _bor.borderProps()
     ),
     'list-style-type': (
       responsive: true,
@@ -437,10 +497,67 @@ $utilities: map-merge(
         str: stretch,
       )
     ),
+    'justify-self': (
+      responsive: true,
+      property: justify-self,
+      class: js,
+      values: (
+        auto: auto,
+        s: flex-start,
+        e: flex-end,
+        c: center,
+        b: baseline,
+        str: stretch,
+      )
+    ),
     'flex': (
       responsive: true,
       property: flex,
-      values: (inital: 0 1 auto, 1: 1 1 0%, auto: 1 1 auto, none: none)
+      values: (
+        initial: 0 1 auto,
+        1: 1 1 0%,
+        2: 2 2 0%,
+        3: 3 3 0%,
+        auto: 1 1 auto,
+        none: none
+      )
+    ),
+    'flex-basis': (
+      responsive: true,
+      property: flex-basis,
+      class: fb,
+      values: (
+        0: 0,
+        '1\\/2': 50%,
+        '1\\/3': 33.333333%,
+        '2\\/3': 66.666667%,
+        '1\\/4': 25%,
+        '2\\/4': 50%,
+        '3\\/4': 75%,
+        '1\\/5': 20%,
+        '2\\/5': 40%,
+        '3\\/5': 60%,
+        '4\\/5': 80%,
+        '1\\/6': 16.666667%,
+        '2\\/6': 33.333333%,
+        '3\\/6': 50%,
+        '4\\/6': 66.666667%,
+        '5\\/6': 83.333333%,
+        // '1\\/12': 8.333333%,
+        // '2\\/12': 16.666667%,
+        // '3\\/12': 25%,
+        // '4\\/12': 33.333333%,
+        // '5\\/12': 41.666667%,
+        // '6\\/12': 50%,
+        // '7\\/12': 58.333333%,
+        // '8\\/12': 66.666667%,
+        // '9\\/12': 75%,
+        // '10\\/12': 83.333333%,
+        // '11\\/12': 91.666667%,
+        'full': 100%,
+        'w-screen': 100vw,
+        'auto': auto
+      )
     ),
     'flex-direction': (
       responsive: true,
@@ -663,6 +780,12 @@ $utilities: map-merge(
       class: op,
       values: top right bottom left center revert
     ),
+    'object-fit': (
+      responsive: true,
+      property: object-fit,
+      class: of,
+      values: cover contain
+    ),
     'overflow': (
       responsive: true,
       property: overflow,
@@ -685,6 +808,18 @@ $utilities: map-merge(
         09: 0.9,
         1: 1
       )
+    ),
+    'overflow-x': (
+      responsive: true,
+      property: overflow-x,
+      class: ovx,
+      values: hidden auto
+    ),
+    'overflow-y': (
+      responsive: true,
+      property: overflow-y,
+      class: ovy,
+      values: hidden auto
     )
   ),
   $utilities
@@ -693,6 +828,7 @@ $utilities: map-merge(
 $ratios: (
   '16-9': ( x: 16, y: 9 ),
   '4-3': ( x: 4, y: 3 ),
+  '4-2': ( x: 4, y: 2 ),
   '4-1': ( x: 4, y: 1 ),
   '3-4': ( x: 3, y: 4 ),
   '3-2': ( x: 3, y: 2 ),

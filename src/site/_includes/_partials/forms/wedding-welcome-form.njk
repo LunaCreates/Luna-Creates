@@ -1,25 +1,25 @@
 {% set variant = product.options[0] %}
 
-<form class="product__form" data-product-form data-variant-id="{{variant.id}}">
-    <div class="product__field">
-        <label for="couple-names" class="product__label">Names of Happy Couple</label>
-        <input type="text" name="couple names" class="product__input" placeholder="E.g. Mark &amp; Sarah" id="couple-names" required>
+<form class="mt-24" data-product-form data-variant-id="{{variant.id}}">
+    <div class="pos-r mb-32">
+        <label for="couple-names" class="fs-sm lh-sm fvs-md dp-ib mb-8 text-tertiary">Names of Happy Couple</label>
+        <input type="text" name="couple names" class="product__input fs-sm lh-sm fvs-rg dp-b py-8 px-16 text-heading w-full" placeholder="E.g. Mark &amp; Sarah" id="couple-names" required>
     </div>
 
-    <div class="product__field">
-        <label for="table-date" class="product__label">Date of Wedding</label>
-        <input type="text" name="wedding date" class="product__input" placeholder="e.g. 25th December 2020" id="table-date" required>
+    <div class="pos-r mb-32">
+        <label for="table-date" class="fs-sm lh-sm fvs-md dp-ib mb-8 text-tertiary">Date of Wedding</label>
+        <input type="text" name="wedding date" class="product__input fs-sm lh-sm fvs-rg dp-b py-8 px-16 text-heading w-full" placeholder="e.g. 25th December 2020" id="table-date" required>
     </div>
 
-    <div class="product__field">
-        <label for="wedding-location" class="product__label">Location</label>
-        <input type="text" name="wedding location" class="product__input" placeholder="E.g. Windsor Castle, Windsor, SL4 1NJ" id="wedding-location" required>
+    <div class="pos-r mb-32">
+        <label for="wedding-location" class="fs-sm lh-sm fvs-md dp-ib mb-8 text-tertiary">Location</label>
+        <input type="text" name="wedding location" class="product__input fs-sm lh-sm fvs-rg dp-b py-8 px-16 text-heading w-full" placeholder="E.g. Windsor Castle, Windsor, SL4 1NJ" id="wedding-location" required>
     </div>
 
-    <div class="product__field">
-        <label for="table-colour" class="product__label">Colour Theme</label>
-        <div class="product__select-wrapper">
-            <select name="color theme" id="table-colour" class="product__select" required>
+    <div class="pos-r mb-32">
+        <label for="table-colour" class="fs-sm lh-sm fvs-md dp-ib mb-8 text-tertiary">Colour Theme</label>
+        <div class="pos-r">
+            <select name="color theme" id="table-colour" class="product__select fs-sm lh-sm fvs-rg dp-b py-8 pr-32 pl-16 text-heading w-full" required>
                 <option value="Navy Blue">Navy Blue</option>
                 <option value="Blush Pink">Blush Pink</option>
                 <option value="Platinum Grey">Platinum Grey</option>
@@ -27,16 +27,16 @@
                 <option value="Olive Green">Olive Green</option>
                 <option value="*Email for bespoke colour*">*Email for bespoke colour*</option>
             </select>
-            <svg class="product__select-icon" width="24" height="24" aria-hidden="true">
+            <svg class="product__select-icon pos-a pe-none" width="24" height="24" aria-hidden="true">
                 <use xlink:href="/icons/sprite.svg#chevron"></use>
             </svg>
         </div>
     </div>
 
-    <div class="product__field">
-        <label for="quantity" class="product__label">Quantity</label>
-        <input type="number" id="quantity" name="quantity" value="1" min="1" class="product__input product__input--quantity" pattern="[0-9]*">
+    <div class="pos-r mb-32">
+        <label for="quantity" class="fs-sm lh-sm fvs-md dp-ib mb-8 text-tertiary">Quantity</label>
+        <input type="number" id="quantity" name="quantity" value="1" min="1" class="product__input fs-sm lh-sm fvs-rg dp-b py-8 px-16 text-heading w-1/4" pattern="[0-9]*">
     </div>
 
-    <button type="submit" class="product__basket-button" aria-live="polite">Add to basket</button>
+    <button type="submit" class="bgc-secondary text-foreground fs-xs lh-xs fvs-md py-16 px-24 borr-5 tt-uc ls-1 focus:olc-primary">Add to basket</button>
 </form>

@@ -10,43 +10,33 @@ renderData:
   heroTitle: "{{category.title}}"
   heroImage: "{{category.heroImage}}"
 permalink: "collections/{{category.slug}}/"
-layout: _layouts/page
+layout: _layouts/collection
 sitemap:
   changefreq: daily
   priority: 1
 ---
 
-{% include "_partials/components/hero.njk" %}
+ <ul class="container dp-g gtc-2 gg-24 my-32 px-16 md:gtc-3 md:gg-32 md:my-56 lg:my-80">
+    {% for product in category.products %}
+        <li class="pos-r ov-hidden">
+            <picture class="ratio-1-1">
+                <source type="image/webp" data-srcset="{{product.mainImage}}_300x300.jpg.webp 1x, {{product.mainImage}}_350x350.jpg.webp 2x">
 
-<main id="main">
-    {% if category.description %}
-        <div class="hero__body products--container">
-            {{category.description | safe}}
-        </div>
-    {% endif %}
+                <img data-srcset="{{product.mainImage}}_300x300.jpg 1x, {{product.mainImage}}_350x350.jpg 2x" alt="{{product.mainImageAlt}}" class="lazyload" loading="lazy" width="300" height="300">
 
-    <ul class="products products--container">
-        {% for product in category.products %}
-            <li class="products__product">
-                <picture class="featured__picture">
-                    <source type="image/webp" data-srcset="{{product.mainImage}}_300x300.jpg.webp 1x, {{product.mainImage}}_350x350.jpg.webp 2x">
+                <noscript>
+                    <source type="image/webp" srcset="{{product.mainImage}}_300x300.jpg.webp 1x, {{product.mainImage}}_350x350.jpg.webp 2x">
 
-                    <img data-srcset="{{product.mainImage}}_300x300.jpg 1x, {{product.mainImage}}_350x350.jpg 2x" alt="{{product.mainImageAlt}}" class="featured__image lazyload" loading="lazy" width="300" height="300">
+                    <img srcset="{{product.mainImage}}_300x300.jpg 1x, {{product.mainImage}}_350x350.jpg 2x" alt="{{product.mainImageAlt}}" loading="lazy" width="300" height="300">
+                </noscript>
+            </picture>
+            <a class="fs-sm lh-sm fvs-md dp-b my-8 ls-1 text-body" href="{{product.slug}}">{{product.title}}</a>
 
-                    <noscript>
-                        <source type="image/webp" srcset="{{product.mainImage}}_300x300.jpg.webp 1x, {{product.mainImage}}_350x350.jpg.webp 2x">
-
-                        <img srcset="{{product.mainImage}}_300x300.jpg 1x, {{product.mainImage}}_350x350.jpg 2x" alt="{{product.mainImageAlt}}" class="featured__image" loading="lazy" width="300" height="300">
-                    </noscript>
-                </picture>
-                <a class="featured__link" href="{{product.slug}}">{{product.title}}</a>
-
-                {% if product.minPrice === product.maxPrice %}
-                    <span class="featured__price">{{product.minPrice}}</span>
-                {% else %}
-                    <span class="featured__price">{{product.minPrice}} - {{product.maxPrice}}</span>
-                {% endif %}
-            </li>
-        {% endfor %}
-    </ul>
-</main>
+            {% if product.minPrice === product.maxPrice %}
+                <span class="fs-sm lh-sm fvs-md text-body">{{product.minPrice}}</span>
+            {% else %}
+                <span class="fs-sm lh-sm fvs-md text-body">{{product.minPrice}} - {{product.maxPrice}}</span>
+            {% endif %}
+        </li>
+    {% endfor %}
+</ul>

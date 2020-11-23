@@ -1,20 +1,25 @@
 /* eslint-disable max-len */
 /* eslint-disable complexity */
 const glob = require('glob').sync;
+const globAll = require('glob-all').sync;
 const path = require('path');
 const webpack = require('webpack');
 const ManifestPlugin = require('webpack-assets-manifest');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const PurgecssPlugin = require('purgecss-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ImageminWebpWebpackPlugin = require('imagemin-webp-webpack-plugin');
 const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
 const StylelintPlugin = require('stylelint-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 
+const purgeFromJs = (content) => content.match(/[A-Za-z0-9-_:\/]+/g) || [];
+
 function Bundle() {
   const plugin = require('./_config/plugins.json');
   const prod = process.env.NODE_ENV === 'prod';
+  const purgePath = path.resolve(__dirname, 'src')
 
   const alias = {
     '@glidejs/glide': '@glidejs/glide/dist/glide.js',
@@ -27,6 +32,19 @@ function Bundle() {
     }),
     new MiniCssExtractPlugin({
       filename: 'css/main.css?cb=[chunkhash]'
+    }),
+    new PurgecssPlugin({
+      paths: globAll([
+        `${purgePath}/site/**/*.njk`,
+        `${purgePath}/scripts/**/*.ts`,
+        `${purgePath}/functions/*.js`
+      ]),
+      extractors: [
+        {
+          extractor: purgeFromJs,
+          extensions: ['njk']
+        }
+      ]
     }),
     new HtmlWebpackPlugin({
       inject: false,

@@ -17,8 +17,8 @@ $breakpoints: (
 }
 
 @function breakpoint-max($name, $breakpoints: $breakpoints) {
-  $next: breakpoint-next($name, $breakpoints);
-  @return if($next, breakpoint-min($next, $breakpoints) - 0.0625, null);
+  $max: map-get($breakpoints, $name);
+  @return if($max != 0, $max - 0.0625, null);
 }
 
 @function breakpoint-min($name, $breakpoints: $breakpoints) {
