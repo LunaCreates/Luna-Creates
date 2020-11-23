@@ -54,8 +54,8 @@ content: <p>Welcome to our first blog post! In this strangest of years, we’ve 
   but please let us know if there is anything you’d like to know; and keep an eye
   out for our next post. Thanks for reading!</p>
 publish_date: 2021-11-23T08:00:00+00:00
-thumbnail: https://lunacreates.co.uk/images/blog/gina-map.jpg
-banner_image: images/blog/black-map.jpg
+thumbnail: images/blog/gina-map.jpg
+banner_image: images/blog/grey-map-banner.jpg
 description: This is a description
 author: src/site/authors/Gina Manns.md
 
