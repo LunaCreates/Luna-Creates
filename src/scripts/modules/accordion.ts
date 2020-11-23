@@ -4,10 +4,10 @@ function Accordion(element: HTMLElement, className: string) {
     const headingText: string | null = heading.textContent;
 
     const buttonHtml = `
-      <button type="button" class="${className}__button" aria-expanded="false" data-accordion-button="${id}">
+      <button type="button" class="${className}__button fs-sm lh-sm fvs-md text-primary dp-f jc-between ai-c w-full py-8 fs-sm lh-sm fvs-md ta-left ol-3-solid-transparent focus:olc-primary" aria-expanded="false" data-accordion-button="${id}">
         ${headingText}
 
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="${className}__icon" aria-hidden="true"><path d="M7.41 8.59003L12 13.17L16.59 8.59003L18 10L12 16L6 10L7.41 8.59003Z"></path></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="${className}__icon ml-16 md:ml-24" aria-hidden="true"><path d="M7.41 8.59003L12 13.17L16.59 8.59003L18 10L12 16L6 10L7.41 8.59003Z"></path></svg>
       </button>
     `;
 

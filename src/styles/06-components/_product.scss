@@ -1,0 +1,143 @@
+@use '../01-settings/variables' as _v;
+@use '../02-tools/mixins/buttons' as _btn;
+@use '../02-tools/mixins/responsive' as _r;
+@use '../02-tools/mixins/typography' as _ty;
+
+.product {
+  @include _r.min(md) {
+    display: flow-root;
+    padding-top: (_v.$core-grid * 3.5);
+
+    &::after {
+      content: '';
+      display: table;
+      clear: both;
+    }
+  }
+}
+
+.product__imagery {
+  @include _r.min(md) {
+    width: calc(55% - 21px);
+    float: left;
+  }
+}
+
+.product__zoom {
+  .no-js & {
+    display: none;
+  }
+}
+
+.product__zoom-icon {
+  flex: 0 0 24px;
+}
+
+.product__carousel {
+  outline: none;
+
+  .glide__arrow {
+    top: calc(50% + 9px);
+    width: 34px;
+    height: 34px;
+  }
+
+  .glide__arrow--left {
+    left: calc(-5vw - 17px);
+
+    @include _r.min(md) {
+      left: -34px;
+    }
+  }
+
+  .glide__arrow--right {
+    right: calc(-5vw - 17px);
+
+    @include _r.min(md) {
+      right: -34px;
+    }
+  }
+}
+
+.product__details {
+  @include _r.min(md) {
+    width: calc(45% - 21px);
+    float: right;
+  }
+}
+
+.product__select,
+.product__input,
+.product__textarea {
+  &::placeholder {
+    font-style: italic;
+  }
+}
+
+.product__select-icon {
+  top: 50%;
+  right: 8px;
+  fill: currentColor;
+  transform: rotate(90deg) translateX(-50%);
+  pointer-events: none;
+}
+
+.product__radio-input {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+
+  &::before {
+    content: '';
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--color-tertiary);
+    visibility: hidden;
+  }
+
+  &:checked::before {
+    visibility: visible;
+  }
+}
+
+.product__basket-button {
+  &[disabled='true'] {
+    @include _btn.button(disabled);
+  }
+}
+
+.product__personalisation-title {
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: -(_v.$core-grid * 2);
+    width: calc(100% + #{_v.$core-grid * 4});
+    height: 1px;
+    background-color: var(--color-border);
+  }
+}
+
+.product__description {
+  p {
+    @include _ty.text(sm);
+    margin-bottom: (_v.$core-grid * 1.5);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  a {
+    @include _ty.text(sm);
+    color: var(--color-foreground);
+    text-decoration: underline;
+  }
+
+  @include _r.min(md) {
+    width: calc(55% - 21px);
+    float: left;
+  }
+}

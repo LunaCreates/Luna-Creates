@@ -1,0 +1,14 @@
+.pin-colors {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.pin-colors:not(.pin-colors--key-text) {
+  & .pin-colors__color:nth-child(n + 6),
+  & > .pin-colors__text {
+    display: none;
+  }
+}
+
+.pin-colors--key-text {
+  grid-template-columns: 1fr 2fr;
+}

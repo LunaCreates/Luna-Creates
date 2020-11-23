@@ -1,0 +1,30 @@
+@use '../01-settings/typography' as _ty;
+@use '../02-tools/mixins/responsive' as _r;
+
+.logo {
+  width: 180px;
+  height: auto;
+
+  image {
+    width: calc(100% - 20px);
+    transform: translateX(calc(-50% + 10px));
+  }
+
+  text {
+    fill: var(--color-primary);
+    font-size: 75%;
+    font-variation-settings: 'wght' _ty.$font-weight-semibold;
+    text-anchor: middle;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  @include _r.min(lg) {
+    width: 200px;
+
+    image {
+      width: calc(100% - 10px);
+      transform: translateX(calc(-50% + 5px));
+    }
+  }
+}

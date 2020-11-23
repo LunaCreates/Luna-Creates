@@ -33,12 +33,22 @@
 
         {% if renderData.heroImage or heroImage %}
             {% set image = renderData.heroImage or heroImage %}
+            {% if post %}
+                {% set imageWebP = image.split(r/(jpg|png)/g)[0] + 'webp' %}
 
-            <link rel="preload" as="image" type="image/webp" href="{{image}}.jpg.webp" imagesrcset="{{image}}_300x180_crop_top.jpg.webp 1x, {{image}}_600x360_crop_top.jpg.webp 2x" media="(max-width: 37.4375em)"/>
+                <link rel="preload" as="image" type="image/webp" href="{{imageWebP}}" imagesrcset="{{imageWebP}}?nf_resize=fit&w=300&h=180 1x, {{imageWebP}}?nf_resize=fit&w=600&h=360 2x" media="(max-width: 37.4375em)"/>
 
-            <link rel="preload" as="image" type="image/webp" href="{{image}}.jpg.webp" imagesrcset="{{image}}_400x240_crop_top.jpg.webp 1x, {{image}}_800x480_crop_top.jpg.webp 2x" media="(min-width: 37.5em) and (max-width: 47.9375em)"/>
+                <link rel="preload" as="image" type="image/webp" href="{{imageWebP}}" imagesrcset="{{imageWebP}}?nf_resize=fit&w=400&h=240 1x, {{imageWebP}}?nf_resize=fit&w=800&h=480 2x" media="(min-width: 37.5em) and (max-width: 47.9375em)"/>
 
-            <link rel="preload" as="image" type="image/webp" href="{{image}}.jpg.webp" imagesrcset="{{image}}_1500x500_crop_top.jpg.webp 1x, {{image}}_2048x640_crop_top.jpg.webp 2x" media="(min-width: 48em)"/>
+                <link rel="preload" as="image" type="image/webp" href="{{imageWebP}}" imagesrcset="{{image}}?nf_resize=fit&w=1500&h=500 1x, {{image}}?nf_resize=fit&w=2048&h=640 2x" media="(min-width: 48em)"/>
+            {% else %}
+                <link rel="preload" as="image" type="image/webp" href="{{image}}.jpg.webp" imagesrcset="{{image}}_300x180_crop_top.jpg.webp 1x, {{image}}_600x360_crop_top.jpg.webp 2x" media="(max-width: 37.4375em)"/>
+
+                <link rel="preload" as="image" type="image/webp" href="{{image}}.jpg.webp" imagesrcset="{{image}}_400x240_crop_top.jpg.webp 1x, {{image}}_800x480_crop_top.jpg.webp 2x" media="(min-width: 37.5em) and (max-width: 47.9375em)"/>
+
+                <link rel="preload" as="image" type="image/webp" href="{{image}}.jpg.webp" imagesrcset="{{image}}_1500x500_crop_top.jpg.webp 1x, {{image}}_2048x640_crop_top.jpg.webp 2x" media="(min-width: 48em)"/>
+            {% endif %}
+
         {% endif %}
 
         {% if tags and 'product' in tags %}
@@ -76,13 +86,38 @@
                         "price": "{{ product.priceSchema }}",
                         "availability": "https://schema.org/InStock"
                     }
+                {% elif post %}
+                    "@type": "BlogPosting",
+                    "mainEntityOfPage": {
+                        "@type": "WebPage",
+                        "@id": "{{settings.url}}{{page.url}}"
+                    },
+                    "headline": "{{title}}",
+                    "description": "{{description}}",
+                    "image": "{{settings.url}}/{{thumbnail}}",
+                    "author": {
+                        "@type": "Person",
+                        "name": "{{settings.name}}"
+                    },
+                    "publisher": {
+                        "@type": "Organization",
+                        "name": "{{settings.name}}",
+                        "logo": {
+                        "@type": "ImageObject",
+                        "url": "{{settings.url}}favicons/favicon-256x256.png",
+                        "width": 256,
+                        "height": 256
+                        }
+                    },
+                    "datePublished": "{{publish_date | formatDate}}",
+                    "dateModified": "{{date | formatDate}}"
                 {% else %}
                     "@type": "Store",
                     "name": "{{ settings.name }}",
                     "url": "{{ settings.url }}/",
                     "image": "{{ settings.url }}/images/favicons/favicon-512x512.png",
                     "foundingDate": "2017",
-                    "sameAs": ["{{ settings.url }}/",{% for item in settings.social %}
+                    "sameAs": ["{{ settings.url }}",{% for item in settings.social %}
                             {% if loop.last %}
                                 "{{ item.url }}"
                             {% else %}

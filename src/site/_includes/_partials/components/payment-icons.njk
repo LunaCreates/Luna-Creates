@@ -1,9 +1,9 @@
-<li class="payment-icons" aria-labelledby="payment-icons-title">
-    <h3 class="payment-icons__title" id="payment-icons-title">Accepted payment methods</h3>
+<li class="pos-r mt-16" aria-labelledby="payment-icons-title">
+    <h3 class="sr-only" id="payment-icons-title">Accepted payment methods</h3>
 
-    <ul class="payment-icons__list">
+    <ul class="dp-g gtc-5 gg-16 md:gg-8 md:ai-s md:ji-s">
     {% for icon in paymentIcons %}
-        <li class="payment-icons__item" aria-label="{{icon.title}}">
+        <li aria-label="{{icon.title}}">
             <svg class="payment-icons__icon" width="30" height="30" aria-hidden="true">
                 <use xlink:href="/icons/sprite.svg#{{icon.id}}"></use>
             </svg>

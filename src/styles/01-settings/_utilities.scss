@@ -1,0 +1,867 @@
+@use './border' as _bor;
+@use './colors' as _c;
+@use './spacing' as _s;
+@use './typography' as _t;
+@use './z-index' as _z;
+@use 'sass:map';
+
+$use-utilities: true;
+
+$utilities: () !default;
+$utilities: map-merge(
+  (
+    'background-color': (
+      responsive: true,
+      hover: true,
+      property: background-color,
+      class: bgc,
+      values: _c.$colors
+    ),
+    'background-size': (
+      responsive: true,
+      property: background-size,
+      class: bgs,
+      values: auto cover contain
+    ),
+    'outline-color': (
+      focus: true,
+      property: outline-color,
+      class: olc,
+      values: _c.$colors
+    ),
+    'outline': (
+      responsive: true,
+      property: outline,
+      class: ol,
+      values: _bor.borderProps()
+    ),
+    'display': (
+      responsive: true,
+      property: display,
+      class: dp,
+      values: (
+        n: none,
+        i: inline,
+        ib: inline-block,
+        b: block,
+        t: table,
+        tr: table-row,
+        tc: table-cell,
+        f: flex,
+        inf: inline-flex,
+        g: grid
+      )
+    ),
+    'position': (
+      responsive: true,
+      property: position,
+      class: pos,
+      values: (
+        sta: static,
+        r: relative,
+        a: absolute,
+        f: fixed,
+        sti: sticky
+      )
+    ),
+    'top': (
+      responsive: true,
+      property: top,
+      values: auto 0
+    ),
+    'right': (
+      responsive: true,
+      property: right,
+      values: auto 0
+    ),
+    'bottom': (
+      responsive: true,
+      property: bottom,
+      values: auto 0
+    ),
+    'left': (
+      property: left,
+      values: auto 0
+    ),
+    'width': (
+      responsive: true,
+      property: width,
+      class: w,
+      values: (
+        0: 0,
+        '1\\/2': 50%,
+        '1\\/3': 33.333333%,
+        '2\\/3': 66.666667%,
+        '1\\/4': 25%,
+        '2\\/4': 50%,
+        '3\\/4': 75%,
+        '1\\/5': 20%,
+        '2\\/5': 40%,
+        '3\\/5': 60%,
+        '4\\/5': 80%,
+        '1\\/6': 16.666667%,
+        '2\\/6': 33.333333%,
+        '3\\/6': 50%,
+        '4\\/6': 66.666667%,
+        '5\\/6': 83.333333%,
+        '60px': 60px,
+        '180px': 180px,
+        '250px': 250px,
+        // '1\\/12': 8.333333%,
+        // '2\\/12': 16.666667%,
+        // '3\\/12': 25%,
+        // '4\\/12': 33.333333%,
+        // '5\\/12': 41.666667%,
+        // '6\\/12': 50%,
+        // '7\\/12': 58.333333%,
+        // '8\\/12': 66.666667%,
+        // '9\\/12': 75%,
+        // '10\\/12': 83.333333%,
+        // '11\\/12': 91.666667%,
+        'full': 100%,
+        'w-screen': 100vw,
+        'auto': auto
+      )
+    ),
+    'min-width': (
+      responsive: true,
+      property: min-width,
+      class: minw,
+      values: (
+        250: 250px,
+        600: 600px
+      )
+    ),
+    'max-width': (
+      responsive: true,
+      property: max-width,
+      class: maxw,
+      values: (
+        post: 45rem
+      )
+    ),
+    'height': (
+      responsive: true,
+      property: height,
+      class: h,
+      values: (
+        auto: auto,
+        'full': 100%
+      )
+    ),
+    'grid-template-columns': (
+      responsive: true,
+      property: grid-template-columns,
+      class: gtc,
+      values: (
+        1: repeat(1, minmax(0, 1fr)),
+        2: repeat(2, minmax(0, 1fr)),
+        3: repeat(3, minmax(0, 1fr)),
+        4: repeat(4, minmax(0, 1fr)),
+        5: repeat(5, minmax(0, 1fr)),
+        6: repeat(6, minmax(0, 1fr)),
+        7: repeat(7, minmax(0, 1fr)),
+        8: repeat(8, minmax(0, 1fr)),
+        9: repeat(9, minmax(0, 1fr)),
+        10: repeat(10, minmax(0, 1fr)),
+        11: repeat(11, minmax(0, 1fr)),
+        12: repeat(12, minmax(0, 1fr))
+      )
+    ),
+    'grid-template-rows': (
+      responsive: true,
+      property: grid-template-rows,
+      class: gtr,
+      values: (
+        1: repeat(1, minmax(0, 1fr)),
+        2: repeat(2, minmax(0, 1fr)),
+        3: repeat(3, minmax(0, 1fr)),
+        4: repeat(4, minmax(0, 1fr)),
+        5: repeat(5, minmax(0, 1fr)),
+        6: repeat(6, minmax(0, 1fr)),
+      )
+    ),
+    'grid-column-span': (
+      responsive: true,
+      property: grid-column,
+      class: gcsp,
+      values: (
+        1: span 1 / span 1,
+        2: span 2 / span 2,
+        3: span 3 / span 3,
+        4: span 4 / span 4,
+        5: span 5 / span 5,
+        6: span 6 / span 6,
+        7: span 7 / span 7,
+        8: span 8 / span 8,
+        9: span 9 / span 9,
+        10: span 10 / span 10,
+        11: span 11 / span 11,
+        12: span 12 / span 12,
+        full: #{1 / -1}
+      )
+    ),
+    'grid-column-start': (
+      responsive: true,
+      property: grid-column-start,
+      class: gcs,
+      values: (
+        1: 1,
+        2: 2,
+        3: 3,
+        4: 4,
+        5: 5,
+        6: 6,
+        7: 7,
+        8: 8,
+        9: 9,
+        10: 10,
+        11: 11,
+        12: 12
+      )
+    ),
+    'grid-column-end': (
+      responsive: true,
+      property: grid-column-end,
+      class: gce,
+      values: (
+        1: 1,
+        2: 2,
+        3: 3,
+        4: 4,
+        5: 5,
+        6: 6,
+        7: 7,
+        8: 8,
+        9: 9,
+        10: 10,
+        11: 11,
+        12: 12
+      )
+    ),
+    'grid-row-span': (
+      responsive: true,
+      property: grid-row,
+      class: grsp,
+      values: (
+        1: span 1 / span 1,
+        2: span 2 / span 2,
+        3: span 3 / span 3,
+        4: span 4 / span 4,
+        5: span 5 / span 5,
+        6: span 6 / span 6,
+        full: #{1 / -1}
+      )
+    ),
+    'grid-row-start': (
+      responsive: true,
+      property: grid-row-start,
+      class: grs,
+      values: (
+        1: 1,
+        2: 2,
+        3: 3,
+        4: 4,
+        5: 5,
+        6: 6,
+        7: 7
+      )
+    ),
+    'grid-row-end': (
+      responsive: true,
+      property: grid-row-end,
+      class: gre,
+      values: (
+        1: 1,
+        2: 2,
+        3: 3,
+        4: 4,
+        5: 5,
+        6: 6,
+        7: 7
+      )
+    ),
+    'grid-auto-flow': (
+      responsive: true,
+      property: grid-auto-flow,
+      class: gaf,
+      values: (
+        row: row,
+        col: column,
+        rd: row dense,
+        cd: col dense
+      )
+    ),
+    'grid-gap': (
+      responsive: true,
+      property: grid-gap,
+      class: gg,
+      values: _s.$spacers
+    ),
+    'grid-x-gap': (
+      responsive: true,
+      property: grid-column-gap,
+      class: gcg,
+      values: _s.$spacers
+    ),
+    'grid-y-gap': (
+      responsive: true,
+      property: grid-row-gap,
+      class: grg,
+      values: _s.$spacers
+    ),
+    'color': (
+      hover: true,
+      property: color,
+      class: text,
+      values: _c.$colors,
+    ),
+    'font-size': (
+      responsive: true,
+      property: font-size,
+      class: fs,
+      values: (
+        xs: clamp(_t.$font-size-sm, 1.250vw, _t.$font-size-base),
+        sm: clamp(_t.$font-size-base, 1.563vw, _t.$font-size-md),
+        base: _t.$font-size-base,
+        md: clamp(_t.$font-size-md, 1.953vw, _t.$font-size-lg),
+        lg: clamp(_t.$font-size-md, 2.344vw, _t.$font-size-xl),
+        xl: clamp(_t.$font-size-xl, 2.578vw, _t.$font-size-xxl),
+      )
+    ),
+    'font-style': (
+      responsive: true,
+      property: font-style,
+      class: fst,
+      values: (
+        italic: italic,
+        normal: normal
+      )
+    ),
+    'font-variation-settings': (
+      responsive: true,
+      property: font-variation-settings,
+      class: fvs,
+      values: (
+        rg: 'wght' _t.$font-weight-normal,
+        md: 'wght' _t.$font-weight-medium,
+        sb: 'wght' _t.$font-weight-semibold
+      )
+    ),
+    'line-height': (
+      responsive: true,
+      property: line-height,
+      class: lh,
+      values: (
+        none: 1,
+        xs: clamp(_t.$line-height-xs, 2.109vw, _t.$line-height-base),
+        sm: clamp(_t.$line-height-sm, 2.266vw, _t.$line-height-md),
+        base: _t.$line-height-base,
+        md: clamp(_t.$line-height-md, 2.813vw, _t.$line-height-lg),
+        lg: clamp(_t.$line-height-lg, 3.750vw, _t.$line-height-xl),
+        xl: clamp(_t.$line-height-xl, 4.375vw, _t.$line-height-xxl)
+      )
+    ),
+    'letter-spacing': (
+      responsive: true,
+      property: letter-spacing,
+      class: ls,
+      values: (
+        1: 1px,
+        2: 2px,
+        3: 3px
+      )
+    ),
+    'border-radius': (
+      responsive: true,
+      property: border-radius,
+      class: borr,
+      values: (
+        0: 0,
+        1: 1px,
+        2: 2px,
+        3: 3px,
+        4: 4px,
+        5: 5px,
+      )
+    ),
+    'border-color': (
+      responsive: true,
+      property: border-color,
+      class: borc,
+      values: _c.$colors
+    ),
+    'border': (
+      responsive: true,
+      property: border,
+      class: bor,
+      values: _bor.borderProps()
+    ),
+    'border-top': (
+      responsive: true,
+      property: border-top,
+      class: bort,
+      values: _bor.borderProps()
+    ),
+    'border-right': (
+      responsive: true,
+      property: border-right,
+      class: borrt,
+      values: _bor.borderProps()
+    ),
+    'border-bottom': (
+      responsive: true,
+      property: border-bottom,
+      class: borb,
+      values: _bor.borderProps()
+    ),
+    'border-left': (
+      responsive: true,
+      property: border-left,
+      class: borl,
+      values: _bor.borderProps()
+    ),
+    'list-style-type': (
+      responsive: true,
+      property: list-style-type,
+      class: no,
+      values: (
+        list-none: none,
+        list-disc: disc,
+        list-decimal: decimal
+      )
+    ),
+    'list-style-position': (
+      responsive: true,
+      property: list-style-position,
+      class: no,
+      values: (
+        list-inside: inside,
+        list-outside: outside
+      )
+    ),
+    'text-align': (
+      responsive: true,
+      property: text-align,
+      class: ta,
+      values: left right center justify
+    ),
+    'text-decoration': (
+      responsive: true,
+      property: text-decoration,
+      class: td,
+      values: (
+        none: none,
+        u: underline,
+        lt: line-through
+      )
+    ),
+    'text-transform': (
+      responsive: true,
+      property: text-transform,
+      class: tt,
+      values: (
+        lc: lowercase,
+        uc: uppercase,
+        cp: capitalize
+      )
+    ),
+    // Flexbox
+    'align-content': (
+      responsive: true,
+      property: align-content,
+      class: ac,
+      values: (
+        s: flex-start,
+        e: flex-end,
+        c: center,
+        b: space-between,
+        a: space-around,
+        str: stretch,
+      )
+    ),
+    'align-items': (
+      responsive: true,
+      property: align-items,
+      class: ai,
+      values: (
+        s: flex-start,
+        e: flex-end,
+        c: center,
+        b: baseline,
+        str: stretch,
+      )
+    ),
+    'align-self': (
+      responsive: true,
+      property: align-self,
+      class: as,
+      values: (
+        auto: auto,
+        s: flex-start,
+        e: flex-end,
+        c: center,
+        b: baseline,
+        str: stretch,
+      )
+    ),
+    'justify-self': (
+      responsive: true,
+      property: justify-self,
+      class: js,
+      values: (
+        auto: auto,
+        s: flex-start,
+        e: flex-end,
+        c: center,
+        b: baseline,
+        str: stretch,
+      )
+    ),
+    'flex': (
+      responsive: true,
+      property: flex,
+      values: (
+        initial: 0 1 auto,
+        1: 1 1 0%,
+        2: 2 2 0%,
+        3: 3 3 0%,
+        auto: 1 1 auto,
+        none: none
+      )
+    ),
+    'flex-basis': (
+      responsive: true,
+      property: flex-basis,
+      class: fb,
+      values: (
+        0: 0,
+        '1\\/2': 50%,
+        '1\\/3': 33.333333%,
+        '2\\/3': 66.666667%,
+        '1\\/4': 25%,
+        '2\\/4': 50%,
+        '3\\/4': 75%,
+        '1\\/5': 20%,
+        '2\\/5': 40%,
+        '3\\/5': 60%,
+        '4\\/5': 80%,
+        '1\\/6': 16.666667%,
+        '2\\/6': 33.333333%,
+        '3\\/6': 50%,
+        '4\\/6': 66.666667%,
+        '5\\/6': 83.333333%,
+        // '1\\/12': 8.333333%,
+        // '2\\/12': 16.666667%,
+        // '3\\/12': 25%,
+        // '4\\/12': 33.333333%,
+        // '5\\/12': 41.666667%,
+        // '6\\/12': 50%,
+        // '7\\/12': 58.333333%,
+        // '8\\/12': 66.666667%,
+        // '9\\/12': 75%,
+        // '10\\/12': 83.333333%,
+        // '11\\/12': 91.666667%,
+        'full': 100%,
+        'w-screen': 100vw,
+        'auto': auto
+      )
+    ),
+    'flex-direction': (
+      responsive: true,
+      property: flex-direction,
+      class: fd,
+      values: (
+        r: row,
+        c: column,
+        rr: row-reverse,
+        cr: column-reverse
+      )
+    ),
+    'flex-grow': (
+      responsive: true,
+      property: flex-grow,
+      class: fg,
+      values: (
+        0: 0,
+        1: 1,
+      )
+    ),
+    'flex-shrink': (
+      responsive: true,
+      property: flex-shrink,
+      class: flex,
+      values: (
+        shrink: 0,
+        shrink-1: 1,
+      )
+    ),
+    'flex-wrap': (
+      responsive: true,
+      property: flex-wrap,
+      class: flex,
+      values: wrap nowrap wrap-reverse
+    ),
+    'justify-content': (
+      responsive: true,
+      property: justify-content,
+      class: jc,
+      values: (
+        start: flex-start,
+        end: flex-end,
+        center: center,
+        between: space-between,
+        around: space-around,
+      )
+    ),
+    'justify-items': (
+      responsive: true,
+      property: justify-items,
+      class: ji,
+      values: (
+        start: start,
+        end: end,
+        center: center,
+        stretch: stretch
+      )
+    ),
+    'order': (
+      responsive: true,
+      property: order,
+      values: (
+        first: -9999,
+        none: 0,
+        1: 1,
+        2: 2,
+        3: 3,
+        4: 4,
+        5: 5,
+        last: 9999,
+      ),
+    ),
+    // Spacing - Margin
+    'margin': (
+      responsive: true,
+      property: margin,
+      class: m,
+      values: _s.$spacers
+    ),
+    'margin-x': (
+      responsive: true,
+      property: margin-right margin-left,
+      class: mx,
+      values: _s.$spacers
+    ),
+    'margin-y': (
+      responsive: true,
+      property: margin-top margin-bottom,
+      class: my,
+      values: _s.$spacers
+    ),
+    'margin-top': (
+      responsive: true,
+      property: margin-top,
+      class: mt,
+      values: _s.$spacers
+    ),
+    'margin-right': (
+      responsive: true,
+      property: margin-right,
+      class: mr,
+      values: _s.$spacers
+    ),
+    'margin-bottom': (
+      responsive: true,
+      property: margin-bottom,
+      class: mb,
+      values: _s.$spacers
+    ),
+    'margin-left': (
+      responsive: true,
+      property: margin-left,
+      class: ml,
+      values: _s.$spacers
+    ),
+    // Spacing - Negative Margin
+    'negative-margin': (
+      responsive: true,
+      property: margin,
+      class: -m,
+      values: _s.$negative-spacers
+    ),
+    'negative-margin-x': (
+      responsive: true,
+      property: margin-right margin-left,
+      class: -mx,
+      values: _s.$negative-spacers
+    ),
+    'negative-margin-y': (
+      responsive: true,
+      property: margin-top margin-bottom,
+      class: -my,
+      values: _s.$negative-spacers
+    ),
+    'negative-margin-top': (
+      responsive: true,
+      property: margin-top,
+      class: -mt,
+      values: _s.$negative-spacers
+    ),
+    'negative-margin-right': (
+      responsive: true,
+      property: margin-right,
+      class: -mr,
+      values: _s.$negative-spacers
+    ),
+    'negative-margin-bottom': (
+      responsive: true,
+      property: margin-bottom,
+      class: -mb,
+      values: _s.$negative-spacers
+    ),
+    'negative-margin-left': (
+      responsive: true,
+      property: margin-left,
+      class: -ml,
+      values: _s.$negative-spacers
+    ),
+    // Spacing - Padding
+    'padding': (
+      responsive: true,
+      property: padding,
+      class: p,
+      values: _s.$spacers
+    ),
+    'padding-x': (
+      responsive: true,
+      property: padding-right padding-left,
+      class: px,
+      values: _s.$spacers
+    ),
+    'padding-y': (
+      responsive: true,
+      property: padding-top padding-bottom,
+      class: py,
+      values: _s.$spacers
+    ),
+    'padding-top': (
+      responsive: true,
+      property: padding-top,
+      class: pt,
+      values: _s.$spacers
+    ),
+    'padding-right': (
+      responsive: true,
+      property: padding-right,
+      class: pr,
+      values: _s.$spacers
+    ),
+    'padding-bottom': (
+      responsive: true,
+      property: padding-bottom,
+      class: pb,
+      values: _s.$spacers
+    ),
+    'padding-left': (
+      responsive: true,
+      property: padding-left,
+      class: pl,
+      values: _s.$spacers
+    ),
+    'z-index': (
+      responsive: true,
+      property: z-index,
+      class: zi,
+      values: _z.$z-index
+    ),
+    'negative-z-index': (
+      responsive: true,
+      property: z-index,
+      class: -zi,
+      values: _z.$negative-z-index
+    ),
+    'pointer-events': (
+      responsive: true,
+      property: pointer-events,
+      class: pe,
+      values: (
+        none: none
+      )
+    ),
+    'object-position': (
+      responsive: true,
+      property: object-position,
+      class: op,
+      values: top right bottom left center revert
+    ),
+    'object-fit': (
+      responsive: true,
+      property: object-fit,
+      class: of,
+      values: cover contain
+    ),
+    'overflow': (
+      responsive: true,
+      property: overflow,
+      class: ov,
+      values: hidden visible
+    ),
+    'opacity': (
+      responsive: true,
+      property: opacity,
+      class: op,
+      values: (
+        0: 0,
+        02: 0.2,
+        03: 0.3,
+        04: 0.4,
+        05: 0.5,
+        06: 0.6,
+        07: 0.7,
+        08: 0.8,
+        09: 0.9,
+        1: 1
+      )
+    ),
+    'overflow-x': (
+      responsive: true,
+      property: overflow-x,
+      class: ovx,
+      values: hidden auto
+    ),
+    'overflow-y': (
+      responsive: true,
+      property: overflow-y,
+      class: ovy,
+      values: hidden auto
+    ),
+    'transition-property': (
+      responsive: true,
+      property: transition,
+      class: transition,
+      values: (
+        transform: transform cubic-bezier(0.4, 0, 0.2, 1) 150ms
+      )
+    ),
+    'transform-scale': (
+      responsive: true,
+      hover: true,
+      property: transform,
+      class: scale,
+      values: (
+        110: scale(1.1)
+      )
+    )
+  ),
+  $utilities
+);
+
+$ratios: (
+  '16-9': ( x: 16, y: 9 ),
+  '4-3': ( x: 4, y: 3 ),
+  '4-2': ( x: 4, y: 2 ),
+  '4-1': ( x: 4, y: 1 ),
+  '3-4': ( x: 3, y: 4 ),
+  '3-2': ( x: 3, y: 2 ),
+  '1-1': ( x: 1, y: 1 )
+);

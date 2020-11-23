@@ -1,0 +1,79 @@
+@use '../02-tools/mixins/responsive' as _r;
+
+.picture-scale {
+  @media (hover) {
+    img {
+      transition: transform 0.5s ease-in-out;
+      backface-visibility: hidden;
+    }
+
+    &:hover img {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.psuedo-link {
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  @include _r.min(md) {
+    display: inline;
+    background-image: linear-gradient(var(--color-body), var(--color-body));
+    background-size: 0 2px;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 2s linear;
+  }
+
+  @media (hover) {
+    transition: background-size 0.3s ease-in-out;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-size: 100% 2px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+  }
+}
+
+.inline-link {
+  color: inherit;
+  font: inherit;
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-body);
+  }
+
+  @media (hover) {
+    &::before {
+      width: 0;
+      transition: width 0.3s ease-in-out;
+    }
+
+    &:hover::before,
+    &:focus::before {
+      width: 100%;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+  }
+}

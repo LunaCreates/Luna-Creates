@@ -1,27 +1,27 @@
-<footer class="footer" id="footer">
-    <div class="footer__container">
-        <ul class="footer__list">
-            <li class="footer__item footer__item--title"><h3>Shop</h3></li>
-            <li class="footer__item"><a href="/collections/maps/" class="footer__link">Personalised World Map Pinboards</a></li>
-            <li class="footer__item"><a href="/collections/wedding/" class="footer__link">Wedding Travel Theme Products</a></li>
-            <li class="footer__item"><a href="/products/" class="footer__link">All Products</a></li>
+<footer class="footer py-32 bgc-fade md:py-48" id="footer">
+    <div class="container px-16 md:dp-g md:gtc-4 md:gg-24">
+        <ul class="mb-40 md:mb-0">
+            <li class="mb-16"><h3 class="text-heading mb-0 fs-sm lh-sm fvs-md mt-0 tt-uc ls-2 ">Shop</h3></li>
+            <li class="mb-8"><a href="/collections/maps/" class="footer__link fs-base lh-base fvs-rg text-body">Personalised World Map Pinboards</a></li>
+            <li class="mb-8"><a href="/collections/wedding/" class="footer__link fs-base lh-base fvs-rg text-body">Wedding Travel Theme Products</a></li>
+            <li class="mb-8"><a href="/products/" class="footer__link fs-base lh-base fvs-rg text-body">All Products</a></li>
         </ul>
 
-        <ul class="footer__list">
-            <li class="footer__item footer__item--title"><h3>Customer Service</h3></li>
-            <li class="footer__item"><a href="/delivery/" class="footer__link">Delivery Information</a></li>
-            <li class="footer__item"><a href="/faqs/" class="footer__link">FAQ</a></li>
-            <li class="footer__item"><a href="/returns/" class="footer__link">Returns &amp; Refunds</a></li>
-            <li class="footer__item"><a href="/privacy-policy/" class="footer__link">Privacy &amp; Legals</a></li>
+        <ul class="mb-40">
+            <li class="mb-16"><h3 class="text-heading mb-0 fs-sm lh-sm fvs-md mt-0 mb-24 tt-uc ls-2 ">Customer Service</h3></li>
+            <li class="mb-8"><a href="/delivery/" class="footer__link fs-base lh-base fvs-rg text-body">Delivery Information</a></li>
+            <li class="mb-8"><a href="/faqs/" class="footer__link fs-base lh-base fvs-rg text-body">FAQ</a></li>
+            <li class="mb-8"><a href="/returns/" class="footer__link fs-base lh-base fvs-rg text-body">Returns &amp; Refunds</a></li>
+            <li class="mb-8"><a href="/privacy-policy/" class="footer__link fs-base lh-base fvs-rg text-body">Privacy &amp; Legals</a></li>
         </ul>
 
-        <ul class="footer__list">
-            <li class="footer__item footer__item--title"><h3>Contact Us</h3></li>
-            <li class="footer__item"><a href="mailto:{{settings.email}}" class="footer__link">{{settings.email}}</a></li>
+        <ul class="mb-40">
+            <li class="mb-16"><h3 class="text-heading mb-0 fs-sm lh-sm fvs-md mt-0 tt-uc ls-2 ">Contact Us</h3></li>
+            <li class="footer__item--email mb-8"><a href="mailto:{{settings.email}}" class="footer__link fs-base lh-base fvs-rg text-body">{{settings.email}}</a></li>
 
         {% for item in settings.social %}
-            <li class="footer__item footer__item--social">
-                <a class="footer__link footer__link--social" href="{{item.url}}" title="{{item.titleAttr}}" rel="external" aria-label="{{item.title}}">
+            <li class="dp-ib mr-8 -ml-8 mb-0">
+                <a class="footer__link--social dp-b p-8 fs-base lh-base fvs-rg text-body" href="{{item.url}}" title="{{item.titleAttr}}" rel="external" aria-label="{{item.title}}">
                     <svg class="footer__icon" width="20" height="20" aria-hidden="true">
                         <use xlink:href="/icons/sprite.svg#{{item.slug}}"></use>
                     </svg>
@@ -32,23 +32,23 @@
         {% include "_partials/components/payment-icons.njk" %}
         </ul>
 
-        <form action="/newsletter" class="footer__form" accept-charset="UTF-8" method="post" id="newsletter" data-component="newsletter">
-            <legend class="footer__legend">Let's Be Friends</legend>
+        <form action="/newsletter" class="mb-40" accept-charset="UTF-8" method="post" id="newsletter" data-component="newsletter">
+            <legend class="fs-sm lh-sm fvs-md mt-0 mb-16 tt-uc ls-2 text-body">Let's Be Friends</legend>
 
-            <label class="footer__label" for="footer-newsletter">Be the first to know about all our latest offers</label>
-            <input type="email" placeholder="Email address" name="email" class="footer__input" id="footer-newsletter" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required>
-            <button type="submit" class="footer__submit">Sign Up</button>
+            <label class="fs-base lh-base fvs-rg dp-b mb-8 text-body " for="footer-newsletter">Be the first to know about all our latest offers</label>
+            <input type="email" placeholder="Email address" name="email" class="w-full my-0 fs-base lh-base fvs-rg py-8 px-16" id="footer-newsletter" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required>
+            <button type="submit" class="bgc-secondary text-foreground fs-xs lh-xs fvs-md borr-5 py-16 px-24 tt-uc ls-1 mt-24 ol-3-solid-transparent focus:olc-primary hover:bgc-secondary md:px-32">Sign Up</button>
 
-            <span class="form__message form__message--error" data-form-error>Oops. There was an error. Please try again.</span>
-            <span class="form__message form__message--success" data-form-success>Thanks for subscribing.</span>
+            <span class="bgc-error text-background fs-sm lh-sm fvs-md py-8 px-16 mt-24 dp-n" data-form-error>Oops. There was an error. Please try again.</span>
+            <span class="bgc-success text-primary fs-sm lh-sm fvs-md py-8 px-16 mt-24 dp-n" data-form-success>Thanks for subscribing.</span>
         </form>
 
-        <div class="footer__bottom">
-            <svg class="footer__logo" width="173" height="64" aria-labelledby="footer-logo">
+        <div class="footer__bottom pos-r dp-f fd-c jc-center ai-c md:gcsp-full md:fd-r md:jc-between">
+            <svg class="pos-r bgc-fade px-16 md:pr-o md:order-2" width="173" height="64" aria-labelledby="footer-logo">
                 <title id="footer-logo">Luna Creates</title>
                 <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/images/logo.svg" x="0" y="0" width="100%" height="100%" alt="Luna Creates logo"></image>
             </svg>
-            <small class="footer__copyright">&copy; 2020, {{settings.name}}</small>
+            <small class="fs-xs lh-xs fvs-rg pos-r bgc-fade md:pr-16 md:order-1">&copy; 2020, {{settings.name}}</small>
         </div>
     </div>
 </footer>

@@ -1,0 +1,71 @@
+@use '../01-settings/variables' as _v;
+@use '../02-tools/functions/z-index' as _zi;
+@use '../02-tools/mixins/responsive' as _r;
+
+.search {
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+
+  @include _r.max(md) {
+    top: 100%;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  @include _r.min(md) {
+    width: auto;
+    height: auto;
+    outline: 5px solid var(--color-background);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+  }
+}
+
+.search--open {
+  opacity: 1;
+  visibility: visible;
+
+  @include _r.min(md) {
+    flex: 1;
+  }
+}
+
+.search__results {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: auto;
+  max-height: 70vh;
+  overflow-y: auto;
+
+  &:empty {
+    display: none;
+  }
+
+  .search--open &:not(&:empty) {
+    display: block;
+  }
+
+  @include _r.min(md) {
+    min-width: 260px;
+    max-height: 450px;
+    border: 1px solid var(--color-border);
+  }
+
+  @include _r.min(lg) {
+    width: calc(100% + 5vw);
+  }
+}
+
+.search__result {
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
