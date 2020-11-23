@@ -1,0 +1,60 @@
+@use '../01-settings/variables' as _v;
+@use '../02-tools/mixins/responsive' as _r;
+@use '../02-tools/mixins/skeleton' as _sk;
+
+@keyframes loading {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.cart__picture {
+  @include _sk.skeleton;
+  width: 70px;
+  height: 70px;
+  flex: 0 0 70px;
+
+  @include _r.min(md) {
+    width: 100px;
+    height: 100px;
+    flex-basis: 100px;
+  }
+}
+
+.cart__table-title--skeleton,
+.cart__table-options--skeleton {
+  height: 1.5em;
+}
+
+.cart__table-title {
+  @include _sk.skeleton;
+}
+
+.cart__table-title--skeleton {
+  width: 250px;
+}
+
+.cart__table-options {
+  @include _sk.skeleton;
+}
+
+.cart__remove {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.cart__icon {
+  width: 100%;
+  height: 100%;
+  fill: currentColor;
+}
+
+.cart__td {
+  @include _sk.skeleton;
+  color: transparent;
+}
+
+.cart__td > * {
+  opacity: 0;
+}

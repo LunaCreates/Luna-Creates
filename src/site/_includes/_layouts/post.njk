@@ -1,20 +1,21 @@
 ---
 post: true
+description: {{description}}
 ---
 
 {% extends "_layouts/default.njk" %}
 
-{% set heroImage = renderData.heroImage or heroImage %}
+{% set heroImage = '/' + banner_image %}
 {% set heroTitle = title %}
 
 {% block content %}
-    <main id="main">
-        <article>
-            {% include "_partials/components/hero.njk" %}
+    {% include "_partials/components/hero.njk" %}
 
-            <div class="post">
-                {{ content | safe }}
-            </div>
+    <main class="container px-16 my-32 md:my-56 lg:my-80" id="main">
+        <article class="page__rte maxw-post mx-auto">
+            <time class="fs-sb lh-sb fvs-sb text-foreground dp-b mb-24 md:mb-32" datetime="{{publish_date}}">{{publish_date | readableDate }}</time>
+
+            {{ content | safe }}
         </article>
     </main>
 {% endblock %}

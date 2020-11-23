@@ -1,0 +1,166 @@
+@use '../01-settings/colors' as _c;
+@use '../01-settings/typography' as _ty;
+@use '../02-tools/mixins/transitions' as _tr;
+
+// Global.............The sites core styles.
+
+@font-face {
+  font-family: 'Avenir Next';
+  src: url('/fonts/avenir-next-variable.woff2') format('woff2-variations');
+  font-display: optional;
+  font-weight: _ty.$font-weight-normal;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+:root {
+  --color-primary: #{_c.$color-primary};
+  --color-secondary: #{_c.$color-secondary};
+  --color-tertiary: #{_c.$color-tertiary};
+  --color-background: #{_c.$color-background};
+  --color-foreground: #{_c.$color-foreground};
+  --color-neutral: #{_c.$color-neutral};
+  --color-fade: #{_c.$color-fade};
+  --color-heading: #{_c.$color-heading};
+  --color-body: #{_c.$color-body};
+  --color-border: #{_c.$color-border};
+  --color-danger: #{_c.$color-error};
+  --color-success: #{_c.$color-success};
+}
+
+html {
+  font-family: 'Avenir Next';
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+body ::-moz-selection {
+  background: var(--color-foreground);
+  color: var(--color-background);
+}
+
+body ::selection {
+  background: var(--color-foreground);
+  color: var(--color-background);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+small,
+span,
+strong {
+  font-weight: _ty.$font-weight-normal;
+}
+
+p {
+  margin-top: 0;
+  color: var(--color-body);
+  font-variation-settings: 'wght' _ty.$font-weight-normal;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+a {
+  font-variation-settings: 'wght' _ty.$font-weight-normal;
+  text-decoration: none;
+  outline-width: 3px;
+
+  @media (hover) {
+    @include _tr.transition-03(all);
+    cursor: pointer;
+  }
+}
+
+strong {
+  font-weight: _ty.$font-weight-normal;
+  font-variation-settings: 'wght' _ty.$font-weight-semibold;
+}
+
+ul,
+ol,
+dl {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+dd {
+  margin-left: 0;
+}
+
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  vertical-align: middle;
+}
+
+blockquote {
+  margin: 0;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+legend {
+  padding: 0;
+}
+
+input,
+textarea,
+select {
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  background-color: var(--color-background);
+  font-family: inherit;
+  appearance: none;
+}
+
+textarea {
+  min-height: 100px;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  font-family: 'Avenir Next';
+  font-size: inherit;
+  outline-width: 3px;
+  appearance: none;
+
+  @media (hover) {
+    @include _tr.transition-03(all);
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+  }
+}

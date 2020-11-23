@@ -1,20 +1,20 @@
 {% set variant = product.options[0] %}
 
-<form class="product__form" data-product-form data-variant-id="{{variant.id}}">
-    <div class="product__field">
-        <label for="table-title" class="product__label">Title for Table Plan</label>
-        <input type="text" name="table title" class="product__input" placeholder="e.g. John &amp; Jane's Wedding" id="table-title" required>
+<form class="mt-24" data-product-form data-variant-id="{{variant.id}}">
+    <div class="pos-r mb-32">
+        <label for="table-title" class="fs-sm lh-sm fvs-md dp-ib mb-8 text-tertiary">Title for Table Plan</label>
+        <input type="text" name="table title" class="product__input fs-sm lh-sm fvs-rg dp-b py-8 px-16 text-heading w-full" placeholder="e.g. John &amp; Jane's Wedding" id="table-title" required>
     </div>
 
-    <div class="product__field">
-        <label for="table-date" class="product__label">Date of Wedding</label>
-        <input type="text" name="wedding date" class="product__input" placeholder="e.g. 25th December 2020" id="table-date" required>
+    <div class="pos-r mb-32">
+        <label for="table-date" class="fs-sm lh-sm fvs-md dp-ib mb-8 text-tertiary">Date of Wedding</label>
+        <input type="text" name="wedding date" class="product__input fs-sm lh-sm fvs-rg dp-b py-8 px-16 text-heading w-full" placeholder="e.g. 25th December 2020" id="table-date" required>
     </div>
 
-    <div class="product__field">
-        <label for="table-number" class="product__label">Number of Tables</label>
-        <div class="product__select-wrapper">
-            <select name="table numbers" id="table-number" class="product__select" required>
+    <div class="pos-r mb-32">
+        <label for="table-number" class="fs-sm lh-sm fvs-md dp-ib mb-8 text-tertiary">Number of Tables</label>
+        <div class="pos-r">
+            <select name="table numbers" id="table-number" class="product__select fs-sm lh-sm fvs-rg dp-b py-8 pr-32 pl-16 text-heading w-full" required>
                 <option value="4">4</option>
                 <option value="5">5</option>
                 <option value="6">6</option>
@@ -33,42 +33,42 @@
                 <option value="19">19</option>
                 <option value="20">20</option>
             </select>
-            <svg class="product__select-icon" width="24" height="24" aria-hidden="true">
+            <svg class="product__select-icon pos-a pe-none" width="24" height="24" aria-hidden="true">
                 <use xlink:href="/icons/sprite.svg#chevron"></use>
             </svg>
         </div>
     </div>
 
-    <div class="product__field">
-        <label for="table-names" class="product__label">Table Names</label>
-        <textarea name="table names" id="table-names" class="product__textarea" placeholder="e.g. Table 1 = England, Table 2 = Italy, etc." required></textarea>
+    <div class="pos-r mb-32">
+        <label for="table-names" class="fs-sm lh-sm fvs-md dp-ib mb-8 text-tertiary">Table Names</label>
+        <textarea name="table names" id="table-names" class="product__textarea fs-sm lh-sm fvs-rg dp-b py-8 px-16 text-heading w-full" placeholder="e.g. Table 1 = England, Table 2 = Italy, etc." required></textarea>
     </div>
 
-    <div class="product__field">
-        <label for="table-guests" class="product__label">Guest Names per Table</label>
-        <textarea name="guest names" id="table-guests" class="product__textarea" placeholder="Table 1 = John Mann, Jane Mann, Jo Ede etc. &#10;Table 2 = Jane Smith, Steve Smith, etc." required></textarea>
+    <div class="pos-r mb-32">
+        <label for="table-guests" class="fs-sm lh-sm fvs-md dp-ib mb-8 text-tertiary">Guest Names per Table</label>
+        <textarea name="guest names" id="table-guests" class="product__textarea fs-sm lh-sm fvs-rg dp-b py-8 px-16 text-heading w-full" placeholder="Table 1 = John Mann, Jane Mann, Jo Ede etc. &#10;Table 2 = Jane Smith, Steve Smith, etc." required></textarea>
     </div>
 
-    <div class="product__field">
-        <label for="table-colour" class="product__label">Colour Theme</label>
-        <div class="product__select-wrapper">
-            <select name="color theme" id="table-colour" class="product__select" required>
+    <div class="pos-r mb-32">
+        <label for="table-colour" class="fs-sm lh-sm fvs-md dp-ib mb-8 text-tertiary">Colour Theme</label>
+        <div class="pos-r">
+            <select name="color theme" id="table-colour" class="product__select fs-sm lh-sm fvs-rg dp-b py-8 pr-32 pl-16 text-heading w-full" required>
                 <option value="Navy Blue">Navy Blue</option>
                 <option value="Blush Pink">Blush Pink</option>
                 <option value="Platinum Grey">Platinum Grey</option>
                 <option value="Mint">Mint</option>
                 <option value="Olive Green">Olive Green</option>
             </select>
-            <svg class="product__select-icon" width="24" height="24" aria-hidden="true">
+            <svg class="product__select-icon pos-a pe-none" width="24" height="24" aria-hidden="true">
                 <use xlink:href="/icons/sprite.svg#chevron"></use>
             </svg>
         </div>
     </div>
 
-    <div class="product__field">
-        <label for="quantity" class="product__label">Quantity</label>
-        <input type="number" id="quantity" name="quantity" value="1" min="1" class="product__input product__input--quantity" pattern="[0-9]*">
+    <div class="pos-r mb-32">
+        <label for="quantity" class="fs-sm lh-sm fvs-md dp-ib mb-8 text-tertiary">Quantity</label>
+        <input type="number" id="quantity" name="quantity" value="1" min="1" class="product__input fs-sm lh-sm fvs-rg dp-b py-8 px-16 text-heading w-1/4" pattern="[0-9]*">
     </div>
 
-    <button type="submit" class="product__basket-button" aria-live="polite">Add to basket</button>
+    <button type="submit" class="bgc-secondary text-foreground fs-xs lh-xs fvs-md py-16 px-24 borr-5 tt-uc ls-1 ol-3-solid-transparent focus:olc-primary hover:bgc-secondary">Add to basket</button>
 </form>

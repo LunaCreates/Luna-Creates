@@ -33,6 +33,10 @@ async function allProductsData() {
                     amount
                     currencyCode
                   }
+                  maxVariantPrice {
+                    amount
+                    currencyCode
+                  }
                 }
                 variants(first: 50) {
                   edges {
@@ -127,7 +131,8 @@ async function allProductsData() {
     const color = getColorFromTags(item.tags);
     const options = item.variants.edges.map(formatOptions);
     const images = item.images.edges.map(formatProductImages);
-    const price = item.priceRange.minVariantPrice.amount;
+    const minPrice = item.priceRange.minVariantPrice.amount;
+    const maxPrice = item.priceRange.maxVariantPrice.amount;
     const currency = item.priceRange.minVariantPrice.currencyCode;
     const metaDescription = formatMetaDescription(item.metafields.edges);
 
@@ -143,8 +148,9 @@ async function allProductsData() {
       mainImageAlt: item.images.edges[0].node.altText,
       mainImage: item.images.edges[0].node.originalSrc.split('.jpg')[0],
       thumbnails: images,
-      price: new Intl.NumberFormat('en-GB', { style: 'currency', currency: currency }).format(price),
-      priceSchema: parseFloat(price).toFixed(2),
+      minPrice: new Intl.NumberFormat('en-GB', { style: 'currency', currency: currency }).format(minPrice),
+      maxPrice: new Intl.NumberFormat('en-GB', { style: 'currency', currency: currency }).format(maxPrice),
+      priceSchema: parseFloat(minPrice).toFixed(2),
       metaDescription
     };
   });

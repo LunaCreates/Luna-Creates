@@ -1,0 +1,31 @@
+@use '../01-settings/variables' as _v;
+@use '../02-tools/mixins/responsive' as _r;
+
+.expression {
+  @include _r.min(lg) {
+    max-height: 640px;
+  }
+}
+
+.expression__image {
+  object-position: top;
+}
+
+.expression__container {
+  @include _r.min(lg) {
+    top: 0;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translateX(-50%);
+  }
+}
+
+.expression__content {
+  top: -(_v.$core-grid * 2);
+
+  @include _r.min(lg) {
+    top: 0;
+    max-width: 350px;
+  }
+}

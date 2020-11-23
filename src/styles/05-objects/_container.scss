@@ -1,0 +1,18 @@
+@use '../01-settings/spacing' as _s;
+@use '../02-tools/mixins/responsive' as _r;
+@use 'sass:map';
+
+.container {
+  position: relative;
+
+  @include _r.min(xs) {
+    padding-right: 5vw;
+    padding-left: 5vw;
+  }
+
+  @include _r.min(md) {
+    max-width: 1140px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}

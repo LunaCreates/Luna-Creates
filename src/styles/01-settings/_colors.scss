@@ -1,0 +1,29 @@
+$color-primary: #073358;
+$color-secondary: #ffc857;
+$color-tertiary: #156572;
+$color-background: #ffffff;
+$color-foreground: #040f0f;
+$color-neutral: #f1f2f3;
+$color-fade: #f7f7f7;
+$color-heading: #777676;
+$color-body: #595959;
+$color-border: #d8d8d8;
+$color-success: #70c041;
+$color-error: #de0000;
+
+// Used for generating CSS utility classes
+$colors: (
+  'transparent': transparent,
+  'primary': $color-primary,
+  'secondary': $color-secondary,
+  'tertiary': $color-tertiary,
+  'background': $color-background,
+  'foreground': $color-foreground,
+  'neutral': $color-neutral,
+  'fade': $color-fade,
+  'heading': $color-heading,
+  'body': $color-body,
+  'border': $color-border,
+  'success': $color-success,
+  'error': $color-error
+);

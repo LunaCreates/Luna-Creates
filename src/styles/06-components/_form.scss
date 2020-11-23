@@ -1,0 +1,65 @@
+@use '../01-settings/variables' as _v;
+@use '../02-tools/mixins/transitions' as _tr;
+
+@use 'sass:color';
+
+.form__input,
+.form__textarea {
+  @include _tr.transition-03(border-color);
+  border-width: 1px;
+  border-style: _v.$core-border-style;
+  border-color: var(--color-heading);
+
+  &:focus,
+  &:active {
+    border-color: var(--color-secondary);
+  }
+
+  @media (hover) {
+    &:hover {
+      border-color: var(--color-secondary);
+    }
+  }
+}
+
+.form__textarea {
+  resize: none;
+}
+
+.form__input--valid,
+.form__textarea--valid {
+  border-color: var(--color-success);
+}
+
+.form__input--invalid,
+.form__textarea--invalid {
+  border-color: var(--color-danger);
+
+  &:focus,
+  &:active {
+    border-color: var(--color-danger);
+  }
+}
+
+.form__validation-message {
+  @include _tr.transition-03(opacity);
+  top: 3px;
+  right: 0;
+  opacity: 0;
+
+  &--visible {
+    opacity: 1;
+  }
+}
+
+.form__message {
+  &--error {
+    display: block;
+    background-color: rgba(_v.$core-color-danger, 0.7);
+  }
+
+  &--success {
+    display: block;
+    background-color: rgba(_v.$core-color-success, 0.7);
+  }
+}
