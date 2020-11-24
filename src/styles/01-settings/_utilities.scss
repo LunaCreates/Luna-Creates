@@ -768,6 +768,14 @@ $utilities: map-merge(
       class: pl,
       values: _s.$spacers
     ),
+    'padding-env-top': (
+      property: padding-top,
+      env: true,
+      class: ptenv,
+      values: (
+        top: safe-area-inset-top
+      )
+    ),
     'z-index': (
       responsive: true,
       property: z-index,

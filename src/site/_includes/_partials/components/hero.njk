@@ -1,11 +1,7 @@
 {% set image = heroImage or renderData.heroImage %}
 {% set title = heroTitle or renderData.heroTitle %}
 
-{% if post %}
-    <header class="hero pos-r" aria-labelledby="hero-title">
-{% else %}
-    <section class="hero pos-r" aria-labelledby="hero-title">
-{% endif %}
+<section class="hero pos-r" aria-labelledby="hero-title">
     <div class="hero__content">
     {% if post %}
         {% set imageWebP = image.split(r/(jpg|png)/g)[0] + 'webp' %}
@@ -67,11 +63,7 @@
             </h1>
         {% endif %}
     </div>
-{% if post %}
-    </header>
-{% else %}
-    </section>
-{% endif %}
+</section>
 
 {% if home %}
     <p class="hero__body container my-32 px-16 mx-auto fs-sm lh-sm fvs-rg ta-center md:my-56 lg:my-80">We help you to immortalise your travel adventures, whether you’re finding new places to explore or reflecting on past adventures.</p>

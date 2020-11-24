@@ -26,6 +26,9 @@
     // Use hover state if present
     $property-hover: map-get($utility, hover) == true;
 
+    // Use env state if present
+    $property-env: map-get($utility, env) == true;
+
     // Don't prefix if value key is null (eg. with shadow class)
     $property-class-modifier: if($key, '-' + $key, '');
 
@@ -56,9 +59,19 @@
       }
     }
 
-    .#{$infix + $property-class + $property-class-modifier} {
-      @each $property in $properties {
-        #{$property}: $value;
+    @if $property-env {
+      @supports (padding-top: env(safe-area-inset-top)) {
+        .#{$infix + $property-class + $property-class-modifier} {
+           @each $property in $properties {
+            #{$property}: env($value);
+          }
+        }
+      }
+    } @else {
+      .#{$infix + $property-class + $property-class-modifier} {
+        @each $property in $properties {
+          #{$property}: $value;
+        }
       }
     }
   }
