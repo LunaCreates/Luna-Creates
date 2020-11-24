@@ -9,7 +9,6 @@ publish_date: 2021-11-23T08:00:00.000+00:00
 thumbnail: images/blog/gina-map.jpg
 banner_image: images/blog/black-map.jpg
 author: src/site/authors/Gina Manns.md
-meta-title: Welcome to our new blog
 meta_description: Welcome to the new travel related blog by Luncreates.
 meta_title: Welcome to our new blog
 
