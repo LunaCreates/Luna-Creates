@@ -39,4 +39,4 @@ We are using the Algolia JavaScript Client as our hosted search engine. You will
 
 - `npm run webpack:prod`: Compiles SCSS and Typescript ready for production
 - `npm run eleventy:prod`: Compiles Nunjucks files ready for production
-- `npm run build`: Command used in netlify to run `webpack:prod` and `eleventy:prod``
+- `npm run build`: Command used in netlify to run `webpack:prod` and `eleventy:prod`
