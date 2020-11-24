@@ -2,7 +2,7 @@
 label: Blog Post
 hide_body: false
 fields:
-- name: meta-title
+- name: meta_title
   type: text
   config:
     required: true
@@ -29,7 +29,7 @@ fields:
   config:
     required: false
     date_format: DD/MM/YYYY
-    time_format:
+    time_format: 
     display_utc: false
     export_format: YYYY-MM-DDThh:mm:ssZ
 - name: banner_image
