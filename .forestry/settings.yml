@@ -33,7 +33,6 @@ build:
   preview_env:
   - STOREFRONT_API_TOKEN=cfec3febd330e764f5ecf98c6b9a5a44
   - STOREFRONT_API_URL=https://luna-creates.myshopify.com/api/2020-07/graphql.json
-  - GIT_LFS_SKIP_SMUDGE=1
   preview_output_directory: dist
   install_dependencies_command: npm install
   preview_docker_image: forestryio/node:12
