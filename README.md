@@ -26,6 +26,9 @@ We are using the Algolia JavaScript Client as our hosted search engine. You will
 - `ALGOLIA_APPLICATION_ID`
 - `ALGOLIA_INDEX`
 
+### Forestry
+Forestry is a GIT bases CMS, meaning all the content for the CMS is pulled directly from this repo. The content is in Markdown format and lives in `src/site/posts`. Click the link above to read more about how Forestry works.
+
 ## Commands
 
 ### Development
