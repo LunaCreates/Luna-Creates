@@ -1,3 +1,4 @@
+{% macro search(id) %}
 <button type="button" class="header__search mr-8 md:ml-8 md:order-2" aria-expanded="false" aria-label="Open search" data-trigger-search>
     <svg height="16" width="16" aria-hidden="true" class="header__icon pe-none" fill="var(--color-primary)">
         <use xlink:href="/icons/sprite.svg#search"></use>
@@ -5,8 +6,9 @@
 </button>
 
 <div class="search pos-a px-5vw bgc-background md:pos-r md:px-0 md:flex-initial md:order-1 lg:flex-1" data-search-form>
-    <label class="sr-only" for="search-top">Search</label>
-    <input type="search" class="w-full borr-0 borctransparent fs-sm lh-sm fvs-rg py-16 md:p-8 md:borcborder" id="search-top" placeholder="Search" autocomplete="off" data-search-input>
+    <label class="sr-only" for="{{id}}">Search</label>
+    <input type="search" class="w-full borr-0 borctransparent fs-sm lh-sm fvs-rg py-16 md:p-8 md:borcborder" id="{{id}}" placeholder="Search" autocomplete="off" data-search-input>
     <ul class="search__results bgc-background py-16 px-5vw md:py-24 md:px-16" data-search-results></ul>
     <span class="sr-only" data-search-results-status aria-live="polite" role="status">0 results found</span>
 </div>
+{% endmacro %}

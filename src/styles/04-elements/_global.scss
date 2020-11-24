@@ -1,21 +1,7 @@
 @use '../01-settings/colors' as _c;
 @use '../01-settings/typography' as _ty;
-@use '../02-tools/mixins/transitions' as _tr;
 
 // Global.............The sites core styles.
-
-@font-face {
-  font-family: 'Avenir Next';
-  src: url('/fonts/avenir-next-variable.woff2') format('woff2-variations');
-  font-display: optional;
-  font-weight: _ty.$font-weight-normal;
-}
-
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-}
 
 :root {
   --color-primary: #{_c.$color-primary};
@@ -30,6 +16,19 @@
   --color-border: #{_c.$color-border};
   --color-danger: #{_c.$color-error};
   --color-success: #{_c.$color-success};
+}
+
+@font-face {
+  font-family: 'Avenir Next';
+  src: url('/fonts/avenir-next-variable.woff2') format('woff2-variations');
+  font-display: optional;
+  font-weight: _ty.$font-weight-normal;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
 }
 
 html {
@@ -61,7 +60,8 @@ h5,
 h6,
 small,
 span,
-strong {
+strong,
+th {
   font-weight: _ty.$font-weight-normal;
 }
 
@@ -81,7 +81,6 @@ a {
   outline-width: 3px;
 
   @media (hover) {
-    @include _tr.transition-03(all);
     cursor: pointer;
   }
 }
@@ -153,8 +152,6 @@ button {
   appearance: none;
 
   @media (hover) {
-    @include _tr.transition-03(all);
-
     &:hover {
       cursor: pointer;
     }

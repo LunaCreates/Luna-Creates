@@ -1,13 +1,10 @@
-@use '../01-settings/variables' as _v;
-@use '../02-tools/mixins/transitions' as _tr;
-
+@use '../01-settings/colors' as _c;
 @use 'sass:color';
 
 .form__input,
 .form__textarea {
-  @include _tr.transition-03(border-color);
   border-width: 1px;
-  border-style: _v.$core-border-style;
+  border-style: var(--color-border);
   border-color: var(--color-heading);
 
   &:focus,
@@ -42,7 +39,6 @@
 }
 
 .form__validation-message {
-  @include _tr.transition-03(opacity);
   top: 3px;
   right: 0;
   opacity: 0;
@@ -55,11 +51,11 @@
 .form__message {
   &--error {
     display: block;
-    background-color: rgba(_v.$core-color-danger, 0.7);
+    background-color: rgba(_c.$color-error, 0.7);
   }
 
   &--success {
     display: block;
-    background-color: rgba(_v.$core-color-success, 0.7);
+    background-color: rgba(_c.$color-success, 0.7);
   }
 }

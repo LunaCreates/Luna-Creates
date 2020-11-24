@@ -1,4 +1,6 @@
 ---
+meta_title: 'Welcome to our new blog'
+meta_description: 'Welcome to the new travel related blog by Luncreates.'
 title: Welcome to our new blog
 date: '2020-06-08'
 tags:
@@ -8,7 +10,6 @@ tags:
 publish_date: 2021-11-23T08:00:00.000+00:00
 thumbnail: images/blog/gina-map.jpg
 banner_image: images/blog/black-map.jpg
-description: 'Welcome to the new travel related blog by Luncreates. '
 author: src/site/authors/Gina Manns.md
 
 ---

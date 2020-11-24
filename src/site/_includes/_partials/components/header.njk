@@ -1,3 +1,5 @@
+{% import "_macros/search.njk" as searchBlock %}
+
 <header class="header pos-r" data-component="header">
     <a href="#nav" class="skip-link skip-link--hidden">Skip to navigation</a>
     <a href="#main" class="skip-link skip-link--hidden">Skip to main content</a>
@@ -17,7 +19,7 @@
         </a>
 
         <div class="dp-n md:dp-f md:jc-end md:ai-c md:pos-r md:zi-20" data-component="search">
-            {% include "_partials/components/search.njk" %}
+            {{searchBlock.search('header-top')}}
 
             <a href="/cart/" class="header__cart pos-r md:order-3" aria-label="View cart" data-cart>
                 <svg height="16" width="16" aria-hidden="true" class="">
@@ -31,7 +33,7 @@
         {% include "_partials/navigation.njk" %}
 
         <div class="dp-f jc-between ai-c zi-20 md:dp-n" data-component="search">
-            {% include "_partials/components/search.njk" %}
+            {{searchBlock.search('header-bottom')}}
 
             <a href="/cart/" class="header__cart pos-r" aria-label="View cart" data-cart>
                 <svg height="16" width="16" aria-hidden="true" class="header__icon" fill="var(--color-primary)">
