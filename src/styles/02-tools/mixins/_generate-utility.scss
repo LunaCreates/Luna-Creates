@@ -62,7 +62,7 @@
     @if $property-env {
       @supports (padding-top: env(safe-area-inset-top)) {
         .#{$infix + $property-class + $property-class-modifier} {
-           @each $property in $properties {
+          @each $property in $properties {
             #{$property}: env($value);
           }
         }
