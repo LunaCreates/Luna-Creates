@@ -1,5 +1,5 @@
 ---
-title: Welcome to our new blog
+title: Welcome To Our New Travel Blog
 date: '2020-06-08'
 tags:
 - demo-content
@@ -9,8 +9,8 @@ publish_date: 2021-11-23T08:00:00.000+00:00
 thumbnail: https://lunacreates.co.uk/images/blog/gina-map.jpg
 banner_image: https://lunacreates.co.uk/images/blog/black-map.jpg
 author: src/site/authors/Gina Manns.md
-meta_description: Welcome to the new travel related blog by Luna Creates.
-meta_title: Welcome to our new blog
+meta_description: 'Welcome to the new travel related blog by Luna Creates. '
+meta_title: 'Travel Themed Blog By Luna Creates '
 
 ---
 In this strangest of years, we’ve spent a lot of time thinking about how the world is changing and what the new normal will look like, as I’m sure everybody has. We both have a passion for travel as well as of course a passion for our little business; and thinking about what the future may hold for both of those things is something we’ve discussed so much over the last few months. We thought that setting up a blog section on our site would be a good way of sharing those thoughts, as well as giving us a chance to pass on some of the questions and stories we receive from our lovely customers.
