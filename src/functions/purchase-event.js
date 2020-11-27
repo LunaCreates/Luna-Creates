@@ -38,6 +38,8 @@ exports.handler = async (event, context, callback) => {
   const data = JSON.parse(event.body);
   const payload = buildPayload(data);
 
+  console.log(payload, 'payload');
+
   try {
     const query = await fetch(`${url}?${payload}`, {
       method: 'POST',
