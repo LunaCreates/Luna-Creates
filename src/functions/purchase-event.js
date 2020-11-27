@@ -12,7 +12,7 @@ function addProductData(product, index, arr) {
   const isLast = index = arr.length - 1;
   const endParam = isLast ? '' : '&';
 
-  return `pr${prId}id=${productId}&pr${prId}va=${variantId}&pr${prid}nm=${name}&pr${prId}va=${variant}&pr${prId}pr=${price}&pr${prId}qt=${quantity}${endParam}`
+  return `pr${prId}id=${productId}&pr${prId}va=${variantId}&pr${prid}nm=${name}&pr${prId}va=${variant}&pr${prId}pr=${price}&pr${prId}qt=${quantity}${endParam}`;
 }
 
 function buildPayload(data) {
@@ -36,14 +36,18 @@ exports.handler = async (event, context, callback) => {
       method: 'POST',
     });
 
+    const result = await query.json();
+
     const response = {
-      statusCode: 200
+      statusCode: 200,
+      body: JSON.stringify(result)
     }
 
     callback(null, response);
   } catch (error) {
     const response = {
-      statusCode: 500
+      statusCode: 500,
+      body: JSON.stringify({ error: error.message })
     }
 
     callback(null, response);
