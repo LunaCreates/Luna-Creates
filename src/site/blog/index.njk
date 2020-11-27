@@ -2,9 +2,11 @@
 title: 'Blog'
 description: 'Welcome to our blog where you can read all the latest news about luna Creates'
 heroTitle: 'Our Blog'
-heroImage: 'https://cdn.shopify.com/s/files/1/1931/6299/files/homepage'
+heroImage: 'https://cdn.shopify.com/s/files/1/1931/6299/files/homepage.jpg'
 layout: _layouts/blog
-eleventyExcludeFromCollections: true
+sitemap:
+  changefreq: daily
+  priority: 0.8
 ---
 
 {% set postListItems = collections.postFeed %}

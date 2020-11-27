@@ -1,9 +1,9 @@
-{% set image = heroImage or renderData.heroImage %}
 {% set title = heroTitle or renderData.heroTitle %}
 
 <section class="hero pos-r" aria-labelledby="hero-title">
     <div class="hero__content">
     {% if post %}
+        {% set image = heroImage or renderData.heroImage %}
         {% set imageWebP = image.split(r/(jpg|png)/g)[0] + 'webp' %}
 
         <picture class="ratio-3-2 md:ratio-4-1">
@@ -28,25 +28,29 @@
             </noscript>
         </picture>
     {% else %}
+            {% set image = heroImage or renderData.heroImage %}
+            {% set ext = image.split(r/(.jpg|.png)/g)[1] %}
+            {% set path = image.replace(ext, '') %}
+
             <picture class="ratio-3-2 md:ratio-4-1">
-                <source media="(max-width: 37.4375em)" type="image/webp" data-srcset="{{image}}_300x180_crop_top.jpg.webp 1x, {{image}}_600x360_crop_top.jpg.webp 2x">
-                <source media="(max-width: 37.4375em)" data-srcset="{{image}}_300x180_crop_top.jpg 1x, {{image}}_600x360_crop_top.jpg 2x">
+                <source media="(max-width: 37.4375em)" type="image/webp" data-srcset="{{path}}_300x180_crop_top{{ext}}.webp 1x, {{path}}_600x360_crop_top{{ext}}.webp 2x">
+                <source media="(max-width: 37.4375em)" data-srcset="{{path}}_300x180_crop_top{{ext}} 1x, {{path}}_600x360_crop_top{{ext}} 2x">
 
-                <source media="(min-width: 38em) and (max-width: 47.9375em)" type="image/webp" data-srcset="{{image}}_400x240_crop_top.jpg.webp 1x, {{image}}_800x480_crop_top.jpg.webp 2x">
-                <source media="(min-width: 38em) and (max-width: 47.9375em)" data-srcset="{{image}}_400x240_crop_top.jpg 1x, {{image}}_800x480_crop_top.jpg 2x">
+                <source media="(min-width: 38em) and (max-width: 47.9375em)" type="image/webp" data-srcset="{{path}}_400x240_crop_top{{ext}}.webp 1x, {{path}}_800x480_crop_top{{ext}}.webp 2x">
+                <source media="(min-width: 38em) and (max-width: 47.9375em)" data-srcset="{{path}}_400x240_crop_top{{ext}} 1x, {{path}}_800x480_crop_top{{ext}} 2x">
 
-                <source type="image/webp" data-srcset="{{image}}_1500x500_crop_top.jpg.webp 1x, {{image}}_2048x640_crop_top.jpg.webp 2x">
-                <img class="lazyload op-right" data-srcset="{{image}}_1500x500_crop_top.jpg 1x, {{image}}_2048x640_crop_top.jpg 2x" role="presentation" width="400" height="240" loading="lazy">
+                <source type="image/webp" data-srcset="{{path}}_1500x500_crop_top{{ext}}.webp 1x, {{path}}_2048x640_crop_top{{ext}}.webp 2x">
+                <img class="lazyload op-right" data-srcset="{{path}}_1500x500_crop_top{{ext}} 1x, {{path}}_2048x640_crop_top{{ext}} 2x" role="presentation" width="400" height="240" loading="lazy">
 
                 <noscript>
-                    <source media="(max-width: 37.4375em)" type="image/webp" srcset="{{image}}_300x180_crop_top.jpg.webp 1x, {{image}}_600x360_crop_top.jpg.webp 2x">
-                    <source media="(max-width: 37.4375em)" srcset="{{image}}_300x180_crop_top.jpg 1x, {{image}}_600x360_crop_top.jpg 2x">
+                    <source media="(max-width: 37.4375em)" type="image/webp" srcset="{{path}}_300x180_crop_top{{ext}}.webp 1x, {{path}}_600x360_crop_top{{ext}}.webp 2x">
+                    <source media="(max-width: 37.4375em)" srcset="{{path}}_300x180_crop_top{{ext}} 1x, {{path}}_600x360_crop_top{{ext}} 2x">
 
-                    <source media="(min-width: 38em) and (max-width: 47.9375em)" type="image/webp" srcset="{{image}}_400x240_crop_top.jpg.webp 1x, {{image}}_800x480_crop_top.jpg.webp 2x">
-                    <source media="(min-width: 38em) and (max-width: 47.9375em)" srcset="{{image}}_400x240_crop_top.jpg 1x, {{image}}_800x480_crop_top.jpg 2x">
+                    <source media="(min-width: 38em) and (max-width: 47.9375em)" type="image/webp" srcset="{{path}}_400x240_crop_top{{ext}}.webp 1x, {{path}}_800x480_crop_top{{ext}}.webp 2x">
+                    <source media="(min-width: 38em) and (max-width: 47.9375em)" srcset="{{path}}_400x240_crop_top{{ext}} 1x, {{path}}_800x480_crop_top{{ext}} 2x">
 
-                    <source type="image/webp" srcset="{{image}}_1500x500_crop_top.jpg.webp 1x, {{image}}_2048x640_crop_top.jpg.webp 2x">
-                    <img class="op-right" srcset="{{image}}_1500x500_crop_top.jpg 1x, {{image}}_2048x640_crop_top.jpg 2x" role="presentation" width="400" height="240" loading="lazy">
+                    <source type="image/webp" srcset="{{path}}_1500x500_crop_top{{ext}}.webp 1x, {{path}}_2048x640_crop_top{{ext}}.webp 2x">
+                    <img class="op-right" srcset="{{path}}_1500x500_crop_top{{ext}} 1x, {{path}}_2048x640_crop_top{{ext}} 2x" role="presentation" width="400" height="240" loading="lazy">
                 </noscript>
             </picture>
     {% endif %}
@@ -58,7 +62,7 @@
                 <span class="hero__title-highlight bgc-foreground">{{title | safe}}</span>
             </p>
         {% else %}
-            <h1 class="hero__title mx-auto mb-0 text-background fs-lg lh-xl fvs-rg ta-center tt-uc" id="hero-title">
+            <h1 class="hero__title mx-auto my-0 text-background fs-lg lh-xl fvs-rg ta-center tt-uc" id="hero-title">
                 <span class="hero__title-highlight bgc-foreground">{{title | safe}}</span>
             </h1>
         {% endif %}
