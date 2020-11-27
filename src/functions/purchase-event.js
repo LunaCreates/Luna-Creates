@@ -20,7 +20,7 @@ function buildPayload(data) {
   const ti = data.name;
   const tr = parseFloat(data.total_price);
   const ts = parseFloat(data.total_shipping_price_set.shop_money.amount);
-  const tcc = data.discount_applications.title;
+  const tcc = data.discount_applications[0].title;
   const notes = data.note_attributes;
   const cid = Object.assign({}, ...notes.filter(note => note.name === 'clientId'));
 
