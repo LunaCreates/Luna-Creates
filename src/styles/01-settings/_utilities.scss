@@ -771,9 +771,17 @@ $utilities: map-merge(
     'padding-env-top': (
       property: padding-top,
       env: true,
-      class: ptenv,
+      class: penv,
       values: (
         top: safe-area-inset-top
+      )
+    ),
+    'padding-env-bottom': (
+      property: padding-bottom,
+      env: true,
+      class: penv,
+      values: (
+        bottom: safe-area-inset-bottom
       )
     ),
     'z-index': (
@@ -858,6 +866,16 @@ $utilities: map-merge(
       class: scale,
       values: (
         110: scale(1.1)
+      )
+    ),
+    'word-break': (
+      responsive: true,
+      property: word-break,
+      class: wb,
+      values: (
+        ball: break-all,
+        kall: keep-all,
+        normal: normal
       )
     )
   ),

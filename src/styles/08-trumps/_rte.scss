@@ -1,7 +1,7 @@
 @use '../01-settings/variables' as _v;
 @use '../02-tools/mixins/typography' as _ty;
 
-.page__rte {
+.rte {
   > * {
     @include _ty.text(sm);
   }
@@ -52,8 +52,8 @@
   a {
     display: inline-block;
     position: relative;
-    color: var(--color-foreground);
-    font-variation-settings: 'wght' _v.$core-secondary-font-weight;
+    color: var(--color-primary);
+    font-variation-settings: 'wght' _v.$core-tertiary-font-weight;
 
     @media (hover) {
       &::before {

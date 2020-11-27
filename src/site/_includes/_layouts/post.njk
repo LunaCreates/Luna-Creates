@@ -14,7 +14,7 @@ eleventyComputed:
     {% include "_partials/components/hero.njk" %}
 
     <main class="container px-16 my-32 md:my-56 lg:my-80" id="main">
-        <article class="page__rte maxw-post mx-auto">
+        <article class="rte maxw-post mx-auto">
             <time class="fs-sb lh-sb fvs-sb text-foreground dp-b mb-24 md:mb-32" datetime="{{publish_date}}">{{publish_date | readableDate }}</time>
 
             {{ content | safe }}
