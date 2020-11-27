@@ -44,7 +44,7 @@ exports.handler = async (event, context, callback) => {
       headers
     });
 
-    const result = await query.json();
+    const result = await query.text();
 
     const response = {
       statusCode: 200,
@@ -55,6 +55,7 @@ exports.handler = async (event, context, callback) => {
   } catch (error) {
     const response = {
       statusCode: 500,
+      headers: { 'Content-type': 'application/json' },
       body: JSON.stringify({ error: error.message })
     }
 
