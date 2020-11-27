@@ -13,13 +13,20 @@ const headers = {
 
 exports.handler = async function (event, context, callback) {
   try {
-    const data = JSON.parse(event.body);
+    const body = JSON.parse(event.body);
+
+    console.log(body, 'body');
+
     const payload = {
       query: `mutation checkoutCreate($input: CheckoutCreateInput!) {
         checkoutCreate(input: $input) {
           checkout {
             id
             webUrl
+            customAttributes {
+              key
+              value
+            }
             lineItems(first: 5) {
               edges {
                 node {
@@ -54,7 +61,12 @@ exports.handler = async function (event, context, callback) {
           }
         }
       }`,
-      variables: { input: { lineItems: data } }
+      variables: {
+        input: {
+          lineItems: body.data,
+          customAttributes: [{ key: 'clientId', value: body.clientId }]
+        }
+      }
     }
 
     const query = await fetch(url, {
@@ -63,12 +75,12 @@ exports.handler = async function (event, context, callback) {
       body: JSON.stringify(payload)
     });
 
-    const body = await query.json()
+    const result = await query.json()
 
     const response = {
       statusCode: 200,
       headers,
-      body: JSON.stringify(body)
+      body: JSON.stringify(result)
     }
 
     callback(null, response);

@@ -21,7 +21,8 @@ function Cart(element: HTMLElement) {
   const form = element.querySelector('[data-form]');
   const cart = JSON.parse(localStorage.getItem('cart') as string) as ShopifyStorefront.CheckoutCreate[];
 
-  async function fetchShopifyData(body: ShopifyStorefront.CheckoutCreate[]) {
+  async function fetchShopifyData(data: ShopifyStorefront.CheckoutCreate[], clientId: string) {
+    const body = { data, clientId };
     const checkout = await fetch('/create', {
       method: 'POST',
       headers,
@@ -46,9 +47,11 @@ function Cart(element: HTMLElement) {
   }
 
   async function updateCartItems(data: ShopifyStorefront.CheckoutCreate[]) {
+    const clientId = (<any>window).ga.getAll()[0].get('clientId');
+    console.log(clientId, 'clientId');
     const keyMapImages: KeyMapImages = JSON.parse(localStorage.getItem('mapPreviews') as string);
-    const checkoutData: ShopifyStorefront.CheckoutData = await fetchShopifyData(data);
-    const body = { keyMapImages, checkoutData };
+    const checkoutData: ShopifyStorefront.CheckoutData = await fetchShopifyData(data, clientId);
+    const body = { keyMapImages, checkoutData, clientId };
 
     if (form === null) return;
 
