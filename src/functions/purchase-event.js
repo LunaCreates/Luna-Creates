@@ -9,7 +9,7 @@ function addProductData(product, index, arr) {
   const variant = product.variant_title;
   const price = parseFloat(product.price);
   const quantity = product.quantity;
-  const isLast = index = arr.length - 1;
+  const isLast = index === arr.length - 1;
   const endParam = isLast ? '' : '&';
 
   return `pr${prId}id=${productId}&pr${prId}va=${variantId}&pr${prId}nm=${name}&pr${prId}va=${variant}&pr${prId}pr=${price}&pr${prId}qt=${quantity}${endParam}`;
