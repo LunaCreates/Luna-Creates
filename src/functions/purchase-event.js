@@ -2,6 +2,11 @@ const fetch = require('node-fetch');
 
 const url = 'https://www.google-analytics.com';
 const tid = 'UA-117442723-1';
+const headers = {
+  'Access-Control-Allow-Origin': '*',
+  'Access-Control-Allow-Headers': 'Content-Type',
+  'Content-Type': 'application/json',
+}
 
 function addProductData(product, index, arr) {
   const prId = index + 1;
@@ -36,6 +41,7 @@ exports.handler = async (event, context, callback) => {
   try {
     const query = await fetch(`${url}?${payload}`, {
       method: 'POST',
+      headers
     });
 
     const result = await query.json();
