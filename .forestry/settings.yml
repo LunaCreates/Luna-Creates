@@ -2,12 +2,12 @@
 new_page_extension: md
 auto_deploy: false
 admin_path: src/cms
-webhook_url: 
+webhook_url:
 sections:
 - type: heading
   label: Posts
 - type: directory
-  path: src/site/posts
+  path: src/site/blog
   label: Blog Posts
   create: documents
   match: "**/*.md"

@@ -1,18 +1,18 @@
 ---
 title: 'Delivery'
 description: 'Find out more about everything you need to know about delivery.'
+heroTitle: 'Delivery'
+heroImage: 'https://cdn.shopify.com/s/files/1/1931/6299/files/Image_4.png'
 layout: _layouts/page
 sitemap:
   changefreq: monthly
   priority: 0.8
 ---
 
-<main class="my-32 md:my-56 lg:my-80" id="main">
-    <div class="container px-16">
-        <h1 class="fs-xl lh-xl fvs-md ta-center text-heading mt-0 mb-32 md:mb-72">{{delivery.title}}</h1>
+{% include "_partials/components/hero.njk" %}
 
-        <div class="rte">
-            {{delivery.body | safe}}
-        </div>
+<main class="container my-32 px-16 md:my-56 lg:my-80" id="main">
+    <div class="rte maxw-post mx-auto">
+        {{delivery.body | safe}}
     </div>
 </main>
