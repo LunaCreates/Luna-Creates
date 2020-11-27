@@ -5,10 +5,10 @@ function addProductData(product, index, arr) {
   const prId = index + 1;
   const productId = product.product_id;
   const variantId = product.variant_id;
-  const name = product.name.replace(' ', '%20');
-  const variant = product.variant_title.replace(' ', '%20');
-  const price = parseFloat(data.price);
-  const quantity = data.quantity;
+  const name = product.name;
+  const variant = product.variant_title;
+  const price = parseFloat(product.price);
+  const quantity = product.quantity;
   const isLast = index = arr.length - 1;
   const endParam = isLast ? '' : '&';
 
