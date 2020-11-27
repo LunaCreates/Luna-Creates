@@ -24,7 +24,7 @@ function buildPayload(data) {
   const notes = data.note_attributes;
   const cid = Object.assign({}, ...notes.filter(note => note.name === 'clientId'));
 
-  return `v=1&t=pageview&tid=${tid}&cid=${cid}&dh=lunacreates.co.uk&dp=%2Fcheckout&dt=Checkout%20Page&ti=${ti}&tr=${tr}&ts=${ts}&tcc=${tcc}&pa=purchase&${lineItems.map(addProductData).join('')}`
+  return `v=1&t=pageview&tid=${tid}&cid=${cid.value}&dh=lunacreates.co.uk&dp=%2Fcheckout&dt=Checkout%20Page&ti=${ti}&tr=${tr}&ts=${ts}&tcc=${tcc}&pa=purchase&${lineItems.map(addProductData).join('')}`
 }
 
 exports.handler = async (event, context, callback) => {
