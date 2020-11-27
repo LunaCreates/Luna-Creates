@@ -1,3 +1,5 @@
+const fetch = require('node-fetch');
+
 const url = 'https://www.google-analytics.com';
 const tid = 'UA-117442723-1';
 
