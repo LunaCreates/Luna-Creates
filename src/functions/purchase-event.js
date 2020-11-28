@@ -24,7 +24,7 @@ function addProductData(product, index, arr) {
 
 function buildPayload(data) {
   const lineItems = data.line_items;
-  const ti = data.name;
+  const ti = data.name.replace('#', '');
   const tr = parseFloat(data.total_price);
   const ts = parseFloat(data.total_shipping_price_set.shop_money.amount);
   const tcc = data.discount_applications[0].title;
