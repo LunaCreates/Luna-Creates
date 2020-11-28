@@ -1,6 +1,6 @@
 const fetch = require('node-fetch');
 
-const url = 'https://www.google-analytics.com';
+const url = 'https://www.google-analytics.com/collect';
 const tid = 'UA-117442723-1';
 const headers = {
   'Access-Control-Allow-Origin': '*',
@@ -24,7 +24,7 @@ function addProductData(product, index, arr) {
 
 function buildPayload(data) {
   const lineItems = data.line_items;
-  const ti = data.name;
+  const ti = data.name.replace('#', '');
   const tr = parseFloat(data.total_price);
   const ts = parseFloat(data.total_shipping_price_set.shop_money.amount);
   const tcc = data.discount_applications[0].title;
