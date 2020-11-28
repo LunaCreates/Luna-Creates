@@ -1,6 +1,6 @@
 const fetch = require('node-fetch');
 
-const url = 'https://www.google-analytics.com';
+const url = 'https://www.google-analytics.com/collect';
 const tid = 'UA-117442723-1';
 const headers = {
   'Access-Control-Allow-Origin': '*',
