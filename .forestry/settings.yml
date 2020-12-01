@@ -29,8 +29,7 @@ sections:
 - type: document
   path: README.md
   label: Help
-  match: "**/*"
-  read_only: true
+  read_only: false
 - type: document
   path: src/site/_includes/_partials/components/notification.njk
   label: Notification Banner
