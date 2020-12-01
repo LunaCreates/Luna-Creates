@@ -27,7 +27,7 @@ sections:
 - type: heading
   label: Global
 - type: document
-  path: src/site/_includes/_partials/components
+  path: src/site/_includes/_partials/components/notification.njk
   label: Notification Banner
 upload_dir: src/images/blog
 public_path: https://lunacreates.co.uk/images/blog
