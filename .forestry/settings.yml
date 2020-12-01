@@ -26,9 +26,11 @@ sections:
   - author
 - type: heading
   label: Global
-- type: document
-  path: src/site/_includes/_partials/components/notification.njk
+- type: directory
+  path: src/site/_includes/_partials/components
   label: Notification Banner
+  create: none
+  match: notification.njk
 upload_dir: src/images/blog
 public_path: https://lunacreates.co.uk/images/blog
 front_matter_path: https://lunacreates.co.uk/images/blog
