@@ -24,6 +24,12 @@ sections:
   new_doc_ext: md
   templates:
   - author
+- type: heading
+  label: Global
+- type: document
+  path: src/site/_includes/_partials/components/notification.njk
+  label: Notification Banner
+  match: "**/*"
 upload_dir: src/images/blog
 public_path: https://lunacreates.co.uk/images/blog
 front_matter_path: https://lunacreates.co.uk/images/blog
