@@ -31,6 +31,8 @@ sections:
   label: Notification Banner
   create: none
   match: notification.njk
+  templates:
+  - notification-banner
 upload_dir: src/images/blog
 public_path: https://lunacreates.co.uk/images/blog
 front_matter_path: https://lunacreates.co.uk/images/blog
