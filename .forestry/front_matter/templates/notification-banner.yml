@@ -1,4 +1,14 @@
 ---
 label: Notification banner
 hide_body: true
-fields: []
+fields:
+- name: content
+  type: textarea
+  default: ''
+  config:
+    required: true
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Content
+  description: The content of the notification banner
