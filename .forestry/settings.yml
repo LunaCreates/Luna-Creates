@@ -27,6 +27,11 @@ sections:
 - type: heading
   label: Global
 - type: document
+  path: README.md
+  label: Help
+  match: "**/*"
+  read_only: true
+- type: document
   path: src/site/_includes/_partials/components/notification.njk
   label: Notification Banner
 upload_dir: src/images/blog
