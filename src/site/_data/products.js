@@ -97,12 +97,19 @@ async function allProductsData() {
     return JSON.stringify(result);
   }
 
+  function formatSize(option) {
+    return option.name.match(/Options|Pins|Size|Title|Style|Denominations/);
+  }
+
   function formatOptions(option) {
+    const options = option.node.selectedOptions;
+    const size = options.find(formatSize);
+
     return {
       id: option.node.id,
-      variants: formatVariants(option.node.selectedOptions),
-      name: option.node.selectedOptions[0].name,
-      value: option.node.selectedOptions[0].value,
+      variants: formatVariants(options),
+      name: size.name,
+      value: size.value,
       price: option.node.priceV2.amount
     }
   }
