@@ -7,6 +7,10 @@ reports
 .env
 .cache
 
+src/site/_includes/_partials/preload-styles.njk
+src/site/_includes/_partials/scripts.njk
+src/site/_includes/_partials/styles.njk
+
 # misc
 [Tt]humbs.db
 .DS_Store
