@@ -11,7 +11,6 @@ const headers = {
 function addProductData(product, index, arr) {
   const prId = index + 1;
   const productId = product.product_id;
-  const variantId = product.variant_id;
   const name = product.name;
   const variant = product.variant_title;
   const price = parseFloat(product.price);
@@ -19,15 +18,16 @@ function addProductData(product, index, arr) {
   const isLast = index === arr.length - 1;
   const endParam = isLast ? '' : '&';
 
-  return `pr${prId}id=${productId}&pr${prId}va=${variantId}&pr${prId}nm=${name}&pr${prId}va=${variant}&pr${prId}pr=${price}&pr${prId}qt=${quantity}${endParam}`;
+  return `pr${prId}id=${productId}&pr${prId}nm=${name}&pr${prId}va=${variant}&pr${prId}pr=${price}&pr${prId}qt=${quantity}${endParam}`;
 }
 
 function buildPayload(data) {
+  const discounts = data.discount_applications
   const lineItems = data.line_items;
   const ti = data.name.replace('#', '');
   const tr = parseFloat(data.total_price);
   const ts = parseFloat(data.total_shipping_price_set.shop_money.amount);
-  const tcc = data.discount_applications[0].title || '';
+  const tcc = discounts.length > 0 ? discounts[0].title : '';
   const notes = data.note_attributes;
   const cid = Object.assign({}, ...notes.filter(note => note.name === 'clientId'));
 
