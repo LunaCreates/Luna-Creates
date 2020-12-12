@@ -1,60 +1,168 @@
-{% import '_macros/pin-colors.njk' as pinMapColors %}
+{# {% import '_macros/pin-colors.njk' as pinMapColors %} #}
+
+{% set colors = [
+    { hex: '#F8C3D3', name: 'Pink' },
+    { hex: '#84B6F9', name: 'Light Blue' },
+    { hex: '#538B65', name: 'Green' },
+    { hex: '#9D89E6', name: 'Purple' },
+    { hex: '#FFFFFF', name: 'White' },
+    { hex: '#EDD771', name: 'Yellow' },
+    { hex: '#DE3947', name: 'Red' },
+    { hex: '#475A88', name: 'Blue' },
+    { hex: '#ED8733', name: 'Orange' },
+    { hex: '#000000', name: 'Black' }
+] %}
 
 {% if 'Kids' in product.tags %}
-    {% set titleHolder = 'E.g. Jack\'s Adventures' %}
-    {% set pinHolder = 'E.g. Jack\'s Travels' %}
+    {% set titleHolder = "E.g. Jack's Adventures" %}
 {% else %}
-    {% set titleHolder = 'E.g. Mark & Emma\'s world travels' %}
-    {% set pinHolder = 'E.g. Alex\'s Travels' %}
+    {% set titleHolder = "E.g. Mark & Emma's world travels" %}
 {% endif %}
 
 <form class="mt-24" data-product-form>
     <div class="pos-r mb-32">
-        <label for="map-size" class="fs-sm lh-sm fvs-md dp-ib mb-8 text-tertiary">Choose your map size</label>
-        <div class="pos-r">
-            <select name="size" id="map-size" class="product__select fs-sm lh-sm fvs-rg dp-b py-8 pr-32 pl-16 text-heading w-full" data-product-variants>
-            {% for option in product.options %}
-                <option value="{{option.value}}" data-name="{{option.name}}" data-id="{{option.id}}" data-price="{{option.price}}">{{option.value}}</option>
-            {% endfor %}
-            </select>
-            <svg class="product__select-icon pos-a pe-none" width="24" height="24" aria-hidden="true">
-                <use xlink:href="/icons/sprite.svg#chevron"></use>
-            </svg>
+        <h2 class="fs-sm lh-sm fvs-sb mt-0 mb-16 text-tertiary">1. Choose your map size</h2>
+
+        <div class="map-size pos-r dp-f jc-between ai-e mb-32">
+        {%- for option in product.options -%}
+            {% if option.size and 'No Frame' in option.size %}
+                {% set size = option.size.split(' (')[0] %}
+                {% set dims = option.dimensions %}
+                {% set width = dims | replace(r/[0-9]+ x/, "") | replace("mm", "") %}
+                {% set height = dims | replace(r/x [0-9]+mm/, "") %}
+                {% set hypo = (height ** 2 + width ** 2) ** 0.5 // 25.4 %}
+
+                <label for="{{ size }}" class="dp-f fd-c ai-c ta-center pos-r">
+                    <input type="radio" name="size" id="{{ size | lower }}" class="pos-a top-0 right-0 bottom-0 left-0 w-full bgc-transparent borc-transparent m-0 zi-10 cursor-pointer" {% if loop.first %}checked{% endif %} data-map="size" value="{{ size | lower }}">
+
+                    <div style="height: {{ height // 10 / 16}}rem; width: {{width // 10 / 16 }}rem" class="bor-1-solid-primary borr-2 dp-f jc-center ai-c mt-auto mb-8 mx-auto pos-r" data-map>
+                        <svg width="1rem" height="1rem" class="pos-a bottom-0 left-0 rotate-135" aria-hidden="true">
+                            <use xlink:href="/icons/sprite.svg#chevron"></use>
+                        </svg>
+                        <small class="fs-xxs lh-xxs">{{hypo}}"</small>
+                        <svg width="1rem" height="1rem" class="pos-a top-0 right-0 -rotate-45" aria-hidden="true">
+                            <use xlink:href="/icons/sprite.svg#chevron"></use>
+                        </svg>
+                    </div>
+
+                    <span class="dp-b fs-xs fvs-sb lh-xs text-primary">{{ size }}</span>
+                    <small class="dp-b fs-xxs lh-xxs mb-8">{{ dims }}</small>
+                    <span class="dp-b fs-xs fvs-rg lh-xs pt-8 bort-1-solid-border as-c">&pound;{{ option.price // 1 }}</span>
+                    <small class="dp-b op-0 v-h fs-xxs fvs-md lh-xxs bgc-secondary mt-8 px-8 text-primary" data-map-selected>Selected</small>
+                </label>
+            {% endif %}
+        {%- endfor -%}
         </div>
+
+        <h2 class="fs-sm lh-sm fvs-sb mt-0 mb-16 text-tertiary">2. Choose your frame</h2>
+
+        <div class="map-size pos-r dp-f jc-between ai-e -mx-16">
+        {%- for i in range(0, 3) -%}
+            {% set option = product.options[i] %}
+            {% set frame = option.frame %}
+            {% set border = 'bor-5-solid-transparent' %}
+
+            {% if frame === 'Black' %}
+                {% set border = 'bor-5-solid-foreground' %}
+            {% endif %}
+
+            {% if frame === 'White' %}
+                {% set border = 'bor-5-solid-background' %}
+            {% endif %}
+
+            <label for="{{ frame }}" class="dp-f fd-c ai-c ta-center pos-r fb-1/3 mx-16">
+                <input type="radio" name="frame" id="{{ frame | lower }}" class="pos-a top-0 right-0 bottom-0 left-0 w-full bgc-transparent borc-transparent m-0 zi-10 cursor-pointer" {% if loop.first %}checked{% endif %} data-map="frame">
+
+                <div class="bor-1-solid-primary borr-2 bor-1-solid-border dp-f jc-center ai-c mt-auto mb-8 mx-auto pos-r w-full" data-map>
+                    <div class="ratio-4-2 borr-2 {{ border }} w-full"></div>
+                </div>
+
+                <span class="dp-b fs-xs fvs-sb lh-xs mb-8 text-primary">{{ frame }}</span>
+
+                <span class="dp-b fs-xs fvs-rg lh-xs pt-8 bort-1-solid-border as-c">
+                {%- if loop.first -%}
+                    +&pound;0
+                {%- else -%}
+                    +&pound;35
+                {%- endif -%}
+                </span>
+
+                <small class="dp-b op-0 v-h fs-xxs fvs-md lh-xxs bgc-secondary mt-8 px-8 text-primary" data-map-selected>Selected</small>
+            </label>
+        {%- endfor -%}
+        </div>
+
+        {%- for option in product.options -%}
+            {% if option.size %}
+                {% set size = option.size.split(' (')[0] %}
+
+                <input type="text" value="{{ option.id }}" data-size="{{ size | lower }}" data-price="{{ option.price }}" data-frame="{{ option.frame | lower }}" data-id="{{ option.id }}" data-name="{{ option.name }}" hidden>
+            {% endif %}
+        {%- endfor -%}
     </div>
 
     <div class="p-24 bgc-neutral borr-4">
         <h2 class="product__personalisation-title pos-r fs-md lh-md fvs-md my-0 pb-24 text-tertiary tt-uc">Personalisation</h2>
-        <p class="fs-sm lh-sm fvs-rg mt-16 mb-24">Preview your personalised map key before you buy.</p>
 
-        <div class="pos-r mb-32">
-            <label for="map-title" class="fs-sm lh-sm fvs-md dp-ib mb-8 text-tertiary">Give your map a title</label>
-            <input type="text" name="title" class="product__input fs-sm lh-sm fvs-rg dp-b py-8 px-16 text-heading w-full" minlength="3" maxlength="36" placeholder="{{titleHolder}}" id="map-title" data-product-map-title required>
+        <div class="pos-r mt-16 mb-32">
+            <label for="map-title" class="fs-sm lh-sm fvs-md dp-ib mb-8 text-tertiary">
+                Map title
+                <small class="dp-b fs-xs lh-xs fvs-md text-body">Displayed beneath your map</small>
+            </label>
+            <input type="text" name="title" class="product__input fs-sm lh-sm fvs-rg dp-b py-8 px-16 text-heading w-full" minlength="3" maxlength="36" placeholder="{{ titleHolder }}" id="map-title" data-product-map-title required>
         </div>
 
-        <p class="s-sm lh-sm fvs-md dp-ib mb-8 text-tertiary">Key text</p>
+        <p class="fs-sm lh-sm fvs-md dp-ib mb-16 text-tertiary">
+            Choose your free pins
+            <small class="dp-b fs-xs lh-xs fvs-md text-body">30 of each colour included</small>
+        </p>
 
-        <div class="mb-32">
-            <label class="dp-inf ai-c mr-16" for="map-key-no">
-                <input class="product__radio-input pos-r dp-f fd-c jc-center ai-c mr-8" type="radio" id="map-key-no" name="show key text" value="no" data-map-key>
-                No
-            </label>
+        <div class="pos-r dp-f flex-wrap -mt-8 mb-32" data-pin-colors>
+        {% for color in colors %}
+            {% set hex = color.hex %}
+            {% set name = color.name %}
+            {% set id = color.name.replace(' ', '-') + '-pin' %}
 
-            <label class="dp-inf ai-c" for="map-key-yes">
-                <input class="product__radio-input pos-r dp-f fd-c jc-center ai-c mr-8" type="radio" id="map-key-yes" name="show key text" value="yes" checked data-map-key>
-                Yes
-            </label>
-        </div>
+            <label for="{{ name }}" class="sr-only">{{ name }}</label>
+            <input type="checkbox" id="{{ id | lower }}" value="{{ loop.index }}-{{ hex }}" name="colors" class="pin-color borr-50 m-8 bgc-transparent" style="width: 2.5rem; height: 2.5rem; border: 7px solid {{ hex }}; --color: {{ hex }};" data-pin="{{ name | lower }}">
+        {% endfor %}
 
-        <p class="fs-sm lh-sm fvs-md dp-ib mb-8 text-tertiary">Select your pin colours</p>
+            <div class="pin-color__chosen w-full mt-32">
+                <p class="fs-sm lh-sm fvs-md mb-16 text-tertiary">
+                    Chosen pins
+                    <small class="dp-b fs-xs lh-xs fvs-md text-body">30 of each colour included</small>
+                </p>
 
-        <div class="pin-colors pin-colors--key-text dp-g gg-16 mb-32" data-pin-colors>
-            {{pinMapColors.pinColors('1', true, pinHolder )}}
+                <p class="dp-ib mr-8 mb-0">Labels:</p>
+
+                <input class="pin-color__labels product__radio-input dp-inf jc-center ai-c pos-r m-0" type="radio" id="map-label-no" name="show key text" value="no" data-map-key>
+                <label class="dp-ib mr-16" for="map-label-no">Off</label>
+
+                <input class="pin-color__labels product__radio-input dp-inf jc-center ai-c pos-r m-0" type="radio" id="map-label-yes" name="show key text" value="yes" checked data-map-key>
+                <label class="dp-ib" for="map-label-yes">On</label>
+
+            {% for color in colors %}
+                {% set hex = color.hex %}
+                {% set name = color.name.replace(' ', '-') | lower %}
+                {% set placeholder = color.name + ' pins label' %}
+
+                <div class="dp-n pos-r jc-between ai-c mt-24" id="{{ name }}-chosen" data-pins-chosen>
+                    <span class="pin-color borr-50" style="width: 2.5rem; height: 2.5rem; background-color: {{ hex }};"></span>
+
+                    <label class="sr-only" for="{{ name }}-text">{{ name }}</label>
+
+                    <input class="pin-color__text fg-3 ml-8 py-8 px-16 fs-sm lh-sm fvs-rg text-heading" type="text" maxlength="35" placeholder="{{ placeholder }}" id="{{ name }}-text" name="pin label">
+
+                    <p class="dp-n fg-3 ml-8 py-8 px-16 fs-sm fst-italic lh-sm fvs-rg text-heading">30x {{ color.name | lower }} pins </p>
+                </div>
+            {% endfor %}
+            </div>
+            {# {{pinMapColors.pinColors('1', true, pinHolder )}}
             {{pinMapColors.pinColors('2')}}
             {{pinMapColors.pinColors('3')}}
             {{pinMapColors.pinColors('4')}}
             {{pinMapColors.pinColors('5')}}
-            {{pinMapColors.pinColors('6')}}
+            {{pinMapColors.pinColors('6')}} #}
         </div>
 
         <button type="submit" class="bgc-secondary text-foreground fs-xs lh-xs fvs-md py-16 px-24 borr-5 tt-uc ls-1 ol-3-solid-transparent focus:olc-primary hover:bgc-secondary" data-product-submit>Preview &amp; Add To Basket</button>

@@ -7,7 +7,7 @@ function Price(element: HTMLElement) {
     price.textContent = `£${variantPrice.toFixed(2)}`;
   }
 
-  function variantChanged(variant: HTMLOptionElement) {
+  function variantChanged(variant: HTMLOptionElement | HTMLInputElement) {
     const variantPrice = parseFloat(variant.getAttribute('data-price') as string);
 
     updatePrice(variantPrice);

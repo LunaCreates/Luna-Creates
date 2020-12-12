@@ -38,6 +38,10 @@ async function allProductsData() {
                     currencyCode
                   }
                 }
+                options(first: 10) {
+                  name
+                  values
+                }
                 variants(first: 50) {
                   edges {
                     node {
@@ -92,9 +96,7 @@ async function allProductsData() {
   }
 
   function formatVariants(variants) {
-    const result = Object.assign({}, ...variants.map(variant => ({ [variant.name]: variant.value })));
-
-    return JSON.stringify(result);
+    return Object.assign({}, ...variants.map(variant => ({ [variant.name.toLowerCase()]: variant.value.toString() })));
   }
 
   function formatSize(option) {
@@ -107,7 +109,7 @@ async function allProductsData() {
 
     return {
       id: option.node.id,
-      variants: formatVariants(options),
+      ...formatVariants(options),
       name: size.name,
       value: size.value,
       price: option.node.priceV2.amount
@@ -135,13 +137,10 @@ async function allProductsData() {
 
   // format products objects
   const productsFormatted = products.map(item => {
-    const color = getColorFromTags(item.tags);
-    const options = item.variants.edges.map(formatOptions);
     const images = item.images.edges.map(formatProductImages);
     const minPrice = item.priceRange.minVariantPrice.amount;
     const maxPrice = item.priceRange.maxVariantPrice.amount;
     const currency = item.priceRange.minVariantPrice.currencyCode;
-    const metaDescription = formatMetaDescription(item.metafields.edges);
 
     return {
       id: item.id,
@@ -150,15 +149,15 @@ async function allProductsData() {
       tags: item.tags,
       description: item.descriptionHtml,
       descriptionSchema: item.description,
-      color: color,
-      options: options,
+      color: getColorFromTags(item.tags),
+      options: item.variants.edges.map(formatOptions),
       mainImageAlt: item.images.edges[0].node.altText,
       mainImage: item.images.edges[0].node.originalSrc.split('.jpg')[0],
       thumbnails: images,
       minPrice: new Intl.NumberFormat('en-GB', { style: 'currency', currency: currency }).format(minPrice),
       maxPrice: new Intl.NumberFormat('en-GB', { style: 'currency', currency: currency }).format(maxPrice),
       priceSchema: parseFloat(minPrice).toFixed(2),
-      metaDescription
+      metaDescription: formatMetaDescription(item.metafields.edges)
     };
   });
 

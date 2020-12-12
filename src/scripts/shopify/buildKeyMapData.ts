@@ -69,16 +69,12 @@ function buildPropertyData(product: HTMLElement, keyMapData: any) {
 }
 
 function buildLabelsData(color: FormDataEntryValue, keys: Array<FormDataEntryValue>, showKeyText: string, index: number) {
-  if (showKeyText === 'no') {
-    return {
-      color,
-      title: ' '
-    }
-  }
+  const colorIndex = parseInt(color.toString().split('-')[0], 10) - 1;
+  const hex = color.toString().split('-')[1];
 
   return {
-    color,
-    title: keys.length > 0 ? keys[index] : ' '
+    color: hex,
+    title: showKeyText === 'yes' ? keys[colorIndex] : ''
   }
 }
 
@@ -86,12 +82,11 @@ function buildKeyMapData(product: HTMLElement, formdata: FormData, target: HTMLB
   const type = product.getAttribute('data-product-color');
   const size = formdata.get('size')?.toString().split(' (')[0].toLowerCase();
   const title = formdata.get('title');
-  const colors = formdata.getAll('colors').filter(color => color !== '');
+  const colors = formdata.getAll('colors');
   const showKeyText = formdata.get('show key text') as string;
-  const keys = formdata.getAll('key');
+  const keys = formdata.getAll('pin label');
   const labels = colors
-    .map((color, index) => buildLabelsData(color, keys, showKeyText, index))
-    .filter(label => label.color !== '');
+    .map((color, index) => buildLabelsData(color, keys, showKeyText, index));
 
   const keyMapData = {
     title,

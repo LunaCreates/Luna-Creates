@@ -28,14 +28,14 @@ function Basket(product: HTMLElement) {
     window.location.pathname = '/cart/';
   }
 
-  function setAttributes(variant: HTMLOptionElement) {
+  function setAttributes(variant: HTMLOptionElement | HTMLInputElement) {
     const key = variant.getAttribute('data-name');
     const value = variant.getAttribute('value');
 
     return { key, value };
   }
 
-  function updateBasketButton(variant: HTMLOptionElement) {
+  function updateBasketButton(variant: HTMLOptionElement | HTMLInputElement) {
     const variantId = variant.getAttribute('data-id');
     const customAttributes = JSON.stringify(setAttributes(variant));
 

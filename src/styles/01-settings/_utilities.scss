@@ -321,6 +321,7 @@ $utilities: map-merge(
       property: font-size,
       class: fs,
       values: (
+        xxs: clamp(_t.$font-size-xs, 1.094vw, _t.$font-size-sm),
         xs: clamp(_t.$font-size-sm, 1.250vw, _t.$font-size-base),
         sm: clamp(_t.$font-size-base, 1.563vw, _t.$font-size-md),
         base: _t.$font-size-base,
@@ -354,6 +355,7 @@ $utilities: map-merge(
       class: lh,
       values: (
         none: 1,
+        xxs: clamp(_t.$line-height-xxs, 1.641vw, _t.$line-height-xs),
         xs: clamp(_t.$line-height-xs, 2.109vw, _t.$line-height-base),
         sm: clamp(_t.$line-height-sm, 2.266vw, _t.$line-height-md),
         base: _t.$line-height-base,
@@ -383,6 +385,7 @@ $utilities: map-merge(
         3: 3px,
         4: 4px,
         5: 5px,
+        50: 50%
       )
     ),
     'border-color': (
@@ -585,6 +588,8 @@ $utilities: map-merge(
       values: (
         0: 0,
         1: 1,
+        2: 2,
+        3: 3,
       )
     ),
     'flex-shrink': (
@@ -839,6 +844,12 @@ $utilities: map-merge(
         1: 1
       )
     ),
+    'visibility': (
+      responsive: true,
+      property: visibility,
+      class: v,
+      values: visible hidden
+    ),
     'overflow-x': (
       responsive: true,
       property: overflow-x,
@@ -868,6 +879,24 @@ $utilities: map-merge(
         110: scale(1.1)
       )
     ),
+    'transform-rotate': (
+      responsive: true,
+      hover: true,
+      property: transform,
+      class: rotate,
+      values: (
+        135: rotate(135deg)
+      )
+    ),
+    'negative-transform-rotate': (
+      responsive: true,
+      hover: true,
+      property: transform,
+      class: -rotate,
+      values: (
+        45: rotate(-45deg)
+      )
+    ),
     'word-break': (
       responsive: true,
       property: word-break,
@@ -877,6 +906,11 @@ $utilities: map-merge(
         kall: keep-all,
         normal: normal
       )
+    ),
+    'cursor': (
+      property: cursor,
+      class: cursor,
+      values: pointer
     )
   ),
   $utilities

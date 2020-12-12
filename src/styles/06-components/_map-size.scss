@@ -1,0 +1,19 @@
+@use '../01-settings/typography' as _ty;
+@use '../02-tools/mixins/responsive' as _r;
+
+.map-size label {
+  cursor: pointer;
+}
+
+.map-size label input:checked + [data-map] {
+  background-color: var(--color-secondary);
+}
+
+.map-size label input:checked + [data-map] > * {
+  background-color: transparent;
+}
+
+.map-size label input:checked ~ [data-map-selected] {
+  opacity: 1;
+  visibility: visible;
+}

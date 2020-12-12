@@ -1,3 +1,5 @@
+import stateManager from './stateManager';
+
 function Form(product: HTMLElement) {
   const form: HTMLFormElement | null = product.querySelector('[data-product-form]');
 
@@ -19,13 +21,17 @@ function Form(product: HTMLElement) {
   }
 
   function handleClickEvent(event: Event) {
-    if (!(event.target instanceof HTMLInputElement)) return;
+    const target = event.target as HTMLInputElement;
 
-    const input = event.target as HTMLInputElement;
+    if (target.getAttribute('data-map')?.match(/size|frame/)) {
+      const size = form?.querySelector('[data-map="size"]:checked');
+      const frame = form?.querySelector('[data-map="frame"]:checked');
+      const input = form?.querySelector(`[data-frame="${frame?.id}"][data-size="${size?.id}"]`);
 
-    if (event.target.hasAttribute('data-map-key')) {
-      import('./togglePinColors')
-        .then(module => module.default(product, input));
+      if (input) {
+        stateManager.variantChanged(input as HTMLInputElement);
+      }
+
     }
   }
 

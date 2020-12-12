@@ -47,11 +47,12 @@ function Cart(element: HTMLElement) {
   }
 
   async function updateCartItems(data: ShopifyStorefront.CheckoutCreate[]) {
-    const clientId = (<any>window).ga.getAll()[0].get('clientId');
-    console.log(clientId, 'clientId');
+    const clientId = 'skfkd';
     const keyMapImages: KeyMapImages = JSON.parse(localStorage.getItem('mapPreviews') as string);
     const checkoutData: ShopifyStorefront.CheckoutData = await fetchShopifyData(data, clientId);
     const body = { keyMapImages, checkoutData, clientId };
+
+    console.log(clientId, 'clientId');
 
     if (form === null) return;
 

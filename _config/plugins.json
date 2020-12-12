@@ -22,7 +22,7 @@
     "convertValues": true,
     "core": true,
     "discardComments": {
-      "removeAll": true
+      "removeAll": false
     },
     "discardDuplicates": true,
     "discardEmpty": true,
