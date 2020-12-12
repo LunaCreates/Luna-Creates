@@ -25,8 +25,10 @@
 
         <div class="map-size pos-r dp-f jc-between ai-e mb-32">
         {%- for option in product.options -%}
-            {% if option.size and 'No Frame' in option.size %}
-                {% set size = option.size.split(' (')[0] %}
+            {% set sizeField = option.size or option.options %}
+
+            {% if sizeField and 'No Frame' in sizeField %}
+                {% set size = sizeField.split(' (')[0] %}
                 {% set dims = option.dimensions %}
                 {% set width = dims | replace(r/[0-9]+ x/, "") | replace("mm", "") %}
                 {% set height = dims | replace(r/x [0-9]+mm/, "") %}
@@ -93,8 +95,10 @@
         </div>
 
         {%- for option in product.options -%}
-            {% if option.size %}
-                {% set size = option.size.split(' (')[0] %}
+            {% set sizeField = option.size or option.options %}
+
+            {% if sizeField %}
+                {% set size = sizeField.split(' (')[0] %}
 
                 <input type="text" value="{{ option.id }}" data-size="{{ size | lower }}" data-price="{{ option.price }}" data-frame="{{ option.frame | lower }}" data-id="{{ option.id }}" data-name="{{ option.name }}" hidden>
             {% endif %}
@@ -157,12 +161,6 @@
                 </div>
             {% endfor %}
             </div>
-            {# {{pinMapColors.pinColors('1', true, pinHolder )}}
-            {{pinMapColors.pinColors('2')}}
-            {{pinMapColors.pinColors('3')}}
-            {{pinMapColors.pinColors('4')}}
-            {{pinMapColors.pinColors('5')}}
-            {{pinMapColors.pinColors('6')}} #}
         </div>
 
         <button type="submit" class="bgc-secondary text-foreground fs-xs lh-xs fvs-md py-16 px-24 borr-5 tt-uc ls-1 ol-3-solid-transparent focus:olc-primary hover:bgc-secondary" data-product-submit>Preview &amp; Add To Basket</button>
