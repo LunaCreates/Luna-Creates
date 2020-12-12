@@ -2,6 +2,8 @@ import punSub from '../modules/pubSub';
 
 function StateManager() {
   function variantChanged(variant: HTMLElement) {
+    console.log(variant, 'variant');
+
     punSub.publish('variant/changed', variant);
   }
 
