@@ -39,6 +39,7 @@ fields:
   label: Banner Image
   description: Must have an aspect ratio of 4:1. Will appear in the banner, behind
     the title
+  default: https://lunacreates.co.uk/images/blog/banner-placeholder.jpg
 - name: thumbnail
   type: file
   config:
@@ -46,6 +47,7 @@ fields:
   label: Thumbnail
   description: Must have an aspect ratio of 1:1. Image to be shown on each post in
     the blog landing page
+  default: https://lunacreates.co.uk/images/blog/thumbnail-placeholder.jpg
 - name: tags
   type: tag_list
   default: []
