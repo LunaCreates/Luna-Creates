@@ -6,6 +6,11 @@
   background-color: var(--color);
 }
 
+.pin-color:disabled {
+  opacity: 0.25;
+  cursor: not-allowed;
+}
+
 /*! purgecss start ignore */
 [id='pink-pin']:checked ~ .pin-color__chosen [id='pink-chosen'],
 [id='light-blue-pin']:checked ~ .pin-color__chosen [id='light-blue-chosen'],
@@ -22,6 +27,10 @@
 
 .pin-color__labels[id='map-label-no']:checked  ~ [data-pins-chosen] label,
 .pin-color__labels[id='map-label-no']:checked  ~ [data-pins-chosen] input {
+  display: none;
+}
+
+.pin-color__labels[id='map-label-yes']:checked  ~ [data-pins-chosen] span {
   display: none;
 }
 

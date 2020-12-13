@@ -20,18 +20,38 @@ function Form(product: HTMLElement) {
     }
   }
 
+  function handleMapPriceUpdates() {
+    const size = form?.querySelector('[data-map="size"]:checked');
+    const frame = form?.querySelector('[data-map="frame"]:checked');
+    const input = form?.querySelector(`[data-frame="${frame?.id}"][data-size="${size?.id}"]`);
+
+    if (input) {
+      stateManager.variantChanged(input as HTMLInputElement);
+    }
+  }
+
+  function validateCheckedLimit() {
+    const coloredPins: NodeListOf<HTMLInputElement> | undefined = form?.querySelectorAll('[name="colors"]:not(:checked)');
+    const coloredPinsChosen = form?.querySelectorAll('[name="colors"]:checked');
+
+    if (coloredPins === undefined) return;
+
+    if (coloredPinsChosen?.length === 6) {
+      coloredPins.forEach((pin: HTMLInputElement) => pin.disabled = true);
+    } else {
+      coloredPins.forEach((pin: HTMLInputElement) => pin.disabled = false);
+    }
+  }
+
   function handleClickEvent(event: Event) {
     const target = event.target as HTMLInputElement;
 
     if (target.getAttribute('data-map')?.match(/size|frame/)) {
-      const size = form?.querySelector('[data-map="size"]:checked');
-      const frame = form?.querySelector('[data-map="frame"]:checked');
-      const input = form?.querySelector(`[data-frame="${frame?.id}"][data-size="${size?.id}"]`);
+      handleMapPriceUpdates();
+    }
 
-      if (input) {
-        stateManager.variantChanged(input as HTMLInputElement);
-      }
-
+    if (target.name === 'colors') {
+      validateCheckedLimit();
     }
   }
 

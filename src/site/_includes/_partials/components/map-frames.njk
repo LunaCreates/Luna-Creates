@@ -1,0 +1,35 @@
+<div class="map-size pos-r dp-f jc-between ai-e -mx-16">
+{%- for i in range(0, 3) -%}
+    {% set option = product.options[i] %}
+    {% set frame = option.frame %}
+    {% set border = 'bor-5-solid-transparent' %}
+
+    {% if frame === 'Black' %}
+        {% set border = 'bor-5-solid-foreground' %}
+    {% endif %}
+
+    {% if frame === 'White' %}
+        {% set border = 'bor-5-solid-background' %}
+    {% endif %}
+
+    <label for="{{ frame }}" class="dp-f fd-c ai-c ta-center pos-r fb-1/3 mx-16">
+        <input type="radio" name="frame" id="{{ frame | lower }}" class="pos-a top-0 right-0 bottom-0 left-0 w-full bgc-transparent borc-transparent m-0 zi-10 cursor-pointer" {% if loop.first %}checked{% endif %} data-map="frame">
+
+        <div class="bor-1-solid-primary borr-2 bor-1-solid-border dp-f jc-center ai-c mt-auto mb-8 mx-auto pos-r w-full" data-map>
+            <div class="ratio-4-2 borr-2 {{ border }} w-full"></div>
+        </div>
+
+        <span class="dp-b fs-xs fvs-sb lh-xs mb-8 text-primary">{{ frame }}</span>
+
+        <span class="dp-b fs-xs fvs-rg lh-xs pt-8 bort-1-solid-border as-c">
+        {%- if loop.first -%}
+            +&pound;0
+        {%- else -%}
+            +&pound;35
+        {%- endif -%}
+        </span>
+
+        <small class="dp-b op-0 v-h fs-xxs fvs-md lh-xxs bgc-secondary mt-8 px-8 text-primary" data-map-selected>Selected</small>
+    </label>
+{%- endfor -%}
+</div>
