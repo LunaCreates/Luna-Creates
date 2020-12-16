@@ -2,7 +2,7 @@
 @use '../02-tools/mixins/typography' as _ty;
 
 .rte {
-  > * {
+  > *:not(time) {
     @include _ty.text(sm);
   }
 
