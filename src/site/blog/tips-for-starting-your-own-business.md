@@ -7,7 +7,7 @@ title: Tips for starting your own business
 publish_date: 2020-12-13T12:00:00.000+00:00
 banner_image: https://lunacreates.co.uk/images/blog/printing-map.jpg
 thumbnail: https://lunacreates.co.uk/images/blog/printing-map_square.jpg
-is_draft: true
+is_draft: false
 
 ---
 2020 really has been an unprecedented year. I’m sure many people are keen to see the back of it and welcome all the positivity that will come in 2021. The travel industry has been severely impacted by the pandemic, not only has it prevented us from seeing the people and places we love, but many people have lost their jobs. While this can clearly be a cause for anxiety, it can also be the catalyst for positive change. Disruption can often be the start of something great and all businesses started from someone taking a passionate leap of faith into the unknown. “From little acorns to mighty oaks grow”. We took this leap ourselves 4 years ago and have learned some really valuable lessons along the way. When we started we spoke to our friends at Familyrule.co.uk who gave us some great advice, so we thought sharing this information could help someone else. Here are some of the key tips we have found helped us get to where we are today.
