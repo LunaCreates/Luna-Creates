@@ -42,7 +42,9 @@ function formatLabels(item) {
 }
 
 function formatData(item) {
-  const labels = item.pins.split(', ').map(formatLabels);
+  const labels = item.pins.split(/, (.+)/)
+    .filter(pin => pin !== '')
+    .map(formatLabels);
 
   item.labels = { ...labels };
   item.frameSize = item.size;
