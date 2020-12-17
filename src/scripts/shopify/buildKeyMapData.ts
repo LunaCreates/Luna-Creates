@@ -53,7 +53,7 @@ function formatPins(pin: any) {
 
 function buildPropertyData(product: HTMLElement, keyMapData: any) {
   const basketButton = product.querySelector('[data-add-to-basket]');
-  const pins = keyMapData.labels.map(formatPins).join(', ');
+  const pins = keyMapData.labels.map(formatPins).join(' || ');
   const propertyData = [
     { key: 'Title', value: keyMapData.title },
     { key: 'Size', value: keyMapData.frameSize },
