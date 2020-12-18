@@ -2,6 +2,11 @@
 label: Blog Post
 hide_body: false
 fields:
+- name: is_draft
+  type: boolean
+  label: Is Draft
+  default: true
+  description: Used to set if post is draft or published
 - name: meta_title
   type: text
   config:

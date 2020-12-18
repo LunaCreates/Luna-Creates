@@ -17,7 +17,9 @@ sitemap:
     {% set date = item.data.publish_date or item.date.date %}
     {% set thumbnail = item.data.thumbnail %}
     {% set thumbnailWebP = thumbnail.split(r/(jpg|png)/g)[0] + 'webp' %}
+    {% set isDraft = item.data.is_draft %}
 
+    {% if not isDraft %}
     <li>
         <article class="picture-scale pos-r dp-f fd-c">
             <h2 class="fs-sm lh-sm my-8 order-2 md:mt-16">
@@ -39,5 +41,7 @@ sitemap:
             </picture>
         </article>
     </li>
+    {% endif %}
+
 {% endfor %}
 </ol>
