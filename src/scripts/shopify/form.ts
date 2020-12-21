@@ -6,12 +6,11 @@ function Form(product: HTMLElement) {
   function handleSubmitEvent(event: Event) {
     const target = event.target as HTMLFormElement;
     const formData = new FormData(form as HTMLFormElement);
-    const isPersonalisedMap = formData.getAll('colors').length > 0;
     const formButton: HTMLButtonElement | null = target.querySelector('[data-product-submit]');
 
     event.preventDefault();
 
-    if (isPersonalisedMap) {
+    if (form?.getAttribute('data-product-form') === 'personalised') {
       import('./buildKeyMapData')
         .then(module => module.default(product, formData, formButton));
     } else {

@@ -11,6 +11,10 @@
   cursor: not-allowed;
 }
 
+.pin-color:checked ~ .pin-color__chosen {
+  display: block;
+}
+
 /*! purgecss start ignore */
 [id='pink-pin']:checked ~ .pin-color__chosen [id='pink-chosen'],
 [id='light-blue-pin']:checked ~ .pin-color__chosen [id='light-blue-chosen'],

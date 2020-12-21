@@ -17,7 +17,7 @@
     {% set titleHolder = "E.g. Mark & Emma's world travels" %}
 {% endif %}
 
-<form class="mt-24" data-product-form>
+<form class="mt-24" data-product-form="personalised">
     <div class="pos-r mb-32">
         <h2 class="fs-sm lh-sm fvs-sb mt-0 mb-16 text-tertiary">1. Choose your map size</h2>
 
@@ -49,10 +49,10 @@
             <input type="text" name="title" class="product__input fs-sm lh-sm fvs-rg dp-b py-8 px-16 text-heading w-full" minlength="3" maxlength="36" placeholder="{{ titleHolder }}" id="map-title" data-product-map-title required>
         </div>
 
-        <p class="fs-sm lh-sm fvs-md dp-ib mb-16 text-tertiary">
-            Choose your free pins
+        <h3 class="fs-sm lh-sm fvs-md dp-ib mb-16 text-tertiary">
+            Choose your free pins.
             <small class="dp-b fs-xs lh-xs fvs-md text-body">30 of each colour included</small>
-        </p>
+        </h3>
 
         <div class="pos-r dp-f flex-wrap -mt-8 mb-32" data-pin-colors>
         {% for color in colors %}
@@ -64,11 +64,8 @@
             <input type="checkbox" id="{{ id | lower }}" value="{{ loop.index }}-{{ hex }}" name="colors" class="pin-color borr-50 m-8 bgc-transparent cursor-pointer" style="width: 2.5rem; height: 2.5rem; border: 7px solid {{ hex }}; --color: {{ hex }};" data-pin="{{ name | lower }}">
         {% endfor %}
 
-            <div class="pin-color__chosen w-full mt-32">
-                <p class="fs-sm lh-sm fvs-md mb-16 text-tertiary">
-                    Chosen pins
-                    <small class="dp-b fs-xs lh-xs fvs-md text-body">30 of each colour included</small>
-                </p>
+            <div class="pin-color__chosen w-full mt-32 dp-n">
+                <h3 class="fs-sm lh-sm fvs-md mb-16 text-tertiary">Chosen pins</h3>
 
                 <p class="dp-ib mr-8 mb-0">Labels:</p>
 
