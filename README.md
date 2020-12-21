@@ -2,7 +2,7 @@
 
 # Luna Creates Website
 
-## Setup 
+## Setup
 This is a [Jamstack](https://jamstack.org/) Shopify website built with the following stack:
 
 - [Eleventy](https://www.11ty.dev/) (SSG)
@@ -14,13 +14,13 @@ This is a [Jamstack](https://jamstack.org/) Shopify website built with the follo
 - [Algolia](https://www.algolia.com/doc/) (Product search)
 
 ### Shopify Data
-The Shopify data is pulled using the [Shopify Storefront API](https://shopify.dev/docs/storefront-api). You will need the follwing `ENV` variables to pull the data:
+The Shopify data is pulled using the [Shopify Storefront API](https://shopify.dev/docs/storefront-api). You will need the following `ENV` variables to pull the data:
 
 - `STOREFRONT_API_TOKEN`
 - `STOREFRONT_API_URL`
 
 ### Algolia
-We are using the Algolia JavaScript Client as our hosted search engine. You will need the follwing `ENV` variables to access the search data:
+We are using the Algolia JavaScript Client as our hosted search engine. You will need the following `ENV` variables to access the search data:
 
 - `ALGOLIA_ADMIN_KEY`
 - `ALGOLIA_APPLICATION_ID`
