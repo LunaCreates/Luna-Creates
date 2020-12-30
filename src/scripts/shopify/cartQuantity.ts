@@ -4,7 +4,7 @@ function CartQuantity() {
   const basket = Array.from(document.querySelectorAll('[data-cart]'));
 
   function updateCartQuantity() {
-    const cart = JSON.parse(localStorage.getItem('cart') as string) as ShopifyStorefront.CheckoutCreate[];
+    const cart = JSON.parse(sessionStorage.getItem('cart') as string) as ShopifyStorefront.CheckoutCreate[];
 
     if (basket.length < 1 || cart === null) return;
 

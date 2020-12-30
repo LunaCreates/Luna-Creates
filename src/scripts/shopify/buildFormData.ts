@@ -11,10 +11,10 @@ function buildAttributesData(formData: FormData) {
 }
 
 function storeBasketItem(lineItemsToAdd: any) {
-  const basket = JSON.parse(localStorage.getItem('cart') as string) || [];
+  const basket = JSON.parse(sessionStorage.getItem('cart') as string) || [];
 
   basket.push(lineItemsToAdd);
-  localStorage.setItem('cart', JSON.stringify(basket));
+  sessionStorage.setItem('cart', JSON.stringify(basket));
   window.location.pathname = '/cart/';
 }
 
