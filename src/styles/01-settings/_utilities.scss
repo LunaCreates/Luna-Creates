@@ -321,13 +321,13 @@ $utilities: map-merge(
       property: font-size,
       class: fs,
       values: (
-        xxs: clamp(_t.$font-size-xs, 1.094vw, _t.$font-size-sm),
-        xs: clamp(_t.$font-size-sm, 1.250vw, _t.$font-size-base),
-        sm: clamp(_t.$font-size-base, 1.563vw, _t.$font-size-md),
+        xxs: clamp(#{_t.$font-size-xs}, 1.094vw, #{_t.$font-size-sm}),
+        xs: clamp(#{_t.$font-size-sm}, 1.250vw, #{_t.$font-size-base}),
+        sm: clamp(#{_t.$font-size-base}, 1.563vw, #{_t.$font-size-md}),
         base: _t.$font-size-base,
-        md: clamp(_t.$font-size-md, 1.953vw, _t.$font-size-lg),
-        lg: clamp(_t.$font-size-md, 2.344vw, _t.$font-size-xl),
-        xl: clamp(_t.$font-size-xl, 2.578vw, _t.$font-size-xxl),
+        md: clamp(#{_t.$font-size-md}, 1.953vw, #{_t.$font-size-lg}),
+        lg: clamp(#{_t.$font-size-md}, 2.344vw, #{_t.$font-size-xl}),
+        xl: clamp(#{_t.$font-size-xl}, 2.578vw, #{_t.$font-size-xxl}),
       )
     ),
     'font-style': (
@@ -355,13 +355,13 @@ $utilities: map-merge(
       class: lh,
       values: (
         none: 1,
-        xxs: clamp(_t.$line-height-xxs, 1.641vw, _t.$line-height-xs),
-        xs: clamp(_t.$line-height-xs, 2.109vw, _t.$line-height-base),
-        sm: clamp(_t.$line-height-sm, 2.266vw, _t.$line-height-md),
+        xxs: clamp(#{_t.$line-height-xxs}, 1.641vw, #{_t.$line-height-xs}),
+        xs: clamp(#{_t.$line-height-xs}, 2.109vw, #{_t.$line-height-base}),
+        sm: clamp(#{_t.$line-height-sm}, 2.266vw, #{_t.$line-height-md}),
         base: _t.$line-height-base,
-        md: clamp(_t.$line-height-md, 2.813vw, _t.$line-height-lg),
-        lg: clamp(_t.$line-height-lg, 3.750vw, _t.$line-height-xl),
-        xl: clamp(_t.$line-height-xl, 4.375vw, _t.$line-height-xxl)
+        md: clamp(#{_t.$line-height-md}, 2.813vw, #{_t.$line-height-lg}),
+        lg: clamp(#{_t.$line-height-lg}, 3.750vw, #{_t.$line-height-xl}),
+        xl: clamp(#{_t.$line-height-xl}, 4.375vw, #{_t.$line-height-xxl})
       )
     ),
     'letter-spacing': (
