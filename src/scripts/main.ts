@@ -170,11 +170,4 @@ if (isProductPage) {
     .catch(err => console.error(`Error in: Shopify - ${err}`));
 }
 
-// Product Page Test
-
-(<any>window).gtag('event', 'product_page', {
-  'event_category': 'experiments',
-  'event_label': 'variation'
-});
-
 export {};
