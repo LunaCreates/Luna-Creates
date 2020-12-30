@@ -168,11 +168,13 @@ if (isProductPage) {
   import(/* webpackChunkName: "shopify" */ 'Src/scripts/shopify/shopify')
     .then(module => initModule(module, product))
     .catch(err => console.error(`Error in: Shopify - ${err}`));
-
-  (<any>window).gtag('event', 'product_page', {
-    'event_category': 'experiments',
-    'event_label': 'variation'
-  });
 }
+
+// Product Page Test
+
+(<any>window).gtag('event', 'product_page', {
+  'event_category': 'experiments',
+  'event_label': 'variation'
+});
 
 export {};
