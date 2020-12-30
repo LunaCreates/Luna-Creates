@@ -26,7 +26,7 @@
     "@11ty/eleventy": "^0.11.1",
     "@11ty/eleventy-cache-assets": "^2.0.3",
     "@glidejs/glide": "^3.4.1",
-    "@types/node": "^13.13.32",
+    "@types/node": "^13.13.38",
     "algoliasearch": "^4.8.0",
     "autoprefixer": "^9.8.6",
     "chroma-js": "^2.1.0",
@@ -36,7 +36,7 @@
     "lazysizes": "^5.2.2",
     "node-fetch": "^2.6.1",
     "pinch-zoom-js": "^2.3.4",
-    "sass": "^1.29.0"
+    "sass": "^1.32.0"
   },
   "devDependencies": {
     "concurrently": "^5.3.0",
