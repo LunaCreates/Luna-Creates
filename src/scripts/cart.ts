@@ -19,7 +19,7 @@ const headers = {
 
 function Cart(element: HTMLElement) {
   const form = element.querySelector('[data-form]');
-  const cart = JSON.parse(localStorage.getItem('cart') as string) as ShopifyStorefront.CheckoutCreate[];
+  const cart = JSON.parse(sessionStorage.getItem('cart') as string) as ShopifyStorefront.CheckoutCreate[];
 
   async function fetchShopifyData(data: ShopifyStorefront.CheckoutCreate[], clientId: string) {
     const body = { data, clientId };
@@ -48,7 +48,7 @@ function Cart(element: HTMLElement) {
 
   async function updateCartItems(data: ShopifyStorefront.CheckoutCreate[]) {
     const clientId = (<any>window).ga.getAll()[0].get('clientId');
-    const keyMapImages: KeyMapImages = JSON.parse(localStorage.getItem('mapPreviews') as string);
+    const keyMapImages: KeyMapImages = JSON.parse(sessionStorage.getItem('mapPreviews') as string);
     const checkoutData: ShopifyStorefront.CheckoutData = await fetchShopifyData(data, clientId);
     const body = { keyMapImages, checkoutData, clientId };
 
@@ -60,12 +60,12 @@ function Cart(element: HTMLElement) {
   }
 
   function removeKeyMapImage(variantId: string) {
-    const images = JSON.parse(localStorage.getItem('mapPreviews') as string);
+    const images = JSON.parse(sessionStorage.getItem('mapPreviews') as string);
 
     if (images && images.length > 0) {
       const newImages = images.filter((image: KeyMapProps) => image.id !== variantId);
 
-      localStorage.setItem('mapPreviews', JSON.stringify(newImages));
+      sessionStorage.setItem('mapPreviews', JSON.stringify(newImages));
     }
   }
 
@@ -74,7 +74,7 @@ function Cart(element: HTMLElement) {
     const checkoutData = cart.filter((item) => item.variantId !== variantId);
 
     removeKeyMapImage(variantId);
-    localStorage.setItem('cart', JSON.stringify(checkoutData));
+    sessionStorage.setItem('cart', JSON.stringify(checkoutData));
     window.location.pathname = '/cart/';
   }
 
@@ -103,7 +103,7 @@ function Cart(element: HTMLElement) {
 
     event.preventDefault();
 
-    localStorage.setItem('cart', JSON.stringify(checkoutData));
+    sessionStorage.setItem('cart', JSON.stringify(checkoutData));
     window.location.pathname = '/cart/';
   }
 

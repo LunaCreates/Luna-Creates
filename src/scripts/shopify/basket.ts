@@ -13,18 +13,18 @@ function Basket(product: HTMLElement) {
 
     if (image === null || id === null) return;
 
-    const localImages = localStorage.getItem('mapPreviews');
+    const localImages = sessionStorage.getItem('mapPreviews');
     const images: KeyMapProps[] = localImages === null ? [] : JSON.parse(localImages);
 
     images.push({ id, image: image.src });
-    localStorage.setItem('mapPreviews', JSON.stringify(images));
+    sessionStorage.setItem('mapPreviews', JSON.stringify(images));
   }
 
   function storeBasketItem(lineItemsToAdd: any) {
-    const basket = JSON.parse(localStorage.getItem('cart') as string) || [];
+    const basket = JSON.parse(sessionStorage.getItem('cart') as string) || [];
 
     basket.push(lineItemsToAdd);
-    localStorage.setItem('cart', JSON.stringify(basket));
+    sessionStorage.setItem('cart', JSON.stringify(basket));
     window.location.pathname = '/cart/';
   }
 
