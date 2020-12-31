@@ -108,6 +108,8 @@ async function allCollectionsData() {
     const products = item.products.edges.map(formatProducts);
     const metaDescription = formatMetaDescription(item);
 
+    if (item.handle === 'all') return;
+
     return {
       title: item.title,
       description: item.descriptionHtml,

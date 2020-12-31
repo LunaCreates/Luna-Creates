@@ -1,4 +1,5 @@
 {% set title = heroTitle or renderData.heroTitle %}
+{% set alt = heroImageAlt or '' %}
 
 <section class="hero pos-r" aria-labelledby="hero-title">
     <div class="hero__content">
@@ -14,7 +15,8 @@
             <source media="(min-width: 38em) and (max-width: 47.9375em)" data-srcset="{{image}}?nf_resize=fit&w=400&h=240 1x, {{image}}?nf_resize=fit&w=800&h=480 2x">
 
             <source type="image/webp" data-srcset="{{imageWebP}}?nf_resize=fit&w=1500&h=500 1x, {{imageWebP}}?nf_resize=fit&w=2048&h=640 2x">
-            <img class="lazyload op-right" data-srcset="{{image}}?nf_resize=fit&w=1500&h=500 1x, {{image}}?nf_resize=fit&w=2048&h=640 2x" role="presentation" width="400" height="240" loading="lazy">
+            <img class="lazyload op-right" data-srcset="{{image}}?nf_resize=fit&w=1500&h=500 1x, {{image}}?nf_resize=fit&w=2048&h=640 2x" width="400" height="240" loading="lazy"
+            {% if alt === '' %}role="presentation"{% else %}alt="{{ alt }}"{% endif %}>
 
             <noscript>
                 <source media="(max-width: 37.4375em)" type="image/webp" srcset="{{imageWebP}}?nf_resize=fit&w=300&h=180 1x, {{imageWebP}}?nf_resize=fit&w=600&h=360 2x">
@@ -24,7 +26,7 @@
                 <source media="(min-width: 38em) and (max-width: 47.9375em)" srcset="{{image}}?nf_resize=fit&w=400&h=240 1x, {{image}}?nf_resize=fit&w=800&h=480 2x">
 
                 <source type="image/webp" srcset="{{imageWebP}}?nf_resize=fit&w=1500&h=500 1x, {{imageWebP}}?nf_resize=fit&w=2048&h=640 2x">
-                <img class="op-right" srcset="{{image}}?nf_resize=fit&w=1500&h=500 1x, {{image}}?nf_resize=fit&w=2048&h=640 2x" role="presentation" width="400" height="240" loading="lazy">
+                <img class="op-right" srcset="{{image}}?nf_resize=fit&w=1500&h=500 1x, {{image}}?nf_resize=fit&w=2048&h=640 2x" width="400" height="240" loading="lazy" {% if alt === '' %}role="presentation"{% else %}alt="{{ alt }}"{% endif %}>
             </noscript>
         </picture>
     {% else %}
@@ -40,7 +42,7 @@
                 <source media="(min-width: 38em) and (max-width: 47.9375em)" data-srcset="{{path}}_400x240_crop_top{{ext}} 1x, {{path}}_800x480_crop_top{{ext}} 2x">
 
                 <source type="image/webp" data-srcset="{{path}}_1500x500_crop_top{{ext}}.webp 1x, {{path}}_2048x640_crop_top{{ext}}.webp 2x">
-                <img class="lazyload op-right" data-srcset="{{path}}_1500x500_crop_top{{ext}} 1x, {{path}}_2048x640_crop_top{{ext}} 2x" role="presentation" width="400" height="240" loading="lazy">
+                <img class="lazyload op-right" data-srcset="{{path}}_1500x500_crop_top{{ext}} 1x, {{path}}_2048x640_crop_top{{ext}} 2x" width="400" height="240" loading="lazy" {% if alt === '' %}role="presentation"{% else %}alt="{{ alt }}"{% endif %}>
 
                 <noscript>
                     <source media="(max-width: 37.4375em)" type="image/webp" srcset="{{path}}_300x180_crop_top{{ext}}.webp 1x, {{path}}_600x360_crop_top{{ext}}.webp 2x">
@@ -50,7 +52,7 @@
                     <source media="(min-width: 38em) and (max-width: 47.9375em)" srcset="{{path}}_400x240_crop_top{{ext}} 1x, {{path}}_800x480_crop_top{{ext}} 2x">
 
                     <source type="image/webp" srcset="{{path}}_1500x500_crop_top{{ext}}.webp 1x, {{path}}_2048x640_crop_top{{ext}}.webp 2x">
-                    <img class="op-right" srcset="{{path}}_1500x500_crop_top{{ext}} 1x, {{path}}_2048x640_crop_top{{ext}} 2x" role="presentation" width="400" height="240" loading="lazy">
+                    <img class="op-right" srcset="{{path}}_1500x500_crop_top{{ext}} 1x, {{path}}_2048x640_crop_top{{ext}} 2x" width="400" height="240" loading="lazy" {% if alt === '' %}role="presentation"{% else %}alt="{{ alt }}"{% endif %}>
                 </noscript>
             </picture>
     {% endif %}
