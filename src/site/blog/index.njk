@@ -28,17 +28,14 @@ sitemap:
 
             <time class="fs-xs lh-xs fvs-sb text-body order-3" datetime="{{date}}">{{date | readableDate }}</time>
 
-            <picture class="ratio-1-1 order-1 ov-hidden -zi-10">
-                <source type="image/webp" data-srcset="{{thumbnailWebP}}?nf_resize=fit&w=300&h=300 1x, {{thumbnailWebP}}?nf_resize=fit&w=350&h=350 2x">
-
-                <img data-srcset="{{thumbnail}}?nf_resize=fit&w=300&h=300 1x, {{thumbnail}}?nf_resize=fit&w=350&h=350 2x" alt="" class="lazyload" loading="lazy" width="300" height="300">
-
-                <noscript>
-                    <source type="image/webp" srcset="{{thumbnail}}?nf_resize=fit&w=300&h=300.webp 1x, {{thumbnail}}?nf_resize=fit&w=350&h=350.webp 2x">
-
-                    <img srcset="{{thumbnail}}?nf_resize=fit&w=300&h=300 1x, {{thumbnail}}?nf_resize=fit&w=350&h=350 2x" alt="" loading="lazy" width="300" height="300">
-                </noscript>
-            </picture>
+            {% picture
+                thumbnail,
+                '300, 350',
+                '350px',
+                null,
+                null,
+                'ratio-1-1 order-1 ov-hidden -zi-10'
+            %}
         </article>
     </li>
     {% endif %}

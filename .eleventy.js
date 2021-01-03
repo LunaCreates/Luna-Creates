@@ -1,4 +1,6 @@
 const fs = require('fs');
+const image = require('./src/utils/filters/image');
+const picture = require('./src/utils/filters/picture');
 const formatDate = require('./src/utils/filters/format-date');
 const readableDate = require('./src/utils/filters/readable-date');
 const htmlMin = require('./src/utils/minify-html.js');
@@ -20,6 +22,8 @@ module.exports = config => {
   config.addShortcode('swStyles', swStyles);
   config.addShortcode('swScripts', swScripts);
   config.addShortcode('swBuildNumber', swBuildNumber);
+  config.addNunjucksAsyncShortcode('image', image);
+  config.addNunjucksAsyncShortcode('picture', picture);
 
   // Passthrough copy
   config.addPassthroughCopy({ 'src/cms': 'cms' });

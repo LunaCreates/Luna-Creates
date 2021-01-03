@@ -1,27 +1,13 @@
-{% set image = 'https://cdn.shopify.com/s/files/1/1931/6299/files/IMG_0012' %}
-
 <section class="expression pos-r my-32 md:my-56 lg:my-80 lg:ov-hidden" aria-describedby="expression-heading">
-    <picture class="pos-r dp-b bgc-fade ratio-3-2 sm:ratio-4-2">
-        <source media="(max-width: 37.4375em)" type="image/webp" data-srcset="{{image}}_400x267.jpg.webp 1x, {{image}}_550x367.jpg.webp 2x">
-        <source media="(max-width: 37.4375em)" data-srcset="{{image}}_400x267.jpg 1x, {{image}}_550x367.jpg 2x">
-
-        <source media="(min-width: 38em) and (max-width: 47.9375em)" type="image/webp" data-srcset="{{image}}_1000x250.jpg.webp 1x, {{image}}_1200x600.jpg.webp 2x">
-        <source media="(min-width: 38em) and (max-width: 47.9375em)" data-srcset="{{image}}_1000x500.jpg 1x, {{image}}_1200x600.jpg 2x">
-
-        <source type="image/webp" data-srcset="{{image}}_1500x750.jpg.webp 1x, {{image}}_2048x640.jpg.webp 2x">
-        <img class="expression__image lazyload" data-srcset="{{image}}_1500x750.jpg 1x, {{image}}_2048x640.jpg 2x" role="presentation" width="300" height="200" loading="lazy">
-
-        <noscript>
-            <source media="(max-width: 37.4375em)" type="image/webp" srcset="{{image}}_400x267.jpg.webp 1x, {{image}}_550x367.jpg.webp 2x">
-            <source media="(max-width: 37.4375em)" srcset="{{image}}_400x267.jpg 1x, {{image}}_550x367.jpg 2x">
-
-            <source media="(min-width: 38em) and (max-width: 47.9375em)" type="image/webp" srcset="{{image}}_1000x250.jpg.webp 1x, {{image}}_1200x600.jpg.webp 2x">
-            <source media="(min-width: 38em) and (max-width: 47.9375em)" srcset="{{image}}_1000x500.jpg 1x, {{image}}_1200x600.jpg 2x">
-
-            <source type="image/webp" srcset="{{image}}_1500x750.jpg.webp 1x, {{image}}_2048x640.jpg.webp 2x">
-            <img class="expression__image" srcset="{image}}_1500x750.jpg 1x, {{image}}_2048x640.jpg 2x" role="presentation" width="300" height="200" loading="lazy">
-        </noscript>
-    </picture>
+    {% picture
+        'https://cdn.shopify.com/s/files/1/1931/6299/files/IMG_0012.jpg',
+        '400, 550, 1000, 1200, 1500, 2048',
+        '(max-width: 37.4375em) 550px, (min-width: 38em) and (max-width: 47.9375em) 1200px, 2048px',
+        null,
+        null,
+        'pos-r dp-b bgc-fade ratio-3-2 sm:ratio-4-2',
+        'expression__image'
+    %}
 
     <div class="expression__container container bgc-border px-16 lg:pos-a lg:dp-f lg:fd-c lg:jc-center lg:bgc-transparent">
         <div class="expression__content p-24 bgc-background pos-r ta-center lg:p-32">

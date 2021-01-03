@@ -70,7 +70,9 @@ async function allCollectionsData() {
   }
 
   // get data from the JSON response
-  const collections = data.data.collections.edges.map(edge => edge.node);
+  const collections = data.data.collections.edges
+    .map(edge => edge.node)
+    .filter(item => item.handle !== 'all');
 
   function formatProducts(product) {
     const minPrice = product.node.priceRange.minVariantPrice.amount;
@@ -81,7 +83,7 @@ async function allCollectionsData() {
       title: product.node.title,
       slug: `/products/${product.node.handle}/`,
       mainImageAlt: product.node.images.edges[0].node.altText,
-      mainImage: product.node.images.edges[0].node.originalSrc.split('.jpg')[0],
+      mainImage: product.node.images.edges[0].node.originalSrc,
       minPrice: new Intl.NumberFormat('en-GB', { style: 'currency', currency: currency }).format(minPrice),
       maxPrice: new Intl.NumberFormat('en-GB', { style: 'currency', currency: currency }).format(maxPrice),
     }
@@ -108,13 +110,11 @@ async function allCollectionsData() {
     const products = item.products.edges.map(formatProducts);
     const metaDescription = formatMetaDescription(item);
 
-    if (item.handle === 'all') return;
-
     return {
       title: item.title,
       description: item.descriptionHtml,
       slug: item.handle,
-      heroImage: item.image.originalSrc.split('.jpg')[0],
+      heroImage: item.image.originalSrc,
       products: products,
       metaDescription
     };

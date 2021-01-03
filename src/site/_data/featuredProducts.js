@@ -72,7 +72,7 @@ async function featuredProductsData() {
       title: item.title,
       slug: `/products/${item.handle}/`,
       imageAlt: item.images.edges[0].node.altText,
-      image: item.images.edges[0].node.originalSrc.split('.jpg')[0],
+      image: item.images.edges[0].node.originalSrc,
       minPrice: new Intl.NumberFormat('en-GB', { style: 'currency', currency: currency }).format(minPrice),
       maxPrice: new Intl.NumberFormat('en-GB', { style: 'currency', currency: currency }).format(maxPrice),
     };
