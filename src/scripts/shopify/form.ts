@@ -19,7 +19,7 @@ function Form(product: HTMLElement) {
     }
   }
 
-  function buildChosenPinHtml(textColor: string | null, hexColor: string) {
+  function buildChosenPinHtml(textColor: string | null, hexColor: string | null) {
     return `
       <div class="pos-r dp-f jc-between ai-c mt-24" id="${textColor}-chosen" data-pin-chosen="${textColor}">
         <span class="pin-color pos-r borr-50" style="width: 2.5rem; height: 2.5rem; background-color: ${hexColor};" aria-hidden="true"></span>
@@ -38,7 +38,7 @@ function Form(product: HTMLElement) {
   function handleChosenPin(input: HTMLInputElement) {
     const pinsSection = form?.querySelector('[data-chosen-pins]');
     const chosenPinColor = input.getAttribute('data-pin');
-    const chosenPinHexColor = input.value;
+    const chosenPinHexColor = input.getAttribute('data-pin-hex');
 
     if (!pinsSection) return;
 
@@ -58,7 +58,7 @@ function Form(product: HTMLElement) {
 
       if (!pinCheckbox) return;
 
-      pinCheckbox.value += `-${index}`;
+      pinCheckbox.value = `${pinCheckbox.dataset.pinHex}-${index}`;
     })
   }
 

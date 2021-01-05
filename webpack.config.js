@@ -66,6 +66,11 @@ function Bundle() {
     new CopyWebpackPlugin([{
       from: './src/images/**/*.jpg',
       to: '[path][name].webp',
+      globOptions: {
+        ignore: [
+          '**/shopify/**'
+        ]
+      },
       transformPath(targetPath) {
         return targetPath.split('src/')[1];
       }

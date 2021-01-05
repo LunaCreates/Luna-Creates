@@ -61,7 +61,7 @@
             {% set id = color.name.replace(' ', '-') + '-pin' %}
 
             <label for="{{ name }}" class="sr-only">{{ name }}</label>
-            <input type="checkbox" id="{{ id | lower }}" value="{{ hex }}" name="colors" class="pin-color borr-50 m-8 bgc-transparent cursor-pointer" style="width: 2.5rem; height: 2.5rem; border: 7px solid {{ hex }}; --color: {{ hex }};" data-pin="{{ name | lower }}">
+            <input type="checkbox" id="{{ id | lower }}" value="{{ hex }}" name="colors" class="pin-color borr-50 m-8 bgc-transparent cursor-pointer" style="width: 2.5rem; height: 2.5rem; border: 7px solid {{ hex }}; --color: {{ hex }};" data-pin="{{ name | lower }}" data-pin-hex="{{ hex }}">
         {% endfor %}
 
             <div class="pin-color__chosen w-full mt-32 dp-n" data-chosen-pins>
