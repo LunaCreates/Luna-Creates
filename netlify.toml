@@ -4,7 +4,7 @@
   functions = "src/functions"
 
 [[plugins]]
-  package = "./plugins/keep-data-cache"
+  package = "plugins/keep-data-cache"
 
 [dev]
   command = "npm run start"
