@@ -68,13 +68,14 @@ function buildPropertyData(product: HTMLElement, keyMapData: any) {
   basketButton.setAttribute('data-variant-options', customAttributes);
 }
 
-function buildLabelsData(color: FormDataEntryValue, keys: Array<FormDataEntryValue>, showKeyText: string, index: number) {
-  const colorIndex = parseInt(color.toString().split('-')[0], 10) - 1;
-  const hex = color.toString().split('-')[1];
+function buildLabelsData(color: FormDataEntryValue, keys: Array<FormDataEntryValue>, showKeyText: string) {
+  const colorIndex = parseInt(color.toString().split('-')[1], 10);
+  const hex = color.toString().split('-')[0];
 
   return {
     color: hex,
-    title: showKeyText === 'yes' ? keys[colorIndex] : ''
+    title: showKeyText === 'yes' ? keys[colorIndex] : '',
+    order: colorIndex
   }
 }
 
@@ -86,14 +87,15 @@ function buildKeyMapData(product: HTMLElement, formdata: FormData, target: HTMLB
   const showKeyText = formdata.get('show key text') as string;
   const keys = formdata.getAll('pin label');
   const labels = colors
-    .map((color, index) => buildLabelsData(color, keys, showKeyText, index));
+    .map((color) => buildLabelsData(color, keys, showKeyText))
+    .sort((a: any, b: any) => a.order - b.order);
 
   const keyMapData = {
     title,
     frameSize: size === 'x-large' ? 'extraLarge' : size,
     labels,
     type
-  }
+  };
 
   renderKeyMap(keyMapData);
   buildPropertyData(product, keyMapData);

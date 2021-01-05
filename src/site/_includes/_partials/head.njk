@@ -31,7 +31,7 @@
         <link href="https://www.googletagmanager.com/gtag/js?id=UA-117442723-1" rel="preload" as="script">
         <link href="https://polyfill.io/v3/polyfill.min.js?features=ResizeObserver%2CIntersectionObserver%2CString.prototype.includes" rel="preload" as="script">
 
-        {% if renderData.heroImage or heroImage %}
+        {# {% if renderData.heroImage or heroImage %}
             {% if post %}
                 {% set image = renderData.heroImage or heroImage %}
                 {% set imageWebP = image.split(r/(jpg|png)/g)[0] + 'webp' %}
@@ -53,15 +53,15 @@
                 <link rel="preload" as="image" type="image/webp" href="{{path}}{{ext}}.webp" imagesrcset="{{path}}_1500x500_crop_top{{ext}}.webp 1x, {{path}}_2048x640_crop_top{{ext}}.webp 2x" media="(min-width: 48em)"/>
             {% endif %}
 
-        {% endif %}
+        {% endif %} #}
 
-        {% if tags and 'product' in tags %}
+        {# {% if tags and 'product' in tags %}
             {% set image = product.mainImage %}
 
             <link rel="preload" as="image" type="image/webp" href="{{image}}.jpg.webp" imagesrcset="{{image}}_350x350.jpg.webp 1x, {{image}}_450x450.jpg.webp 2x" media="(max-width: 37.4375em)"/>
 
             <link rel="preload" as="image" type="image/webp" href="{{image}}.jpg.webp" imagesrcset="{{image}}_600x600.jpg.webp 1x, {{image}}_800x800.jpg.webp 2x" media="(min-width: 38em)"/>
-        {% endif %}
+        {% endif %} #}
 
         <!-- STYLESHEET -->
         {% include "_partials/styles.njk" %}
