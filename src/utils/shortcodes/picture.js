@@ -13,7 +13,7 @@ module.exports = async (
   const hasAlt = alt ? `alt="${alt}"` : 'role="presentation"';
   const metadata = await Image(src, {
     widths: JSON.parse(`[${widths}]`),
-    formats: ['webp', 'jpeg', 'avif'],
+    formats: ['avif', 'webp', 'pjpeg', 'jpg'],
     urlPath: '/images/shopify/',
     outputDir: './dist/images/shopify/',
     cacheOptions: {
