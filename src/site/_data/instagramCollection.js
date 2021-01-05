@@ -48,7 +48,7 @@ async function instagramCollectionData() {
   const imagesFormatted = images.map(image => {
     return {
       imageAlt: image.altText,
-      image: image.originalSrc.split('.jpg')[0],
+      image: image.originalSrc,
     };
   });
 

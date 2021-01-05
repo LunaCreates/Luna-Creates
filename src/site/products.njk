@@ -10,17 +10,15 @@ sitemap:
 <ul class="container dp-g gtc-2 gg-24 my-32 px-16 md:gtc-3 md:gg-32 md:my-56 lg:my-80">
     {% for product in products %}
         <li class="picture-scale pos-r ov-hidden">
-            <picture class="ratio-1-1 ov-hidden mb-8 md:mb-16">
-                <source type="image/webp" data-srcset="{{product.mainImage}}_300x300.jpg.webp 1x, {{product.mainImage}}_350x350.jpg.webp 2x">
+            {% picture
+                product.mainImage,
+                '300, 400',
+                '400px',
+                null,
+                product.mainImageAlt,
+                'ratio-1-1 ov-hidden mb-8 md:mb-16'
+            %}
 
-                <img data-srcset="{{product.mainImage}}_300x300.jpg 1x, {{product.mainImage}}_350x350.jpg 2x" alt="{{product.mainImageAlt}}" class="lazyload" loading="lazy" width="300" height="300">
-
-                <noscript>
-                    <source type="image/webp" srcset="{{product.mainImage}}_300x300.jpg.webp 1x, {{product.mainImage}}_350x350.jpg.webp 2x">
-
-                    <img srcset="{{product.mainImage}}_300x300.jpg 1x, {{product.mainImage}}_350x350.jpg 2x" alt="{{product.mainImageAlt}}" loading="lazy" width="300" height="300">
-                </noscript>
-            </picture>
             <a class="psuedo-link fs-xs lh-xs fvs-md dp-b text-body ls-1" href="{{product.slug}}">{{product.title}}</a>
 
             {% if product.minPrice === product.maxPrice %}

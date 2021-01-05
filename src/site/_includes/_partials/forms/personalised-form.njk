@@ -61,10 +61,10 @@
             {% set id = color.name.replace(' ', '-') + '-pin' %}
 
             <label for="{{ name }}" class="sr-only">{{ name }}</label>
-            <input type="checkbox" id="{{ id | lower }}" value="{{ loop.index }}-{{ hex }}" name="colors" class="pin-color borr-50 m-8 bgc-transparent cursor-pointer" style="width: 2.5rem; height: 2.5rem; border: 7px solid {{ hex }}; --color: {{ hex }};" data-pin="{{ name | lower }}">
+            <input type="checkbox" id="{{ id | lower }}" value="{{ hex }}" name="colors" class="pin-color borr-50 m-8 bgc-transparent cursor-pointer" style="width: 2.5rem; height: 2.5rem; border: 7px solid {{ hex }}; --color: {{ hex }};" data-pin="{{ name | lower }}" data-pin-hex="{{ hex }}">
         {% endfor %}
 
-            <div class="pin-color__chosen w-full mt-32 dp-n">
+            <div class="pin-color__chosen w-full mt-32 dp-n" data-chosen-pins>
                 <h3 class="fs-sm lh-sm fvs-md mt-0 mb-16 text-tertiary">Chosen pins</h3>
 
                 <p class="dp-ib mr-8 mb-0">Labels:</p>
@@ -75,7 +75,7 @@
                 <input class="pin-color__labels product__radio-input dp-inf jc-center ai-c pos-r m-0" type="radio" id="map-label-yes" name="show key text" value="yes" checked data-map-key>
                 <label class="dp-ib" for="map-label-yes">On</label>
 
-            {% for color in colors %}
+            {# {% for color in colors %}
                 {% set hex = color.hex %}
                 {% set name = color.name.replace(' ', '-') | lower %}
                 {% set placeholder = color.name + ' pins label' %}
@@ -91,7 +91,7 @@
 
                     <p class="dp-n fg-3 ml-8 py-8 px-16 fs-sm fst-italic lh-sm fvs-rg text-heading">30x {{ color.name | lower }} pins </p>
                 </div>
-            {% endfor %}
+            {% endfor %} #}
             </div>
         </div>
 

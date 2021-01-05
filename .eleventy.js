@@ -1,10 +1,12 @@
 const fs = require('fs');
+// const image = require('./src/utils/shortcodes/image');
+const picture = require('./src/utils/shortcodes/picture');
 const formatDate = require('./src/utils/filters/format-date');
 const readableDate = require('./src/utils/filters/readable-date');
 const htmlMin = require('./src/utils/minify-html.js');
-const swStyles = require('./src/utils/filters/sw-styles.js');
-const swScripts = require('./src/utils/filters/sw-scripts.js');
-const swBuildNumber = require('./src/utils/filters/sw-build-number.js');
+const swStyles = require('./src/utils/shortcodes/sw-styles.js');
+const swScripts = require('./src/utils/shortcodes/sw-scripts.js');
+const swBuildNumber = require('./src/utils/shortcodes/sw-build-number.js');
 const settings = require('./src/site/_data/settings.json');
 
 module.exports = config => {
@@ -20,6 +22,8 @@ module.exports = config => {
   config.addShortcode('swStyles', swStyles);
   config.addShortcode('swScripts', swScripts);
   config.addShortcode('swBuildNumber', swBuildNumber);
+  // config.addNunjucksAsyncShortcode('image', image);
+  config.addNunjucksAsyncShortcode('picture', picture);
 
   // Passthrough copy
   config.addPassthroughCopy({ 'src/cms': 'cms' });

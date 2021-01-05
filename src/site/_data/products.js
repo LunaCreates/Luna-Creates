@@ -119,7 +119,7 @@ async function allProductsData() {
   // format all product images
   function formatProductImages(image) {
     return {
-      image: image.node.originalSrc.split(/(.jpg|.png)/)[0],
+      image: image.node.originalSrc,
       imageAlt: image.node.altText,
       type: image.node.originalSrc.match(/(.jpg|.png)/)[0]
     }
@@ -152,7 +152,7 @@ async function allProductsData() {
       color: getColorFromTags(item.tags),
       options: item.variants.edges.map(formatOptions),
       mainImageAlt: item.images.edges[0].node.altText,
-      mainImage: item.images.edges[0].node.originalSrc.split('.jpg')[0],
+      mainImage: item.images.edges[0].node.originalSrc,
       thumbnails: images,
       minPrice: new Intl.NumberFormat('en-GB', { style: 'currency', currency: currency }).format(minPrice),
       maxPrice: new Intl.NumberFormat('en-GB', { style: 'currency', currency: currency }).format(maxPrice),

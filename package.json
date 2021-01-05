@@ -24,7 +24,8 @@
   },
   "dependencies": {
     "@11ty/eleventy": "^0.11.1",
-    "@11ty/eleventy-cache-assets": "^2.0.3",
+    "@11ty/eleventy-cache-assets": "^2.0.4",
+    "@11ty/eleventy-img": "^0.7.0",
     "@glidejs/glide": "^3.4.1",
     "@types/node": "^13.13.38",
     "algoliasearch": "^4.8.0",
@@ -33,7 +34,7 @@
     "dotenv": "^8.2.0",
     "glob-all": "^3.2.1",
     "html-minifier": "^4.0.0",
-    "lazysizes": "^5.2.2",
+    "lazysizes": "^5.3.0",
     "node-fetch": "^2.6.1",
     "pinch-zoom-js": "^2.3.4",
     "sass": "^1.32.0"
