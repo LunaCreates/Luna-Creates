@@ -1,6 +1,7 @@
 const fs = require('fs');
 // const image = require('./src/utils/shortcodes/image');
 const picture = require('./src/utils/shortcodes/picture');
+const preloadImage = require('./src/utils/shortcodes/preload-image');
 const formatDate = require('./src/utils/filters/format-date');
 const readableDate = require('./src/utils/filters/readable-date');
 const htmlMin = require('./src/utils/minify-html.js');
@@ -24,6 +25,7 @@ module.exports = config => {
   config.addShortcode('swBuildNumber', swBuildNumber);
   // config.addNunjucksAsyncShortcode('image', image);
   config.addNunjucksAsyncShortcode('picture', picture);
+  config.addNunjucksAsyncShortcode('preloadImage', preloadImage);
 
   // Passthrough copy
   config.addPassthroughCopy({ 'src/cms': 'cms' });
