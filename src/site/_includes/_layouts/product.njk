@@ -3,14 +3,21 @@
 {% block content %}
     <main class="product container pt-24 px-16" aria-describedby="product-title" data-component="product-details" data-product-id="{{product.id}}" data-product-color="{{product.color}}" id="main">
         <div class="product__imagery mb-32 md:mb-0">
-            {% picture
-                product.mainImage,
-                '350, 450, 600, 800',
-                '(max-width: 37.4375em) 450px, 800px',
-                'data-component="product-picture"',
-                product.mainImageAlt,
-                'ratio-1-1 pe-none'
-            %}
+            {% set mainImage = product.mainImage.split(r/.(jpg|png)/g)[0] %}
+
+             <picture class="ratio-1-1 pe-none" data-component="product-picture">
+                <source media="(max-width: 37.4375em)" type="image/webp" data-srcset="{{ mainImage }}_350x350.jpg.webp 1x, {{ mainImage }}_450x450.jpg.webp 2x">
+                <source media="(max-width: 37.4375em)" data-srcset="{{ mainImage }}_300x300.jpg 1x, {{ mainImage }}_450x450.jpg 2x">
+                <source type="image/webp" data-srcset="{{ mainImage }}_600x600.jpg.webp 1x, {{ mainImage }}_800x800.jpg.webp 2x">
+                <img data-srcset="{{ mainImage }}_600x600.jpg 1x, {{ mainImage }}_800x800.jpg 2x" alt="{{product.mainImageAlt}}" class="lazyload" loading="lazy" width="300" height="300" data-product-image>
+
+                <noscript>
+                    <source media="(max-width: 37.4375em)" type="image/webp" srcset="{{ mainImage }}_350x350.jpg.webp 1x, {{ mainImage }}_450x450.jpg.webp 2x">
+                    <source media="(max-width: 37.4375em)" srcset="{{ mainImage }}_300x300.jpg 1x, {{ mainImage }}_450x450.jpg 2x">
+                    <source type="image/webp" srcset="{{ mainImage }}_600x600.jpg.webp 1x, {{ mainImage }}_800x800.jpg.webp 2x">
+                    <img srcset="{{ mainImage }}_600x600.jpg 1x, {{ mainImage }}_800x800.jpg 2x" alt="{{product.mainImageAlt}}" loading="lazy" width="300" height="300">
+                </noscript>
+            </picture>
 
             <button type="button" class="bgc-secondary text-foreground fs-xs lh-xs fvs-md py-16 px-24 borr-5 ls-1 dp-f jc-center ai-c w-full tt-uc ol-3-solid-transparent focus:olc-primary hover:bgc-secondary" data-image-zoom>
                 Open image zoom

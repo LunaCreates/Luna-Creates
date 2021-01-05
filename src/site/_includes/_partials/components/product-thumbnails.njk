@@ -3,17 +3,30 @@
         <div class="glide__track" data-glide-el="track">
             <ul class="thumbnails glide__slides dp-f flex-nowrap mt-16" data-component="product-thumbnails">
                 {% for thumbnail in product.thumbnails %}
-                    <li class="thumbnails__thumbnail glide__slide pos-r mr-16">
-                        <a href="{{thumbnail.image}}{{thumbnail.type}}" class="thumbnails__link {% if loop.first %}thumbnails__link--active{% endif %} pos-a zi-10" data-thumbnail-link="data-thumbnail-link">Thumbnail item {{loop.index}}</a>
+                    {% set image = thumbnail.image.split(r/.(jpg|png)/g)[0] %}
 
-                        {% picture
-                            thumbnail.image,
-                            '75, 100, 200, 300, 450',
-                            '(max-width: 37.4375em) 100px, (min-width: 38em) and (max-width: 47.9375em) 800px, 2048px',
-                            null,
-                            alt,
-                            'thumbnails__picture ratio-1-1'
-                        %}
+                    <li class="thumbnails__thumbnail glide__slide pos-r mr-16">
+                        <a href="{{image}}{{thumbnail.type}}" class="thumbnails__link {% if loop.first %}thumbnails__link--active{% endif %} pos-a zi-10" data-thumbnail-link="data-thumbnail-link">Thumbnail item {{loop.index}}</a>
+
+                        <picture class="thumbnails__picture ratio-1-1">
+                            <source media="(max-width: 37.4375em)" type="image/webp" data-srcset="{{image}}_75x75{{thumbnail.type}}.webp 1x, {{image}}_100x100{{thumbnail.type}}.webp 2x" data-main-image="{{image}}_100x100{{thumbnail.type}}.webp 1x, {{image}}_200x200{{thumbnail.type}}.webp 2x">
+
+                            <source media="(max-width: 37.4375em)" data-srcset="{{image}}_75x75{{thumbnail.type}} 1x, {{image}}_100x100{{thumbnail.type}} 2x" data-main-image="{{image}}_100x100{{thumbnail.type}} 1x, {{image}}_200x200{{thumbnail.type}} 2x">
+
+                            <source type="image/webp" data-srcset="{{image}}_75x75{{thumbnail.type}}.webp 1x, {{image}}_150x150{{thumbnail.type}}.webp 2x" data-main-image="{{image}}_300x300{{thumbnail.type}}.webp 1x, {{image}}_450x450{{thumbnail.type}}.webp 2x">
+
+                            <img class="lazyload" data-srcset="{{image}}_75x75{{thumbnail.type}} 1x, {{image}}_150x150{{thumbnail.type}} 2x" data-main-image="{{image}}_300x300{{thumbnail.type}} 1x, {{image}}_450x450{{thumbnail.type}} 2x" alt="{{thumbnail.imageAlt}}" loading="lazy" width="100" height="100">
+
+                            <noscript>
+                                <source media="(max-width: 37.4375em)" type="image/webp" srcset="{{image}}_75x75{{thumbnail.type}}.webp 1x, {{image}}_100x100{{thumbnail.type}}.webp 2x">
+
+                                <source media="(max-width: 37.4375em)" srcset="{{image}}_75x75{{thumbnail.type}} 1x, {{image}}_100x100{{thumbnail.type}} 2x">
+
+                                <source type="image/webp" srcset="{{image}}_75x75{{thumbnail.type}}.webp 1x, {{image}}_150x150{{thumbnail.type}}.webp 2x">
+
+                                <img srcset="{{image}}_75x75{{thumbnail.type}} 1x, {{image}}_150x150{{thumbnail.type}} 2x" alt="{{thumbnail.imageAlt}}" loading="lazy" width="100" height="100">
+                            </noscript>
+                        </picture>
                     </li>
                 {% endfor %}
             </ul>
@@ -36,17 +49,28 @@
 {% else %}
 <ul class="thumbnails mt-16 dp-f flex-nowrap" data-component="product-thumbnails">
     {% for thumbnail in product.thumbnails %}
+        {% set image = thumbnail.image.split(r/.(jpg|png)/g)[0] %}
         <li class="thumbnails__thumbnail pos-r mr-16">
-            <a href="{{thumbnail.image}}{{thumbnail.type}}" class="thumbnails__link {% if loop.first %}thumbnails__link--active{% endif %} pos-a zi-10" data-thumbnail-link="data-thumbnail-link">Thumbnail item {{loop.index + 1}}</a>
+            <a href="{{image}}{{thumbnail.type}}" class="thumbnails__link {% if loop.first %}thumbnails__link--active{% endif %} pos-a zi-10" data-thumbnail-link="data-thumbnail-link">Thumbnail item {{loop.index + 1}}</a>
+            <picture class="thumbnails__picture ratio-1-1">
+                <source media="(max-width: 37.4375em)" type="image/webp" data-srcset="{{image}}_75x75{{thumbnail.type}}.webp 1x, {{image}}_100x100{{thumbnail.type}}.webp 2x" data-main-image="{{image}}_100x100{{thumbnail.type}}.webp 1x, {{image}}_200x200{{thumbnail.type}}.webp 2x">
 
-            {% picture
-                thumbnail.image,
-                '75, 100, 200, 300, 450',
-                '(max-width: 37.4375em) 100px, (min-width: 38em) and (max-width: 47.9375em) 800px, 2048px',
-                null,
-                alt,
-                'thumbnails__picture ratio-1-1'
-            %}
+                <source media="(max-width: 37.4375em)" data-srcset="{{image}}_75x75{{thumbnail.type}} 1x, {{image}}_100x100{{thumbnail.type}} 2x" data-main-image="{{image}}_100x100{{thumbnail.type}} 1x, {{image}}_200x200{{thumbnail.type}} 2x">
+
+                <source type="image/webp" data-srcset="{{image}}_75x75{{thumbnail.type}}.webp 1x, {{image}}_150x150{{thumbnail.type}}.webp 2x" data-main-image="{{image}}_300x300{{thumbnail.type}}.webp 1x, {{image}}_450x450{{thumbnail.type}}.webp 2x">
+
+                <img class="lazyload" data-srcset="{{image}}_75x75{{thumbnail.type}} 1x, {{image}}_150x150{{thumbnail.type}} 2x" data-main-image="{{image}}_300x300{{thumbnail.type}} 1x, {{image}}_450x450{{thumbnail.type}} 2x" alt="{{thumbnail.imageAlt}}" loading="lazy" width="100" height="100">
+
+                <noscript>
+                    <source media="(max-width: 37.4375em)" type="image/webp" srcset="{{image}}_75x75{{thumbnail.type}}.webp 1x, {{image}}_100x100{{thumbnail.type}}.webp 2x">
+
+                    <source media="(max-width: 37.4375em)" srcset="{{image}}_75x75{{thumbnail.type}} 1x, {{image}}_100x100{{thumbnail.type}} 2x">
+
+                    <source type="image/webp" srcset="{{image}}_75x75{{thumbnail.type}}.webp 1x, {{image}}_150x150{{thumbnail.type}}.webp 2x">
+
+                    <img srcset="{{image}}_75x75{{thumbnail.type}} 1x, {{image}}_150x150{{thumbnail.type}} 2x" alt="{{thumbnail.imageAlt}}" loading="lazy" width="100" height="100">
+                </noscript>
+            </picture>
         </li>
     {% endfor %}
 </ul>
