@@ -6,3 +6,5 @@ src/images/**/*.png filter=lfs diff=lfs merge=lfs -text
 src/images/**/*.PNG filter=lfs diff=lfs merge=lfs -text
 src/images/**/*.AVIF filter=lfs diff=lfs merge=lfs -text
 src/images/**/*.WEBP filter=lfs diff=lfs merge=lfs -text
+src/images/**/*.jpeg filter=lfs diff=lfs merge=lfs -text
+src/images/**/*.JPEG filter=lfs diff=lfs merge=lfs -text

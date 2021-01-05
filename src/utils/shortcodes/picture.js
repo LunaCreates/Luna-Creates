@@ -13,9 +13,9 @@ module.exports = async (
   const hasAlt = alt ? `alt="${alt}"` : 'role="presentation"';
   const metadata = await Image(src, {
     widths: JSON.parse(`[${widths}]`),
-    formats: ['avif', 'webp', 'pjpeg', 'jpg'],
+    formats: ['avif', 'webp', 'jpeg'],
     urlPath: '/images/shopify/',
-    outputDir: './dist/images/shopify/',
+    outputDir: './src/images/shopify/',
     cacheOptions: {
       duration: '15552000s'
     }
