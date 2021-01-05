@@ -10,7 +10,7 @@
         {% set hypo = (height ** 2 + width ** 2) ** 0.5 // 25.4 %}
 
         <label for="{{ size }}" class="dp-f fd-c ai-c ta-center pos-r">
-            <input type="radio" name="size" id="{{ size | lower }}" class="pos-a top-0 right-0 bottom-0 left-0 w-full bgc-transparent borc-transparent m-0 zi-10 cursor-pointer" {% if loop.first %}checked{% endif %} data-map="size" value="{{ size | lower }}">
+            <input type="radio" name="size" id="{{ size | lower }}" class="pos-a top-0 right-0 bottom-0 left-0 w-full h-full bgc-transparent borc-transparent m-0 zi-10 cursor-pointer" {% if loop.first %}checked{% endif %} data-map="size" value="{{ size | lower }}">
 
             <div style="height: {{ height // 10 / 16}}rem; width: {{width // 10 / 16 }}rem" class="bor-1-solid-primary borr-2 dp-f jc-center ai-c mt-auto mb-8 mx-auto pos-r" data-map>
                 <svg width="16px" height="16px" class="pos-a bottom-0 left-0 rotate-135" aria-hidden="true">
