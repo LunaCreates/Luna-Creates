@@ -7,7 +7,7 @@ module.exports = async (
 ) => {
   const metadata = await Image(src, {
     widths: JSON.parse(`[${widths}]`),
-    formats: ['avif', 'webp', 'jpeg'],
+    formats: ['webp'],
     urlPath: '/images/shopify/',
     outputDir: './src/images/shopify/',
     cacheOptions: {
