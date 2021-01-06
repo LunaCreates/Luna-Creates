@@ -31,37 +31,25 @@
         <link href="https://www.googletagmanager.com/gtag/js?id=UA-117442723-1" rel="preload" as="script">
         <link href="https://polyfill.io/v3/polyfill.min.js?features=ResizeObserver%2CIntersectionObserver%2CString.prototype.includes" rel="preload" as="script">
 
-        {# {% if renderData.heroImage or heroImage %}
-            {% if post %}
-                {% set image = renderData.heroImage or heroImage %}
-                {% set imageWebP = image.split(r/(jpg|png)/g)[0] + 'webp' %}
+        {% if renderData.heroImage or heroImage %}
+            {% set image = renderData.heroImage or heroImage %}
 
-                <link rel="preload" as="image" type="image/webp" href="{{imageWebP}}" imagesrcset="{{imageWebP}}?nf_resize=fit&w=300&h=180 1x, {{imageWebP}}?nf_resize=fit&w=600&h=360 2x" media="(max-width: 37.4375em)"/>
+            {% preloadImage
+                image,
+                '300, 600, 800, 1920',
+                '(min-width: 38em) and (max-width: 47.9375em) 800px, 100vw'
+            %}
+        {% endif %}
 
-                <link rel="preload" as="image" type="image/webp" href="{{imageWebP}}" imagesrcset="{{imageWebP}}?nf_resize=fit&w=400&h=240 1x, {{imageWebP}}?nf_resize=fit&w=800&h=480 2x" media="(min-width: 37.5em) and (max-width: 47.9375em)"/>
 
-                <link rel="preload" as="image" type="image/webp" href="{{imageWebP}}" imagesrcset="{{image}}?nf_resize=fit&w=1500&h=500 1x, {{image}}?nf_resize=fit&w=2048&h=640 2x" media="(min-width: 48em)"/>
-            {% else %}
-                {% set image = heroImage or renderData.heroImage %}
-                {% set ext = image.split(r/(.jpg|.png)/g)[1] %}
-                {% set path = image.replace(ext, '') %}
+        {% if tags and 'product' in tags %}
+            {% set image = product.mainImage.split(r/.(jpg|png)/g)[0] %}
+            {% set imageType = product.mainImage.split(r/.(jpg|png)/g)[1] %}
 
-                <link rel="preload" as="image" type="image/webp" href="{{path}}{{ext}}.webp" imagesrcset="{{path}}_300x180_crop_top{{ext}}.webp 1x, {{path}}_600x360_crop_top{{ext}}.webp 2x" media="(max-width: 37.4375em)"/>
+            <link rel="preload" as="image" type="image/webp" imagesrcset="{{image}}_350x350.{{imageType}}.webp 1x, {{image}}_450x450.{{imageType}}.webp 2x" media="(max-width: 37.4375em)"/>
 
-                <link rel="preload" as="image" type="image/webp" href="{{path}}{{ext}}.webp" imagesrcset="{{path}}_400x240_crop_top{{ext}}.webp 1x, {{path}}_800x480_crop_top{{ext}}.webp 2x" media="(min-width: 37.5em) and (max-width: 47.9375em)"/>
-
-                <link rel="preload" as="image" type="image/webp" href="{{path}}{{ext}}.webp" imagesrcset="{{path}}_1500x500_crop_top{{ext}}.webp 1x, {{path}}_2048x640_crop_top{{ext}}.webp 2x" media="(min-width: 48em)"/>
-            {% endif %}
-
-        {% endif %} #}
-
-        {# {% if tags and 'product' in tags %}
-            {% set image = product.mainImage %}
-
-            <link rel="preload" as="image" type="image/webp" href="{{image}}.jpg.webp" imagesrcset="{{image}}_350x350.jpg.webp 1x, {{image}}_450x450.jpg.webp 2x" media="(max-width: 37.4375em)"/>
-
-            <link rel="preload" as="image" type="image/webp" href="{{image}}.jpg.webp" imagesrcset="{{image}}_600x600.jpg.webp 1x, {{image}}_800x800.jpg.webp 2x" media="(min-width: 38em)"/>
-        {% endif %} #}
+            <link rel="preload" as="image" type="image/webp" imagesrcset="{{image}}_600x600.{{imageType}}.webp 1x, {{image}}_800x800.{{imageType}}.webp 2x" media="(min-width: 38em)"/>
+        {% endif %}
 
         <!-- STYLESHEET -->
         {% include "_partials/styles.njk" %}
