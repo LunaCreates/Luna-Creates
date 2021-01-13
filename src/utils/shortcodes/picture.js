@@ -15,7 +15,7 @@ module.exports = async (
     widths: JSON.parse(`[${widths}]`),
     formats: ['avif', 'webp', 'jpeg'],
     urlPath: '/images/shopify/',
-    outputDir: './src/images/shopify/',
+    outputDir: './dist/images/shopify/',
     cacheOptions: {
       duration: '15552000s'
     }
