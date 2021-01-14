@@ -29,16 +29,13 @@
   display: flex;
 }
 
-.pin-color__labels[id='map-label-no']:checked  ~ [data-pin-chosen] label,
-.pin-color__labels[id='map-label-no']:checked  ~ [data-pin-chosen] input {
+[id='map-label-no']:checked  ~ div [data-pin-chosen] label,
+[id='map-label-no']:checked  ~ div [data-pin-chosen] input,
+[id='map-label-yes']:checked  ~ div [data-pin-chosen] span {
   display: none;
 }
 
-.pin-color__labels[id='map-label-yes']:checked  ~ [data-pin-chosen] span {
-  display: none;
-}
-
-.pin-color__labels[id='map-label-no']:checked  ~ [data-pin-chosen] p {
+[id='map-label-no']:checked  ~ div [data-pin-chosen] p {
   display: block;
 }
 /*! purgecss end ignore */

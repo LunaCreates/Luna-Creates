@@ -68,14 +68,19 @@ function buildPropertyData(product: HTMLElement, keyMapData: any) {
   basketButton.setAttribute('data-variant-options', customAttributes);
 }
 
-function buildLabelsData(color: FormDataEntryValue, keys: Array<FormDataEntryValue>, showKeyText: string) {
-  const colorIndex = parseInt(color.toString().split('-')[1], 10);
-  const hex = color.toString().split('-')[0];
+function sortKeys(a: FormDataEntryValue, b: FormDataEntryValue) {
+  if (a === '' || a === null) return 1;
+  if (b === '' || b === null) return -1;
+
+  return 0;
+}
+
+function buildLabelsData(color: FormDataEntryValue, index: number, keys: Array<FormDataEntryValue>, showKeyText: string) {
+  const hex = color.toString();
 
   return {
     color: hex,
-    title: showKeyText === 'yes' ? keys[colorIndex] : '',
-    order: colorIndex
+    title: showKeyText === 'yes' ? keys[index] : ''
   }
 }
 
@@ -83,19 +88,21 @@ function buildKeyMapData(product: HTMLElement, formdata: FormData, target: HTMLB
   const type = product.getAttribute('data-product-color');
   const size = formdata.get('size')?.toString().split(' (')[0].toLowerCase();
   const title = formdata.get('title');
-  const colors = formdata.getAll('colors');
+  const colors = formdata.getAll('color')
   const showKeyText = formdata.get('show key text') as string;
-  const keys = formdata.getAll('pin label');
-  const labels = colors
-    .map((color) => buildLabelsData(color, keys, showKeyText))
-    .sort((a: any, b: any) => a.order - b.order);
+  const keys = formdata.getAll('pin label').sort(sortKeys);
+  const labels = colors.map((color, index) => buildLabelsData(color, index, keys, showKeyText));
+
+  console.log(colors, 'colors');
+  console.log(keys, 'keys');
+  console.log(labels, 'labels');
 
   const keyMapData = {
     title,
     frameSize: size === 'x-large' ? 'extraLarge' : size,
     labels,
     type
-  };
+  }
 
   renderKeyMap(keyMapData);
   buildPropertyData(product, keyMapData);
