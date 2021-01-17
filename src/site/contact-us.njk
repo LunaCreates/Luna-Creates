@@ -12,48 +12,48 @@ sitemap:
 {% include "_partials/components/hero.njk" %}
 
 <main class="my-32 md:my-56 lg:my-80" id="main">
-    <div class="container px-16" id="contact">
+    <div class="container mx-auto px-16" id="contact">
         <div class="rte">
             {{contact.body | safe}}
         </div>
 
         <form class="mt-40" name="contact" method="post" action="/contact-us/#contact" data-component="contact-form" netlify-honeypot="bot-field" netlify>
-            <fieldset class="pos-r m-0 p-0 borc-transparent">
+            <fieldset class="relative m-0 p-0 border-transparent">
                 <legend class="sr-only">Enter your name, email, optional phone number and your message.</legend>
 
-                <div class="md:dp-f md:flex-wrap md:jc-between">
-                    <div class="dp-n">
+                <div class="md:flex md:flex-wrap md:justify-between">
+                    <div class="hidden">
                         <label>Don’t fill this out if you're human:</label>
                         <input type="text" name="bot-field" />
                     </div>
 
-                    <div class="pos-r mb-24 md:fb-1/2">
-                        <label class="dp-b text-foreground mb-8 fs-sm lh-sm fvs-rg" id="nameLabel" for="name">Name</label>
-                        <input class="form__input fs-sm lh-sm fvs-rg w-full text-body py-8 px-16 bor-2-solid-border" id="name" type="text" name="name" aria-required="true" aria-labelledby="nameLabel" aria-describedby="nameDescribe" pattern="^[a-zA-Z \-']+$" required data-input>
-                        <small class="form__validation-message dp-b pos-a fs-xs lh-xs fvs-md text-error" id="nameDescribe" data-validation>Your name is required</small>
+                    <div class="relative mb-24 md:w-1/2">
+                        <label class="block text-foreground mb-8 text-sm leading-sm fvs-rg" id="nameLabel" for="name">Name</label>
+                        <input class="text-sm leading-sm fvs-rg w-full text-grey py-8 px-16 border-2 border-solid border-grey-border rounded-4 hov:hover:border-secondary" id="name" type="text" name="name" aria-required="true" aria-labelledby="nameLabel" aria-describedby="nameDescribe" pattern="^[a-zA-Z \-']+$" required data-input>
+                        <small class="block absolute text-xs leading-xs fvs-md text-danger top-0 right-0 opacity-0" id="nameDescribe" data-validation>Your name is required</small>
                     </div>
 
-                    <div class="pos-r mb-24 md:fb-1/2 md:pl-32">
-                        <label class="dp-b text-foreground mb-8 fs-sm lh-sm fvs-rg" id="emailLabel" for="email">Email</label>
-                        <input class="form__input fs-sm lh-sm fvs-rg w-full text-body py-8 px-16 bor-2-solid-border" id="email" type="email" name="email" aria-required="true" aria-labelledby="emailLabel" aria-describedby="emailDescribe" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required data-input>
-                        <small class="form__validation-message dp-b pos-a fs-xs lh-xs fvs-md text-error" id="emailDescribe" data-validation>Please enter a valid email address</small>
+                    <div class="relative mb-24 md:w-1/2 md:pl-32">
+                        <label class="block text-foreground mb-8 text-sm leading-sm fvs-rg" id="emailLabel" for="email">Email</label>
+                        <input class="text-sm leading-sm fvs-rg w-full text-grey py-8 px-16 border-2 border-solid border-grey-border rounded-4 hov:hover:border-secondary" id="email" type="email" name="email" aria-required="true" aria-labelledby="emailLabel" aria-describedby="emailDescribe" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required data-input>
+                        <small class="block absolute text-xs leading-xs fvs-md text-danger top-0 right-0 opacity-0" id="emailDescribe" data-validation>Please enter a valid email address</small>
                     </div>
 
-                    <div class="pos-r mb-24 md:fb-full">
-                        <label class="dp-b text-foreground mb-8 fs-sm lh-sm fvs-rg" id="phoneLabel" for="phone">Phone Number (optional)</label>
-                        <input class="form__input fs-sm lh-sm fvs-rg w-full text-body py-8 px-16 bor-2-solid-border" id="phone" type="tel" name="phone" aria-labelledby="phoneLabel" aria-describedby="phoneDescribe" pattern="[0-9\-]*">
+                    <div class="relative mb-24 md:w-full">
+                        <label class="block text-foreground mb-8 text-sm leading-sm fvs-rg" id="phoneLabel" for="phone">Phone Number (optional)</label>
+                        <input class="text-sm leading-sm fvs-rg w-full text-grey py-8 px-16 border-2 border-solid border-grey-border rounded-4 hov:hover:border-secondary" id="phone" type="tel" name="phone" aria-labelledby="phoneLabel" aria-describedby="phoneDescribe" pattern="[0-9\-]*">
                     </div>
 
-                    <div class="pos-r mb-24 md:fb-full">
-                        <label class="dp-b text-foreground mb-8 fs-sm lh-sm fvs-rg" id="messageLabel" for="message">Message</label>
-                        <textarea class="form__textarea fs-sm lh-sm fvs-rg w-full text-body py-8 px-16 bor-2-solid-border" id="message" name="message" name="message" rows="6" cols="80" aria-required="true" aria-labelledby="messageLabel" aria-describedby="messageDescribe" required data-textarea></textarea>
-                        <small class="form__validation-message dp-b pos-a fs-xs lh-xs fvs-md text-error" id="messageDescribe" data-validation>Please enter your message</small>
+                    <div class="relative mb-24 md:w-full">
+                        <label class="block text-foreground mb-8 text-sm leading-sm fvs-rg" id="messageLabel" for="message">Message</label>
+                        <textarea class="form__textarea text-sm leading-sm fvs-rg w-full text-grey py-8 px-16 border-2 border-solid border-grey-border rounded-4 hov:hover:border-secondary" id="message" name="message" name="message" rows="6" cols="80" aria-required="true" aria-labelledby="messageLabel" aria-describedby="messageDescribe" required data-textarea></textarea>
+                        <small class="block absolute text-xs leading-xs fvs-md text-danger top-0 right-0 opacity-0" id="messageDescribe" data-validation>Please enter your message</small>
                     </div>
-                    <button class="bgc-secondary text-foreground fs-xs lh-xs fvs-md py-16 px-24 borr-5 tt-uc ls-1 ol-3-solid-transparent focus:olc-primary hover:bgc-secondary md:px-32" type="submit" name="button" data-submit-button>Submit form</button>
+                    <button class="bg-secondary text-foreground text-xs leading-xs fvs-md py-16 px-24 rounded-5 uppercase tracking-1 outline-transparent focus:outline-primary hov:hover:bg-hover-secondary md:px-32" type="submit" name="button" data-submit-button>Submit form</button>
                 </div>
 
-                <span class="form__message form__message--error dp-n mt-24 fs-sm lh-sm fvs-sm py-8 px-16" data-form-error>Oops. There was an error. Please submit the form again.</span>
-                <span class="form__message form__message--success dp-n mt-24 fs-sm lh-sm fvs-sm py-8 px-16" data-form-success>Hooray. Your message has been successfully sent.</span>
+                <span class="form__message form__message--error hidden mt-24 text-sm leading-sm fvs-sm py-8 px-16" data-form-error>Oops. There was an error. Please submit the form again.</span>
+                <span class="form__message form__message--success hidden mt-24 text-sm leading-sm fvs-sm py-8 px-16" data-form-success>Hooray. Your message has been successfully sent.</span>
             </fieldset>
         </form>
     </div>

@@ -1,27 +1,27 @@
-<div class="map-size pos-r dp-f jc-between ai-e -mx-16">
+<div class="map-size relative flex justify-between items-end -mx-16">
 {%- for i in range(0, 3) -%}
     {% set option = product.options[i] %}
     {% set frame = option.frame %}
-    {% set border = 'bor-5-solid-transparent' %}
+    {% set border = 'border-5 border-solid border-transparent' %}
 
     {% if frame === 'Black' %}
-        {% set border = 'bor-5-solid-foreground' %}
+        {% set border = 'border-5 border-solid border-foreground' %}
     {% endif %}
 
     {% if frame === 'White' %}
-        {% set border = 'bor-5-solid-background' %}
+        {% set border = 'border-5 border-solid border-background' %}
     {% endif %}
 
-    <label for="{{ frame }}" class="dp-f fd-c ai-c ta-center pos-r fb-1/3 mx-16">
-        <input type="radio" name="frame" id="{{ frame | lower }}" class="pos-a top-0 right-0 bottom-0 left-0 w-full bgc-transparent borc-transparent m-0 zi-10 cursor-pointer" {% if loop.first %}checked{% endif %} data-map="frame">
+    <label for="{{ frame }}" class="flex flex-col items-center text-center relative fb-1/3 mx-16">
+        <input type="radio" name="frame" id="{{ frame | lower }}" class="absolute top-0 right-0 bottom-0 left-0 w-full bg-transparent borc-transparent m-0 z-10 cursor-pointer" {% if loop.first %}checked{% endif %} data-map="frame">
 
-        <div class="bor-1-solid-primary borr-2 bor-1-solid-border dp-f jc-center ai-c mt-auto mb-8 mx-auto pos-r w-full" data-map>
-            <div class="ratio-4-2 borr-2 {{ border }} w-full"></div>
+        <div class="border-1 border-solid border-primary rounded-2 flex justify-center items-center mt-auto mb-8 mx-auto relative w-full" data-map>
+            <div class="ratio-4-2 relative block bg-grey-fade rounded-2 {{ border }} w-full"></div>
         </div>
 
-        <span class="dp-b fs-xs fvs-sb lh-xs mb-8 text-primary">{{ frame }}</span>
+        <span class="block text-xs fvs-sb leading-xs mb-8 text-primary">{{ frame }}</span>
 
-        <span class="dp-b fs-xs fvs-rg lh-xs pt-8 bort-1-solid-border as-c">
+        <span class="block text-xs fvs-rg leading-xs pt-8 border-t-1 border-solid border-grey-border self-center">
         {%- if loop.first -%}
             +&pound;0
         {%- else -%}
@@ -29,7 +29,7 @@
         {%- endif -%}
         </span>
 
-        <small class="dp-b op-0 v-h fs-xxs fvs-md lh-xxs bgc-secondary mt-8 px-8 text-primary" data-map-selected>Selected</small>
+        <small class="block opacity-0 v-h text-xxs fvs-md leading-xxs bg-secondary mt-8 px-8 text-primary" data-map-selected>Selected</small>
     </label>
 {%- endfor -%}
 </div>

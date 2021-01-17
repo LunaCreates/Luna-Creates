@@ -9,93 +9,93 @@ sitemap:
   priority: 0.8
 ---
 
-<main class="my-32 ta-center md:my-56 md:gtc-2 lg:my-80" data-component="cart">
-    <div class="container px-16 ov-hidden">
-        <h1 class="fs-xl lh-xl fvs-md text-heading mt-0 mb-48 ls-3 md:mb-88">Your cart</h1>
+<main class="my-32 text-center md:my-56 md:grid-cols-2 lg:my-80" data-component="cart">
+    <div class="container mx-auto px-16 overflow-hidden">
+        <h1 class="text-xl leading-xl fvs-md text-grey-neutral mt-0 mb-48 tracking-3 md:mb-88">Your cart</h1>
 
         <form data-form id="cart">
-            <div class="mb-32 ovx-auto">
+            <div class="mb-32 overflow-x-auto">
                 <table class="minw-600 md:w-full">
                     <thead>
                         <tr>
-                            <th class="fs-xs lh-xs fvs-rg pb-16 text-body ta-left md:pb-24">Product</th>
-                            <th class="fs-xs lh-xs fvs-rg pb-16 text-body md:pb-24">Price</th>
-                            <th class="fs-xs lh-xs fvs-rg pb-16 text-body md:pb-24">Quantity</th>
-                            <th class="fs-xs lh-xs fvs-rg pb-16 text-body md:pb-24">Total</th>
-                            <th class="pb-16 op-0 text-body md:pb-24">Option</th>
+                            <th class="text-xs leading-xs fvs-rg pb-16 text-grey text-left md:pb-24">Product</th>
+                            <th class="text-xs leading-xs fvs-rg pb-16 text-grey md:pb-24">Price</th>
+                            <th class="text-xs leading-xs fvs-rg pb-16 text-grey md:pb-24">Quantity</th>
+                            <th class="text-xs leading-xs fvs-rg pb-16 text-grey md:pb-24">Total</th>
+                            <th class="pb-16 opacity-0 text-grey md:pb-24">Option</th>
                         </tr>
                     </thead>
 
                     <tbody>
-                        <tr class="borb-1-solid-fade">
-                            <th class="ta-left dp-f ai-c minw-250 py-16 pr-16 md:py-24 md:pr-24">
-                                <picture class="cart__picture cart__picture--skeleton pos-r dp-b mr-16 md:mr-24"></picture>
+                        <tr class="border-b-1 border-solid border-grey-fade">
+                            <th class="text-left flex items-center minw-250 py-16 pr-16 md:py-24 md:pr-24">
+                                <picture class="cart__picture cart__picture--skeleton relative block mr-16 md:mr-24"></picture>
                                 <div>
-                                    <span class="cart__table-title cart__table-title--skeleton dp-b pos-r fs-xs lh-xs fvs-rg"></span>
-                                    <small class="cart__table-options cart__table-options--skeleton dp-b w-250px fs-xs lh-xs fvs-md dp-b fst-italic pos-r"></small>
+                                    <span class="cart__table-title cart__table-title--skeleton block relative text-xs leading-xs fvs-rg"></span>
+                                    <small class="cart__table-options cart__table-options--skeleton block w-250px text-xs leading-xs fvs-md block italic relative"></small>
                                 </div>
                             </th>
-                            <td class="fs-xs lh-xs fvs-rg text-body px-16 md:px-32">
+                            <td class="text-xs leading-xs fvs-rg text-grey px-16 md:px-32">
                                 <div aria-hidden="true" class="cart__td cart__td--skeleton">&pound;0.00</div>
                             </td>
-                            <td class="fs-xs lh-xs fvs-rg text-body px-16 md:px-32">
-                                <div aria-hidden="true" class="cart__td cart__td--skeleton"><input aria-hidden="true" class="py-8 px-16 text-heading fs-base lh-base fvs-rg w-60px" type="number" value="1"></div>
+                            <td class="text-xs leading-xs fvs-rg text-grey px-16 md:px-32">
+                                <div aria-hidden="true" class="cart__td cart__td--skeleton"><input aria-hidden="true" class="py-8 px-16 text-grey-neutral text-base leading-base fvs-rg w-60px" type="number" value="1"></div>
                             </td>
-                            <td class="fs-xs lh-xs fvs-rg text-body px-16 md:px-32">
+                            <td class="text-xs leading-xs fvs-rg text-grey px-16 md:px-32">
                                 <div aria-hidden="true" class="cart__td cart__td--skeleton">&pound;0.00</div>
                             </td>
-                            <td class="fs-xs lh-xs fvs-rg text-body px-16 md:px-32">
-                                <button style="width: 40px; height: 40px;" aria-hidden="true" type="button" class="cart__remove bor-1-solid-body cart__td cart__td--skeleton">
+                            <td class="text-xs leading-xs fvs-rg text-grey px-16 md:px-32">
+                                <button style="width: 40px; height: 40px;" aria-hidden="true" type="button" class="cart__remove border-1 border-solid border-grey cart__td cart__td--skeleton">
                                     <svg class="cart__icon p-16" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewbox="0 0 32 32">
                                         <path d="M4 10v20c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V10H4zm6 18H8V14h2v14zm4 0h-2V14h2v14zm4 0h-2V14h2v14zm4 0h-2V14h2v14zM26.5 4H20V1.5c0-.825-.675-1.5-1.5-1.5h-7c-.825 0-1.5.675-1.5 1.5V4H3.5C2.675 4 2 4.675 2 5.5V8h26V5.5c0-.825-.675-1.5-1.5-1.5zM18 4h-6V2.025h6V4z"/>
                                     </svg>
                                 </button>
                             </td>
                         </tr>
-                        <tr class="borb-1-solid-fade">
-                            <th class="ta-left dp-f ai-c minw-250 py-16 pr-16 md:py-24 md:pr-24">
-                                <picture class="cart__picture cart__picture--skeleton pos-r dp-b mr-16 md:mr-24"></picture>
+                        <tr class="border-b-1 border-solid border-grey-fade">
+                            <th class="text-left flex items-center minw-250 py-16 pr-16 md:py-24 md:pr-24">
+                                <picture class="cart__picture cart__picture--skeleton relative block mr-16 md:mr-24"></picture>
                                 <div>
-                                    <span class="cart__table-title cart__table-title--skeleton dp-b pos-r fs-xs lh-xs fvs-rg"></span>
-                                    <small class="cart__table-options cart__table-options--skeleton dp-b w-250px fs-xs lh-xs fvs-md dp-b fst-italic pos-r"></small>
+                                    <span class="cart__table-title cart__table-title--skeleton block relative text-xs leading-xs fvs-rg"></span>
+                                    <small class="cart__table-options cart__table-options--skeleton block w-250px text-xs leading-xs fvs-md block italic relative"></small>
                                 </div>
                             </th>
-                            <td class="fs-xs lh-xs fvs-rg text-body px-16 md:px-32">
+                            <td class="text-xs leading-xs fvs-rg text-grey px-16 md:px-32">
                                 <div aria-hidden="true" class="cart__td cart__td--skeleton">&pound;0.00</div>
                             </td>
-                            <td class="fs-xs lh-xs fvs-rg text-body px-16 md:px-32">
-                                <div aria-hidden="true" class="cart__td cart__td--skeleton"><input aria-hidden="true" class="py-8 px-16 text-heading fs-base lh-base fvs-rg w-60px" type="number" value="1"></div>
+                            <td class="text-xs leading-xs fvs-rg text-grey px-16 md:px-32">
+                                <div aria-hidden="true" class="cart__td cart__td--skeleton"><input aria-hidden="true" class="py-8 px-16 text-grey-neutral text-base leading-base fvs-rg w-60px" type="number" value="1"></div>
                             </td>
-                            <td class="fs-xs lh-xs fvs-rg text-body px-16 md:px-32">
+                            <td class="text-xs leading-xs fvs-rg text-grey px-16 md:px-32">
                                 <div aria-hidden="true" class="cart__td cart__td--skeleton">&pound;0.00</div>
                             </td>
-                            <td class="fs-xs lh-xs fvs-rg text-body px-16 md:px-32">
-                                <button style="width: 40px; height: 40px;" aria-hidden="true" type="button" class="cart__remove bor-1-solid-body cart__td cart__td--skeleton">
+                            <td class="text-xs leading-xs fvs-rg text-grey px-16 md:px-32">
+                                <button style="width: 40px; height: 40px;" aria-hidden="true" type="button" class="cart__remove border-1 border-solid border-grey cart__td cart__td--skeleton">
                                     <svg class="cart__icon p-16" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewbox="0 0 32 32">
                                         <path d="M4 10v20c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V10H4zm6 18H8V14h2v14zm4 0h-2V14h2v14zm4 0h-2V14h2v14zm4 0h-2V14h2v14zM26.5 4H20V1.5c0-.825-.675-1.5-1.5-1.5h-7c-.825 0-1.5.675-1.5 1.5V4H3.5C2.675 4 2 4.675 2 5.5V8h26V5.5c0-.825-.675-1.5-1.5-1.5zM18 4h-6V2.025h6V4z"/>
                                     </svg>
                                 </button>
                             </td>
                         </tr>
-                        <tr class="borb-1-solid-fade">
-                            <th class="ta-left dp-f ai-c minw-250 py-16 pr-16 md:py-24 md:pr-24">
-                                <picture class="cart__picture cart__picture--skeleton pos-r dp-b mr-16 md:mr-24"></picture>
+                        <tr class="border-b-1 border-solid border-grey-fade">
+                            <th class="text-left flex items-center minw-250 py-16 pr-16 md:py-24 md:pr-24">
+                                <picture class="cart__picture cart__picture--skeleton relative block mr-16 md:mr-24"></picture>
                                 <div>
-                                    <span class="cart__table-title cart__table-title--skeleton dp-b pos-r fs-xs lh-xs fvs-rg"></span>
-                                    <small class="cart__table-options cart__table-options--skeleton dp-b w-250px fs-xs lh-xs fvs-md dp-b fst-italic pos-r"></small>
+                                    <span class="cart__table-title cart__table-title--skeleton block relative text-xs leading-xs fvs-rg"></span>
+                                    <small class="cart__table-options cart__table-options--skeleton block w-250px text-xs leading-xs fvs-md block italic relative"></small>
                                 </div>
                             </th>
                             <td class="px-16 md:px-32">
                                 <div aria-hidden="true" class="cart__td cart__td--skeleton">&pound;0.00</div>
                             </td>
                             <td class="px-16 md:px-32">
-                                <div aria-hidden="true" class="cart__td cart__td--skeleton"><input aria-hidden="true" class="py-8 px-16 text-heading fs-base lh-base fvs-rg w-60px" type="number" value="1"></div>
+                                <div aria-hidden="true" class="cart__td cart__td--skeleton"><input aria-hidden="true" class="py-8 px-16 text-grey-neutral text-base leading-base fvs-rg w-60px" type="number" value="1"></div>
                             </td>
                             <td class="px-16 md:px-32">
                                 <div aria-hidden="true" class="cart__td cart__td--skeleton">&pound;0.00</div>
                             </td>
                             <td class="px-16 md:px-32">
-                                <button style="width: 40px; height: 40px;" aria-hidden="true" type="button" class="cart__remove bor-1-solid-body cart__td cart__td--skeleton">
+                                <button style="width: 40px; height: 40px;" aria-hidden="true" type="button" class="cart__remove border-1 border-solid border-grey cart__td cart__td--skeleton">
                                     <svg class="cart__icon p-16" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewbox="0 0 32 32">
                                         <path d="M4 10v20c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V10H4zm6 18H8V14h2v14zm4 0h-2V14h2v14zm4 0h-2V14h2v14zm4 0h-2V14h2v14zM26.5 4H20V1.5c0-.825-.675-1.5-1.5-1.5h-7c-.825 0-1.5.675-1.5 1.5V4H3.5C2.675 4 2 4.675 2 5.5V8h26V5.5c0-.825-.675-1.5-1.5-1.5zM18 4h-6V2.025h6V4z"/>
                                     </svg>
@@ -107,6 +107,6 @@ sitemap:
             </div>
         </form>
 
-        <p class="fs-xs lh-xs fvs-rg my-0 text-body">We aim to send all orders to UK mainland destinations 10-15 business days after order date. You will be contacted by the courier (DPD) who will let you know when your order will arrive and ask if you have any special delivery requirements.</p>
+        <p class="text-xs leading-xs fvs-rg my-0 text-grey">We aim to send all orders to UK mainland destinations 10-15 business days after order date. You will be contacted by the courier (DPD) who will let you know when your order will arrive and ask if you have any special delivery requirements.</p>
     </div>
 </main>

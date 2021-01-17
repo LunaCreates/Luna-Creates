@@ -19,16 +19,18 @@ function FormValidation(form: HTMLFormElement) {
     const isValid = getInputPattern(element);
     const validationMessage = element.nextElementSibling;
 
+    element.classList.remove('border-grey-border');
+
     if (isValid && element.value.length !== 0) {
-      element.classList.remove('form__input--invalid');
-      element.classList.add('form__input--valid');
-      validationMessage.classList.remove('form__validation-message--visible');
+      element.classList.remove('border-danger');
+      element.classList.add('border-success');
+      validationMessage.classList.remove('opacity-100');
       return;
     }
 
-    element.classList.add('form__input--invalid');
-    element.classList.remove('form__input--valid');
-    validationMessage.classList.add('form__validation-message--visible');
+    element.classList.add('border-danger');
+    element.classList.remove('border-success');
+    validationMessage.classList.add('opacity-100');
   }
 
   function validateTextarea(event: any) {
@@ -36,16 +38,18 @@ function FormValidation(form: HTMLFormElement) {
     const isNotEmpty = element.value.length !== 0;
     const validationMessage = element.nextElementSibling;
 
+    element.classList.remove('border-grey-border');
+
     if (isNotEmpty) {
-      element.classList.remove('form__textarea--invalid');
-      element.classList.add('form__textarea--valid');
-      validationMessage.classList.remove('form__validation-message--visible');
+      element.classList.remove('border-danger');
+      element.classList.add('border-success');
+      validationMessage.classList.remove('opacity-100');
       return;
     }
 
-    element.classList.add('form__textarea--invalid');
-    element.classList.remove('form__textarea--valid');
-    validationMessage.classList.add('form__validation-message--visible');
+    element.classList.add('border-danger');
+    element.classList.remove('border-success');
+    validationMessage.classList.add('opacity-100');
   }
 
   function showSuccessMessage() {
@@ -80,7 +84,7 @@ function FormValidation(form: HTMLFormElement) {
     inputs.forEach(input => {
       validateInput(input);
 
-      if (input.classList.contains('form__input--invalid') && !firstErrorFound) {
+      if (input.classList.contains('border-danger') && !firstErrorFound) {
         input.focus();
         firstErrorFound = true;
       }
@@ -88,7 +92,7 @@ function FormValidation(form: HTMLFormElement) {
 
     validateTextarea(textarea);
 
-    if (textarea.classList.contains('form__textarea--invalid') && !firstErrorFound) {
+    if (textarea.classList.contains('border-danger') && !firstErrorFound) {
       textarea.focus();
       firstErrorFound = true;
     }

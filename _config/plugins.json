@@ -48,7 +48,7 @@
   "stylelint": {
     "configFile": "./_config/stylelint.json",
     "failAfterError": true,
-    "syntax": "scss",
+    "syntax": "css",
     "reportOutputDir": "src/reports/stylelint/",
     "reporters": [
       {

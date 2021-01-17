@@ -8,12 +8,12 @@ function ProductThumbnails(element: HTMLElement) {
   }
 
   function setActiveThumbnail(link: HTMLAnchorElement) {
-    const currentActiveLink: HTMLAnchorElement | null = element.querySelector('.thumbnails__link--active');
+    const currentActiveLink: HTMLAnchorElement | null = element.querySelector('.border-primary');
 
     if (currentActiveLink === null) return;
 
-    currentActiveLink.classList.remove('thumbnails__link--active');
-    link.classList.add('thumbnails__link--active');
+    currentActiveLink.classList.remove('border-primary');
+    link.classList.add('border-primary');
   }
 
   function handleClickEvent(event: Event) {

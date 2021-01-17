@@ -1,0 +1,139 @@
+:root {
+  --color-primary: #073358;
+  --color-secondary: #ffc857;
+  --color-tertiary: #156572;
+  --color-background: #fff;
+  --color-foreground: #040f0f;
+  --color-danger: #de0000;
+  --color-success: #70c041;
+  --color-grey: #595959;
+  --color-grey-fade: #f7f7f7;
+  --color-grey-light: #f1f2f3;
+  --color-grey-border: #d8d8d8;
+  --color-grey-neutral: #777676;
+}
+
+.hover-secondary {
+  --color-secondary: theme('colors.hover.secondary');
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  @font-face {
+    font-family: 'Avenir Next';
+    src: url('/fonts/avenir-next-variable.woff2') format('woff2-variations');
+    font-display: optional;
+    font-weight: 400;
+  }
+
+  html {
+    font-size: 16px;
+  }
+
+  [data-nav-button][aria-expanded="true"] path:first-child {
+    transform: rotate(45deg);
+  }
+
+  [data-nav-button][aria-expanded="true"] path:nth-child(2) {
+    opacity: 0;
+  }
+
+  [data-nav-button][aria-expanded="true"] path:last-child {
+    transform: rotate(-45deg);
+  }
+
+  [data-nav-item="Shop"][aria-expanded=true] svg {
+    transform: rotate(180deg);
+  }
+
+  .scroll-snap-none {
+    scroll-snap-type: none;
+  }
+
+  .scroll-snap-x {
+    scroll-snap-type: x mandatory;
+  }
+
+  .scroll-snap-y {
+    scroll-snap-type: y mandatory;
+  }
+
+  .scroll-snap-start {
+    scroll-snap-align: start;
+  }
+
+  .scroll-snap-center {
+    scroll-snap-align: center;
+  }
+
+  .scroll-snap-end {
+    scroll-snap-align: end;
+  }
+
+  .scroll-padding-0-16 {
+    scroll-padding: 0 1rem;
+  }
+
+  .pinch-zoom-container {
+    position: relative;
+    padding-top: 100%;
+  }
+
+  @variants responsive {
+    .before::before,
+    .after::after {
+      content: '';
+    }
+
+    .fvs-rg {
+      font-variation-settings: 'wght' 400;
+    }
+
+    .fvs-md {
+      font-variation-settings: 'wght' 450;
+    }
+
+    .fvs-sb {
+      font-variation-settings: 'wght' 500;
+    }
+
+    .ratio-1-1 {
+      padding-top: calc((1 / 1) * 100%);
+    }
+
+    .ratio-2-1 {
+      padding-top: calc((1 / 2) * 100%);
+    }
+
+    .ratio-3-2 {
+      padding-top: calc((2 / 3) * 100%);
+    }
+
+    .ratio-3-4 {
+      padding-top: calc((4 / 3) * 100%);
+    }
+
+    .ratio-4-1 {
+      padding-top: calc((1 / 4) * 100%);
+    }
+
+    .ratio-4-2 {
+      padding-top: calc((2 / 4) * 100%);
+    }
+
+    .ratio-4-3 {
+      padding-top: calc((3 / 4) * 100%);
+    }
+
+    .ratio-16-9 {
+      padding-top: calc((9 / 16) * 100%);
+    }
+  }
+
+  body {
+    font-family: 'Avenir Next', sans-serif;
+  }
+}

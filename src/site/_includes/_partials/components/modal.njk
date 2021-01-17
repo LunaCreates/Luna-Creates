@@ -1,16 +1,16 @@
-<div class="modal pos-f dp-f fd-c jc-end ai-c zi-120 md:jc-center" role="dialog" aria-labelledby="dialog-title" aria-describedby="dialog-description" data-modal="key-map" hidden>
-    <div class="modal__inner pos-r mb-48 p-24 bgc-background md:mb-0 md:p-32">
-        <h2 class="fs-md lh-md fvs-md text-tertiary mt-0 mb-16 tt-uc ls-3" id="dialog-title">Your key preview</h2>
-        <p class="fs-xs lh-xs fvs-rg text-body mb-24" id="dialog-description">Please check your preview as your submission is final and will be printed as shown.</p>
+<div class="fixed inset-0 flex-col justify-end items-center bg-foreground bg-opacity-70 z-120 md:justify-center" role="dialog" aria-labelledby="dialog-title" aria-describedby="dialog-description" data-modal="key-map" hidden>
+    <div class="relative w-11/12 mb-48 p-24 bg-background border-1 border-solid border-grey md:mb-0 md:p-32">
+        <h2 class="text-md leading-md fvs-md text-tertiary mt-0 mb-16 uppercase tracking-3" id="dialog-title">Your key preview</h2>
+        <p class="text-xs leading-xs fvs-rg text-grey mb-24" id="dialog-description">Please check your preview as your submission is final and will be printed as shown.</p>
 
-        <div class="modal__key-map pos-r mb-24 ta-center" data-key-map></div>
+        <div class="modal__key-map relative mb-24 text-center" data-key-map></div>
 
         {% set variant = product.options[0] %}
 
-        <a href="/cart/" class="modal__basket-button bgc-secondary text-foreground fs-xs lh-xs fvs-md py-16 px-24 borr-5 tt-uc ls-1 dp-ib ol-3-solid-transparent focus:olc-primary hover:bgc-secondary md:px-32" data-variant-id="{{variant.id}}" data-variant-options='{"key":"{{variant.name}}","value":"{{variant.value}}"}' data-add-to-basket>Add map to basket</a>
+        <a href="/cart/" class="modal__basket-button bg-secondary text-foreground text-xs leading-xs fvs-md py-16 px-24 rounded-5 uppercase tracking-1 inline-block outline-transparent focus:outline-primary hov:hover:bg-secondary md:px-32" data-variant-id="{{variant.id}}" data-variant-options='{"key":"{{variant.name}}","value":"{{variant.value}}"}' data-add-to-basket>Add map to basket</a>
 
-        <button class="modal__close-button pos-a p-8" aria-label="Close dialog" data-close-modal="data-close-modal">
-            <svg height="24" width="24" aria-hidden="true" class="modal__close-icon pe-none">
+        <button class="modal__close-button absolute p-8" aria-label="Close dialog" data-close-modal="data-close-modal">
+            <svg height="24" width="24" aria-hidden="true" class="modal__close-icon pointer-events-none">
                 <use xlink:href="/icons/sprite.svg#close"></use>
             </svg>
         </button>

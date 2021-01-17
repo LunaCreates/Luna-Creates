@@ -1,13 +1,13 @@
-<li class="pos-r mt-16" aria-labelledby="payment-icons-title">
+<div class="relative mt-16" aria-labelledby="payment-icons-title">
     <h3 class="sr-only" id="payment-icons-title">Accepted payment methods</h3>
 
-    <ul class="dp-g gtc-5 gg-16 md:gg-8 md:ai-s md:ji-s">
+    <ul class="grid grid-cols-5 gap-16 md:gap-8 md:items-start">
     {% for icon in paymentIcons %}
         <li aria-label="{{icon.title}}">
-            <svg class="payment-icons__icon" width="30" height="30" aria-hidden="true">
+            <svg class="w-full h-full" width="30" height="30" aria-hidden="true">
                 <use xlink:href="/icons/sprite.svg#{{icon.id}}"></use>
             </svg>
         </li>
     {% endfor %}
     </ul>
-</li>
+</div>

@@ -11,7 +11,6 @@ const PurgecssPlugin = require('purgecss-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ImageminWebpWebpackPlugin = require('imagemin-webp-webpack-plugin');
 const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
-const StylelintPlugin = require('stylelint-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 
 const purgeFromJs = (content) => content.match(/[A-Za-z0-9-_:\/]+/g) || [];
@@ -32,19 +31,6 @@ function Bundle() {
     }),
     new MiniCssExtractPlugin({
       filename: 'css/main.css?cb=[chunkhash]'
-    }),
-    new PurgecssPlugin({
-      paths: globAll([
-        `${purgePath}/site/**/*.njk`,
-        `${purgePath}/scripts/**/*.ts`,
-        `${purgePath}/functions/*.js`
-      ]),
-      extractors: [
-        {
-          extractor: purgeFromJs,
-          extensions: ['njk']
-        }
-      ]
     }),
     new HtmlWebpackPlugin({
       inject: false,
@@ -76,13 +62,30 @@ function Bundle() {
       }
     }]),
     new ImageminWebpWebpackPlugin(),
-    new StylelintPlugin(plugin.stylelint),
     new SpriteLoaderPlugin({ plainSprite: true }),
     new webpack.LoaderOptionsPlugin({
       debug: true
     })
     // new BundleAnalyzerPlugin()
   ];
+
+  if (prod) {
+    plugins.push(
+      new PurgecssPlugin({
+        paths: globAll([
+          `${purgePath}/site/**/*.njk`,
+          `${purgePath}/scripts/**/*.ts`,
+          `${purgePath}/functions/*.js`
+        ]),
+        extractors: [
+          {
+            extractor: purgeFromJs,
+            extensions: ['njk']
+          }
+        ]
+      })
+    )
+  }
 
   return {
     cache: false,
@@ -91,7 +94,7 @@ function Bundle() {
 
     entry: {
       common: path.resolve(__dirname, 'src/scripts/main.ts'),
-      main: path.resolve(__dirname, 'src/styles/main.scss'),
+      main: path.resolve(__dirname, 'src/styles/tailwind.css'),
       sprite: glob('./src/icons/*.svg')
     },
 
@@ -112,7 +115,7 @@ function Bundle() {
           exclude: /node_modules/
         },
         {
-          test: /\.s[ac]ss$/i,
+          test: /\.css$/i,
           use: [
             {
               loader: MiniCssExtractPlugin.loader,
@@ -128,21 +131,7 @@ function Bundle() {
                 url: false
               }
             },
-            {
-              loader: 'postcss-loader',
-              options: {
-                plugins: () => [
-                  require('postcss-sort-media-queries'),
-                  require('postcss-minify-selectors'),
-                  require('postcss-clean')(plugin.cleancss),
-                  require('autoprefixer'),
-                  require('cssnano')(plugin.cssnano)
-                ]
-              }
-            },
-            {
-              loader: 'sass-loader'
-            }
+            { loader: 'postcss-loader' }
           ]
         },
         {

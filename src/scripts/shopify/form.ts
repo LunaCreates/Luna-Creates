@@ -21,16 +21,16 @@ function Form(product: HTMLElement) {
 
   function buildChosenPinHtml(textColor: string | null, hexColor: string | null) {
     return `
-      <div class="pos-r dp-f jc-between ai-c mt-24" id="${textColor}-chosen" data-pin-chosen="${textColor}">
-        <span class="pin-color pos-r borr-50" style="width: 2.5rem; height: 2.5rem; background-color: ${hexColor};" aria-hidden="true"></span>
+      <div class="relative flex justify-between items-center mt-24" id="${textColor}-chosen" data-pin-chosen="${textColor}">
+        <span class="pin-color relative rounded-full" style="width: 2.5rem; height: 2.5rem; background-color: ${hexColor};" aria-hidden="true"></span>
 
-        <label for="${textColor}-text" class="pin-color pos-r borr-50" style="width: 2.5rem; height: 2.5rem; background-color: ${hexColor};">
+        <label for="${textColor}-text" class="pin-color relative rounded-full" style="width: 2.5rem; height: 2.5rem; background-color: ${hexColor};">
           <span class="sr-only">Enter your ${textColor} pins label</span>
         </label>
 
-        <input class="pin-color__text fg-3 ml-8 py-8 px-16 fs-sm lh-sm fvs-rg text-heading" type="text" maxlength="35" placeholder="${textColor} pins label" id="${textColor}-text" name="pin label">
+        <input class="pin-color__text fg-3 ml-8 py-8 px-16 text-sm leading-sm fvs-rg text-grey-neutral" type="text" maxlength="35" placeholder="${textColor} pins label" id="${textColor}-text" name="pin label">
 
-        <p class="dp-n fg-3 ml-8 py-8 px-16 fs-sm fst-italic lh-sm fvs-rg text-heading">30x ${textColor} pins </p>
+        <p class="hidden fg-3 ml-8 py-8 px-16 text-sm italic leading-sm fvs-rg text-grey-neutral">30x ${textColor} pins </p>
       </div>
     `;
   }

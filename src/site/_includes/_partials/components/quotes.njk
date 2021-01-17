@@ -1,53 +1,49 @@
-<section class="pos-r my-32 py-32 bgc-fade ta-center md:my-56 md:py-48 lg:my-80" aria-describedby="quotes-title">
-    <h2 class="sr-only text-heading" id="quotes-title">Recent reviews</h2>
+<section class="relative my-32 py-32 bg-grey-fade text-center md:my-56 md:py-48 lg:my-80" aria-describedby="quotes-title">
+    <h2 class="sr-only text-grey-neutral" id="quotes-title">Recent reviews</h2>
 
-    <div class="container px-16">
-        <div data-component="quotes">
-            <div class="glide__track" data-glide-el="track">
-                <ul class="glide__slides md:dp-g md:gtc-3 md:gg-32">
-                    <li class="glide__slide">
-                        <blockquote>
-                            <svg class="quotes__icon" width="20" height="19" aria-hidden="true">
-                                <use xlink:href="/icons/sprite.svg#quote"></use>
-                            </svg>
-                            <p class="my-16 fs-sm lh-sm fvs-rg text-body">Just want to say thank you for the incredible customer service provided, will certainly recommend you to friends!</p>
-                            <cite class="quotes__cite fs-sx lh-sx fvs-md fst-normal">Kate</cite>
-                        </blockquote>
-                    </li>
+    <ul class="container flex flex-nowrap overflow-x-auto mx-auto scroll-snap-x md:grid md:grid-cols-3 md:gap-32 md:px-16">
+        <li class="min-w-full scroll-snap-center px-16 md:px-0">
+            <blockquote>
+                <svg class="mx-auto md:min-w-1.5 md:h-auto" width="20" height="19" aria-hidden="true">
+                    <use xlink:href="/icons/sprite.svg#quote"></use>
+                </svg>
+                <p class="my-16 text-sm leading-sm fvs-rg text-grey">Just want to say thank you for the incredible customer service provided, will certainly recommend you to friends!</p>
+                <cite class="text-xs leading-xs fvs-md not-italic">Kate</cite>
+            </blockquote>
+        </li>
 
-                    <li class="glide__slide">
-                        <blockquote>
-                            <svg class="quotes__icon" width="20" height="19" aria-hidden="true">
-                                <use xlink:href="/icons/sprite.svg#quote"></use>
-                            </svg>
-                            <p class="my-16 fs-sm lh-sm fvs-rg text-body">I was really impressed with the quality of the printing and framing. It looks great on our kitchen wall!</p>
-                            <cite class="quotes__cite fs-sx lh-sx fvs-md fst-normal">Gemma L</cite>
-                        </blockquote>
-                    </li>
+        <li class="min-w-full scroll-snap-center px-16 md:px-0">
+            <blockquote>
+                <svg class="mx-auto md:min-w-1.5 md:h-auto" width="20" height="19" aria-hidden="true">
+                    <use xlink:href="/icons/sprite.svg#quote"></use>
+                </svg>
+                <p class="my-16 text-sm leading-sm fvs-rg text-grey">I was really impressed with the quality of the printing and framing. It looks great on our kitchen wall!</p>
+                <cite class="text-xs leading-xs fvs-md not-italic">Gemma L</cite>
+            </blockquote>
+        </li>
 
-                    <li class="glide__slide">
-                        <blockquote>
-                            <svg class="quotes__icon" width="20" height="19" aria-hidden="true">
-                                <use xlink:href="/icons/sprite.svg#quote"></use>
-                            </svg>
-                            <p class="my-16 fs-sm lh-sm fvs-rg text-body">What amazing customer service you have, backed up by a truly great product. I just wanted to say thank you for being such a pleasure to deal with.</p>
-                            <cite class="quotes__cite fs-sx lh-sx fvs-md fst-normal">Cameron</cite>
-                        </blockquote>
-                    </li>
-                </ul>
-            </div>
+        <li class="min-w-full scroll-snap-center px-16 md:px-0">
+            <blockquote>
+                <svg class="mx-auto md:min-w-1.5 md:h-auto" width="20" height="19" aria-hidden="true">
+                    <use xlink:href="/icons/sprite.svg#quote"></use>
+                </svg>
+                <p class="my-16 text-sm leading-sm fvs-rg text-grey">What amazing customer service you have, backed up by a truly great product. I just wanted to say thank you for being such a pleasure to deal with.</p>
+                <cite class="text-xs leading-xs fvs-md not-italic">Cameron</cite>
+            </blockquote>
+        </li>
+    </ul>
 
-            <div class="glide__bullets md:dp-n" data-glide-el="controls[nav]">
-                <button type="button" class="glide__bullet glide__bullet--active" data-glide-dir="=0">
-                    <span class="glide__bullet-body">Quote 1</span>
-                </button>
-                <button type="button" class="glide__bullet" data-glide-dir="=1">
-                    <span class="glide__bullet-body">Quote 2</span>
-                </button>
-                <button type="button" class="glide__bullet" data-glide-dir="=2">
-                    <span class="glide__bullet-body">Quote 3</span>
-                </button>
-            </div>
-        </div>
+    <div class="inline-flex justify-between items-center mt-16 md:hidden" aria-hidden="true">
+        <svg class="mr-8" width="19" height="25" fill="var(--color-tertiary)">
+            <use xlink:href="/icons/sprite.svg#touch"></use>
+        </svg>
+
+        <span class="inline-flex justify-between items-baseline text-primary">
+            Swipe for more
+
+            <svg class="ml-8" width="18" height="12" fill="currentColor">
+                <use xlink:href="/icons/sprite.svg#arrow"></use>
+            </svg>
+        </span>
     </div>
 </section>
