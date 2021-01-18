@@ -26,7 +26,6 @@
     "@11ty/eleventy": "^0.11.1",
     "@11ty/eleventy-cache-assets": "^2.0.4",
     "@11ty/eleventy-img": "^0.7.0",
-    "@glidejs/glide": "^3.4.1",
     "@types/node": "^13.13.38",
     "algoliasearch": "^4.8.0",
     "autoprefixer": "^9.8.6",
