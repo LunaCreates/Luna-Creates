@@ -82,6 +82,62 @@
     padding-top: 100%;
   }
 
+  [data-product-map-title]::placeholder,
+  [data-pin-label]::placeholder {
+    font-style: italic;
+  }
+
+  [data-pin]:checked {
+    background-color: var(--color);
+  }
+
+  [data-pin]:disabled {
+    opacity: 0.25;
+    cursor: not-allowed;
+  }
+
+  [data-pin]:checked ~ [data-chosen-pins] {
+    display: block;
+  }
+
+  [data-map="size"]:checked + div,
+  [data-map="frame"]:checked + div {
+    background-color: var(--color-secondary);
+  }
+
+  [data-map="size"]:checked ~ [data-map-size-selected],
+  [data-map="frame"]:checked ~ [data-map-frame-selected] {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  [data-map="frame"]:checked + div > * {
+    background-color: transparent;
+  }
+
+  [id='pink-pin']:checked ~ * [id='pink-chosen'],
+  [id='light-blue-pin']:checked ~ * [id='light-blue-chosen'],
+  [id='green-pin']:checked ~ * [id='green-chosen'],
+  [id='purple-pin']:checked ~ * [id='purple-chosen'],
+  [id='white-pin']:checked ~ * [id='white-chosen'],
+  [id='yellow-pin']:checked ~ * [id='yellow-chosen'],
+  [id='red-pin']:checked ~ * [id='red-chosen'],
+  [id='blue-pin']:checked ~ * [id='blue-chosen'],
+  [id='orange-pin']:checked ~ * [id='orange-chosen'],
+  [id='black-pin']:checked ~ * [id='black-chosen'] {
+    display: flex;
+  }
+
+  [id='map-label-no']:checked  ~ [data-pin-chosen] label,
+  [id='map-label-no']:checked  ~ [data-pin-chosen] input,
+  [id='map-label-yes']:checked  ~ [data-pin-chosen] span {
+    display: none;
+  }
+
+  [id='map-label-no']:checked  ~ [data-pin-chosen] p {
+    display: block;
+  }
+
   @variants responsive {
     .before::before,
     .after::after {

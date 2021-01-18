@@ -38,15 +38,17 @@
         {%- endfor -%}
     </div>
 
-    <div class="p-24 bg-grey-neutral rounded-4">
-        <h2 class="product__personalisation-title relative text-md leading-md fvs-md my-0 pb-24 text-tertiary uppercase">Personalisation</h2>
+    <div class="p-24 bg-grey-light rounded-4">
+        <h2 class="relative text-md leading-md fvs-md my-0 text-tertiary uppercase">Personalisation</h2>
 
-        <div class="relative mt-16 mb-32">
+        <hr class="mt-24 mb-16 -mx-24 border-grey-border">
+
+        <div class="relative mb-32">
             <label for="map-title" class="text-sm leading-sm fvs-md inline-block mb-8 text-tertiary">
                 Map title
                 <small class="block text-xs leading-xs fvs-md text-grey">Displayed beneath your map</small>
             </label>
-            <input type="text" name="title" class="product__input text-sm leading-sm fvs-rg block py-8 px-16 text-grey-neutral w-full" minlength="3" maxlength="36" placeholder="{{ titleHolder }}" id="map-title" data-product-map-title required>
+            <input type="text" name="title" class="text-sm leading-sm fvs-rg block py-8 px-16 text-grey-neutral w-full border-1 border-solid border-grey-border rounded-4" minlength="3" maxlength="36" placeholder="{{ titleHolder }}" id="map-title" data-product-map-title required>
         </div>
 
         <h3 class="text-sm leading-sm fvs-md inline-block mt-0 mb-16 text-tertiary">
@@ -61,37 +63,19 @@
             {% set id = color.name.replace(' ', '-') + '-pin' %}
 
             <label for="{{ name }}" class="sr-only">{{ name }}</label>
-            <input type="checkbox" id="{{ id | lower }}" value="{{ hex }}" name="colors" class="pin-color rounded-full m-8 bg-transparent cursor-pointer" style="width: 2.5rem; height: 2.5rem; border: 7px solid {{ hex }}; --color: {{ hex }};" data-pin="{{ name | lower }}" data-pin-hex="{{ hex }}">
+            <input type="checkbox" id="{{ id | lower }}" value="{{ hex }}" name="colors" class="rounded-full m-8 bg-transparent cursor-pointer appearance-none" style="width: 2.5rem; height: 2.5rem; border: 7px solid {{ hex }}; --color: {{ hex }};" data-pin="{{ name | lower }}" data-pin-hex="{{ hex }}">
         {% endfor %}
 
             <div class="pin-color__chosen w-full mt-32 hidden" data-chosen-pins>
                 <h3 class="text-sm leading-sm fvs-md mt-0 mb-16 text-tertiary">Chosen pins</h3>
 
-                <p class="inline-block mr-8 mb-0">Labels:</p>
+                <p class="inline-block mr-8 mb-0 text-grey">Labels:</p>
 
-                <input class="pin-color__labels product__radio-input inline-flex justify-center items-center relative m-0" type="radio" id="map-label-no" name="show key text" value="no" data-map-key>
+                <input class="inline-flex justify-center items-center relative m-0" width="20" type="radio" id="map-label-no" name="show key text" value="no" data-map-key>
                 <label class="inline-block mr-16" for="map-label-no">Off</label>
 
-                <input class="pin-color__labels product__radio-input inline-flex justify-center items-center relative m-0" type="radio" id="map-label-yes" name="show key text" value="yes" checked data-map-key>
+                <input class="inline-flex justify-center items-center relative m-0" width="20" type="radio" id="map-label-yes" name="show key text" value="yes" checked data-map-key>
                 <label class="inline-block" for="map-label-yes">On</label>
-
-            {# {% for color in colors %}
-                {% set hex = color.hex %}
-                {% set name = color.name.replace(' ', '-') | lower %}
-                {% set placeholder = color.name + ' pins label' %}
-
-                <div class="hidden relative justify-between items-center mt-24" id="{{ name }}-chosen" data-pins-chosen>
-                    <span class="pin-color relative rounded-full" style="width: 2.5rem; height: 2.5rem; background-color: {{ hex }};" aria-hidden="true"></span>
-
-                    <label for="{{ name }}-text" class="pin-color relative rounded-full" style="width: 2.5rem; height: 2.5rem; background-color: {{ hex }};">
-                        <span class="sr-only">Enter your {{ name }} pins label</span>
-                    </label>
-
-                    <input class="pin-color__text fg-3 ml-8 py-8 px-16 text-sm leading-sm fvs-rg text-grey-neutral" type="text" maxlength="35" placeholder="{{ placeholder }}" id="{{ name }}-text" name="pin label">
-
-                    <p class="hidden fg-3 ml-8 py-8 px-16 text-sm italic leading-sm fvs-rg text-grey-neutral">30x {{ color.name | lower }} pins </p>
-                </div>
-            {% endfor %} #}
             </div>
         </div>
 

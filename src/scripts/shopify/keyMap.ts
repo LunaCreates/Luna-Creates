@@ -16,17 +16,19 @@ function KeyMap(product: HTMLElement) {
   }
 
   function renderKeyMapImage(keyMap: string) {
-    const keyMapImage = `<img src="${keyMap}" class="modal__key-map-image" alt="Preview image of personalised key map">`;
+    const keyMapImage = `<img src="${keyMap}" class="w-auto max-h-10" alt="Preview image of personalised key map">`;
 
-    keyMapContainer?.classList.add('modal__key-map--active');
-    keyMapContainer?.insertAdjacentHTML('afterbegin', keyMapImage);
+    if (!keyMapContainer) return;
+
+    keyMapContainer.classList.remove('ratio-4-1');
+    keyMapContainer.innerHTML =  keyMapImage;
   }
 
   function resetKeyMapContainer() {
-    if (!keyMapContainer) return
+    if (!keyMapContainer) return;
 
-    keyMapContainer.classList.remove('modal__key-map--active');
-    keyMapContainer.innerHTML = '';
+    keyMapContainer.classList.add('ratio-4-1');
+    keyMapContainer.innerHTML = '<p class="absolute top-1/2 left-0 w-full max-w-18 px-8 text-base leading-base text-tertiary text-center transform -translate-y-1/2 md:left-1/2 md:px-24 md:-translate-y-1/2">Please wait a moment while your key loads…</p>';
   }
 
   function init() {

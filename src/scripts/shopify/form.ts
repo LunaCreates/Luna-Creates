@@ -28,9 +28,9 @@ function Form(product: HTMLElement) {
           <span class="sr-only">Enter your ${textColor} pins label</span>
         </label>
 
-        <input class="pin-color__text fg-3 ml-8 py-8 px-16 text-sm leading-sm fvs-rg text-grey-neutral" type="text" maxlength="35" placeholder="${textColor} pins label" id="${textColor}-text" name="pin label">
+        <input class="flex-grow ml-8 py-8 px-16 text-sm leading-sm fvs-rg text-grey-neutral border-1 border-solid border-grey-border rounded-4" type="text" maxlength="35" placeholder="${textColor} pins label" id="${textColor}-text" name="pin label" data-pin-label>
 
-        <p class="hidden fg-3 ml-8 py-8 px-16 text-sm italic leading-sm fvs-rg text-grey-neutral">30x ${textColor} pins </p>
+        <p class="hidden flex-grow ml-8 py-8 px-16 text-sm leading-sm fvs-rg text-grey-neutral italic">30x ${textColor} pins </p>
       </div>
     `;
   }

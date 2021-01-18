@@ -77,10 +77,12 @@ module.exports = {
       full: '100%'
     },
     maxWidth: {
+      18: '18rem',
       22: '22rem',
       45: '45rem'
     },
     maxHeight: {
+      10: '10rem',
       28: '28rem',
       40: '40rem',
       '70vh': '70vh'
@@ -175,6 +177,9 @@ module.exports = {
         'width': 'width',
         'visibility': 'visibility'
       },
+      rotate: {
+        135: '135deg'
+      },
       screens: {
         'hov': { 'raw': '(hover)' },
       },
@@ -185,7 +190,7 @@ module.exports = {
   },
   variants: {
     extend: {
-      backgroundColor: ['before', 'after'],
+      backgroundColor: ['before', 'after', 'checked'],
       backgroundSize: ['focus', 'hover'],
       display: ['before', 'after', 'empty'],
       height: ['before', 'after'],
