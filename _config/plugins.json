@@ -1,20 +1,4 @@
 {
-  "cleancss": {
-    "level": {
-      "1": {
-        "all": true,
-        "removeQuotes": false,
-        "roundingPrecision": false,
-        "tidyBlockScopes": false
-      },
-      "2": {
-        "all": true,
-        "mergeSemantically": false,
-        "removeUnusedAtRules": false,
-        "restructureRules": false
-      }
-    }
-  },
   "cssnano": {
     "autoprefixer": true,
     "calc": true,
@@ -44,22 +28,6 @@
     "svgo": false,
     "uniqueSelectors": true,
     "zindex": false
-  },
-  "stylelint": {
-    "configFile": "./_config/stylelint.json",
-    "failAfterError": true,
-    "syntax": "css",
-    "reportOutputDir": "src/reports/stylelint/",
-    "reporters": [
-      {
-        "formatter": "verbose",
-        "console": true
-      },
-      {
-        "formatter": "verbose",
-        "save": "stylelint.txt"
-      }
-    ]
   },
   "uglify": {
     "terserOptions": {

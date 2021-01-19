@@ -6,7 +6,7 @@ function pxToRem(size) {
 
 module.exports = {
   purge: {
-    content: ['../_site/**/*.njk', '../scripts/**/*.ts'],
+    content: ['./src/site/**/*.njk', './src/scripts/**/*.ts'],
     options: {
       safelist: [],
     },
@@ -187,7 +187,7 @@ module.exports = {
         135: '135deg'
       },
       screens: {
-        hov: { 'raw': '(hover)' },
+        hov: { 'raw': '(hover)' }
       },
       width: {
         search: 'calc(100% + 5vw)'
