@@ -1,8 +1,8 @@
 {% extends "_layouts/default.njk" %}
 
 {% block content %}
-    <main class="product container mx-auto pt-24 px-16" aria-describedby="product-title" data-component="product-details" data-product-id="{{product.id}}" data-product-color="{{product.color}}" id="main">
-        <div class="mb-32 md:mb-0 text-center">
+    <main class="container flow-root mx-auto pt-24 px-16" aria-describedby="product-title" data-component="product-details" data-product-id="{{product.id}}" data-product-color="{{product.color}}" id="main">
+        <div class="mb-32 text-center md:mb-0 md:float-left md:w-7/12 md:pr-48">
             {% set mainImage = product.mainImage.split(r/.(jpg|png)/g)[0] %}
 
              <picture class="ratio-1-1 relative block bg-grey-fade pointer-events-none" data-component="product-picture">
@@ -19,9 +19,9 @@
                 </noscript>
             </picture>
 
-            <button type="button" class="relative bg-secondary text-foreground text-xs leading-xs fvs-md py-16 px-24 rounded-b-5 tracking-1 flex justify-center items-center w-full uppercase outline-transparent focus:outline-primary hov:hover:bg-secondary" data-image-zoom>
+            <button type="button" class="relative bg-secondary text-foreground text-xs leading-xs fvs-md py-16 px-24 rounded-b-5 tracking-1 flex justify-center items-center w-full uppercase outline-transparent focus:outline-primary hov:hover:bg-hover-secondary" data-image-zoom>
                 Open image zoom
-                <svg class="product__zoom-icon" width="24" height="24" aria-hidden="true">
+                <svg class="ml-8" width="24" height="24" aria-hidden="true">
                     <use xlink:href="/icons/sprite.svg#zoom"></use>
                 </svg>
             </button>
@@ -43,8 +43,8 @@
             </div>
         </div>
 
-        <div class="product__details">
-            <h1 class="text-lg leading-lg fvs-rg tracking-3 uppercase mt-0 text-grey-neutral" id="product-title">{{product.title}}</h1>
+        <div class="md:float-right md:w-5/12">
+            <h1 class="mb-16 text-lg leading-lg fvs-rg tracking-3 uppercase mt-0 text-grey-neutral" id="product-title">{{product.title}}</h1>
             <span class="text-md leading-md fvs-rg text-grey" aria-live="polite" data-product-price>{{product.minPrice}}</span>
 
             {% for tag in product.tags %}
@@ -79,7 +79,7 @@
         </div>
 
         {% if product.description %}
-        <div class="product__description mt-40 mb-24">
+        <div class="mt-40 mb-24 md:float-left md:w-7/12 md:pr-48">
             <h2 class="text-md leading-md fvs-md mt-0 mb-16 uppercase text-grey-neutral">Product Information</h2>
             {{ product.description | safe }}
         </div>

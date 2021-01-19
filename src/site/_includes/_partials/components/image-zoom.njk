@@ -1,19 +1,19 @@
 <div class="fixed inset-0 flex-col justify-end items-center z-120 before before:absolute before:inset-0 before:bg-foreground before:opacity-70 md:justify-center" role="dialog" aria-labelledby="dialog-title-zoom" data-modal="image-zoom" hidden="hidden">
-    <div class="relative w-11/12 mb-48 p-24 bg-background border-1 border-solid border-grey md:mb-0 md:p-32">
+    <div class="relative w-11/12 mb-48 p-24 bg-background border-1 border-solid border-grey md:w-auto md:mb-0 md:p-32">
         <h2 class="text-md leading-md fvs-md text-tertiary mt-0 mb-16 uppercase tracking-3" id="dialog-title-zoom">Image zoom</h2>
 
-        <div class="relative ratio-1-1 bg-grey-fade" data-modal-zoom="data-modal-zoom">
+        <div class="relative ratio-1-1 bg-grey-fade md:w-50vh md:max-w-32" data-modal-zoom="data-modal-zoom">
             <div class="absolute inset-0" data-product-picture="data-product-picture">
-                <div class="h-full bg-no-repeat bg-cover" style="background-image: url('{{product.mainImage}}.jpg')" data-product-image="data-product-image"></div>
+                <div class="h-full bg-no-repeat bg-cover hov:cursor-zoom-in" style="background-image: url('{{product.mainImage}}.jpg')" data-product-image="data-product-image"></div>
             </div>
         </div>
 
-        <span class="block relative text-sm leading-sm fvs-md text-center mt-16 hov:hidden">Pinch to zoom</span>
-        <span class="hidden relative text-sm leading-sm fvs-md text-center mt-16 hov:block">Click and move to zoom</span>
+        <span class="block relative text-xs leading-xs fvs-rg text-center mt-16 hov:hidden">Pinch to zoom</span>
+        <span class="hidden relative text-xs leading-xs fvs-rg text-center mt-16 hov:block">Click and move to zoom</span>
 
         <div class="fixed inset-0 bg-no-repeat bg-contain opacity-0 transition-opacity duration-300 ease-in-out pointer-events-none z-120" data-bg="url('{{product.mainImage}}.jpg')" data-image-zoom="data-image-zoom"></div>
 
-        <button class="absolute top-16 right-16 text-primary" aria-label="Close dialog" data-close-modal="data-close-modal">
+        <button class="absolute top-16 right-16 text-primary md:top-20 md:right-20" aria-label="Close dialog" data-close-modal="data-close-modal">
             <svg height="40" width="40" fill="currentColor" aria-hidden="true" class="p-8 pointer-events-none">
                 <use xlink:href="/icons/sprite.svg#close"></use>
             </svg>

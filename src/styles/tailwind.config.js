@@ -6,7 +6,7 @@ function pxToRem(size) {
 
 module.exports = {
   purge: {
-    content: ['_site/**/*.html'],
+    content: ['../_site/**/*.njk', '../scripts/**/*.ts'],
     options: {
       safelist: [],
     },
@@ -32,7 +32,7 @@ module.exports = {
       3: '3px',
       4: '4px',
       5: '5px',
-      'full': '50%'
+      full: '50%'
     },
     colors: {
       transparent: 'transparent',
@@ -70,8 +70,9 @@ module.exports = {
       xl: `clamp(${pxToRem(48)}, 4.375vw, ${pxToRem(56)})`,
     },
     minWidth: {
-      '1.5': '1.5rem',
+      1.5: '1.5rem',
       4: '4rem',
+      6: '6rem',
       16: '16rem',
       24: '24rem',
       full: '100%'
@@ -79,6 +80,7 @@ module.exports = {
     maxWidth: {
       18: '18rem',
       22: '22rem',
+      32: '32rem',
       45: '45rem'
     },
     maxHeight: {
@@ -140,7 +142,8 @@ module.exports = {
       80: pxToRem(80),
       84: pxToRem(84),
       88: pxToRem(88),
-      '5vw': '5vw'
+      '5vw': '5vw',
+      '50vh': '50vh'
     },
     transformOrigin: {
       '5-11': '5px 11px',
@@ -168,20 +171,23 @@ module.exports = {
       backgroundPosition: {
         link: '0 100%'
       },
+      cursor: {
+        'zoom-in': 'zoom-in'
+      },
       height: {
         1: pxToRem(1)
       },
       transitionProperty: {
         'background-size': 'background-size',
-        'height': 'height',
-        'width': 'width',
-        'visibility': 'visibility'
+        height: 'height',
+        width: 'width',
+        visibility: 'visibility'
       },
       rotate: {
         135: '135deg'
       },
       screens: {
-        'hov': { 'raw': '(hover)' },
+        hov: { 'raw': '(hover)' },
       },
       width: {
         search: 'calc(100% + 5vw)'
@@ -192,6 +198,7 @@ module.exports = {
     extend: {
       backgroundColor: ['before', 'after', 'checked'],
       backgroundSize: ['focus', 'hover'],
+      cursor: ['responsive'],
       display: ['before', 'after', 'empty'],
       height: ['before', 'after'],
       inset: ['before', 'after'],
