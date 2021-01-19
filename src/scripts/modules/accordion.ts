@@ -4,7 +4,7 @@ function Accordion(element: HTMLElement, className: string) {
     const headingText: string | null = heading.textContent;
 
     const buttonHtml = `
-      <button type="button" class="${className}__button text-sm leading-sm fvs-md text-primary flex justify-between items-center w-full py-8 text-sm leading-sm fvs-md text-left outline-transparent focus:outline-primary" aria-expanded="false" data-accordion-button="${id}">
+      <button type="button" class="${className}__button text-sm leading-sm fvs-md text-primary flex justify-between items-center w-full py-8 text-left outline-transparent focus:outline-primary" aria-expanded="false" data-accordion-button="${id}">
         ${headingText}
 
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="${className}__icon ml-16 md:ml-24" aria-hidden="true"><path d="M7.41 8.59003L12 13.17L16.59 8.59003L18 10L12 16L6 10L7.41 8.59003Z"></path></svg>

@@ -17,12 +17,13 @@ function ProductThumbnails(element: HTMLElement) {
   }
 
   function handleClickEvent(event: Event) {
-    const target = event.target as Element;
+    const target = event.target as HTMLAnchorElement;
 
     if (target.hasAttribute('data-thumbnail-link')) {
       event.preventDefault();
-      sendPubSubMessage(target as HTMLAnchorElement);
-      setActiveThumbnail(target as HTMLAnchorElement);
+      target.focus();
+      sendPubSubMessage(target);
+      setActiveThumbnail(target);
     }
   }
 

@@ -6,7 +6,11 @@ function pxToRem(size) {
 
 module.exports = {
   purge: {
-    content: ['./src/site/**/*.njk', './src/scripts/**/*.ts'],
+    content: [
+      './src/site/**/*.njk',
+      './src/scripts/**/*.ts',
+      './src/functions/**/*.js'
+    ],
     options: {
       safelist: [],
     },

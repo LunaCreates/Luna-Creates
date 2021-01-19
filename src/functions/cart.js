@@ -9,8 +9,8 @@ function buildImage(image) {
   const imageAlt = image.altText;
 
   return `
-    <picture class="cart__picture pos-r dp-b bgc-fade mr-16 md:mr-24">
-      <img class="pos-a top-0 right-0 bottom-0 left-0 h-full of-cover" src="${imageSrc}_100x100.jpg" alt="${imageAlt}" width="100" height="100" loading="lazy" />
+    <picture class="relative block bg-grey-fade mr-16 md:mr-24">
+      <img class="absolute inset-0 h-full object-cover" src="${imageSrc}_100x100.jpg" alt="${imageAlt}" width="100" height="100" loading="lazy" />
     </picture>
   `;
 }
@@ -19,7 +19,7 @@ function renderAttributes(attribute) {
   const key = attribute.key;
   const value = attribute.value;
 
-  return `<small class="cart__table-options fs-xs lh-xs fvs-md dp-b fst-italic"><strong>${key}</strong>: ${value}</small>`
+  return `<small class="text-xs leading-xs fvs-md block italic"><strong>${key}</strong>: ${value}</small>`
 }
 
 function renderCartItem(item, index, arr) {
@@ -28,28 +28,28 @@ function renderCartItem(item, index, arr) {
   const total = price * item.node.quantity;
   const variantId = item.node.variant.id;
   const lastItem = arr.length === index + 1;
-  const border = lastItem ? 'bort-1-solid-neutral borb-1-solid-neutral' : 'bort-1-solid-neutral';
+  const border = lastItem ? 'border-t-1 border-b-1 border-solid border-grey-neutral' : 'border-t-1 border-solid border-grey-neutral';
 
   const html = `
     <tr class="${border}">
-      <th class="ta-left dp-f ai-c minw-250 py-16 pr-16 md:py-24 md:pr-24">
+      <th class="text-left flex items-center minw-250 py-16 pr-16 md:py-24 md:pr-24">
         ${buildImage(item.node.variant.image)}
         <div>
-          <span class="fs-xs lh-xs fvs-rg">${item.node.title}</span>
+          <span class="text-xs leading-xs fvs-rg">${item.node.title}</span>
           ${attributes.map(renderAttributes).join('')}
         </div>
       </th>
-      <td class="fs-xs lh-xs fvs-rg text-body px-16 md:px-32">&pound;${price.toFixed(2)}</td>
-      <td class="s-xs lh-xs fvs-rg text-body px-16 md:px-32">
-        <input type="text" id="variant-${index}" name="variant" value="${variantId}" class="dp-n">
+      <td class="text-xs leading-xs fvs-rg text-body px-16 md:px-32">&pound;${price.toFixed(2)}</td>
+      <td class="text-xs leading-xs fvs-rg text-body px-16 md:px-32">
+        <input type="text" id="variant-${index}" name="variant" value="${variantId}" class="hidden">
 
         <label class="sr-only" for="quantity-${index}">Quantity</label>
-        <input type="number" id="quantity-${index}" name="quantity" value="${item.node.quantity}" min="1" class="py-8 px-16 text-heading fs-base lh-base fvs-rg w-60px" pattern="[0-9]*">
+        <input type="number" id="quantity-${index}" name="quantity" value="${item.node.quantity}" min="1" class="py-8 px-16 text-heading text-base leading-base fvs-rg w-60px" pattern="[0-9]*">
       </td>
-      <td class="s-xs lh-xs fvs-rg text-body px-16 md:px-32">&pound;${total.toFixed(2)}</td>
+      <td class="text-xs leading-xs fvs-rg text-body px-16 md:px-32">&pound;${total.toFixed(2)}</td>
       <td class="px-16 md:px-32">
-        <button class="cart__remove bor-1-solid-body text-body" type="button" aria-label="Remove item" data-variant-id="${variantId}">
-          <svg class="cart__icon p-16 pe-none" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+        <button class="border-1 border-solid border-grey text-body" type="button" aria-label="Remove item" data-variant-id="${variantId}">
+          <svg class="p-16 pointer-events-none xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
             <path d="M4 10v20c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V10H4zm6 18H8V14h2v14zm4 0h-2V14h2v14zm4 0h-2V14h2v14zm4 0h-2V14h2v14zM26.5 4H20V1.5c0-.825-.675-1.5-1.5-1.5h-7c-.825 0-1.5.675-1.5 1.5V4H3.5C2.675 4 2 4.675 2 5.5V8h26V5.5c0-.825-.675-1.5-1.5-1.5zM18 4h-6V2.025h6V4z"/>
           </svg>
         </button>
@@ -61,13 +61,13 @@ function renderCartItem(item, index, arr) {
 }
 
 function renderImage(image) {
-  return `<img src="${image.image}" class="cart__preview-image" role="presentation" data-image-id="${image.id}" />`
+  return `<img src="${image.image}" class="" role="presentation" data-image-id="${image.id}" />`
 }
 
 function renderKeyMapImages(keyMapImages) {
   if (keyMapImages && keyMapImages.length > 0) {
     return `
-      <p class="gcsp-full ta-left mb-0" aria-hidden="true">Map preview:</p>
+      <p class="col-span-full text-left mb-0" aria-hidden="true">Map preview:</p>
       ${keyMapImages.map(renderImage).join('')}
     `;
   }
@@ -82,15 +82,15 @@ function renderTableData(data) {
   const checkoutUrl = checkoutData.webUrl;
 
   return `
-    <div class="mb-32 ovx-auto">
+    <div class="mb-32 overflow-x-auto">
         <table class="minw-600 md:w-full">
             <thead>
                 <tr>
-                    <th class="fs-xs lh-xs fvs-rg pb-16 text-body ta-left md:pb-24">Product</th>
-                    <th class="fs-xs lh-xs fvs-rg pb-16 text-body md:pb-24">Price</th>
-                    <th class="fs-xs lh-xs fvs-rg pb-16 text-body md:pb-24">Quantity</th>
-                    <th class="fs-xs lh-xs fvs-rg pb-16 text-body md:pb-24">Total</th>
-                    <th class="pb-16 op-0 text-body md:pb-24">Option</th>
+                    <th class="text-xs leading-xs fvs-rg pb-16 text-body text-left md:pb-24">Product</th>
+                    <th class="text-xs leading-xs fvs-rg pb-16 text-body md:pb-24">Price</th>
+                    <th class="text-xs leading-xs fvs-rg pb-16 text-body md:pb-24">Quantity</th>
+                    <th class="text-xs leading-xs fvs-rg pb-16 text-body md:pb-24">Total</th>
+                    <th class="pb-16 opacity-0 text-body md:pb-24">Option</th>
                 </tr>
             </thead>
 
@@ -100,17 +100,17 @@ function renderTableData(data) {
         </table>
     </div>
 
-    <div class="mb-24 md:dp-g md:gtc-2">
-      <div class="dp-g gtc-2 gg-24 mb-24 ai-c">
+    <div class="mb-24 md:grid md:grid-cols-2">
+      <div class="grid grid-cols-2 gap-24 mb-24 items-center">
         ${renderKeyMapImages(keyMapImages)}
       </div>
       <div>
-        <p class="mb-8 ta-right"><strong>Subtotal:</strong> &pound;${subtotal.toFixed(2)}</p>
-        <p class="fs-xs lh-xs fvs-rg my-0 ta-right fst-italic text-body">Shipping &amp; taxes calculated at checkout</p>
+        <p class="mb-8 text-right"><strong>Subtotal:</strong> &pound;${subtotal.toFixed(2)}</p>
+        <p class="text-xs leading-xs fvs-rg my-0 text-right italic text-body">Shipping &amp; taxes calculated at checkout</p>
 
-        <div class="dp-f flex-wrap jc-end mt-24">
-            <button type="submit" class="bgc-primary text-background fs-xs lh-xs fvs-md py-16 px-24 borr-5 tt-uc ls-1 ol-3-solid-transparent focus:olc-secondary hover:bgc-foreground md:px-32">Update Cart</button>
-            <a href="${checkoutUrl}" class="bgc-secondary text-foreground fs-xs lh-xs fvs-md py-16 px-24 borr-5 tt-uc ls-1 ml-24 ol-3-solid-transparent focus:olc-primary hover:bgc-secondary md:px-32">Checkout</a>
+        <div class="flex flex-wrap justify-end mt-24">
+            <button type="submit" class="bg-primary text-background text-xs leading-xs fvs-md py-16 px-24 rounded-5 uppercase tracking-1 outline-transparent focus:outline-primary hov:hover:bg-foreground md:px-32">Update Cart</button>
+            <a href="${checkoutUrl}" class="bg-secondary text-foreground text-xs leading-xs fvs-md py-16 px-24 rounded-5 uppercase tracking-1 ml-24 outline-transparent focus:outline-primary hov:hover:bg-secondary md:px-32">Checkout</a>
         </div>
       </div>
     </div>
@@ -120,8 +120,8 @@ function renderTableData(data) {
 function renderNoItemsData() {
   return `
     <div class="mb-24 md:mb-72">
-      <p class="fs-sm lh-sm fvs-rg mb-24">Your cart is currently empty.</p>
-      <a class="bgc-secondary text-foreground fs-xs lh-xs fvs-md py-16 px-24 borr-5 tt-uc ls-1 dp-ib as-c ol-3-solid-transparent focus:olc-primary hover:bgc-secondary md:px-32" href="/products/">Continue shopping</a>
+      <p class="text-sm leading-sm fvs-rg text-grey mb-24">Your cart is currently empty.</p>
+      <a class="bg-secondary text-foreground text-xs leading-xs fvs-md py-16 px-24 rounded-5 uppercase tracking-1 inline-block self-center outline-transparent focus:outline-primary hov:hover:bg-hover-secondary md:px-32" href="/products/">Continue shopping</a>
     </div>
   `;
 }
