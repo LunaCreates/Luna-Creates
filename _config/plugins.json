@@ -31,8 +31,7 @@
   },
   "uglify": {
     "terserOptions": {
-      "minimize": true,
-      "warnings": false,
+      "module": true,
       "compress": {
         "sequences": true,
         "properties": false,
