@@ -120,9 +120,15 @@ observe((element: HTMLFormElement) => {
 
 /** *****
  *
- *  Product Thumbnails
+ *  Product Main Image & Thumbnails
  *
  * ******* */
+
+observe((carousel: HTMLElement) => {
+  import(/* webpackChunkName: "product-main-image" */ 'Src/scripts/productMainImage')
+    .then(module => initModule(module, carousel))
+    .catch(err => console.error(`Error in: Product Main Image - ${err}`));
+}, document.querySelectorAll('[data-component="product-picture"]'));
 
 observe((element: HTMLElement) => {
   import(/* webpackChunkName: "product-thumbnails" */ 'Src/scripts/productThumbnails')
