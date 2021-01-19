@@ -141,7 +141,9 @@ function Bundle() {
     resolve: {
       alias,
       extensions: ['.ts', '.js']
-    }
+    },
+
+    watch: prod ? false : true
   };
 }
 
