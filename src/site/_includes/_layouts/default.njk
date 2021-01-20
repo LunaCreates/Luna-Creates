@@ -1,24 +1,38 @@
-{% include "_partials/head.njk" %}
-{% include "_partials/components/notification.njk" %}
-{% include "_partials/components/header.njk" %}
 
-{% block content %}
-{% endblock content %}
+<!DOCTYPE html>
+<html class="no-js" lang="en-GB">
+    {% include "_partials/head.njk" %}
 
-{% include "_partials/components/footer.njk" %}
+    <body>
+        <!-- JAVASCRIPT ALERT -->
+        <noscript>
+            <div>
+                <p>You currently have JavaScript in your browser turned off, so some features of this site may not work fully.</p>
+                <p>Find out <a href="https://enable-javascript.com/" rel="external">how to turn JavaScript on</a>.</p>
+            </div>
+        </noscript>
 
-{% block foot %}
-{% endblock %}
+        {% include "_partials/components/notification.njk" %}
+        {% include "_partials/components/header.njk" %}
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script defer src="https://www.googletagmanager.com/gtag/js?id=UA-117442723-1"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+        {% block content %}
+        {% endblock content %}
 
-    gtag('config', 'UA-117442723-1');
-</script>
+        {% include "_partials/components/footer.njk" %}
 
-<img src="https://www.facebook.com/tr?id=738956073219143&amp;ev=PageView" height="1" width="1" style="position: absolute; bottom: 0; left: 0" role="presentation" aria-hidden="true" />
+        {% block foot %}
+        {% endblock %}
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script defer src="https://www.googletagmanager.com/gtag/js?id=UA-117442723-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-117442723-1');
+        </script>
+
+        <img src="https://www.facebook.com/tr?id=738956073219143&amp;ev=PageView" height="1" width="1" style="position: absolute; bottom: 0; left: 0" role="presentation" aria-hidden="true" />
+    </body>
 </html>
