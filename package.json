@@ -17,9 +17,9 @@
     "start": "npm run dev",
     "dev": "concurrently \"npm:webpack:dev\" \"npm:eleventy:dev\"",
     "build": "npm run webpack:prod && npm run eleventy:prod",
-    "eleventy:dev": "cross-env NODE_ENV=production eleventy --serve",
+    "eleventy:dev": "cross-env NODE_ENV=development eleventy --serve",
     "eleventy:prod": "cross-env NODE_ENV=production eleventy",
-    "webpack:dev": "cross-env NODE_ENV=production webpack",
+    "webpack:dev": "cross-env NODE_ENV=development webpack",
     "webpack:prod": "cross-env NODE_ENV=production webpack"
   },
   "dependencies": {
