@@ -79,6 +79,7 @@ module.exports = {
       6: '6rem',
       16: '16rem',
       24: '24rem',
+      38: '38rem',
       full: '100%'
     },
     maxWidth: {
@@ -146,6 +147,9 @@ module.exports = {
       80: pxToRem(80),
       84: pxToRem(84),
       88: pxToRem(88),
+      92: pxToRem(92),
+      96: pxToRem(96),
+      100: pxToRem(100),
       '5vw': '5vw',
       '50vh': '50vh'
     },

@@ -15,7 +15,7 @@ sitemap:
 
         <form data-form id="cart">
             <div class="mb-32 overflow-x-auto">
-                <table class="minw-600 md:w-full">
+                <table class="min-w-38 md:w-full">
                     <thead>
                         <tr>
                             <th class="text-xs leading-xs fvs-rg pb-16 text-grey text-left md:pb-24">Product</th>
@@ -27,76 +27,82 @@ sitemap:
                     </thead>
 
                     <tbody>
-                        <tr class="border-b-1 border-solid border-grey-fade">
-                            <th class="text-left flex items-center minw-250 py-16 pr-16 md:py-24 md:pr-24">
-                                <picture class="cart__picture cart__picture--skeleton relative block mr-16 md:mr-24"></picture>
-                                <div>
-                                    <span class="cart__table-title cart__table-title--skeleton block relative text-xs leading-xs fvs-rg"></span>
-                                    <small class="cart__table-options cart__table-options--skeleton block w-250px text-xs leading-xs fvs-md block italic relative"></small>
+                        <tr class="border-t-1 border-b-1 border-solid border-grey-border">
+                            <th class="animate-pulse text-left flex items-center min-w-16 py-16 pr-16 md:py-24 md:pr-24">
+                                <picture class="relative block w-100 h-100 flex-initial bg-grey-border mr-16 md:mr-24"></picture>
+                                <div class="flex-1 h-48 bg-grey-border">
+                                    <span class="block min-w-16"></span>
+                                    <small class="block min-w-16"></small>
                                 </div>
                             </th>
-                            <td class="text-xs leading-xs fvs-rg text-grey px-16 md:px-32">
-                                <div aria-hidden="true" class="cart__td cart__td--skeleton">&pound;0.00</div>
+                            <td class="animate-pulse text-xs leading-xs fvs-rg text-grey px-16 md:px-32">
+                                <div aria-hidden="true" class="bg-grey-border text-grey-border">&pound;0.00</div>
                             </td>
-                            <td class="text-xs leading-xs fvs-rg text-grey px-16 md:px-32">
-                                <div aria-hidden="true" class="cart__td cart__td--skeleton"><input aria-hidden="true" class="py-8 px-16 text-grey-neutral text-base leading-base fvs-rg w-60px" type="number" value="1"></div>
+                            <td class="animate-pulse px-16 md:px-32">
+                                <div class="bg-grey-border">
+                                    <input aria-hidden="true" class="py-8 px-16 text-heading text-base leading-base fvs-rg w-60 opacity-0" type="number" value="1">
+                                </div>
                             </td>
-                            <td class="text-xs leading-xs fvs-rg text-grey px-16 md:px-32">
-                                <div aria-hidden="true" class="cart__td cart__td--skeleton">&pound;0.00</div>
+                            <td class="animate-pulse px-16 md:px-32">
+                                <div aria-hidden="true" class="text-xs leading-xs fvs-rg text-grey-border bg-grey-border">&pound;0.00</div>
                             </td>
-                            <td class="text-xs leading-xs fvs-rg text-grey px-16 md:px-32">
-                                <button style="width: 40px; height: 40px;" aria-hidden="true" type="button" class="cart__remove border-1 border-solid border-grey cart__td cart__td--skeleton">
-                                    <svg class="cart__icon p-16" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewbox="0 0 32 32">
+                            <td class="animate-pulse px-16 md:px-32">
+                                <button aria-hidden="true" type="button" class="border-1 border-solid border-grey-border rounded-full bg-grey-border text-grey-border">
+                                    <svg class="p-16 pointer-events-none " xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 32 32" fill="currentColor">
                                         <path d="M4 10v20c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V10H4zm6 18H8V14h2v14zm4 0h-2V14h2v14zm4 0h-2V14h2v14zm4 0h-2V14h2v14zM26.5 4H20V1.5c0-.825-.675-1.5-1.5-1.5h-7c-.825 0-1.5.675-1.5 1.5V4H3.5C2.675 4 2 4.675 2 5.5V8h26V5.5c0-.825-.675-1.5-1.5-1.5zM18 4h-6V2.025h6V4z"/>
                                     </svg>
                                 </button>
                             </td>
                         </tr>
-                        <tr class="border-b-1 border-solid border-grey-fade">
-                            <th class="text-left flex items-center minw-250 py-16 pr-16 md:py-24 md:pr-24">
-                                <picture class="cart__picture cart__picture--skeleton relative block mr-16 md:mr-24"></picture>
-                                <div>
-                                    <span class="cart__table-title cart__table-title--skeleton block relative text-xs leading-xs fvs-rg"></span>
-                                    <small class="cart__table-options cart__table-options--skeleton block w-250px text-xs leading-xs fvs-md block italic relative"></small>
+                        <tr class="border-t-1 border-b-1 border-solid border-grey-border">
+                            <th class="animate-pulse text-left flex items-center min-w-16 py-16 pr-16 md:py-24 md:pr-24">
+                                <picture class="relative block w-100 h-100 flex-initial bg-grey-border mr-16 md:mr-24"></picture>
+                                <div class="flex-1 h-48 bg-grey-border">
+                                    <span class="block min-w-16"></span>
+                                    <small class="block min-w-16"></small>
                                 </div>
                             </th>
-                            <td class="text-xs leading-xs fvs-rg text-grey px-16 md:px-32">
-                                <div aria-hidden="true" class="cart__td cart__td--skeleton">&pound;0.00</div>
+                            <td class="animate-pulse text-xs leading-xs fvs-rg text-grey px-16 md:px-32">
+                                <div aria-hidden="true" class="bg-grey-border text-grey-border">&pound;0.00</div>
                             </td>
-                            <td class="text-xs leading-xs fvs-rg text-grey px-16 md:px-32">
-                                <div aria-hidden="true" class="cart__td cart__td--skeleton"><input aria-hidden="true" class="py-8 px-16 text-grey-neutral text-base leading-base fvs-rg w-60px" type="number" value="1"></div>
+                            <td class="animate-pulse px-16 md:px-32">
+                                <div class="bg-grey-border">
+                                    <input aria-hidden="true" class="py-8 px-16 text-heading text-base leading-base fvs-rg w-60 opacity-0" type="number" value="1">
+                                </div>
                             </td>
-                            <td class="text-xs leading-xs fvs-rg text-grey px-16 md:px-32">
-                                <div aria-hidden="true" class="cart__td cart__td--skeleton">&pound;0.00</div>
+                            <td class="animate-pulse px-16 md:px-32">
+                                <div aria-hidden="true" class="text-xs leading-xs fvs-rg text-grey-border px-16 md:px-32 bg-grey-border">&pound;0.00</div>
                             </td>
-                            <td class="text-xs leading-xs fvs-rg text-grey px-16 md:px-32">
-                                <button style="width: 40px; height: 40px;" aria-hidden="true" type="button" class="cart__remove border-1 border-solid border-grey cart__td cart__td--skeleton">
-                                    <svg class="cart__icon p-16" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewbox="0 0 32 32">
+                            <td class="animate-pulse px-16 md:px-32">
+                                <button aria-hidden="true" type="button" class="border-1 border-solid border-grey-border rounded-full bg-grey-border text-grey-border">
+                                    <svg class="p-16 pointer-events-none " xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 32 32" fill="currentColor">
                                         <path d="M4 10v20c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V10H4zm6 18H8V14h2v14zm4 0h-2V14h2v14zm4 0h-2V14h2v14zm4 0h-2V14h2v14zM26.5 4H20V1.5c0-.825-.675-1.5-1.5-1.5h-7c-.825 0-1.5.675-1.5 1.5V4H3.5C2.675 4 2 4.675 2 5.5V8h26V5.5c0-.825-.675-1.5-1.5-1.5zM18 4h-6V2.025h6V4z"/>
                                     </svg>
                                 </button>
                             </td>
                         </tr>
-                        <tr class="border-b-1 border-solid border-grey-fade">
-                            <th class="text-left flex items-center minw-250 py-16 pr-16 md:py-24 md:pr-24">
-                                <picture class="cart__picture cart__picture--skeleton relative block mr-16 md:mr-24"></picture>
-                                <div>
-                                    <span class="cart__table-title cart__table-title--skeleton block relative text-xs leading-xs fvs-rg"></span>
-                                    <small class="cart__table-options cart__table-options--skeleton block w-250px text-xs leading-xs fvs-md block italic relative"></small>
+                        <tr class="border-t-1 border-b-1 border-solid border-grey-border">
+                            <th class="animate-pulse text-left flex items-center min-w-16 py-16 pr-16 md:py-24 md:pr-24">
+                                <picture class="relative block w-100 h-100 flex-initial bg-grey-border mr-16 md:mr-24"></picture>
+                                <div class="flex-1 h-48 bg-grey-border">
+                                    <span class="block min-w-16"></span>
+                                    <small class="block min-w-16"></small>
                                 </div>
                             </th>
-                            <td class="px-16 md:px-32">
-                                <div aria-hidden="true" class="cart__td cart__td--skeleton">&pound;0.00</div>
+                            <td class="animate-pulse text-xs leading-xs fvs-rg text-grey px-16 md:px-32">
+                                <div aria-hidden="true" class="bg-grey-border text-grey-border">&pound;0.00</div>
                             </td>
-                            <td class="px-16 md:px-32">
-                                <div aria-hidden="true" class="cart__td cart__td--skeleton"><input aria-hidden="true" class="py-8 px-16 text-grey-neutral text-base leading-base fvs-rg w-60px" type="number" value="1"></div>
+                            <td class="animate-pulse px-16 md:px-32">
+                                <div class="bg-grey-border">
+                                    <input aria-hidden="true" class="py-8 px-16 text-heading text-base leading-base fvs-rg w-60 opacity-0" type="number" value="1">
+                                </div>
                             </td>
-                            <td class="px-16 md:px-32">
-                                <div aria-hidden="true" class="cart__td cart__td--skeleton">&pound;0.00</div>
+                            <td class="animate-pulse px-16 md:px-32">
+                                <div aria-hidden="true" class="text-xs leading-xs fvs-rg text-grey-border px-16 md:px-32 bg-grey-border">&pound;0.00</div>
                             </td>
-                            <td class="px-16 md:px-32">
-                                <button style="width: 40px; height: 40px;" aria-hidden="true" type="button" class="cart__remove border-1 border-solid border-grey cart__td cart__td--skeleton">
-                                    <svg class="cart__icon p-16" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewbox="0 0 32 32">
+                            <td class="animate-pulse px-16 md:px-32">
+                                <button aria-hidden="true" type="button" class="border-1 border-solid border-grey-border rounded-full bg-grey-border text-grey-border">
+                                    <svg class="p-16 pointer-events-none " xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 32 32" fill="currentColor">
                                         <path d="M4 10v20c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V10H4zm6 18H8V14h2v14zm4 0h-2V14h2v14zm4 0h-2V14h2v14zm4 0h-2V14h2v14zM26.5 4H20V1.5c0-.825-.675-1.5-1.5-1.5h-7c-.825 0-1.5.675-1.5 1.5V4H3.5C2.675 4 2 4.675 2 5.5V8h26V5.5c0-.825-.675-1.5-1.5-1.5zM18 4h-6V2.025h6V4z"/>
                                     </svg>
                                 </button>
