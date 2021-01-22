@@ -32,15 +32,15 @@
     <link href="https://www.googletagmanager.com/gtag/js?id=UA-117442723-1" rel="preload" as="script">
     <link href="https://polyfill.io/v3/polyfill.min.js?features=ResizeObserver%2CIntersectionObserver%2CString.prototype.includes" rel="preload" as="script">
 
-    {% if renderData.heroImage or heroImage %}
+    {# {% if renderData.heroImage or heroImage %}
         {% set image = renderData.heroImage or heroImage %}
 
         {% preloadImage
             image,
-            '300, 600, 800, 1920',
+            '300, 600, 800, 1600',
             '(min-width: 38em) and (max-width: 47.9375em) 800px, 100vw'
         %}
-    {% endif %}
+    {% endif %} #}
 
     {% if tags and 'product' in tags %}
         {% set image = product.mainImage.split(r/.(jpg|png)/g)[0] %}
