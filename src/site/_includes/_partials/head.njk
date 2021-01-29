@@ -42,14 +42,14 @@
         %}
     {% endif %} #}
 
-    {% if tags and 'product' in tags %}
+    {# {% if tags and 'product' in tags %}
         {% set image = product.mainImage.split(r/.(jpg|png)/g)[0] %}
         {% set imageType = product.mainImage.split(r/.(jpg|png)/g)[1] %}
 
         <link rel="preload" as="image" type="image/webp" imagesrcset="{{image}}_350x350.{{imageType}}.webp 1x, {{image}}_450x450.{{imageType}}.webp 2x" media="(max-width: 37.4375em)"/>
 
         <link rel="preload" as="image" type="image/webp" imagesrcset="{{image}}_600x600.{{imageType}}.webp 1x, {{image}}_800x800.{{imageType}}.webp 2x" media="(min-width: 38em)"/>
-    {% endif %}
+    {% endif %} #}
 
     <!-- STYLESHEET -->
     {% include "_partials/styles.njk" %}

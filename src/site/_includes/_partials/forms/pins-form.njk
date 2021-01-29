@@ -4,12 +4,12 @@
     <div class="relative mb-32">
         <label for="pin-colour" class="text-sm leading-sm fvs-md inline-block mb-8 text-tertiary">Pins</label>
         <div class="relative">
-            <select name="pins" id="pin-colour" class="product__select text-sm leading-sm fvs-rg block py-8 pr-32 pl-16 text-grey-neutral w-full" required="required" data-product-variants="data-product-variants">
-                {% for option in product.options %}
-                    <option value="{{option.value}}" data-name="{{option.name}}" data-id="{{option.id}}" data-price="{{option.price}}">{{option.value}}</option>
-                {% endfor %}
+            <select name="size" id="pin-colour" class="text-sm leading-sm fvs-rg block py-8 pr-32 pl-16 text-grey-neutral w-full border-1 border-solid border-grey-border rounded-4 appearance-none" data-product-variants>
+            {% for option in product.options %}
+                <option value="{{option.value}}" data-name="{{option.name}}" data-id="{{option.id}}" data-price="{{option.price}}">{{option.value}}</option>
+            {% endfor %}
             </select>
-            <svg class="product__select-icon absolute pointer-events-none" width="24" height="24" aria-hidden="true">
+            <svg class="absolute top-1/2 right-8 transform rotate-90 -translate-x-1/2 -translate-y-1/2 pointer-events-none" width="24" height="24" aria-hidden="true">
                 <use xlink:href="/icons/sprite.svg#chevron"></use>
             </svg>
         </div>
@@ -17,7 +17,7 @@
 
     <div class="relative mb-32">
         <label for="quantity" class="text-sm leading-sm fvs-md inline-block mb-8 text-tertiary">Quantity</label>
-        <input type="number" id="quantity" name="quantity" value="1" min="1" class="product__input text-sm leading-sm fvs-rg block py-8 px-16 text-grey-neutral w-1/4" pattern="[0-9]*">
+        <input type="text" id="quantity" name="quantity" value="1" min="1" inputmode="numeric" class="text-sm leading-sm fvs-rg block py-8 px-16 text-grey-neutral border-1 border-solid border-grey-border rounded-4 w-1/4" pattern="[0-9]*">
     </div>
 
     <button type="submit" class="bg-secondary text-foreground text-xs leading-xs fvs-md py-16 px-24 rounded-5 uppercase tracking-1 outline-transparent focus:outline-primary hov:hover:bg-hover-secondary">Add to basket</button>

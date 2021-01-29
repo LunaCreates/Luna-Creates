@@ -1,7 +1,7 @@
 {% extends "_layouts/default.njk" %}
 
 {% block content %}
-    <main class="container flow-root mx-auto pt-24 px-16" aria-describedby="product-title" data-component="product-details" data-product-id="{{product.id}}" data-product-color="{{product.color}}" id="main">
+    <main class="container mx-auto pt-24 px-16 md:flow-root md:pt-40" aria-describedby="product-title" data-component="product-details" data-product-id="{{product.id}}" data-product-color="{{product.color}}" id="main">
         <div class="mb-32 text-center md:mb-0 md:float-left md:w-7/12 md:pr-48">
             {% set mainImage = product.mainImage.split(r/.(jpg|png)/g)[0] %}
 
