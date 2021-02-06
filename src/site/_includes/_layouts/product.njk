@@ -81,7 +81,10 @@
         {% if product.description %}
         <div class="mt-40 mb-24 md:float-left md:w-7/12 md:pr-48">
             <h2 class="text-md leading-md fvs-md mt-0 mb-16 uppercase text-grey-neutral">Product Information</h2>
-            {{ product.description | safe }}
+
+            <div class="rte">
+                {{ product.description | safe }}
+            </div>
         </div>
         {% endif %}
 
