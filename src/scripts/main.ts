@@ -101,6 +101,18 @@ observe((element: HTMLElement) => {
 
 /** *****
  *
+ *  More Toggle
+ *
+ * ******* */
+
+observe((element: HTMLElement) => {
+  import(/* webpackChunkName: "more-toggle" */ 'Src/scripts/moreToggle')
+    .then(module => initModule(module, element))
+    .catch(err => console.error(`Error in: More Toggle - ${err}`));
+}, document.querySelectorAll('[data-component="more-toggle"]'));
+
+/** *****
+ *
  *  Forms
  *
  * ******* */
