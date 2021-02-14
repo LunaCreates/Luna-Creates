@@ -8,7 +8,7 @@ const token = process.env.STOREFRONT_API_TOKEN;
 
 async function allCollectionsData() {
   const data = await Cache(`${process.env.STOREFRONT_API_URL}?categories`, {
-    duration: '1d',
+    duration: '1s',
     type: 'json',
     fetchOptions: {
       method: 'POST',
