@@ -65,13 +65,13 @@ module.exports = {
       3: '3px'
     },
     lineHeight: {
-      xxs: `clamp(${pxToRem(21)}, 1.641vw, ${pxToRem(23)})`,
-      xs: `clamp(${pxToRem(23)}, 2.109vw, ${pxToRem(28)})`,
-      sm: `clamp(${pxToRem(25)}, 2.266vw, ${pxToRem(32)})`,
+      xxs: `clamp(${pxToRem(21)}, 2.237vw, ${pxToRem(23)})`,
+      xs: `clamp(${pxToRem(23)}, 2.724vw, ${pxToRem(28)})`,
+      sm: `clamp(${pxToRem(25)}, 3.113vw, ${pxToRem(32)})`,
       base: pxToRem(28),
-      md: `clamp(${pxToRem(32)}, 2.813vw, ${pxToRem(36)})`,
-      lg: `clamp(${pxToRem(36)}, 3.750vw, ${pxToRem(48)})`,
-      xl: `clamp(${pxToRem(48)}, 4.375vw, ${pxToRem(56)})`,
+      md: `clamp(${pxToRem(32)}, 3.502vw, ${pxToRem(36)})`,
+      lg: `clamp(${pxToRem(36)}, 4.669vw, ${pxToRem(48)})`,
+      xl: `clamp(${pxToRem(48)}, 5.447vw, ${pxToRem(56)})`,
     },
     minWidth: {
       1.5: '1.5rem',
@@ -107,19 +107,19 @@ module.exports = {
       3: '3 3 0%'
     },
     fontSize: {
-      xxs: `clamp(${pxToRem(12)}, 1.094vw, ${pxToRem(14)})`,
-      xs: `clamp(${pxToRem(14)}, 1.250vw, ${pxToRem(16)})`,
-      sm: `clamp(${pxToRem(16)}, 1.563vw, ${pxToRem(20)})`,
+      xxs: `clamp(${pxToRem(12)}, 1.362vw, ${pxToRem(14)})`,
+      xs: `clamp(${pxToRem(14)}, 1.556vw, ${pxToRem(16)})`,
+      sm: `clamp(${pxToRem(16)}, 1.751vw, ${pxToRem(18)})`,
       base: pxToRem(16),
-      md: `clamp(${pxToRem(20)}, 1.953vw, ${pxToRem(25)})`,
-      lg: `clamp(${pxToRem(20)}, 2.344vw, ${pxToRem(30)})`,
-      xl: `clamp(${pxToRem(30)}, 2.578vw, ${pxToRem(33)})`,
+      md: `clamp(${pxToRem(18)}, 2.432vw, ${pxToRem(25)})`,
+      lg: `clamp(${pxToRem(20)}, 2.918vw, ${pxToRem(30)})`,
+      xl: `clamp(${pxToRem(30)}, 3.210vw, ${pxToRem(33)})`,
     },
     screens: {
       xs: '23.375rem',
       sm: '37.5rem',
       md: '48rem',
-      lg: '62rem',
+      lg: '64.25rem',
       xl: '87.5rem'
     },
     spacing: {
@@ -183,7 +183,8 @@ module.exports = {
         'zoom-in': 'zoom-in'
       },
       height: {
-        1: pxToRem(1)
+        1: pxToRem(1),
+        150: pxToRem(150)
       },
       transitionProperty: {
         'background-size': 'background-size',
@@ -205,6 +206,7 @@ module.exports = {
   variants: {
     extend: {
       backgroundColor: ['before', 'after', 'checked'],
+      backgroundImage: ['before', 'after'],
       backgroundSize: ['focus', 'hover'],
       cursor: ['responsive'],
       display: ['before', 'after', 'empty'],

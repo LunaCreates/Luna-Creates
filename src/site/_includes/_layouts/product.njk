@@ -47,6 +47,23 @@
             <h1 class="mb-16 text-lg leading-lg fvs-rg tracking-3 uppercase mt-0 text-grey-neutral" id="product-title">{{product.title}}</h1>
             <span class="text-md leading-md fvs-rg text-grey" aria-live="polite" data-product-price>{{product.minPrice}}</span>
 
+            {% if product.description %}
+            <div class="mt-24 mb-32 md:hidden" data-component="more-toggle">
+                <h2 class="text-md leading-md fvs-md mt-0 mb-16 uppercase text-grey-neutral">Product Information</h2>
+
+                <div class="rte relative overflow-hidden after after:absolute after:bottom-0 after:left-0 after:w-full after:h-150 after:bg-gradient-to-t from-background" data-toggle>
+                    {{ product.description | safe }}
+                </div>
+
+                <button class="text-sm leading-sm fvs-md text-tertiary flex justify-between items-center mt-16 uppercase md:hidden" aria-hidden="true" data-toggle-more>
+                    Show more
+                    <svg class="transform rotate-90" width="28" height="28">
+                        <use xlink:href="/icons/sprite.svg#chevron"></use>
+                    </svg>
+                </button>
+            </div>
+            {% endif %}
+
             {% for tag in product.tags %}
                 {% if tag === 'Map Only' %}
                     {% include "_partials/forms/personalised-form.njk" %}
@@ -79,7 +96,7 @@
         </div>
 
         {% if product.description %}
-        <div class="mt-40 mb-24 md:float-left md:w-7/12 md:pr-48">
+        <div class="hidden md:block md:mt-40 md:float-left md:w-7/12 md:pr-48">
             <h2 class="text-md leading-md fvs-md mt-0 mb-16 uppercase text-grey-neutral">Product Information</h2>
 
             <div class="rte">

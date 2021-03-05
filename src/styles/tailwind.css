@@ -218,4 +218,47 @@
   body {
     font-family: 'Avenir Next', sans-serif;
   }
+
+  .rte h2,
+  .rte h3,
+  .rte h4 {
+    @apply mb-16;
+  }
+
+  .rte h2 {
+    @apply text-md leading-md;
+  }
+
+  .rte h3 {
+    @apply text-sm leading-sm;
+  }
+
+  .rte h4 {
+    @apply text-sm leading-sm;
+  }
+
+  .rte a {
+    @apply text-foreground font-bold underline;
+  }
+
+  .rte ul {
+    @apply list-disc pl-24 mb-24;
+  }
+
+  .rte li {
+    @apply text-grey text-xs leading-xs mb-8;
+  }
+
+  .rte p {
+    @apply text-grey text-xs leading-xs mt-0 mb-16;
+  }
+
+  .rte img {
+    @apply mx-auto;
+  }
+
+  .rte li:last-child,
+  .rte p:last-child {
+    @apply mb-0;
+  }
 }
