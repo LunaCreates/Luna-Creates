@@ -116,7 +116,6 @@ module.exports = {
       xl: `clamp(${pxToRem(30)}, 3.210vw, ${pxToRem(33)})`,
     },
     screens: {
-      xs: '23.375rem',
       sm: '37.5rem',
       md: '48rem',
       lg: '64.25rem',
