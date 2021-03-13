@@ -2,18 +2,16 @@
 {% set image = heroImage or renderData.heroImage %}
 {% set alt = heroImageAlt %}
 
-<section class="hero relative" aria-labelledby="hero-title">
-    <div class="hero__content">
-        {% picture
-            image,
-            '300, 600, 800, 1600',
-            '(min-width: 38em) and (max-width: 47.9375em) 800px, 100vw',
-            null,
-            alt,
-            'ratio-3-2 relative block bg-grey-fade md:ratio-4-1',
-            'absolute w-full h-full top-0 left-0 object-cover object-right'
-        %}
-    </div>
+<section class="relative" aria-labelledby="hero-title">
+    {% picture
+        image,
+        '300, 600, 800, 1600',
+        '(min-width: 38em) and (max-width: 47.9375em) 800px, 100vw',
+        null,
+        alt,
+        'ratio-3-2 relative block bg-grey-fade md:ratio-4-1',
+        'absolute w-full h-full top-0 left-0 object-cover object-right'
+    %}
 
     <div class="container absolute top-1/2 left-1/2 mx-auto px-16 text-center transform -translate-x-1/2 -translate-y-1/2 z-20">
         {% if home %}
