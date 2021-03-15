@@ -29,6 +29,24 @@
     font-size: 16px;
   }
 
+  body {
+    font-family: 'Avenir Next', sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: normal;
+  }
+
+  strong {
+    font-variation-settings: 'wght' 500;
+    font-weight: normal;
+  }
+
   [data-nav-button][aria-expanded="true"] path:first-child {
     @apply transform rotate-45;
   }
@@ -209,15 +227,6 @@
         padding-top: calc((9 / 16) * 100%);
       }
     }
-  }
-
-  body {
-    font-family: 'Avenir Next', sans-serif;
-  }
-
-  strong {
-    font-variation-settings: 'wght' 500;
-    font-weight: normal;
   }
 
   .rte h2,
