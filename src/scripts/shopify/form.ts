@@ -125,6 +125,10 @@ function Form(product: HTMLElement) {
   function handleClickEvent(event: Event) {
     const target = event.target as HTMLInputElement;
 
+    if (target.hasAttribute('data-pin')) {
+      handleChosenPin(target);
+    }
+
     if (target.getAttribute('data-map')?.match(/size|frame/)) {
       handleMapPriceUpdates();
     }
