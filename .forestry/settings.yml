@@ -6,9 +6,6 @@ webhook_url:
 sections:
 - type: heading
   label: Global
-- type: document
-  path: src/site/_includes/_partials/components/notification.njk
-  label: Notification Banner
 - type: heading
   label: Posts
 - type: directory
