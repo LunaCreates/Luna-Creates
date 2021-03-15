@@ -254,7 +254,8 @@
   }
 
   .rte li:last-child,
-  .rte p:last-child {
+  .rte p:last-child,
+  .rte > *:last-child {
     @apply mb-0;
   }
 }
