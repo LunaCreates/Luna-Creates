@@ -2,6 +2,10 @@
 label: Notification banner
 hide_body: true
 fields:
+- name: show_banner
+  type: boolean
+  label: Show Banner
+  description: Show or hide the banner on the website.
 - name: content
   type: textarea
   default: ''
