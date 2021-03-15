@@ -10,7 +10,7 @@
 
         <meta name="google-site-verification" content="uni8DaQpXBiVFYl464P1tK1N9ZlmgwbAIfHc7dOI_KM" />
 
-        {% if nofollow %}
+        {% if nofollow or page.url === '/collections/maps/' %}
             <meta name="robots" content="noindex, nofollow">
         {% endif %}
 
