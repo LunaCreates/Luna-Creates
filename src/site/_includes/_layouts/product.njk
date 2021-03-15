@@ -28,19 +28,21 @@
 
             {% include "_partials/components/product-thumbnails.njk" %}
 
-            <div class="inline-flex justify-between items-center mt-16 md:hidden" aria-hidden="true">
-                <svg class="mr-8" width="19" height="25" fill="var(--color-tertiary)">
-                    <use xlink:href="/icons/sprite.svg#touch"></use>
-                </svg>
-
-                <span class="inline-flex justify-between items-baseline text-primary">
-                    Swipe for more
-
-                    <svg class="ml-8" width="18" height="12" fill="currentColor">
-                        <use xlink:href="/icons/sprite.svg#arrow"></use>
+            {% if product.thumbnails | length > 4 %}
+                <div class="inline-flex justify-between items-center mt-16 md:hidden" aria-hidden="true">
+                    <svg class="mr-8" width="19" height="25" fill="var(--color-tertiary)">
+                        <use xlink:href="/icons/sprite.svg#touch"></use>
                     </svg>
-                </span>
-            </div>
+
+                    <span class="inline-flex justify-between items-baseline text-primary">
+                        Swipe for more
+
+                        <svg class="ml-8" width="18" height="12" fill="currentColor">
+                            <use xlink:href="/icons/sprite.svg#arrow"></use>
+                        </svg>
+                    </span>
+                </div>
+            {% endif %}
         </div>
 
         <div class="md:float-right md:w-5/12">
