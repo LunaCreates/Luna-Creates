@@ -25,6 +25,7 @@ async function allProductsData() {
                 id
                 title
                 handle
+                productType
                 description
                 descriptionHtml
                 tags
@@ -146,6 +147,7 @@ async function allProductsData() {
       id: item.id,
       title: item.title,
       slug: `${item.handle}/`,
+      productType: item.productType,
       tags: item.tags,
       description: item.descriptionHtml,
       descriptionSchema: item.description,
