@@ -1,10 +1,10 @@
 <div class="relative mt-16" aria-labelledby="payment-icons-title">
     <h3 class="sr-only" id="payment-icons-title">Accepted payment methods</h3>
 
-    <ul class="grid grid-cols-5 gap-16 md:gap-8 md:items-start">
+    <ul>
     {% for icon in paymentIcons %}
-        <li aria-label="{{icon.title}}">
-            <svg class="w-full h-full" width="30" height="30" aria-hidden="true">
+        <li class="inline-block mr-8 mb-0" aria-label="{{icon.title}}">
+            <svg class="w-full h-full" width="35" height="35" aria-hidden="true">
                 <use xlink:href="/icons/sprite.svg#{{icon.id}}"></use>
             </svg>
         </li>
