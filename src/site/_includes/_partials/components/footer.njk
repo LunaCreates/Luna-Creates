@@ -1,54 +1,78 @@
-<footer class="footer py-32 bgc-fade md:py-48 penv-bottom" id="footer">
-    <div class="container px-16 md:dp-g md:gtc-4 md:gg-24">
-        <ul class="mb-40 md:mb-0">
-            <li class="mb-16"><h3 class="text-body mb-0 fs-sm lh-sm fvs-md mt-0 tt-uc ls-2 ">Shop</h3></li>
-            <li class="mb-8"><a href="/collections/maps/" class="footer__link fs-base lh-base fvs-rg text-body">Personalised World Map Pinboards</a></li>
-            <li class="mb-8"><a href="/collections/wedding/" class="footer__link fs-base lh-base fvs-rg text-body">Wedding Travel Theme Products</a></li>
-            <li class="mb-8"><a href="/products/" class="footer__link fs-base lh-base fvs-rg text-body">All Products</a></li>
-        </ul>
+<footer class="footer py-32 bg-grey-fade md:py-48 penv-bottom" id="footer">
+    <div class="container mx-auto px-16 md:grid md:grid-cols-4 md:gap-24">
+        <div class="mb-40 md:mb-0">
+            <h3 class="text-grey mb-24 text-sm leading-sm fvs-md mt-0 uppercase tracking-2">Shop</h3>
 
-        <ul class="mb-40">
-            <li class="mb-16"><h3 class="text-body mb-0 fs-sm lh-sm fvs-md mt-0 mb-24 tt-uc ls-2 ">Customer Service</h3></li>
-            <li class="mb-8"><a href="/delivery/" class="footer__link fs-base lh-base fvs-rg text-body">Delivery Information</a></li>
-            <li class="mb-8"><a href="/faqs/" class="footer__link fs-base lh-base fvs-rg text-body">FAQ</a></li>
-            <li class="mb-8"><a href="/returns/" class="footer__link fs-base lh-base fvs-rg text-body">Returns &amp; Refunds</a></li>
-            <li class="mb-8"><a href="/privacy-policy/" class="footer__link fs-base lh-base fvs-rg text-body">Privacy &amp; Legals</a></li>
-        </ul>
+            <ul>
+                <li class="mb-16">
+                    <a href="/collections/maps/" class="text-base leading-xxs fvs-rg text-grey inline bg-gradient-to-l from-grey to-grey bg-link bg-no-repeat transition-background-size duration-300 ease-linear hov:hover:bg-link-full">Personalised World Map Pinboards</a>
+                </li>
+                <li class="mb-16">
+                    <a href="/collections/wedding/" class="text-base leading-xxs fvs-rg text-grey inline bg-gradient-to-l from-grey to-grey bg-link bg-no-repeat transition-background-size duration-300 ease-linear hov:hover:bg-link-full">Wedding Travel Theme Products</a>
+                </li>
+                <li class="mb-16">
+                    <a href="/products/" class="text-base leading-xxs fvs-rg text-grey inline bg-gradient-to-l from-grey to-grey bg-link bg-no-repeat transition-background-size duration-300 ease-linear hov:hover:bg-link-full">All Products</a>
+                </li>
+            </ul>
+        </div>
 
-        <ul class="mb-40">
-            <li class="mb-16"><h3 class="text-body mb-0 fs-sm lh-sm fvs-md mt-0 tt-uc ls-2 ">Contact Us</h3></li>
-            <li class="mb-8 wb-ball"><a href="mailto:{{settings.email}}" class="footer__link fs-base lh-base fvs-rg text-body">{{settings.email}}</a></li>
+        <div class="mb-40 md:mb-0">
+            <h3 class="text-grey mb-24 text-sm leading-sm fvs-md mt-0 uppercase tracking-2">Customer Service</h3>
 
-        {% for item in settings.social %}
-            <li class="dp-ib mr-8 -ml-8 mb-0">
-                <a class="footer__link--social dp-b p-8 fs-base lh-base fvs-rg text-body" href="{{item.url}}" title="{{item.titleAttr}}" rel="external" aria-label="{{item.title}}">
-                    <svg class="footer__icon" width="20" height="20" aria-hidden="true">
-                        <use xlink:href="/icons/sprite.svg#{{item.slug}}"></use>
-                    </svg>
-                </a>
-            </li>
-        {% endfor %}
+            <ul>
+                <li class="mb-16">
+                    <a href="/delivery/" class="text-base leading-xxs fvs-rg text-grey inline bg-gradient-to-l from-grey to-grey bg-link bg-no-repeat transition-background-size duration-300 ease-linear hov:hover:bg-link-full">Delivery Information</a>
+                </li>
+                <li class="mb-16">
+                    <a href="/faqs/" class="text-base leading-xxs fvs-rg text-grey inline bg-gradient-to-l from-grey to-grey bg-link bg-no-repeat transition-background-size duration-300 ease-linear hov:hover:bg-link-full">FAQ</a>
+                </li>
+                <li class="mb-16">
+                    <a href="/returns/" class="text-base leading-xxs fvs-rg text-grey inline bg-gradient-to-l from-grey to-grey bg-link bg-no-repeat transition-background-size duration-300 ease-linear hov:hover:bg-link-full">Returns &amp; Refunds</a>
+                </li>
+                <li class="mb-16">
+                    <a href="/privacy-policy/" class="text-base leading-xxs fvs-rg text-grey inline bg-gradient-to-l from-grey to-grey bg-link bg-no-repeat transition-background-size duration-300 ease-linear hov:hover:bg-link-full">Privacy &amp; Legals</a>
+                </li>
+            </ul>
+        </div>
 
-        {% include "_partials/components/payment-icons.njk" %}
-        </ul>
+        <div class="mb-40 md:mb-0">
+            <h3 class="text-grey mb-24 text-sm leading-sm fvs-md mt-0 uppercase tracking-2">Contact Us</h3>
 
-        <form action="/newsletter" class="mb-40" accept-charset="UTF-8" method="post" id="newsletter" data-component="newsletter">
-            <legend class="fs-sm lh-sm fvs-md mt-0 mb-16 tt-uc ls-2 text-body">Let's Be Friends</legend>
+            <ul>
+                <li class="mb-8 wb-ball"><a href="mailto:{{settings.email}}" class="text-base leading-xxs fvs-rg text-grey inline bg-gradient-to-l from-grey to-grey bg-link bg-no-repeat transition-background-size duration-300 ease-linear hov:hover:bg-link-full">{{settings.email}}</a></li>
 
-            <label class="fs-base lh-base fvs-rg dp-b mb-8 text-body " for="footer-newsletter">Be the first to know about all our latest offers</label>
-            <input type="email" placeholder="Email address" name="email" class="w-full my-0 fs-base lh-base fvs-rg py-8 px-16" id="footer-newsletter" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required>
-            <button type="submit" class="bgc-secondary text-foreground fs-xs lh-xs fvs-md borr-5 py-16 px-24 tt-uc ls-1 mt-24 ol-3-solid-transparent focus:olc-primary hover:bgc-secondary md:px-32">Sign Up</button>
+            {% for item in settings.social %}
+                <li class="inline-block mr-8 -ml-8 mb-0">
+                    <a class="block" href="{{item.url}}" title="{{item.titleAttr}}" rel="external" aria-label="{{item.title}}">
+                        <svg class="p-8" width="40" height="40" aria-hidden="true">
+                            <use xlink:href="/icons/sprite.svg#{{item.slug}}"></use>
+                        </svg>
+                    </a>
+                </li>
+            {% endfor %}
+            </ul>
 
-            <span class="bgc-error text-background fs-sm lh-sm fvs-md py-8 px-16 mt-24 dp-n" data-form-error>Oops. There was an error. Please try again.</span>
-            <span class="bgc-success text-primary fs-sm lh-sm fvs-md py-8 px-16 mt-24 dp-n" data-form-success>Thanks for subscribing.</span>
+            {% include "_partials/components/payment-icons.njk" %}
+        </div>
+
+        <form action="/newsletter" class="mb-40 md:mb-0" accept-charset="UTF-8" method="post" id="newsletter" data-component="newsletter">
+            <legend class="text-sm leading-sm fvs-md mt-0 mb-24 uppercase tracking-2 text-grey">Let's Be Friends</legend>
+
+            <label class="text-base leading-xxs fvs-rg block mb-16 text-grey " for="footer-newsletter">Be the first to know about all our latest offers</label>
+            <input type="email" placeholder="Email address" name="email" class="w-full my-0 text-base leading-base fvs-rg py-8 px-16 border-1 border-solid border-grey-border rounded-4" id="footer-newsletter" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required>
+            <button type="submit" class="bg-secondary text-foreground text-xs leading-xs fvs-md rounded-5 py-16 px-24 uppercase tracking-1 mt-24 outline-transparent focus:outline-primary hov:hover:bg-hover-secondary md:px-32">Sign Up</button>
+
+            <span class="bg-error text-background text-sm leading-sm fvs-md py-8 px-16 mt-24 hidden" data-form-error>Oops. There was an error. Please try again.</span>
+            <span class="bg-success text-primary text-sm leading-sm fvs-md py-8 px-16 mt-24 hidden" data-form-success>Thanks for subscribing.</span>
         </form>
 
-        <div class="footer__bottom pos-r dp-f fd-c jc-center ai-c md:gcsp-full md:fd-r md:jc-between">
-            <svg class="pos-r bgc-fade px-16 md:pr-o md:order-2" width="173" height="64" aria-labelledby="footer-logo">
+        <div class="relative flex flex-col justify-center items-center before before:absolute before:top-1/2 before:left-0 before:w-full before:h-1 before:bg-grey md:col-span-full md:flex-row md:justify-between">
+            <svg class="relative bg-grey-fade px-16 md:pr-o md:order-2" width="173" height="64" aria-labelledby="footer-logo">
                 <title id="footer-logo">Luna Creates</title>
                 <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/images/logo.svg" x="0" y="0" width="100%" height="100%" alt="Luna Creates logo"></image>
             </svg>
-            <small class="fs-xs lh-xs fvs-rg pos-r bgc-fade md:pr-16 md:order-1">&copy; 2020, {{settings.name}}</small>
+            <small class="text-xs leading-xs fvs-rg relative bg-grey-fade md:pr-16 md:order-1">&copy; 2020, {{settings.name}}</small>
         </div>
     </div>
 </footer>
+</html>

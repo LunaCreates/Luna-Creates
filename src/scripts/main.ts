@@ -129,8 +129,12 @@ observe((element: HTMLFormElement) => {
     .catch(err => console.error(`Error in: Newsletter - ${err}`));
 }, document.querySelectorAll('[data-component="newsletter"]'));
 
-// Carousels
-// glide js is imported in them all but webpack splits it out into a seprate bundle then includes it when needed.
+
+/** *****
+ *
+ *  Product Main Image & Thumbnails
+ *
+ * ******* */
 
 observe((carousel: HTMLElement) => {
   import(/* webpackChunkName: "product-main-image" */ 'Src/scripts/productMainImage')
@@ -138,38 +142,18 @@ observe((carousel: HTMLElement) => {
     .catch(err => console.error(`Error in: Product Main Image - ${err}`));
 }, document.querySelectorAll('[data-component="product-picture"]'));
 
-observe((carousel: HTMLElement) => {
-  import(/* webpackChunkName: "product-thumbnails-carousel" */ 'Src/scripts/productThumbnailsCarousel')
-    .then(module => initModule(module, carousel))
-    .catch(err => console.error(`Error in: Product Thumbnails - ${err}`));
-}, document.querySelectorAll('[data-component="product-thumbnails-carousel"]'));
-
 observe((element: HTMLElement) => {
   import(/* webpackChunkName: "product-thumbnails" */ 'Src/scripts/productThumbnails')
     .then(module => initModule(module, element))
     .catch(err => console.error(`Error in: Product Thumbnails - ${err}`));
 }, document.querySelectorAll('[data-component="product-thumbnails"]'));
 
-function resizeCallback(entries: Array<ResizeObserverEntry>) {
-  entries.forEach((entry: ResizeObserverEntry) => {
-    const width = entry.contentRect.width;
 
-    if (width < 768) {
-      resizeObserver.disconnect();
-
-      observe((carousel: HTMLElement) => {
-        import(/* webpackChunkName: "quotes-carousel" */ 'Src/scripts/quotesCarousel')
-          .then(module => initModule(module, carousel))
-          .catch(err => console.error(`Error in: Quotes Carousel - ${err}`));
-      }, document.querySelectorAll('[data-component="quotes"]'));
-    }
-  });
-}
-
-const resizeObserver = new ResizeObserver(resizeCallback);
-resizeObserver.observe(document.body);
-
-// Shopify
+/** *****
+ *
+ *  Shopify
+ *
+ * ******* */
 
 const pathname = window.location.pathname;
 const isProductPage = pathname.includes('/products/') && !pathname.endsWith('/products/');
@@ -184,9 +168,9 @@ if (isProductPage) {
 
 // Product Page Test
 
-(<any>window).gtag('event', 'product_page', {
-  'event_category': 'experiments',
-  'event_label': 'control'
-});
+// (<any>window).gtag('event', 'product_page', {
+//   'event_category': 'experiments',
+//   'event_label': 'control'
+// });
 
 export {};

@@ -1,4 +1,4 @@
-<div class="map-size pos-r dp-f jc-between ai-e mb-32">
+<div class="relative flex justify-between items-end mb-32">
 {%- for option in product.options -%}
     {% set sizeField = option.size or option.options %}
 
@@ -9,23 +9,23 @@
         {% set height = dims | replace(r/x [0-9]+mm/, "") %}
         {% set hypo = (height ** 2 + width ** 2) ** 0.5 // 25.4 %}
 
-        <label for="{{ size }}" class="dp-f fd-c ai-c ta-center pos-r">
-            <input type="radio" name="size" id="{{ size | lower }}" class="pos-a top-0 right-0 bottom-0 left-0 w-full h-full bgc-transparent borc-transparent m-0 zi-10 cursor-pointer" {% if loop.first %}checked{% endif %} data-map="size" value="{{ size | lower }}">
+        <label for="{{ size }}" class="flex flex-col items-center text-center relative">
+            <input type="radio" name="size" id="{{ size | lower }}" class="absolute inset-0 w-full h-full bg-transparent border-transparent rounded-0 m-0 z-10 cursor-pointer appearance-none" {% if loop.first %}checked{% endif %} data-map="size" value="{{ size | lower }}">
 
-            <div style="height: {{ height // 10 / 16}}rem; width: {{width // 10 / 16 }}rem" class="bor-1-solid-primary borr-2 dp-f jc-center ai-c mt-auto mb-8 mx-auto pos-r" data-map>
-                <svg width="16px" height="16px" class="pos-a bottom-0 left-0 rotate-135" aria-hidden="true">
+            <div style="width: {{width // 10 / 16 }}rem" class="ratio-3-2 border-1 border-solid border-primary rounded-2 flex justify-center items-center mt-auto mb-8 mx-auto relative">
+                <svg width="16px" height="16px" class="absolute bottom-0 left-0 transform rotate-135" aria-hidden="true">
                     <use xlink:href="/icons/sprite.svg#chevron"></use>
                 </svg>
-                <small class="fs-xxs lh-xxs">{{hypo}}"</small>
-                <svg width="16px" height="16px" class="pos-a top-0 right-0 -rotate-45" aria-hidden="true">
+                <small class="text-xxs leading-xxs">{{hypo}}"</small>
+                <svg width="16px" height="16px" class="absolute top-0 right-0 transform -rotate-45" aria-hidden="true">
                     <use xlink:href="/icons/sprite.svg#chevron"></use>
                 </svg>
             </div>
 
-            <span class="dp-b fs-xs fvs-sb lh-xs text-primary">{{ size }}</span>
-            <small class="dp-b fs-xxs lh-xxs mb-8">{{ dims }}</small>
-            <span class="dp-b fs-xs fvs-rg lh-xs pt-8 bort-1-solid-border as-c">&pound;{{ option.price // 1 }}</span>
-            <small class="dp-b op-0 v-h fs-xxs fvs-md lh-xxs bgc-secondary mt-8 px-8 text-primary" data-map-selected>Selected</small>
+            <span class="block text-xs fvs-sb leading-xs text-primary">{{ size }}</span>
+            <small class="block text-xxs leading-xxs mb-8">{{ dims }}</small>
+            <span class="block text-xs fvs-rg leading-xs pt-8 border-t-1 border-solid border-grey-border self-center">&pound;{{ option.price // 1 }}</span>
+            <small class="block opacity-0 v-h text-xxs fvs-md leading-xxs bg-secondary mt-8 px-8 text-primary" data-map-size-selected>Selected</small>
         </label>
     {% endif %}
 {%- endfor -%}

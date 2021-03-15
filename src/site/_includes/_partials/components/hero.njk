@@ -2,32 +2,30 @@
 {% set image = heroImage or renderData.heroImage %}
 {% set alt = heroImageAlt %}
 
-<section class="hero pos-r" aria-labelledby="hero-title">
-    <div class="hero__content">
-        {% picture
-            image,
-            '300, 600, 800, 1920',
-            '(min-width: 38em) and (max-width: 47.9375em) 800px, 100vw',
-            null,
-            alt,
-            'ratio-3-2 md:ratio-4-1',
-            'op-right'
-        %}
-    </div>
+<section class="relative" aria-labelledby="hero-title">
+    {% picture
+        image,
+        '300, 600, 800, 1600',
+        '(min-width: 38em) and (max-width: 47.9375em) 800px, 100vw',
+        null,
+        alt,
+        'ratio-3-2 relative block bg-grey-fade md:ratio-4-1',
+        'absolute w-full h-full top-0 left-0 object-cover object-right'
+    %}
 
-    <div class="hero__container container pos-a w-full px-16 ta-c zi-20">
+    <div class="container absolute top-1/2 left-1/2 mx-auto px-16 text-center transform -translate-x-1/2 -translate-y-1/2 z-20">
         {% if home %}
-            <p class="hero__title mx-auto mb-0 text-background fs-lg lh-xl fvs-rg ta-center tt-uc" id="hero-title">
-                <span class="hero__title-highlight bgc-foreground">{{title | safe}}</span>
+            <p class="mx-auto mb-0 text-background text-lg leading-xl fvs-rg text-center uppercase" id="hero-title">
+                <span class="bg-foreground py-4 px-8" style="-webkit-box-decoration-break: clone; box-decoration-break: clone;">{{title | safe}}</span>
             </p>
         {% else %}
-            <h1 class="hero__title mx-auto my-0 text-background fs-lg lh-xl fvs-rg ta-center tt-uc" id="hero-title">
-                <span class="hero__title-highlight bgc-foreground">{{title | safe}}</span>
+            <h1 class="mx-auto my-0 text-background text-lg leading-xl fvs-rg text-center uppercase" id="hero-title">
+                <span class="bg-foreground py-4 px-8" style="    box-decoration-break: clone; box-decoration-break: clone;">{{title | safe}}</span>
             </h1>
         {% endif %}
     </div>
 </section>
 
 {% if home %}
-    <p class="hero__body container my-32 px-16 mx-auto fs-sm lh-sm fvs-rg ta-center md:my-56 lg:my-80">We help you to immortalise your travel adventures, whether you’re finding new places to explore or reflecting on past adventures.</p>
+    <p class="container mx-auto my-32 px-16 text-grey text-sm leading-sm fvs-rg text-center md:my-56 lg:my-80">We help you to immortalise your travel adventures, whether you’re finding new places to explore or reflecting on past adventures.</p>
 {% endif %}

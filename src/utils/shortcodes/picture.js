@@ -43,7 +43,7 @@ module.exports = async (
     `;
   }
 
-  return `
+  const result = `
     <picture class="${pictureClass}" ${attribute ? `${attribute}` : ''}>
       ${Object.values(metadata).map(renderLazySouce).join('\n')}
       <img class="lazyload ${imageClass}" data-srcset="${lowsrc.url}" width="${lowsrc.width}" height="${lowsrc.height}" loading="${loading}" ${hasAlt}>
@@ -56,4 +56,6 @@ module.exports = async (
       </picture>
     </noscript>
   `;
+
+  return result;
 }

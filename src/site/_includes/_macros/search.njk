@@ -1,14 +1,16 @@
 {% macro search(id) %}
-<button type="button" class="header__search mr-8 md:ml-8 md:order-2" aria-expanded="false" aria-label="Open search" data-trigger-search>
-    <svg height="16" width="16" aria-hidden="true" class="header__icon pe-none" fill="var(--color-primary)">
+<button type="button" class="mr-12 md:mx-16 md:order-2" aria-expanded="false" aria-label="Open search" data-trigger-search>
+    <svg height="32" width="32" aria-hidden="true" class="header__icon pointer-events-none" fill="var(--color-primary)">
         <use xlink:href="/icons/sprite.svg#search"></use>
     </svg>
 </button>
 
-<div class="search pos-a px-5vw bgc-background md:pos-r md:px-0 md:flex-initial md:order-1 lg:flex-1" data-search-form>
+<div class="absolute top-full left-0 w-full flex flex-col justify-center px-5vw bg-background opacity-0 transition-opacity duration-300 ease-in-out md:relative md:top-0 md:block md:w-auto md:px-0 md:flex-initial md:order-1 lg:flex-1" data-search-form>
     <label class="sr-only" for="{{id}}">Search</label>
-    <input type="search" class="w-full borr-0 borctransparent fs-sm lh-sm fvs-rg py-16 md:p-8 md:borcborder" id="{{id}}" placeholder="Search" autocomplete="off" data-search-input>
-    <ul class="search__results bgc-background py-16 px-5vw md:py-24 md:px-16" data-search-results></ul>
+    <input type="text" inputmode="search" class="w-full rounded-0 border-0 md:border-1 md:border-solid md:border-grey-border text-sm leading-sm fvs-rg py-16 md:p-8 md:borcborder" id="{{id}}" placeholder="Search" autocomplete="off" data-search-input>
+
+    <ul class="absolute top-full left-0 w-full h-auto max-h-70vh bg-background py-16 overflow-y-auto px-5vw empty:hidden md:w-search md:min-w-16 md:max-h-28 md:py-24 md:px-16 md:border-1 md:border-solid md:border-grey-border" data-search-results></ul>
+
     <span class="sr-only" data-search-results-status aria-live="polite" role="status">0 results found</span>
 </div>
 {% endmacro %}

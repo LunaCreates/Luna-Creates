@@ -1,20 +1,22 @@
 import pubSub from './modules/pubSub';
 
 function TriggerSearch(element: HTMLElement) {
+  const header = document.querySelector('[data-component="header"]') as HTMLElement
   const triggerSearch = element.querySelector('[data-trigger-search]') as HTMLButtonElement;
   const searchBar = element.querySelector('[data-search-form]') as HTMLElement;
 
-
   function showSearchBar(button: HTMLButtonElement) {
-    document.body.classList.add('body--search-open');
+    header.classList.remove('before:invisible');
+    header.classList.add('before:opacity-50');
     button.setAttribute('aria-expanded', 'true');
-    searchBar.classList.add('search--open');
+    searchBar.classList.add('opacity-100');
   }
 
   function closeSearchBar(button: HTMLButtonElement) {
-    document.body.classList.remove('body--search-open');
+    header.classList.add('before:invisible');
+    header.classList.remove('before:opacity-50');
     button.setAttribute('aria-expanded', 'false');
-    searchBar.classList.remove('search--open');
+    searchBar.classList.remove('opacity-100');
   }
 
   function toggleSearchBar(event: Event) {

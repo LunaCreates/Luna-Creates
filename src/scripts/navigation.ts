@@ -38,20 +38,20 @@ function Naviagtion(nav: HTMLElement) {
 
       if (width >= 768) {
         navSub.removeAttribute('style');
-        navList.classList.remove('nav__list--open');
+        navList.classList.remove('-translate-y-full');
       }
     });
   }
 
   function closeNav(button: HTMLButtonElement) {
     button.setAttribute('aria-expanded', 'false');
-    navList.classList.remove('nav__list--open');
+    navList.classList.add('-translate-y-full');
     pubSub.publish('nav/visibility/changed', 0);
   }
 
   function openNav(button: HTMLButtonElement) {
     button.setAttribute('aria-expanded', 'true');
-    navList.classList.add('nav__list--open');
+    navList.classList.remove('-translate-y-full');
     pubSub.publish('nav/visibility/changed', navList.scrollHeight + 1);
   }
 

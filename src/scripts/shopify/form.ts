@@ -22,6 +22,49 @@ function Form(product: HTMLElement) {
     }
   }
 
+  function buildChosenPinHtml(textColor: string | null, hexColor: string | null) {
+    return `
+      <div class="relative flex justify-between items-center mt-24" id="${textColor}-chosen" data-pin-chosen="${textColor}">
+        <span class="pin-color relative rounded-full" style="width: 2.5rem; height: 2.5rem; background-color: ${hexColor};" aria-hidden="true"></span>
+
+        <label for="${textColor}-text" class="pin-color relative rounded-full" style="width: 2.5rem; height: 2.5rem; background-color: ${hexColor};">
+          <span class="sr-only">Enter your ${textColor} pins label</span>
+        </label>
+
+        <input class="flex-grow ml-8 py-8 px-16 text-sm leading-sm fvs-rg text-grey-neutral border-1 border-solid border-grey-border rounded-4" type="text" maxlength="35" placeholder="${textColor} pins label" id="${textColor}-text" name="pin label" data-pin-label>
+
+        <p class="hidden flex-grow ml-8 py-8 px-16 text-sm leading-sm fvs-rg text-grey-neutral italic">30x ${textColor} pins </p>
+      </div>
+    `;
+  }
+
+  function handleChosenPin(input: HTMLInputElement) {
+    const pinsSection = form?.querySelector('[data-chosen-pins]');
+    const chosenPinColor = input.getAttribute('data-pin');
+    const chosenPinHexColor = input.getAttribute('data-pin-hex');
+
+    if (!pinsSection) return;
+
+    const chosenPinLabel = pinsSection.querySelector(`[data-pin-chosen="${chosenPinColor}"]`);
+
+    const html = buildChosenPinHtml(chosenPinColor, chosenPinHexColor);
+
+    if (!input.checked && chosenPinLabel) {
+      chosenPinLabel.remove();
+    } else {
+      pinsSection.insertAdjacentHTML('beforeend', html);
+    }
+
+    Array.from(pinsSection.querySelectorAll('[data-pin-chosen]')).forEach((pin, index) => {
+      const chosenPin = pin.id.split('-')[0];
+      const pinCheckbox: HTMLInputElement | null | undefined = form?.querySelector(`[data-pin="${chosenPin}"]`);
+
+      if (!pinCheckbox) return;
+
+      pinCheckbox.value = `${pinCheckbox.dataset.pinHex}-${index}`;
+    })
+  }
+
   function handleMapPriceUpdates() {
     const size = form?.querySelector('[data-map="size"]:checked');
     const frame = form?.querySelector('[data-map="frame"]:checked');

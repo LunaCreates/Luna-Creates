@@ -1,29 +1,29 @@
-<nav class="nav container pos-sta" id="nav" data-component="navigation">
-    <button type="button" class="nav__button fs-sm fvs-md mt-0 mb-0 pos-r dp-f jc-between ai-c text-primary tt-uc zi-20 md:dp-n" aria-live="polite" aria-expanded="false" aria-label="Menu" data-nav-button>
-        <svg class="pe-none" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 48 38" fill="currentColor">
-            <path d="M.2 0h47.5v6.3H.2z" />
-            <path d="M.2 15.8h47.5v6.4H.2z" />
-            <path d="M.2 31.7h47.5V38H.2z" />
+<nav class="container mx-auto static before before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-secondary before:z-20 md:before:hidden" id="nav" data-component="navigation">
+    <button type="button" class="text-sm fvs-md mt-0 mb-0 relative flex justify-between items-center text-primary uppercase z-20 md:hidden" aria-live="polite" aria-expanded="false" aria-label="Menu" data-nav-button>
+        <svg class="pointer-events-none" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 48 38" fill="currentColor">
+            <path class="transform transition-transform duration-500 ease-in-out origin-5-11" d="M.2 0h47.5v6.3H.2z" />
+            <path class="transition-opacity duration-500 ease-in-out" d="M.2 15.8h47.5v6.4H.2z" />
+            <path class="transform transition-transform duration-500 ease-in-out origin-5-27" d="M.2 31.7h47.5V38H.2z" />
         </svg>
     </button>
 
-    <ul class="nav__list pos-a px-16 borb-primary bgc-background zi-10 w-full md:pos-r md:dp-f md:jc-center md:ai-c md:bgc-secondary" data-nav-list>
+    <ul class="absolute top-full left-0 p-16 bg-background z-10 w-full border-b-1 border-solid border-primary transform -translate-y-full transition-transform duration-300 ease-in-out md:relative md:py-0 md:flex md:justify-center md:items-center md:border-b-0 md:bg-secondary md:translate-y-0" data-nav-list>
     {% for item in settings.navigation %}
-        <li class="nav__item pos-r mb-8 md:mb-0 ">
-            <a href="{{item.url}}" class="nav__link fs-sm fvs-md lh-sm dp-f ai-c my-0 py-8 text-primary tt-uc md:mx-16 md:py-16 md:fs-base md:lh-base lg:mx-32" data-nav-item="{{item.title}}" aria-expanded="false">
+        <li class="group relative mb-8 md:mb-0">
+            <a href="{{item.url}}" class="nav__link text-sm fvs-md leading-sm flex items-center my-0 py-8 text-primary uppercase md:mx-16 md:py-16 md:text-base md:leading-base lg:mx-32" data-nav-item="{{item.title}}">
                 {{item.title}}
                 {% if item.collections %}
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" class="nav__link-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 20 20" class="ml-12" fill="currentColor">
                         <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/>
                     </svg>
                 {% endif %}
             </a>
 
             {% if item.collections %}
-            <ul class="nav__sub pl-16 md:pos-a md:py-24 md:px-32 md:bgc-background" data-sub-nav>
+            <ul class="h-0 pl-16 overflow-hidden transition-height duration-300 ease-in-out md:absolute md:top-full md:left-0 md:min-w-24 md:h-auto md:py-24 md:px-32 md:bg-background md:border-1 md:border-solid md:border-secondary md:opacity-0 md:invisible hov:group-hover:opacity-100 hov:group-hover:visible" data-sub-nav>
             {% for collection in item.collections %}
                 <li class="mb-8 {% if not loop.last %}md:mb-16{% endif %} {% if loop.last %}md:mb-0{% endif %}" data-sub-item>
-                    <a href="{{collection.url}}" class="nav__link--sub py-8 dp-f ai-c my-0 fs-sm lh-sm tt-cp text-primary fvs-md md:py-0" data-sub-link>{{collection.title}}</a>
+                    <a href="{{collection.url}}" class="nav__link--sub py-8 flex items-center my-0 text-sm leading-sm capitalize text-primary fvs-md md:py-0 md:inline md:bg-gradient-to-l md:from-grey md:to-grey md:bg-link md:bg-no-repeat md:transition-background-size md:duration-300 md:ease-linear hov:hover:bg-link-full" data-sub-link>{{collection.title}}</a>
                 </li>
             {% endfor %}
             </ul>

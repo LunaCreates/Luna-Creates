@@ -1,42 +1,42 @@
 {% import "_macros/search.njk" as searchBlock %}
 
-<header class="header pos-r" data-component="header">
-    <a href="#nav" class="skip-link skip-link--hidden">Skip to navigation</a>
-    <a href="#main" class="skip-link skip-link--hidden">Skip to main content</a>
-    <a href="#footer" class="skip-link skip-link--hidden">Skip to footer</a>
+<header class="relative before before:fixed before:top-0 before:left-0 before:w-full before:h-full before:bg-foreground before:opacity-0 before:invisible before:transition before:duration-300 before:ease-in-out before:z-30 md:before:hidden" data-component="header">
+    <a href="#nav" class="sr-only focus:not-sr-only">Skip to navigation</a>
+    <a href="#main" class="sr-only focus:not-sr-only">Skip to main content</a>
+    <a href="#footer" class="sr-only focus:not-sr-only">Skip to footer</a>
 
     {% if cart %}
-        <a href="#cart" class="skip-link skip-link--hidden">Skip to cart</a>
+        <a href="#cart" class="sr-only focus:not-sr-only">Skip to cart</a>
     {% endif %}
 
-    <div class="container pos-r dp-f fd-c py-8 px-16 bgc-background zi-120 md:dp-g md:gtc-3 md:bgc-transparent">
-        <a href="/" class="dp-b as-c md:gcs-2 md:js-c" data-logo>
-            <svg class="logo dp-b" width="210" height="90" viewBox="0 0 210 90" aria-describedby="logo">
+    <div class="container mx-auto relative flex flex-col py-8 px-16 bg-background z-120 md:grid md:grid-cols-3 md:bg-transparent">
+        <a href="/" class="block self-center md:col-start-2 md:justify-self-center" data-logo>
+            <svg class="logo block" width="210" height="90" viewBox="0 0 210 90" aria-describedby="logo">
                 <title id="logo">Luna Creates</title>
-                <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/images/logo.svg" x="50%" y="0" width="100%" height="66.1"></image>
-                <text x="50%" y="95%">Personalised map prints</text>
+                <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/images/logo.svg" x="0" y="0" width="100%" height="66.1"></image>
+                <text class="text-xxs fvs-sb tracking-1 uppercase" fill="var(--color-primary)" x="50%" y="95%" text-anchor="middle">Personalised map prints</text>
             </svg>
         </a>
 
-        <div class="dp-n md:dp-f md:jc-end md:ai-c md:pos-r md:zi-20" data-component="search">
+        <div class="hidden md:flex md:justify-end md:items-center md:relative md:z-20" data-component="search">
             {{searchBlock.search('header-top')}}
 
-            <a href="/cart/" class="header__cart pos-r md:order-3" aria-label="View cart" data-cart>
-                <svg height="16" width="16" aria-hidden="true" class="">
+            <a href="/cart/" class="header__cart relative md:order-3" aria-label="View cart" data-cart>
+                <svg height="28" width="28" aria-hidden="true" fill="var(--color-primary)">
                     <use xlink:href="/icons/sprite.svg#cart"></use>
                 </svg>
             </a>
         </div>
     </div>
 
-    <div class="dp-f jc-between ai-c pos-r py-8 px-5vw bgc-secondary zi-30 md:px-0 md:py-0 md:zi-110">
+    <div class="flex justify-between items-center relative py-8 px-5vw bg-secondary z-30 md:px-0 md:py-0 md:z-110">
         {% include "_partials/navigation.njk" %}
 
-        <div class="dp-f jc-between ai-c zi-20 md:dp-n" data-component="search">
+        <div class="flex justify-between items-center z-20 md:hidden" data-component="search">
             {{searchBlock.search('header-bottom')}}
 
-            <a href="/cart/" class="header__cart pos-r" aria-label="View cart" data-cart>
-                <svg height="16" width="16" aria-hidden="true" class="header__icon" fill="var(--color-primary)">
+            <a href="/cart/" class="relative" aria-label="View cart" data-cart>
+                <svg height="28" width="28" aria-hidden="true" class="header__icon" fill="var(--color-primary)">
                     <use xlink:href="/icons/sprite.svg#cart"></use>
                 </svg>
             </a>
