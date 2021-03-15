@@ -4,8 +4,8 @@ permalink: sw.js
 eleventyExcludeFromCollections: true
 ---
 
-const cacheName = {% swBuildNumber %};
-const cacheFiles = [
+const CACHE_NAMES = {% swBuildNumber %};
+const CACHE_FILES = [
   '/',
   '/faqs/',
   '/contact-us/',
@@ -15,14 +15,14 @@ const cacheFiles = [
   '/icons/sprite.svg',
   {% swStyles %},
   {% swScripts %},
-{% for product in products %}
-  '/products/{{product.slug}}/'{% if not loop.last %},{% endif %}
+{% for product in products -%}
+  '/products/{{product.slug}}'{% if not loop.last %},{% endif %}
 {% endfor %}
 ];
 
 self.addEventListener('install', event => {
-  event.waitUntil(caches.open(cacheName)
-    .then(cache => cache.addAll(cacheFiles))
+  event.waitUntil(caches.open(CACHE_NAMES)
+    .then(cache => cache.addAll(CACHE_FILES))
   );
 });
 
@@ -43,11 +43,11 @@ self.addEventListener('fetch', event => {
 
 // Empty out any caches that don’t match the ones listed.
 self.addEventListener('activate', event => {
-  const cacheWhitelist = [cacheName];
+  const cacheWhitelist = [CACHE_NAMES];
 
   event.waitUntil(caches.keys()
-    .then(cacheNames => {
-      return Promise.all(cacheNames.map(cacheName => {
+    .then(CACHE_NAMES => {
+      return Promise.all(CACHE_NAMES.map(cacheName => {
         if (cacheWhitelist.indexOf(cacheName) === -1) {
           return caches.delete(cacheName);
         }
