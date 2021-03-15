@@ -7,9 +7,8 @@ sections:
 - type: heading
   label: Global
 - type: document
-  path: src/site/_includes/_partials/components/notification.njk
-  label: Notification Banner
-  match: "**/*"
+  path: src/site/_data/settings.json
+  label: Site Settings
 - type: heading
   label: Posts
 - type: directory
