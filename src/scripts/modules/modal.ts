@@ -14,6 +14,7 @@ function Modal(modal: HTMLElement) {
 
   function closeModal() {
     modal.setAttribute('hidden', '');
+    modal.classList.remove('flex');
     setFocusToElement(previousFocusedElement);
     document.body.removeEventListener('keydown', handleKey);
     pubSub.publish('modal/closed', modal);
@@ -27,6 +28,7 @@ function Modal(modal: HTMLElement) {
 
   function openModal(currentTarget: HTMLButtonElement) {
     modal.removeAttribute('hidden');
+    modal.classList.add('flex');
     previousFocusedElement = currentTarget;
     setFocusToElement(focusableElements[0]);
     document.body.addEventListener('keydown', handleKey);

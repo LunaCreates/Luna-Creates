@@ -17,15 +17,15 @@ function Search(input: HTMLInputElement) {
     if (!results) return;
 
     results.innerHTML += `
-      <li class="search__result dp-f flex-wrap jc-between ai-c mb-16">
-        <div class="search__result-container mr-16 flex-1">
-          <picture class="ratio-1-1">
+      <li class="flex flex-wrap justify-between items-center mb-16">
+        <div class="mr-16 flex-1">
+          <picture class="ratio-1-1 relative block bg-grey-fade">
             <source  type="image/webp" srcset="${image}_150x150.jpg.webp 1x, ${image}_300x300.jpg.webp 2x">
 
-            <img class="search__result-image" srcset="${image}_150x150.jpg 1x, ${image}_300x300.jpg 2x" role="presentation" width="100" height="100" loading="lazy">
+            <img class="absolute w-full h-full top-0 left-0 object-cover" srcset="${image}_150x150.jpg 1x, ${image}_300x300.jpg 2x" role="presentation" width="100" height="100" loading="lazy">
           </picture>
         </div>
-        <a href="${hit.url}" class="search__result-link fs-xs lh-xs fvs-md text-body flex-3" tabindex="0" data-search-result-link>${hit.title}</a>
+        <a href="${hit.url}" class="text-xs leading-xs fvs-md text-grey flex-3" tabindex="0" data-search-result-link>${hit.title}</a>
       </li>
     `
   }
@@ -41,7 +41,7 @@ function Search(input: HTMLInputElement) {
     }
 
     if (hits.length === 0 && results?.hasAttribute('data-search-results')) {
-      results.innerHTML = `<li class="search__result fs-xs lh-xs fvs-md dp-f flex-wrap jc-between ai-c mb-16 text-body">No results found</li>`
+      results.innerHTML = `<li class="text-xs leading-xs fvs-md flex flex-wrap justify-between items-center text-grey">No results found</li>`
     }
   }
 

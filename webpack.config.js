@@ -1,28 +1,21 @@
 /* eslint-disable max-len */
 /* eslint-disable complexity */
 const glob = require('glob').sync;
-const globAll = require('glob-all').sync;
 const path = require('path');
 const webpack = require('webpack');
 const ManifestPlugin = require('webpack-assets-manifest');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const PurgecssPlugin = require('purgecss-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ImageminWebpWebpackPlugin = require('imagemin-webp-webpack-plugin');
 const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
-const StylelintPlugin = require('stylelint-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
-
-const purgeFromJs = (content) => content.match(/[A-Za-z0-9-_:\/]+/g) || [];
 
 function Bundle() {
   const plugin = require('./_config/plugins.json');
-  const prod = process.env.NODE_ENV === 'prod';
-  const purgePath = path.resolve(__dirname, 'src')
+  const prod = process.env.NODE_ENV === 'production';
 
   const alias = {
-    '@glidejs/glide': '@glidejs/glide/dist/glide.js',
     Src: path.resolve(__dirname, 'src')
   };
 
@@ -31,20 +24,8 @@ function Bundle() {
       output: path.join(__dirname, 'src', 'cache-manifest.json')
     }),
     new MiniCssExtractPlugin({
-      filename: 'css/main.css?cb=[chunkhash]'
-    }),
-    new PurgecssPlugin({
-      paths: globAll([
-        `${purgePath}/site/**/*.njk`,
-        `${purgePath}/scripts/**/*.ts`,
-        `${purgePath}/functions/*.js`
-      ]),
-      extractors: [
-        {
-          extractor: purgeFromJs,
-          extensions: ['njk']
-        }
-      ]
+      filename: 'css/main.css?cb=[chunkhash]',
+      chunkFilename: 'main.css?cb=[contenthash]'
     }),
     new HtmlWebpackPlugin({
       inject: false,
@@ -63,20 +44,23 @@ function Bundle() {
       filename: path.resolve(__dirname, 'src', 'site', '_includes', '_partials', 'styles.njk'),
       template: path.resolve(__dirname, '_templates', 'styles.njk')
     }),
-    new CopyWebpackPlugin([{
-      from: './src/images/**/*.jpg',
-      to: '[path][name].webp',
-      globOptions: {
-        ignore: [
-          '**/shopify/**'
-        ]
-      },
-      transformPath(targetPath) {
-        return targetPath.split('src/')[1];
-      }
-    }]),
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: './src/images/**/*.jpg',
+          to: '[path][name].webp',
+          globOptions: {
+            ignore: [
+              '**/shopify/**'
+            ]
+          },
+          transform(content, absoluteFrom) {
+            return absoluteFrom.split('src/')[1];
+          }
+        }
+      ],
+    }),
     new ImageminWebpWebpackPlugin(),
-    new StylelintPlugin(plugin.stylelint),
     new SpriteLoaderPlugin({ plainSprite: true }),
     new webpack.LoaderOptionsPlugin({
       debug: true
@@ -91,7 +75,7 @@ function Bundle() {
 
     entry: {
       common: path.resolve(__dirname, 'src/scripts/main.ts'),
-      main: path.resolve(__dirname, 'src/styles/main.scss'),
+      main: path.resolve(__dirname, 'src/styles/tailwind.css'),
       sprite: glob('./src/icons/*.svg')
     },
 
@@ -112,37 +96,22 @@ function Bundle() {
           exclude: /node_modules/
         },
         {
-          test: /\.s[ac]ss$/i,
+          test: /\.css$/i,
           use: [
             {
               loader: MiniCssExtractPlugin.loader,
               options: {
-                name: 'main.css?cb=[contenthash]',
                 publicPath: '/'
               }
             },
             {
-              loader: 'css-loader?-url',
+              loader: 'css-loader',
               options: {
                 sourceMap: true,
                 url: false
               }
             },
-            {
-              loader: 'postcss-loader',
-              options: {
-                plugins: () => [
-                  require('postcss-sort-media-queries'),
-                  require('postcss-minify-selectors'),
-                  require('postcss-clean')(plugin.cleancss),
-                  require('autoprefixer'),
-                  require('cssnano')(plugin.cssnano)
-                ]
-              }
-            },
-            {
-              loader: 'sass-loader'
-            }
+            { loader: 'postcss-loader' }
           ]
         },
         {

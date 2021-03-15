@@ -1,20 +1,20 @@
 {% set variant = product.options[0] %}
 
 <form class="mt-24" data-product-form data-variant-id="{{variant.id}}">
-    <div class="pos-r mb-32">
-        <label for="table-title" class="fs-sm lh-sm fvs-md dp-ib mb-8 text-tertiary">Title for Table Plan</label>
-        <input type="text" name="table title" class="product__input fs-sm lh-sm fvs-rg dp-b py-8 px-16 text-heading w-full" placeholder="e.g. John &amp; Jane's Wedding" id="table-title" required>
+    <div class="relative mb-32">
+        <label for="table-title" class="text-sm leading-sm fvs-md inline-block mb-8 text-tertiary">Title for Table Plan</label>
+        <input type="text" name="table title" class="text-base leading-base fvs-rg block py-8 px-16 text-grey-neutral border-1 border-solid border-grey-border rounded-4 w-full" placeholder="e.g. John &amp; Jane's Wedding" id="table-title" required>
     </div>
 
-    <div class="pos-r mb-32">
-        <label for="table-date" class="fs-sm lh-sm fvs-md dp-ib mb-8 text-tertiary">Date of Wedding</label>
-        <input type="text" name="wedding date" class="product__input fs-sm lh-sm fvs-rg dp-b py-8 px-16 text-heading w-full" placeholder="e.g. 25th December 2020" id="table-date" required>
+    <div class="relative mb-32">
+        <label for="table-date" class="text-sm leading-sm fvs-md inline-block mb-8 text-tertiary">Date of Wedding</label>
+        <input type="text" name="wedding date" class="text-base leading-base fvs-rg block py-8 px-16 text-grey-neutral border-1 border-solid border-grey-border rounded-4 w-full" placeholder="e.g. 25th December 2020" id="table-date" required>
     </div>
 
-    <div class="pos-r mb-32">
-        <label for="table-number" class="fs-sm lh-sm fvs-md dp-ib mb-8 text-tertiary">Number of Tables</label>
-        <div class="pos-r">
-            <select name="table numbers" id="table-number" class="product__select fs-sm lh-sm fvs-rg dp-b py-8 pr-32 pl-16 text-heading w-full" required>
+    <div class="relative mb-32">
+        <label for="table-number" class="text-sm leading-sm fvs-md inline-block mb-8 text-tertiary">Number of Tables</label>
+        <div class="relative">
+            <select name="table numbers" id="table-number" class="text-base leading-base fvs-rg block py-8 pr-32 pl-16 text-grey-neutral w-full border-1 border-solid border-grey-border rounded-4 appearance-none" required>
                 <option value="4">4</option>
                 <option value="5">5</option>
                 <option value="6">6</option>
@@ -33,42 +33,42 @@
                 <option value="19">19</option>
                 <option value="20">20</option>
             </select>
-            <svg class="product__select-icon pos-a pe-none" width="24" height="24" aria-hidden="true">
+            <svg class="absolute top-1/2 right-8 transform rotate-90 -translate-x-1/2 -translate-y-1/2 pointer-events-none" width="24" height="24" aria-hidden="true">
                 <use xlink:href="/icons/sprite.svg#chevron"></use>
             </svg>
         </div>
     </div>
 
-    <div class="pos-r mb-32">
-        <label for="table-names" class="fs-sm lh-sm fvs-md dp-ib mb-8 text-tertiary">Table Names</label>
-        <textarea name="table names" id="table-names" class="product__textarea fs-sm lh-sm fvs-rg dp-b py-8 px-16 text-heading w-full" placeholder="e.g. Table 1 = England, Table 2 = Italy, etc." required></textarea>
+    <div class="relative mb-32">
+        <label for="table-names" class="text-sm leading-sm fvs-md inline-block mb-8 text-tertiary">Table Names</label>
+        <textarea name="table names" id="table-names" class="text-base leading-base fvs-rg block py-8 px-16 text-grey-neutral border-1 border-solid border-grey-border rounded-4 min-h w-full" rows="3" placeholder="e.g. Table 1 = England, Table 2 = Italy, etc." required></textarea>
     </div>
 
-    <div class="pos-r mb-32">
-        <label for="table-guests" class="fs-sm lh-sm fvs-md dp-ib mb-8 text-tertiary">Guest Names per Table</label>
-        <textarea name="guest names" id="table-guests" class="product__textarea fs-sm lh-sm fvs-rg dp-b py-8 px-16 text-heading w-full" placeholder="Table 1 = John Mann, Jane Mann, Jo Ede etc. &#10;Table 2 = Jane Smith, Steve Smith, etc." required></textarea>
+    <div class="relative mb-32">
+        <label for="table-guests" class="text-sm leading-sm fvs-md inline-block mb-8 text-tertiary">Guest Names per Table</label>
+        <textarea name="guest names" id="table-guests" class="text-base leading-base fvs-rg block py-8 px-16 text-grey-neutral border-1 border-solid border-grey-border rounded-4 min-h w-full" rows="3" placeholder="Table 1 = John Mann, Jane Mann, Jo Ede etc. &#10;Table 2 = Jane Smith, Steve Smith, etc." required></textarea>
     </div>
 
-    <div class="pos-r mb-32">
-        <label for="table-colour" class="fs-sm lh-sm fvs-md dp-ib mb-8 text-tertiary">Colour Theme</label>
-        <div class="pos-r">
-            <select name="color theme" id="table-colour" class="product__select fs-sm lh-sm fvs-rg dp-b py-8 pr-32 pl-16 text-heading w-full" required>
+    <div class="relative mb-32">
+        <label for="table-colour" class="text-sm leading-sm fvs-md inline-block mb-8 text-tertiary">Colour Theme</label>
+        <div class="relative">
+            <select name="color theme" id="table-colour" class="text-base leading-base fvs-rg block py-8 pr-32 pl-16 text-grey-neutral w-full border-1 border-solid border-grey-border rounded-4 appearance-none" required>
                 <option value="Navy Blue">Navy Blue</option>
                 <option value="Blush Pink">Blush Pink</option>
                 <option value="Platinum Grey">Platinum Grey</option>
                 <option value="Mint">Mint</option>
                 <option value="Olive Green">Olive Green</option>
             </select>
-            <svg class="product__select-icon pos-a pe-none" width="24" height="24" aria-hidden="true">
+            <svg class="absolute top-1/2 right-8 transform rotate-90 -translate-x-1/2 -translate-y-1/2 pointer-events-none" width="24" height="24" aria-hidden="true">
                 <use xlink:href="/icons/sprite.svg#chevron"></use>
             </svg>
         </div>
     </div>
 
-    <div class="pos-r mb-32">
-        <label for="quantity" class="fs-sm lh-sm fvs-md dp-ib mb-8 text-tertiary">Quantity</label>
-        <input type="number" id="quantity" name="quantity" value="1" min="1" class="product__input fs-sm lh-sm fvs-rg dp-b py-8 px-16 text-heading w-1/4" pattern="[0-9]*">
+    <div class="relative mb-32">
+        <label for="quantity" class="text-sm leading-sm fvs-md inline-block mb-8 text-tertiary">Quantity</label>
+        <input type="text" id="quantity" name="quantity" value="1" min="1" inputmode="numeric" class="text-base leading-base fvs-rg block py-8 px-16 text-grey-neutral border-1 border-solid border-grey-border rounded-4 w-1/4" pattern="[0-9]*">
     </div>
 
-    <button type="submit" class="bgc-secondary text-foreground fs-xs lh-xs fvs-md py-16 px-24 borr-5 tt-uc ls-1 ol-3-solid-transparent focus:olc-primary hover:bgc-secondary">Add to basket</button>
+    <button type="submit" class="bg-secondary text-foreground text-xs leading-xs fvs-md py-16 px-24 rounded-5 uppercase tracking-1 outline-transparent focus:outline-primary hov:hover:bg-hover-secondary">Add to basket</button>
 </form>

@@ -1,6 +1,9 @@
 import stateManager from './stateManager';
 
 function Form(product: HTMLElement) {
+  const chosenPins: HTMLElement[] = [];
+  const checkedPins: HTMLInputElement[] = [];
+
   const form: HTMLFormElement | null = product.querySelector('[data-product-form]');
 
   function handleSubmitEvent(event: Event) {
@@ -21,16 +24,16 @@ function Form(product: HTMLElement) {
 
   function buildChosenPinHtml(textColor: string | null, hexColor: string | null) {
     return `
-      <div class="pos-r dp-f jc-between ai-c mt-24" id="${textColor}-chosen" data-pin-chosen="${textColor}">
-        <span class="pin-color pos-r borr-50" style="width: 2.5rem; height: 2.5rem; background-color: ${hexColor};" aria-hidden="true"></span>
+      <div class="relative flex justify-between items-center mt-24" id="${textColor}-chosen" data-pin-chosen="${textColor}">
+        <span class="pin-color relative rounded-full" style="width: 2.5rem; height: 2.5rem; background-color: ${hexColor};" aria-hidden="true"></span>
 
-        <label for="${textColor}-text" class="pin-color pos-r borr-50" style="width: 2.5rem; height: 2.5rem; background-color: ${hexColor};">
+        <label for="${textColor}-text" class="pin-color relative rounded-full" style="width: 2.5rem; height: 2.5rem; background-color: ${hexColor};">
           <span class="sr-only">Enter your ${textColor} pins label</span>
         </label>
 
-        <input class="pin-color__text fg-3 ml-8 py-8 px-16 fs-sm lh-sm fvs-rg text-heading" type="text" maxlength="35" placeholder="${textColor} pins label" id="${textColor}-text" name="pin label">
+        <input class="flex-grow ml-8 py-8 px-16 text-sm leading-sm fvs-rg text-grey-neutral border-1 border-solid border-grey-border rounded-4" type="text" maxlength="35" placeholder="${textColor} pins label" id="${textColor}-text" name="pin label" data-pin-label>
 
-        <p class="dp-n fg-3 ml-8 py-8 px-16 fs-sm fst-italic lh-sm fvs-rg text-heading">30x ${textColor} pins </p>
+        <p class="hidden flex-grow ml-8 py-8 px-16 text-sm leading-sm fvs-rg text-grey-neutral italic">30x ${textColor} pins </p>
       </div>
     `;
   }
@@ -85,6 +88,40 @@ function Form(product: HTMLElement) {
     }
   }
 
+  function removeCurrentPin(input: HTMLInputElement, currentPin: HTMLElement) {
+    const foo = form?.querySelector(`[data-foo="${input.value}"]`);
+    const currentPinInput: HTMLInputElement | null = currentPin.querySelector('[data-pin-label]');
+    const newCheckedPins = checkedPins.filter(pin => pin !== input);
+
+    if (!currentPinInput) return;
+
+    checkedPins.splice(0, checkedPins.length, ...newCheckedPins);
+    currentPinInput.value = '';
+    foo?.remove();
+  }
+
+  function addCurrentPin(input: HTMLInputElement) {
+    const inputParent = input.parentElement;
+    const html = `<input type="checkbox" name="color" value="${input.value}" data-foo="${input.value}" checked hidden />`
+
+    checkedPins.push(input);
+    inputParent?.insertAdjacentHTML('beforeend', html);
+  }
+
+  function updateChosenPinsOrder(input: HTMLInputElement) {
+    const pinColor = input.id.split('-pin')[0];
+    const currentPin: HTMLElement | null | undefined = form?.querySelector(`[data-pin-chosen="${pinColor}"]`);
+
+    if (!currentPin) return;
+
+    const currentPinParent = currentPin.parentNode;
+    const isInArray = checkedPins.indexOf(input) !== -1;
+
+    currentPinParent?.appendChild(currentPin);
+
+    isInArray ? removeCurrentPin(input, currentPin) : addCurrentPin(input);
+  }
+
   function handleClickEvent(event: Event) {
     const target = event.target as HTMLInputElement;
 
@@ -98,6 +135,7 @@ function Form(product: HTMLElement) {
 
     if (target.name === 'colors') {
       validateCheckedLimit();
+      updateChosenPinsOrder(target);
     }
   }
 

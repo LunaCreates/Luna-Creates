@@ -18,12 +18,12 @@
 {% endif %}
 
 <form class="mt-24" data-product-form="personalised">
-    <div class="pos-r mb-32">
-        <h2 class="fs-sm lh-sm fvs-sb mt-0 mb-16 text-tertiary">1. Choose your map size</h2>
+    <div class="relative mb-32">
+        <h2 class="text-sm leading-sm fvs-sb mt-0 mb-16 text-tertiary">1. Choose your map size</h2>
 
         {% include "_partials/components/map-sizes.njk" %}
 
-        <h2 class="fs-sm lh-sm fvs-sb mt-0 mb-16 text-tertiary">2. Choose your frame</h2>
+        <h2 class="text-sm leading-sm fvs-sb mt-0 mb-16 text-tertiary">2. Choose your frame</h2>
 
         {% include "_partials/components/map-frames.njk" %}
 
@@ -38,63 +38,47 @@
         {%- endfor -%}
     </div>
 
-    <div class="p-24 bgc-neutral borr-4">
-        <h2 class="product__personalisation-title pos-r fs-md lh-md fvs-md my-0 pb-24 text-tertiary tt-uc">Personalisation</h2>
+    <div class="p-24 bg-grey-light rounded-4">
+        <h2 class="relative text-md leading-md fvs-md my-0 text-tertiary uppercase">Personalisation</h2>
 
-        <div class="pos-r mt-16 mb-32">
-            <label for="map-title" class="fs-sm lh-sm fvs-md dp-ib mb-8 text-tertiary">
+        <hr class="mt-24 mb-16 -mx-24 border-grey-border">
+
+        <div class="relative mb-32">
+            <label for="map-title" class="text-sm leading-sm fvs-md inline-block mb-8 text-tertiary">
                 Map title
-                <small class="dp-b fs-xs lh-xs fvs-md text-body">Displayed beneath your map</small>
+                <small class="block text-xs leading-xs fvs-md text-grey">Displayed beneath your map</small>
             </label>
-            <input type="text" name="title" class="product__input fs-sm lh-sm fvs-rg dp-b py-8 px-16 text-heading w-full" minlength="3" maxlength="36" placeholder="{{ titleHolder }}" id="map-title" data-product-map-title required>
+            <input type="text" name="title" class="text-base leading-base fvs-rg block py-8 px-16 text-grey-neutral w-full border-1 border-solid border-grey-border rounded-4" minlength="3" maxlength="36" placeholder="{{ titleHolder }}" id="map-title" data-product-map-title required>
         </div>
 
-        <h3 class="fs-sm lh-sm fvs-md dp-ib mt-0 mb-16 text-tertiary">
+        <h3 class="text-sm leading-sm fvs-md inline-block mt-0 mb-16 text-tertiary">
             Choose your free pins
-            <small class="dp-b fs-xs lh-xs fvs-md text-body">30 of each colour included</small>
+            <small class="block text-xs leading-xs fvs-md text-grey">30 of each colour included</small>
         </h3>
 
-        <div class="pos-r dp-f flex-wrap -mt-8 mb-32" data-pin-colors>
+        <div class="relative flex flex-wrap -mt-8 mb-32" data-pin-colors>
         {% for color in colors %}
             {% set hex = color.hex %}
             {% set name = color.name %}
             {% set id = color.name.replace(' ', '-') + '-pin' %}
 
             <label for="{{ name }}" class="sr-only">{{ name }}</label>
-            <input type="checkbox" id="{{ id | lower }}" value="{{ hex }}" name="colors" class="pin-color borr-50 m-8 bgc-transparent cursor-pointer" style="width: 2.5rem; height: 2.5rem; border: 7px solid {{ hex }}; --color: {{ hex }};" data-pin="{{ name | lower }}" data-pin-hex="{{ hex }}">
+            <input type="checkbox" id="{{ id | lower }}" value="{{ hex }}" name="colors" class="rounded-full m-8 bg-transparent cursor-pointer appearance-none" style="width: 2.5rem; height: 2.5rem; border: 7px solid {{ hex }}; --color: {{ hex }};" data-pin="{{ name | lower }}" data-pin-hex="{{ hex }}">
         {% endfor %}
 
-            <div class="pin-color__chosen w-full mt-32 dp-n" data-chosen-pins>
-                <h3 class="fs-sm lh-sm fvs-md mt-0 mb-16 text-tertiary">Chosen pins</h3>
+            <div class="pin-color__chosen w-full mt-32 hidden" data-chosen-pins>
+                <h3 class="text-sm leading-sm fvs-md mt-0 mb-16 text-tertiary">Chosen pins</h3>
 
-                <p class="dp-ib mr-8 mb-0">Labels:</p>
+                <p class="inline-block mr-8 mb-0 text-grey">Labels:</p>
 
-                <input class="pin-color__labels product__radio-input dp-inf jc-center ai-c pos-r m-0" type="radio" id="map-label-no" name="show key text" value="no" data-map-key>
-                <label class="dp-ib mr-16" for="map-label-no">Off</label>
+                <input class="inline-flex justify-center items-center relative m-0" width="20" type="radio" id="map-label-no" name="show key text" value="no" data-map-key>
+                <label class="inline-block mr-16" for="map-label-no">Off</label>
 
-                <input class="pin-color__labels product__radio-input dp-inf jc-center ai-c pos-r m-0" type="radio" id="map-label-yes" name="show key text" value="yes" checked data-map-key>
-                <label class="dp-ib" for="map-label-yes">On</label>
-
-            {# {% for color in colors %}
-                {% set hex = color.hex %}
-                {% set name = color.name.replace(' ', '-') | lower %}
-                {% set placeholder = color.name + ' pins label' %}
-
-                <div class="dp-n pos-r jc-between ai-c mt-24" id="{{ name }}-chosen" data-pins-chosen>
-                    <span class="pin-color pos-r borr-50" style="width: 2.5rem; height: 2.5rem; background-color: {{ hex }};" aria-hidden="true"></span>
-
-                    <label for="{{ name }}-text" class="pin-color pos-r borr-50" style="width: 2.5rem; height: 2.5rem; background-color: {{ hex }};">
-                        <span class="sr-only">Enter your {{ name }} pins label</span>
-                    </label>
-
-                    <input class="pin-color__text fg-3 ml-8 py-8 px-16 fs-sm lh-sm fvs-rg text-heading" type="text" maxlength="35" placeholder="{{ placeholder }}" id="{{ name }}-text" name="pin label">
-
-                    <p class="dp-n fg-3 ml-8 py-8 px-16 fs-sm fst-italic lh-sm fvs-rg text-heading">30x {{ color.name | lower }} pins </p>
-                </div>
-            {% endfor %} #}
+                <input class="inline-flex justify-center items-center relative m-0" width="20" type="radio" id="map-label-yes" name="show key text" value="yes" checked data-map-key>
+                <label class="inline-block" for="map-label-yes">On</label>
             </div>
         </div>
 
-        <button type="submit" class="bgc-secondary text-foreground fs-xs lh-xs fvs-md py-16 px-24 borr-5 tt-uc ls-1 ol-3-solid-transparent focus:olc-primary hover:bgc-secondary" data-product-submit>Preview &amp; Add To Basket</button>
+        <button type="submit" class="bg-secondary text-foreground text-xs leading-xs fvs-md py-16 px-24 rounded-5 uppercase tracking-1 outline-transparent focus:outline-primary hov:hover:bg-hover-secondary" data-product-submit>Preview &amp; Add To Basket</button>
     </div>
 </form>

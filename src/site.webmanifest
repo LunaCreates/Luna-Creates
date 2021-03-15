@@ -2,7 +2,7 @@
   "name": "Luna Creates",
   "short_name": "LC",
   "description": "Travel related personalised world map pinboard ecommerce platform.",
-  "start_url": "/?utm_source=homescreen",
+  "start_url": "/",
   "display": "standalone",
   "background_color": "#000000",
   "theme_color": "#ffc600",

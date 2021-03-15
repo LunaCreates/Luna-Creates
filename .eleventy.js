@@ -11,7 +11,7 @@ const swBuildNumber = require('./src/utils/shortcodes/sw-build-number.js');
 const settings = require('./src/site/_data/settings.json');
 
 module.exports = config => {
-  const prod = process.env.NODE_ENV === 'prod';
+  const prod = process.env.NODE_ENV === 'production';
   const now = new Date();
   const livePosts = post => post.date <= now && !post.data.draft;
 

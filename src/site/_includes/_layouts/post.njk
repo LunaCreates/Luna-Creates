@@ -13,9 +13,9 @@ eleventyComputed:
 {% block content %}
     {% include "_partials/components/hero.njk" %}
 
-    <main class="container px-16 my-32 md:my-56 lg:my-80" id="main">
-        <article class="rte maxw-post mx-auto">
-            <time class="fs-sb lh-sb fvs-sb text-foreground dp-b mb-24 md:mb-32" datetime="{{publish_date}}">{{publish_date | readableDate }}</time>
+    <main class="container mx-auto px-16 my-32 md:my-56 lg:my-80" id="main">
+        <article class="rte max-w-45 mx-auto">
+            <time class="text-sb leading-sb fvs-sb text-foreground block mb-24 md:mb-32" datetime="{{publish_date}}">{{publish_date | readableDate }}</time>
 
             {{ content | safe }}
         </article>

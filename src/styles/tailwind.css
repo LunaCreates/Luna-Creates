@@ -1,0 +1,261 @@
+:root {
+  --color-primary: #073358;
+  --color-secondary: #ffc857;
+  --color-tertiary: #156572;
+  --color-background: #fff;
+  --color-foreground: #040f0f;
+  --color-danger: #de0000;
+  --color-success: #70c041;
+  --color-grey: #595959;
+  --color-grey-fade: #f7f7f7;
+  --color-grey-light: #f1f2f3;
+  --color-grey-border: #d8d8d8;
+  --color-grey-neutral: #777676;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  @font-face {
+    font-family: 'Avenir Next';
+    src: url('/fonts/avenir-next-variable.woff2') format('woff2-variations');
+    font-display: optional;
+    font-weight: 400;
+  }
+
+  html {
+    font-size: 16px;
+  }
+
+  [data-nav-button][aria-expanded="true"] path:first-child {
+    @apply transform rotate-45;
+  }
+
+  [data-nav-button][aria-expanded="true"] path:nth-child(2) {
+    @apply opacity-0;
+  }
+
+  [data-nav-button][aria-expanded="true"] path:last-child {
+    @apply transform -rotate-45;
+  }
+
+  [data-nav-item="Shop"][aria-expanded=true] svg {
+    @apply transform rotate-180;
+  }
+
+  .scroll-snap-none {
+    scroll-snap-type: none;
+  }
+
+  .scroll-snap-x {
+    scroll-snap-type: x mandatory;
+  }
+
+  .scroll-snap-y {
+    scroll-snap-type: y mandatory;
+  }
+
+  .scroll-snap-start {
+    scroll-snap-align: start;
+  }
+
+  .scroll-snap-center {
+    scroll-snap-align: center;
+  }
+
+  .scroll-snap-end {
+    scroll-snap-align: end;
+  }
+
+  .scroll-padding-0-16 {
+    scroll-padding: 0 1rem;
+  }
+
+  .pinch-zoom-container {
+    position: relative;
+    padding-top: 100%;
+  }
+
+  [data-product-map-title]::placeholder,
+  [data-pin-label]::placeholder {
+    font-style: italic;
+  }
+
+  [data-pin]:checked {
+    background-color: var(--color);
+  }
+
+  [data-pin]:disabled {
+    @apply opacity-25 cursor-not-allowed;
+  }
+
+  [data-pin]:checked ~ [data-chosen-pins] {
+    @apply block;
+  }
+
+  [data-map="size"]:checked + div,
+  [data-map="frame"]:checked + div {
+    @apply bg-secondary;
+  }
+
+  [data-map="size"]:checked ~ [data-map-size-selected],
+  [data-map="frame"]:checked ~ [data-map-frame-selected] {
+    @apply opacity-100 visible;
+  }
+
+  [data-map="frame"]:checked + div > * {
+    @apply bg-transparent;
+  }
+
+  [id='pink-pin']:checked ~ * [id='pink-chosen'],
+  [id='light-blue-pin']:checked ~ * [id='light-blue-chosen'],
+  [id='green-pin']:checked ~ * [id='green-chosen'],
+  [id='purple-pin']:checked ~ * [id='purple-chosen'],
+  [id='white-pin']:checked ~ * [id='white-chosen'],
+  [id='yellow-pin']:checked ~ * [id='yellow-chosen'],
+  [id='red-pin']:checked ~ * [id='red-chosen'],
+  [id='blue-pin']:checked ~ * [id='blue-chosen'],
+  [id='orange-pin']:checked ~ * [id='orange-chosen'],
+  [id='black-pin']:checked ~ * [id='black-chosen'] {
+    @apply flex;
+  }
+
+  [id='map-label-no']:checked  ~ [data-pin-chosen] label,
+  [id='map-label-no']:checked  ~ [data-pin-chosen] input,
+  [id='map-label-yes']:checked  ~ [data-pin-chosen] span {
+    @apply hidden;
+  }
+
+  [id='map-label-no']:checked  ~ [data-pin-chosen] p {
+    @apply block;
+  }
+
+  @variants responsive {
+    .before::before,
+    .after::after {
+      content: '';
+    }
+
+    .fvs-rg {
+      font-variation-settings: 'wght' 400;
+    }
+
+    .fvs-md {
+      font-variation-settings: 'wght' 450;
+    }
+
+    .fvs-sb {
+      font-variation-settings: 'wght' 500;
+    }
+
+    @supports (aspect-ratio: 1 / 1) {
+      .ratio-1-1 {
+        aspect-ratio: 1 / 1;
+      }
+
+      .ratio-2-1 {
+        aspect-ratio: 2 / 1;
+      }
+
+      .ratio-3-2 {
+        aspect-ratio: 3 / 2;
+      }
+
+      .ratio-3-4 {
+        aspect-ratio: 3 / 4;
+      }
+
+      .ratio-4-1 {
+        aspect-ratio: 4 / 1;
+      }
+
+      .ratio-4-3 {
+        aspect-ratio: 4 / 3;
+      }
+
+      .ratio-16-9 {
+        aspect-ratio: 16 / 9;
+      }
+    }
+
+    @supports not (aspect-ratio: 1 / 1) {
+      .ratio-1-1 {
+        padding-top: calc((1 / 1) * 100%);
+      }
+
+      .ratio-2-1 {
+        padding-top: calc((1 / 2) * 100%);
+      }
+
+      .ratio-3-2 {
+        padding-top: calc((2 / 3) * 100%);
+      }
+
+      .ratio-3-4 {
+        padding-top: calc((4 / 3) * 100%);
+      }
+
+      .ratio-4-1 {
+        padding-top: calc((1 / 4) * 100%);
+      }
+
+      .ratio-4-3 {
+        padding-top: calc((3 / 4) * 100%);
+      }
+
+      .ratio-16-9 {
+        padding-top: calc((9 / 16) * 100%);
+      }
+    }
+  }
+
+  body {
+    font-family: 'Avenir Next', sans-serif;
+  }
+
+  .rte h2,
+  .rte h3,
+  .rte h4 {
+    @apply mb-16;
+  }
+
+  .rte h2 {
+    @apply text-md leading-md;
+  }
+
+  .rte h3 {
+    @apply text-sm leading-sm;
+  }
+
+  .rte h4 {
+    @apply text-sm leading-sm;
+  }
+
+  .rte a {
+    @apply text-foreground font-bold underline;
+  }
+
+  .rte ul {
+    @apply list-disc pl-24 mb-24;
+  }
+
+  .rte li {
+    @apply text-grey text-xs leading-xs mb-8;
+  }
+
+  .rte p {
+    @apply text-grey text-xs leading-xs mt-0 mb-16;
+  }
+
+  .rte img {
+    @apply mx-auto;
+  }
+
+  .rte li:last-child,
+  .rte p:last-child,
+  .rte > *:last-child {
+    @apply mb-0;
+  }
+}

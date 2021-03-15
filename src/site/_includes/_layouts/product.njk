@@ -1,47 +1,65 @@
 {% extends "_layouts/default.njk" %}
 
 {% block content %}
-    <main class="product container pt-24 px-16" aria-describedby="product-title" data-component="product-details" data-product-id="{{product.id}}" data-product-color="{{product.color}}" id="main">
-        <div class="product__imagery mb-32 md:mb-0">
-            <picture class="ratio-1-1 pe-none" data-component="product-picture">
-                <source media="(max-width: 37.4375em)" type="image/webp" data-srcset="{{product.mainImage}}_350x350.jpg.webp 1x, {{product.mainImage}}_450x450.jpg.webp 2x">
-                <source media="(max-width: 37.4375em)" data-srcset="{{product.mainImage}}_300x300.jpg 1x, {{product.mainImage}}_450x450.jpg 2x">
-                <source type="image/webp" data-srcset="{{product.mainImage}}_600x600.jpg.webp 1x, {{product.mainImage}}_800x800.jpg.webp 2x">
-                <img data-srcset="{{product.mainImage}}_600x600.jpg 1x, {{product.mainImage}}_800x800.jpg 2x" alt="{{product.mainImageAlt}}" class="lazyload" loading="lazy" width="300" height="300" data-product-image>
+    <main class="container mx-auto pt-24 px-16 md:flow-root md:pt-40" aria-describedby="product-title" data-component="product-details" data-product-id="{{product.id}}" data-product-color="{{product.color}}" id="main">
+        <div class="mb-32 text-center md:mb-0 md:float-left md:w-7/12 md:pr-48">
+            {% set mainImage = product.mainImage.split(r/.(jpg|png)/g)[0] %}
+
+             <picture class="ratio-1-1 relative block bg-grey-fade pointer-events-none" data-component="product-picture">
+                <source media="(max-width: 37.4375em)" type="image/webp" data-srcset="{{ mainImage }}_350x350.jpg.webp 1x, {{ mainImage }}_450x450.jpg.webp 2x">
+                <source media="(max-width: 37.4375em)" data-srcset="{{ mainImage }}_300x300.jpg 1x, {{ mainImage }}_450x450.jpg 2x">
+                <source type="image/webp" data-srcset="{{ mainImage }}_600x600.jpg.webp 1x, {{ mainImage }}_800x800.jpg.webp 2x">
+                <img data-srcset="{{ mainImage }}_600x600.jpg 1x, {{ mainImage }}_800x800.jpg 2x" alt="{{product.mainImageAlt}}" class="lazyload absolute w-full h-full top-0 left-0 object-cover" loading="lazy" width="300" height="300" data-product-image>
 
                 <noscript>
-                    <source media="(max-width: 37.4375em)" type="image/webp" srcset="{{product.mainImage}}_350x350.jpg.webp 1x, {{product.mainImage}}_450x450.jpg.webp 2x">
-                    <source media="(max-width: 37.4375em)" srcset="{{product.mainImage}}_300x300.jpg 1x, {{product.mainImage}}_450x450.jpg 2x">
-                    <source type="image/webp" srcset="{{product.mainImage}}_600x600.jpg.webp 1x, {{product.mainImage}}_800x800.jpg.webp 2x">
-                    <img srcset="{{product.mainImage}}_600x600.jpg 1x, {{product.mainImage}}_800x800.jpg 2x" alt="{{product.mainImageAlt}}" loading="lazy" width="300" height="300">
+                    <source media="(max-width: 37.4375em)" type="image/webp" srcset="{{ mainImage }}_350x350.jpg.webp 1x, {{ mainImage }}_450x450.jpg.webp 2x">
+                    <source media="(max-width: 37.4375em)" srcset="{{ mainImage }}_300x300.jpg 1x, {{ mainImage }}_450x450.jpg 2x">
+                    <source type="image/webp" srcset="{{ mainImage }}_600x600.jpg.webp 1x, {{ mainImage }}_800x800.jpg.webp 2x">
+                    <img srcset="{{ mainImage }}_600x600.jpg 1x, {{ mainImage }}_800x800.jpg 2x" alt="{{product.mainImageAlt}}" class="absolute w-full h-full top-0 left-0 object-cover" loading="lazy" width="300" height="300">
                 </noscript>
             </picture>
 
-            <button type="button" class="bgc-secondary text-foreground fs-xs lh-xs fvs-md py-16 px-24 borr-5 ls-1 dp-f jc-center ai-c w-full tt-uc ol-3-solid-transparent focus:olc-primary hover:bgc-secondary" data-image-zoom>
+            <button type="button" class="relative bg-secondary text-foreground text-xs leading-xs fvs-md py-16 px-24 rounded-b-5 tracking-1 flex justify-center items-center w-full uppercase outline-transparent focus:outline-primary hov:hover:bg-hover-secondary" data-image-zoom>
                 Open image zoom
-                <svg class="product__zoom-icon" width="24" height="24" aria-hidden="true">
+                <svg class="ml-8" width="24" height="24" aria-hidden="true">
                     <use xlink:href="/icons/sprite.svg#zoom"></use>
                 </svg>
             </button>
 
             {% include "_partials/components/product-thumbnails.njk" %}
+
+            {% if product.thumbnails | length > 4 %}
+                <div class="inline-flex justify-between items-center mt-16 md:hidden" aria-hidden="true">
+                    <svg class="mr-8" width="19" height="25" fill="var(--color-tertiary)">
+                        <use xlink:href="/icons/sprite.svg#touch"></use>
+                    </svg>
+
+                    <span class="inline-flex justify-between items-baseline text-primary">
+                        Swipe for more
+
+                        <svg class="ml-8" width="18" height="12" fill="currentColor">
+                            <use xlink:href="/icons/sprite.svg#arrow"></use>
+                        </svg>
+                    </span>
+                </div>
+            {% endif %}
         </div>
 
-        <div class="product__details">
-            <h1 class="fs-lg lh-lg fvs-rg ls-3 tt-uc mt-0 text-heading" id="product-title">{{product.title}}</h1>
-            <span class="fs-md lh-md fvs-rg text-body" aria-live="polite" data-product-price>{{product.minPrice}}</span>
+        <div class="md:float-right md:w-5/12">
+            <h1 class="mb-16 text-lg leading-lg fvs-rg tracking-3 uppercase mt-0 text-grey-neutral" id="product-title">{{product.title}}</h1>
+            <span class="text-md leading-md fvs-rg text-grey" aria-live="polite" data-product-price>{{product.minPrice}}</span>
 
             {% if product.description %}
-            <div class="product__description mt-24 mb-32 md:dp-n" data-component="more-toggle">
-                <h2 class="fs-md lh-md fvs-md mt-0 mb-16 tt-uc text-heading">Product Information</h2>
+            <div class="mt-24 mb-32 md:hidden" data-component="more-toggle">
+                <h2 class="text-md leading-md fvs-md mt-0 mb-16 uppercase text-grey-neutral">Product Information</h2>
 
-                <div class="product__description-rte product__description-rte--toggle" data-toggle>
-                    {{product.description | safe }}
+                <div class="rte relative overflow-hidden after after:absolute after:bottom-0 after:left-0 after:w-full after:h-150 after:bg-gradient-to-t from-background" data-toggle>
+                    {{ product.description | safe }}
                 </div>
 
-                <button class="fs-sm lh-sm fvs-md text-tertiary dp-f jc-between ai-c mt-16 tt-uc md:dp-n" aria-hidden="true" data-toggle-more>
+                <button class="text-sm leading-sm fvs-md text-tertiary flex justify-between items-center mt-16 uppercase md:hidden" aria-hidden="true" data-toggle-more>
                     Show more
-                    <svg class="product__toggle-icon" width="24" height="24">
+                    <svg class="transform rotate-90" width="28" height="28">
                         <use xlink:href="/icons/sprite.svg#chevron"></use>
                     </svg>
                 </button>
@@ -80,15 +98,20 @@
         </div>
 
         {% if product.description %}
-        <div class="product__description mt-40 mb-24 dp-n md:dp-b">
-            <h2 class="fs-md lh-md fvs-md mt-0 mb-16 tt-uc text-heading">Product Information</h2>
-            {{ product.description | safe }}
+        <div class="hidden md:block md:mt-40 md:float-left md:w-7/12 md:pr-48">
+            <h2 class="text-md leading-md fvs-md mt-0 mb-16 uppercase text-grey-neutral">Product Information</h2>
+
+            <div class="rte">
+                {{ product.description | safe }}
+            </div>
         </div>
         {% endif %}
 
         {% include "_partials/components/image-zoom.njk" %}
         {% include "_partials/components/modal.njk" %}
     </main>
+
+    {% include "_partials/components/related-products.njk" %}
 
     {{content | safe}}
 {% endblock %}
