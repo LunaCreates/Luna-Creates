@@ -215,6 +215,11 @@
     font-family: 'Avenir Next', sans-serif;
   }
 
+  strong {
+    font-variation-settings: 'wght' 500;
+    font-weight: normal;
+  }
+
   .rte h2,
   .rte h3,
   .rte h4 {
