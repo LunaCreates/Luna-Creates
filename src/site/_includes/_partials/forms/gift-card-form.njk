@@ -4,7 +4,7 @@
     <div class="relative mb-32">
         <label for="map-size" class="text-sm leading-sm fvs-md inline-block mb-8 text-tertiary">Choose your gift card</label>
         <div class="relative">
-            <select name="size" id="map-size" class="text-base leading-base fvs-rg block py-8 pr-32 pl-16 text-grey-neutral w-full border-1 border-solid border-grey-border rounded-4 appearance-none" data-product-variants="data-product-variants">
+            <select name="size" id="map-size" class="text-base leading-base fvs-rg block py-8 pr-32 pl-16 text-grey-neutral w-full border-1 border-solid border-grey-border bg-transparent rounded-4 appearance-none" data-product-variants="data-product-variants">
                 {% for option in product.options %}
                     <option value="{{option.value}}" data-name="{{option.name}}" data-id="{{option.id}}" data-price="{{option.price}}">{{option.value}}</option>
                 {% endfor %}
