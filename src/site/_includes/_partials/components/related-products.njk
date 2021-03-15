@@ -1,4 +1,7 @@
-{% if 'Map Only' in product.tags %}
+{% set regex = r/Map|Wedding/ %}
+{% set productType = product.productType %}
+
+{% if regex.test(productType) %}
     <section class="container mx-auto my-32 px-16 md:my-56 lg:my-80" aria-labelledby="related-items">
         <hr class="mt-0 mb-32 md:mb-48">
 
@@ -7,9 +10,9 @@
         <ul class="grid grid-cols-2 gap-24 md:grid-cols-3 md:gap-32">
         {% for relatedProduct in products %}
             {% set rp = relatedProduct %}
-            {% set tags = rp.tags %}
+            {% set rpType = rp.productType %}
 
-            {% if 'Map Only' in tags and rp.title !== product.title %}
+            {% if productType === rpType and rp.title !== product.title %}
                 <li class="relative overflow-hidden group">
                     {% picture
                         rp.mainImage,
