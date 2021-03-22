@@ -183,6 +183,8 @@ Two of her favourite places she has visited in this world are Jordan (desert Wad
 
 **_@danielkordan_**
 
+![](https://lunacreates.co.uk/images/blog/img_9642.jpg)
+
 Daniel works as a landscape photographer and loves to travel the world. He has visited some pretty cool places like Japan and Antarctica.
 
 His photos are magical and enchanted, like something straight out of a fairytale!
