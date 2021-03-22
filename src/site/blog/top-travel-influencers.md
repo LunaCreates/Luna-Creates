@@ -99,6 +99,8 @@ _Bucket List experiences come in all shapes and sizes, everyday adventures in yo
 
 Russian artist Murad Osmann is best known for his ongoing “Follow Me” series of works featuring his wife Nataly Zakharova leading him around the world.
 
+Absolutely incredible photos!
+
 **_@theblondeabroad_**
 
 The Blonde Abroad is an award-winning solo female travel blog featuring travel tips, packing guides, videos and photography from around the world.
