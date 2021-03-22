@@ -95,6 +95,8 @@ _Bucket List experiences come in all shapes and sizes, everyday adventures in yo
 
 **_@muradosmann_**
 
+![](https://lunacreates.co.uk/images/blog/img_9618.jpg)
+
 Russian artist Murad Osmann is best known for his ongoing “Follow Me” series of works featuring his wife Nataly Zakharova leading him around the world.
 
 **_@theblondeabroad_**
