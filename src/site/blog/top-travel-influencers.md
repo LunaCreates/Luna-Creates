@@ -53,6 +53,8 @@ _‘Being part of the skoolie community allows you to connect to some of the mos
 
 **_@fifth_wheels_rock_literally_**
 
+![](https://lunacreates.co.uk/images/blog/img_9612.jpg "@fifth_wheels_rock_literally")
+
 Stephanie, who comes from Northern Michigan, is married to Andrew and they have the most gorgeous German Shepherd dog called Vedder.
 
 In September 2018, Stephanie and her husband moved out of their house, purged all of their belongings and moved into a 34 foot fifth wheel camper!
