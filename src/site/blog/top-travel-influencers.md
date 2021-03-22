@@ -147,6 +147,8 @@ He describes how he used poker to fund his travels through Europe, how he coped 
 
 Brilliant book which we would highly recommend!
 
+![](https://lunacreates.co.uk/images/blog/img_9630.jpg)
+
 **_@thisbatteredsuitcase_**
 
 Brenna Holeman has travelled solo for the past 17 years and become a full-time blogger and freelancer, and couldn’t be happier.
