@@ -151,6 +151,8 @@ Brilliant book which we would highly recommend!
 
 **_@thisbatteredsuitcase_**
 
+![](https://lunacreates.co.uk/images/blog/img_9632.jpg)
+
 Brenna Holeman has travelled solo for the past 17 years and become a full-time blogger and freelancer, and couldn’t be happier.
 
 Brenna has travelled to over 100 countries through all the continents, except Antarctica.
