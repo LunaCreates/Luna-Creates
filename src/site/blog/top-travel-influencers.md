@@ -103,6 +103,8 @@ Absolutely incredible photos!
 
 **_@theblondeabroad_**
 
+![](https://lunacreates.co.uk/images/blog/img_9620.jpg)
+
 The Blonde Abroad is an award-winning solo female travel blog featuring travel tips, packing guides, videos and photography from around the world.
 
 Kiki, originally from California, left her career in corporate wealth management to embark on a summer of soul searching that would change the course of her life forever.
@@ -112,6 +114,8 @@ Kiki has travelled to over 70 countries and flown 989,690 miles at time of print
 Her moto “I hope to inspire you to live a life you love”
 
 **_@saltyluxe_**
+
+![](https://lunacreates.co.uk/images/blog/img_9625.jpg)
 
 Sarah, originally from Australia, left her 9-5 job to become a full time travel influencer.
 
