@@ -181,6 +181,8 @@ Emile describes herself as a _“photo-creator, story-teller and wanderer”_
 
 Two of her favourite places she has visited in this world are Jordan (desert WadiRum) and New Zealand (Milford Sound - stunning valley surrounded by mountains).
 
+![](https://lunacreates.co.uk/images/blog/img_9638.jpg)
+
 **_@danielkordan_**
 
 ![](https://lunacreates.co.uk/images/blog/img_9642.jpg)
@@ -190,3 +192,5 @@ Daniel works as a landscape photographer and loves to travel the world. He has v
 His photos are magical and enchanted, like something straight out of a fairytale!
 
 Our favourites are those of the night sky in Greenland with the stunning northern lights. Daniel teaches photography workshops and video tutorials.
+
+![](https://lunacreates.co.uk/images/blog/img_9640.jpg)
