@@ -173,7 +173,7 @@ Their favourite destination is Asia and their Instagram photos are incredible wh
 
 **_@helloemile_**
 
-An Australian based photographer Emile likes to capture details in photos that often go unseen and showcases this through his landscape pictures on Instagram
+An Australian based photographer Emile likes to capture details in photos that often go unseen and showcases this through her landscape pictures on Instagram
 
 Emile describes herself as a _“photo-creator, story-teller and wanderer”_
 
