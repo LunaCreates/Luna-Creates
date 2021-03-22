@@ -135,6 +135,8 @@ They are also the founders of @living_destinations and @living_hotels.
 
 **_@Nomadicmatt_**
 
+![](https://lunacreates.co.uk/images/blog/img_9629.jpg)
+
 Matthew Kepness was one of the internet’s first ever travel bloggers which paved the way for adventurous millennials.
 
 Matt shares the highs and lows of travelling the world on $50 a day!
