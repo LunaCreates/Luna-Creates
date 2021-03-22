@@ -177,7 +177,7 @@ An Australian based photographer Emile likes to capture details in photos that o
 
 Emile describes herself as a _“photo-creator, story-teller and wanderer”_
 
-Tow of her favourite places she has visited in this world are Jordan (desert WadiRum) and New Zealand (Milford Sound - stunning valley surrounded by mountains).
+Two of her favourite places she has visited in this world are Jordan (desert WadiRum) and New Zealand (Milford Sound - stunning valley surrounded by mountains).
 
 **_@danielkordan_**
 
