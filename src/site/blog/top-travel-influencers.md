@@ -9,7 +9,7 @@ title: Top Travel Influencers
 publish_date: 
 
 ---
-**Top 20 Travel Influencers**
+**Top Travel Influencers**
 
 The world is changing so fast, people are starting to move away from choosing their holiday destinations via the traditional high street travel agent and instead navigating towards travel influencers to discover new and exciting places to visit in this incredible world.
 
