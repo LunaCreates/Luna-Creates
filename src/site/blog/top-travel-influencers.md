@@ -69,7 +69,7 @@ They now travel and find new and exciting places to explore on this beautiful pl
 
 Sabina writes and travels the world as her full time job!
 
-Sabina’s goal is to inspire young women to take charge and become the leading lady in the story of their life and find the magic and happiness in the ordinary.
+Sabina’s goal is to inspire young women to take charge and become the leading lady in the story of their life and find the magic, happiness in the ordinary.
 
 Be sure to check out her book : #Wanderlust
 
@@ -119,7 +119,7 @@ Her moto “I hope to inspire you to live a life you love”
 
 Sarah, originally from Australia, left her 9-5 job to become a full time travel influencer.
 
-She has visited some of the most tropical destinations including such as the Maldives and Bora Bora. Her instagram account is full of dreamy pictures of tropical beaches such as ‘The Pass, Byron Bay’, ‘Lucky Bay, Esperance’ and beaches in French Polynesia.
+She has visited some of the most tropical destinations including the Maldives and Bora Bora. Her instagram account is full of dreamy pictures of tropical beaches such as ‘The Pass, Byron Bay’, ‘Lucky Bay, Esperance’ and beaches in French Polynesia.
 
 **_@ournextflight_**
 
@@ -129,7 +129,7 @@ Every image posted on Italian Travel couple Danilo and Anna’s Instagram accoun
 
 The couple have explored some of the most interesting cities in the world.
 
-Exciting to see that the very first post on instagram was of Notting Hill.
+Exciting to see that the very first post on Instagram was of Notting Hill.
 
 They are also the founders of @living_destinations and @living_hotels.
 
@@ -143,7 +143,7 @@ Matt shares the highs and lows of travelling the world on $50 a day!
 
 After travelling 500,000 miles in 90 different countries, Matt has written a book called ‘Ten Years a Nomad: A Traveler’s Journey Home’.
 
-He describes how he used poker to fund his travels through Europe, how he coped with travel burnout and how he connected with locals through websites like : Workaway, Couchsurfing and Airbnb experiences.
+He describes how he used poker to fund his travels through Europe, coped with travel burnout and how he connected with locals through websites like : Workaway, Couchsurfing and Airbnb experiences.
 
 Brilliant book which we would highly recommend!
 
@@ -169,7 +169,7 @@ Her favourite place is Italy and we’d have to agree it has some of the most in
 
 Couple Luca and Alessandro have been full time travellers since 2016.
 
-Their favourite destination is Asia and their Instagram photos are incredible which shows their passion for photography.
+Their favourite destination is Asia and their Instagram photos are stunning which shows their passion for photography.
 
 **_@helloemile_**
 
