@@ -63,6 +63,10 @@
     @apply transform rotate-180;
   }
 
+  [data-nav-item="Shop"][aria-expanded=true] + [data-sub-nav] {
+    @apply md:opacity-100 md:visible
+  }
+
   .scroll-snap-none {
     scroll-snap-type: none;
   }
