@@ -1,6 +1,6 @@
 ---
 is_draft: false
-banner_image: https://lunacreates.co.uk/images/blog/2895c0c0-cd9e-4891-9712-5166eae2f239.JPEG
+banner_image: https://lunacreates.co.uk/images/blog/banner1.png
 thumbnail: https://lunacreates.co.uk/images/blog/2895c0c0-cd9e-4891-9712-5166eae2f239.JPEG
 tags: []
 meta_title: Top Travel Influencers
