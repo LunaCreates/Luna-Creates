@@ -85,9 +85,9 @@ When they took off they created a small bucket list : swim with whales and lived
 
 Slept in castles, ate breakfast with Giraffes and explored the world from above and below.
 
-The thing about a bucket list, it does not need to be a list at all, it’s about living life with purpose, realising that there are special bucket list experiences waiting to be had each and everyday of your life.
+_"The thing about a bucket list, it does not need to be a list at all, it’s about living life with purpose, realising that there are special bucket list experiences waiting to be had each and everyday of your life._
 
-_“For us these moments have made us brave, encouraged us to try new things and help us be more open minded, open hearted and grateful for when they come along._
+_For us these moments have made us brave, encouraged us to try new things and help us be more open minded, open hearted and grateful for when they come along._
 
 _Hopefully your moments will do the same._
 
