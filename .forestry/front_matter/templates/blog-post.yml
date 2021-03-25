@@ -60,3 +60,4 @@ fields:
   description: A list of tags to link blog posts together
 pages:
 - src/site/blog/tips-for-starting-your-own-business.md
+- src/site/blog/top-travel-influencers.md
