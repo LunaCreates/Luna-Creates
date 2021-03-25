@@ -1,6 +1,7 @@
 ---
 label: Notification banner
 hide_body: true
+display_field: content
 fields:
 - name: show_banner
   type: boolean
