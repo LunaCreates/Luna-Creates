@@ -1,6 +1,6 @@
 ---
 label: Notification banner
-hide_body: true
+hide_body: false
 fields:
 - name: show_banner
   type: boolean
