@@ -16,3 +16,6 @@ fields:
       format: markdown
   label: Content
   description: The content of the notification banner
+  showOnly:
+    field: show_banner
+    value: true
