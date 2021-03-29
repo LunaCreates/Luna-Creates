@@ -31,13 +31,15 @@ This is one of the reasons why when we designed the maps, they had to be durable
 
 The printers we use are renowned for being one of the best in the country, they are true perfectionists and won’t let anything go out the door unless it’s 100% flawless.
 
-They have really precise printing facilities which use the latest printing technology
+They have really precise printing facilities which use the latest printing technology.
 
 Most of the orders we receive are placed with a frame, which is hand made by our specialist carpenter. Our carpenter is used to fitting bespoke frames to extremely valuable artwork and takes such pride in the work he does. Each bespoke frame is fitted to our maps with precision and the backs are to a really high standard to ensure the artwork fits plush to the wall.
 
-One of the benefits of creating such a unique piece of art is that it quickly became very popular and so we were unable to keep up with the demand of packing and posting the maps ourselves. After much research we found an incredible fulfilment company who hold the same values as us, taking extreme care at every stage and are such a lovely team to work with.
+![](https://lunacreates.co.uk/images/blog/img_0196.jpg)  
+One of the benefits of creating such a unique piece of art is that it quickly became very popular and so we were unable to keep up with the demand of packing and   
+posting the maps ourselves. After much research we found an incredible fulfilment company who hold the same values as us, taking extreme care at every stage and are such a lovely team to work with.
 
-![](https://lunacreates.co.uk/images/blog/img_0196.jpg)
+All of our suppliers - the printer, carpenter and fulfilment company - feel like family to us as we have worked so closely with them over the years. We make the effort to visit them often and see their incredible talent at work!.
 
 **_‘Inspired!!’_**
 
