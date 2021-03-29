@@ -37,8 +37,6 @@ Most of the orders we receive are placed with a frame, which is hand made by our
 
 One of the benefits of creating such a unique piece of art is that it quickly became very popular and so we were unable to keep up with the demand of packing and posting the maps ourselves. After much research we found an incredible fulfilment company who hold the same values as us, taking extreme care at every stage and are such a lovely team to work with.
 
-All of our suppliers - the printer, carpenter and fulfilment company - feel like family to us as we have worked so closely with them over the years. We make the effort to visit them often and see their incredible talent at work!.
-
 ![](https://lunacreates.co.uk/images/blog/img_0196.jpg)
 
 **_‘Inspired!!’_**
