@@ -51,6 +51,4 @@ The last 12 months have been incredibly challenging for everyone for a variety o
 
 We’ve had many requests for other ideas of map types that you’d like to see. We originally started with just the Grey classic version (which is still our most popular), but then grew to offer them in Black and White due to popular demand. Another version that has been really popular more recently is the children’s map. This has proven to be popular with parents who want to teach their kids about all the places in the world still to discover. We’ve even seen several schools with the map as a key feature in their classrooms!
 
-One of our favourite ideas was where a customer plotted out all of the places he wanted to take his partner to in the future and presented it to her as a birthday present. We are pleasantly surprised by the special ways people use our maps to treat their loved ones, for special occasions or just because!
-
 ![](https://lunacreates.co.uk/images/blog/img_0197.jpg)
