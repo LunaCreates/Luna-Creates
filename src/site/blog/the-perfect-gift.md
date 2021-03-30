@@ -21,7 +21,7 @@ If like me you are often looking to buy your loved ones a gift that they just wo
 
 ![](https://lunacreates.co.uk/images/blog/img_0194.jpg)
 
-It’s been so lovely to watch the excitement on people’s faces when they open the parcel to discover their own personalised map, seeing them reminisce and relive adventures already travelled as they pin the locations of all the places they have visited around the world. We love to see where people have explored and the stories they have to tell through their pin maps, each little pin representing treasured memories never to be forgotten. The different ideas that people have come up with to create a truly personal piece of art is inspiring: from ‘Mum and Dads World Adventures’, ‘Bayliss and Harding World Sales’ to ‘Let’s travel the world together’ - the possibilities are endless and it truly creates a unique centrepiece in any home (or bus, hotel, head office, cruise ship, school) We’ve seen your maps displayed in some pretty unique places too!
+It’s been so lovely to watch the excitement on people’s faces when they open the parcel to discover their own personalised map, seeing them reminisce and relive adventures already travelled as they pin the locations of all the places they have visited around the world. We love to see where people have explored and the stories they have to tell through their pin maps, each little pin representing treasured memories never to be forgotten. The different ideas that people have come up with to create a truly personal piece of art is inspiring: from ‘Mum and Dads World Adventures’, ‘Bayliss and Harding World Sales’ to ‘Let’s travel the world together’ - the possibilities are endless and it truly creates a unique centrepiece in any home (or bus, hotel, head office, cruise ship, school) We’ve seen your maps displayed in some pretty unique places!
 
 ![](https://lunacreates.co.uk/images/blog/img_0195.jpg)
 
@@ -36,8 +36,7 @@ They have really precise printing facilities which use the latest printing techn
 Most of the orders we receive are placed with a frame, which is hand made by our specialist carpenter. Our carpenter is used to fitting bespoke frames to extremely valuable artwork and takes such pride in the work he does. Each bespoke frame is fitted to our maps with precision and the backs are to a really high standard to ensure the artwork fits plush to the wall.
 
 ![](https://lunacreates.co.uk/images/blog/img_0196.jpg)  
-One of the benefits of creating such a unique piece of art is that it quickly became very popular and so we were unable to keep up with the demand of packing and   
-posting the maps ourselves. After much research we found an incredible fulfilment company who hold the same values as us, taking extreme care at every stage and are such a lovely team to work with.
+One of the benefits of creating such a unique piece of art is that it quickly became very popular and so we were unable to keep up with the demand of packing and posting the maps ourselves. After much research we found an incredible fulfilment company who hold the same values as us, taking extreme care at every stage and are such a lovely team to work with.
 
 All of our suppliers - the printer, carpenter and fulfilment company - feel like family to us as we have worked so closely with them over the years. We make the effort to visit them often and see their incredible talent at work!.
 
