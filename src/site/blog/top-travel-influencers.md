@@ -9,15 +9,13 @@ title: Top Travel Influencers
 publish_date: 2021-03-24T12:00:00.000+00:00
 
 ---
-**Top Travel Influencers**
-
 The world is changing so fast, people are starting to move away from choosing their holiday destinations via the traditional high street travel agent and instead navigating towards travel influencers to discover new and exciting places to visit in this incredible world.
 
 This is why we wanted to share with you those who have given us inspiration over the years and thought they could provide great ideas for your next trip.
 
 These are some of our favourites:-
 
-**_@Sincewewokeup_**
+## **_@Sincewewokeup_**
 
 ![](https://lunacreates.co.uk/images/blog/img_9605.jpg "@Sincewewokeup")
 
@@ -29,7 +27,7 @@ Mike is an incredible artist, be sure to check out his sketches @mikemcvayartist
 
 They are both testament to the fact that it's never too late to change your life, leave a job you don’t like and uproot to start seeing the world.
 
-**_@Girlgoneabroad_**
+## **_@Girlgoneabroad_**
 
 ![](https://lunacreates.co.uk/images/blog/img_9606.jpg "@Girlgoneabroad")
 
@@ -41,7 +39,7 @@ Her top three places to explore are Portugal, Brazil and South Africa.
 
 Lauren’s advice to people considering going travelling full time is to _‘Learn to roll with the punches and never plan too much. You never know who you’re going to meet or where opportunities are going to take you’_, and her favourite quote is _‘I would rather own a little and see the world than own the world and see a little of it’._
 
-**_@Paintedbuffalotravelingstudio_**
+## **_@Paintedbuffalotravelingstudio_**
 
 ![](https://lunacreates.co.uk/images/blog/img_9609.jpg "@PPaintedbuffalotravelingstudio")
 
@@ -51,7 +49,7 @@ In between travelling around the United States they provide a place where vetera
 
 _‘Being part of the skoolie community allows you to connect to some of the most amazing people you could ever wish to find’_.
 
-**_@fifth_wheels_rock_literally_**
+## **_@fifth_wheels_rock_literally_**
 
 ![](https://lunacreates.co.uk/images/blog/img_9612.jpg "@fifth_wheels_rock_literally")
 
@@ -63,7 +61,7 @@ Sephanie describes this as the most terrifying, liberating and exciting decision
 
 They now travel and find new and exciting places to explore on this beautiful planet.
 
-**_@girlvsglobe_**
+## **_@girlvsglobe_**
 
 ![](https://lunacreates.co.uk/images/blog/img_9614.jpg "@girlvsglobe")
 
@@ -73,7 +71,7 @@ Sabina’s goal is to inspire young women to take charge and become the leading 
 
 Be sure to check out her book : #Wanderlust
 
-**_@thebucketlistfamily_**
+## **_@thebucketlistfamily_**
 
 ![](https://lunacreates.co.uk/images/blog/img_9616.jpg "@thebucketlistfamily")
 
@@ -93,7 +91,7 @@ _Hopefully your moments will do the same._
 
 _Bucket List experiences come in all shapes and sizes, everyday adventures in your own backyard and brave new journeys around the world.”_
 
-**_@muradosmann_**
+## **_@muradosmann_**
 
 ![](https://lunacreates.co.uk/images/blog/img_9618.jpg)
 
@@ -101,7 +99,7 @@ Russian artist Murad Osmann is best known for his ongoing “Follow Me” series
 
 Absolutely incredible photos!
 
-**_@theblondeabroad_**
+## **_@theblondeabroad_**
 
 ![](https://lunacreates.co.uk/images/blog/img_9620.jpg)
 
@@ -113,7 +111,7 @@ Kiki has travelled to over 70 countries and flown 989,690 miles at time of print
 
 Her moto “I hope to inspire you to live a life you love”
 
-**_@saltyluxe_**
+## **_@saltyluxe_**
 
 ![](https://lunacreates.co.uk/images/blog/img_9625.jpg)
 
@@ -121,7 +119,7 @@ Sarah, originally from Australia, left her 9-5 job to become a full time travel 
 
 She has visited some of the most tropical destinations including the Maldives and Bora Bora. Her instagram account is full of dreamy pictures of tropical beaches such as ‘The Pass, Byron Bay’, ‘Lucky Bay, Esperance’ and beaches in French Polynesia.
 
-**_@ournextflight_**
+## **_@ournextflight_**
 
 ![](https://lunacreates.co.uk/images/blog/img_9627.jpg)
 
@@ -133,7 +131,7 @@ Exciting to see that the very first post on Instagram was of Notting Hill.
 
 They are also the founders of @living_destinations and @living_hotels.
 
-**_@Nomadicmatt_**
+## **_@Nomadicmatt_**
 
 ![](https://lunacreates.co.uk/images/blog/img_9629.jpg)
 
@@ -149,7 +147,7 @@ Brilliant book which we would highly recommend!
 
 ![](https://lunacreates.co.uk/images/blog/img_9630.jpg)
 
-**_@thisbatteredsuitcase_**
+## **_@thisbatteredsuitcase_**
 
 ![](https://lunacreates.co.uk/images/blog/img_9632.jpg)
 
@@ -163,7 +161,7 @@ We love to read her blog as she keeps it real, talks about everyday life as well
 
 Her favourite place is Italy and we’d have to agree it has some of the most incredible cities, food to die for and really friendly people.
 
-**_@the_globbers_**
+## **_@the_globbers_**
 
 ![](https://lunacreates.co.uk/images/blog/img_9634.jpg)
 
@@ -171,7 +169,7 @@ Couple Luca and Alessandro have been full time travellers since 2016.
 
 Their favourite destination is Asia and their Instagram photos are stunning which shows their passion for photography.
 
-**_@helloemile_**
+## **_@helloemile_**
 
 ![](https://lunacreates.co.uk/images/blog/img_9639.jpg)
 
@@ -183,7 +181,7 @@ Two of her favourite places she has visited in this world are Jordan (desert Wad
 
 ![](https://lunacreates.co.uk/images/blog/img_9638.jpg)
 
-**_@danielkordan_**
+## **_@danielkordan_**
 
 ![](https://lunacreates.co.uk/images/blog/img_9642.jpg)
 
