@@ -65,7 +65,8 @@ exports.handler = async (event, context, callback) => {
   console.log(event.body, 'body');
 
   if (isMap) {
-    const mapData = items.map(buildData);
+    const mapProps = items.filter(item => item.properties.find(containsMap));
+    const mapData = mapProps.map(buildData);
     const formattedMapData = mapData.map(formatData);
     const result = formattedMapData.map(formatResultData);
     const body = { line_items: result };
