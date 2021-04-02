@@ -7,15 +7,7 @@ fields:
   label: Show Banner
   description: Show or hide the banner on the website.
 - name: content
-  type: textarea
-  default: ''
+  type: text
   config:
     required: true
-    wysiwyg: false
-    schema:
-      format: markdown
   label: Content
-  description: The content of the notification banner
-  showOnly:
-    field: show_banner
-    value: true
