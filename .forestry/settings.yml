@@ -20,15 +20,16 @@ sections:
   templates:
   - blog-post
 - type: heading
-  label: Authors
+  label: Pages
 - type: directory
-  path: src/site/authors
-  label: Authors
-  create: documents
-  match: "**/*.md"
-  new_doc_ext: md
+  path: src/site
+  label: Pages
+  create: all
+  match: "**/*.njk"
+  exclude: search.njk, sitemap.njk, sw.njk
+  new_doc_ext: ".njk"
   templates:
-  - author
+  - pages
 upload_dir: src/images/blog
 public_path: https://lunacreates.co.uk/images/blog
 front_matter_path: https://lunacreates.co.uk/images/blog
