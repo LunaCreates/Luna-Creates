@@ -22,8 +22,3 @@ fields:
     required: true
   label: Title
   description: Title of the page
-- name: notification_banner
-  type: include
-  config: {}
-  template: notification-banner
-  label: Notification Banner
