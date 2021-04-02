@@ -23,10 +23,7 @@ fields:
   label: Title
   description: Title of the page
 - name: notification_banner
-  type: blocks
+  type: include
+  config: {}
+  template: notification-banner
   label: Notification Banner
-  template_types:
-  - notification-banner
-  config:
-    min: 
-    max: 
