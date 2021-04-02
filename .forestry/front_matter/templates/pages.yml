@@ -1,6 +1,6 @@
 ---
-label: Pages
-hide_body: false
+label: Page
+hide_body: true
 fields:
 - name: meta_title
   type: text
