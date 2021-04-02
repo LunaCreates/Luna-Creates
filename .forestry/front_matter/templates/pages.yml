@@ -22,3 +22,11 @@ fields:
     required: true
   label: Title
   description: Title of the page
+- name: notification_banner
+  type: blocks
+  label: Notification Banner
+  template_types:
+  - notification-banner
+  config:
+    min: 
+    max: 
