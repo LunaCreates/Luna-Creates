@@ -1,13 +1,13 @@
 ---
-label: Notification banner
+label: Notification Banner
 hide_body: true
 fields:
-- name: show_banner
+- name: show_notification_banner
   type: boolean
-  label: Show Banner
   description: Show or hide the banner on the website.
-- name: content
+  label: Show Notification Banner
+- name: notification_banner_content
   type: text
   config:
     required: true
-  label: Content
+  label: Notification Banner Content
