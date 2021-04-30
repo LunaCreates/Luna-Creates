@@ -33,6 +33,8 @@ You may be lucky enough to meet one of the friendly kangaroos chilling on the be
 
 ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-04-30-at-14-57-09.png)
 
+![](https://lunacreates.co.uk/images/blog/fullsizeoutput_75bc.jpeg)
+
 1. **French Polynesia - Bora Bora Lagoon**
 
 Bora Bora is a small South Pacfic island northwest of Tahiti in French Polynesia and is one of the world’s most beautiful islands.
