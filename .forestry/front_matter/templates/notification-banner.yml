@@ -3,8 +3,8 @@ label: Notification Banner
 hide_body: true
 fields:
 - type: boolean
-  name: showBanner
-  label: showBanner
+  name: show_banner
+  label: Show Banner
 - type: text
   name: content
-  label: content
+  label: Content
