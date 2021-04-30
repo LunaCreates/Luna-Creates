@@ -1,4 +1,5 @@
 {
   "showBanner": false,
-  "content": "Hello there"
+  "content": "Hello there",
+  "show_banner": false
 }

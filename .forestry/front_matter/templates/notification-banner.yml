@@ -8,3 +8,5 @@ fields:
 - type: text
   name: content
   label: Content
+pages:
+- src/site/_data/notificationBanner.json
