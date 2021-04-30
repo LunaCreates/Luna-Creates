@@ -17,6 +17,10 @@ The Pass is a gorgeous beach with white sand and long clear waves perfect for su
 
 It’s an idyllic place to laze away the day, overlooked by Cape Byron lighthouse built in 1901.
 
+![](https://lunacreates.co.uk/images/blog/fullsizeoutput_75ba.jpeg)
+
+![](https://lunacreates.co.uk/images/blog/fullsizeoutput_75bb.jpeg)
+
 1. **Lucky Bay, Esperance, south coast of western Australia**
 
 Located in the Cape Le Grand National Park the bay is known for its bright white sands and turquoise coloured waters.
