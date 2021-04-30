@@ -1,0 +1,10 @@
+---
+label: Notification Banner
+hide_body: true
+fields:
+- type: boolean
+  name: showBanner
+  label: showBanner
+- type: text
+  name: content
+  label: content
