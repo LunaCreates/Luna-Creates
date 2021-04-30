@@ -45,6 +45,10 @@ The warm sea feels like a spa, with colourful fish darting beneath you and flowe
 
 Bora is one of the few places on earth that everyone hopes to witness in their lifetime and once you see it, you are forever enamored.
 
+![](https://lunacreates.co.uk/images/blog/fullsizeoutput_75c0.jpeg)
+
+![](https://lunacreates.co.uk/images/blog/fullsizeoutput_75c1.jpeg)
+
 #### **4.) Carlisle Bay Antigua**
 
 A quiet cove with white powder sand and turquoise water with a backdrop of emerald green rain forest.
