@@ -59,6 +59,8 @@ Be sure to take a glass bottom boat trip to see all the incredible shipwrecks an
 
 ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-05-08-at-09-01-36.png)
 
+![](https://lunacreates.co.uk/images/blog/screen-shot-2021-05-08-at-09-02-44.png)
+
 #### **5.) Anse Lazio, Praslin, Seychelles**
 
 One of the most beautiful beaches in the world, with turquoise water, white sand, lofty palm trees and impressive granite formations. Perfect for sunbathing, swimming and snorkelling.
