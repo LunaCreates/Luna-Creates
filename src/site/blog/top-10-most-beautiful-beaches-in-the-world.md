@@ -95,6 +95,8 @@ White silky sands with calm turquoise sea, this beach is the ideal destination f
 
 Paddleboard or kayak out onto the reef, where there is excellent snorkeling and an array of colourful fish.
 
+![](https://lunacreates.co.uk/images/blog/screen-shot-2021-05-08-at-16-14-06.png)
+
 #### **8.) Pansea Beach, Thailand**
 
 The secluded beach is located just next to Surin on the west coast of Phuket, there is a hidden path leading down to the beach.
