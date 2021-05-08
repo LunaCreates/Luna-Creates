@@ -109,7 +109,7 @@ Pansea is one of the best beaches in Phuket and is the perfect beach destination
 
 ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-05-08-at-16-21-21.png)
 
-#### **9.) Elafonisi Beach, Crete**
+**9.) Elafonisi Beach, Crete**
 
 Elafonisi is a magical place that consists of a small islet of pink coral sandy beaches and crystal clear waters in the turquoise lagoon. Voted as one of the most majestic beaches in the world.
 
