@@ -6,7 +6,7 @@ tags: []
 meta_title: Top 10 most beautiful beaches in the world
 meta_description: Top 10 most beautiful beaches in the world
 title: Top 10 most beautiful beaches in the world
-publish_date: 2021-05-01T12:00:00+01:00
+publish_date: 2021-05-01T12:00:00.000+01:00
 
 ---
 ## **Top 10 most beautiful beaches in the world**
@@ -56,6 +56,8 @@ A quiet cove with white powder sand and turquoise water with a backdrop of emera
 This a haven for relaxation and water sports with the calm carribean waters and the most amazing sunsets.
 
 Be sure to take a glass bottom boat trip to see all the incredible shipwrecks and swim with turtles.
+
+![](https://lunacreates.co.uk/images/blog/screen-shot-2021-05-08-at-09-01-36.png)
 
 #### **5.) Anse Lazio, Praslin, Seychelles**
 
