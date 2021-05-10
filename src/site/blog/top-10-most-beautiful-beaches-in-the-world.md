@@ -117,6 +117,10 @@ The waters are shallow so ideal for families with small children.
 
 You can reach the Elafonisi island by foot where you will find a protected nature reserve with a variety of birds, amphibians and reptiles including the Balkan Green Lizard which are meant to bring good luck! This is also the nesting area for the beloved Caretta-caretta sea turtles.
 
+![](https://lunacreates.co.uk/images/blog/img_1537.jpg)
+
+![](https://lunacreates.co.uk/images/blog/img_1538.jpg)
+
 #### **10.) Havelock Island, Andaman Islands**
 
 India’s most beautiful secret!
@@ -128,3 +132,5 @@ Seven tranquil beaches practically untouched by the tourist trail, famous for it
 Activities offered include an underwater sea walk, Jet Skiing, glass bottom boats and scuba diving.
 
 A perfect place to spend some peaceful time in the lap of nature and enjoy some of the cleanest beaches on the planet.
+
+![](https://lunacreates.co.uk/images/blog/img_1540.jpg)
