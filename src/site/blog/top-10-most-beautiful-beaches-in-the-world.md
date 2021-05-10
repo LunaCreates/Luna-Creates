@@ -53,7 +53,7 @@ Bora Bora is one of the few places on earth that everyone hopes to witness in th
 
 A quiet cove with white powder sand and turquoise water with a backdrop of emerald green rain forest.
 
-This a haven for relaxation and water sports with the calm Carribbean waters and the most amazing sunsets.
+This a haven for relaxation and water sports with the calm Caribbean waters and the most amazing sunsets.
 
 Be sure to take a glass bottom boat trip to see all the incredible shipwrecks and swim with turtles.
 
