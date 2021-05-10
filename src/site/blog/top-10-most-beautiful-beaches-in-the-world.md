@@ -134,3 +134,7 @@ Activities offered include an underwater sea walk, Jet Skiing, glass bottom boat
 A perfect place to spend some peaceful time in the lap of nature and enjoy some of the cleanest beaches on the planet.
 
 ![](https://lunacreates.co.uk/images/blog/img_1540.jpg)
+
+![](https://lunacreates.co.uk/images/blog/img_1542.jpg)
+
+![](https://lunacreates.co.uk/images/blog/img_1541.jpg)
