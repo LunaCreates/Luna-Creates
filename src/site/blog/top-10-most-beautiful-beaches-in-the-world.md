@@ -57,7 +57,7 @@ This a haven for relaxation and water sports with the calm Caribbean waters and 
 
 Be sure to take a glass bottom boat trip to see all the incredible shipwrecks and swim with turtles.
 
-![](https://lunacreates.co.uk/images/blog/screen-shot-2021-05-08-at-09-01-36.png)
+![](https://lunacreates.co.uk/images/blog/fullsizeoutput_75cc.jpeg)
 
 ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-05-08-at-09-02-44.png)
 
