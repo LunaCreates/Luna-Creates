@@ -77,7 +77,7 @@ I highly recommend taking a fishing boat trip to see the sunset, it's truly magi
 
 The perfect location for a honeymoon or romantic break away.
 
-![](https://lunacreates.co.uk/images/blog/screen-shot-2021-05-08-at-16-01-12.png)
+![](https://lunacreates.co.uk/images/blog/fullsizeoutput_75ca.jpeg)
 
 ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-05-08-at-16-05-30.png)
 
