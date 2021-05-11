@@ -11,8 +11,17 @@ function fetchData(keyMapData: Object) {
   })
 }
 
-async function renderKeyMap(keyMapData: Object) {
-  const data = await fetchData(keyMapData);
+function renderKeyMapType(type: string) {
+  const typeArray = type.split(',')
+
+  if (typeArray.length > 1) return typeArray[1]
+
+  return type
+}
+
+async function renderKeyMap(keyMapData: any) {
+  const type = renderKeyMapType(keyMapData.type)
+  const data = await fetchData({ ...keyMapData, type });
   const response = await data.blob();
   const reader = new FileReader();
 

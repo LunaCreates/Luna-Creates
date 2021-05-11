@@ -15,7 +15,7 @@ exports.handler = async function (event, context, callback) {
   try {
     const body = JSON.parse(event.body);
 
-    console.log(body, 'body');
+    console.log(event.body, 'body');
 
     const payload = {
       query: `mutation checkoutCreate($input: CheckoutCreateInput!) {

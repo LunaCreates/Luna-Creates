@@ -92,8 +92,9 @@ async function allProductsData() {
   const products = data.data.products.edges.map(edge => edge.node);
 
   function getColorFromTags(tags) {
+    const colors = /black|white|grey|kids|americanStatesBlack|americanStatesWhite/
     const arr = tags.map(tag => tag.toLowerCase());
-    return arr.filter(tag => tag.match(/black|white|grey|kids/));
+    return arr.filter(tag => tag.match(colors));
   }
 
   function formatVariants(variants) {

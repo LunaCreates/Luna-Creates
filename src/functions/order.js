@@ -41,11 +41,25 @@ function formatLabels(item) {
   return { color, title };
 }
 
+function formatType(type) {
+  if (type.includes('americanstatesblack')) {
+    return 'americanStatesBlack'
+  }
+
+  if (type.includes('americanstateswhite')) {
+    return 'americanStatesWhite'
+  }
+
+  return type
+}
+
 function formatData(item) {
   const labels = item.pins.split(' || ').map(formatLabels);
+  const type = formatType(item.type)
 
   item.labels = { ...labels };
   item.frameSize = item.size;
+  item.type = type
 
   delete item.pins;
   delete item.size;
