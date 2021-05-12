@@ -3,8 +3,8 @@ is_draft: false
 banner_image: https://lunacreates.co.uk/images/blog/fullsizeoutput_75c0.jpeg
 thumbnail: https://lunacreates.co.uk/images/blog/screen-shot-2021-05-08-at-15-51-30.png
 tags: []
-meta_title: 'Top 10 most beautiful beaches in the world : Luna Creates '
-meta_description: Discover the top 10 most beautiful beaches in the world in the latest
+meta_title: 'Top 10 most beautiful beaches in the world by Luna Creates '
+meta_description: Discover our top 10 most beautiful beaches in the world in the latest
   travel article by Luna Creates.
 title: Top 10 most beautiful beaches in the world
 publish_date: 2021-05-01T12:00:00.000+01:00
