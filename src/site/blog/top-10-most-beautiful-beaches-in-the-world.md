@@ -136,4 +136,4 @@ A perfect place to spend some peaceful time in the lap of nature and enjoy some 
 
 ![Havelock Island, Andaman Islands](https://lunacreates.co.uk/images/blog/screen-shot-2021-05-10-at-14-19-56.png)
 
-We hope you enjoyed these and get the opportunity to visit them someday if you haven't already. These would be ideal locations to mark off on our our beautiful [Travel Map Pin Boards](https://lunacreates.co.uk/collections/maps/), designed specially for people who love travel as much as we do. It's a great reminder of all the worldwide destinations that you have travelled, or intend to travel to.  
+If you haven't already, we hope you get the opportunity to visit these fantastic places someday. They are ideal locations to mark off on our beautiful [Travel Map Pin Boards](https://lunacreates.co.uk/collections/maps/), designed specially for people who love travel as much as we do. It's a great reminder of all the worldwide destinations that you have travelled, or intend to travel to.
