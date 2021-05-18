@@ -14,15 +14,15 @@
       "url": "/products/",
       "collections": [
         {
-          "title": "North America map pinboards",
-          "url": "/collections/maps/"
-        },
-        {
           "title": "Browse all",
           "url": "/products/"
         },
         {
           "title": "World map pinboards",
+          "url": "/collections/maps/"
+        },
+        {
+          "title": "North America map pinboards",
           "url": "/collections/maps/"
         },
         {
