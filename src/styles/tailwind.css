@@ -154,6 +154,26 @@
     @apply block;
   }
 
+  .sl {
+    clip: rect(0,0,0,0);
+    border-width: 0;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
+
+  .sl:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    white-space: normal;
+    width: auto;
+  }
+
   @variants responsive {
     .before::before,
     .after::after {

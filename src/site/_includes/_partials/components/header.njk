@@ -1,14 +1,6 @@
 {% import "_macros/search.njk" as searchBlock %}
 
 <header class="relative before before:fixed before:top-0 before:left-0 before:w-full before:h-full before:bg-foreground before:opacity-0 before:invisible before:transition before:duration-300 before:ease-in-out before:z-30 md:before:hidden" data-component="header">
-    <a href="#nav" class="sr-only focus:not-sr-only">Skip to navigation</a>
-    <a href="#main" class="sr-only focus:not-sr-only">Skip to main content</a>
-    <a href="#footer" class="sr-only focus:not-sr-only">Skip to footer</a>
-
-    {% if cart %}
-        <a href="#cart" class="sr-only focus:not-sr-only">Skip to cart</a>
-    {% endif %}
-
     <div class="container mx-auto relative flex flex-col py-8 px-16 bg-background z-120 md:grid md:grid-cols-3 md:bg-transparent">
         <a href="/" class="block self-center md:col-start-2 md:justify-self-center" data-logo>
             <svg class="logo block" width="210" height="90" viewBox="0 0 210 90" aria-describedby="logo">

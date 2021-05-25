@@ -12,6 +12,14 @@
             </div>
         </noscript>
 
+        <a href="#nav" class="sl p-8 bg-background text-primary top-0 left-0 z-50">Skip to navigation</a>
+        <a href="#main" class="sl p-8 bg-background text-primary top-0 left-0 z-50">Skip to main content</a>
+        <a href="#footer" class="sl p-8 bg-background text-primary top-0 left-0 z-50">Skip to footer</a>
+
+        {% if cart %}
+            <a href="#cart" class="sl p-8 bg-background text-primary top-0 left-0 z-50">Skip to cart</a>
+        {% endif %}
+
         {% include "_partials/components/notification.njk" %}
         {% include "_partials/components/header.njk" %}
 
