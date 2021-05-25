@@ -28,7 +28,7 @@ async function allCollectionsData() {
                 image {
                   originalSrc
                 }
-                products(first: 50) {
+                products(first: 50, sortKey: COLLECTION_DEFAULT) {
                   edges {
                     node {
                       title
@@ -115,7 +115,7 @@ async function allCollectionsData() {
       description: item.descriptionHtml,
       slug: item.handle,
       heroImage: item.image.originalSrc,
-      products: products,
+      products,
       metaDescription
     };
   });
