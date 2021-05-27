@@ -19,7 +19,7 @@ async function allProductsData() {
       },
       body: JSON.stringify({
         query: `{
-          products(first: 50, query: "available_for_sale:true") {
+          products(first: 50, query: "available_for_sale:true", sortKey:CREATED_AT) {
             edges {
               node {
                 id
