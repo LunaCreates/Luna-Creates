@@ -19,7 +19,7 @@ async function allProductsData() {
       },
       body: JSON.stringify({
         query: `{
-          products(first: 50, query: "available_for_sale:true") {
+          products(first: 50, query: "available_for_sale:true", sortKey:CREATED_AT) {
             edges {
               node {
                 id
@@ -137,6 +137,12 @@ async function allProductsData() {
     }
   }
 
+  function sortProducts(a) {
+    if (a.productType === 'Map') return -1
+
+    return 0
+  }
+
   // format products objects
   const productsFormatted = products.map(item => {
     const images = item.images.edges.map(formatProductImages);
@@ -165,7 +171,7 @@ async function allProductsData() {
   });
 
   // return formatted products
-  return productsFormatted;
+  return productsFormatted.sort(sortProducts);
 }
 
 // export for 11ty
