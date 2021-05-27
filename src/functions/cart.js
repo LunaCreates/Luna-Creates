@@ -17,9 +17,9 @@ function buildImage(image) {
 
 function renderAttributes(attribute) {
   const key = attribute.key;
-  const value = attribute.value;
+  const value = key === 'Type' ? `${attribute.value} map` : attribute.value;
 
-  return `<small class="text-xs leading-xs fvs-md block italic"><strong>${key}</strong>: ${value}</small>`
+  return `<small class="text-xs leading-xs fvs-md block capitalize italic"><strong>${key}</strong>: ${value}</small>`
 }
 
 function renderCartItem(item, index, arr) {

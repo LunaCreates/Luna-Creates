@@ -67,7 +67,8 @@ function buildPropertyData(product: HTMLElement, keyMapData: any) {
     { key: 'Title', value: keyMapData.title },
     { key: 'Size', value: keyMapData.frameSize },
     { key: 'Pins', value: pins },
-    { key: 'Type', value: keyMapData.type }
+    { key: 'Type', value: keyMapData.type },
+    { key: 'Frame', value: keyMapData.frame }
   ]
 
   if (basketButton === null) return;
@@ -92,6 +93,7 @@ function buildKeyMapData(product: HTMLElement, formdata: FormData, target: HTMLB
   const type = product.getAttribute('data-product-color');
   const size = formdata.get('size')?.toString().split(' (')[0].toLowerCase();
   const title = formdata.get('title');
+  const frame = formdata.get('frame');
   const colors = formdata.getAll('colors');
   const showKeyText = formdata.get('show key text') as string;
   const keys = formdata.getAll('pin label');
@@ -103,7 +105,8 @@ function buildKeyMapData(product: HTMLElement, formdata: FormData, target: HTMLB
     title,
     frameSize: size === 'x-large' ? 'extraLarge' : size,
     labels,
-    type
+    type,
+    frame
   };
 
   renderKeyMap(keyMapData);
