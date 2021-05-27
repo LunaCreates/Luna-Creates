@@ -23,6 +23,9 @@ function Cart(element: HTMLElement) {
 
   async function fetchShopifyData(data: ShopifyStorefront.CheckoutCreate[], clientId: string) {
     const body = { data, clientId };
+
+    console.log(body, 'body');
+
     const checkout = await fetch('/create', {
       method: 'POST',
       headers,
@@ -47,7 +50,7 @@ function Cart(element: HTMLElement) {
   }
 
   async function updateCartItems(data: ShopifyStorefront.CheckoutCreate[]) {
-    const clientId = (<any>window).ga.getAll()[0].get('clientId');
+    const clientId = 'foo';
     const keyMapImages: KeyMapImages = JSON.parse(sessionStorage.getItem('mapPreviews') as string);
     const checkoutData: ShopifyStorefront.CheckoutData = await fetchShopifyData(data, clientId);
     const body = { keyMapImages, checkoutData, clientId };

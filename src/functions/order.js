@@ -63,6 +63,7 @@ function formatData(item) {
 
   delete item.pins;
   delete item.size;
+  delete item.frame;
 
   return item;
 }

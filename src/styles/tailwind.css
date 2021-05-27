@@ -31,6 +31,8 @@
 
   body {
     font-family: 'Avenir Next', sans-serif;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
   }
 
   h1,
