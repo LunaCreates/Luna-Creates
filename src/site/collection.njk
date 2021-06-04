@@ -14,6 +14,8 @@ layout: _layouts/collection
 sitemap:
   changefreq: daily
   priority: 1
+nofollow: {{category.slug === 'maps'}}
+eleventyExcludeFromCollections: {{category.slug === 'maps'}}
 ---
 
 <ul class="container mx-auto grid grid-cols-2 gap-24 my-32 px-16 md:grid-cols-3 md:gap-32 md:my-56 lg:my-80">

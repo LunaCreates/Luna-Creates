@@ -26,6 +26,7 @@ async function allProductsData() {
                 title
                 handle
                 productType
+                updatedAt
                 description
                 descriptionHtml
                 tags
@@ -166,7 +167,8 @@ async function allProductsData() {
       minPrice: new Intl.NumberFormat('en-GB', { style: 'currency', currency: currency }).format(minPrice),
       maxPrice: new Intl.NumberFormat('en-GB', { style: 'currency', currency: currency }).format(maxPrice),
       priceSchema: parseFloat(minPrice).toFixed(2),
-      metaDescription: formatMetaDescription(item.metafields.edges)
+      metaDescription: formatMetaDescription(item.metafields.edges),
+      updatedAt: item.updatedAt
     };
   });
 
