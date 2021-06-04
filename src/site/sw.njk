@@ -21,6 +21,8 @@ const CACHE_FILES = [
 ];
 
 self.addEventListener('install', event => {
+  self.skipWaiting();
+
   event.waitUntil(caches.open(CACHE_NAMES)
     .then(cache => cache.addAll(CACHE_FILES))
   );
@@ -45,8 +47,8 @@ self.addEventListener('fetch', event => {
 self.addEventListener('activate', event => {
   const cacheWhitelist = [CACHE_NAMES];
 
-  event.waitUntil(caches.keys()
-    .then(CACHE_NAMES => {
+  event.waitUntil(
+    caches.keys().then(CACHE_NAMES => {
       return Promise.all(CACHE_NAMES.map(cacheName => {
         if (cacheWhitelist.indexOf(cacheName) === -1) {
           return caches.delete(cacheName);
