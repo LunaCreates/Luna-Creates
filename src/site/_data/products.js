@@ -19,7 +19,7 @@ async function allProductsData() {
       },
       body: JSON.stringify({
         query: `{
-          products(first: 50, query: "available_for_sale:true", sortKey:CREATED_AT) {
+          products(first: 50, query: "available_for_sale:true", sortKey:UPDATED_AT) {
             edges {
               node {
                 id
@@ -171,7 +171,7 @@ async function allProductsData() {
   });
 
   // return formatted products
-  return productsFormatted.sort(sortProducts);
+  return productsFormatted;
 }
 
 // export for 11ty
