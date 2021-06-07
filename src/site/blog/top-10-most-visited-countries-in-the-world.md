@@ -9,7 +9,7 @@ title: Top 10 Most Visited Countries In The World
 publish_date: 
 
 ---
-**Top 10 Most Visited Countries In The World**
+# **Top 10 Most Visited Countries In The World**
 
 Are you daydreaming of getting back into the world after this crazy year, here are our top 10 places to visit in 2021.
 
@@ -17,7 +17,7 @@ Hopefully this is the year you can see a little bit more of our stunning world.
 
 Some of the places on this list are currently closed or have restricted travel but hopefully as the year progresses more places will open up for tourism.
 
-1. France
+1. **France**
 
 With 89.4m visitors annually France is the most visited country in the world. The Eiffel Tower in Paris has been visited more than 200 million times making it the world’s most popular paid tourist attraction.
 
@@ -34,7 +34,7 @@ Tourist attractions:-
 * Chamonix-Mont-Blanc
 * Alsace Villages
 
-2. USA
+1. USA
 
 America has always been a popular travel destination due to its spiral of metropolis and small town charms. Travel trends include city hoping and road trips. New York has over 800 different languages spoken within the city.
 
@@ -51,7 +51,7 @@ Tourist attractions:-
 * Niagara Falls
 * Manhattan
 
-3. Spain
+1. Spain
 
 Spain is a top holiday destination for Europeans. Best known for the sunny climate and beaches, great food and affordable prices.
 
@@ -70,7 +70,7 @@ Tourist attractions:-
 * Plaza Mayor, Madrid
 * Ciudad de las Artes y las Ciencias
 
-4. China
+1. China
 
 China is the 3rd largest country in the world and is in the top 5 world tourist destinations because of its natural landscapes, expansive history and delicious cuisine. China has the world's oldest continuous civilization, from villages dating back thousands of years to ancient marvels like the Great Wall of China. Shanghai has the fastest train in the world, Beijing’s Forbidden City is the world’s largest palace.
 
@@ -89,7 +89,7 @@ Tourist attractions:-
 * The Potala Palace, Tibet
 * Shanghai’s Promenade : The Bund
 
-5. Italy
+1. Italy
 
 Home to some amazing world heritage sites including : the Coliseum, Venice, the Vatican, Florence, Leaning Tower of Pisa, Pompeii, Naples, Sicily, the Italian Alps, the Amalfi Coast, the Italian Riviera and Lake Cuomo.
 
@@ -108,7 +108,7 @@ Tourist attractions:-
 * Vatican City
 * The Uffizi Gallery
 
-6. Turkey
+1. Turkey
 
 Located on two continents Turkey offers a unique blend of East & West.
 
@@ -126,7 +126,7 @@ Tourist attractions:-
 * Ani
 * Aspendos
 
-7. Germany
+1. Germany
 
 Both Europeans and Americans rave about the country’s historic attractions, spirited cities, vast forests and most importantly excellent beer!
 
@@ -147,7 +147,7 @@ Tourist attractions:-
 * Zugspitze Massif
 * The Island of Rugen
 
-8. United Kingdom
+1. United Kingdom
 
 Is the 9th largest and third most populated island in the world.
 
@@ -168,7 +168,7 @@ Tourist attractions:-
 * Eden project
 * The Cotswolds
 
-9. Russia
+1. Russia
 
 It’s land area is bigger than Pluto and spans 9 time zones.
 
@@ -189,7 +189,7 @@ Tourist attractions:-
 * Anapa
 * Novosibirsk
 
-10. Thailand
+1. Thailand
 
 Thailand has been a popular tourist destination for decades thanks to its white sand beaches, delicious cuisine and hot weather. The capital Bangkok is the most visited city on the planet.
 
