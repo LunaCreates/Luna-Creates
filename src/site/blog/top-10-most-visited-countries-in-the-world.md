@@ -24,7 +24,11 @@ With 89.4m visitors annually France is the most visited country in the world. Th
 Tourist attractions:-
 
 * Eiffel Tower
+
+  ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-00-00-38.png)
 * Louvre Museum (world’s most visited museum)
+
+  ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-00-02-23.png)
 * Palace of Versailles
 * Cote d’Azur
 * Mont Saint-Michel in Normandy is accessible at low tide and surrounded by water at high tide.
@@ -33,7 +37,7 @@ Tourist attractions:-
 * Provence
 * Chamonix-Mont-Blanc
 * Alsace Villages
-  2. **USA**
+  2\. **USA**
 
 America has always been a popular travel destination due to its spiral of metropolis and small town charms. Travel trends include city hoping and road trips. New York has over 800 different languages spoken within the city.
 
@@ -49,7 +53,7 @@ Tourist attractions:-
 * Kilauea Volcano
 * Niagara Falls
 * Manhattan
-  3. **Spain**
+  3\. **Spain**
 
 Spain is a top holiday destination for Europeans. Best known for the sunny climate and beaches, great food and affordable prices.
 
@@ -67,7 +71,7 @@ Tourist attractions:-
 * Santiago de Compostela Cathedral
 * Plaza Mayor, Madrid
 * Ciudad de las Artes y las Ciencias
-  4. **China**
+  4\. **China**
 
 China is the 3rd largest country in the world and is in the top 5 world tourist destinations because of its natural landscapes, expansive history and delicious cuisine. China has the world's oldest continuous civilization, from villages dating back thousands of years to ancient marvels like the Great Wall of China. Shanghai has the fastest train in the world, Beijing’s Forbidden City is the world’s largest palace.
 
@@ -86,7 +90,7 @@ Tourist attractions:-
 * The Potala Palace, Tibet
 * Shanghai’s Promenade : The Bund
 
-5. **Italy**
+1. **Italy**
 
 Home to some amazing world heritage sites including : the Coliseum, Venice, the Vatican, Florence, Leaning Tower of Pisa, Pompeii, Naples, Sicily, the Italian Alps, the Amalfi Coast, the Italian Riviera and Lake Cuomo.
 
@@ -104,7 +108,7 @@ Tourist attractions:-
 * Cinque Terre
 * Vatican City
 * The Uffizi Gallery
-  6. **Turkey**
+  6\. **Turkey**
 
 Located on two continents Turkey offers a unique blend of East & West.
 
@@ -121,7 +125,7 @@ Tourist attractions:-
 * Mount Nemrut
 * Ani
 * Aspendos
-  7. **Germany**
+  7\. **Germany**
 
 Both Europeans and Americans rave about the country’s historic attractions, spirited cities, vast forests and most importantly excellent beer!
 
@@ -141,7 +145,7 @@ Tourist attractions:-
 * Bamberg and the Burgerstadt
 * Zugspitze Massif
 * The Island of Rugen
-  8. **United Kingdom**
+  8\. **United Kingdom**
 
 Is the 9th largest and third most populated island in the world.
 
@@ -161,7 +165,7 @@ Tourist attractions:-
 * Canterbury Cathedral
 * Eden project
 * The Cotswolds
-  9. **Russia**
+  9\. **Russia**
 
 It’s land area is bigger than Pluto and spans 9 time zones.
 
@@ -181,7 +185,7 @@ Tourist attractions:-
 * Vladivostok
 * Anapa
 * Novosibirsk
-  10. **Thailand**
+  10\. **Thailand**
 
 Thailand has been a popular tourist destination for decades thanks to its white sand beaches, delicious cuisine and hot weather. The capital Bangkok is the most visited city on the planet.
 
