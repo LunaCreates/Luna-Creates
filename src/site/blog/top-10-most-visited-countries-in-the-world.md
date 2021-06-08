@@ -163,6 +163,8 @@ Tourist attractions:-
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-39-29.png)
 * The Yangtze River and the Three Gorges
+
+  ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-40-58.png)
 * The Classical Gardens of Suzhou
 * The Potala Palace, Tibet
 * Shanghai’s Promenade : The Bund
