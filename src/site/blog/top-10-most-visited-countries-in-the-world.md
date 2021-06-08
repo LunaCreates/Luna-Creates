@@ -202,6 +202,8 @@ Tourist attractions:-
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-23-30-52.png)
 * Florence Duromo Santa Maria del Fiore
+
+  ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-23-32-07.png)
 * Cinque Terre
 * Vatican City
 * The Uffizi Gallery
