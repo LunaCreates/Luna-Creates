@@ -110,6 +110,8 @@ Tourist attractions:-
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-11-33.png)
 * Barcelona’s Sagrada Familia and Gaudi Sites
+
+  ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-13-25.png)
 * The Great Mosque of Cordoba (Mezquita)
 * The Prado and Paseo del Artes, Madrid
 * San Lorenzo de El Escorial
