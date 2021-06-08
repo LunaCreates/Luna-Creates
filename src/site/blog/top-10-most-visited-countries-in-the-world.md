@@ -232,6 +232,8 @@ Tourist attractions:-
 * Mount Nemrut
 * Ani
 * Aspendos
+
+  
   7\. **Germany**
 
 Both Europeans and Americans rave about the country’s historic attractions, spirited cities, vast forests and most importantly excellent beer!
@@ -252,6 +254,8 @@ Tourist attractions:-
 * Bamberg and the Burgerstadt
 * Zugspitze Massif
 * The Island of Rugen
+
+  
   8\. **United Kingdom**
 
 Is the 9th largest and third most populated island in the world.
@@ -272,6 +276,8 @@ Tourist attractions:-
 * Canterbury Cathedral
 * Eden project
 * The Cotswolds
+
+  
   9\. **Russia**
 
 It’s land area is bigger than Pluto and spans 9 time zones.
@@ -292,6 +298,8 @@ Tourist attractions:-
 * Vladivostok
 * Anapa
 * Novosibirsk
+
+  
   10\. **Thailand**
 
 Thailand has been a popular tourist destination for decades thanks to its white sand beaches, delicious cuisine and hot weather. The capital Bangkok is the most visited city on the planet.
