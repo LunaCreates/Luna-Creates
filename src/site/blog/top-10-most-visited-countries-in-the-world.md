@@ -91,7 +91,11 @@ Tourist attractions:-
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-07-39.png)
 * Niagara Falls
+
+  ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-08-43.png)
 * Manhattan
+
+  
   3\. **Spain**
 
 Spain is a top holiday destination for Europeans. Best known for the sunny climate and beaches, great food and affordable prices.
