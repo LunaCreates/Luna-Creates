@@ -239,6 +239,8 @@ Tourist attractions:-
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-23-41-25.png)
 * Sumela Monastery
+
+  ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-23-42-22.png)
 * Mount Nemrut
 * Ani
 * Aspendos
