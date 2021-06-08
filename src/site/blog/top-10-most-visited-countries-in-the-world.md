@@ -39,6 +39,8 @@ Tourist attractions:-
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-21-03-45.png)
 * Loire Valley Chateaux
+
+  ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-21-14-13.png)
 * Cathédrale Notre-Dame de Chartres
 * Provence
 * Chamonix-Mont-Blanc
