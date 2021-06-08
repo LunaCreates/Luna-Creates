@@ -61,7 +61,9 @@ America has always been a popular travel destination due to its spiral of metrop
 
 Tourist attractions:-
 
-* San Francisco’s Golden Gate Bridge.
+* San Francisco’s Golden Gate Bridge
+
+  ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-21-21-36.png)
 * Hollywood
 * Grand Canyon
 * Denali, Yosemite, Yellowstone & Zion National Parks
