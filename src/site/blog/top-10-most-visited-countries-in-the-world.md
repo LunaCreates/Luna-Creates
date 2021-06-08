@@ -30,6 +30,8 @@ Tourist attractions:-
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-00-02-23.png)
 * Palace of Versailles
+
+  ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-20-59-31.png)
 * Cote d’Azur
 * Mont Saint-Michel in Normandy is accessible at low tide and surrounded by water at high tide.
 * Loire Valley Chateaux
