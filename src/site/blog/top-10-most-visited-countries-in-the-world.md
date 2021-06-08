@@ -48,6 +48,8 @@ Tourist attractions:-
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-21-17-03.png)
 * Chamonix-Mont-Blanc
+
+  ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-21-19-02.png)
 * Alsace Villages
   2\. **USA**
 
