@@ -107,6 +107,8 @@ There are lots of historical sites to see and rich cultures to experience.
 Tourist attractions:-
 
 * The Alhambra and Generalife Gardens, Granada
+
+  ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-11-33.png)
 * Barcelona’s Sagrada Familia and Gaudi Sites
 * The Great Mosque of Cordoba (Mezquita)
 * The Prado and Paseo del Artes, Madrid
