@@ -187,7 +187,11 @@ Tourist attractions:-
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-23-02-07.png)
 * Venice Canals
+
+  ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-23-21-56.png)
 * Pompeii
+
+  ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-23-24-18.png)
 * Leaning Tower of Pisa
 * Lake Como
 * Amalfi Coast
