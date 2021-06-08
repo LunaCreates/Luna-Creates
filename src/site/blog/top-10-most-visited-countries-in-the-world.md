@@ -51,6 +51,8 @@ Tourist attractions:-
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-21-19-02.png)
 * Alsace Villages
+
+  
   2\. **USA**
 
 America has always been a popular travel destination due to its spiral of metropolis and small town charms. Travel trends include city hoping and road trips. New York has over 800 different languages spoken within the city.
