@@ -67,6 +67,8 @@ Tourist attractions:-
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-21-24-17.png)
 * Grand Canyon
+
+  ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-21-27-21.png)
 * Denali, Yosemite, Yellowstone & Zion National Parks
 * French Quarter
 * White House - Office of president of united states
