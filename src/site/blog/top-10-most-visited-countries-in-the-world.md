@@ -175,7 +175,7 @@ Tourist attractions:-
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-51-57.png)
 
-1. **Italy**
+  **5. Italy**
 
 Home to some amazing world heritage sites including : the Coliseum, Venice, the Vatican, Florence, Leaning Tower of Pisa, Pompeii, Naples, Sicily, the Italian Alps, the Amalfi Coast, the Italian Riviera and Lake Cuomo.
 
@@ -184,6 +184,8 @@ Italy has culture, history and cuisine in abundance making it a very popular tou
 Tourist attractions:-
 
 * Colosseum
+
+  ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-23-02-07.png)
 * Venice Canals
 * Pompeii
 * Leaning Tower of Pisa
