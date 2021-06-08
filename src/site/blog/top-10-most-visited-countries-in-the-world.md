@@ -245,6 +245,8 @@ Tourist attractions:-
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-23-43-18.png)
 * Ani
+
+  ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-23-44-17.png)
 * Aspendos
 
   
