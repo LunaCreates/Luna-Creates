@@ -151,6 +151,8 @@ Tourist attractions:-
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-33-55.png)
 * The Terracotta Army
+
+  ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-35-13.png)
 * The Summer Palace
 * Cruising the Li River
 * Chengdu Research Base of Giant Panda Breeding
