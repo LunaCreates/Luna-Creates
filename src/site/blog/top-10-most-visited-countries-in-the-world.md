@@ -119,6 +119,8 @@ Tourist attractions:-
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-15-58.png)
 * San Lorenzo de El Escorial
+
+  ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-16-58.png)
 * Guggenheim Museum, Bilbao
 * Seville Cathedral and Alcazar
 * Santiago de Compostela Cathedral
