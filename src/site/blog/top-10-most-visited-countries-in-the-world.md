@@ -81,7 +81,9 @@ Tourist attractions:-
 * French Quarter
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-00-36.png)
-* White House - Office of president of united states
+* White House 
+
+  ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-04-45.png)
 * Las Vegas Strip
 * Kilauea Volcano
 * Niagara Falls
