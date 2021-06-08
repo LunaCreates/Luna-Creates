@@ -205,6 +205,8 @@ Tourist attractions:-
 * Cinque Terre
 * Vatican City
 * The Uffizi Gallery
+
+  
   6\. **Turkey**
 
 Located on two continents Turkey offers a unique blend of East & West.
