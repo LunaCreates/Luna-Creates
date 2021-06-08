@@ -116,6 +116,8 @@ Tourist attractions:-
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-14-51.png)
 * The Prado and Paseo del Artes, Madrid
+
+  ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-15-58.png)
 * San Lorenzo de El Escorial
 * Guggenheim Museum, Bilbao
 * Seville Cathedral and Alcazar
