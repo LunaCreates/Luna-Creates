@@ -173,6 +173,8 @@ Tourist attractions:-
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-44-55.png)
 * Shanghai’s Promenade : The Bund
 
+  ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-51-57.png)
+
 1. **Italy**
 
 Home to some amazing world heritage sites including : the Coliseum, Venice, the Vatican, Florence, Leaning Tower of Pisa, Pompeii, Naples, Sicily, the Italian Alps, the Amalfi Coast, the Italian Riviera and Lake Cuomo.
