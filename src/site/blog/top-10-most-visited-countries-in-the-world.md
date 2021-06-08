@@ -212,6 +212,8 @@ Tourist attractions:-
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-23-34-08.png)
 * The Uffizi Gallery
 
+  ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-23-35-05.png)
+
   
   6\. **Turkey**
 
