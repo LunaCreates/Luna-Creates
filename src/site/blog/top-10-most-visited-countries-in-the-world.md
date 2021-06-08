@@ -9,7 +9,6 @@ title: Top 10 Most Visited Countries In The World
 publish_date: 
 
 ---
-
 ## **Top 10 Most Visited Countries In The World**
 
 Are you daydreaming of getting back into the world after this crazy year, here are our top 10 places to visit in 2021.
@@ -137,7 +136,6 @@ Tourist attractions:-
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-23-48.png)
 
-  
   4\. **China**
 
 China is the 3rd largest country in the world and is in the top 5 world tourist destinations because of its natural landscapes, expansive history and delicious cuisine. China has the world's oldest continuous civilization, from villages dating back thousands of years to ancient marvels like the Great Wall of China. Shanghai has the fastest train in the world, Beijing’s Forbidden City is the world’s largest palace.
@@ -147,6 +145,8 @@ Natural attractions include: the Huangshan mountain range which inspired scenes 
 Tourist attractions:-
 
 * The Great Wall of China
+
+  ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-25-46.png)
 * The Forbidden City and the Imperial Palace, Beijing
 * The Terracotta Army
 * The Summer Palace
