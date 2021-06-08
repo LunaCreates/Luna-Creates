@@ -193,6 +193,8 @@ Tourist attractions:-
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-23-24-18.png)
 * Leaning Tower of Pisa
+
+  ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-23-28-49.png)
 * Lake Como
 * Amalfi Coast
 * Florence Duromo Santa Maria del Fiore
