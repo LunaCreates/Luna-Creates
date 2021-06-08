@@ -65,6 +65,8 @@ Tourist attractions:-
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-21-21-36.png)
 * Hollywood
+
+  ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-21-24-17.png)
 * Grand Canyon
 * Denali, Yosemite, Yellowstone & Zion National Parks
 * French Quarter
