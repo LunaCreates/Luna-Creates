@@ -131,6 +131,8 @@ Tourist attractions:-
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-21-05.png)
 * Plaza Mayor, Madrid
+
+  ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-22-25.png)
 * Ciudad de las Artes y las Ciencias
   4\. **China**
 
