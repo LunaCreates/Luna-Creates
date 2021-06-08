@@ -160,6 +160,8 @@ Tourist attractions:-
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-37-58.png)
 * Chengdu Research Base of Giant Panda Breeding
+
+  ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-39-29.png)
 * The Yangtze River and the Three Gorges
 * The Classical Gardens of Suzhou
 * The Potala Palace, Tibet
