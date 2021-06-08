@@ -95,6 +95,8 @@ Tourist attractions:-
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-08-43.png)
 * Manhattan
 
+  ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-10-06.png)
+
   
   3\. **Spain**
 
