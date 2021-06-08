@@ -85,6 +85,8 @@ Tourist attractions:-
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-04-45.png)
 * Las Vegas Strip
+
+  ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-06-23.png)
 * Kilauea Volcano
 * Niagara Falls
 * Manhattan
