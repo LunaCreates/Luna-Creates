@@ -33,6 +33,8 @@ Tourist attractions:-
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-20-59-31.png)
 * Cote d’Azur
+
+  ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-21-01-26.png)
 * Mont Saint-Michel in Normandy is accessible at low tide and surrounded by water at high tide.
 * Loire Valley Chateaux
 * Cathédrale Notre-Dame de Chartres
