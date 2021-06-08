@@ -230,6 +230,8 @@ Tourist attractions:-
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-23-37-36.png)
 * Cappadocia
+
+  ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-23-39-04.png)
 * Topkapi Palace
 * Pamukkale
 * Sumela Monastery
