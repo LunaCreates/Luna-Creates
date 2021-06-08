@@ -227,6 +227,8 @@ Tourist attractions:-
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-23-36-35.png)
 * Ephesus
+
+  ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-23-37-36.png)
 * Cappadocia
 * Topkapi Palace
 * Pamukkale
