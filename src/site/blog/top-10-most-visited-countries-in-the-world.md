@@ -233,6 +233,8 @@ Tourist attractions:-
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-23-39-04.png)
 * Topkapi Palace
+
+  ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-23-40-16.png)
 * Pamukkale
 * Sumela Monastery
 * Mount Nemrut
