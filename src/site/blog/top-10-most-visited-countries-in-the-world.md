@@ -42,6 +42,8 @@ Tourist attractions:-
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-21-14-13.png)
 * Cathédrale Notre-Dame de Chartres
+
+  ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-21-15-45.png)
 * Provence
 * Chamonix-Mont-Blanc
 * Alsace Villages
