@@ -154,6 +154,8 @@ Tourist attractions:-
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-35-13.png)
 * The Summer Palace
+
+  ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-36-31.png)
 * Cruising the Li River
 * Chengdu Research Base of Giant Panda Breeding
 * The Yangtze River and the Three Gorges
