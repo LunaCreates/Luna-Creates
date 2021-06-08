@@ -199,6 +199,8 @@ Tourist attractions:-
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-23-29-49.png)
 * Amalfi Coast
+
+  ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-23-30-52.png)
 * Florence Duromo Santa Maria del Fiore
 * Cinque Terre
 * Vatican City
