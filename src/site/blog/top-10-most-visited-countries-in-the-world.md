@@ -88,6 +88,8 @@ Tourist attractions:-
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-06-23.png)
 * Kilauea Volcano
+
+  ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-07-39.png)
 * Niagara Falls
 * Manhattan
   3\. **Spain**
