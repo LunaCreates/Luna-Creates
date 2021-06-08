@@ -113,6 +113,8 @@ Tourist attractions:-
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-13-25.png)
 * The Great Mosque of Cordoba (Mezquita)
+
+  ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-14-51.png)
 * The Prado and Paseo del Artes, Madrid
 * San Lorenzo de El Escorial
 * Guggenheim Museum, Bilbao
