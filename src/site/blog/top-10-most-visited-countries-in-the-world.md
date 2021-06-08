@@ -236,6 +236,8 @@ Tourist attractions:-
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-23-40-16.png)
 * Pamukkale
+
+  ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-23-41-25.png)
 * Sumela Monastery
 * Mount Nemrut
 * Ani
