@@ -205,6 +205,8 @@ Tourist attractions:-
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-23-32-07.png)
 * Cinque Terre
+
+  ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-23-33-12.png)
 * Vatican City
 * The Uffizi Gallery
 
