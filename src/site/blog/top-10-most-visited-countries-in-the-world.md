@@ -263,7 +263,11 @@ Munich’s two week Oktoberfest brings in 6 million visitors each year.
 Tourist attractions:-
 
 * Berlin’s Brandenburg Gate
+
+  ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-11-at-09-44-38.png)
 * Cologne Cathedral (Kolner Dom)
+
+  ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-11-at-09-45-57.png)
 * The Black Forest
 * Neuschwanstein
 * Miniatur Wunderland and the historic port of Hamburg
