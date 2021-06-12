@@ -341,6 +341,8 @@ The country’s most famous attraction is Lake Baikal, the oldest and deepest la
 Tourist attractions:-
 
 * Lake Baikal
+
+  ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-21-59-17.png)
 * Moscow
 * St. Petersburg
 * Altay
