@@ -415,3 +415,5 @@ Tourist attractions:-
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-22-39-57.png)
 * Floating Markets
+
+  ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-22-40-55.png)
