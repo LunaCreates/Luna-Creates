@@ -409,5 +409,7 @@ Tourist attractions:-
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-22-35-04.png)
 * Historic City of Ayutthaya
+
+  ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-22-35-57.png)
 * Doi Suthep
 * Floating Markets
