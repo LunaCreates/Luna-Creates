@@ -397,6 +397,8 @@ Tourist attractions:-
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-22-29-42.png)
 * Sunday Walking Street, Chiang Mai
+
+  ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-22-30-39.png)
 * Pai
 * Khao Yai National Park
 * Sukhothal Old City
