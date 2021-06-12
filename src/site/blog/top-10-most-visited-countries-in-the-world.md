@@ -350,6 +350,8 @@ Tourist attractions:-
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-22-02-25.png)
 * Altay
+
+  ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-22-04-06.png)
 * Sochi
 * The Russia Tundra
 * Peterhof
