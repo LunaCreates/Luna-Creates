@@ -365,6 +365,8 @@ Tourist attractions:-
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-22-11-35.png)
 * Petropavlovsk-Kamchatsky
+
+  ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-22-12-48.png)
 * Vladivostok
 * Anapa
 * Novosibirsk
