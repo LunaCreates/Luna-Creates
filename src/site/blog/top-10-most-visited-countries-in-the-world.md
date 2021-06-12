@@ -273,6 +273,8 @@ Tourist attractions:-
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-11-at-10-28-51.png)
 * Miniatur Wunderland and the historic port of Hamburg
+
+  ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-21-14-51.png)
 * The Rine valley
 * Berlin’s Museum Island
 * Bamberg and the Burgerstadt
