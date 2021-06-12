@@ -353,7 +353,11 @@ Tourist attractions:-
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-22-04-06.png)
 * Sochi
+
+  ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-22-06-21.png)
 * The Russia Tundra
+
+  ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-22-08-24.png)
 * Peterhof
 * Olkhon Island
 * Petropavlovsk-Kamchatsky
