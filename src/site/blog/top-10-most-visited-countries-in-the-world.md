@@ -391,6 +391,8 @@ Tourist attractions:-
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-22-27-36.png)
 * Koh Phi Phi
+
+  ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-22-28-47.png)
 * The Grand Palace, Bangkok
 * Sunday Walking Street, Chiang Mai
 * Pai
