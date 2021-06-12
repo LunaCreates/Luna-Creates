@@ -308,6 +308,8 @@ Tourist attractions:-
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-21-34-07.png)
 * The Roman baths of Georgian city of bath
+
+  ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-21-36-23.png)
 * British Museum
 * York Minster and historic Yorkshire
 * Chester Zoo
