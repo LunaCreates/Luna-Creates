@@ -347,6 +347,8 @@ Tourist attractions:-
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-22-01-20.png)
 * St. Petersburg
+
+  ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-22-02-25.png)
 * Altay
 * Sochi
 * The Russia Tundra
