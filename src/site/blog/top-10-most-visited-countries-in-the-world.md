@@ -375,6 +375,8 @@ Tourist attractions:-
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-22-15-43.png)
 * Novosibirsk
 
+  ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-22-16-51.png)
+
   10\. **Thailand**
 
 Thailand has been a popular tourist destination for decades thanks to its white sand beaches, delicious cuisine and hot weather. The capital Bangkok is the most visited city on the planet.
