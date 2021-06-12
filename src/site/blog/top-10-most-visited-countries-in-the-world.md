@@ -276,7 +276,11 @@ Tourist attractions:-
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-21-14-51.png)
 * The Rine valley
+
+  ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-21-17-05.png)
 * Berlin’s Museum Island
+
+  ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-21-20-56.png)
 * Bamberg and the Burgerstadt
 * Zugspitze Massif
 * The Island of Rugen
