@@ -289,6 +289,8 @@ Tourist attractions:-
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-21-26-56.png)
 * The Island of Rugen
 
+  ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-21-30-03.png)
+
   8\. **United Kingdom**
 
 Is the 9th largest and third most populated island in the world.
