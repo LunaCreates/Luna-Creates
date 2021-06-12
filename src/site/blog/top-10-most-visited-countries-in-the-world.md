@@ -323,6 +323,8 @@ Tourist attractions:-
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-21-43-28.png)
 * Canterbury Cathedral
+
+  ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-21-53-31.png)
 * Eden project
 * The Cotswolds
 
