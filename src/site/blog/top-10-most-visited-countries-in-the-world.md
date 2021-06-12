@@ -406,6 +406,8 @@ Tourist attractions:-
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-22-33-44.png)
 * Sukhothal Old City
+
+  ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-22-35-04.png)
 * Historic City of Ayutthaya
 * Doi Suthep
 * Floating Markets
