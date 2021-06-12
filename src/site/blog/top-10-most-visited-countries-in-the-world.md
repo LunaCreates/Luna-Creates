@@ -344,6 +344,8 @@ Tourist attractions:-
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-21-59-17.png)
 * Moscow
+
+  ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-22-01-20.png)
 * St. Petersburg
 * Altay
 * Sochi
