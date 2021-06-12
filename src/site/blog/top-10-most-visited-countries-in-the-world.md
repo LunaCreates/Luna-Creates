@@ -359,6 +359,8 @@ Tourist attractions:-
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-22-08-24.png)
 * Peterhof
+
+  ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-22-09-34.png)
 * Olkhon Island
 * Petropavlovsk-Kamchatsky
 * Vladivostok
