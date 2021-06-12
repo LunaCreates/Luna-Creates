@@ -368,6 +368,8 @@ Tourist attractions:-
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-22-12-48.png)
 * Vladivostok
+
+  ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-22-14-15.png)
 * Anapa
 * Novosibirsk
 
