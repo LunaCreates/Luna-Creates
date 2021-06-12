@@ -330,6 +330,8 @@ Tourist attractions:-
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-21-54-46.png)
 * The Cotswolds
 
+  ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-21-56-09.png)
+
   9\. **Russia**
 
 It’s land area is bigger than Pluto and spans 9 time zones.
