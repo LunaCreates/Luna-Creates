@@ -282,6 +282,8 @@ Tourist attractions:-
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-21-20-56.png)
 * Bamberg and the Burgerstadt
+
+  ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-21-23-17.png)
 * Zugspitze Massif
 * The Island of Rugen
 
