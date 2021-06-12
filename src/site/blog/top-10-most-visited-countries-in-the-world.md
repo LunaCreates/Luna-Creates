@@ -400,6 +400,8 @@ Tourist attractions:-
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-22-30-39.png)
 * Pai
+
+  ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-22-31-54.png)
 * Khao Yai National Park
 * Sukhothal Old City
 * Historic City of Ayutthaya
