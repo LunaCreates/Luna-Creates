@@ -362,6 +362,8 @@ Tourist attractions:-
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-22-09-34.png)
 * Olkhon Island
+
+  ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-22-11-35.png)
 * Petropavlovsk-Kamchatsky
 * Vladivostok
 * Anapa
