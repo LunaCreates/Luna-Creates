@@ -388,6 +388,8 @@ Thailand's most popular spots include Rayleigh beach, co-pp and the grand palace
 Tourist attractions:-
 
 * Railey Beach
+
+  ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-22-27-36.png)
 * Koh Phi Phi
 * The Grand Palace, Bangkok
 * Sunday Walking Street, Chiang Mai
