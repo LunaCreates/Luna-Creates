@@ -249,8 +249,7 @@ Tourist attractions:-
 * Aspendos
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-23-49-31.png)
-
-  7\. **Germany**
+* 7. **Germany**
 
 Both Europeans and Americans rave about the country’s historic attractions, spirited cities, vast forests and most importantly excellent beer!
 
@@ -312,7 +311,7 @@ Tourist attractions:-
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-21-36-23.png)
 * British Museum
 
-  ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-21-36-23.png)
+  ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-22-52-01.png)
 * York Minster and historic Yorkshire
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-21-41-24.png)
