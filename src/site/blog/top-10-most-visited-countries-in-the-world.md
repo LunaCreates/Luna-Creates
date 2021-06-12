@@ -394,6 +394,8 @@ Tourist attractions:-
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-22-28-47.png)
 * The Grand Palace, Bangkok
+
+  ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-22-29-42.png)
 * Sunday Walking Street, Chiang Mai
 * Pai
 * Khao Yai National Park
