@@ -11,17 +11,13 @@ publish_date:
 ---
 ## **Top 10 Most Visited Countries In The World**
 
-Are you daydreaming of getting back into the world after this crazy year, here are our top 10 places to visit in 2021.
+If like me you are daydreaming of getting back out to see a little bit more of the stunning world we live in after this crazy year, here are our top 10 places to visit in 2021 to give you some travel inspiration. 
 
-Hopefully this is the year you can see a little bit more of our stunning world.
-
-Some of the places on this list are currently closed or have restricted travel but hopefully as the year progresses more places will open up for tourism.
+Some of the places on this list are currently closed or have restricted travel but hopefully as the year progresses more places will open up for tourism. Under each of our top 10 countries, we've selected a few personal highlights   with some amazing pictures to show them in all their glory
 
 1. **France**
 
 With 89.4m visitors annually France is the most visited country in the world. The Eiffel Tower in Paris has been visited more than 200 million times making it the world’s most popular paid tourist attraction.
-
-Tourist attractions:-
 
 * Eiffel Tower
 
@@ -29,7 +25,7 @@ Tourist attractions:-
 * Louvre Museum (world’s most visited museum)
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-00-02-23.png)
-* Palace of Versailles
+* Palace of Versailles - is one of the most important landmarks in French history. Home to the Kings of France between 1662 and 1789.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-20-59-31.png)
 * Cote d’Azur
@@ -56,14 +52,12 @@ Tourist attractions:-
 
   2\. **USA**
 
-America has always been a popular travel destination due to its spiral of metropolis and small town charms. Travel trends include city hoping and road trips. New York has over 800 different languages spoken within the city.
-
-Tourist attractions:-
+America has always been a popular travel destination due to its spiral of metropolis and small town charms. Travel trends include city hopping and road trips. New York has over 800 different languages spoken within the city.
 
 * San Francisco’s Golden Gate Bridge
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-21-21-36.png)
-* Hollywood
+* Hollywood, California
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-21-24-17.png)
 * Grand Canyon
@@ -81,10 +75,10 @@ Tourist attractions:-
 * French Quarter
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-00-36.png)
-* White House
+* White House, Washington.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-04-45.png)
-* Las Vegas Strip
+* Las Vegas Strip, Nevada
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-06-23.png)
 * Kilauea Volcano
@@ -93,7 +87,7 @@ Tourist attractions:-
 * Niagara Falls
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-08-43.png)
-* Manhattan
+* Manhattan, New York
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-10-06.png)
 
@@ -102,8 +96,6 @@ Tourist attractions:-
 Spain is a top holiday destination for Europeans. Best known for the sunny climate and beaches, great food and affordable prices.
 
 There are lots of historical sites to see and rich cultures to experience.
-
-Tourist attractions:-
 
 * The Alhambra and Generalife Gardens, Granada
 
@@ -138,11 +130,9 @@ Tourist attractions:-
 
   4\. **China**
 
-China is the 3rd largest country in the world and is in the top 5 world tourist destinations because of its natural landscapes, expansive history and delicious cuisine. China has the world's oldest continuous civilization, from villages dating back thousands of years to ancient marvels like the Great Wall of China. Shanghai has the fastest train in the world, Beijing’s Forbidden City is the world’s largest palace.
+China is the 3rd largest country in the world and is in the top 5 world tourist destinations because of its natural landscapes, expansive history and delicious cuisine. China has the world's oldest continuous civilisation, from villages dating back thousands of years to ancient marvels like the Great Wall of China, Shanghai has the fastest train in the world, and Beijing’s Forbidden City is the world’s largest palace.
 
 Natural attractions include: the Huangshan mountain range which inspired scenes in Avatar.
-
-Tourist attractions:-
 
 * The Great Wall of China
 
@@ -180,8 +170,6 @@ Tourist attractions:-
 Home to some amazing world heritage sites including : the Coliseum, Venice, the Vatican, Florence, Leaning Tower of Pisa, Pompeii, Naples, Sicily, the Italian Alps, the Amalfi Coast, the Italian Riviera and Lake Cuomo.
 
 Italy has culture, history and cuisine in abundance making it a very popular tourist destination for people all around the globe.
-
-Tourist attractions:-
 
 * Colosseum
 
@@ -249,7 +237,7 @@ Tourist attractions:-
 * Aspendos
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-23-49-31.png)
-* 7. **Germany**
+  1. **Germany**
 
 Both Europeans and Americans rave about the country’s historic attractions, spirited cities, vast forests and most importantly excellent beer!
 
