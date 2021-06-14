@@ -31,7 +31,7 @@ With 89.4m visitors annually France is the most visited country in the world. Th
 * Cote d’Azur - cultural region in southeastern France.Known for its seaside resorts, yachts, the rich and famous, Romanesque and medieval architecture and wine.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-21-01-26.png)
-* Mont Saint-Michel in Normandy is accessible at low tide and surrounded by water at high tide.
+* Mont Saint-Michel in Normandy is accessible at low tide and surrounded by water at high tide. Mont-Saint-Michel was both a place of passage and a fortress for the Duchy of Normandy.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-21-03-45.png)
 * Loire Valley Chateaux
