@@ -34,7 +34,7 @@ With 89.4m visitors annually France is the most visited country in the world. Th
 * Mont Saint-Michel in Normandy is accessible at low tide and surrounded by water at high tide. Mont-Saint-Michel was both a place of passage and a fortress for the Duchy of Normandy.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-21-03-45.png)
-* Loire Valley Chateaux
+* Loire Valley Chateaux - are part of the architectural heritage of the historic towns of Amboise, Angers, Blois, Chinon, Montsoreau, Nantes, Orléans, Saumur, and Tours along the **Loire** River in France. They illustrate Renaissance ideals of design in France.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-21-14-13.png)
 * Cathédrale Notre-Dame de Chartres
