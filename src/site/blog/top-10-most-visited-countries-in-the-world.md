@@ -46,7 +46,7 @@ With 89.4m visitors annually France is the most visited country in the world. Th
 * Chamonix-Mont-Blanc - is a resort area near the junction of France, Switzerland and Italy. At the base of Mont Blanc, the highest summit in the Alps, it's renowned for its skiing.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-21-19-02.png)
-* Alsace Villages
+* Alsace Villages - located in the north-east of France, Alsace is home to stunning mountain scenery, vine-clad slopes and, of course, beautiful villages.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-21-20-20.png)
 
