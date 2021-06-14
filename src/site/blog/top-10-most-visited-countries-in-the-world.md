@@ -37,13 +37,13 @@ With 89.4m visitors annually France is the most visited country in the world. Th
 * Loire Valley Chateaux - are part of the architectural heritage of the historic towns of Amboise, Angers, Blois, Chinon, Montsoreau, Nantes, Orléans, Saumur, and Tours along the **Loire** River in France. They illustrate Renaissance ideals of design in France.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-21-14-13.png)
-* Cathédrale Notre-Dame de Chartres
+* Cathédrale Notre-Dame de Chartres - is a Roman Catholic church in Chartres, France, about 80 km southwest of Paris, and is the seat of the Bishop of Chartres.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-21-15-45.png)
-* Provence
+* Provence - a region in southeastern France bordering Italy and the Mediterranean Sea, is known for its diverse landscapes, from the Southern Alps and Camargue plains to rolling vineyards, olive groves, pine forests and lavender fields.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-21-17-03.png)
-* Chamonix-Mont-Blanc
+* Chamonix-Mont-Blanc - is a resort area near the junction of France, Switzerland and Italy. At the base of Mont Blanc, the highest summit in the Alps, it's renowned for its skiing.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-21-19-02.png)
 * Alsace Villages
