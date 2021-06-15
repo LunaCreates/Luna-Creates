@@ -90,7 +90,7 @@ America has always been a popular travel destination due to its spiral of metrop
 * **Niagara Falls** - is a group of three waterfalls at the southern end of  Niagara Gorge, spanning the border between the province of Ontario in Canada and the state of New York in the United States.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-08-43.png)
-* Manhattan, New York
+* **Manhattan, New York** - is the most densely populated of New York City’s 5 boroughs. It's mostly made up of Manhattan Island, bounded by the Hudson. The mecca of American business and luxury, Manhattan is home to some of the finest hotels in the world.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-10-06.png)
 
