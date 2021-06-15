@@ -72,7 +72,7 @@ America has always been a popular travel destination due to its spiral of metrop
 * Yellowstone National Park - was the world's first national park. The park features dramatic canyons, alpine rivers, lush forests, hot springs and gushing geysers, including its most famous, Old Faithful.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-21-35-10.png)
-* Zion National Park - 
+* **Zion National Park** - is located in southern Utah near the city of Springdale. Often referred to as heaven on earth, a red-rock wonderland created by wind, water, and snow.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-02-36.png)
 * French Quarter
