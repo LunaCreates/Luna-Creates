@@ -75,7 +75,7 @@ America has always been a popular travel destination due to its spiral of metrop
 * **Zion National Park** - is located in southern Utah near the city of Springdale. Often referred to as heaven on earth, a red-rock wonderland created by wind, water, and snow.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-02-36.png)
-* French Quarter
+* **French Quarter** - is the oldest neighbourhood in the city of New Orleans.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-00-36.png)
 * White House, Washington.
