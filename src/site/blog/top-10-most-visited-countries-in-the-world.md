@@ -66,7 +66,7 @@ America has always been a popular travel destination due to its spiral of metrop
 * **Denali National Park** - encompasses 6 million acres of Alaska’s interior wilderness. Its centre piece is 20,310-ft.-high Denali (fka Mount McKinley), North America’s tallest peak.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-21-29-00.png)
-* Yosemite National Park - 
+* Yosemite National Park - is in California’s Sierra Nevada mountains. It’s famed for its giant, ancient sequoia trees, and for Tunnel View, the iconic vista of towering Bridalveil Fall and the granite cliffs of El Capitan and Half Dome.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-21-30-26.png)
 * Yellowstone National Park - 
