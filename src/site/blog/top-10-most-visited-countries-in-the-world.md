@@ -100,7 +100,7 @@ Spain is a top holiday destination for Europeans. Best known for the sunny clima
 
 There are lots of historical sites to see and rich cultures to experience.
 
-* The Alhambra and Generalife Gardens, Granada
+* **The Alhambra and Generalife Gardens**, Granada - palace and fortress of the Moorish monarchs of Granada, Spain.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-11-33.png)
 * Barcelona’s Sagrada Familia and Gaudi Sites
