@@ -54,7 +54,7 @@ With 89.4m visitors annually France is the most visited country in the world. Th
 
 America has always been a popular travel destination due to its spiral of metropolis and small town charms. Travel trends include city hopping and road trips. New York has over 800 different languages spoken within the city.
 
-* San Francisco’s Golden Gate Bridge
+* San Francisco’s Golden Gate Bridge - is a suspension bridge spanning the Golden Gate, the one-mile-wide strait connecting San Francisco Bay and the Pacific Ocean.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-21-21-36.png)
 * Hollywood, California
