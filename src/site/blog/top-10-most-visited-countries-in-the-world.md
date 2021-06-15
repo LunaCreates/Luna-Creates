@@ -60,7 +60,7 @@ America has always been a popular travel destination due to its spiral of metrop
 * **Hollywood, California** - is a neighbourhood in the central region of Los Angeles, California. Its name has come to be a shorthand reference for the U.S. film industry and the people associated with it.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-21-24-17.png)
-* Grand Canyon
+* Grand Canyon - 
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-21-27-21.png)
 * Denali, Yosemite, Yellowstone & Zion National Parks
