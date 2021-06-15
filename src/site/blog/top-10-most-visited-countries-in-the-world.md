@@ -22,28 +22,28 @@ With 89.4m visitors annually France is the most visited country in the world. Th
 * Eiffel Tower
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-00-00-38.png)
-* Louvre Museum (world’s most visited museum)
+* **Louvre Museum** (world’s most visited museum)
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-00-02-23.png)
-* Palace of Versailles - is one of the most important landmarks in French history. Home to the Kings of France between 1662 and 1789.
+* **Palace of Versailles** - is one of the most important landmarks in French history. Home to the Kings of France between 1662 and 1789.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-20-59-31.png)
-* Cote d’Azur - cultural region in southeastern France.Known for its seaside resorts, yachts, the rich and famous, Romanesque and medieval architecture and wine.
+* **Cote d’Azur** - cultural region in southeastern France.Known for its seaside resorts, yachts, the rich and famous, Romanesque and medieval architecture and wine.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-21-01-26.png)
-* Mont Saint-Michel in Normandy is accessible at low tide and surrounded by water at high tide. Mont-Saint-Michel was both a place of passage and a fortress for the Duchy of Normandy.
+* **Mont Saint-Michel** in Normandy is accessible at low tide and surrounded by water at high tide. Mont-Saint-Michel was both a place of passage and a fortress for the Duchy of Normandy.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-21-03-45.png)
-* Loire Valley Chateaux - are part of the architectural heritage of the historic towns of Amboise, Angers, Blois, Chinon, Montsoreau, Nantes, Orléans, Saumur, and Tours along the **Loire** River in France. They illustrate Renaissance ideals of design in France.
+* **Loire Valley Chateaux** - are part of the architectural heritage of the historic towns of Amboise, Angers, Blois, Chinon, Montsoreau, Nantes, Orléans, Saumur, and Tours along the **Loire** River in France. They illustrate Renaissance ideals of design in France.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-21-14-13.png)
-* Cathédrale Notre-Dame de Chartres - is a Roman Catholic church in Chartres, France, about 80 km southwest of Paris, and is the seat of the Bishop of Chartres.
+* **Cathédrale Notre-Dame de Chartres** - is a Roman Catholic church in Chartres, France, about 80 km southwest of Paris, and is the seat of the Bishop of Chartres.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-21-15-45.png)
-* Provence - a region in southeastern France bordering Italy and the Mediterranean Sea, is known for its diverse landscapes, from the Southern Alps and Camargue plains to rolling vineyards, olive groves, pine forests and lavender fields.
+* **Provence** - a region in southeastern France bordering Italy and the Mediterranean Sea, is known for its diverse landscapes, from the Southern Alps and Camargue plains to rolling vineyards, olive groves, pine forests and lavender fields.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-21-17-03.png)
-* Chamonix-Mont-Blanc - is a resort area near the junction of France, Switzerland and Italy. At the base of Mont Blanc, the highest summit in the Alps, it's renowned for its skiing.
+* **Chamonix-Mont-Blanc** - is a resort area near the junction of France, Switzerland and Italy. At the base of Mont Blanc, the highest summit in the Alps, it's renowned for its skiing.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-21-19-02.png)
 * **Alsace Villages** - located in the north-east of France, Alsace is home to stunning mountain scenery, vine-clad slopes and, of course, beautiful villages.
@@ -57,7 +57,7 @@ America has always been a popular travel destination due to its spiral of metrop
 * San Francisco’s Golden Gate Bridge - is a suspension bridge spanning the Golden Gate, the one-mile-wide strait connecting San Francisco Bay and the Pacific Ocean.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-21-21-36.png)
-* Hollywood, California
+* **Hollywood, California** - is a neighbourhood in the central region of Los Angeles, California. Its name has come to be a shorthand reference for the U.S. film industry and the people associated with it.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-21-24-17.png)
 * Grand Canyon
