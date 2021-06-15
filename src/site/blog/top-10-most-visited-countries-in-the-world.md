@@ -63,7 +63,7 @@ America has always been a popular travel destination due to its spiral of metrop
 * **Grand Canyon National Park** - in Arizona, is home to much of the immense Grand Canyon, with its layered bands of red rock revealing millions of years of geological history.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-21-27-21.png)
-* Denali National Park - 
+* **Denali National Park** - encompasses 6 million acres of Alaska’s interior wilderness. Its centre piece is 20,310-ft.-high Denali (fka Mount McKinley), North America’s tallest peak.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-21-29-00.png)
 * Yosemite National Park - 
