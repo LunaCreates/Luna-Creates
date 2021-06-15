@@ -84,7 +84,7 @@ America has always been a popular travel destination due to its spiral of metrop
 * **Las Vegas Strip** - is a stretch of South Las Vegas Boulevard in Clark County, Nevada, that is known for its concentration of resort hotels and casinos.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-06-23.png)
-* Kilauea Volcano
+* **Kilauea Volcano** - is an active shield volcano in the Hawaiian Islands.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-07-39.png)
 * Niagara Falls
