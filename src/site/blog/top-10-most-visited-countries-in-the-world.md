@@ -81,7 +81,7 @@ America has always been a popular travel destination due to its spiral of metrop
 * **White House, Washington** - is the official residence and workplace of the president of the United States. It is located at 1600 Pennsylvania Avenue NW in Washington, D.C., and has been the residence of every U.S. president since John Adams in 1800.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-04-45.png)
-* Las Vegas Strip, Nevada
+* **Las Vegas Strip** - is a stretch of South Las Vegas Boulevard in Clark County, Nevada, that is known for its concentration of resort hotels and casinos.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-06-23.png)
 * Kilauea Volcano
