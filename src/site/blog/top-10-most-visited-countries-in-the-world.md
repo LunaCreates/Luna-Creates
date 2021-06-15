@@ -63,13 +63,16 @@ America has always been a popular travel destination due to its spiral of metrop
 * **Grand Canyon National Park** - in Arizona, is home to much of the immense Grand Canyon, with its layered bands of red rock revealing millions of years of geological history.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-21-27-21.png)
-* Denali, Yosemite, Yellowstone & Zion National Parks
+* Denali National Park - 
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-21-29-00.png)
+* Yosemite National Park - 
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-21-30-26.png)
+* Yellowstone National Park - 
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-21-35-10.png)
+* Zion National Park - 
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-02-36.png)
 * French Quarter
