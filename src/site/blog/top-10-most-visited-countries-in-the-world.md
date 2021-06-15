@@ -87,7 +87,7 @@ America has always been a popular travel destination due to its spiral of metrop
 * **Kilauea Volcano** - is an active shield volcano in the Hawaiian Islands.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-07-39.png)
-* Niagara Falls
+* **Niagara Falls** - is a group of three waterfalls at the southern end of  Niagara Gorge, spanning the border between the province of Ontario in Canada and the state of New York in the United States.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-08-43.png)
 * Manhattan, New York
