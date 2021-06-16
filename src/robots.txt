@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://lunacreates.co.uk/sitemap.xml

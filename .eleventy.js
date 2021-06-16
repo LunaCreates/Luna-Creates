@@ -34,6 +34,7 @@ module.exports = config => {
   config.addPassthroughCopy({ 'src/images': 'images' });
   config.addPassthroughCopy({ 'src/site.webmanifest': 'site.webmanifest' });
   config.addPassthroughCopy({ 'src/browserconfig.xml': 'browserconfig.xml' });
+  config.addPassthroughCopy({ 'src/robots.txt': 'robots.txt' });
   config.addPassthroughCopy({ 'src/_redirects': '_redirects' });
 
   if (prod) {
