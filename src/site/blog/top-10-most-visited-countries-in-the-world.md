@@ -124,7 +124,7 @@ There are lots of historical sites to see and rich cultures to experience.
 * **Santiago de Compostela Cathedral -** the cathedral soars above the city in a splendid jumble of spires and sculpture. The cathedral is the reputed burial place of Saint James the Great, the apostle of Jesus Christ.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-21-05.png)
-* **Plaza Mayor, Madrid**
+* **Plaza Mayor, Madrid - i**s a major public space in the heart of Madrid, the capital of Spain. It was once the centre of Old Madrid.
 
   **![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-22-25.png)**
 * **Ciudad de las Artes y las Ciencias**
