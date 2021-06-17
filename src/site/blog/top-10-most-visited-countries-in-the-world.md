@@ -149,7 +149,7 @@ Natural attractions include the Huangshan mountain range which inspired scenes i
 * **The Summer Palace** - is a vast ensemble of lakes, gardens and palaces in Beijing. It was an imperial garden in the Qing dynasty.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-36-31.png)
-* Cruising the Li River
+* **Cruising the Li River** - is renowned as being one of “the world’s top 10 watery wonders” according to _National Geographic_. The Li River cruise from Guilin to Yangshuo boasts the most beautiful scenery. Along the 86-kilometer waterway, you will see karst peaks, grazing water buffalo, farmers working in the fields, and traditional villages nestled at the bases of the hills.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-37-58.png)
 * Chengdu Research Base of Giant Panda Breeding
