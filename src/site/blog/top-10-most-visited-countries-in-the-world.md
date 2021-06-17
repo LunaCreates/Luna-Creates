@@ -155,7 +155,7 @@ Natural attractions include the Huangshan mountain range which inspired scenes i
 * **Chengdu Research Base of Giant Panda Breeding** - is a non-profit research and breeding facility for giant pandas and other rare animals. It is located in Chengdu, Sichuan, China. Chengdu Panda Base was founded in 1987. It started with 6 giant pandas that were rescued from the wild.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-39-29.png)
-* The Yangtze River and the Three Gorges
+* **The Yangtze River** - is the longest river in Asia, the third-longest in the world and the longest in the world to flow entirely within one country. It rises at Jari Hill in the Tanggula Mountains and flows 6,300 km in a generally easterly direction to the East China Sea.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-40-58.png)
 * The Classical Gardens of Suzhou
