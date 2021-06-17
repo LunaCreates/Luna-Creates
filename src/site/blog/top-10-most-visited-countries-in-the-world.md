@@ -143,7 +143,7 @@ Natural attractions include the Huangshan mountain range which inspired scenes i
 * **The Forbidden City and the Imperial Palace, Beijing** - is a national museum housed in the Forbidden City at the core of Beijing. It was established in 1925 after the last Emperor of China was evicted from his palace, and opened its doors to the public.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-33-55.png)
-* The Terracotta Army
+* **The Terracotta Army** - is a collection of terracotta sculptures depicting the armies of Qin Shi Huang, the first Emperor of China. It is a form of funerary art buried with the emperor in 210–209 BCE with the purpose of protecting the emperor in his afterlife.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-35-13.png)
 * The Summer Palace
