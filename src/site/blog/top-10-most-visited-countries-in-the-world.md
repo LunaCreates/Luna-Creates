@@ -161,7 +161,7 @@ Natural attractions include the Huangshan mountain range which inspired scenes i
 * **The Classical Gardens of Suzhou** - are a group of gardens in Suzhou region, Jiangsu province, China. The art of the traditional Chinese garden was popular among the wealthy during the Ming and Qing Dynasties, and nowhere is the classic beauty of these gardens more evident than in Suzhou.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-43-24.png)
-* The Potala Palace, Tibet
+* **The Potala Palace, Tibet** - is a dzong fortress in the city of Lhasa, Tibet Autonomous Region, China. It was the winter palace of the Dalai Lamas from 1649 to 1959, has been a museum since then, and has been a World Heritage Site since 1994.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-44-55.png)
 * Shanghai’s Promenade : The Bund
