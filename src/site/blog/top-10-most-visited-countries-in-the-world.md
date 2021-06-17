@@ -192,7 +192,7 @@ Italy has culture, history and cuisine in abundance making it a very popular tou
 * **Amalfi Coast** - is a 50-kilometer stretch of coastline along the southern edge of Italy’s Sorrentine Peninsula, in the Campania region. It’s a popular holiday destination, with sheer cliffs and a rugged shoreline dotted with small beaches and pastel-colored fishing villages.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-23-30-52.png)
-* Florence Duromo Santa Maria del Fiore
+* **Florence Duromo Santa Maria del Fiore** - is the prominent landmark of the Florentine skyline. Not only is it known for its size and beauty, it also has hundreds of years of history and its dome is a major architectural masterpiece ahead of its time.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-23-32-07.png)
 * Cinque Terre
