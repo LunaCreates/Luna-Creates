@@ -201,9 +201,9 @@ Italy has culture, history and cuisine in abundance making it a very popular tou
 * **Vatican City** - is the headquarters of the Roman Catholic Church. It's home to the Pope and a trove of iconic art and architecture.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-23-34-08.png)
-* The Uffizi Gallery
+* **The Uffizi Gallery** - is a prominent art museum located adjacent to the Piazza della Signoria in the Historic Centre of Florence in the region of Tuscany, Italy.
 
-  ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-23-35-05.png)\\
+  ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-23-35-05.png)
 
   6\. **TURKEY**
 
