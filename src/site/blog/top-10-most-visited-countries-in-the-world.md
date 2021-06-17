@@ -106,7 +106,7 @@ There are lots of historical sites to see and rich cultures to experience.
 * **Barcelona’s Sagrada Familia** - The expiatory temple of the Sagrada Familia, the construction of which commenced in 1882, is today one of the emblems of Barcelona, known around the world and visited by millions of people.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-13-25.png)
-* **The Great Mosque of Cordoba (Mezquita)**
+* **The Great Mosque of Cordoba (Mezquita) -** is one of the jewels of Islamic civilisation. A stunning monument to the two religions and cultures that have shaped Andalusia: Islam and Christianity.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-14-51.png)
 * **The Prado and Paseo del Artes, Madrid**
