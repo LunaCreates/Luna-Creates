@@ -195,7 +195,7 @@ Italy has culture, history and cuisine in abundance making it a very popular tou
 * **Florence Duomo Santa Maria del Fiore** - is the prominent landmark of the Florentine skyline. Not only is it known for its size and beauty, it also has hundreds of years of history and its dome is a major architectural masterpiece ahead of its time.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-23-32-07.png)
-* Cinque Terre
+* **Cinque Terre** - is a string of centuries-old seaside villages on the rugged Italian Riviera coastline. In each of the 5 towns, colourful houses and vineyards cling to steep terraces.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-23-33-12.png)
 * Vatican City
