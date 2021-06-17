@@ -183,7 +183,7 @@ Italy has culture, history and cuisine in abundance making it a very popular tou
 * **Pompeii** - a vast archaeological site in southern Italy’s Campania region, near the coast of the Bay of Naples. Once a thriving and sophisticated Roman city, Pompeii was buried under meters of ash and pumice after the catastrophic eruption of Mount Vesuvius in 79 A.D. The preserved site features excavated ruins of streets and houses that visitors can freely explore.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-23-24-18.png)
-* Leaning Tower of Pisa
+* **Leaning Tower of Pisa** - is the freestanding bell tower, of the cathedral of the Italian city of Pisa, known worldwide for its nearly four-degree lean, the result of an unstable foundation.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-23-28-49.png)
 * Lake Como
