@@ -140,7 +140,7 @@ Natural attractions include the Huangshan mountain range which inspired scenes i
 * **The Great Wall of China** - is a series of fortifications that were built across the historical northern borders of ancient Chinese states and Imperial China as protection against various nomadic groups from the Eurasian Steppe.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-25-46.png)
-* The Forbidden City and the Imperial Palace, Beijing
+* The Forbidden City and the Imperial Palace, Beijing - is a national museum housed in the Forbidden City at the core of Beijing. It was established in 1925 after the last Emperor of China was evicted from his palace, and opened its doors to the public.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-33-55.png)
 * The Terracotta Army
