@@ -137,7 +137,7 @@ China is the 3rd largest country in the world and is in the top 5 world tourist 
 
 Natural attractions include the Huangshan mountain range which inspired scenes in Avatar.
 
-* The Great Wall of China
+* **The Great Wall of China** - is a series of fortifications that were built across the historical northern borders of ancient Chinese states and Imperial China as protection against various nomadic groups from the Eurasian Steppe.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-25-46.png)
 * The Forbidden City and the Imperial Palace, Beijing
