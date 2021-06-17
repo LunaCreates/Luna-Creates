@@ -127,7 +127,7 @@ There are lots of historical sites to see and rich cultures to experience.
 * **Plaza Mayor, Madrid - i**s a major public space in the heart of Madrid, the capital of Spain. It was once the centre of Old Madrid.
 
   **![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-22-25.png)**
-* **Ciudad de las Artes y las Ciencias**
+* **Ciudad de las Artes y las Ciencias -** The City of Arts and Sciences is a cultural and architectural complex in the city of Valencia, Spain.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-23-48.png)
 
