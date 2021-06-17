@@ -118,7 +118,7 @@ There are lots of historical sites to see and rich cultures to experience.
 * **Guggenheim Museum, Bilbao -** is a museum of modern and contemporary art designed by Canadian-American architect Frank Gehry, and located in Bilbao, Basque Country, Spain.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-17-59.png)
-* **Seville Cathedral and Alcazar**
+* **Seville Cathedral and Alcazar -** is a Roman Catholic cathedral in Seville, Andalusia, Spain.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-19-00.png)
 * **Santiago de Compostela Cathedral**
