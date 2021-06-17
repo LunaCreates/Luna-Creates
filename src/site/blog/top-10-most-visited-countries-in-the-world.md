@@ -112,7 +112,7 @@ There are lots of historical sites to see and rich cultures to experience.
 * **The Prado and Paseo del Artes, Madrid -** Madrid's three world-class art museums, the Prado, Thyssen-Bornemisza and Centro de Arte Reina Sofía.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-15-58.png)
-* **San Lorenzo de El Escorial**
+* **San Lorenzo de El Escorial -** is one of the Spanish royal sites and functions as a monastery, basilica, royal palace, pantheon, library, museum, university, school, and hospital.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-16-58.png)
 * **Guggenheim Museum, Bilbao**
