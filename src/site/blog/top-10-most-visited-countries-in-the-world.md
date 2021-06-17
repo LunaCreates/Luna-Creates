@@ -186,7 +186,7 @@ Italy has culture, history and cuisine in abundance making it a very popular tou
 * **Leaning Tower of Pisa** - is the freestanding bell tower, of the cathedral of the Italian city of Pisa, known worldwide for its nearly four-degree lean, the result of an unstable foundation.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-23-28-49.png)
-* Lake Como
+* **Lake Como** - in Northern Italy’s Lombardy region, is an upscale resort area known for its dramatic scenery, set against the foothills of the Alps.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-23-29-49.png)
 * Amalfi Coast
