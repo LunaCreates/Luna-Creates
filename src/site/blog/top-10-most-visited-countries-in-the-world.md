@@ -174,7 +174,7 @@ Home to some amazing world heritage sites including: the Coliseum, Venice, the V
 
 Italy has culture, history and cuisine in abundance making it a very popular tourist destination for people all around the globe.
 
-* Colosseum
+* **Colosseum** - is an oval amphitheatre in the centre of the city of Rome, Italy, just east of the Roman Forum. It is the largest ancient amphitheatre ever built, and is still the largest standing amphitheatre in the world today.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-23-02-07.png)
 * Venice Canals
