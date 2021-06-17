@@ -109,7 +109,7 @@ There are lots of historical sites to see and rich cultures to experience.
 * **The Great Mosque of Cordoba (Mezquita) -** is one of the jewels of Islamic civilisation. A stunning monument to the two religions and cultures that have shaped Andalusia: Islam and Christianity.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-14-51.png)
-* **The Prado and Paseo del Artes, Madrid**
+* **The Prado and Paseo del Artes, Madrid -** Madrid's three world-class art museums, the Prado, Thyssen-Bornemisza and Centro de Arte Reina Sofía.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-15-58.png)
 * **San Lorenzo de El Escorial**
