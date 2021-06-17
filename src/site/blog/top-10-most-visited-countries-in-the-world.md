@@ -11,15 +11,15 @@ publish_date:
 ---
 ## **Top 10 Most Visited Countries In The World**
 
-If like me you are daydreaming of getting back out to see a little bit more of the stunning world we live in after this crazy year, here are our top 10 places to visit in 2021 to give you some travel inspiration. 
+If like me you are daydreaming of getting back out to see a little bit more of the stunning world we live in after this crazy year, you'll probably be wondering where to go first! Here are our top 10 places to visit in 2021 to give you some travel inspiration. 
 
 Some of the places on this list are currently closed or have restricted travel but hopefully as the year progresses more places will open up for tourism. Under each of our top 10 countries, we've selected a few personal highlights   with some amazing pictures to show them in all their glory
 
-1. **France**
+1. **FRANCE**
 
-With 89.4m visitors annually France is the most visited country in the world. The Eiffel Tower in Paris has been visited more than 200 million times making it the world’s most popular paid tourist attraction.
+With 89.4m visitors annually France is the most visited country in the world. 
 
-* **Eiffel Tower** - is a wrought-iron lattice tower on the Champ de Mars in Paris, France. It is named after the engineer Gustave Eiffel, whose company designed and built the tower.
+* **Eiffel Tower** - this iconic wrought-iron lattice tower on the Champ de Mars in Paris is named after the engineer Gustave Eiffel, whose company designed and built the tower.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-00-00-38.png)
 * **Louvre Museum** - world’s most visited museum and is best known for being the home of the Mona Lisa.
@@ -52,7 +52,7 @@ With 89.4m visitors annually France is the most visited country in the world. Th
 
   ##### 2. **USA**
 
-America has always been a popular travel destination due to its spiral of metropolis and small town charms. Travel trends include city hopping and road trips. New York has over 800 different languages spoken within the city.
+America has always been a popular travel destination due to its spiral of metropolis and small town charms. Travel trends include city hopping and road trips. New York claims to have over 800 different languages spoken within the city.
 
 * **San Francisco’s Golden Gate Bridge** - is a suspension bridge spanning the Golden Gate, the one-mile-wide strait connecting San Francisco Bay and the Pacific Ocean.
 
@@ -94,48 +94,48 @@ America has always been a popular travel destination due to its spiral of metrop
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-10-06.png)
 
-  3\. **Spain**
+  3\. **SPAIN**
 
 Spain is a top holiday destination for Europeans. Best known for the sunny climate and beaches, great food and affordable prices.
 
 There are lots of historical sites to see and rich cultures to experience.
 
-* **The Alhambra and Generalife Gardens**, Granada - palace and fortress of the Moorish monarchs of Granada, Spain.
+* **The Alhambra and Generalife Gardens**, **Granada** - palace and fortress of the Moorish monarchs of Granada, Spain.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-11-33.png)
-* Barcelona’s Sagrada Familia and Gaudi Sites
+* **Barcelona’s Sagrada Familia** and Gaudi Sites
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-13-25.png)
-* The Great Mosque of Cordoba (Mezquita)
+* **The Great Mosque of Cordoba (Mezquita)**
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-14-51.png)
-* The Prado and Paseo del Artes, Madrid
+* **The Prado and Paseo del Artes, Madrid**
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-15-58.png)
-* San Lorenzo de El Escorial
+* **San Lorenzo de El Escorial**
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-16-58.png)
-* Guggenheim Museum, Bilbao
+* **Guggenheim Museum, Bilbao**
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-17-59.png)
-* Seville Cathedral and Alcazar
+* **Seville Cathedral and Alcazar**
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-19-00.png)
-* Santiago de Compostela Cathedral
+* **Santiago de Compostela Cathedral**
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-21-05.png)
-* Plaza Mayor, Madrid
+* **Plaza Mayor, Madrid**
 
-  ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-22-25.png)
-* Ciudad de las Artes y las Ciencias
+  **![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-22-25.png)**
+* **Ciudad de las Artes y las Ciencias**
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-23-48.png)
 
-  4\. **China**
+  4\. **CHINA**
 
 China is the 3rd largest country in the world and is in the top 5 world tourist destinations because of its natural landscapes, expansive history and delicious cuisine. China has the world's oldest continuous civilisation, from villages dating back thousands of years to ancient marvels like the Great Wall of China, Shanghai has the fastest train in the world, and Beijing’s Forbidden City is the world’s largest palace.
 
-Natural attractions include: the Huangshan mountain range which inspired scenes in Avatar.
+Natural attractions include the Huangshan mountain range which inspired scenes in Avatar.
 
 * The Great Wall of China
 
@@ -168,9 +168,9 @@ Natural attractions include: the Huangshan mountain range which inspired scenes 
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-51-57.png)
 
-  **5. Italy**
+  **5. ITALY**
 
-Home to some amazing world heritage sites including : the Coliseum, Venice, the Vatican, Florence, Leaning Tower of Pisa, Pompeii, Naples, Sicily, the Italian Alps, the Amalfi Coast, the Italian Riviera and Lake Cuomo.
+Home to some amazing world heritage sites including: the Coliseum, Venice, the Vatican, Florence, Leaning Tower of Pisa, Pompeii, Naples, Sicily, the Italian Alps, the Amalfi Coast, the Italian Riviera and Lake Cuomo.
 
 Italy has culture, history and cuisine in abundance making it a very popular tourist destination for people all around the globe.
 
@@ -205,13 +205,9 @@ Italy has culture, history and cuisine in abundance making it a very popular tou
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-23-35-05.png)
 
-  6\. **Turkey**
+  6\. **TURKEY**
 
-Located on two continents Turkey offers a unique blend of East & West.
-
-Turkey has an abundance of stunning coastlines and charming resorts.
-
-Tourist attractions:-
+Located on two continents Turkey offers a unique blend of East & West. It has an abundance of stunning coastlines and charming resorts, ideal for any romantic getaway or family vacation. Take a look at some of the amazing historical architecture it has on offer, creating breathtaking scenery for any warm weather getaway.
 
 * Aya Sofya
 
@@ -240,15 +236,9 @@ Tourist attractions:-
 * Aspendos
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-23-49-31.png)
-  1. **Germany**
+  7. **GERMANY**
 
-Both Europeans and Americans rave about the country’s historic attractions, spirited cities, vast forests and most importantly excellent beer!
-
-The amazing Neuschwanstein Castle was the inspiration for Disneyland’s sleeping beauty castle.
-
-Munich’s two week Oktoberfest brings in 6 million visitors each year.
-
-Tourist attractions:-
+Both Europeans and Americans rave about the country’s historic attractions, spirited cities, vast forests... and most importantly excellent beer! Munich’s two week Oktoberfest brings in 6 million visitors each year and the amazing Neuschwanstein Castle was the inspiration for Disneyland’s sleeping beauty castle.
 
 * Berlin’s Brandenburg Gate
 
@@ -283,13 +273,7 @@ Tourist attractions:-
 
   8\. **United Kingdom**
 
-Is the 9th largest and third most populated island in the world.
-
-Made up of four countries the United Kingdom has long been a beloved destination for international travellers.
-
-London is the country’s most visited city.
-
-Tourist attractions:-
+The UK is the 9th largest and third most populated island in the world. Made up of four countries (England, Scotland, Wales and Northern Ireland) the United Kingdom has long been a beloved destination for international travellers. Fantastic architecture, abundance of green scenic views and historical landmarks a plenty, I for one don't appreciate enough what we have right on our very doorstep!
 
 * Stonehenge
 
@@ -322,13 +306,9 @@ Tourist attractions:-
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-21-56-09.png)
 
-  9\. **Russia**
+  9\. **RUSSIA**
 
-It’s land area is bigger than Pluto and spans 9 time zones.
-
-The country’s most famous attraction is Lake Baikal, the oldest and deepest lake in the world.
-
-Tourist attractions:-
+It’s land area is bigger than Pluto and spans 11 time zones across Eastern Europe and Northern Asia. Russia has hosted many global sporting games across its wondrous cities and while some of its famous geological and natural landscapes are located quite far from each other, they are undoubtedly worth checking out! The country’s most famous attraction is Lake Baikal, the oldest and deepest lake in the world.
 
 * Lake Baikal
 
@@ -367,15 +347,9 @@ Tourist attractions:-
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-22-16-51.png)
 
-  10\. **Thailand**
+  10\. **THAILAND**
 
-Thailand has been a popular tourist destination for decades thanks to its white sand beaches, delicious cuisine and hot weather. The capital Bangkok is the most visited city on the planet.
-
-The 1430 islands of Thailand draw in hundreds of thousands of visitors each year.
-
-Thailand's most popular spots include Rayleigh beach, co-pp and the grand palace of Bangkok.
-
-Tourist attractions:-
+Thailand has been a popular tourist destination for decades thanks to its white sand beaches, delicious cuisine and hot weather. The capital Bangkok is the most visited city on the planet. The 1430 islands of Thailand draw in hundreds of thousands of visitors each year, with it's most popular spots including Rayleigh beach, co-pp and the grand palace of Bangkok.
 
 * Railey Beach
 
