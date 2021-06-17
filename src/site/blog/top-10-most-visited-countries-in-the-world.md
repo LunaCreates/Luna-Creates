@@ -158,7 +158,7 @@ Natural attractions include the Huangshan mountain range which inspired scenes i
 * **The Yangtze River** - is the longest river in Asia, the third-longest in the world and the longest in the world to flow entirely within one country. It rises at Jari Hill in the Tanggula Mountains and flows 6,300 km in a generally easterly direction to the East China Sea.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-40-58.png)
-* The Classical Gardens of Suzhou
+* **The Classical Gardens of Suzhou** - are a group of gardens in Suzhou region, Jiangsu province, China. The art of the traditional Chinese garden was popular among the wealthy during the Ming and Qing Dynasties, and nowhere is the classic beauty of these gardens more evident than in Suzhou.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-43-24.png)
 * The Potala Palace, Tibet
