@@ -1,7 +1,7 @@
 ---
 is_draft: true
-banner_image: https://lunacreates.co.uk/images/blog/banner-placeholder.jpg
-thumbnail: https://lunacreates.co.uk/images/blog/thumbnail-placeholder.jpg
+banner_image: https://lunacreates.co.uk/images/blog/screen-shot-2021-06-17-at-23-18-02.png
+thumbnail: https://lunacreates.co.uk/images/blog/screen-shot-2021-06-17-at-23-15-23.png
 tags: []
 meta_title: Top 10 Most Visited Countries In The World
 meta_description: Top 10 Most Visited Countries In The World
