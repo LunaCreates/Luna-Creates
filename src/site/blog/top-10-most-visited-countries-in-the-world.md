@@ -152,7 +152,7 @@ Natural attractions include the Huangshan mountain range which inspired scenes i
 * **Cruising the Li River** - is renowned as being one of “the world’s top 10 watery wonders” according to _National Geographic_. The Li River cruise from Guilin to Yangshuo boasts the most beautiful scenery. Along the 86-kilometer waterway, you will see karst peaks, grazing water buffalo, farmers working in the fields, and traditional villages nestled at the bases of the hills.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-37-58.png)
-* Chengdu Research Base of Giant Panda Breeding
+* **Chengdu Research Base of Giant Panda Breeding** - is a non-profit research and breeding facility for giant pandas and other rare animals. It is located in Chengdu, Sichuan, China. Chengdu Panda Base was founded in 1987. It started with 6 giant pandas that were rescued from the wild.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-39-29.png)
 * The Yangtze River and the Three Gorges
