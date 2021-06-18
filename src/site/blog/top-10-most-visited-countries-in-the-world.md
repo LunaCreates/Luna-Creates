@@ -296,7 +296,7 @@ The UK is the 9th largest and third most populated island in the world. Made up 
 * **Lake District National Park** - is a national park in Cumbria in northwest England. A popular vacation destination, it’s known for its glacial ribbon lakes, rugged fell mountains and historic literary associations.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-22-53-56.png)
-* Canterbury Cathedral
+* **Canterbury Cathedral** - is one of the oldest and most famous Christian structures in England.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-21-53-31.png)
 * Eden project
