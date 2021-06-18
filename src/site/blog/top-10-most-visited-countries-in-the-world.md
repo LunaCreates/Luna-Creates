@@ -227,7 +227,7 @@ Located on two continents Turkey offers a unique blend of East & West. It has an
 * **Sumela Monastery** - is 1600 year old ancient Orthodox monastery located at a 1200 meters height on the steep cliff at Macka region of Trabzon city in Turkey.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-23-42-22.png)
-* Mount Nemrut
+* **Mount Nemrut** - is one of Turkey's most spectacular ancient sites; a mysterious mountaintop mausoleum scattered with stone heads.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-23-43-18.png)
 * Ani
