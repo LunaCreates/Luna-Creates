@@ -240,7 +240,7 @@ Located on two continents Turkey offers a unique blend of East & West. It has an
 
 Both Europeans and Americans rave about the country’s historic attractions, spirited cities, vast forests... and most importantly excellent beer! Munich’s two week Oktoberfest brings in 6 million visitors each year and the amazing Neuschwanstein Castle was the inspiration for Disneyland’s sleeping beauty castle.
 
-* Berlin’s Brandenburg Gate
+* **Berlin’s Brandenburg Gate** - is an 18th-century neoclassical monument in Berlin, built on the orders of Prussian king Frederick William II after the temporary restoration of order during the Batavian Revolution.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-11-at-09-44-38.png)
 * Cologne Cathedral (Kolner Dom)
