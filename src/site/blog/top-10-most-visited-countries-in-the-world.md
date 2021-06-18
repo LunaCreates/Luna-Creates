@@ -302,7 +302,7 @@ The UK is the 9th largest and third most populated island in the world. Made up 
 * **Eden project** - eco-visitor attraction in Cornwall. The complex is dominated by two huge enclosures consisting of adjoining domes that house thousands of plant species and each enclosure emulates a natural biome. 
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-21-54-46.png)
-* The Cotswolds - covers almost 800 square miles of beautiful scenery, chocolate box villages, vibrant towns and miles of country walks.
+* **The Cotswolds** - covers almost 800 square miles of beautiful scenery, chocolate box villages, vibrant towns and miles of country walks.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-21-56-09.png)
 
