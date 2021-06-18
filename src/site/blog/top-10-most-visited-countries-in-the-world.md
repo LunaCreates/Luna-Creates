@@ -209,7 +209,7 @@ Italy has culture, history and cuisine in abundance making it a very popular tou
 
 Located on two continents Turkey offers a unique blend of East & West. It has an abundance of stunning coastlines and charming resorts, ideal for any romantic getaway or family vacation. Take a look at some of the amazing historical architecture it has on offer, creating breathtaking scenery for any warm weather getaway.
 
-* Aya Sofya
+* **Aya Sofya** - also called Church of the Holy Wisdom or Church of the Divine Wisdom, an important Byzantine structure in Istanbul and one of the world’s great monuments.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-23-36-35.png)
 * Ephesus
