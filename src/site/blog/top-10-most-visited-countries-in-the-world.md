@@ -243,7 +243,7 @@ Both Europeans and Americans rave about the country’s historic attractions, sp
 * **Berlin’s Brandenburg Gate** - is an 18th-century neoclassical monument in Berlin, built on the orders of Prussian king Frederick William II after the temporary restoration of order during the Batavian Revolution.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-11-at-09-44-38.png)
-* Cologne Cathedral (Kolner Dom)
+* **Cologne Cathedral** - is a Catholic cathedral in Cologne, North Rhine-Westphalia, Germany. It is the seat of the Archbishop of Cologne and of the administration of the Archdiocese of Cologne.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-11-at-09-45-57.png)
 * The Black Forest
