@@ -264,7 +264,7 @@ Both Europeans and Americans rave about the country’s historic attractions, sp
 * **Bamberg and the Burgerstadt** - There's no better place to begin a walking tour of Bamberg's Old Town than at Obere Brücke, the pedestrian-only Upper Bridge. From here, you'll be rewarded with superb views of Klein-Venedig, or "Little Venice," with its quaint old fishermen's houses.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-21-23-17.png)
-* Zugspitze Massif
+* **Zugspitze Massif** - is the highest peak of the Wetterstein Mountains as well as the highest mountain in Germany. 
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-21-26-56.png)
 * The Island of Rugen
