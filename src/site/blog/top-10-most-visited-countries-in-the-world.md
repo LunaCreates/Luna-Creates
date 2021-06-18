@@ -290,7 +290,7 @@ The UK is the 9th largest and third most populated island in the world. Made up 
 * **York Minster** - is one of the world's most magnificent cathedrals, a vision of heaven on earth crafted in stained glass and stone.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-21-41-24.png)
-* Chester Zoo
+* **Chester Zoo** - opened in 1931 by George Mottershead and his family. It is one of the UK's largest zoos at 51 hectares.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-21-43-28.png)
 * Lake District National Park
