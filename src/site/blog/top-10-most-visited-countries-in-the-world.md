@@ -258,7 +258,7 @@ Both Europeans and Americans rave about the country’s historic attractions, sp
 * **The Rine valley** - an area of outstanding natural beauty. It has been designated a World Heritage Site by UNESCO in recognition of its importance in terms of the history, geology, culture, and industry of this region of Germany.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-21-17-05.png)
-* Berlin’s Museum Island
+* **Berlin’s Museum Island** - is a museum complex on the northern part of the Spree Island in the historic heart of Berlin.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-21-20-56.png)
 * Bamberg and the Burgerstadt
