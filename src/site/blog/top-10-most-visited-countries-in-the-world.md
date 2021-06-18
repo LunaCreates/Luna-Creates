@@ -351,7 +351,7 @@ It’s land area is bigger than Pluto and spans 11 time zones across Eastern Eur
 
 Thailand has been a popular tourist destination for decades thanks to its white sand beaches, delicious cuisine and hot weather. The capital Bangkok is the most visited city on the planet. The 1430 islands of Thailand draw in hundreds of thousands of visitors each year, with it's most popular spots including Rayleigh beach, co-pp and the grand palace of Bangkok.
 
-* Railey Beach
+* **Railay Beach** - is a small peninsula between the city of Krabi and Ao Nang in Thailand. It is accessible only by boat due to high limestone cliffs cutting off mainland access.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-22-27-36.png)
 * Koh Phi Phi
