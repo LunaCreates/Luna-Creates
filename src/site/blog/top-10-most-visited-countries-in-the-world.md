@@ -278,7 +278,7 @@ The UK is the 9th largest and third most populated island in the world. Made up 
 * **Stonehenge** - is a prehistoric monument on Salisbury Plain in Wiltshire. Stonehenge began about 5,000 years ago as a simple earthwork enclosure where prehistoric people buried their cremated dead. The stones have inspired many legends and folklore over the centuries as people try to explain the origins and function of the henge.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-21-32-16.png)
-* Tower of London
+* **Tower of London** - is a 900-year-old castle and fortress in central London that is notable for housing the crown jewels and for holding many famous and infamous prisoners.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-21-34-07.png)
 * The Roman baths of Georgian city of bath
