@@ -267,7 +267,7 @@ Both Europeans and Americans rave about the country’s historic attractions, sp
 * **Zugspitze Massif** - is the highest peak of the Wetterstein Mountains as well as the highest mountain in Germany. 
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-21-26-56.png)
-* The Island of Rugen
+* **Rügen -**  is a German island in the Baltic Sea. It’s known for its beaches and white chalk cliffs, like the King's Chair on the Jasmund peninsula.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-21-30-03.png)
 
