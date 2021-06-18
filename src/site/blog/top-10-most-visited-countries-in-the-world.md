@@ -249,7 +249,7 @@ Both Europeans and Americans rave about the country’s historic attractions, sp
 * **The Black Forest** - is a mountainous region in southwest Germany, bordering France. Known for its dense, evergreen forests and picturesque villages, it is often associated with the Brothers Grimm fairy tales.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-11-at-10-23-43.png)
-* Neuschwanstein
+* **Neuschwanstein castle** - is a 19th-century historicist palace on a rugged hill above the village of Hohenschwangau near Füssen in southwest Bavaria, Germany.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-11-at-10-28-51.png)
 * Miniatur Wunderland and the historic port of Hamburg
