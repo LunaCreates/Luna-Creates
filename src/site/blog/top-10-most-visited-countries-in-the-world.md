@@ -284,7 +284,7 @@ The UK is the 9th largest and third most populated island in the world. Made up 
 * **The Roman baths of Georgian city of bath** - constructed in around 70AD as a grand bathing and socialising complex, the Roman Baths is one of the best-preserved Roman remains in the world.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-21-36-23.png)
-* British Museum
+* **British Museum** - is a public institution dedicated to human history, art and culture. Its permanent collection of some eight million works is among the largest and most comprehensive in existence.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-22-52-01.png)
 * York Minster and historic Yorkshire
