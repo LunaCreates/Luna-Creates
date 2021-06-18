@@ -340,7 +340,7 @@ It’s land area is bigger than Pluto and spans 11 time zones across Eastern Eur
 * **Vladivostok** - is a major Pacific port city in Russia overlooking Golden Horn Bay, near the borders with China and North Korea. It's known as a terminus of the Trans-Siberian Railway, which links the city to Moscow in a 7-day journey.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-22-14-15.png)
-* Anapa
+* **Anapa beach** - a little peace of Heaven lost into the lagoon of Motu Temae.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-22-15-43.png)
 * Novosibirsk
