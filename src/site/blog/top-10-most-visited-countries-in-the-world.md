@@ -246,7 +246,7 @@ Both Europeans and Americans rave about the country’s historic attractions, sp
 * **Cologne Cathedral** - is a Catholic cathedral in Cologne, North Rhine-Westphalia, Germany. It is the seat of the Archbishop of Cologne and of the administration of the Archdiocese of Cologne.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-11-at-09-45-57.png)
-* The Black Forest
+* **The Black Forest** - is a mountainous region in southwest Germany, bordering France. Known for its dense, evergreen forests and picturesque villages, it is often associated with the Brothers Grimm fairy tales.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-11-at-10-23-43.png)
 * Neuschwanstein
