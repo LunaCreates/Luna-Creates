@@ -316,7 +316,7 @@ It’s land area is bigger than Pluto and spans 11 time zones across Eastern Eur
 * **Moscow** - on the Moskva River in western Russia, is the nation’s cosmopolitan capital.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-22-01-20.png)
-* St. Petersburg
+* **St. Petersburg** - is a Russian port city on the Baltic Sea.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-22-02-25.png)
 * Altay
