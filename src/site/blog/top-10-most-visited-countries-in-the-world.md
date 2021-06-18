@@ -215,7 +215,7 @@ Located on two continents Turkey offers a unique blend of East & West. It has an
 * **Ephesus** - is an ancient city in Turkey’s Central Aegean region. It's excavated remains reflect centuries of history, from classical Greece to the Roman Empire.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-23-37-36.png)
-* Cappadocia
+* **Cappadocia** - is known for its fairytale scenery, cave dwellings, remarkable rock formations and the hundreds of hot air balloons that soar in the sky during sunrise each morning.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-23-39-04.png)
 * Topkapi Palace
