@@ -299,7 +299,7 @@ The UK is the 9th largest and third most populated island in the world. Made up 
 * **Canterbury Cathedral** - is one of the oldest and most famous Christian structures in England.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-21-53-31.png)
-* Eden project
+* **Eden project** - eco-visitor attraction in Cornwall. The complex is dominated by two huge enclosures consisting of adjoining domes that house thousands of plant species and each enclosure emulates a natural biome. 
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-21-54-46.png)
 * The Cotswolds
