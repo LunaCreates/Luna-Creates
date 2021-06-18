@@ -293,7 +293,7 @@ The UK is the 9th largest and third most populated island in the world. Made up 
 * **Chester Zoo** - opened in 1931 by George Mottershead and his family. It is one of the UK's largest zoos at 51 hectares.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-21-43-28.png)
-* Lake District National Park
+* **Lake District National Park** - is a national park in Cumbria in northwest England. A popular vacation destination, it’s known for its glacial ribbon lakes, rugged fell mountains and historic literary associations.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-22-53-56.png)
 * Canterbury Cathedral
