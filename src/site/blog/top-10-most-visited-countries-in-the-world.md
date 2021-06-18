@@ -252,7 +252,7 @@ Both Europeans and Americans rave about the country’s historic attractions, sp
 * **Neuschwanstein castle** - is a 19th-century historicist palace on a rugged hill above the village of Hohenschwangau near Füssen in southwest Bavaria, Germany.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-11-at-10-28-51.png)
-* Miniatur Wunderland and the historic port of Hamburg
+* **Miniatur Wunderland** - is a model railway and miniature airport attraction in Hamburg, Germany, the largest of its kind in the world.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-21-14-51.png)
 * The Rine valley
