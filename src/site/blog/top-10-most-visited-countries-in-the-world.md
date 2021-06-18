@@ -331,10 +331,10 @@ It’s land area is bigger than Pluto and spans 11 time zones across Eastern Eur
 * **Peterhof** - Once a formal garden built for Peter the Great, this popular park still has more than 80 of the original marble statues and sculptures and houses Peter's Summer Palace.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-22-09-34.png)
-* Olkhon Island
+* **Olkhon Island** - is the third-largest lake island in the world.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-22-11-35.png)
-* Petropavlovsk-Kamchatsky
+* **Petropavlovsk-Kamchatsky** - The volcanoes of Kamchatka are a large group of volcanoes situated on the Kamchatka Peninsula, in eastern Russia.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-22-12-48.png)
 * Vladivostok
