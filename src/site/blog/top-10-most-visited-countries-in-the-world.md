@@ -343,7 +343,7 @@ It’s land area is bigger than Pluto and spans 11 time zones across Eastern Eur
 * **Anapa beach** - a little peace of Heaven lost into the lagoon of Motu Temae.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-22-15-43.png)
-* Novosibirsk
+* **Novosibirsk** - is the largest city and administrative centre of **_Novosibirsk_** Oblast in Russia. Located in the southwestern part of Siberia on the banks of the Ob River.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-22-16-51.png)
 
