@@ -255,7 +255,7 @@ Both Europeans and Americans rave about the country’s historic attractions, sp
 * **Miniatur Wunderland** - is a model railway and miniature airport attraction in Hamburg, Germany, the largest of its kind in the world.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-21-14-51.png)
-* The Rine valley
+* **The Rine valley** - an area of outstanding natural beauty. It has been designated a World Heritage Site by UNESCO in recognition of its importance in terms of the history, geology, culture, and industry of this region of Germany.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-21-17-05.png)
 * Berlin’s Museum Island
