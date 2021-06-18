@@ -281,7 +281,7 @@ The UK is the 9th largest and third most populated island in the world. Made up 
 * **Tower of London** - is a 900-year-old castle and fortress in central London that is notable for housing the crown jewels and for holding many famous and infamous prisoners.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-21-34-07.png)
-* The Roman baths of Georgian city of bath
+* **The Roman baths of Georgian city of bath** - constructed in around 70AD as a grand bathing and socialising complex, the Roman Baths is one of the best-preserved Roman remains in the world.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-21-36-23.png)
 * British Museum
