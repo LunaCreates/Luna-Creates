@@ -218,7 +218,7 @@ Located on two continents Turkey offers a unique blend of East & West. It has an
 * **Cappadocia** - is known for its fairytale scenery, cave dwellings, remarkable rock formations and the hundreds of hot air balloons that soar in the sky during sunrise each morning.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-23-39-04.png)
-* Topkapi Palace
+* **Topkapi Palace** - is a large museum in the east of the Fatih district of Istanbul in Turkey. In the 15th and 16th centuries it served as the main residence and administrative headquarters of the Ottoman sultans.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-23-40-16.png)
 * Pamukkale
