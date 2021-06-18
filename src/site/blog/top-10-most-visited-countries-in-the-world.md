@@ -221,7 +221,7 @@ Located on two continents Turkey offers a unique blend of East & West. It has an
 * **Topkapi Palace** - is a large museum in the east of the Fatih district of Istanbul in Turkey. In the 15th and 16th centuries it served as the main residence and administrative headquarters of the Ottoman sultans.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-23-40-16.png)
-* Pamukkale
+* **Pamukkale** - is a town in western Turkey known for the mineral-rich thermal waters flowing down white travertine terraces on a nearby hillside.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-23-41-25.png)
 * Sumela Monastery
