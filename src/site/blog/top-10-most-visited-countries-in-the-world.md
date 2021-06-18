@@ -212,7 +212,7 @@ Located on two continents Turkey offers a unique blend of East & West. It has an
 * **Aya Sofya** - also called Church of the Holy Wisdom or Church of the Divine Wisdom, an important Byzantine structure in Istanbul and one of the world’s great monuments.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-23-36-35.png)
-* Ephesus
+* **Ephesus** - is an ancient city in Turkey’s Central Aegean region. It's excavated remains reflect centuries of history, from classical Greece to the Roman Empire.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-23-37-36.png)
 * Cappadocia
