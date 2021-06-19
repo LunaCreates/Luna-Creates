@@ -376,7 +376,7 @@ Thailand has been a popular tourist destination for decades thanks to its white 
 * **Historic City of Ayutthaya** - The ancient kingdom of Ayutthaya is a vision of Buddhist temples, monasteries and ancient statues of monumental dimensions. Dating back to 1350, the city has experienced a turbulent history, rich in episodes of glory and strife.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-22-35-57.png)
-* Doi Suthep
+* **Doi Suthep** - Overlooking the city from its mountain throne, Wat Phra That Doi Suthep is one of northern Thailand's most sacred temples.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-22-39-57.png)
 * Floating Markets
