@@ -233,7 +233,7 @@ Located on two continents Turkey offers a unique blend of East & West. It has an
 * **Cathedral of Ani** - is the largest standing building in Ani, capital of medieval Bagratid Armenia, located in present-day eastern Turkey, on the border with modern Armenia.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-23-44-17.png)
-* **The Aspendos Theater**  - was founded by the Romans in the 2nd century AD and is the best-preserved theater of the Mediterranean. Mimo is Zenon, the son of Theodoros from Aspendos. The ancient theater which is started in the time of Antonius Piu was completed in the time of Marcus Aurelius (138 – 164 AD).
+* **The Aspendos Theatre**  - was founded by the Romans in the 2nd century AD and is the best-preserved theatre of the Mediterranean. Mimo is Zenon, the son of Theodoros from Aspendos. The ancient theatre which is started in the time of Antonius Piu was completed in the time of Marcus Aurelius (138 – 164 AD).
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-23-49-31.png)
   7\. **GERMANY**
