@@ -360,7 +360,8 @@ Thailand has been a popular tourist destination for decades thanks to its white 
 * **The Grand Palace, Bangkok** - is a complex of buildings at the heart of Bangkok, Thailand. The palace has been the official residence of the Kings of Siam since 1782.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-22-29-42.png)
-* Sunday Walking Street, Chiang Mai
+* **Sunday Walking Street, Chiang Mai** - The market open every Sunday form late afternoon until late, it’s located in the centre of Chiangmai ( Thapae road ).  
+  The market is popular among the local and international tourists, If you are looking for local souvenir this is a place for you.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-22-30-39.png)
 * Pai
