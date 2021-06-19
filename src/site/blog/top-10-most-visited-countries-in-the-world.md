@@ -379,6 +379,6 @@ Thailand has been a popular tourist destination for decades thanks to its white 
 * **Doi Suthep** - Overlooking the city from its mountain throne, Wat Phra That Doi Suthep is one of northern Thailand's most sacred temples.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-22-39-57.png)
-* Floating Markets
+* **Floating Markets** - A floating market is a market where goods are sold from boats. Originating in times and places where water transport played an important role in daily life.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-22-40-55.png)
