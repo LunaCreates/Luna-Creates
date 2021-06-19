@@ -364,7 +364,7 @@ Thailand has been a popular tourist destination for decades thanks to its white 
   The market is popular among the local and international tourists, If you are looking for local souvenir this is a place for you.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-22-30-39.png)
-* Pai
+* **Pai** - is a town in the Mae Hong Soon Province of northern Thailand. It's known for its nearby gorges, hot springs like the Tha Pai Hot Spring and waterfalls like Mo Paeng Waterfall.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-22-31-54.png)
 * Khao Yai National Park
