@@ -354,7 +354,7 @@ Thailand has been a popular tourist destination for decades thanks to its white 
 * **Railay Beach** - is a small peninsula between the city of Krabi and Ao Nang in Thailand. It is accessible only by boat due to high limestone cliffs cutting off mainland access.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-22-27-36.png)
-* Koh Phi Phi
+* **Koh Phi Phi** - the Phi Phi islands are some of the loveliest in Southeast Asia. Most famous for being the setting of the Leonardo DiCaprio movie The Beach.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-22-28-47.png)
 * The Grand Palace, Bangkok
