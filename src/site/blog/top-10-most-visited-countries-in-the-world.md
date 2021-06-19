@@ -11,18 +11,18 @@ publish_date:
 ---
 ## **Top 10 Most Visited Countries In The World**
 
-If like me you are daydreaming of getting back out to see a little bit more of the stunning world we live in after this crazy year, you'll probably be wondering where to go first! Here are our top 10 places to visit in 2021 to give you some travel inspiration. 
+If like me you are daydreaming of getting back out to see a little bit more of the stunning world we live in after this crazy year, you'll probably be wondering where to go first! Here's our top 10 places to visit in 2021 to give you some travel inspiration.
 
-Some of the places on this list are currently closed or have restricted travel but hopefully as the year progresses more places will open up for tourism. Under each of our top 10 countries, we've selected a few personal highlights   with some amazing pictures to show them in all their glory
+Some of the places on this list are currently closed or have restricted travel but hopefully as the year progresses more places will open up for tourism. Under each of our top 10 countries, we've selected a few personal highlights   with some amazing pictures to show them in all their glory.
 
 1. **FRANCE**
 
-With 89.4m visitors annually France is the most visited country in the world. 
+With 89.4m visitors annually France is the most visited country in the world.
 
 * **Eiffel Tower** - this iconic wrought-iron lattice tower on the Champ de Mars in Paris is named after the engineer Gustave Eiffel, whose company designed and built the tower.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-00-00-38.png)
-* **Louvre Museum** - world’s most visited museum and is best known for being the home of the Mona Lisa.
+* **Louvre Museum** - the world’s most visited museum and is best known for being the home of the Mona Lisa.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-00-02-23.png)
 * **Palace of Versailles** - is one of the most important landmarks in French history. Home to the Kings of France between 1662 and 1789.
@@ -164,7 +164,7 @@ Natural attractions include the Huangshan mountain range which inspired scenes i
 * **The Potala Palace, Tibet** - is a dzong fortress in the city of Lhasa, Tibet Autonomous Region, China. It was the winter palace of the Dalai Lamas from 1649 to 1959, has been a museum since then, and has been a World Heritage Site since 1994.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-44-55.png)
-* **Shanghai’s Promenade : The Bund** - is a waterfront area and a protected historical district in central Shanghai. 
+* **Shanghai’s Promenade : The Bund** - is a waterfront area and a protected historical district in central Shanghai.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-51-57.png)
 
@@ -236,7 +236,7 @@ Located on two continents Turkey offers a unique blend of East & West. It has an
 * **The Aspendos Theater**  - was founded by the Romans in the 2nd century AD and is the best-preserved theater of the Mediterranean. Mimo is Zenon, the son of Theodoros from Aspendos. The ancient theater which is started in the time of Antonius Piu was completed in the time of Marcus Aurelius (138 – 164 AD).
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-23-49-31.png)
-  7. **GERMANY**
+  7\. **GERMANY**
 
 Both Europeans and Americans rave about the country’s historic attractions, spirited cities, vast forests... and most importantly excellent beer! Munich’s two week Oktoberfest brings in 6 million visitors each year and the amazing Neuschwanstein Castle was the inspiration for Disneyland’s sleeping beauty castle.
 
@@ -264,7 +264,7 @@ Both Europeans and Americans rave about the country’s historic attractions, sp
 * **Bamberg and the Burgerstadt** - There's no better place to begin a walking tour of Bamberg's Old Town than at Obere Brücke, the pedestrian-only Upper Bridge. From here, you'll be rewarded with superb views of Klein-Venedig, or "Little Venice," with its quaint old fishermen's houses.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-21-23-17.png)
-* **Zugspitze Massif** - is the highest peak of the Wetterstein Mountains as well as the highest mountain in Germany. 
+* **Zugspitze Massif** - is the highest peak of the Wetterstein Mountains as well as the highest mountain in Germany.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-21-26-56.png)
 * **Rügen -**  is a German island in the Baltic Sea. It’s known for its beaches and white chalk cliffs, like the King's Chair on the Jasmund peninsula.
@@ -299,7 +299,7 @@ The UK is the 9th largest and third most populated island in the world. Made up 
 * **Canterbury Cathedral** - is one of the oldest and most famous Christian structures in England.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-21-53-31.png)
-* **Eden project** - eco-visitor attraction in Cornwall. The complex is dominated by two huge enclosures consisting of adjoining domes that house thousands of plant species and each enclosure emulates a natural biome. 
+* **Eden project** - eco-visitor attraction in Cornwall. The complex is dominated by two huge enclosures consisting of adjoining domes that house thousands of plant species and each enclosure emulates a natural biome.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-21-54-46.png)
 * **The Cotswolds** - covers almost 800 square miles of beautiful scenery, chocolate box villages, vibrant towns and miles of country walks.
