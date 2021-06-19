@@ -236,9 +236,11 @@ Located on two continents Turkey offers a unique blend of East & West. It has an
 * **The Aspendos Theatre**  - was founded by the Romans in the 2nd century AD and is the best-preserved theatre of the Mediterranean. Mimo is Zenon, the son of Theodoros from Aspendos. The ancient theatre which is started in the time of Antonius Piu was completed in the time of Marcus Aurelius (138 – 164 AD).
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-23-49-31.png)
+
+  
   7\. **GERMANY**
 
-Both Europeans and Americans rave about the country’s historic attractions, spirited cities, vast forests... and most importantly excellent beer! Munich’s two week Oktoberfest brings in 6 million visitors each year and the amazing Neuschwanstein Castle was the inspiration for Disneyland’s sleeping beauty castle.
+Both Europeans and Americans rave about the country’s historic attractions, spirited cities, vast forests and most importantly excellent beer! Munich’s two week Oktoberfest brings in 6 million visitors each year and the amazing Neuschwanstein Castle was the inspiration for Disneyland’s sleeping beauty castle.
 
 * **Berlin’s Brandenburg Gate** - is an 18th-century neoclassical monument in Berlin, built on the orders of Prussian king Frederick William II after the temporary restoration of order during the Batavian Revolution.
 
