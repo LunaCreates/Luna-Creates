@@ -22,7 +22,7 @@ With 89.4m visitors annually France is the most visited country in the world.
 
 * **Eiffel Tower** - this iconic wrought-iron lattice tower on the Champ de Mars in Paris is named after the engineer Gustave Eiffel, whose company designed and built the tower.
 
-  ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-00-00-38.png)
+  ![Eiffel Tower](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-00-00-38.png)
 * **Louvre Museum** - the world’s most visited museum and is best known for being the home of the Mona Lisa.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-00-02-23.png)
@@ -53,7 +53,7 @@ With 89.4m visitors annually France is the most visited country in the world.
 
   ##### 2. **USA**
 
-America has always been a popular travel destination due to its spiral of metropolis and small town charms. Travel trends include city hopping and road trips. New York claims to have over 800 different languages spoken within the city.
+Second to the most visited countries, America has always been a popular travel destination due to its spiral of metropolis and small town charms. Travel trends include city hopping and road trips. New York claims to have over 800 different languages spoken within the city.
 
 * **San Francisco’s Golden Gate Bridge** - is a suspension bridge spanning the Golden Gate, the one-mile-wide strait connecting San Francisco Bay and the Pacific Ocean.
 
@@ -187,7 +187,7 @@ Italy has culture, history and cuisine in abundance making it a very popular tou
 * **Leaning Tower of Pisa** - is the freestanding bell tower, of the cathedral of the Italian city of Pisa, known worldwide for its nearly four-degree lean, the result of an unstable foundation.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-23-28-49.png)
-* **Lake Como** - in Northern Italy’s Lombardy region, is an upscale resort area known for its dramatic scenery, set against the foothills of the Alps.
+* **Lake Como** - Another popular destination to travelers in Northern Italy’s Lombardy region, is an upscale resort area known for its dramatic scenery, set against the foothills of the Alps.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-23-29-49.png)
 * **Amalfi Coast** - is a 50-kilometer stretch of coastline along the southern edge of Italy’s Sorrentine Peninsula, in the Campania region. It’s a popular holiday destination, with sheer cliffs and a rugged shoreline dotted with small beaches and pastel-coloured fishing villages.
@@ -238,7 +238,6 @@ Located on two continents Turkey offers a unique blend of East & West. It has an
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-23-49-31.png)
 
-  
   7\. **GERMANY**
 
 Both Europeans and Americans rave about the country’s historic attractions, spirited cities, vast forests and most importantly excellent beer! Munich’s two week Oktoberfest brings in 6 million visitors each year and the amazing Neuschwanstein Castle was the inspiration for Disneyland’s sleeping beauty castle.
