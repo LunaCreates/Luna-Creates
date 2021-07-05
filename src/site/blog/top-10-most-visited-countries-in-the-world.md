@@ -23,8 +23,6 @@ With 89.4m visitors annually France is the most visited country in the world.
 * **Eiffel Tower** - this iconic wrought-iron lattice tower on the Champ de Mars in Paris is named after the engineer Gustave Eiffel, whose company designed and built the tower.
 
   ![Eiffel Tower](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-00-00-38.png)
-
-  ![](https://lunacreates.co.uk/images/blog/eiffel-tower.jpg)
 * **Louvre Museum** - the world’s most visited museum and is best known for being the home of the Mona Lisa.
 
   ![](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-00-02-23.png)
