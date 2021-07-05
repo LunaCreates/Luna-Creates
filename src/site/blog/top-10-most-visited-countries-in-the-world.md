@@ -3,8 +3,9 @@ is_draft: false
 banner_image: https://lunacreates.co.uk/images/blog/earth-space.png
 thumbnail: https://lunacreates.co.uk/images/blog/screen-shot-2021-06-17-at-23-15-23.png
 tags: []
-meta_title: Top 10 Most Visited Countries In The World
-meta_description: Top 10 Most Visited Countries In The World
+meta_title: Top 10 Most Visited Countries in the World by Luna Creates
+meta_description: Where do we pin on the world map next? Here's a list of Top 10 most
+  visited countries and their popular tourist destinations.
 title: Top 10 Most Visited Countries In The World
 publish_date: 2021-06-21T12:00:00+01:00
 
