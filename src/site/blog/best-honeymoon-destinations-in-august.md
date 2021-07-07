@@ -52,7 +52,7 @@ There are plenty of places to visit including temples, the Gili Islands or the b
 
 Fiji is known for its beaches and there are some of the best beaches in the world here, many of which will be on your hotel doorstep! Paradise islands don't get much better than this, making it a great destination to visit. 
 
-You can explore the ocean with some snorkelling, explore hiking trails or book a leisurely cruise to explore the islands. For a romantic stay that's packed with wildlife and a place that creates the best memories, Fiji captures it all. 
+You can explore the ocean with some snorkeling, explore hiking trails or book a leisurely cruise to explore the islands. For a romantic stay that's packed with wildlife and a place that creates the best memories, Fiji captures it all. 
 
 ### Greece, A Perfect Honeymoon Getaway
 
