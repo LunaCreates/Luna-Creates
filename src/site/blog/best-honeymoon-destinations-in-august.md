@@ -1,6 +1,6 @@
 ---
 is_draft: false
-banner_image: https://lunacreates.co.uk/images/blog/honeymoon-banner.jpg
+banner_image: https://lunacreates.co.uk/images/blog/travel-banner-resized.jpg
 thumbnail: https://lunacreates.co.uk/images/blog/honeymoon.jpg
 tags: []
 meta_title: 'Travel Advice: Best Honeymoon Destinations in August'
