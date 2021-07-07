@@ -84,6 +84,6 @@ You can discover ancient rock art that dates back to the stone age and if you wa
 
 If you're looking for the perfect couple escape and a romantic setting then it doesn't get more romantic than the Seychelles. Gorgeous beaches, endless blue skies and sparkling oceans await but there is more here.
 
-You can discover plenty of things for couples to do including a Cousin Island day trip or exploring the Seychelles National Botanical Gardens. There are lots to do here, so you can split your time between the beach and discovering this wonderful honeymoon destination.
+You can discover plenty of things for couples to do including a Cousin Island day trip or exploring the Seychelles National Botanical Gardens. There is lots to do here, so you can split your time between the beach and discovering this wonderful honeymoon destination.
 
 If you're looking for the best gift for honeymooners or you want to create a memory of your honeymoon, a [world map pinboard](https://lunacreates.co.uk/) is definitely a top choice!
