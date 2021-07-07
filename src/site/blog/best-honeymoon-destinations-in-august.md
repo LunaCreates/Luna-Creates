@@ -1,7 +1,7 @@
 ---
 is_draft: false
 banner_image: https://lunacreates.co.uk/images/blog/honeymoon.jpg
-thumbnail: https://lunacreates.co.uk/images/blog/thumbnail-placeholder.jpg
+thumbnail: https://lunacreates.co.uk/images/blog/honeymoon.jpg
 tags: []
 meta_title: 'Travel Advice: Best Honeymoon Destinations in August'
 meta_description: Are you looking for a perfect honeymoon destinations in August?
@@ -86,4 +86,4 @@ If you're looking for the perfect couple escape and a romantic setting then it d
 
 You can discover plenty of things for couples to do including a Cousin Island day trip or exploring the Seychelles National Botanical Gardens. There are lots to do here, so you can split your time between the beach and discovering this wonderful honeymoon destination.
 
-If you're looking for the best gift for honeymooners or you want to create a memory of your honeymoon, then take a look here.
+If you're looking for the best gift for honeymooners or you want to create a memory of your honeymoon, a world map pinboard is the perfect
