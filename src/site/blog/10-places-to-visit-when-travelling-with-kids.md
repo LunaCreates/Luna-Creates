@@ -1,7 +1,7 @@
 ---
 is_draft: false
-banner_image: https://lunacreates.co.uk/images/blog/banner-placeholder.jpg
-thumbnail: https://lunacreates.co.uk/images/blog/thumbnail-placeholder.jpg
+banner_image: https://lunacreates.co.uk/images/blog/travelling-with-kids-banner.jpg
+thumbnail: https://lunacreates.co.uk/images/blog/travelling-with-kids.jpg
 tags: []
 meta_title: 10 Places to Visit when Travelling with Kids
 meta_description: 'Explore the places to visit when travelling with kids and look
