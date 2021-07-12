@@ -4,8 +4,8 @@ banner_image: https://lunacreates.co.uk/images/blog/travelling-with-kids-banner.
 thumbnail: https://lunacreates.co.uk/images/blog/travelling-with-kids.jpg
 tags: []
 meta_title: 10 Places to Visit when Travelling with Kids
-meta_description: 'Explore the places to visit when travelling with kids and look
-  at some of the top destinations to discover. '
+meta_description: Travel can be an eye-opening experience for children of all ages.
+  Here's how to make travelling with kids successful and fun at the same time.
 title: 10 Places to Visit when Travelling with Kids
 publish_date: 2021-07-12T05:00:00+01:00
 
