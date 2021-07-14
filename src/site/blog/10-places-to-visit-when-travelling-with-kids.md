@@ -1,7 +1,7 @@
 ---
 is_draft: false
-banner_image: https://lunacreates.co.uk/images/blog/printing-map.jpg
-thumbnail: https://lunacreates.co.uk/images/blog/printing-map_square.jpg
+banner_image: https://lunacreates.co.uk/images/blog/travelling-with-kids-banner.jpg
+thumbnail: https://lunacreates.co.uk/images/blog/travelling-with-kids.jpg
 tags: []
 meta_title: 10 Places to Visit when Travelling with Kids
 meta_description: Travel can be an eye-opening experience for children of all ages.
