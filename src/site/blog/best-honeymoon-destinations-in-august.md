@@ -1,7 +1,7 @@
 ---
-is_draft: false
-banner_image: src/images/blog/honeymoon-banner.jpg
-thumbnail: src/images/blog/honeymoon.jpg
+is_draft: true
+banner_image: https://lunacreates.co.uk/images/blog/printing-map.jpg
+thumbnail: https://lunacreates.co.uk/images/blog/printing-map_square.jpg
 tags: []
 meta_title: 'Travel Advice: Best Honeymoon Destinations in August'
 meta_description: Are you looking for a perfect honeymoon destinations in August?
