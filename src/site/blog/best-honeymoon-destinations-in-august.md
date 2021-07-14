@@ -1,13 +1,13 @@
 ---
-is_draft: true
-banner_image: https://lunacreates.co.uk/images/blog/printing-map.jpg
-thumbnail: https://lunacreates.co.uk/images/blog/printing-map_square.jpg
+is_draft: false
+banner_image: https://lunacreates.co.uk/images/blog/honeymoon-banner.jpg
+thumbnail: https://lunacreates.co.uk/images/blog/honeymoon.jpg
 tags: []
 meta_title: 'Travel Advice: Best Honeymoon Destinations in August'
 meta_description: Are you looking for a perfect honeymoon destinations in August?
   Discover these best honeymoon destinations around the world by Luna Creates.
 title: Best Honeymoon Destinations in August
-publish_date: 2021-07-07T05:00:00+01:00
+publish_date: 2021-07-07T05:00:00.000+01:00
 
 ---
 When it comes to honeymooning in August, there are many options available. Of course, you want to make the best of those special moments together, so whether you want to explore the Fiji Islands or you want a relaxing escape to a beach destination, there are many options available.
