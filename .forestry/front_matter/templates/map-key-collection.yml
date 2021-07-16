@@ -1,4 +1,18 @@
 ---
 label: Map Key Collection
 hide_body: true
-fields: []
+fields:
+- name: title
+  type: text
+  config:
+    required: true
+  label: Title
+- name: sub_text
+  type: text
+  config:
+    required: false
+  label: Sub Text
+- name: images
+  type: image_gallery
+  config: {}
+  label: Images
