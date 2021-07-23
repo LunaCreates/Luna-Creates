@@ -12,9 +12,10 @@ sitemap:
 {% set postListItems = collections.postFeed %}
 
 <ol class="grid grid-cols-2 gap-24 md:grid-cols-3 md:gap-32" reversed>
+
 {% for item in postListItems %}
     {% set title = item.data.title %}
-    {% set date = item.data.publish_date or item.date.date %}
+    {% set date = item.data.publish_date %}
     {% set thumbnail = item.data.thumbnail %}
     {% set thumbnailWebP = thumbnail.split(r/(jpg|png)/g)[0] + 'webp' %}
     {% set isDraft = item.data.is_draft %}
