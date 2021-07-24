@@ -22,3 +22,8 @@ fields:
     required: true
   label: Title
   description: Title of the page
+- name: hero_banner
+  type: include
+  config: {}
+  template: hero-banner
+  label: Hero Banner
