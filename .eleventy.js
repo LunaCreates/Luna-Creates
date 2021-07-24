@@ -1,19 +1,19 @@
 const fs = require('fs');
-// const image = require('./src/utils/shortcodes/image');
-const picture = require('./src/utils/shortcodes/picture');
-const preloadImage = require('./src/utils/shortcodes/preload-image');
-const formatDate = require('./src/utils/filters/format-date');
-const readableDate = require('./src/utils/filters/readable-date');
+// const image = require('./src/utils/shortcodes/image.js');
+const picture = require('./src/utils/shortcodes/picture.js');
+const preloadImage = require('./src/utils/shortcodes/preload-image.js');
+const formatDate = require('./src/utils/filters/format-date.js');
+const readableDate = require('./src/utils/filters/readable-date.js');
 const htmlMin = require('./src/utils/minify-html.js');
 const swStyles = require('./src/utils/shortcodes/sw-styles.js');
 const swScripts = require('./src/utils/shortcodes/sw-scripts.js');
 const swBuildNumber = require('./src/utils/shortcodes/sw-build-number.js');
-const settings = require('./src/site/_data/settings.json');
+const { maxPostsPerPage } = require('./src/site/_data/settings.json');
 
 module.exports = config => {
   const prod = process.env.NODE_ENV === 'production';
   const now = new Date();
-  const livePosts = post => post.date <= now && !post.data.draft;
+  const livePosts = post => post.data.publish_date <= now && !post.data.is_draft;
 
   // Filters
   config.addFilter('formatDate', formatDate);
@@ -44,8 +44,9 @@ module.exports = config => {
   // Custom collections
   config.addCollection('postFeed', collection => {
     return [...collection.getFilteredByGlob('./src/site/blog/*.md')]
+      .filter(livePosts)
       .reverse()
-      .slice(0, settings.maxPostsPerPage);
+      .slice(0, maxPostsPerPage);
   });
 
   // 404

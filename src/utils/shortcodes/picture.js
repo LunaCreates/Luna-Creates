@@ -8,14 +8,15 @@ module.exports = async (
   alt,
   pictureClass,
   imageClass,
+  urlPath = 'shopify',
   loading = 'lazy',
 ) => {
   const hasAlt = alt ? `alt="${alt}"` : 'role="presentation"';
   const metadata = await Image(src, {
     widths: JSON.parse(`[${widths}]`),
     formats: ['avif', 'webp', 'jpeg'],
-    urlPath: '/images/shopify/',
-    outputDir: './dist/images/shopify/',
+    urlPath: `/images/${urlPath}/`,
+    outputDir: `./dist/images/${urlPath}/`,
     cacheOptions: {
       duration: '15552000s'
     }
