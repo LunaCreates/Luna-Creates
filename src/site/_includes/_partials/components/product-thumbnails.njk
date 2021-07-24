@@ -2,7 +2,7 @@
 {% for thumbnail in product.thumbnails %}
     {% set image = thumbnail.image.split(r/.(jpg|png)/g)[0] %}
     <li class="relative min-w-4 scroll-snap-start mx-8 md:min-w-6">
-        <a href="{{image}}{{thumbnail.type}}" class="absolute inset-0 border-2 border-solid border-transparent transition-all duration-300 ease-in-out {% if loop.first %}border-primary{% endif %} z-10" data-thumbnail-link=>
+        <a href="{{image}}{{thumbnail.type}}" class="absolute inset-0 border-2 border-solid border-transparent transition-all duration-300 ease-in-out {% if loop.first %}border-primary{% endif %} z-10" data-thumbnail-link>
             <span class="sr-only">Thumbnail item {{loop.index + 1}}</span>
         </a>
         <picture class="ratio-1-1 relative block bg-grey-fade">
