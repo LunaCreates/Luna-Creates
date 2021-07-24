@@ -12,14 +12,8 @@ module.exports = async (
   urlPath = 'shopify',
   loading = 'lazy',
 ) => {
-  if (urlPath === 'key-maps') {
-    console.log(src, 'src');
-  }
-
-  const isShopify = urlPath === 'shopify';
-  const imageSrc = isShopify ? src : path.resolve(__dirname, '../../', src)
   const hasAlt = alt ? `alt="${alt}"` : 'role="presentation"';
-  const metadata = await Image(imageSrc, {
+  const metadata = await Image(src, {
     widths: JSON.parse(`[${widths}]`),
     formats: ['avif', 'webp', 'jpeg'],
     urlPath: `/images/${urlPath}/`,
