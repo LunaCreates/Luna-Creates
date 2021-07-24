@@ -39,9 +39,6 @@ function MoreToggle(element: HTMLElement) {
   function setState() {
     const button: HTMLButtonElement | null = element.querySelector('[data-toggle-more]');
 
-    console.log('pfjsdiojgifjdfj');
-
-
     if (button === null || elementToToggle.scrollHeight < 260) return;
 
     elementToToggle.style.height = '250px';
