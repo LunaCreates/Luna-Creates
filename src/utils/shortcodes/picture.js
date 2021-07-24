@@ -1,3 +1,4 @@
+const path = require('path')
 const Image = require('@11ty/eleventy-img');
 
 module.exports = async (
@@ -15,8 +16,9 @@ module.exports = async (
     console.log(src, 'src');
   }
 
+  const imageSrc = urlPath ==='shopify' ? src : path.resolve(src)
   const hasAlt = alt ? `alt="${alt}"` : 'role="presentation"';
-  const metadata = await Image(src, {
+  const metadata = await Image(imageSrc, {
     widths: JSON.parse(`[${widths}]`),
     formats: ['avif', 'webp', 'jpeg'],
     urlPath: `/images/${urlPath}/`,

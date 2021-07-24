@@ -59,8 +59,5 @@
     "webpack-bundle-analyzer": "^4.4.2",
     "webpack-cli": "^4.7.2",
     "webpack-manifest-plugin": "^3.1.1"
-  },
-  "resolutions": {
-    "sharp": "0.24.0"
   }
 }
