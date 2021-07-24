@@ -12,8 +12,7 @@ const { maxPostsPerPage } = require('./src/site/_data/settings.json');
 
 module.exports = config => {
   const prod = process.env.NODE_ENV === 'production';
-  const now = new Date();
-  const livePosts = post => post.data.publish_date <= now && !post.data.is_draft;
+  const livePosts = post => !post.data.is_draft;
 
   // Filters
   config.addFilter('formatDate', formatDate);
@@ -45,7 +44,7 @@ module.exports = config => {
   config.addCollection('postFeed', collection => {
     return [...collection.getFilteredByGlob('./src/site/blog/*.md')]
       .filter(livePosts)
-      .reverse()
+      .sort((a, b) => b.data.publish_date - a.data.publish_date)
       .slice(0, maxPostsPerPage);
   });
 
