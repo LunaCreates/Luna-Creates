@@ -16,7 +16,7 @@ module.exports = async (
     console.log(src, 'src');
   }
 
-  const imageSrc = urlPath ==='shopify' ? src : path.resolve(__dirname, src)
+  const imageSrc = urlPath === 'shopify' ? src : path.resolve(__dirname, '../../', src)
   const hasAlt = alt ? `alt="${alt}"` : 'role="presentation"';
   const metadata = await Image(imageSrc, {
     widths: JSON.parse(`[${widths}]`),
