@@ -26,12 +26,12 @@ function MoreToggle(element: HTMLElement) {
     if (isExpanded) {
       elementToToggle.removeAttribute('data-toggle-open');
       elementToToggle.style.height = '250px';
-      elementToToggle.classList.add('after');
+      elementToToggle.classList.remove('after:hidden');
       setClosedButtonState(target);
     } else {
       elementToToggle.setAttribute('data-toggle-open', '');
       elementToToggle.style.height = 'auto';
-      elementToToggle.classList.remove('after');
+      elementToToggle.classList.add('after:hidden');
       setOpenButtonState(target);
     }
   }

@@ -99,6 +99,7 @@ module.exports = {
       4: '4rem',
       6: '6rem',
       16: '16rem',
+      18: '18rem',
       24: '24rem',
       38: '38rem',
       full: '100%'
