@@ -22,3 +22,11 @@ fields:
     required: true
   label: Title
   description: Title of the page
+- name: content
+  type: blocks
+  label: Content
+  template_types:
+  - hero-banner
+  config:
+    min: 
+    max: 
