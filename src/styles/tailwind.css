@@ -107,6 +107,10 @@
     @apply italic;
   }
 
+  [data-pin]:checked ~ [data-chosen-pins] {
+    @apply block;
+  }
+
   [data-pin]:checked {
     background-color: var(--color);
   }
