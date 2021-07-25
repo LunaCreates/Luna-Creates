@@ -98,52 +98,17 @@
   }
 
   .pinch-zoom-container {
-    position: relative;
+    @apply relative;
     padding-top: 100%;
   }
 
   [data-product-map-title]::placeholder,
   [data-pin-label]::placeholder {
-    font-style: italic;
+    @apply italic;
   }
 
   [data-pin]:checked {
     background-color: var(--color);
-  }
-
-  [data-pin]:disabled {
-    @apply opacity-25 cursor-not-allowed;
-  }
-
-  [data-pin]:checked ~ [data-chosen-pins] {
-    @apply block;
-  }
-
-  [data-map="size"]:checked + div,
-  [data-map="frame"]:checked + div {
-    @apply bg-secondary;
-  }
-
-  [data-map="size"]:checked ~ [data-map-size-selected],
-  [data-map="frame"]:checked ~ [data-map-frame-selected] {
-    @apply opacity-100 visible;
-  }
-
-  [data-map="frame"]:checked + div > * {
-    @apply bg-transparent;
-  }
-
-  [id='pink-pin']:checked ~ * [id='pink-chosen'],
-  [id='light-blue-pin']:checked ~ * [id='light-blue-chosen'],
-  [id='green-pin']:checked ~ * [id='green-chosen'],
-  [id='purple-pin']:checked ~ * [id='purple-chosen'],
-  [id='white-pin']:checked ~ * [id='white-chosen'],
-  [id='yellow-pin']:checked ~ * [id='yellow-chosen'],
-  [id='red-pin']:checked ~ * [id='red-chosen'],
-  [id='blue-pin']:checked ~ * [id='blue-chosen'],
-  [id='orange-pin']:checked ~ * [id='orange-chosen'],
-  [id='black-pin']:checked ~ * [id='black-chosen'] {
-    @apply flex;
   }
 
   [id='map-label-no']:checked  ~ [data-pin-chosen] label,
@@ -157,22 +122,18 @@
   }
 
   .sl {
+    @apply absolute hidden whitespace-nowrap border-0;
     clip: rect(0,0,0,0);
-    border-width: 0;
     height: 1px;
     margin: -1px;
-    overflow: hidden;
-    position: absolute;
-    white-space: nowrap;
     width: 1px;
   }
 
   .sl:focus {
+    @apply visible whitespace-normal;
     clip: auto;
     height: auto;
     margin: 0;
-    overflow: visible;
-    white-space: normal;
     width: auto;
   }
 

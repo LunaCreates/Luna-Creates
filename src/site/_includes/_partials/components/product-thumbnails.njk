@@ -1,4 +1,4 @@
-<ul class="thumbnails mt-16 flex flex-nowrap overflow-x-auto scroll-snap-x" data-component="product-thumbnails">
+<ul class="mt-16 flex flex-nowrap overflow-x-auto scroll-snap-x" data-component="product-thumbnails">
 {% for thumbnail in product.thumbnails %}
     {% set image = thumbnail.image.split(r/.(jpg|png)/g)[0] %}
     <li class="relative min-w-4 scroll-snap-start mx-8 md:min-w-6">

@@ -27,6 +27,8 @@ module.exports = {
     './src/site/_includes/_partials/forms/*.njk',
     './src/site/_includes/_partials/head.njk',
     './src/site/_includes/_partials/navigation.njk',
+    './src/scripts/**/*.ts',
+    './src/functions/**/*.js'
   ],
   theme: {
     borderWidth: {

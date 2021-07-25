@@ -63,18 +63,18 @@
             {% set id = color.name.replace(' ', '-') + '-pin' %}
 
             <label for="{{ id | lower }}" class="sr-only">{{ name }}</label>
-            <input type="checkbox" id="{{ id | lower }}" value="{{ hex }}" name="colors" class="rounded-full m-8 bg-transparent cursor-pointer appearance-none" style="width: 2.5rem; height: 2.5rem; border: 7px solid {{ hex }}; --color: {{ hex }};" data-pin="{{ name | lower }}" data-pin-hex="{{ hex }}">
+            <input type="checkbox" id="{{ id | lower }}" value="{{ hex }}" name="colors" class="peer rounded-full m-8 bg-transparent cursor-pointer appearance-none disabled:opacity-25 disabled:cursor-not-allowed" style="width: 2.5rem; height: 2.5rem; border: 7px solid {{ hex }}; --color: {{ hex }};" data-pin="{{ name | lower }}" data-pin-hex="{{ hex }}">
         {% endfor %}
 
-            <div class="pin-color__chosen w-full mt-32 hidden" data-chosen-pins>
+            <div class="w-full mt-32 hidden peer-checked:block">
                 <h3 class="text-sm leading-sm fvs-md mt-0 mb-16 text-tertiary">Chosen pins</h3>
 
                 <p class="inline-block mr-8 mb-0 text-grey">Labels:</p>
 
-                <input class="inline-flex justify-center items-center relative m-0" width="20" type="radio" id="map-label-no" name="show key text" value="no" data-map-key>
+                <input class="inline-flex justify-center items-center relative m-0" width="20" type="radio" id="map-label-no" name="show key text" value="no">
                 <label class="inline-block mr-16" for="map-label-no">Off</label>
 
-                <input class="inline-flex justify-center items-center relative m-0" width="20" type="radio" id="map-label-yes" name="show key text" value="yes" checked data-map-key>
+                <input class="inline-flex justify-center items-center relative m-0" width="20" type="radio" id="map-label-yes" name="show key text" value="yes" checked>
                 <label class="inline-block" for="map-label-yes">On</label>
             </div>
         </div>

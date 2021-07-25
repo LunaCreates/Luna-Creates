@@ -1,5 +1,7 @@
 const Image = require('@11ty/eleventy-img');
 
+require('dotenv').config();
+
 module.exports = async (
   src,
   widths,
@@ -11,10 +13,12 @@ module.exports = async (
   urlPath = 'shopify',
   loading = 'lazy',
 ) => {
+  const prod = process.env.NODE_ENV === 'production';
+  const formats = prod ? ['avif', 'webp', 'jpeg'] : ['jpeg']
   const hasAlt = alt ? `alt="${alt}"` : 'role="presentation"';
   const metadata = await Image(src, {
     widths: JSON.parse(`[${widths}]`),
-    formats: ['avif', 'webp', 'jpeg'],
+    formats,
     urlPath: `/images/${urlPath}/`,
     outputDir: `./dist/images/${urlPath}/`,
     cacheOptions: {

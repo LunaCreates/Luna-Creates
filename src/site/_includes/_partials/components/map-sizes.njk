@@ -10,9 +10,9 @@
         {% set hypo = (height ** 2 + width ** 2) ** 0.5 // 25.4 %}
 
         <label for="{{ size }}" class="flex flex-col items-center text-center relative">
-            <input type="radio" name="size" id="{{ size | lower }}" class="absolute inset-0 w-full h-full bg-transparent border-transparent rounded-0 m-0 z-10 cursor-pointer appearance-none" {% if loop.first %}checked{% endif %} data-map="size" value="{{ size | lower }}">
+            <input type="radio" name="size" id="{{ size | lower }}" class="peer absolute inset-0 w-full h-full bg-transparent border-transparent rounded-0 m-0 z-10 cursor-pointer appearance-none" {% if loop.first %}checked{% endif %} data-map="size" value="{{ size | lower }}">
 
-            <div style="width: {{width // 10 / 16 }}rem" class="ratio-3-2 border-1 border-solid border-primary rounded-2 flex justify-center items-center mt-auto mb-8 mx-auto relative">
+            <div style="width: {{width // 10 / 16 }}rem" class="ratio-3-2 border-1 border-solid border-primary rounded-2 flex justify-center items-center mt-auto mb-8 mx-auto relative peer-checked:bg-secondary">
                 <svg width="16px" height="16px" class="absolute bottom-0 left-0 transform rotate-135" aria-hidden="true">
                     <use xlink:href="/icons/sprite.svg#chevron"></use>
                 </svg>
@@ -25,7 +25,7 @@
             <span class="block text-xs fvs-sb leading-xs text-primary">{{ size }}</span>
             <small class="block text-xxs leading-xxs mb-8">{{ dims }}</small>
             <span class="block text-xs fvs-rg leading-xs pt-8 border-t-1 border-solid border-grey-border self-center">&pound;{{ option.price // 1 }}</span>
-            <small class="block opacity-0 v-h text-xxs fvs-md leading-xxs bg-secondary mt-8 px-8 text-primary" data-map-size-selected>Selected</small>
+            <small class="block opacity-0 v-h text-xxs fvs-md leading-xxs bg-secondary mt-8 px-8 text-primary peer-checked:opacity-100 peer-checked:visible">Selected</small>
         </label>
     {% endif %}
 {%- endfor -%}

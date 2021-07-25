@@ -9,7 +9,7 @@
 
         {% set variant = product.options[0] %}
 
-        <a href="/cart/" class="modal__basket-button bg-secondary text-foreground text-xs leading-xs fvs-md py-16 px-24 rounded-5 uppercase tracking-1 inline-block outline-transparent focus:outline-primary hov:hover:bg-hover-secondary md:px-32" data-variant-id="{{variant.id}}" data-variant-options='{"key":"{{variant.name}}","value":"{{variant.value}}"}' data-add-to-basket>Add map to basket</a>
+        <a href="/cart/" class="bg-secondary text-foreground text-xs leading-xs fvs-md py-16 px-24 rounded-5 uppercase tracking-1 inline-block outline-transparent focus:outline-primary hov:hover:bg-hover-secondary md:px-32" data-variant-id="{{variant.id}}" data-variant-options='{"key":"{{variant.name}}","value":"{{variant.value}}"}' data-add-to-basket>Add map to basket</a>
 
         <button class="absolute top-16 right-12 md:top-24 md:right-24" aria-label="Close dialog" data-close-modal="data-close-modal">
             <svg height="40" width="40" aria-hidden="true" class="p-8 pointer-events-none md:p-4">
