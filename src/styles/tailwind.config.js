@@ -5,16 +5,29 @@ function pxToRem(size) {
 }
 
 module.exports = {
-  purge: {
-    content: [
-      './src/site/**/*.njk',
-      './src/scripts/**/*.ts',
-      './src/functions/**/*.js'
-    ],
-    options: {
-      safelist: [],
-    },
-  },
+  mode: 'jit',
+  purge: [
+    './src/site/404.njk',
+    './src/site/about-us.njk',
+    './src/site/cart.njk',
+    './src/site/collection.njk',
+    './src/site/contact-us.njk',
+    './src/site/delivery.njk',
+    './src/site/faqs.njk',
+    './src/site/index.njk',
+    './src/site/offline.njk',
+    './src/site/privacy-policy.njk',
+    './src/site/product.njk',
+    './src/site/products.njk',
+    './src/site/returns.njk',
+    './src/site/search.njk',
+    './src/site/_includes/_layouts/*.njk',
+    './src/site/_includes/_macros/*.njk',
+    './src/site/_includes/_partials/components/*.njk',
+    './src/site/_includes/_partials/forms/*.njk',
+    './src/site/_includes/_partials/head.njk',
+    './src/site/_includes/_partials/navigation.njk',
+  ],
   theme: {
     borderWidth: {
       0: '0px',
@@ -224,16 +237,6 @@ module.exports = {
   },
   plugins: [
     plugin(({ addVariant, e }) => {
-      addVariant('before', ({ modifySelectors, separator }) => {
-        modifySelectors(({ className }) => {
-          return `.${e(`before${separator}${className}`)}::before`;
-        })
-      });
-      addVariant('after', ({ modifySelectors, separator }) => {
-        modifySelectors(({ className }) => {
-          return `.${e(`after${separator}${className}`)}::after`;
-        })
-      });
       addVariant('hover_before', ({ modifySelectors, separator }) => {
         modifySelectors(({ className }) => {
           return `.${e(`hover${separator}before${separator}${className}`)}:hover::before`

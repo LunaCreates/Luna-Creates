@@ -1,4 +1,3 @@
-const path = require('path')
 const Image = require('@11ty/eleventy-img');
 
 module.exports = async (

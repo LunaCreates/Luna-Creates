@@ -177,11 +177,6 @@
   }
 
   @variants responsive {
-    .before::before,
-    .after::after {
-      content: '';
-    }
-
     .fvs-rg {
       font-variation-settings: 'wght' 400;
     }
