@@ -20,7 +20,7 @@
             </a>
 
             {% if item.collections %}
-            <ul class="h-0 pl-16 overflow-hidden transition-height duration-300 ease-in-out md:absolute md:top-full md:left-0 md:min-w-24 md:h-auto md:py-24 md:px-32 md:bg-background md:border-1 md:border-solid md:border-secondary md:opacity-0 md:peer-focus:opacity-100 md:focus-within:opacity-100 hov:group-hover:opacity-100" data-sub-nav>
+            <ul class="h-0 pl-16 overflow-hidden transition-height duration-300 ease-in-out md:absolute md:top-full md:left-0 md:min-w-24 md:h-auto md:py-24 md:px-32 md:bg-background md:border-1 md:border-solid md:border-secondary md:opacity-0 md:pointer-events-none md:peer-focus:opacity-100 md:focus-within:opacity-100 md:peer-focus:pointer-events-auto md:focus-within:pointer-events-auto hov:group-hover:opacity-100 hov:group-hover:pointer-events-auto" data-sub-nav>
             {% for collection in item.collections %}
                 <li class="mb-8 {% if not loop.last %}md:mb-16{% endif %} {% if loop.last %}md:mb-0{% endif %}" data-sub-item>
                     <a href="{{collection.url}}" class="py-8 flex items-center my-0 text-sm leading-sm capitalize text-primary fvs-md md:py-0 md:inline md:bg-gradient-to-l md:from-grey md:to-grey md:bg-link md:bg-no-repeat md:transition-background-size md:duration-300 md:ease-linear hov:hover:bg-link-full" data-sub-link>{{collection.title}}</a>
