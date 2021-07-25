@@ -20,7 +20,7 @@ eleventyExcludeFromCollections: {{category.slug === 'maps'}}
 
 <ul class="container mx-auto grid grid-cols-2 gap-24 my-32 px-16 md:grid-cols-3 md:gap-32 md:my-56 lg:my-80">
     {% for product in category.products %}
-        <li class="relative overflow-hidden group">
+        <li class="relative group">
             {% picture
                 product.mainImage,
                 '300, 400',
