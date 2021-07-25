@@ -61,8 +61,14 @@ module.exports = {
       tertiary: 'var(--color-tertiary)',
       background: 'var(--color-background)',
       foreground: 'var(--color-foreground)',
-      danger: 'var(--color-danger)',
-      success: 'var(--color-success)',
+      danger: {
+        DEFAULT: 'var(--color-danger)',
+        light: 'var(--color-danger-light)'
+      },
+      success: {
+        DEFAULT: 'var(--color-success)',
+        light: 'var(--color-success-light)'
+      },
       grey: {
         DEFAULT: 'var(--color-grey)',
         fade: 'var(--color-grey-fade)',

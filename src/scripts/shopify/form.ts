@@ -1,9 +1,7 @@
 import stateManager from './stateManager';
 
 function Form(product: HTMLElement) {
-  const chosenPins: HTMLElement[] = [];
   const checkedPins: HTMLInputElement[] = [];
-
   const form: HTMLFormElement | null = product.querySelector('[data-product-form]');
 
   function handleSubmitEvent(event: Event) {
@@ -25,9 +23,9 @@ function Form(product: HTMLElement) {
   function buildChosenPinHtml(textColor: string | null, hexColor: string | null) {
     return `
       <div class="relative flex justify-between items-center mt-24" id="${textColor}-chosen" data-pin-chosen="${textColor}">
-        <span class="pin-color relative rounded-full" style="width: 2.5rem; height: 2.5rem; background-color: ${hexColor};" aria-hidden="true"></span>
+        <span class="relative rounded-full" style="width: 2.5rem; height: 2.5rem; background-color: ${hexColor};" aria-hidden="true"></span>
 
-        <label for="${textColor}-text" class="pin-color relative rounded-full" style="width: 2.5rem; height: 2.5rem; background-color: ${hexColor};">
+        <label for="${textColor}-text" class="relative rounded-full" style="width: 2.5rem; height: 2.5rem; background-color: ${hexColor};">
           <span class="sr-only">Enter your ${textColor} pins label</span>
         </label>
 

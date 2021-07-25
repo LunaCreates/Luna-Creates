@@ -5,7 +5,9 @@
   --color-background: #fff;
   --color-foreground: #040f0f;
   --color-danger: #de0000;
+  --color-danger-light: #f5aaaa;
   --color-success: #70c041;
+  --color-success-light: #c1eaa9;
   --color-grey: #595959;
   --color-grey-fade: #f7f7f7;
   --color-grey-light: #f1f2f3;
@@ -242,7 +244,8 @@
   }
 
   .rte a {
-    @apply text-foreground font-bold underline;
+    @apply text-foreground underline;
+    font-variation-settings: 'wght' 500;
   }
 
   .rte ul {
