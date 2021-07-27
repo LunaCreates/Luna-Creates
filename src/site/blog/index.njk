@@ -23,12 +23,6 @@ sitemap:
     {% if not isDraft %}
     <li>
         <article class="relative flex flex-col group">
-            <h2 class="text-sm leading-sm my-8 order-2 md:mt-16">
-                <a class="inline bg-gradient-to-l from-grey to-grey bg-link bg-no-repeat text-xs leading-xs fvs-md text-grey tracking-1 transition-background-size duration-300 ease-linear before:absolute before:inset-0  before:z-10 focus:bg-link-full hov:hover:bg-link-full" href="{{item.url}}">{{title}}</a>
-            </h2>
-
-            <time class="text-xs leading-xs fvs-sb text-grey order-3" datetime="{{date}}">{{date | readableDate }}</time>
-
             {% picture
                 thumbnail,
                 '300, 350',
@@ -36,8 +30,15 @@ sitemap:
                 null,
                 null,
                 'ratio-1-1 relative block bg-grey-fade overflow-hidden',
-                'absolute w-full h-full top-0 left-0 object-cover transition-transform duration-500 ease-in-out transform hov:group-hover:scale-110'
+                'absolute w-full h-full top-0 left-0 object-cover transition-transform duration-500 ease-in-out hov:group-hover:scale-110'
             %}
+
+            <h2 class="text-sm leading-sm my-8 md:mt-16">
+                <a class="inline bg-gradient-to-l from-grey to-grey bg-link bg-no-repeat text-xs leading-xs fvs-md text-grey tracking-1 transition-background-size duration-300 ease-linear before:absolute before:inset-0  before:z-10 focus:bg-link-full hov:hover:bg-link-full" href="{{item.url}}">{{title}}</a>
+            </h2>
+
+            <time class="text-xs leading-xs fvs-sb text-grey" datetime="{{date}}">{{date | readableDate }}</time>
+
         </article>
     </li>
     {% endif %}

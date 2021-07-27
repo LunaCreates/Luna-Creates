@@ -1,5 +1,3 @@
-const plugin = require('tailwindcss/plugin');
-
 function pxToRem(size) {
   return `${size / 16}rem`;
 }
@@ -240,22 +238,8 @@ module.exports = {
       transitionProperty: ['before', 'after'],
       transitionTimingFunction: ['before', 'after'],
       visibility: ['before', 'after', 'group-hover'],
-      width: ['before', 'after', 'hover', 'hover_before'],
+      width: ['before', 'after', 'hover'],
       zIndex: ['before', 'after']
     }
   },
-  plugins: [
-    plugin(({ addVariant, e }) => {
-      addVariant('hover_before', ({ modifySelectors, separator }) => {
-        modifySelectors(({ className }) => {
-          return `.${e(`hover${separator}before${separator}${className}`)}:hover::before`
-        })
-      });
-      addVariant('empty', ({ modifySelectors, separator }) => {
-        modifySelectors(({ className }) => {
-          return `.${e(`empty${separator}${className}`)}:empty`;
-        })
-      });
-    })
-  ],
 };

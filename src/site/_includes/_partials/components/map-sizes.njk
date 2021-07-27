@@ -13,11 +13,11 @@
             <input type="radio" name="size" id="{{ size | lower }}" class="peer absolute inset-0 w-full h-full bg-transparent border-transparent rounded-0 m-0 z-10 cursor-pointer appearance-none" {% if loop.first %}checked{% endif %} data-map="size" value="{{ size | lower }}">
 
             <div style="width: {{width // 10 / 16 }}rem" class="ratio-3-2 border-1 border-solid border-primary rounded-2 flex justify-center items-center mt-auto mb-8 mx-auto relative peer-checked:bg-secondary">
-                <svg width="16px" height="16px" class="absolute bottom-0 left-0 transform rotate-135" aria-hidden="true">
+                <svg width="16px" height="16px" class="absolute bottom-0 left-0 rotate-135" aria-hidden="true">
                     <use xlink:href="/icons/sprite.svg#chevron"></use>
                 </svg>
-                <small class="text-xxs leading-xxs absolute top-1/2 transform -translate-y-1/2">{{hypo}}"</small>
-                <svg width="16px" height="16px" class="absolute top-0 right-0 transform -rotate-45" aria-hidden="true">
+                <small class="text-xxs leading-xxs absolute top-1/2 -translate-y-1/2">{{hypo}}"</small>
+                <svg width="16px" height="16px" class="absolute top-0 right-0 -rotate-45" aria-hidden="true">
                     <use xlink:href="/icons/sprite.svg#chevron"></use>
                 </svg>
             </div>
