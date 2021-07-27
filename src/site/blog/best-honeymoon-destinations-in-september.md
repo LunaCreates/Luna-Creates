@@ -1,7 +1,7 @@
 ---
 is_draft: true
-banner_image: https://lunacreates.co.uk/images/blog/banner-placeholder.jpg
-thumbnail: https://lunacreates.co.uk/images/blog/thumbnail-placeholder.jpg
+banner_image: https://lunacreates.co.uk/images/blog/honeymoon-banner.jpg
+thumbnail: https://lunacreates.co.uk/images/blog/september-honeymoon.jpg
 tags: []
 meta_title: Best Honeymoon Destinations in September
 meta_description: Are you looking for a perfect honeymoon destinations in September?
