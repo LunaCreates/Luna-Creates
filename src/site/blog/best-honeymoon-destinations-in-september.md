@@ -7,7 +7,7 @@ meta_title: Best Honeymoon Destinations in September
 meta_description: Are you looking for a perfect honeymoon destinations in September?
   Discover these best honeymoon destinations around the world by Luna Creates.
 title: Best Honeymoon Destinations in September
-publish_date: 
+publish_date: 2021-07-27T05:00:00+01:00
 
 ---
 Couples have a wide range of luring options when it comes to planning a dream honeymoon in September. Choose between the aesthetic nature of the Indian Ocean, French Poltnesia and the stunning landscapes of Asia and Africa. Alternatively, Europe has some ideal tranquil destinations for anyone seeking a lower-key ‘mini-moon’. This guide takes you through some of the amazing honeymoon choices that the month of September suits perfectly;
