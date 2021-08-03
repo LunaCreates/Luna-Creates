@@ -23,9 +23,6 @@ function MoreToggle(element: HTMLElement) {
     const isExpanded = elementToToggle.hasAttribute('data-toggle-open');
     const target = event.target as HTMLButtonElement;
 
-    console.log(isExpanded, 'isExpanded');
-    console.log(target, 'target');
-
     if (isExpanded) {
       elementToToggle.removeAttribute('data-toggle-open');
       elementToToggle.style.height = '250px';
