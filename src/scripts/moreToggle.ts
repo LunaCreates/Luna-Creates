@@ -4,8 +4,8 @@ function MoreToggle(element: HTMLElement) {
   function setOpenButtonState(button: HTMLButtonElement) {
     button.innerHTML = `
       Show less
-      <svg class="ml-8 transform -rotate-90" width="28" height="28">
-        <use xlink:href="/icons/sprite.svg#chevron"></use>
+      <svg class="ml-8 transform -rotate-90" width="28" height="28" pointer-events="none">
+        <use xlink:href="/icons/sprite.svg#chevron" pointer-events="none"></use>
       </svg>
     `;
   }
@@ -13,8 +13,8 @@ function MoreToggle(element: HTMLElement) {
   function setClosedButtonState(button: HTMLButtonElement) {
     button.innerHTML = `
       Show more
-      <svg class="ml-8 transform rotate-90" width="28" height="28">
-          <use xlink:href="/icons/sprite.svg#chevron"></use>
+      <svg class="ml-8 transform rotate-90" width="28" height="28" pointer-events="none">
+          <use xlink:href="/icons/sprite.svg#chevron" pointer-events="none"></use>
       </svg>
     `;
   }
