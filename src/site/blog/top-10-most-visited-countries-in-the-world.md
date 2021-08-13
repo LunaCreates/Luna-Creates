@@ -259,8 +259,8 @@ Both Europeans and Americans rave about the country’s historic attractions, sp
   ![Miniatur Wunderland](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-21-14-51.png)
 * **The Rine valley** - an area of outstanding natural beauty. It has been designated a World Heritage Site by UNESCO in recognition of its importance in terms of the history, geology, culture, and industry of this region of Germany.
 
-  ![The Rine valley](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-21-17-05.png)
-* **Berlin’s Museum Island** - is a museum complex on the northern part of the Spree Island in the historic heart of Berlin.
+  ![The Rine valley](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-21-17-05_edited.jpg)
+* **Berlin’s Museum Island** - is a museum complex on the northern part of Spree Island in the historic heart of Berlin.
 
   ![Berlin’s Museum Island](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-21-20-56.png)
 * **Bamberg and the Burgerstadt** - There's no better place to begin a walking tour of Bamberg's Old Town than at Obere Brücke, the pedestrian-only Upper Bridge. From here, you'll be rewarded with superb views of Klein-Venedig, or "Little Venice," with its quaint old fishermen's houses.
