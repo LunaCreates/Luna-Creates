@@ -121,7 +121,7 @@ There are lots of historical sites to see and rich cultures to experience.
   ![Guggenheim Museum, Bilbao](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-17-59.png)
 * **Seville Cathedral and Alcazar -** is a Roman Catholic cathedral in Seville, Andalusia, Spain.
 
-  ![Seville Cathedral and Alcazar](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-19-00.png)
+  ![Seville Cathedral and Alcazar](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-19-00_edited.jpg)
 * **Santiago de Compostela Cathedral -** the cathedral soars above the city in a splendid jumble of spires and sculpture. The cathedral is the reputed burial place of Saint James the Great, the apostle of Jesus Christ.
 
   ![Santiago de Compostela Cathedral](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-21-05.png)
