@@ -344,7 +344,7 @@ Its land area is bigger than Pluto and spans 11 time zones across Eastern Europe
   ![Vladivostok](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-22-14-15_edited.jpg)
 * **Anapa beach** - a little piece of Heaven lost into the lagoon of Motu Temae.
 
-  ![Anapa beach](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-22-15-43.png)
+  ![Anapa beach](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-22-15-43_edited.jpg)
 * **Novosibirsk** - is the largest city and administrative centre of Novosibirsk Oblast in Russia. Located in the southwestern part of Siberia on the banks of the Ob River.
 
   ![Novosibirsk](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-22-16-51_edited.jpg)
