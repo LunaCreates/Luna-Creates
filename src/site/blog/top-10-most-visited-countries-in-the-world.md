@@ -335,7 +335,7 @@ Its land area is bigger than Pluto and spans 11 time zones across Eastern Europe
   ![Peterhof](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-22-09-34_edited.jpg)
 * **Olkhon Island** - is the third-largest lake island in the world.
 
-  ![Olkhon Island](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-22-11-35.png)
+  ![Olkhon Island](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-22-11-35_edited.jpg)
 * **Petropavlovsk-Kamchatsky** - The volcanoes of Kamchatka are a large group of volcanoes situated on the Kamchatka Peninsula, in eastern Russia.
 
   ![Petropavlovsk-Kamchatsky](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-22-12-48_edited.jpg)
