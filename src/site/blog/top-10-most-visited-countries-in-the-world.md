@@ -303,7 +303,7 @@ The UK is the 9th largest and third most populated island in the world. Made up 
   ![Canterbury Cathedral](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-21-53-31.png)
 * **Eden project** - eco-visitor attraction in Cornwall. The complex is dominated by two huge enclosures consisting of adjoining domes that house thousands of plant species and each enclosure emulates a natural biome.
 
-  ![Eden project](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-21-54-46.png)
+  ![Eden project](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-21-54-46_edited.jpg)
 * **The Cotswolds** - covers almost 800 square miles of beautiful scenery, chocolate box villages, vibrant towns and miles of country walks.
 
   ![The Cotswolds](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-21-56-09.png)
