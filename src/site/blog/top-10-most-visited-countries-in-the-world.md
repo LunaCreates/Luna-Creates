@@ -268,7 +268,7 @@ Both Europeans and Americans rave about the country’s historic attractions, sp
   ![Bamberg and the Burgerstadt](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-21-23-17_edited.jpg)
 * **Zugspitze Massif** - is the highest peak of the Wetterstein Mountains as well as the highest mountain in Germany.
 
-  ![Zugspitze Massif](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-21-26-56.png)
+  ![Zugspitze Massif](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-21-26-56_edited.jpg)
 * **Rügen -**  is a German island in the Baltic Sea. It’s known for its beaches and white chalk cliffs, like the King's Chair on the Jasmund peninsula.
 
   ![Rügen](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-21-30-03_edited.jpg)
