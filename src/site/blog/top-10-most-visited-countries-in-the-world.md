@@ -69,7 +69,7 @@ Second, to the most visited countries, America has always been a popular travel 
   ![Denali National Park](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-21-29-00.png)
 * **Yosemite National Park** - is in California’s Sierra Nevada mountains. It’s famed for its giant, ancient sequoia trees, and for Tunnel View, the iconic vista of towering Bridalveil Fall and the granite cliffs of El Capitan and Half Dome.
 
-  ![Yosemite National Park](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-21-30-26.png)
+  ![Yosemite National Park](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-21-30-26_edited.jpg)
 * **Yellowstone National Park** - was the world's first national park. The park features dramatic canyons, alpine rivers, lush forests, hot springs and gushing geysers, including its most famous, Old Faithful.
 
   ![Yellowstone National Park](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-21-35-10.png)
