@@ -326,7 +326,7 @@ It’s land area is bigger than Pluto and spans 11 time zones across Eastern Eur
   ![Altay](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-22-04-06_edited.jpg)
 * **Sochi** - a Russian city on the Black Sea, is known as a summer beach resort and was a host of the 2014 Winter Olympics.
 
-  ![Sochi](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-22-06-21.png)
+  ![Sochi](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-22-06-21_edited.jpg)
 * **The Russia Tundra** - Located along the coast of the Eastern Siberian and Laptev Seas, this stretch of coastal subarctic tundra between the Yana and Kolyma Rivers is some of the most productive arctic tundra wetland areas in northeastern Russia.
 
   ![The Russia Tundra](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-22-08-24.png)
