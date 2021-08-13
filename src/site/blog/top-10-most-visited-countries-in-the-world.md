@@ -167,7 +167,7 @@ Natural attractions include the Huangshan mountain range which inspired scenes i
   ![The Potala Palace, Tibet](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-44-55_edited.jpg)
 * **Shanghai’s Promenade: The Bund** - is a waterfront area and a protected historical district in central Shanghai.
 
-  ![Shanghai’s Promenade : The Bund](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-51-57.png)
+  ![Shanghai’s Promenade: The Bund](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-51-57_edited.jpg)
 
   **5. ITALY**
 
