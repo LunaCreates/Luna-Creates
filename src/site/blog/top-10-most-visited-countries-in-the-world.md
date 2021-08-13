@@ -198,7 +198,7 @@ Italy has culture, history and cuisine in abundance making it a very popular tou
   ![Florence Duomo Santa Maria del Fiore](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-23-32-07.png)
 * **Cinque Terre** - is a string of centuries-old seaside villages on the rugged Italian Riviera coastline. In each of the 5 towns, colourful houses and vineyards cling to steep terraces.
 
-  ![Cinque Terre](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-23-33-12.png)
+  ![Cinque Terre](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-23-33-12_edited.jpg)
 * **Vatican City** - is the headquarters of the Roman Catholic Church. It's home to the Pope and a trove of iconic art and architecture.
 
   ![Vatican City](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-23-34-08.png)
