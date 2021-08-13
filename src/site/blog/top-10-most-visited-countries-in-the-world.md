@@ -341,8 +341,8 @@ Its land area is bigger than Pluto and spans 11 time zones across Eastern Europe
   ![Petropavlovsk-Kamchatsky](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-22-12-48_edited.jpg)
 * **Vladivostok** - is a major Pacific port city in Russia overlooking Golden Horn Bay, near the borders with China and North Korea. It's known as a terminus of the Trans-Siberian Railway, which links the city to Moscow in a 7-day journey.
 
-  ![Vladivostok](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-22-14-15.png)
-* **Anapa beach** - a little peace of Heaven lost into the lagoon of Motu Temae.
+  ![Vladivostok](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-22-14-15_edited.jpg)
+* **Anapa beach** - a little piece of Heaven lost into the lagoon of Motu Temae.
 
   ![Anapa beach](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-22-15-43.png)
 * **Novosibirsk** - is the largest city and administrative centre of Novosibirsk Oblast in Russia. Located in the southwestern part of Siberia on the banks of the Ob River.
