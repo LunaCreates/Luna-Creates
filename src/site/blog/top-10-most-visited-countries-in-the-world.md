@@ -183,7 +183,7 @@ Italy has culture, history and cuisine in abundance making it a very popular tou
   ![Venice Canal - is a channel in Venice, Italy. It forms one of the major water-traffic corridors in the city. The best-known form of transport on the waterways of Venice is the gondola.](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-23-21-56.png)
 * **Pompeii** - a vast archaeological site in southern Italy’s Campania region, near the coast of the Bay of Naples. Once a thriving and sophisticated Roman city, Pompeii was buried under meters of ash and pumice after the catastrophic eruption of Mount Vesuvius in 79 A.D. The preserved site features excavated ruins of streets and houses that visitors can freely explore.
 
-  ![Pompeii](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-23-24-18.png)
+  ![Pompeii](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-23-24-18_edited.jpg)
 * **Leaning Tower of Pisa** - is the freestanding bell tower, of the cathedral of the Italian city of Pisa, known worldwide for its nearly four-degree lean, the result of an unstable foundation.
 
   ![Leaning Tower of Pisa](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-23-28-49.png)
