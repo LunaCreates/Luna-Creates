@@ -57,7 +57,7 @@ Second, to the most visited countries, America has always been a popular travel 
 
 * **San Francisco’s Golden Gate Bridge** - is a suspension bridge spanning the Golden Gate, the one-mile-wide strait connecting San Francisco Bay and the Pacific Ocean.
 
-  ![San Francisco’s Golden Gate Bridge](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-21-21-36.png)
+  ![San Francisco’s Golden Gate Bridge](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-21-21-36_edited.jpg)
 * **Hollywood, California** - is a neighbourhood in the central region of Los Angeles, California. Its name has come to be a shorthand reference for the U.S. film industry and the people associated with it.
 
   ![Hollywood, California](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-21-24-17.png)
