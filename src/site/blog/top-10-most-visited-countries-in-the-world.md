@@ -306,11 +306,11 @@ The UK is the 9th largest and third most populated island in the world. Made up 
   ![Eden project](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-21-54-46_edited.jpg)
 * **The Cotswolds** - covers almost 800 square miles of beautiful scenery, chocolate box villages, vibrant towns and miles of country walks.
 
-  ![The Cotswolds](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-21-56-09.png)
+  ![The Cotswolds](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-21-56-09_edited.jpg)
 
   9\. **RUSSIA**
 
-It’s land area is bigger than Pluto and spans 11 time zones across Eastern Europe and Northern Asia. Russia has hosted many global sporting games across its wondrous cities and while some of its famous geological and natural landscapes are located quite far from each other, they are undoubtedly worth checking out! The country’s most famous attraction is Lake Baikal, the oldest and deepest lake in the world.
+Its land area is bigger than Pluto and spans 11 time zones across Eastern Europe and Northern Asia. Russia has hosted many global sporting games across its wondrous cities and while some of its famous geological and natural landscapes are located quite far from each other, they are undoubtedly worth checking out! The country’s most famous attraction is Lake Baikal, the oldest and deepest lake in the world.
 
 * **Lake Baikal** - is an ancient, massive lake in the mountainous Russian region of Siberia. Considered the deepest lake in the world.
 
