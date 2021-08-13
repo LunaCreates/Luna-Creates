@@ -118,7 +118,7 @@ There are lots of historical sites to see and rich cultures to experience.
   ![San Lorenzo de El Escorial](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-16-58_edited.jpg)
 * **Guggenheim Museum, Bilbao -** is a museum of modern and contemporary art designed by Canadian-American architect Frank Gehry, and located in Bilbao, Basque Country, Spain.
 
-  ![Guggenheim Museum, Bilbao](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-17-59.png)
+  ![Guggenheim Museum, Bilbao](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-17-59_edited.jpg)
 * **Seville Cathedral and Alcazar -** is a Roman Catholic cathedral in Seville, Andalusia, Spain.
 
   ![Seville Cathedral and Alcazar](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-19-00_edited.jpg)
