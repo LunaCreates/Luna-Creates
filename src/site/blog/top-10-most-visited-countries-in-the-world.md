@@ -323,7 +323,7 @@ It’s land area is bigger than Pluto and spans 11 time zones across Eastern Eur
   ![St. Petersburg](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-22-02-25.png)
 * **Altay** - is a mountain range (the Altai Mountains) in East-Central Asia, where Russia, China, Mongolia and Kazakhstan come together.
 
-  ![Altay](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-22-04-06.png)
+  ![Altay](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-22-04-06_edited.jpg)
 * **Sochi** - a Russian city on the Black Sea, is known as a summer beach resort, and was host of the 2014 Winter Olympics.
 
   ![Sochi](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-22-06-21.png)
