@@ -332,7 +332,7 @@ Its land area is bigger than Pluto and spans 11 time zones across Eastern Europe
   ![The Russia Tundra](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-22-08-24.png)
 * **Peterhof** - Once a formal garden built for Peter the Great, this popular park still has more than 80 of the original marble statues and sculptures and houses Peter's Summer Palace.
 
-  ![Peterhof](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-22-09-34.png)
+  ![Peterhof](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-22-09-34_edited.jpg)
 * **Olkhon Island** - is the third-largest lake island in the world.
 
   ![Olkhon Island](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-22-11-35.png)
