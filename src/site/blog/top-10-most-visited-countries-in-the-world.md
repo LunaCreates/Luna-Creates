@@ -66,7 +66,7 @@ Second, to the most visited countries, America has always been a popular travel 
   ![Grand Canyon National Park](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-21-27-21_edited.jpg)
 * **Denali National Park** - encompasses 6 million acres of Alaska’s interior wilderness. Its centrepiece is 20,310-ft.-high Denali (fka Mount McKinley), North America’s tallest peak.
 
-  ![Denali National Park](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-21-29-00.png)
+  ![Denali National Park](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-21-29-00_edited.jpg)
 * **Yosemite National Park** - is in California’s Sierra Nevada mountains. It’s famed for its giant, ancient sequoia trees, and for Tunnel View, the iconic vista of towering Bridalveil Fall and the granite cliffs of El Capitan and Half Dome.
 
   ![Yosemite National Park](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-21-30-26_edited.jpg)
