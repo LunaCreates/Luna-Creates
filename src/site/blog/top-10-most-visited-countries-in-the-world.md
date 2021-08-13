@@ -262,7 +262,7 @@ Both Europeans and Americans rave about the country’s historic attractions, sp
   ![The Rine valley](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-21-17-05_edited.jpg)
 * **Berlin’s Museum Island** - is a museum complex on the northern part of Spree Island in the historic heart of Berlin.
 
-  ![Berlin’s Museum Island](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-21-20-56.png)
+  ![Berlin’s Museum Island](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-21-20-56_edited.jpg)
 * **Bamberg and the Burgerstadt** - There's no better place to begin a walking tour of Bamberg's Old Town than at Obere Brücke, the pedestrian-only Upper Bridge. From here, you'll be rewarded with superb views of Klein-Venedig, or "Little Venice," with its quaint old fishermen's houses.
 
   ![Bamberg and the Burgerstadt](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-21-23-17_edited.jpg)
