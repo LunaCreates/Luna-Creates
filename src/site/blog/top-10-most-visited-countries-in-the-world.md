@@ -288,7 +288,7 @@ The UK is the 9th largest and third most populated island in the world. Made up 
   ![The Roman baths of Georgian city of bath](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-21-36-23.png)
 * **British Museum** - is a public institution dedicated to human history, art and culture. Its permanent collection of some eight million works is among the largest and most comprehensive in existence.
 
-  ![British Museum](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-22-52-01.png)
+  ![British Museum](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-22-52-01_edited.jpg)
 * **York Minster** - is one of the world's most magnificent cathedrals, a vision of heaven on earth crafted in stained glass and stone.
 
   ![York Minster](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-21-41-24_edited.jpg)
