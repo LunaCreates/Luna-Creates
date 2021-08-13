@@ -236,7 +236,7 @@ Located on two continents Turkey offers a unique blend of East & West. It has an
   ![Cathedral of Ani](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-23-44-17_edited.jpg)
 * **The Aspendos Theatre**  - was founded by the Romans in the 2nd century AD and is the best-preserved theatre of the Mediterranean. Mimo is Zenon, the son of Theodoros from Aspendos. The ancient theatre which is started in the time of Antonius Piu was completed in the time of Marcus Aurelius (138 – 164 AD).
 
-  ![The Aspendos Theatre](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-23-49-31.png)
+  ![The Aspendos Theatre](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-23-49-31_edited.jpg)
 
   7\. **GERMANY**
 
