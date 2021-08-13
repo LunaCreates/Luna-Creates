@@ -92,7 +92,7 @@ White silky sands with calm turquoise sea, this beach is the ideal destination f
 
 You can paddleboard or kayak out onto the reef, where there is excellent snorkelling and an array of colourful fish.
 
-![Soliman Bay, Mexico](https://lunacreates.co.uk/images/blog/screen-shot-2021-05-08-at-16-14-06.png)
+![Soliman Bay, Mexico](https://lunacreates.co.uk/images/blog/screen-shot-2021-05-08-at-16-14-06_edited.jpg)
 
 ![Soliman Bay, Mexico](https://lunacreates.co.uk/images/blog/fullsizeoutput_75c8.jpeg)
 
