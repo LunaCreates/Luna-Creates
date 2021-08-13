@@ -165,17 +165,17 @@ Natural attractions include the Huangshan mountain range which inspired scenes i
 * **The Potala Palace, Tibet** - is a dzong fortress in the city of Lhasa, Tibet Autonomous Region, China. It was the winter palace of the Dalai Lamas from 1649 to 1959, has been a museum since then, and has been a World Heritage Site since 1994.
 
   ![The Potala Palace, Tibet](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-44-55.png)
-* **Shanghai’s Promenade : The Bund** - is a waterfront area and a protected historical district in central Shanghai.
+* **Shanghai’s Promenade: The Bund** - is a waterfront area and a protected historical district in central Shanghai.
 
   ![Shanghai’s Promenade : The Bund](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-51-57.png)
 
   **5. ITALY**
 
-Home to some amazing world heritage sites including: the Coliseum, Venice, the Vatican, Florence, Leaning Tower of Pisa, Pompeii, Naples, Sicily, the Italian Alps, the Amalfi Coast, the Italian Riviera and Lake Cuomo.
+Home to some amazing world heritage sites including the Coliseum, Venice, the Vatican, Florence, Leaning Tower of Pisa, Pompeii, Naples, Sicily, the Italian Alps, the Amalfi Coast, the Italian Riviera and Lake Cuomo.
 
 Italy has culture, history and cuisine in abundance making it a very popular tourist destination for people all around the globe.
 
-* **Colosseum** - is an oval amphitheatre in the centre of the city of Rome, Italy, just east of the Roman Forum. It is the largest ancient amphitheatre ever built, and is still the largest standing amphitheatre in the world today.
+* **Colosseum** - is an oval amphitheatre in the centre of the city of Rome, Italy, just east of the Roman Forum. It is the largest ancient amphitheatre ever built and is still the largest standing amphitheatre in the world today.
 
   ![Colosseum](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-23-02-07.png)
 * **Venice Canal** - is a channel in Venice, Italy. It forms one of the major water-traffic corridors in the city. The best-known form of transport on the waterways of Venice is the gondola.
@@ -190,7 +190,7 @@ Italy has culture, history and cuisine in abundance making it a very popular tou
 * **Lake Como** - Another popular destination to travelers in Northern Italy’s Lombardy region, is an upscale resort area known for its dramatic scenery, set against the foothills of the Alps.
 
   ![Lake Como](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-23-29-49.png)
-* **Amalfi Coast** - is a 50-kilometer stretch of coastline along the southern edge of Italy’s Sorrentine Peninsula, in the Campania region. It’s a popular holiday destination, with sheer cliffs and a rugged shoreline dotted with small beaches and pastel-coloured fishing villages.
+* **Amalfi Coast** - is a 50-kilometre stretch of coastline along the southern edge of Italy’s Sorrentine Peninsula, in the Campania region. It’s a popular holiday destination, with sheer cliffs and a rugged shoreline dotted with small beaches and pastel-coloured fishing villages.
 
   ![Amalfi Coast](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-23-30-52_edited.jpg)
 * **Florence Duomo Santa Maria del Fiore** - is the prominent landmark of the Florentine skyline. Not only is it known for its size and beauty, it also has hundreds of years of history and its dome is a major architectural masterpiece ahead of its time.
@@ -219,7 +219,7 @@ Located on two continents Turkey offers a unique blend of East & West. It has an
 * **Cappadocia** - is known for its fairytale scenery, cave dwellings, remarkable rock formations and the hundreds of hot air balloons that soar in the sky during sunrise each morning.
 
   ![Cappadocia](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-23-39-04.png)
-* **Topkapi Palace** - is a large museum in the east of the Fatih district of Istanbul in Turkey. In the 15th and 16th centuries it served as the main residence and administrative headquarters of the Ottoman sultans.
+* **Topkapi Palace** - is a large museum in the east of the Fatih district of Istanbul in Turkey. In the 15th and 16th centuries, it served as the main residence and administrative headquarters of the Ottoman sultans.
 
   ![Topkapi Palace](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-23-40-16.png)
 * **Pamukkale** - is a town in western Turkey known for the mineral-rich thermal waters flowing down white travertine terraces on a nearby hillside.
@@ -251,7 +251,7 @@ Both Europeans and Americans rave about the country’s historic attractions, sp
 * **The Black Forest** - is a mountainous region in southwest Germany, bordering France. Known for its dense, evergreen forests and picturesque villages, it is often associated with the Brothers Grimm fairy tales.
 
   ![The Black Forest](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-11-at-10-23-43_edited.jpg)
-* **Neuschwanstein castle** - is a 19th-century historicist palace on a rugged hill above the village of Hohenschwangau near Füssen in southwest Bavaria, Germany.
+* **Neuschwanstein Castle** - is a 19th-century historicist palace on a rugged hill above the village of Hohenschwangau near Füssen in southwest Bavaria, Germany.
 
   ![Neuschwanstein castle](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-11-at-10-28-51.png)
 * **Miniatur Wunderland** - is a model railway and miniature airport attraction in Hamburg, Germany, the largest of its kind in the world.
