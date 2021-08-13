@@ -225,9 +225,9 @@ Located on two continents Turkey offers a unique blend of East & West. It has an
 * **Pamukkale** - is a town in western Turkey known for the mineral-rich thermal waters flowing down white travertine terraces on a nearby hillside.
 
   ![Pamukkale](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-23-41-25.png)
-* **Sumela Monastery** - is 1600 year old ancient Orthodox monastery located at a 1200 meters height on the steep cliff at Macka region of Trabzon city in Turkey.
+* **Sumela Monastery** - is a 1600-year-old ancient Orthodox monastery located at a 1200 meters height on the steep cliff at the Macka region of Trabzon city in Turkey.
 
-  ![Sumela Monastery](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-23-42-22.png)
+  ![Sumela Monastery](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-23-42-22_edited.jpg)
 * **Mount Nemrut** - is one of Turkey's most spectacular ancient sites; a mysterious mountaintop mausoleum scattered with stone heads.
 
   ![Mount Nemrut](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-23-43-18.png)
