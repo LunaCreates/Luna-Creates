@@ -271,11 +271,11 @@ Both Europeans and Americans rave about the country’s historic attractions, sp
   ![Zugspitze Massif](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-21-26-56.png)
 * **Rügen -**  is a German island in the Baltic Sea. It’s known for its beaches and white chalk cliffs, like the King's Chair on the Jasmund peninsula.
 
-  ![Rügen](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-21-30-03.png)
+  ![Rügen](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-21-30-03_edited.jpg)
 
   8\. **United Kingdom**
 
-The UK is the 9th largest and third most populated island in the world. Made up of four countries (England, Scotland, Wales and Northern Ireland) the United Kingdom has long been a beloved destination for international travellers. Fantastic architecture, abundance of green scenic views and historical landmarks a plenty, I for one don't appreciate enough what we have right on our very doorstep!
+The UK is the 9th largest and third most populated island in the world. Made up of four countries (England, Scotland, Wales and Northern Ireland) the United Kingdom has long been a beloved destination for international travellers. Fantastic architecture, an abundance of green scenic views and historical landmarks aplenty, I for one don't appreciate enough what we have right on our very doorstep!
 
 * **Stonehenge** - is a prehistoric monument on Salisbury Plain in Wiltshire. Stonehenge began about 5,000 years ago as a simple earthwork enclosure where prehistoric people buried their cremated dead. The stones have inspired many legends and folklore over the centuries as people try to explain the origins and function of the henge.
 
