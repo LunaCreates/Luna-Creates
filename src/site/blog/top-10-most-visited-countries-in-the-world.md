@@ -253,7 +253,7 @@ Both Europeans and Americans rave about the country’s historic attractions, sp
   ![The Black Forest](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-11-at-10-23-43_edited.jpg)
 * **Neuschwanstein Castle** - is a 19th-century historicist palace on a rugged hill above the village of Hohenschwangau near Füssen in southwest Bavaria, Germany.
 
-  ![Neuschwanstein castle](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-11-at-10-28-51.png)
+  ![Neuschwanstein castle](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-11-at-10-28-51_edited.jpg)
 * **Miniatur Wunderland** - is a model railway and miniature airport attraction in Hamburg, Germany, the largest of its kind in the world.
 
   ![Miniatur Wunderland](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-21-14-51_edited.jpg)
