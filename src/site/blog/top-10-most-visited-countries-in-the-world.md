@@ -347,11 +347,11 @@ Its land area is bigger than Pluto and spans 11 time zones across Eastern Europe
   ![Anapa beach](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-22-15-43.png)
 * **Novosibirsk** - is the largest city and administrative centre of Novosibirsk Oblast in Russia. Located in the southwestern part of Siberia on the banks of the Ob River.
 
-  ![Novosibirsk](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-22-16-51.png)
+  ![Novosibirsk](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-22-16-51_edited.jpg)
 
   10\. **THAILAND**
 
-Thailand has been a popular tourist destination for decades thanks to its white sand beaches, delicious cuisine and hot weather. The capital Bangkok is the most visited city on the planet. The 1430 islands of Thailand draw in hundreds of thousands of visitors each year, with it's most popular spots including Rayleigh beach, co-pp and the grand palace of Bangkok.
+Thailand has been a popular tourist destination for decades thanks to its white-sand beaches, delicious cuisine and hot weather. The capital Bangkok is the most visited city on the planet. The 1430 islands of Thailand draw in hundreds of thousands of visitors each year, with its most popular spots including Rayleigh beach, co-pp and the grand palace of Bangkok.
 
 * **Railay Beach** - is a small peninsula between the city of Krabi and Ao Nang in Thailand. It is accessible only by boat due to high limestone cliffs cutting off mainland access.
 
