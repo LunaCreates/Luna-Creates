@@ -164,7 +164,7 @@ Natural attractions include the Huangshan mountain range which inspired scenes i
   ![The Classical Gardens of Suzhou](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-43-24_edited.jpg)
 * **The Potala Palace, Tibet** - is a dzong fortress in the city of Lhasa, Tibet Autonomous Region, China. It was the winter palace of the Dalai Lamas from 1649 to 1959, has been a museum since then, and has been a World Heritage Site since 1994.
 
-  ![The Potala Palace, Tibet](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-44-55.png)
+  ![The Potala Palace, Tibet](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-44-55_edited.jpg)
 * **Shanghai’s Promenade: The Bund** - is a waterfront area and a protected historical district in central Shanghai.
 
   ![Shanghai’s Promenade : The Bund](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-51-57.png)
