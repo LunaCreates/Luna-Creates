@@ -314,7 +314,7 @@ Its land area is bigger than Pluto and spans 11 time zones across Eastern Europe
 
 * **Lake Baikal** - is an ancient, massive lake in the mountainous Russian region of Siberia. Considered the deepest lake in the world.
 
-  ![Lake Baikal](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-21-59-17.png)
+  ![Lake Baikal](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-21-59-17_edited.jpg)
 * **Moscow** - on the Moskva River in western Russia, is the nation’s cosmopolitan capital.
 
   ![Moscow](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-22-01-20.png)
