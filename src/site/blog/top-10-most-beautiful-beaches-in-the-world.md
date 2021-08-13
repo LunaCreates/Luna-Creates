@@ -68,7 +68,7 @@ One of the most beautiful beaches in the world, with turquoise water, white sand
 
 This is one of the most untouched, cared for and naturally beautiful places on earth.
 
-![Anse Lazio, Praslin, Seychelles](https://lunacreates.co.uk/images/blog/screen-shot-2021-05-08-at-15-51-30.png)
+![Anse Lazio, Praslin, Seychelles](https://lunacreates.co.uk/images/blog/screen-shot-2021-05-08-at-15-51-30_edited.jpg)
 
 #### **6.) Lily Beach, Maldives**
 
