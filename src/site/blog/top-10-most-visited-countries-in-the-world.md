@@ -374,7 +374,7 @@ Thailand has been a popular tourist destination for decades thanks to its white 
   ![Khao Yai National Park](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-22-33-44_edited.jpg)
 * **Sukhothai Old City** - Sukhothai houses a vast number of historical sites and temple ruins.
 
-  ![Sukhothai Old City](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-22-35-04.png)
+  ![Sukhothai Old City](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-22-35-04_edited.jpg)
 * **Historic City of Ayutthaya** - The ancient kingdom of Ayutthaya is a vision of Buddhist temples, monasteries and ancient statues of monumental dimensions. Dating back to 1350, the city has experienced a turbulent history, rich in episodes of glory and strife.
 
   ![Historic City of Ayutthaya](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-22-35-57.png)
