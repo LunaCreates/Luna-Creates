@@ -84,7 +84,7 @@ Second, to the most visited countries, America has always been a popular travel 
   ![White House, Washington](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-04-45.png)
 * **Las Vegas Strip** - is a stretch of South Las Vegas Boulevard in Clark County, Nevada, that is known for its concentration of resort hotels and casinos.
 
-  ![Las Vegas Strip](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-06-23.png)
+  ![Las Vegas Strip](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-06-23_edited.jpg)
 * **Kilauea Volcano** - is an active shield volcano in the Hawaiian Islands.
 
   ![Kilauea Volcano](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-07-39.png)
