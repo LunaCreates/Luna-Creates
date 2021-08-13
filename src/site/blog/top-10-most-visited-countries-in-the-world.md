@@ -25,7 +25,7 @@ With 89.4m visitors annually France is the most visited country in the world.
   ![Eiffel Tower](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-00-00-38.png)
 * **Louvre Museum** - the world’s most visited museum and is best known for being the home of the Mona Lisa.
 
-  ![Louvre Museum](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-00-02-23.png)
+  ![Louvre Museum](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-00-02-23_edited.jpg)
 * **Palace of Versailles** - is one of the most important landmarks in French history. Home to the Kings of France between 1662 and 1789.
 
   ![Palace of Versailles](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-20-59-31_edited.jpg)
