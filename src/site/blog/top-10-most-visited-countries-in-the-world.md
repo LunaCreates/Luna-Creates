@@ -159,9 +159,9 @@ Natural attractions include the Huangshan mountain range which inspired scenes i
 * **The Yangtze River** - is the longest river in Asia, the third-longest in the world and the longest in the world to flow entirely within one country. It rises at Jari Hill in the Tanggula Mountains and flows 6,300 km in a generally easterly direction to the East China Sea.
 
   ![The Yangtze River](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-40-58.png)
-* **The Classical Gardens of Suzhou** - are a group of gardens in Suzhou region, Jiangsu province, China. The art of the traditional Chinese garden was popular among the wealthy during the Ming and Qing Dynasties, and nowhere is the classic beauty of these gardens more evident than in Suzhou.
+* **The Classical Gardens of Suzhou** - are a group of gardens in the Suzhou region, Jiangsu province, China. The art of the traditional Chinese garden was popular among the wealthy during the Ming and Qing Dynasties, and nowhere is the classic beauty of these gardens more evident than in Suzhou.
 
-  ![The Classical Gardens of Suzhou](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-43-24.png)
+  ![The Classical Gardens of Suzhou](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-43-24_edited.jpg)
 * **The Potala Palace, Tibet** - is a dzong fortress in the city of Lhasa, Tibet Autonomous Region, China. It was the winter palace of the Dalai Lamas from 1649 to 1959, has been a museum since then, and has been a World Heritage Site since 1994.
 
   ![The Potala Palace, Tibet](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-44-55.png)
@@ -240,7 +240,7 @@ Located on two continents Turkey offers a unique blend of East & West. It has an
 
   7\. **GERMANY**
 
-Both Europeans and Americans rave about the country’s historic attractions, spirited cities, vast forests and most importantly excellent beer! Munich’s two week Oktoberfest brings in 6 million visitors each year and the amazing Neuschwanstein Castle was the inspiration for Disneyland’s sleeping beauty castle.
+Both Europeans and Americans rave about the country’s historic attractions, spirited cities, vast forests and most importantly excellent beer! Munich’s two weeks Oktoberfest brings in 6 million visitors each year and the amazing Neuschwanstein Castle was the inspiration for Disneyland’s sleeping beauty castle.
 
 * **Berlin’s Brandenburg Gate** - is an 18th-century neoclassical monument in Berlin, built on the orders of Prussian king Frederick William II after the temporary restoration of order during the Batavian Revolution.
 
