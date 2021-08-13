@@ -201,7 +201,7 @@ Italy has culture, history and cuisine in abundance making it a very popular tou
   ![Cinque Terre](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-23-33-12_edited.jpg)
 * **Vatican City** - is the headquarters of the Roman Catholic Church. It's home to the Pope and a trove of iconic art and architecture.
 
-  ![Vatican City](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-23-34-08.png)
+  ![Vatican City](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-23-34-08_edited.jpg)
 * **The Uffizi Gallery** - is a prominent art museum located adjacent to the Piazza Della Signoria in the Historic Centre of Florence in the region of Tuscany, Italy.
 
   ![The Uffizi Gallery](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-23-35-05_edited.jpg)
@@ -230,7 +230,7 @@ Located on two continents Turkey offers a unique blend of East & West. It has an
   ![Sumela Monastery](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-23-42-22_edited.jpg)
 * **Mount Nemrut** - is one of Turkey's most spectacular ancient sites; a mysterious mountaintop mausoleum scattered with stone heads.
 
-  ![Mount Nemrut](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-23-43-18.png)
+  ![Mount Nemrut](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-23-43-18_edited.jpg)
 * **Cathedral of Ani** - is the largest standing building in Ani, capital of medieval Bagratid Armenia, located in present-day eastern Turkey, on the border with modern Armenia.
 
   ![Cathedral of Ani](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-23-44-17_edited.jpg)
