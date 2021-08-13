@@ -112,7 +112,7 @@ There are lots of historical sites to see and rich cultures to experience.
   ![The Great Mosque of Cordoba (Mezquita)](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-14-51.png)
 * **The Prado and Paseo del Artes, Madrid -** Madrid's three world-class art museums, the Prado, Thyssen-Bornemisza and Centro de Arte Reina Sofía.
 
-  ![The Prado and Paseo del Artes, Madrid](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-15-58.png)
+  ![The Prado and Paseo del Artes, Madrid](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-15-58_edited.jpg)
 * **San Lorenzo de El Escorial -** is one of the Spanish royal sites and functions as a monastery, basilica, royal palace, pantheon, library, museum, university, school, and hospital.
 
   ![San Lorenzo de El Escorial](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-16-58_edited.jpg)
@@ -193,9 +193,9 @@ Italy has culture, history and cuisine in abundance making it a very popular tou
 * **Amalfi Coast** - is a 50-kilometre stretch of coastline along the southern edge of Italy’s Sorrentine Peninsula, in the Campania region. It’s a popular holiday destination, with sheer cliffs and a rugged shoreline dotted with small beaches and pastel-coloured fishing villages.
 
   ![Amalfi Coast](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-23-30-52_edited.jpg)
-* **Florence Duomo Santa Maria del Fiore** - is the prominent landmark of the Florentine skyline. Not only is it known for its size and beauty, it also has hundreds of years of history and its dome is a major architectural masterpiece ahead of its time.
+* **Florence Duomo Santa Maria del Fiore** - is the prominent landmark of the Florentine skyline. Not only is it known for its size and beauty, but it also has hundreds of years of history and its dome is a major architectural masterpiece ahead of its time.
 
-  ![Florence Duomo Santa Maria del Fiore](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-23-32-07.png)
+  ![Florence Duomo Santa Maria del Fiore](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-23-32-07_edited.jpg)
 * **Cinque Terre** - is a string of centuries-old seaside villages on the rugged Italian Riviera coastline. In each of the 5 towns, colourful houses and vineyards cling to steep terraces.
 
   ![Cinque Terre](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-23-33-12_edited.jpg)
