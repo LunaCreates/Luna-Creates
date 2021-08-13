@@ -189,7 +189,7 @@ Italy has culture, history and cuisine in abundance making it a very popular tou
   ![Leaning Tower of Pisa](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-23-28-49.png)
 * **Lake Como** - Another popular destination to travelers in Northern Italy’s Lombardy region, is an upscale resort area known for its dramatic scenery, set against the foothills of the Alps.
 
-  ![Lake Como](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-23-29-49.png)
+  ![Lake Como](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-23-29-49_edited.jpg)
 * **Amalfi Coast** - is a 50-kilometre stretch of coastline along the southern edge of Italy’s Sorrentine Peninsula, in the Campania region. It’s a popular holiday destination, with sheer cliffs and a rugged shoreline dotted with small beaches and pastel-coloured fishing villages.
 
   ![Amalfi Coast](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-23-30-52_edited.jpg)
