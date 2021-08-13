@@ -371,7 +371,7 @@ Thailand has been a popular tourist destination for decades thanks to its white 
   ![Pai](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-22-31-54.png)
 * **Khao Yai National Park** - Thailand's first national park, Khao Yai is considered to be the country's finest. The park also shelters diverse wildlife such as bears, gibbons, elephants and hornbills.
 
-  ![Khao Yai National Park](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-22-33-44.png)
+  ![Khao Yai National Park](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-22-33-44_edited.jpg)
 * **Sukhothai Old City** - Sukhothai houses a vast number of historical sites and temple ruins.
 
   ![Sukhothai Old City](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-22-35-04.png)
