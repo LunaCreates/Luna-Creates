@@ -49,11 +49,11 @@ With 89.4m visitors annually France is the most visited country in the world.
   ![Chamonix-Mont-Blanc](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-21-19-02.png)
 * **Alsace Villages** - located in the north-east of France, Alsace is home to stunning mountain scenery, vine-clad slopes and, of course, beautiful villages.
 
-  ![Alsace Villages](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-21-20-20.png)
+  ![Alsace Villages](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-21-20-20_edited.jpg)
 
   ##### 2. **USA**
 
-Second to the most visited countries, America has always been a popular travel destination due to its spiral of metropolis and small town charms. Travel trends include city hopping and road trips. New York claims to have over 800 different languages spoken within the city.
+Second, to the most visited countries, America has always been a popular travel destination due to its spiral of a metropolis and small-town charms. Travel trends include city hopping and road trips. New York claims to have over 800 different languages spoken within the city.
 
 * **San Francisco’s Golden Gate Bridge** - is a suspension bridge spanning the Golden Gate, the one-mile-wide strait connecting San Francisco Bay and the Pacific Ocean.
 
