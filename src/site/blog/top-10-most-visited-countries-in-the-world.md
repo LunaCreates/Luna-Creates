@@ -12,9 +12,9 @@ publish_date: 2021-06-21T12:00:00.000+01:00
 ---
 ## **Top 10 Most Visited Countries In The World**
 
-If like me you are daydreaming of getting back out to see a little bit more of the stunning world we live in after this crazy year, you'll probably be wondering where to go first! Here's our top 10 places to visit in 2021 to give you some travel inspiration.
+If like me you are daydreaming of getting back out to see a little bit more of the stunning world we live in after this crazy year, you'll probably be wondering where to go first! Here are our top 10 places to visit in 2021 to give you some travel inspiration.
 
-Some of the places on this list are currently closed or have restricted travel but hopefully as the year progresses more places will open up for tourism. Under each of our top 10 countries, we've selected a few personal highlights   with some amazing pictures to show them in all their glory.
+Some of the places on this list are currently closed or have restricted travel but hopefully as the year progresses more places will open up for tourism. Under each of our top 10 countries, we've selected a few personal highlights with some amazing pictures to show them in all their glory.
 
 1. **FRANCE**
 
@@ -244,7 +244,7 @@ Both Europeans and Americans rave about the country’s historic attractions, sp
 
 * **Berlin’s Brandenburg Gate** - is an 18th-century neoclassical monument in Berlin, built on the orders of Prussian king Frederick William II after the temporary restoration of order during the Batavian Revolution.
 
-  ![Berlin’s Brandenburg Gate](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-11-at-09-44-38.png)
+  ![Berlin’s Brandenburg Gate](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-11-at-09-44-38_edited.jpg)
 * **Cologne Cathedral** - is a Catholic cathedral in Cologne, North Rhine-Westphalia, Germany. It is the seat of the Archbishop of Cologne and of the administration of the Archdiocese of Cologne.
 
   ![Cologne Cathedral](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-11-at-09-45-57.png)
