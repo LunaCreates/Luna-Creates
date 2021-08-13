@@ -103,7 +103,7 @@ There are lots of historical sites to see and rich cultures to experience.
 
 * **The Alhambra and Generalife Gardens**, **Granada** - palace and fortress of the Moorish monarchs of Granada, Spain.
 
-  ![The Alhambra and Generalife Gardens, Granada](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-11-33.png)
+  ![The Alhambra and Generalife Gardens, Granada](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-11-33_edited.jpg)
 * **Barcelona’s Sagrada Familia** - The expiatory temple of the Sagrada Familia, the construction of which commenced in 1882, is today one of the emblems of Barcelona, known around the world and visited by millions of people.
 
   ![Barcelona’s Sagrada Familia](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-13-25.png)
