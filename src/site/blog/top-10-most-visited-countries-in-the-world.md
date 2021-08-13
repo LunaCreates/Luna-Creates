@@ -75,8 +75,8 @@ Second, to the most visited countries, America has always been a popular travel 
   ![Yellowstone National Park](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-21-35-10.png)
 * **Zion National Park** - is located in southern Utah near the city of Springdale. Often referred to as heaven on earth, a red-rock wonderland created by wind, water, and snow.
 
-  ![Zion National Park](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-02-36.png)
-* **French Quarter** - is the oldest neighbourhood in the city of New Orleans. This fun and exciting neighbourhood has everything from the party vibe of Bourbon Street to the elegance found on Royal Street.
+  ![Zion National Park](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-02-36_edited.jpg)
+* **French Quarter** - is the oldest neighbourhood in the city of New Orleans. This fun and exciting neighbourhood have everything from the party vibe of Bourbon Street to the elegance found on Royal Street.
 
   ![French Quarter](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-22-00-36.png)
 * **White House, Washington** - is the official residence and workplace of the president of the United States. It is located at 1600 Pennsylvania Avenue NW in Washington, D.C., and has been the residence of every U.S. president since John Adams in 1800.
