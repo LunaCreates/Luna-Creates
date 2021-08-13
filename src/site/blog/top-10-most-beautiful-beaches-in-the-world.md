@@ -12,7 +12,7 @@ publish_date: 2021-05-01T12:00:00.000+01:00
 ---
 ## **Top 10 most beautiful beaches in the world**
 
-Many of the pins on our maps have been inspired by the urge to escape to a faraway deserted island beach. We've been lucky to experience some of these first hand (and some are on the wish list!), so thought we would share these with you which may inspire your next getaway. Here's our top 10 most beautiful beaches in the world.
+Many of the pins on our maps have been inspired by the urge to escape to a faraway deserted island beach. We've been lucky to experience some of these first hand (and some are on the wish list!), so thought we would share these with you which may inspire your next getaway. Here are our top 10 most beautiful beaches in the world.
 
 #### **1.) The Pass Byron Bay, Australia**
 
@@ -104,7 +104,7 @@ Once you arrive you will be rewarded with a superb beach with soft white sand an
 
 Pansea is one of the best beaches in Phuket and is the perfect beach destination if you are looking for a romantic getaway.
 
-![Pansea Beach, Thailand](https://lunacreates.co.uk/images/blog/screen-shot-2021-05-08-at-16-21-21.png)
+![Pansea Beach, Thailand](https://lunacreates.co.uk/images/blog/screen-shot-2021-05-08-at-16-21-21_edited.jpg)
 
 #### **9.) Elafonisi Beach, Crete**
 
