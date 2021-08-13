@@ -43,7 +43,7 @@ With 89.4m visitors annually France is the most visited country in the world.
   ![Cathédrale Notre-Dame de Chartres](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-21-15-45.png)
 * **Provence** - a region in southeastern France bordering Italy and the Mediterranean Sea, is known for its diverse landscapes, from the Southern Alps and Camargue plains to rolling vineyards, olive groves, pine forests and lavender fields.
 
-  ![Provence](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-21-17-03.png)
+  ![Provence](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-21-17-03_edited.jpg)
 * **Chamonix-Mont-Blanc** - is a resort area near the junction of France, Switzerland and Italy. At the base of Mont Blanc, the highest summit in the Alps, it's renowned for its skiing.
 
   ![Chamonix-Mont-Blanc](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-21-19-02.png)
