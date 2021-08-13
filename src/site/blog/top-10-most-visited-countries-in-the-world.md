@@ -37,7 +37,7 @@ With 89.4m visitors annually France is the most visited country in the world.
   ![Mont Saint-Michel](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-21-03-45.png)
 * **Loire Valley Chateaux** - are part of the architectural heritage of the historic towns of Amboise, Angers, Blois, Chinon, Montsoreau, Nantes, Orléans, Saumur, and Tours along the **Loire** River in France. They illustrate Renaissance ideals of design in France.
 
-  ![Loire Valley Chateaux](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-21-14-13.png)
+  ![Loire Valley Chateaux](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-21-14-13_edited.jpg)
 * **Cathédrale Notre-Dame de Chartres** - is a Roman Catholic church in Chartres, France, about 80 km southwest of Paris, and is the seat of the Bishop of Chartres.
 
   ![Cathédrale Notre-Dame de Chartres](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-08-at-21-15-45.png)
