@@ -256,7 +256,7 @@ Both Europeans and Americans rave about the country’s historic attractions, sp
   ![Neuschwanstein castle](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-11-at-10-28-51.png)
 * **Miniatur Wunderland** - is a model railway and miniature airport attraction in Hamburg, Germany, the largest of its kind in the world.
 
-  ![Miniatur Wunderland](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-21-14-51.png)
+  ![Miniatur Wunderland](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-21-14-51_edited.jpg)
 * **The Rine valley** - an area of outstanding natural beauty. It has been designated a World Heritage Site by UNESCO in recognition of its importance in terms of the history, geology, culture, and industry of this region of Germany.
 
   ![The Rine valley](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-21-17-05_edited.jpg)
