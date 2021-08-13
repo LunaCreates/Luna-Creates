@@ -368,7 +368,7 @@ Thailand has been a popular tourist destination for decades thanks to its white-
   ![Sunday Walking Street, Chiang Mai](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-22-30-39_edited.jpg)
 * **Pai** - is a town in the Mae Hong Soon Province of northern Thailand. It's known for its nearby gorges, hot springs like the Tha Pai Hot Spring and waterfalls like Mo Paeng Waterfall.
 
-  ![Pai](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-22-31-54.png)
+  ![Pai](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-22-31-54_edited.jpg)
 * **Khao Yai National Park** - Thailand's first national park, Khao Yai is considered to be the country's finest. The park also shelters diverse wildlife such as bears, gibbons, elephants and hornbills.
 
   ![Khao Yai National Park](https://lunacreates.co.uk/images/blog/screen-shot-2021-06-12-at-22-33-44_edited.jpg)
