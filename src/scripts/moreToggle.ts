@@ -39,7 +39,15 @@ function MoreToggle(element: HTMLElement) {
   function setState() {
     const button: HTMLButtonElement | null = element.querySelector('[data-toggle-more]');
 
-    if (button === null || elementToToggle.scrollHeight < 260) return;
+    if (button === null) return;
+
+    if (elementToToggle.scrollHeight < 260) {
+      button.classList.add('hidden');
+      elementToToggle.classList.add('after:hidden');
+      elementToToggle.style.height = 'auto';
+
+      return;
+    }
 
     elementToToggle.style.height = '250px';
     button.addEventListener('click', triggerToggle);
