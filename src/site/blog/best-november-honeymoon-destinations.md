@@ -16,6 +16,8 @@ If you are planning your honeymoon then it can help to learn about the best hone
 
 ## See the Best Of Iceland
 
+![Iceland](https://lunacreates.co.uk/images/blog/iceland.jpg)
+
 If you're both people who love to embrace the snow and cold temperatures then Iceland could be the place to visit on your honeymoon in November. It has that magical appeal and you can really see the best of this country at this time of year. There are many places to visit during your time here but you can explore its beauty in many different ways.
 
 You can get romantic by paying a visit to the Blue Lagoon. These geothermal baths provide the ideal spot for relaxing together while the cold air swirls around you. You can also choose to book yourself in for a spot of pampering with some spa treatments. If you enjoy exploring, then you visit the capital of Reykjavik where you can soak up the atmosphere and become a real tourist. There are museums to discover, restaurants to sample and bars to indulge in, making this one of the top honeymoon destinations.
