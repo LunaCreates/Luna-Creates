@@ -1,7 +1,7 @@
 ---
 is_draft: false
 banner_image: https://lunacreates.co.uk/images/blog/honeymoon.jpg
-thumbnail: https://lunacreates.co.uk/images/blog/november-honeymoon.jpg
+thumbnail: https://lunacreates.co.uk/images/blog/november-honeymoon-3.jpg
 tags: []
 meta_title: Best November Honeymoon Destinations
 meta_description: Are you looking for a perfect honeymoon destinations in November?
