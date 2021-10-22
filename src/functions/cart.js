@@ -131,9 +131,6 @@ function renderNoItemsData() {
 }
 
 async function getCartData(rootURL, cartId) {
-  console.log(rootURL, 'getCartData rootURL');
-  console.log(cartId, 'getCartData cartId');
-
   return await fetch(`${rootURL}/api/get-cart`, {
     method: 'POST',
     headers: {
@@ -144,8 +141,6 @@ async function getCartData(rootURL, cartId) {
     }),
   })
   .then((res) => {
-    console.log(res, 'getCartData res');
-
     return res.json()
   });
 }
@@ -167,7 +162,10 @@ async function createCheckout(cart, clientId, rootURL) {
 }
 
 exports.handler = async function (event, context, callback) {
-  const rootURL = process.env.URL || 'https://localhost:8888';
+  const cotext = process.env.CONTEXT === 'deploy-preview'
+  const rootURL = cotext ? process.env.DEPLOY_URL : process.env.URL || 'https://localhost:8888';
+
+  console.log(rootURL, 'rootURL');
 
   try {
     const data = JSON.parse(event.body);

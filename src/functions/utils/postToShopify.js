@@ -6,10 +6,6 @@ exports.postToShopify = async ({ query, variables }) => {
   const url = process.env.STOREFRONT_API_URL;
   const token = process.env.STOREFRONT_API_TOKEN;
 
-  console.log(url, 'postToShopify url');
-  console.log(query, 'postToShopify query');
-  console.log(variables, 'postToShopify variables');
-
   try {
     const result = await fetch(url, {
       method: 'POST',

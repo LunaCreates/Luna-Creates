@@ -20,8 +20,6 @@
 const { postToShopify } = require('./utils/postToShopify')
 
 exports.handler = async (event) => {
-  console.log(event, 'get-cart');
-
   const { cartId } = JSON.parse(event.body);
 
   try {
