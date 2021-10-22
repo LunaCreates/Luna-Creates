@@ -144,6 +144,8 @@ async function getCartData(rootURL, cartId) {
     }),
   })
   .then((res) => {
+    console.log(res, 'getCartData res');
+
     return res.json()
   });
 }
