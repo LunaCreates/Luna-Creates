@@ -3,13 +3,15 @@ import stateManager from './stateManager';
 function variants(product: HTMLElement) {
   function variantChanged(event: Event) {
     const target = event.target as HTMLSelectElement;
-    const selected = target.selectedIndex;
-    const variant = target[selected];
+    const variant = target[target.selectedIndex] as HTMLOptionElement;
     const form = product.querySelector('[data-product-form]') as HTMLFormElement;
-    const variantId = variant.getAttribute('data-id') as string;
+    const variantIdInput = form.elements.namedItem('variantId')
 
     stateManager.variantChanged(variant);
-    form?.setAttribute('data-variant-id', variantId);
+
+    if (variantIdInput && variantIdInput instanceof HTMLInputElement) {
+      variantIdInput.value = variant.value
+    }
   }
 
   function init() {

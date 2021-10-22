@@ -1,12 +1,16 @@
 {% set variant = product.options[0] %}
 
-<form class="mt-24" data-product-form data-variant-id="{{variant.id}}">
+<form class="mt-24" data-product-form>
+    <input type="hidden" name="cartId" value="" />
+    <input type="hidden" name="variantId" value="{{ variant.id }}" />
+    <input type="hidden" name="merchandiseId" value="{{ product.id }}" />
+
     <div class="relative mb-32">
-        <label for="map-size" class="text-sm leading-sm fvs-md inline-block mb-8 text-tertiary">Choose your map size</label>
+        <label for="frame-size" class="text-sm leading-sm fvs-md inline-block mb-8 text-tertiary">Choose your frame size</label>
         <div class="relative">
-            <select name="size" id="map-size" class="text-base leading-base fvs-rg block py-8 pr-32 pl-16 text-grey-neutral w-full border-1 border-solid border-grey-border bg-transparent rounded-4 appearance-none" data-product-variants>
+            <select name="frame size" id="frame-size" class="text-base leading-base fvs-rg block py-8 pr-32 pl-16 text-grey-neutral w-full border-1 border-solid border-grey-border bg-transparent rounded-4 appearance-none" data-product-variants>
             {% for option in product.options %}
-                <option value="{{option.value}}" data-name="{{option.name}}" data-id="{{option.id}}" data-price="{{option.price}}">{{option.value}}</option>
+                <option value="{{option.value}}" data-id="{{option.id}}" data-name="{{option.name}}" data-price="{{option.price}}">{{option.value}}</option>
             {% endfor %}
             </select>
             <svg class="absolute top-1/2 right-8 rotate-90 -translate-x-1/2 -translate-y-1/2 pointer-events-none" width="24" height="24" aria-hidden="true">

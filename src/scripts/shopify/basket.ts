@@ -1,3 +1,4 @@
+import postData from '../modules/postData';
 import pubSub from '../modules/pubSub';
 
 export interface KeyMapProps {
@@ -20,23 +21,15 @@ function Basket(product: HTMLElement) {
     sessionStorage.setItem('mapPreviews', JSON.stringify(images));
   }
 
-  function storeBasketItem(lineItemsToAdd: any) {
-    const basket = JSON.parse(sessionStorage.getItem('cart') as string) || [];
-
-    basket.push(lineItemsToAdd);
-    sessionStorage.setItem('cart', JSON.stringify(basket));
-    window.location.pathname = '/cart/';
-  }
-
   function setAttributes(variant: HTMLOptionElement | HTMLInputElement) {
     const key = variant.getAttribute('data-name');
-    const value = variant.getAttribute('value');
+    const value = variant.getAttribute('data-id');
 
     return { key, value };
   }
 
   function updateBasketButton(variant: HTMLOptionElement | HTMLInputElement) {
-    const variantId = variant.getAttribute('data-id');
+    const variantId = variant.value;
     const customAttributes = JSON.stringify(setAttributes(variant));
 
     if (!basketButton || !variantId) return;
@@ -45,26 +38,35 @@ function Basket(product: HTMLElement) {
     basketButton.setAttribute('data-variant-options', customAttributes);
   }
 
-  function updateBasket(event: Event) {
-    if (!(event.target instanceof HTMLAnchorElement) || !basketButton) return;
-
+  function postToCart(event: Event) {
     event.preventDefault();
 
-    const id: string | null = event.target.getAttribute('data-variant-id');
-    const attributes = event.target.getAttribute('data-variant-options');
-    const lineItemsToAdd: any = {
-      variantId: id,
-      quantity: 1,
-      customAttributes: JSON.parse(attributes as string)
-    };
+    const element = event.target as HTMLAnchorElement
+    const merchandiseId = element.getAttribute('data-variant-id');
+    const attributes = element.getAttribute('data-variant-options');
+    const data = {
+      cartId: localStorage.getItem('shopifyCartId') || '',
+      items: [{
+        merchandiseId,
+        quantity: 1,
+        attributes: JSON.parse(attributes as string)
+      }]
+    }
 
-    storePreviewImages(id);
-    storeBasketItem(lineItemsToAdd);
+    storePreviewImages(merchandiseId);
+
+    postData('/api/add-to-cart', data).then(data => {
+      const url = new URL(`${window.location.origin}/cart/?cartId=${data.id}`);
+
+      // persist that cartId for subsequent actions
+      localStorage.setItem('shopifyCartId', data.id);
+      window.location.href = url.href;
+    });
   }
 
   function init() {
     pubSub.subscribe('variant/changed', updateBasketButton);
-    basketButton?.addEventListener('click', updateBasket);
+    basketButton?.addEventListener('click', postToCart);
   }
 
   return {

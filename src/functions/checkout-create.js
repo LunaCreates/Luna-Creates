@@ -14,8 +14,13 @@ const headers = {
 exports.handler = async function (event, context, callback) {
   try {
     const body = JSON.parse(event.body);
-
-    console.log(event.body, 'body');
+    const lineItems = body.lineItems.map(item => {
+      return {
+        variantId: item.node.merchandise.id,
+        customAttributes: item.node.attributes,
+        quantity: item.node.quantity,
+      }
+    })
 
     const payload = {
       query: `mutation checkoutCreate($input: CheckoutCreateInput!) {
@@ -37,22 +42,8 @@ exports.handler = async function (event, context, callback) {
                     key
                     value
                   }
-                  variant {
-                    id
-                    image {
-                      altText
-                      originalSrc
-                    }
-                    priceV2 {
-                      amount
-                      currencyCode
-                    }
-                  }
                 }
               }
-            }
-            subtotalPriceV2 {
-              amount
             }
           }
           checkoutUserErrors {
@@ -63,7 +54,7 @@ exports.handler = async function (event, context, callback) {
       }`,
       variables: {
         input: {
-          lineItems: body.data,
+          lineItems,
           customAttributes: [{ key: 'clientId', value: body.clientId }]
         }
       }
@@ -80,7 +71,7 @@ exports.handler = async function (event, context, callback) {
     const response = {
       statusCode: 200,
       headers,
-      body: JSON.stringify(result)
+      body: JSON.stringify(result.data.checkoutCreate.checkout)
     }
 
     callback(null, response);

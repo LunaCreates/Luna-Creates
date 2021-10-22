@@ -1,3 +1,5 @@
+const fetch = require('node-fetch');
+
 const headers = {
   'Access-Control-Allow-Origin': '*',
   'Access-Control-Allow-Headers': 'Content-Type',
@@ -6,7 +8,7 @@ const headers = {
 
 function buildImage(image) {
   const imageSrc = image.originalSrc.split('.jpg')[0];
-  const imageAlt = image.altText;
+  const imageAlt = image.altText ? image.altText : '';
 
   return `
     <picture class="relative block w-100 h-100 flex-initial bg-grey-fade mr-16 md:mr-24">
@@ -23,25 +25,27 @@ function renderAttributes(attribute) {
 }
 
 function renderCartItem(item, index, arr) {
-  const attributes = item.node.customAttributes;
-  const price = parseInt(item.node.variant.priceV2.amount, 10);
+  const attributes = item.node.attributes;
+  const price = parseInt(item.node.merchandise.priceV2.amount, 10);
   const total = price * item.node.quantity;
-  const variantId = item.node.variant.id;
+  const variantId = item.node.id;
+  const merchandiseId = item.node.merchandise.id;
   const lastItem = arr.length === index + 1;
   const border = lastItem ? 'border-t-1 border-b-1 border-solid border-grey-border' : 'border-t-1 border-solid border-grey-border';
 
   const html = `
     <tr class="${border}">
       <th class="text-left flex items-center min-w-16 py-16 pr-16 md:py-24 md:pr-24">
-        ${buildImage(item.node.variant.image)}
+        ${buildImage(item.node.merchandise.product.images.edges[0].node)}
         <div class="flex-1">
-          <span class="text-xs leading-xs fvs-rg">${item.node.title}</span>
+          <span class="text-xs leading-xs fvs-rg">${item.node.merchandise.product.title}</span>
           ${attributes.map(renderAttributes).join('')}
         </div>
       </th>
       <td class="text-xs leading-xs fvs-rg text-grey px-16 md:px-32">&pound;${price.toFixed(2)}</td>
       <td class="text-xs leading-xs fvs-rg text-grey px-16 md:px-32">
         <input type="text" id="variant-${index}" name="variant" value="${variantId}" class="hidden">
+        <input type="text" id="merchandise-${index}" name="merchandise" value="${merchandiseId}" class="hidden">
 
         <label class="sr-only" for="quantity-${index}">Quantity</label>
         <input type="number" id="quantity-${index}" name="quantity" value="${item.node.quantity}" min="1" class="py-8 px-16 text-heading text-base leading-base text-grey-neutral fvs-rg w-60 border-1 border-solid border-grey-border rounded-4" pattern="[0-9]*">
@@ -76,10 +80,10 @@ function renderKeyMapImages(keyMapImages) {
 }
 
 function renderTableData(data) {
-  const { keyMapImages, checkoutData } = data;
-  const lineItems = checkoutData.lineItems.edges;
-  const subtotal = parseInt(checkoutData.subtotalPriceV2.amount, 10);
-  const checkoutUrl = checkoutData.webUrl;
+  const { checkout, keyMapImages, result } = data;
+  const lineItems = result.cart.lines.edges;
+  const subtotal = parseInt(result.cart.estimatedCost.subtotalAmount.amount, 10);
+  const checkoutUrl = checkout.webUrl;
 
   return `
     <div class="mb-32 overflow-x-auto">
@@ -109,7 +113,7 @@ function renderTableData(data) {
         <p class="text-xs leading-xs fvs-rg my-0 text-right italic text-grey">Shipping &amp; taxes calculated at checkout</p>
 
         <div class="flex flex-wrap justify-end mt-24">
-            <button type="submit" class="bg-primary text-background text-xs leading-xs fvs-md py-16 px-24 rounded-5 uppercase tracking-1 outline-transparent focus:outline-primary hov:hover:bg-foreground md:px-32">Update Cart</button>
+            <button type="submit" name="update-cart" class="bg-primary text-background text-xs leading-xs fvs-md py-16 px-24 rounded-5 uppercase tracking-1 outline-transparent focus:outline-primary hov:hover:bg-foreground md:px-32">Update Cart</button>
             <a href="${checkoutUrl}" class="bg-secondary text-foreground text-xs leading-xs fvs-md py-16 px-24 rounded-5 uppercase tracking-1 ml-24 outline-transparent focus:outline-primary hov:hover:bg-hover-secondary md:px-32">Checkout</a>
         </div>
       </div>
@@ -126,11 +130,48 @@ function renderNoItemsData() {
   `;
 }
 
+async function getCartData(rootURL, cartId) {
+  return await fetch(`${rootURL}/api/get-cart`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      cartId
+    }),
+  })
+  .then((res) => {
+    return res.json()
+  });
+}
+
+async function createCheckout(cart, clientId, rootURL) {
+  const lineItems = cart.lines.edges;
+  const body = { clientId, lineItems };
+
+  return await fetch(`${rootURL}/create`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(body),
+  })
+  .then((res) => {
+    return res.json()
+  });
+}
+
 exports.handler = async function (event, context, callback) {
+  const rootURL = process.env.URL || 'https://localhost:8888';
+
   try {
     const data = JSON.parse(event.body);
-    const hasLineItems = data.checkoutData.lineItems.edges.length > 0;
-    const body = hasLineItems ? renderTableData(data) : renderNoItemsData();
+    const { cartId, clientId, keyMapImages } = data
+    const result = await getCartData(rootURL, cartId);
+    const checkout = await createCheckout(result.cart, clientId, rootURL)
+    const hasLineItems = result.cart.lines.edges.length > 0;
+    const cartData = { checkout, keyMapImages, result };
+    const body = hasLineItems ? renderTableData(cartData) : renderNoItemsData();
 
     const response = {
       statusCode: 200,

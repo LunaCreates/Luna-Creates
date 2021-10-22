@@ -19,6 +19,7 @@
 /products/new-baby-small-mouse-with-balloon-map-print /products/            301
 
 
+/api/*                     /.netlify/functions/:splat                       200
+/cart-view                 /.netlify/functions/cart                         200
 /create                    /.netlify/functions/checkout-create              200
-/items                     /.netlify/functions/cart                         200
 /newsletter                /.netlify/functions/newsletter                   200

@@ -1,4 +1,4 @@
-import pubSub from './modules/pubSub';
+import postData from './modules/postData';
 import { KeyMapProps } from './shopify/basket';
 
 export interface KeyMapImages {
@@ -18,27 +18,12 @@ const headers = {
 }
 
 function Cart(element: HTMLElement) {
+  const params = new URLSearchParams(location.search);
+  const cartId = params.get('cartId');
   const form = element.querySelector('[data-form]');
-  const cart = JSON.parse(sessionStorage.getItem('cart') as string) as ShopifyStorefront.CheckoutCreate[];
 
-  async function fetchShopifyData(data: ShopifyStorefront.CheckoutCreate[], clientId: string) {
-    const body = { data, clientId };
-
-    console.log(body, 'body');
-
-    const checkout = await fetch('/create', {
-      method: 'POST',
-      headers,
-      body: JSON.stringify(body)
-    });
-
-    const response = await checkout.json();
-
-    return response.data.checkoutCreate.checkout;
-  }
-
-  async function fetchCartHtml(body: CartBody) {
-    const checkout = await fetch('/items', {
+  async function fetchCartHtml(body: any) {
+    const checkout = await fetch('/cart-view', {
       method: 'POST',
       headers,
       body: JSON.stringify(body)
@@ -49,15 +34,12 @@ function Cart(element: HTMLElement) {
     return response;
   }
 
-  async function updateCartItems(data: ShopifyStorefront.CheckoutCreate[]) {
+  async function updateCartItems(cartId: string | null) {
     const ga = (<any>window).ga
     const ifGA = typeof ga.getAll === 'function'
     const clientId = ifGA ? ga.getAll()[0].get('clientId') : ''
     const keyMapImages: KeyMapImages = JSON.parse(sessionStorage.getItem('mapPreviews') as string);
-    const checkoutData: ShopifyStorefront.CheckoutData = await fetchShopifyData(data, clientId);
-    const body = { keyMapImages, checkoutData, clientId };
-
-    console.log(clientId, 'clientId');
+    const body = { cartId, clientId, keyMapImages };
 
     if (form === null) return;
 
@@ -76,11 +58,15 @@ function Cart(element: HTMLElement) {
 
   function removeProductItem(target: HTMLButtonElement) {
     const variantId = target.getAttribute('data-variant-id') as string;
-    const checkoutData = cart.filter((item) => item.variantId !== variantId);
+    const data = { cartId, lineId: variantId };
 
     removeKeyMapImage(variantId);
-    sessionStorage.setItem('cart', JSON.stringify(checkoutData));
-    window.location.pathname = '/cart/';
+
+    postData('/api/remove-item-from-cart', data).then(data => {
+      const url = new URL(`${window.location.origin}/cart/?cartId=${data.id}`);
+
+      window.location.href = url.href;
+    });
   }
 
   function handleClickEvent(event: Event) {
@@ -91,29 +77,33 @@ function Cart(element: HTMLElement) {
     }
   }
 
-  function formatLineItems(variants: FormDataEntryValue[], quantities: FormDataEntryValue[]) {
+  function formatLineItems(variants: FormDataEntryValue[], quantities: FormDataEntryValue[], merchandise: FormDataEntryValue[]) {
     return variants.map((v, i) => {
       const q = parseFloat(quantities[i].toString());
 
-      return { variantId: v, quantity: q };
+      return { id: v, merchandiseId: merchandise[i], quantity: q };
     })
   }
 
   function handleSubmitEvent(event: Event) {
     const formData = new FormData(event.target as HTMLFormElement);
+    const merchandise = formData.getAll('merchandise');
     const variants = formData.getAll('variant');
     const quantities = formData.getAll('quantity');
-    const items = formatLineItems(variants, quantities).reverse();
-    const checkoutData = cart.map((item, i) => Object.assign({}, item, items[i]));
+    const items = formatLineItems(variants, quantities, merchandise).reverse();
+    const data = { cartId, items }
 
     event.preventDefault();
 
-    sessionStorage.setItem('cart', JSON.stringify(checkoutData));
-    window.location.pathname = '/cart/';
+    postData('/api/update-cart-items', data).then(data => {
+      const url = new URL(`${window.location.origin}/cart/?cartId=${data.id}`);
+
+      window.location.href = url.href;
+    });
   }
 
   function init() {
-    updateCartItems(cart);
+    updateCartItems(cartId);
 
     if (form === null) return;
 

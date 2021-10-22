@@ -1,3 +1,5 @@
+import postData from './modules/postData';
+
 if ('loading' in HTMLImageElement.prototype) {
   const images: Array<HTMLImageElement> = Array.from(document.querySelectorAll('img.lazyload'));
   const sources: Array<HTMLSourceElement> = Array.from(document.querySelectorAll('[data-srcset'));
@@ -17,6 +19,8 @@ if ('loading' in HTMLImageElement.prototype) {
 const html: HTMLElement | null = document.querySelector('html');
 
 if (html) html.className = 'js';
+
+getCartSummaryDetails();
 
 function initModule(module: any, element: any = null) {
   module.default(element).init();
@@ -42,6 +46,35 @@ function observe(callback: Function, elements: NodeList) {
     }, config);
 
     collection.forEach(element => observer.observe(element));
+  }
+}
+
+// fetch cart data from the API
+function getCartSummaryDetails() {
+  if (localStorage.getItem('shopifyCartId')) {
+    postData('/api/get-cart', {
+      'cartId': localStorage.getItem('shopifyCartId')
+    })
+      .then(data => {
+        if (data.cart) {
+          displayCartSummaryDetails(data.cart.id);
+        }
+        else {
+          //clear a local cart if it has expired with Shopify
+          localStorage.removeItem('shopifyCartId');
+        }
+      });
+  } else {
+    console.log(`No shopping cart yet`);
+  }
+}
+
+// Update the UI with latest cart info
+function displayCartSummaryDetails(id: string) {
+  const cartLink: NodeListOf<HTMLAnchorElement> = document.querySelectorAll('[data-cart]');
+
+  if (cartLink.length > 0) {
+    cartLink.forEach((link: HTMLAnchorElement) => link.href = `/cart/?cartId=${id}`);
   }
 }
 
@@ -159,18 +192,18 @@ const pathname = window.location.pathname;
 const isProductPage = pathname.includes('/products/') && !pathname.endsWith('/products/');
 
 if (isProductPage) {
+  const shopifyCartId = localStorage.getItem('shopifyCartId') || '';
+  const form: HTMLFormElement | null = document.querySelector('[data-product-form]');
+  const shopifyCartIdInput = form?.elements.namedItem('cartId');
   const product = document.querySelector('[data-component="product-details"]');
+
+  if (shopifyCartIdInput && shopifyCartIdInput instanceof HTMLInputElement) {
+    shopifyCartIdInput.value = shopifyCartId
+  }
 
   import(/* webpackChunkName: "shopify" */ 'Src/scripts/shopify/shopify')
     .then(module => initModule(module, product))
     .catch(err => console.error(`Error in: Shopify - ${err}`));
 }
-
-// Product Page Test
-
-// (<any>window).gtag('event', 'product_page', {
-//   'event_category': 'experiments',
-//   'event_label': 'control'
-// });
 
 export {};
