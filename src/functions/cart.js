@@ -162,10 +162,10 @@ async function createCheckout(cart, clientId, rootURL) {
 }
 
 exports.handler = async function (event, context, callback) {
-  const fromPR = process.env.PULL_REQUEST
+  const fromPR = process.env.PULL_REQUEST === 'true'
   const rootURL = fromPR ? process.env.DEPLOY_URL : process.env.URL || 'https://localhost:8888';
 
-  console.log(fromPR, 'fromPR');
+  console.log(JSON.stringify(process.env), 'process.env');
 
   try {
     const data = JSON.parse(event.body);
