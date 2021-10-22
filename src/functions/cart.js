@@ -131,6 +131,9 @@ function renderNoItemsData() {
 }
 
 async function getCartData(rootURL, cartId) {
+  console.log(rootURL, 'getCartData rootURL');
+  console.log(cartId, 'getCartData cartId');
+
   return await fetch(`${rootURL}/api/get-cart`, {
     method: 'POST',
     headers: {
