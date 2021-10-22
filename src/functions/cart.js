@@ -165,6 +165,8 @@ exports.handler = async function (event, context, callback) {
   const fromPR = process.env.PULL_REQUEST
   const rootURL = fromPR ? process.env.DEPLOY_URL : process.env.URL || 'https://localhost:8888';
 
+  console.log(fromPR, 'fromPR');
+
   try {
     const data = JSON.parse(event.body);
     const { cartId, clientId, keyMapImages } = data
