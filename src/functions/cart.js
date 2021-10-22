@@ -165,6 +165,7 @@ exports.handler = async function (event, context, callback) {
   const cotext = process.env.CONTEXT === 'deploy-preview'
   const rootURL = cotext ? process.env.DEPLOY_URL : process.env.URL || 'https://localhost:8888';
 
+  console.log(process.env.CONTEXT, 'process.env.CONTEXT');
   console.log(rootURL, 'rootURL');
 
   try {
