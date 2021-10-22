@@ -1,6 +1,8 @@
 const { postToShopify } = require('./postToShopify')
 
-// Creates a cart with a single item
+/**
+ * @param items - Line items of cart to create
+ */
 exports.createCartWithItem = async ({ items }) => {
   try {
     const response = await postToShopify({

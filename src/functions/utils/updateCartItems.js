@@ -1,5 +1,9 @@
 const { postToShopify } = require('./postToShopify')
 
+/**
+ * @param {string} cartId - Target cart to update
+ * @param items - Line items of cart to update
+ */
 exports.updateCartItems = async ({ cartId, items }) => {
   try {
     const shopifyResponse = postToShopify({
