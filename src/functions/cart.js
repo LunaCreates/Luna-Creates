@@ -25,7 +25,7 @@ function renderAttributes(attribute) {
 }
 
 function renderCartItem(item, index, arr) {
-  const attributes = item.node.attributes;
+  const attributes = item.node.attributes.filter(item => item.key !== 'merchandiseId');
   const price = parseInt(item.node.merchandise.priceV2.amount, 10);
   const total = price * item.node.quantity;
   const variantId = item.node.id;

@@ -6,7 +6,6 @@ function buildAttributesData(formData: FormData) {
   formData.delete('quantity');
   formData.delete('cartId');
   formData.delete('variantId');
-  formData.delete('merchandiseId');
 
   for (var pair of formData.entries()) {
     array.push({ key: pair[0], value: pair[1] });
