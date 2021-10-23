@@ -51,7 +51,7 @@ function observe(callback: Function, elements: NodeList) {
 
 // fetch cart data from the API
 function getCartSummaryDetails() {
-  if (localStorage.getItem('shopifyCartId')) {
+  if (localStorage.getItem('shopifyCartId') !== null) {
     postData('/api/get-cart', {
       'cartId': localStorage.getItem('shopifyCartId')
     })

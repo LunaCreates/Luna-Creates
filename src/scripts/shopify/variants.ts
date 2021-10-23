@@ -10,7 +10,7 @@ function variants(product: HTMLElement) {
     stateManager.variantChanged(variant);
 
     if (variantIdInput && variantIdInput instanceof HTMLInputElement) {
-      variantIdInput.value = variant.value
+      variantIdInput.value = variant.getAttribute('data-id') as string
     }
   }
 
