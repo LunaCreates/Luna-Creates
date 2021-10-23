@@ -18,6 +18,8 @@
 {% endif %}
 
 <form class="mt-24" data-product-form="personalised">
+    <input type="hidden" name="cartId" value="" />
+
     <div class="relative mb-32">
         <h2 class="text-sm leading-sm fvs-sb mt-0 mb-16 text-tertiary">1. Choose your map size</h2>
 
@@ -33,7 +35,7 @@
             {% if sizeField %}
                 {% set size = sizeField.split(' (')[0] %}
 
-                <input type="text" value="{{ option.id }}" data-size="{{ size | lower }}" data-price="{{ option.price }}" data-frame="{{ option.frame | lower }}" data-id="{{ option.id }}" data-name="{{ option.name }}" hidden>
+                <input type="text" value="{{ option.id }}" data-size="{{ size | lower }}" data-price="{{ option.price }}" data-frame="{{ option.frame | lower }}" data-name="{{ option.name }}" hidden>
             {% endif %}
         {%- endfor -%}
     </div>

@@ -72,25 +72,32 @@ function formatResultData(item) {
   return { properties: [{ name: 'map', value: { ...item } }] };
 }
 
-exports.handler = async (event, context, callback) => {
+exports.handler = async (event) => {
   const data = JSON.parse(event.body);
   const items = data.line_items;
   const isMap = items.some(item => item.properties.some(containsMap));
 
   console.log(event.body, 'body');
 
-  if (isMap) {
-    const mapProps = items.filter(item => item.properties.find(containsMap));
-    const mapData = mapProps.map(buildData);
-    const formattedMapData = mapData.map(formatData);
-    const result = formattedMapData.map(formatResultData);
-    const body = { line_items: result };
+  try {
+    if (isMap) {
+      const mapProps = items.filter(item => item.properties.find(containsMap));
+      const mapData = mapProps.map(buildData);
+      const formattedMapData = mapData.map(formatData);
+      const result = formattedMapData.map(formatResultData);
+      const body = { line_items: result };
 
-    await fetch('https://api.pinmaps.co.uk/generate', {
-      method: 'POST',
-      headers: { 'Content-type': 'application/json' },
-      body: JSON.stringify(body)
-    })
-      .catch(error => console.error(error))
+      await fetch('https://api.pinmaps.co.uk/generate', {
+        method: 'POST',
+        headers: { 'Content-type': 'application/json' },
+        body: JSON.stringify(body)
+      })
+    }
+
+    return {
+      statusCode: 200,
+    }
+  } catch (error) {
+    console.log(error)
   }
 }

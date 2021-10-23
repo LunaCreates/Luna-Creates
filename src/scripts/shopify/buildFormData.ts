@@ -1,7 +1,12 @@
+import postData from "../modules/postData";
+
 function buildAttributesData(formData: FormData) {
   const array = [];
 
   formData.delete('quantity');
+  formData.delete('cartId');
+  formData.delete('variantId');
+  formData.delete('merchandiseId');
 
   for (var pair of formData.entries()) {
     array.push({ key: pair[0], value: pair[1] });
@@ -10,26 +15,27 @@ function buildAttributesData(formData: FormData) {
   return array;
 }
 
-function storeBasketItem(lineItemsToAdd: any) {
-  const basket = JSON.parse(sessionStorage.getItem('cart') as string) || [];
-
-  basket.push(lineItemsToAdd);
-  sessionStorage.setItem('cart', JSON.stringify(basket));
-  window.location.pathname = '/cart/';
-}
-
-function buildFormData(product: HTMLElement, formData: FormData) {
-  const form: HTMLFormElement | null = product.querySelector('[data-product-form]');
-  const id = form?.getAttribute('data-variant-id');
-  const quantity = formData.get('quantity') as string;
+function buildFormData(formData: FormData) {
+  const merchandiseId = formData.get('variantId');
+  const quantity = parseFloat(formData.get('quantity') as string);
   const attributes = buildAttributesData(formData);
-  const lineItemsToAdd: any = {
-    variantId: id,
-    quantity: parseFloat(quantity),
-    customAttributes: attributes
+  const data= {
+    cartId: localStorage.getItem('shopifyCartId') || '',
+    items: [{
+      merchandiseId,
+      quantity,
+      attributes
+    }]
   };
 
-  storeBasketItem(lineItemsToAdd);
+  postData('/api/add-to-cart', data).then(data => {
+    const url = new URL(`${window.location.origin}/cart/?cartId=${data.id}`);
+
+    // persist that cartId for subsequent actions
+    localStorage.setItem('shopifyCartId', data.id);
+
+    window.location.href = url.href;
+  });
 }
 
 export default buildFormData;

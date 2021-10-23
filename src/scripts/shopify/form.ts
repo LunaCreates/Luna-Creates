@@ -16,7 +16,7 @@ function Form(product: HTMLElement) {
         .then(module => module.default(product, formData, formButton));
     } else {
       import('./buildFormData')
-        .then(module => module.default(product, formData));
+        .then(module => module.default(formData));
     }
   }
 
