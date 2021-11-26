@@ -69,7 +69,7 @@ function buildPropertyData(product: HTMLElement, keyMapData: any) {
     { key: 'Pins', value: pins },
     { key: 'Type', value: keyMapData.type },
     { key: 'Frame', value: keyMapData.frame }
-  ]
+  ].filter(property => property.value !== '')
 
   if (basketButton === null) return;
 

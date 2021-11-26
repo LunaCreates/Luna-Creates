@@ -55,11 +55,11 @@ function Basket(product: HTMLElement) {
 
     storePreviewImages(merchandiseId);
 
-    postData('/api/add-to-cart', data).then(data => {
-      const url = new URL(`${window.location.origin}/cart/?cartId=${data.id}`);
+    postData('/api/add-to-cart', data).then(res => {
+      const url = new URL(`${window.location.origin}/cart/?cartId=${res.id}`);
 
       // persist that cartId for subsequent actions
-      localStorage.setItem('shopifyCartId', data.id);
+      localStorage.setItem('shopifyCartId', res.id);
       window.location.href = url.href;
     });
   }
