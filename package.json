@@ -34,7 +34,7 @@
     "dotenv": "^10.0.0",
     "html-minifier": "^4.0.0",
     "lazysizes": "^5.3.2",
-    "node-fetch": "^2.6.1",
+    "node-fetch": "^2.6.7",
     "pinch-zoom-js": "^2.3.4",
     "postcss": "^8.3.6",
     "tailwindcss": "^2.2.7"
