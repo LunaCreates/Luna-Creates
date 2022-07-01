@@ -58,6 +58,7 @@ function formatData(item) {
   if (item && item.pins){
     labels = item.pins.split(' || ').map(formatLabels);
   }
+  
   const type = formatType(item.type)
 
   item.labels = { ...labels };
