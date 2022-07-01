@@ -162,7 +162,7 @@ async function createCheckout(cart, clientId, rootURL) {
 }
 
 exports.handler = async function (event, context, callback) {
-  const rootURL = 'https://staging.lunacreates.co.uk';
+  const rootURL = process.env.URL || 'https://localhost:8888';
 
   try {
     const data = JSON.parse(event.body);
